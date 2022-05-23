@@ -12,7 +12,7 @@
 		</rating>
 		
 		<flight-model>jsb</flight-model>
-		<aero>Systems/310a</aero>
+		<aero>Systems/310a-fdm</aero>
 		
 		<model>
 			<path></path>
