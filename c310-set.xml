@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<PropertyList include="c310-jsbsim-base.xml">
+<PropertyList>
 	<sim>
 		<description>Cessna 310A (JSBsim)</description>
 		
