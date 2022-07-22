@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flight_control>
+	<channel name="Elevator">
+		<summer>
+			<input>fcs/elevator-cmd-norm</input>
+			<input>fcs/pitch-trim-cmd-norm</input>
+			<clipto>
+				<min>-1</min>
+				<max>1</max>
+			</clipto>
+			<output>fcs/pitch-trim-sum</output>
+		</summer>
+
+		<aerosurface_scale>
+			<input>fcs/pitch-trim-sum</input>
+			<range>
+				<min>-15</min>
+				<max>20</max>
+			</range>
+			<output>fcs/elevator-pos-deg</output>
+		</aerosurface_scale>
+
+		<aerosurface_scale>
+			<input>fcs/elevator-pos-deg</input>
+			<domain>
+				<min>-15</min>
+				<max>20</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/elevator-pos-norm</output>
+		</aerosurface_scale>
+	</channel>
+
+	<channel name="Ailerons">
+		<summer>
+			<input>fcs/aileron-cmd-norm</input>
+			<input>fcs/roll-trim-cmd-norm</input>
+			<clipto>
+				<min>-1</min>
+				<max>1</max>
+			</clipto>
+			<output>fcs/roll-trim-sum</output>
+		</summer>
+
+		<aerosurface_scale>
+			<input>fcs/roll-trim-sum</input>
+			<range>
+				<min>-25</min>
+				<max>15</max>
+			</range>
+			<output>fcs/left-aileron-pos-deg</output>
+		</aerosurface_scale>
+
+		<aerosurface_scale>
+			<input>-fcs/roll-trim-sum</input>
+			<range>
+				<min>-25</min>
+				<max>15</max>
+			</range>
+			<output>fcs/right-aileron-pos-deg</output>
+		</aerosurface_scale>
+
+		<aerosurface_scale>
+			<input>fcs/left-aileron-pos-deg</input>
+			<domain>
+				<min>-25</min>
+				<max>15</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/left-aileron-pos-norm</output>
+		</aerosurface_scale>
+
+		<aerosurface_scale>
+			<input>fcs/right-aileron-pos-deg</input>
+			<domain>
+				<min>-25</min>
+				<max>15</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/right-aileron-pos-norm</output>
+		</aerosurface_scale>
+		
+		<summer>
+			<input>fcs/left-aileron-pos-norm</input>
+			<input>-fcs/right-aileron-pos-norm</input>
+			<output>fcs/aileron-pos-norm</output>
+		</summer>
+		
+		<fcs_function>
+			<function>
+				<quotient>
+					<sum>
+						<property>fcs/left-aileron-pos-deg</property>
+						<property>-fcs/right-aileron-pos-deg</property>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+			<output>fcs/aileron-pos-deg</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<quotient>
+					<sum>
+						<property>fcs/left-aileron-pos-rad</property>
+						<property>-fcs/right-aileron-pos-rad</property>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+			<output>fcs/aileron-pos-rad</output>
+		</fcs_function>
+	</channel>
+
+	<channel name="Rudder">
+		<summer>
+			<input>fcs/rudder-cmd-norm</input>
+			<input>fcs/yaw-trim-cmd-norm</input>
+			<clipto>
+				<min>-1</min>
+				<max>1</max>
+			</clipto>
+			<output>fcs/rudder-command-sum</output>
+		</summer>
+
+		<aerosurface_scale>
+			<input>fcs/rudder-command-sum</input>
+			<range>
+				<min>-30</min>
+				<max>30</max>
+			</range>
+			<output>fcs/rudder-pos-deg</output>
+		</aerosurface_scale>
+
+		<aerosurface_scale>
+			<input>fcs/rudder-pos-deg</input>
+			<domain>
+				<min>-30</min>
+				<max>30</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/rudder-pos-norm</output>
+		</aerosurface_scale>
+	</channel>
+	
+	<channel name="Gear">
+		<kinematic name="Landing Gear Control">
+			<input>gear/gear-cmd-norm</input>
+			<traverse>
+				<setting>
+					<position>0</position>
+					<time>0</time>
+				</setting>
+				<setting>
+					<position>1</position>
+					<time>5</time>
+				</setting>
+			</traverse>
+			<output>gear/gear-pos-norm</output>
+		</kinematic>
+	</channel>
+	
+	<channel name="Flaps">
+		<aerosurface_scale>
+			<input>fcs/flap-cmd-norm</input>
+			<domain>
+				<min>0</min>
+				<max>1</max>
+			</domain>
+			<range>
+				<min>0</min>
+				<max>30</max>
+			</range>
+			<output>fcs/flap-cmd-deg</output>
+		</aerosurface_scale>
+		
+		<kinematic>
+			<input>fcs/flap-cmd-deg</input>
+			<traverse>
+				<setting>
+					 <position>0</position>
+					 <time>0</time>
+				</setting>
+				<setting>
+					 <position>0.5</position>
+					 <time>4</time>
+				</setting>
+				<setting>
+					 <position>30</position>
+					 <time>3</time>
+				</setting>
+			</traverse>
+			<output>fcs/flap-pos-deg</output>
+		</kinematic>
+
+		<aerosurface_scale>
+			<input>fcs/flap-pos-deg</input>
+			<domain>
+				<min>0</min>
+				<max>30</max>
+			</domain>
+			<range>
+				<min>0</min>
+				<max>1</max>
+			</range>
+			<output>fcs/flap-pos-norm</output>
+		</aerosurface_scale>
+	</channel>
+</flight_control>
