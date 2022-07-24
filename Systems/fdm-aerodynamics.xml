@@ -4,7 +4,10 @@
 		<function name="aero/force/Lift_propwash">
 			<description>Delta lift due to propeller induced velocity</description>
 			<product>
-				<property>systems/propulsion/thrust-coefficient</property>
+				<sum>
+					<property>propulsion/engine/thrust-coefficient</property>
+					<property>propulsion/engine[1]/thrust-coefficient</property>
+				</sum>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
@@ -293,10 +296,8 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>aero/beta-rad</property>
-				<property>fcs/gear-no-wow</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-rad</independentVar>
-					<independentVar lookup="column">aero/Re</independentVar>
+					<independentVar lookup="row">aero/Re</independentVar>
 					<tableData>
 						3187609	-0.5176
 						3506370	-0.1531
@@ -370,7 +371,7 @@
 	
 	<axis name="YAW">
 		<!-- Stall initiator -->
-		<function name="aero/moment/Yaw_alpha">
+		<!--<function name="aero/moment/Yaw_alpha">
 			<description>Yaw moment due to alpha</description>
 			<product>
 				<property>aero/qbar-psf</property>
@@ -387,7 +388,7 @@
 					</tableData>
 				</table>
 			</product>
-		</function>
+		</function>-->
 		
 		<function name="aero/moment/Yaw_beta">
 			<description>Yaw moment due to beta</description>

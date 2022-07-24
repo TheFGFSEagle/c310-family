@@ -156,75 +156,75 @@
 	
 	<ground_reactions>
 		<contact type="BOGEY" name="NOSE">
-			<location unit="FT">
-				<x>     3.51 </x>
-				<y>     0.00 </y>
-				<z>    -3.24 </z>
+			<location unit="IN">
+				<x>-62.7</x>
+				<y>0</y>
+				<z>-49.2</z>
 			</location>
-			<static_friction>  0.80 </static_friction>
-			<dynamic_friction> 0.50 </dynamic_friction>
+			<static_friction>0.8</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">     1620.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 810.00 </damping_coeff>
-			<max_steer unit="DEG"> 5.00 </max_steer>
-			<brake_group> NONE </brake_group>
-			<retractable> 1 </retractable>
+			<spring_coeff unit="LBS/FT">1620</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">810</damping_coeff>
+			<max_steer unit="DEG">55</max_steer>
+			<brake_group>NONE</brake_group>
+			<retractable>1</retractable>
 		</contact>
 		
 		<contact type="BOGEY" name="LEFT_MAIN">
-			<location unit="FT">
-				<x>    13.65 </x>
-				<y>    -3.15 </y>
-				<z>    -3.24 </z>
+			<location unit="IN">
+				<x>48.3</x>
+				<y>-74.5</y>
+				<z>-49.2</z>
 			</location>
-			<static_friction>  0.80 </static_friction>
-			<dynamic_friction> 0.50 </dynamic_friction>
-			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">     5400.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 2700.00 </damping_coeff>
+			<static_friction>0.8</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<rolling_friction>0.02</rolling_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
 			<max_steer unit="DEG">0</max_steer>
-			<brake_group> LEFT </brake_group>
-			<retractable> 1 </retractable>
+			<brake_group>LEFT</brake_group>
+			<retractable>1</retractable>
 		</contact>
 		
 		<contact type="BOGEY" name="RIGHT_MAIN">
-			<location unit="FT">
-				<x>    13.65 </x>
-				<y>     3.15 </y>
-				<z>    -3.24 </z>
+			<location unit="IN">
+				<x>48.3</x>
+				<y>74.5</y>
+				<z>-49.2</z>
 			</location>
-			<static_friction>  0.80 </static_friction>
-			<dynamic_friction> 0.50 </dynamic_friction>
-			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">     5400.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 2700.00 </damping_coeff>
+			<static_friction>0.8</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<rolling_friction>0.02</rolling_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
 			<max_steer unit="DEG">0</max_steer>
-			<brake_group> RIGHT </brake_group>
-			<retractable> 1 </retractable>
+			<brake_group>RIGHT</brake_group>
+			<retractable>1</retractable>
 		</contact>
 		
 		<contact type="STRUCTURE" name="LEFT_WING">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>   -17.50 </y>
-				<z>    -0.68 </z>
+			<location unit="IN">
+				<x>-6.7</x>
+				<y>-214.2</y>
+				<z>8.1</z>
 			</location>
-			<static_friction>  1 </static_friction>
-			<dynamic_friction> 1 </dynamic_friction>
-			<spring_coeff unit="LBS/FT">     5400.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 2700.00 </damping_coeff>
+			<static_friction>0.5</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
 		</contact>
 		
 		<contact type="STRUCTURE" name="RIGHT_WING">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>    17.50 </y>
-				<z>    -0.68 </z>
+			<location unit="IN">
+				<x>-6.7</x>
+				<y>214.2</y>
+				<z>8.1</z>
 			</location>
-			<static_friction>  1 </static_friction>
-			<dynamic_friction> 1 </dynamic_friction>
-			<spring_coeff unit="LBS/FT">     5400.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 2700.00 </damping_coeff>
+			<static_friction>0.5</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
 		</contact>
 	</ground_reactions>
 	
