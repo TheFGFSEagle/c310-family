@@ -15,7 +15,7 @@
 			<input>fcs/pitch-trim-sum</input>
 			<range>
 				<min>-15</min>
-				<max>20</max>
+				<max>25</max>
 			</range>
 			<output>fcs/elevator-pos-deg</output>
 		</aerosurface_scale>
@@ -24,7 +24,7 @@
 			<input>fcs/elevator-pos-deg</input>
 			<domain>
 				<min>-15</min>
-				<max>20</max>
+				<max>25</max>
 			</domain>
 			<range>
 				<min>-1</min>
@@ -48,8 +48,8 @@
 		<aerosurface_scale>
 			<input>fcs/roll-trim-sum</input>
 			<range>
-				<min>-25</min>
-				<max>15</max>
+				<min>-20</min>
+				<max>20</max>
 			</range>
 			<output>fcs/left-aileron-pos-deg</output>
 		</aerosurface_scale>
@@ -57,8 +57,8 @@
 		<aerosurface_scale>
 			<input>-fcs/roll-trim-sum</input>
 			<range>
-				<min>-25</min>
-				<max>15</max>
+				<min>-20</min>
+				<max>20</max>
 			</range>
 			<output>fcs/right-aileron-pos-deg</output>
 		</aerosurface_scale>
@@ -66,8 +66,8 @@
 		<aerosurface_scale>
 			<input>fcs/left-aileron-pos-deg</input>
 			<domain>
-				<min>-25</min>
-				<max>15</max>
+				<min>-20</min>
+				<max>20</max>
 			</domain>
 			<range>
 				<min>-1</min>
@@ -79,8 +79,8 @@
 		<aerosurface_scale>
 			<input>fcs/right-aileron-pos-deg</input>
 			<domain>
-				<min>-25</min>
-				<max>15</max>
+				<min>-20</min>
+				<max>20</max>
 			</domain>
 			<range>
 				<min>-1</min>
@@ -136,8 +136,8 @@
 		<aerosurface_scale>
 			<input>fcs/rudder-command-sum</input>
 			<range>
-				<min>-30</min>
-				<max>30</max>
+				<min>-25</min>
+				<max>25</max>
 			</range>
 			<output>fcs/rudder-pos-deg</output>
 		</aerosurface_scale>
@@ -145,8 +145,8 @@
 		<aerosurface_scale>
 			<input>fcs/rudder-pos-deg</input>
 			<domain>
-				<min>-30</min>
-				<max>30</max>
+				<min>-25</min>
+				<max>25</max>
 			</domain>
 			<range>
 				<min>-1</min>
@@ -166,7 +166,7 @@
 				</setting>
 				<setting>
 					<position>1</position>
-					<time>5</time>
+					<time>10</time>
 				</setting>
 			</traverse>
 			<output>gear/gear-pos-norm</output>
@@ -182,7 +182,7 @@
 			</domain>
 			<range>
 				<min>0</min>
-				<max>30</max>
+				<max>45</max>
 			</range>
 			<output>fcs/flap-cmd-deg</output>
 		</aerosurface_scale>
@@ -195,12 +195,16 @@
 					 <time>0</time>
 				</setting>
 				<setting>
-					 <position>0.5</position>
-					 <time>4</time>
+					 <position>15</position>
+					 <time>3</time>
 				</setting>
 				<setting>
 					 <position>30</position>
 					 <time>3</time>
+				</setting>
+				<setting>
+					<position>45</position>
+					<time>3</time>
 				</setting>
 			</traverse>
 			<output>fcs/flap-pos-deg</output>
@@ -210,7 +214,7 @@
 			<input>fcs/flap-pos-deg</input>
 			<domain>
 				<min>0</min>
-				<max>30</max>
+				<max>45</max>
 			</domain>
 			<range>
 				<min>0</min>
