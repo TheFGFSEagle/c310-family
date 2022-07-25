@@ -31,20 +31,83 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-rad</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<independentVar lookup="column">fcs/flap-pos-deg</independentVar>
 					<tableData>
-						-1.57	0
-						-1.22	-0.5962
-						-1.05	-0.8033
-						-0.88	-0.9276
-						-0.26	-0.3391
-						0		0.3451
-						0.33	1.7103
-						0.39	0.6841
-						0.88	1.0724
-						1.05	0.9287
-						1.22	0.6894
-						1.57	0
+								0		15		35
+						-4.063	-0.325	-0.079	0.030
+						-4.048	-0.323	-0.078	0.031
+						-3.886	-0.309	-0.063	0.047
+						-2.197	-0.154	0.097	0.210
+						-2.056	-0.141	0.111	0.223
+						-1.950	-0.131	0.121	0.234
+						-1.425	-0.082	0.173	0.287
+						-0.812	-0.024	0.236	0.348
+						-0.650	-0.009	0.252	0.364
+						0.093	0.063	0.322	0.434
+						0.271	0.080	0.339	0.451
+						0.713	0.124	0.381	0.495
+						1.924	0.242	0.498	0.619
+						2.030	0.253	0.508	0.630
+						2.445	0.292	0.547	0.672
+						2.466	0.294	0.549	0.674
+						3.354	0.377	0.642	0.762
+						3.930	0.431	0.695	0.815
+						4.042	0.442	0.705	0.826
+						4.072	0.445	0.707	0.829
+						4.403	0.477	0.741	0.859
+						4.884	0.524	0.792	0.904
+						5.423	0.577	0.847	0.957
+						6.104	0.644	0.905	1.026
+						6.115	0.645	0.906	1.027
+						6.233	0.656	0.917	1.038
+						6.806	0.710	0.977	1.095
+						7.463	0.770	1.040	1.159
+						8.034	0.823	1.093	1.214
+						8.061	0.825	1.096	1.217
+						8.162	0.834	1.106	1.227
+						8.672	0.882	1.158	1.277
+						9.431	0.955	1.233	1.353
+						9.988	1.011	1.286	1.408
+						10.013	1.014	1.288	1.411
+						10.964	1.112	1.365	1.505
+						11.317	1.147	1.385	1.539
+						11.719	1.183	1.405	1.575
+						12.064	1.211	1.424	1.607
+						12.227	1.223	1.431	1.626
+						12.382	1.233	1.438	1.636
+						12.695	1.253	1.449	1.636
+						13.930	1.316	1.483	1.636
+						14.203	1.328	1.489	1.636
+						14.456	1.339	1.495	1.636
+						14.649	1.347	1.499	1.635
+						15.715	1.389	1.510	1.633
+						15.983	1.399	1.512	1.634
+						16.025	1.400	1.512	1.634
+						17.337	1.443	1.514	1.631
+						17.682	1.454	1.510	1.626
+						17.846	1.460	1.507	1.622
+						18.259	1.471	1.496	1.607
+						18.559	1.452	1.484	1.591
+						18.559	1.452	1.484	1.591
+						19.070	1.422	1.444	1.556
+						19.182	1.414	1.435	1.547
+						19.224	1.411	1.432	1.543
+						19.887	1.358	1.379	1.488
+						20.121	1.341	1.363	1.467
+						20.158	1.339	1.363	1.464
+						20.338	1.328	1.364	1.447
+						20.615	1.318	1.367	1.425
+						20.781	1.319	1.369	1.418
+						21.004	1.323	1.372	1.413
+						21.801	1.323	1.378	1.411
+						21.886	1.323	1.379	1.411
+						22.015	1.324	1.379	1.411
+						23.340	1.336	1.383	1.417
+						23.958	1.344	1.385	1.422
+						24.457	1.350	1.385	1.427
+						24.474	1.351	1.386	1.427
+						24.480	1.351	1.386	1.428
 					</tableData>
 				</table>
 			</product>
@@ -57,7 +120,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>velocities/q-aero-rad_sec</property>
 				<property>aero/ci2vel</property>
-				<value> 4.2373 </value>
+				<value>9.7</value>
 			</product>
 		</function>
 		
@@ -68,7 +131,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>aero/alphadot-rad_sec</property>
 				<property>aero/ci2vel</property>
-				<value> 1.7331 </value>
+				<value>5.3</value>
 			</product>
 		</function>
 		
@@ -78,17 +141,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>fcs/elevator-pos-rad</property>
-				<value> 0.4291 </value>
-			</product>
-		</function>
-		
-		<function name="aero/force/Lift_flap">
-			<description>Delta Lift due to flaps</description>
-			<product>
-				<property>aero/qbar-psf</property>
-				<property>metrics/Sw-sqft</property>
-				<property>fcs/flap-pos-deg</property>
-				<value> 0.0123 </value>
+				<value>0.81</value>
 			</product>
 		</function>
 	</axis>
@@ -99,7 +152,7 @@
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
-				<value> 0.0213 </value>
+				<value>0.029</value>
 			</product>
 		</function>
 		
@@ -189,7 +242,14 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>aero/beta-rad</property>
-				<value> -0.8181 </value>
+				<table>
+					<independentVar>aero/alpha-deg</independentVar>
+					<tableData>
+						0	-0.698
+						5	-0.610
+						6.6	-0.577
+					</tableData>
+				</table>
 			</product>
 		</function>
 		
@@ -201,12 +261,11 @@
 				<property>aero/bi2vel</property>
 				<property>velocities/p-aero-rad_sec</property>
 				<table>
-					<independentVar lookup="row">aero/Re</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>
-						3187609	0.3089
-						3506370	0.0252
-						4781414	0.0112
-						6414391	0.0062
+						0	-0.141
+						5	-0.2093
+						6.6	-0.2897
 					</tableData>
 				</table>
 			</product>
@@ -219,7 +278,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>aero/bi2vel</property>
 				<property>velocities/r-aero-rad_sec</property>
-				<value> 0.6311 </value>
+				<value>0.355</value>
 			</product>
 		</function>
 		
@@ -229,7 +288,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>fcs/rudder-pos-rad</property>
-				<value> 0.2532 </value>
+				<value>0.23</value>
 			</product>
 		</function>
 	</axis>
@@ -242,7 +301,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<property>aero/alpha-rad</property>
-				<value>-0.929</value>
+				<value>-0.619</value>
 			</product>
 		</function>
 		
@@ -253,13 +312,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<property>fcs/elevator-pos-rad</property>
-				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
-					<tableData>
-						0.0    -1.3988
-						2.0    -0.3497
-					</tableData>
-				</table>
+				<value>-2.26</value>
 			</product>
 		</function>
 		
@@ -271,7 +324,7 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/ci2vel</property>
 				<property>velocities/q-aero-rad_sec</property>
-				<value>-14.09</value>
+				<value>-26.3</value>
 			</product>
 		</function>
 		
@@ -283,7 +336,7 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/ci2vel</property>
 				<property>aero/alphadot-rad_sec</property>
-				<value> -5.7628 </value>
+				<value>-12.7</value>
 			</product>
 		</function>
 	</axis>
@@ -296,15 +349,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>aero/beta-rad</property>
-				<table>
-					<independentVar lookup="row">aero/Re</independentVar>
-					<tableData>
-						3187609	-0.5176
-						3506370	-0.1531
-						4781414	-0.1351
-						6414391	-0.1287
-					</tableData>
-				</table>
+				<value>-0.1096</value>
 			</product>
 		</function>
 		
@@ -316,7 +361,7 @@
 				<property>metrics/bw-ft</property>
 				<property>aero/bi2vel</property>
 				<property>velocities/p-aero-rad_sec</property>
-				<value> -0.5447 </value>
+				<value>-0.551</value>
 			</product>
 		</function>
 		
@@ -329,12 +374,11 @@
 				<property>aero/bi2vel</property>
 				<property>velocities/r-aero-rad_sec</property>
 				<table>
-					<independentVar lookup="row">aero/alpha-rad</independentVar>
-					<independentVar lookup="column">aero/Re</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>
-									3187609	3506370
-						-0.0349		0.0225		0.0225
-						0.3491		4.2578		0.5253
+						0	0.0729
+						5	0.1746
+						6.6	0.2433
 					</tableData>
 				</table>
 			</product>
@@ -347,13 +391,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/left-aileron-pos-rad</property>
-				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
-					<tableData>
-						0	0.17
-						2	0.0425
-					</tableData>
-				</table>
+				<value>0.172</value>
 			</product>
 		</function>
 		
@@ -364,7 +402,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/rudder-pos-rad</property>
-				<value> 0.0100 </value>
+				<value>0.0192</value>
 			</product>
 		</function>
 	</axis>
@@ -397,7 +435,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>aero/beta-rad</property>
-				<value> 0.1516 </value>
+				<value>0.1444</value>
 			</product>
 		</function>
 		
@@ -410,12 +448,11 @@
 				<property>aero/bi2vel</property>
 				<property>velocities/p-rad_sec</property>
 				<table>
-					<independentVar lookup="row">aero/Re</independentVar>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>
-						3187609	-0.1191
-						3506370	-0.0097
-						4781414	-0.0043
-						6414391	-0.0024
+						0	-0.02517
+						5	-0.0615
+						6.6	-0.1021
 					</tableData>
 				</table>
 			</product>
@@ -429,7 +466,7 @@
 				<property>metrics/bw-ft</property>
 				<property>aero/bi2vel</property>
 				<property>velocities/r-aero-rad_sec</property>
-				<value> -0.1287 </value>
+				<value>-0.1495</value>
 			</product>
 		</function>
 		
@@ -440,7 +477,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/rudder-pos-rad</property>
-				<value>-0.0977</value>
+				<value>-0.1152</value>
 			</product>
 		</function>
 		
@@ -451,7 +488,14 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/left-aileron-pos-rad</property>
-				<value>-0.01</value>
+				<table>
+					<independentVar lookup="row">aero/alpha-deg</independentVar>
+					<tableData>
+						0	-0.0168
+						5	-0.0402
+						6.6	-0.0676
+					</tableData>
+				</table>
 			</product>
 		</function>
 	</axis>
