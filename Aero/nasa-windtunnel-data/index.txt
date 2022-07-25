@@ -1,10 +1,11 @@
+reference document:
 NASA TN D-6238
 
-Important graphs from NASA report. Windtunnel tests have been preformed with a C310Q
+Important graphs from NASA report. Windtunnel tests have been preformed with a C310P
 
-fig.8 longitudinal aerodynamic characteristics with propellers removed
-fig.9 longitudinal aerodynamic characteristics with propellers windmilling
-fig.10 longitudinal aerodynamic characteristics with power and flap deflections
+fig.8 longitudinal aerodynamic characteristics with propellers removed        done
+fig.9 longitudinal aerodynamic characteristics with propellers windmilling    done
+fig.10 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
 fig.11 longitudinal aerodynamic characteristics with power and flap deflections
 fig.12 longitudinal aerodynamic characteristics with power and flap deflections
 fig.13 longitudinal aerodynamic characteristics with asymmetric power
@@ -63,6 +64,3 @@ fig.108 rolling-moment coefficients for various power conditions
 fig.109 yawing-moment coefficients for various power conditions
 fig.110 yawing-moment coefficients with symmetric and asymmetric power and sideslip
 fig.111 control capability with asymmetric power
-
-
-
