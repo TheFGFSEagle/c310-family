@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<name>Yoke</name>
+		<path>Yoke/yoke.xml</path>
+		<offsets>
+			<x-m>0.515</x-m>
+			<y-m>-0.35</y-m>
+			<z-m>0.4</z-m>
+			<pitch-deg>-2.1</pitch-deg>
+		</offsets>
+	</model>
+</PropertyList>

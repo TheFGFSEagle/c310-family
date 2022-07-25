@@ -16,6 +16,10 @@
 		
 		<model>
 			<path>Aircraft/c310-family/Models/c310a.xml</path>
+			
+			<controls>
+				<show-yokes type="bool">true</show-yokes>
+			</controls>
 		</model>
 		
 		<systems>
@@ -28,13 +32,18 @@
 			<path>Systems/sound.xml</path>
 		</sound>
 		
+		<aircraft-data>
+			<path>/sim/model/controls/show-yokes</path>
+		</aircraft-data>
+		
 		<view n="0">
 			<internal>true</internal>
 			<config>
-				<x-offset-m>-0.2</x-offset-m>
-				<y-offset-m>1.0</y-offset-m>
-				<z-offset-m>-0.2</z-offset-m>
-				<pitch-offset-deg>-15</pitch-offset-deg>
+				<x-offset-m>-0.35</x-offset-m>
+				<y-offset-m>0.75</y-offset-m>
+				<z-offset-m>1.25</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<default-field-of-view-deg>80</default-field-of-view-deg>
 			</config>
 		</view>
 	</sim>

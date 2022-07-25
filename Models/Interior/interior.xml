@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>c310a.ac</path>
-	
 	<model>
-		<path>Interior/interior.xml</path>
+		<path>Panel/panel.xml</path>
 	</model>
 </PropertyList>
