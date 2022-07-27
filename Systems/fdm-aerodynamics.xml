@@ -24,7 +24,6 @@
 			</product>
 		</function>
 		
-		<!-- Lift above 0.85 and below -0.85 is generalised -->
 		<function name="aero/force/Lift_alpha">
 			<description>Lift due to alpha</description>
 			<product>
