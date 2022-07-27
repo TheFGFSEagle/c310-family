@@ -22,7 +22,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-		<property>controls/flight/elevator</property>
+		<property>controls/flight/aileron</property>
 		<factor>90</factor>
 	</animation>
 
