@@ -6,7 +6,7 @@ Important graphs from NASA report. Windtunnel tests have been preformed with a C
 fig.8 longitudinal aerodynamic characteristics with propellers removed        done
 fig.9 longitudinal aerodynamic characteristics with propellers windmilling    done
 fig.10 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
-fig.11 longitudinal aerodynamic characteristics with power and flap deflections
+fig.11 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
 fig.12 longitudinal aerodynamic characteristics with power and flap deflections
 fig.13 longitudinal aerodynamic characteristics with asymmetric power
 fig.19 longitudinal aerodynamic characteristics with smooth ice on horizontal tail
