@@ -23,11 +23,11 @@ fig.29 variation of pitching-moment coefficient with elevator deflection with ic
 fig.30 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
 fig.31 variation of pitching-moment coefficient with elevator deflection with ice on wing and horizontal tail
 fig.32 lateral aerodynamic characteristics with propellers removed
-fig.33 lateral aerodynamic characteristics with power and flap deflections
-fig.34 lateral aerodynamic characteristics with power and flap deflections
-fig.35 lateral aerodynamic characteristics with power and flap deflections
-fig.39 lateral aerodynamic characteristics with asymmetric power
-fig.40 lateral aerodynamic characteristics with asymmetric power
+fig.33 lateral aerodynamic characteristics with power and flap deflections f=0
+fig.34 lateral aerodynamic characteristics with power and flap deflections f=15
+fig.35 lateral aerodynamic characteristics with power and flap deflections f=35
+fig.39 lateral aerodynamic characteristics with asymmetric power f=0
+fig.40 lateral aerodynamic characteristics with asymmetric power f=35
 fig.45 variation of lateral aerodynamic charactersitics with aileron deflection delta_f=0
 fig.46 variation of lateral aerodynamic charactersitics with aileron deflection delta_f=0
 fig.47 variation of lateral aerodynamic charactersitics with aileron deflection delta_f=0
