@@ -17,7 +17,7 @@ fig.23 longitudinal aerodynamic characteristics with glaze ice on horizontal tai
 fig.24 longitudinal aerodynamic characteristics with glaze ice on horizontal tail
 fig.25 longitudinal aerodynamic characteristics with glaze ice on wing horizontal tail
 fig.26 longitudinal aerodynamic characteristics with glaze ice on wing horizontal tail
-fig.27 variation of pitching-moment coefficient with elevator deflection
+fig.27 variation of pitching-moment coefficient with elevator deflection            done
 fig.28 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
 fig.29 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
 fig.30 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
