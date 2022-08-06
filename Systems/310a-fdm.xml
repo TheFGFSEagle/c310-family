@@ -48,18 +48,18 @@
     max. turn rate:     0.52 deg/s
 -->
 	<metrics>
-		<wingarea unit="FT2">175</wingarea>
+		<wingarea unit="FT2">179</wingarea>
 		<wingspan unit="FT">35</wingspan>
-		<wing_incidence unit="DEG">1</wing_incidence>
-		<chord unit="FT">4.06</chord>
+		<wing_incidence unit="DEG">2.5</wing_incidence>
+		<chord unit="FT">5.13</chord>
 		<htailarea unit="FT2">28</htailarea>
 		<htailarm unit="FT">13.5</htailarm>
 		<vtailarea unit="FT2">31.5</vtailarea>
 		<vtailarm unit="FT">13.5</vtailarm>
-		<location name="AERORP" unit="IN">
-			<x>42.1</x>
+		<location name="AERORP" unit="FT">
+			<x>3.12</x>
 			<y>0</y>
-			<z>-3.9</z>
+			<z>-1.12</z>
 		</location>
 		<location name="EYEPOINT" unit="IN">
 			<x>40</x>
@@ -79,17 +79,80 @@
 		<izz unit="SLUG*FT2">11001</izz>
 		<emptywt unit="LBS">2850</emptywt>
 		<location name="CG" unit="IN">
-			<x>35</x>
+			<x>35.56/x>
 			<y>0</y>
-			<z>5</z>
+			<z>-1.12</z>
 		</location>
 		
-		<pointmass name="Baggage">
-			<weight unit="LBS">200</weight>
+		<pointmass name="Pilot">
+			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>96</x>
-				<y>0</y>
+				<x>36.25</x>
+				<y>-10.5</y>
 				<z>4</z>
+			</location>
+		</pointmass>		
+
+		<pointmass name="Copilot">
+			<weight unit="LBS">140</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>36.25</x>
+				<y>10.5</y>
+				<z>4</z>
+			</location>
+		</pointmass>
+			
+		<pointmass name="seat 3 STD">
+			<weight unit="LBS">140</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>71</x>
+				<y>-10.5</y>
+				<z>4</z>
+			</location>
+		</pointmass>
+			
+		<pointmass name="seat 4 STD">
+			<weight unit="LBS">140</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>71</x>
+				<y>10.5</y>
+				<z>4</z>
+			</location>
+		</pointmass>			
+<!-- later models only		
+		<pointmass name="seat 5 OPT">
+			<weight unit="LBS">110</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>95</x>
+				<y>-10.5</y>
+				<z>4</z>
+			</location>
+		</pointmass>				
+			
+		<pointmass name="seat 6 OPT">
+			<weight unit="LBS">110</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>95</x>
+				<y>10.5</y>
+				<z>4</z>
+			</location>
+		</pointmass>				
+--> 						
+		<pointmass name="Baggage STA.96">
+			<weight unit="LBS">50</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>98</x>
+				<y>0</y>
+				<z>-12</z>
+			</location>
+		</pointmass>
+
+		<pointmass name="Baggage STA.124">
+			<weight unit="LBS">50</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>125</x>
+				<y>0</y>
+				<z>-12</z>
 			</location>
 		</pointmass>
 	</mass_balance>
@@ -106,7 +169,7 @@
 					<z>2.5</z>
 				</location>
 				<orient unit="DEG">
-					<pitch>2</pitch>
+					<pitch>0</pitch>
 					<roll>0</roll>
 					<yaw>0</yaw>
 				</orient>
@@ -124,7 +187,7 @@
 					<z>2.5</z>
 				</location>
 				<orient unit="DEG">
-					<pitch>2</pitch>
+					<pitch>0</pitch>
 					<roll>0</roll>
 					<yaw>0</yaw>
 				</orient>
@@ -133,9 +196,9 @@
 		
 		<tank type="FUEL" number="0">
 			<location unit="IN">
-				<x>35</x>
-				<y>-214</y>
-				<z>6.8</z>
+				<x>32.5</x>
+				<y>-216</y>
+				<z>-14</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
@@ -144,9 +207,9 @@
 		
 		<tank type="FUEL" number="1">
 			<location unit="IN">
-				<x>35</x>
-				<y>214.4</y>
-				<z>6.8</z>
+				<x>32.5</x>
+				<y>216</y>
+				<z>-14</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>

@@ -3,12 +3,12 @@ NASA TN D-6238
 
 Important graphs from NASA report. Windtunnel tests have been preformed with a C310P
 
-fig.8 longitudinal aerodynamic characteristics with propellers removed        done
-fig.9 longitudinal aerodynamic characteristics with propellers windmilling    done
-fig.10 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
-fig.11 longitudinal aerodynamic characteristics with power and flap deflections
-fig.12 longitudinal aerodynamic characteristics with power and flap deflections
-fig.13 longitudinal aerodynamic characteristics with asymmetric power
+fig.8 longitudinal aerodynamic characteristics with propellers removed              done
+fig.9 longitudinal aerodynamic characteristics with propellers windmilling          done
+fig.10 longitudinal aerodynamic characteristics with power and flap deflections     done (no CD)
+fig.11 longitudinal aerodynamic characteristics with power and flap deflections     done (no CD)
+fig.12 longitudinal aerodynamic characteristics with power and flap deflections     done (no CD)
+fig.13 longitudinal aerodynamic characteristics with asymmetric power               done
 fig.19 longitudinal aerodynamic characteristics with smooth ice on horizontal tail
 fig.20 longitudinal aerodynamic characteristics with smooth ice on horizontal tail
 fig.21 longitudinal aerodynamic characteristics with rime ice on horizontal tail
@@ -17,17 +17,17 @@ fig.23 longitudinal aerodynamic characteristics with glaze ice on horizontal tai
 fig.24 longitudinal aerodynamic characteristics with glaze ice on horizontal tail
 fig.25 longitudinal aerodynamic characteristics with glaze ice on wing horizontal tail
 fig.26 longitudinal aerodynamic characteristics with glaze ice on wing horizontal tail
-fig.27 variation of pitching-moment coefficient with elevator deflection
+fig.27 variation of pitching-moment coefficient with elevator deflection            done
 fig.28 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
 fig.29 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
 fig.30 variation of pitching-moment coefficient with elevator deflection with ice on horizontal tail
 fig.31 variation of pitching-moment coefficient with elevator deflection with ice on wing and horizontal tail
-fig.32 lateral aerodynamic characteristics with propellers removed
-fig.33 lateral aerodynamic characteristics with power and flap deflections
-fig.34 lateral aerodynamic characteristics with power and flap deflections
-fig.35 lateral aerodynamic characteristics with power and flap deflections
-fig.39 lateral aerodynamic characteristics with asymmetric power
-fig.40 lateral aerodynamic characteristics with asymmetric power
+fig.32 lateral aerodynamic characteristics with propellers removed                  done.
+fig.33 lateral aerodynamic characteristics with power and flap deflections f=0
+fig.34 lateral aerodynamic characteristics with power and flap deflections f=15
+fig.35 lateral aerodynamic characteristics with power and flap deflections f=35
+fig.39 lateral aerodynamic characteristics with asymmetric power f=0
+fig.40 lateral aerodynamic characteristics with asymmetric power f=35
 fig.45 variation of lateral aerodynamic charactersitics with aileron deflection delta_f=0
 fig.46 variation of lateral aerodynamic charactersitics with aileron deflection delta_f=0
 fig.47 variation of lateral aerodynamic charactersitics with aileron deflection delta_f=0
@@ -46,6 +46,7 @@ fig.60 variation of lateral aerodynamic charactersitics with rudder deflection f
 fig.61 variation of lateral aerodynamic charactersitics with rudder deflection for asymmetric power delta_f=35
 fig.62 effective dihedral and directional stability characteristics with propellers removed
 fig.63 effective dihedral and directional stability characteristics with power and flap deflections
+fig.66 effective dihedral and directional stability characteristics with ventral fin removed
 fig.68 effective dihedral and directional stability characteristics with asymmetric power
 fig.69 aileron effectiveness
 fig.70 yawing effectiveness of aileron
@@ -53,6 +54,7 @@ fig.71 rudder effectiveness
 fig.72 rudder effectiveness with assymetric power
 fig.89 effect of power on longitudinal aerodynamic characteristics
 fig.90 effect of power on lift-curve slope and maximum lift
+fig.98 comparison of longitudinal aerodynamic characteristics and L/D for the basic and short nacelle configurations. done.
 fig.99 effect of ice on longitudinal characteristics
 fig.100 effect on ice on elevator effectiveness
 fig.101 effect on ice on elevator effectiveness
