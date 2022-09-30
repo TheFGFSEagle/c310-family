@@ -165,7 +165,7 @@
 					</table>
 					<product>
 						<property>fcs/left-aileron-trim-tab-pos-deg</property>
-						<value>0.05</value>
+						<value>0.5</value>
 					</product>
 				</sum>
 			</function>
