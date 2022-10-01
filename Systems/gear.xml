@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="gear">
+	<channel name="Gear compression">
+		<fcs_function name="gear/unit/compression-norm">
+			<function>
+				<table>
+					<independentVar>gear/unit/compression-ft</independentVar>
+					<tableData>
+						0			0
+						0.38711	1
+					</tableData>
+				</table>
+			</function>
+			<output>/gear/gear/compression-norm</output>
+		</fcs_function>
+		
+		<pure_gain name="gear/unit/compression-m">
+			<input>gear/unit/compression-norm</input>
+			<gain>0.11799</gain>
+			<output>/gear/gear/compression-m</output>
+		</pure_gain>
+		
+		<fcs_function name="gear/unit[1]/compression-norm">
+			<function>
+				<table>
+					<independentVar>gear/unit[1]/compression-ft</independentVar>
+					<tableData>
+						0			0
+						0.47556	1
+					</tableData>
+				</table>
+			</function>
+			<output>/gear/gear/compression-norm</output>
+		</fcs_function>
+		
+		<pure_gain name="gear/unit[1]/compression-m">
+			<input>gear/unit[1]/compression-norm</input>
+			<gain>0.14495</gain>
+			<output>/gear/gear[1]/compression-m</output>
+		</pure_gain>
+		
+		<fcs_function name="gear/unit[2]/compression-norm">
+			<function>
+				<table>
+					<independentVar>gear/unit[2]/compression-ft</independentVar>
+					<tableData>
+						0			0
+						0.47556	1
+					</tableData>
+				</table>
+			</function>
+			<output>/gear/gear/compression-norm</output>
+		</fcs_function>
+		
+		<pure_gain name="gear/unit[2]/compression-m">
+			<input>gear/unit[2]/compression-norm</input>
+			<gain>0.14495</gain>
+			<output>/gear/gear[2]/compression-m</output>
+		</pure_gain>
+	</channel>
+</system>
