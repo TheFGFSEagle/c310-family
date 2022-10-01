@@ -2,12 +2,15 @@
 <PropertyList>
 	<path>c310a.ac</path>
 	
+	<defaults>
+		<axis-animation-vertex-order-xyz/>
+	</defaults>
+	
 	<effect>
 		<inherits-from>Effects/exterior-opaque</inherits-from>
 		<object-name>BaggageDoorExterior</object-name>
 		<object-name>CabinDoorExterior</object-name>
 		<object-name>ComNavAntenna</object-name>
-		<object-name>ForwardNoseGearDoor</object-name>
 		<object-name>Fuselage</object-name>
 		<object-name>HorizontalStabilizer</object-name>
 		<object-name>LeftAileron</object-name>
@@ -15,40 +18,40 @@
 		<object-name>LeftBrake</object-name>
 		<object-name>LeftElevator</object-name>
 		<object-name>LeftElevatorTrimTab</object-name>
+		<object-name>LeftPropellerBlade1</object-name>
+		<object-name>LeftPropellerBlade2</object-name>
+		<object-name>LeftPropellerSpinner</object-name>
 		<object-name>LeftEngine</object-name>
 		<object-name>LeftEngineExhaust</object-name>
 		<object-name>LeftEngineIntake</object-name>
 		<object-name>LeftFuelFillerCap</object-name>
 		<object-name>LeftInboardFlap</object-name>
+		<object-name>LeftOutboardFlap</object-name>
 		<object-name>LeftInboardMainGearDoor</object-name>
-		<object-name>LeftMainGearActuator</object-name>
+		<object-name>LeftOutboardMainGeardoor</object-name>
 		<object-name>LeftMainGearCylinder</object-name>
 		<object-name>LeftMainGearStrut</object-name>
+		<object-name>LeftMainGearUpperTorqueLink</object-name>
+		<object-name>LeftMainGearLowerTorqueLink</object-name>
 		<object-name>LeftMainGearWell</object-name>
-		<object-name>LeftMainTyre</object-name>
-		<object-name>LeftMainWheelAxle</object-name>
+		<object-name>LeftMainWheelTyre</object-name>
 		<object-name>LeftMainWheelHinge</object-name>
 		<object-name>LeftMainWheelRim</object-name>
-		<object-name>LeftOutboardFlap</object-name>
-		<object-name>LeftOutboardFlapAxis</object-name>
-		<object-name>LeftPropellerBlade1</object-name>
-		<object-name>LeftPropellerBlade2</object-name>
-		<object-name>LeftPropellerSpinner</object-name>
-		<object-name>LeftRearNoseGearDoor</object-name>
 		<object-name>LeftWing</object-name>
 		<object-name>LeftWingtipTank</object-name>
-		<object-name>UpperNoseGearTorqueLink</object-name>
-		<object-name>LowerNoseGearTorqueLink</object-name>
 		<object-name>Mudguard</object-name>
+		<object-name>NoseGearLowerTorqueLink</object-name>
+		<object-name>NoseGearUpperTorqueLink</object-name>
 		<object-name>NoseCap</object-name>
-		<object-name>NoseGearActuator</object-name>
 		<object-name>NoseGearCylinder</object-name>
 		<object-name>NoseGearStrut</object-name>
 		<object-name>NoseGearWell</object-name>
-		<object-name>NoseTyre</object-name>
-		<object-name>NoseWheelAxle</object-name>
+		<object-name>NoseWheelTyre</object-name>
 		<object-name>NoseWheelHinge</object-name>
 		<object-name>NoseWheelRim</object-name>
+		<object-name>NoseGearDoorForward</object-name>
+		<object-name>NoseGearDoorRearLeft</object-name>
+		<object-name>NoseGearDoorRearRight</object-name>
 		<object-name>PitotTube</object-name>
 		<object-name>RetractableStep</object-name>
 		<object-name>RightAileron</object-name>
@@ -56,27 +59,26 @@
 		<object-name>RightBrake</object-name>
 		<object-name>RightElevator</object-name>
 		<object-name>RightElevatorTrimTab</object-name>
+		<object-name>RightPropellerBlade1</object-name>
+		<object-name>RightPropellerBlade2</object-name>
+		<object-name>RightPropellerSpinner</object-name>
 		<object-name>RightEngine</object-name>
 		<object-name>RightEngineExhaust</object-name>
 		<object-name>RightEngineIntake</object-name>
 		<object-name>RightFuelFillerCap</object-name>
 		<object-name>RightInboardFlap</object-name>
-		<object-name>RightInboardMainGearDoor</object-name>
-		<object-name>RightMainGearActuator</object-name>
+		<object-name>RightOutboardFlap</object-name>
 		<object-name>RightMainGearCylinder</object-name>
 		<object-name>RightMainGearStrut</object-name>
+		<object-name>RightMainGearUpperTorqueLink</object-name>
+		<object-name>RightMainGearLowerTorqueLink</object-name>
 		<object-name>RightMainGearWell</object-name>
-		<object-name>RightMainTyre</object-name>
-		<object-name>RightMainWheelAxle</object-name>
+		<object-name>RightMainWheelTyre</object-name>
 		<object-name>RightMainWheelHinge</object-name>
 		<object-name>RightMainWheelRim</object-name>
-		<object-name>RightNavLightCap</object-name>
-		<object-name>RightOutboardFlap</object-name>
 		<object-name>RightOutboardMainGearDoor</object-name>
-		<object-name>RightPropellerBlade1</object-name>
-		<object-name>RightPropellerBlade2</object-name>
-		<object-name>RightPropellerSpinner</object-name>
-		<object-name>RightRearNoseGearDoor</object-name>
+		<object-name>RightInboardMainGearDoor</object-name>
+		<object-name>RightNavLightCap</object-name>
 		<object-name>RightWing</object-name>
 		<object-name>RightWingtipTank</object-name>
 		<object-name>Rudder</object-name>
@@ -88,16 +90,17 @@
 	<effect>
 		<inherits-from>Effects/exterior-glass</inherits-from>
 		<object-name>LeftForwardWindow</object-name>
-		<object-name>LeftNavLightCap</object-name>
 		<object-name>LeftRearWindow</object-name>
 		<object-name>OpenableWindow</object-name>
 		<object-name>RightForwardWindow</object-name>
-		<object-name>RightNavLightCap</object-name>
 		<object-name>RightRearWindow</object-name>
 		<object-name>Windshield</object-name>
+		<object-name>LeftNavLightCap</object-name>
+		<object-name>RightNavLightCap</object-name>
 	</effect>
 	
 	<model>
+		<usage>interior</usage>
 		<name>Interior</name>
 		<path>Interior/interior.xml</path>
 	</model>
@@ -192,6 +195,7 @@
 			<object-name>RudderAxis</object-name>
 		</axis>
 		<property>surface-positions/rudder-deg</property>
+		<factor>-1</factor>
 	</animation>
 	
 	<animation>
@@ -271,7 +275,7 @@
 		<type>rotate</type>
 		<object-name>LeftPropellerBlade1</object-name>
 		<axis>
-			<object-name>LeftPropellerBlade1Axis</objecct-name>
+			<object-name>LeftPropellerBlade1Axis</object-name>
 		</axis>
 		<property>engines/engine/thruster/pitch-deg</property>
 	</animation>
@@ -280,7 +284,7 @@
 		<type>rotate</type>
 		<object-name>LeftPropellerBlade2</object-name>
 		<axis>
-			<object-name>LeftPropellerBlade2Axis</objecct-name>
+			<object-name>LeftPropellerBlade2Axis</object-name>
 		</axis>
 		<property>engines/engine[1]/thruster/pitch-deg</property>
 	</animation>
@@ -289,7 +293,7 @@
 		<type>rotate</type>
 		<object-name>RightPropellerBlade1</object-name>
 		<axis>
-			<object-name>RightPropellerBlade1Axis</objecct-name>
+			<object-name>RightPropellerBlade1Axis</object-name>
 		</axis>
 		<property>engines/engine[1]/thruster/pitch-deg</property>
 	</animation>
@@ -298,8 +302,255 @@
 		<type>rotate</type>
 		<object-name>RightPropellerBlade2</object-name>
 		<axis>
-			<object-name>RightPropellerBlade2Axis</objecct-name>
+			<object-name>RightPropellerBlade2Axis</object-name>
 		</axis>
 		<property>engines/engine[1]/thruster/pitch-deg</property>
+	</animation>
+	
+	<!-- nose gear -->
+	<animation>
+		<type>rotate</type>
+		<object-name>NoseWheelHinge</object-name>
+		<object-name>NoseWheelRim</object-name>
+		<object-name>NoseWheelTyre</object-name>
+		<object-name>NoseGearUpperTorqueLink</object-name>
+		<object-name>NoseGearStrut</object-name>
+		<object-name>NoseGearMudguard</object-name>
+		<axis>
+			<object-name>NoseGearSteeringAxis</object-name>
+		</axis>
+		<property>gear/gear/steering-deg</property>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>NoseWheelHinge</object-name>
+		<object-name>NoseWheelRim</object-name>
+		<object-name>NoseWheelTyre</object-name>
+		<object-name>NoseGearUpperTorqueLink</object-name>
+		<object-name>NoseGearStrut</object-name>
+		<object-name>NoseGearCylinder</object-name>
+		<object-name>NoseGearMudguard</object-name>
+		<axis>
+			<object-name>NoseGearStrutAxis</object-name>
+		</axis>
+		<property>gear/gear/position-norm</property>
+		<factor>-100</factor>
+		<offset-deg>100</offset-deg>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>NoseWheelHinge</object-name>
+		<object-name>NoseWheelRim</object-name>
+		<object-name>NoseWheelTyre</object-name>
+		<object-name>NoseGearCylinder</object-name>
+		<object-name>NoseGearMudguard</object-name>
+		<axis>
+			<object-name>NoseGearSteeringAxis</object-name>
+		</axis>
+		<property>gear/gear/compression-m</property>
+		<factor>-1</factor>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>NoseWheelRim</object-name>
+		<object-name>NoseWheelTyre</object-name>
+		<axis>
+			<object-name>NoseWheelAxis</object-name>
+		</axis>
+		<property>gear/gear/rollspeed-ms</property>
+		<factor>24.175</factor>
+	</animation>
+	
+	<animation>
+		<type>locked-track</type>
+		<object-name>NoseGearUpperTorqueLink</object-name>
+		<center> <!-- upper hinge -->
+			<x-m>-1.259</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.216</z-m>
+		</center>
+		<lock-axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</lock-axis>
+		<track-axis> <!-- vector between upper and lower end of the oleo strut - does not need to be normalized -->
+			<x>0.08209</x>
+			<y>0.4065</y>
+			<z>0</z>
+		</track-axis>
+		
+		<target-name>NoseGearCylinder</target-name>
+		<target-center>	<!-- lower hinge -->
+			<x-m>-1.29</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.382</z-m>
+		</target-center>
+		
+		<slave-name>NoseGearLowerTorqueLink</slave-name>
+		<slave-center>	<!-- middle hinge -->
+			<x-m>-1.353</x-m>
+			<y-m>0</y-m>
+			<z-m>-1.283</z-m>
+		</slave-center>
+	</animation>
+	
+	<!-- left main gear -->
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftMainWheelHinge</object-name>
+		<object-name>LeftMainWheelRim</object-name>
+		<object-name>LeftMainWheelTyre</object-name>
+		<object-name>LeftBrake</object-name>
+		<object-name>LeftMainGearUpperTorqueLink</object-name>
+		<object-name>LeftMainGearStrut</object-name>
+		<object-name>LeftMainGearCylinder</object-name>
+		<axis>
+			<object-name>LeftMainGearStrutAxis</object-name>
+		</axis>
+		<property>gear/gear[1]/position-norm</property>
+		<factor>85</factor>
+		<offset-deg>-85</offset-deg>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>LeftMainWheelHinge</object-name>
+		<object-name>LeftMainWheelRim</object-name>
+		<object-name>LeftMainWheelTyre</object-name>
+		<object-name>LeftBrake</object-name>
+		<object-name>LeftMainGearCylinder</object-name>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<property>gear/gear[1]/compression-m</property>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>LeftMainWheelRim</object-name>
+		<object-name>LeftMainWheelTyre</object-name>
+		<axis>
+			<object-name>LeftMainWheelAxis</object-name>
+		</axis>
+		<property>gear/gear[1]/rollspeed-ms</property>
+		<factor>19.1</factor>
+	</animation>
+	
+	<animation>
+		<type>locked-track</type>
+		<object-name>LeftMainGearUpperTorqueLink</object-name>
+		<center> <!-- upper hinge -->
+			<x-m>1.572</x-m>
+			<y-m>-1.927</y-m>
+			<z-m>-1.003</z-m>
+		</center>
+		<lock-axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</lock-axis>
+		<track-axis> <!-- vector between upper and lower end of the oleo strut - does not need to be normalized -->
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</track-axis>
+		
+		<target-name>LeftMainGearCylinder</target-name>
+		<target-center> <!-- lower hinge -->
+			<x-m>1.567</x-m>
+			<y-m>-1.927</y-m>
+			<z-m>-1.196</z-m>
+		</target-center>
+		
+		<slave-name>LeftMainGearLowerTorqueLink</slave-name>
+		<slave-center> <!-- middle hinge -->
+			<x-m>1.634</x-m>
+			<y-m>-1.927</y-m>
+			<z-m>-1.101</z-m>
+		</slave-center>
+	</animation>
+	
+	<!-- right main gear -->
+	<animation>
+		<type>rotate</type>
+		<object-name>RightMainWheelHinge</object-name>
+		<object-name>RightMainWheelRim</object-name>
+		<object-name>RightMainWheelTyre</object-name>
+		<object-name>RightBrake</object-name>
+		<object-name>RightMainGearUpperTorqueLink</object-name>
+		<object-name>RightMainGearStrut</object-name>
+		<object-name>RightMainGearCylinder</object-name>
+		<axis>
+			<object-name>RightMainGearStrutAxis</object-name>
+		</axis>
+		<property>gear/gear[2]/position-norm</property>
+		<factor>-85</factor>
+		<offset-deg>85</offset-deg>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>RightMainWheelHinge</object-name>
+		<object-name>RightMainWheelRim</object-name>
+		<object-name>RightMainWheelTyre</object-name>
+		<object-name>RightBrake</object-name>
+		<object-name>RightMainGearCylinder</object-name>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<property>gear/gear[2]/compression-m</property>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>RightMainWheelRim</object-name>
+		<object-name>RightMainWheelTyre</object-name>
+		<axis>
+			<object-name>RightMainWheelAxis</object-name>
+		</axis>
+		<property>gear/gear[2]/rollspeed-ms</property>
+		<factor>19.1</factor>
+	</animation>
+	
+	<animation>
+		<type>locked-track</type>
+		<object-name>RightMainGearUpperTorqueLink</object-name>
+		<center> <!-- upper hinge -->
+			<x-m>1.572</x-m>
+			<y-m>1.927</y-m>
+			<z-m>-1.003</z-m>
+		</center>
+		<lock-axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</lock-axis>
+		<track-axis> <!-- vector between upper and lower end of the oleo strut - does not need to be normalized -->
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</track-axis>
+		
+		<target-name>RightMainGearCylinder</target-name>
+		<target-center> <!-- lower hinge -->
+			<x-m>1.567</x-m>
+			<y-m>1.927</y-m>
+			<z-m>-1.196</z-m>
+		</target-center>
+		
+		<slave-name>RightMainGearLowerTorqueLink</slave-name>
+		<slave-center> <!-- middle hinge -->
+			<x-m>1.634</x-m>
+			<y-m>1.927</y-m>
+			<z-m>-1.101</z-m>
+		</slave-center>
 	</animation>
 </PropertyList>
