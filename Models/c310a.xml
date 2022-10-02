@@ -27,8 +27,8 @@
 		<object-name>LeftFuelFillerCap</object-name>
 		<object-name>LeftInboardFlap</object-name>
 		<object-name>LeftOutboardFlap</object-name>
-		<object-name>LeftInboardMainGearDoor</object-name>
-		<object-name>LeftOutboardMainGeardoor</object-name>
+		<object-name>LeftMainGearDoorInboard</object-name>
+		<object-name>LeftMainGearDoorOutboard</object-name>
 		<object-name>LeftMainGearCylinder</object-name>
 		<object-name>LeftMainGearStrut</object-name>
 		<object-name>LeftMainGearUpperTorqueLink</object-name>
@@ -76,8 +76,8 @@
 		<object-name>RightMainWheelTyre</object-name>
 		<object-name>RightMainWheelHinge</object-name>
 		<object-name>RightMainWheelRim</object-name>
-		<object-name>RightOutboardMainGearDoor</object-name>
-		<object-name>RightInboardMainGearDoor</object-name>
+		<object-name>RightMainGearDoorOutboard</object-name>
+		<object-name>RightMainGearDoorInboard</object-name>
 		<object-name>RightNavLightCap</object-name>
 		<object-name>RightWing</object-name>
 		<object-name>RightWingtipTank</object-name>
@@ -105,6 +105,7 @@
 		<path>Interior/interior.xml</path>
 	</model>
 	
+	<!-- control surfaces -->
 	<animation>
 		<type>rotate</type>
 		<object-name>LeftAileron</object-name>
@@ -245,6 +246,7 @@
 		<property>surface-positions/flaps-deg</property>
 	</animation>
 	
+	<!-- propellers -->
 	<animation>
 		<type>spin</type>
 		<object-name>LeftPropellerSpinner</object-name>
@@ -552,5 +554,153 @@
 			<y-m>1.927</y-m>
 			<z-m>-1.101</z-m>
 		</slave-center>
+	</animation>
+	
+	<!-- gear doors -->
+	<animation>
+		<type>rotate</type>
+		<object-name>NoseGearDoorForward</object-name>
+		<axis>
+			<object-name>NoseGearDoorForwardAxis</object-name>
+		</axis>
+		<property>gear/gear/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.2</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-85</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>NoseGearDoorRearLeft</object-name>
+		<axis>
+			<object-name>NoseGearDoorRearLeftAxis</object-name>
+		</axis>
+		<property>gear/gear/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>NoseGearDoorRearRight</object-name>
+		<axis>
+			<object-name>NoseGearDoorRearRightAxis</object-name>
+		</axis>
+		<property>gear/gear/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftMainGearDoorOutboard</object-name>
+		<axis>
+			<object-name>LeftMainGearDoorOutboardAxis</object-name>
+		</axis>
+		<property>gear/gear[1]/position-norm</property>
+		<factor>90</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftMainGearDoorInboard</object-name>
+		<axis>
+			<object-name>LeftMainGearDoorInboardAxis</object-name>
+		</axis>
+		<property>gear/gear[1]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>RightMainGearDoorOutboard</object-name>
+		<axis>
+			<object-name>RightMainGearDoorOutboardAxis</object-name>
+		</axis>
+		<property>gear/gear[2]/position-norm</property>
+		<factor>-90</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>RightMainGearDoorInboard</object-name>
+		<axis>
+			<object-name>RightMainGearDoorInboardAxis</object-name>
+		</axis>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>0.9</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
 	</animation>
 </PropertyList>
