@@ -11,8 +11,8 @@
 	<static-friction unit="HP">2</static-friction>
 	<starter-torque>200</starter-torque>
 	<starter-rpm>1400</starter-rpm>
-	<bsfc>0.9713</bsfc>
-	<volumetric-efficiency>0.85</volumetric-efficiency>
+	<!--<bsfc>0.9713</bsfc>
+	<volumetric-efficiency>0.85</volumetric-efficiency>-->
 	<stroke unit="IN">4</stroke>
 	<bore unit="IN">5</bore>
 	<displacement unit="IN3">471</displacement>
