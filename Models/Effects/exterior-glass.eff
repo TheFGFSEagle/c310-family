@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<name>exterior-glass</name>
-	<inherits-from>Effects/model-combined-transparent</inherits-from>
+	<inherits-from>Effects/model-transparent</inherits-from>
 	<parameters>
 		<splash-x><use>/environment/aircraft-effects/splash-vector-x</use></splash-x>
 		<splash-y><use>/environment/aircraft-effects/splash-vector-y</use></splash-y>
