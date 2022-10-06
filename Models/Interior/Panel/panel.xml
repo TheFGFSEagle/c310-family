@@ -2,7 +2,7 @@
 <PropertyList>
 	<model>
 		<name>Yoke</name>
-		<path>Yoke/yoke.xml</path>
+		<path>Controls/yoke/yoke.xml</path>
 		<offsets>
 			<x-m>0.762</x-m>
 			<y-m>-0.35</y-m>
