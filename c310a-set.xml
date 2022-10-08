@@ -3,6 +3,7 @@
 <PropertyList>
 	<sim>
 		<description>Cessna 310A (JSBsim)</description>
+		<minimum-fg-version>2020.4.0</minimum-fg-version>
 		
 		<rating>
 			<FDM type="int">4</FDM>
@@ -46,6 +47,12 @@
 				<default-field-of-view-deg>95</default-field-of-view-deg>
 			</config>
 		</view>
+		
+		<equipment>
+			<auxiliary-fuel-tanks type="bool">false</auxiliary-fuel-tanks>
+		</equipment>
+		
+		<menubar include="gui/menubar.xml"/>
 	</sim>
 	
 	<gear>
@@ -84,4 +91,93 @@
 		<max-negative-g>-1.52</max-negative-g>
 		<vne>223</vne>
 	</limits>
+	
+	<controls>
+		<fuel>
+			<selector type="int">0</selector>
+			<selector type="int">0</selector>
+			<tank n="0">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="1">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="2">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="3">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="4">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="5">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="8">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="9">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+		</fuel>
+		<gear>
+			<brake-parking type="bool">true</brake-parking>
+		</gear>
+	</controls>
+	
+	<consumables>
+		<fuel>
+			<tank>
+				<name>Left wingtip</name>
+			</tank>
+			<tank>
+				<name>Right wingtip</name>
+			</tank>
+			<tank>
+				<name>Left auxiliary</name>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<name>Right auxiliary</name>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<hidden type="bool">true</hidden>
+			</tank>
+		</fuel>
+	</consumables>
+	
+	<nasal>
+		<c310>
+			<file>Nasal/c310.nas</file>
+		</c310>
+	</nasal>
 </PropertyList>

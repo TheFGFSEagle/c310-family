@@ -10,4 +10,25 @@
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
 	</model>
+	
+	<model>
+		<name>LeftFuelSelector</name>
+		<path>Controls/fuel-selector/left-fuel-selector.xml</path>
+		<offsets>
+			<x-m>1.12</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.675</z-m>
+			<pitch-deg>-4.7</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>RightFuelSelector</name>
+		<path>Controls/fuel-selector/right-fuel-selector.xml</path>
+		<offsets>
+			<x-m>1.12</x-m>
+			<y-m>0.05</y-m>
+			<z-m>-0.675</z-m>
+			<pitch-deg>-4.7</pitch-deg>
+		</offsets>
+	</model>
 </PropertyList>
