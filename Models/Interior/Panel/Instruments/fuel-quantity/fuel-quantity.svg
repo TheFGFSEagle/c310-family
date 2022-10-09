@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg196"
+   sodipodi:docname="fuel-quantity.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/fuel-quantity/fuel-quantity.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <metadata
+     id="metadata202">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs200">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1113"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1362"
+     inkscape:window-height="706"
+     id="namedview198"
+     showgrid="false"
+     inkscape:zoom="0.921875"
+     inkscape:cx="157.14139"
+     inkscape:cy="282.22914"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg196"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:object-paths="false"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true" />
+  <desc
+     id="desc2">fuel-quantity.blend, (Blender 2.83.0)</desc>
+  <g
+     id="Face"
+     style="fill:#000000;stroke:#000000">
+    <polygon
+       id="polygon20"
+       points="459.223,138.618 459.223,138.618 421.947,90.052 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon26"
+       points="421.947,421.948 421.947,421.948 459.223,373.382 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon32"
+       points="477.771,384.045 503.308,322.307 482.699,316.752 459.223,373.382 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon34"
+       points="52.777,138.618 34.229,127.955 8.692,189.693 29.301,195.248 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon36"
+       points="29.301,195.248 8.692,189.693 0,256 21.326,256 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon38"
+       points="138.618,52.777 127.955,34.229 74.909,74.909 90.052,90.052 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon40"
+       points="477.771,127.955 437.091,74.909 421.947,90.052 459.223,138.618 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon42"
+       points="437.091,437.091 421.947,421.948 373.382,459.223 378.668,468.542 384.045,477.771 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon44"
+       points="437.091,74.909 384.045,34.229 373.382,52.777 421.947,90.052 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon46"
+       points="195.248,29.301 189.693,8.692 127.955,34.229 138.618,52.777 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon48"
+       points="384.045,477.771 378.668,468.542 373.382,459.223 316.752,482.699 322.307,503.308 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon50"
+       points="90.052,90.052 74.909,74.909 34.229,127.955 52.777,138.618 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon52"
+       points="384.045,34.229 322.307,8.692 316.752,29.301 373.382,52.777 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon54"
+       points="29.301,316.752 8.692,322.307 34.229,384.045 52.777,373.382 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon56"
+       points="503.308,322.307 512,256 490.674,256 482.699,316.752 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon58"
+       points="133.331,468.542 138.618,459.223 90.052,421.948 74.909,437.091 127.955,477.771 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon60"
+       points="477.771,384.045 459.223,373.382 421.947,421.948 437.091,437.091 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon62"
+       points="322.307,503.308 316.752,482.699 256,490.674 256,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon64"
+       points="256,490.674 195.248,482.699 189.693,503.308 256,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon66"
+       points="503.308,189.693 477.771,127.955 459.223,138.618 482.699,195.248 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon68"
+       points="195.248,482.699 138.618,459.223 133.331,468.542 127.955,477.771 189.693,503.308 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon70"
+       points="90.052,421.948 52.777,373.382 34.229,384.045 74.909,437.091 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon72"
+       points="512,256 503.308,189.693 482.699,195.248 490.674,256 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon74"
+       points="21.326,256 0,256 8.692,322.307 29.301,316.752 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon76"
+       points="322.307,8.692 256,0 256,21.326 316.752,29.301 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon92"
+       points="490.674,256 490.674,256 482.699,195.248 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon94"
+       points="482.699,316.752 482.699,316.752 490.674,256 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon98"
+       points="256,21.326 256,0 189.693,8.692 195.248,29.301 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon102"
+       points="29.301,195.248 21.326,256 21.326,256 29.301,195.248 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon104"
+       points="459.223,373.382 459.223,373.382 482.699,316.752 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon106"
+       points="482.699,195.248 482.699,195.248 459.223,138.618 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon110"
+       points="90.052,90.052 52.777,138.618 52.777,138.618 90.052,90.052 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon116"
+       points="52.777,138.618 29.301,195.248 29.301,195.248 52.777,138.618 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon120"
+       points="29.301,316.752 52.777,373.382 52.777,373.382 29.301,316.752 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon122"
+       points="21.326,256 29.301,316.752 29.301,316.752 21.326,256 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon124"
+       points="52.777,373.382 90.052,421.948 90.052,421.948 52.777,373.382 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon126"
+       points="195.248,29.301 138.618,52.777 108.905,75.583 108.869,202.596 116.217,209.674 122.31,217.739 127.238,226.52 130.912,236.018 133.063,245.875 133.779,256 133.063,266.125 130.912,275.982 127.328,285.48 122.31,294.261 116.217,302.326 108.959,309.404 108.959,436.463 138.618,459.223 195.248,482.699 256,490.674 256,21.326 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon128"
+       points="29.301,195.248 21.326,256 29.301,316.752 52.777,373.382 90.052,421.948 108.959,436.463 108.959,309.404 108.869,202.596 108.869,75.537 90.052,90.052 52.777,138.618 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon134"
+       points="130.912,236.018 127.238,226.52 122.31,217.739 116.217,209.674 108.869,202.596 108.959,309.404 116.217,302.326 122.31,294.261 127.328,285.48 130.912,275.982 133.063,266.125 133.779,256 133.063,245.875 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon140"
+       points="421.947,90.052 403.13,75.537 403.13,202.596 403.041,309.404 403.041,436.463 421.947,421.948 459.223,373.382 482.699,316.752 490.674,256 482.699,195.248 459.223,138.618 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon144"
+       points="378.22,256 378.937,266.125 381.088,275.982 384.672,285.48 389.69,294.261 395.783,302.326 403.041,309.404 403.13,202.596 395.783,209.674 389.69,217.739 384.762,226.52 381.088,236.018 378.937,245.875 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon164"
+       points="256,490.674 316.752,482.699 373.382,459.223 403.041,436.463 403.041,309.404 395.783,302.326 389.69,294.261 384.672,285.48 381.088,275.982 378.937,266.125 378.22,256 378.937,245.875 381.088,236.018 384.762,226.52 389.69,217.739 395.783,209.674 403.13,202.596 403.095,75.583 373.382,52.777 316.752,29.301 256,21.326 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon180"
+       points="421.947,90.052 421.947,90.052 403.13,75.537 403.095,75.583 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon190"
+       points="108.869,75.537 90.052,90.052 90.052,90.052 108.905,75.583 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  </g>
+  <g
+     id="Sides"
+     style="fill:#000000;stroke:#000000">
+    <polygon
+       id="polygon4"
+       points="0,512 0,498.038 13.962,498.038 13.962,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon6"
+       points="0,498.036 0,484.074 13.962,484.074 13.962,498.036 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon8"
+       points="48.871,498.036 41.891,498.036 41.891,484.074 48.871,484.074 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon10"
+       points="13.964,503.474 13.964,512 27.926,512 27.926,498.038 20.945,498.038 13.964,498.038 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon12"
+       points="41.889,470.109 27.927,470.109 27.927,463.129 41.889,463.129 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon14"
+       points="48.871,484.073 41.891,484.073 41.891,470.111 48.871,470.111 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon16"
+       points="13.964,498.036 13.964,484.074 27.926,484.074 27.926,498.036 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon18"
+       points="0,484.073 0,470.111 13.962,470.111 13.962,484.073 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon22"
+       points="27.927,512 27.927,498.038 41.889,498.038 41.889,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon24"
+       points="41.889,463.127 27.927,463.127 27.927,456.147 41.889,456.147 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon28"
+       points="48.873,498.036 48.873,484.074 55.853,484.074 55.853,498.036 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon30"
+       points="13.964,470.111 13.964,477.092 19.383,477.092 19.383,484.073 27.926,484.073 27.926,470.111 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon78"
+       points="55.853,463.129 55.853,470.109 41.891,470.109 41.891,463.129 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon80"
+       points="48.873,484.073 48.873,470.111 55.853,470.111 55.853,484.073 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon82"
+       points="27.927,498.036 27.927,484.074 41.889,484.074 41.889,498.036 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon84"
+       points="27.927,484.073 27.927,470.111 41.889,470.111 41.889,484.073 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon86"
+       points="55.855,456.145 55.855,449.165 62.835,449.165 62.835,456.145 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon88"
+       points="55.853,463.127 41.891,463.127 41.891,456.147 55.853,456.147 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon90"
+       points="0,456.147 0,464.689 6.981,464.689 6.981,470.109 13.962,470.109 13.962,456.147 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon96"
+       points="62.835,512 55.855,512 55.855,498.038 62.835,498.038 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon100"
+       points="13.962,456.145 0,456.145 0,449.165 13.962,449.165 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon108"
+       points="62.835,498.036 55.855,498.036 55.855,484.074 62.835,484.074 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon112"
+       points="0,449.164 0,442.183 6.98,442.183 6.98,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon114"
+       points="27.926,449.165 27.926,456.145 13.964,456.145 13.964,449.165 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon118"
+       points="48.872,512 55.853,512 55.853,498.038 41.891,498.038 41.891,506.564 41.891,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon130"
+       points="62.836,512 62.836,505.02 69.817,505.02 69.817,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon132"
+       points="6.982,449.164 6.982,442.183 13.962,442.183 13.962,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon136"
+       points="62.836,505.018 62.836,498.038 69.817,498.038 69.817,505.018 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon138"
+       points="13.964,449.164 13.964,442.183 20.944,442.183 20.944,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon142"
+       points="62.836,498.036 62.836,491.056 69.817,491.056 69.817,498.036 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon146"
+       points="20.945,449.164 20.945,442.183 27.926,442.183 27.926,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon148"
+       points="62.836,491.055 62.836,484.074 69.817,484.074 69.817,491.055 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon150"
+       points="27.927,449.164 27.927,442.183 34.908,442.183 34.908,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon152"
+       points="62.836,484.073 62.836,477.092 69.817,477.092 69.817,484.073 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon154"
+       points="34.909,449.164 34.909,442.183 41.889,442.183 41.889,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon156"
+       points="55.855,484.073 55.855,470.111 62.835,470.111 62.835,484.073 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon158"
+       points="62.836,477.091 62.836,470.111 69.817,470.111 69.817,477.091 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon160"
+       points="41.891,449.164 41.891,442.183 48.871,442.183 48.871,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon162"
+       points="62.836,470.109 62.836,463.129 69.817,463.129 69.817,470.109 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon166"
+       points="48.873,449.164 48.873,442.183 55.853,442.183 55.853,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon168"
+       points="41.889,449.165 41.889,456.145 27.927,456.145 27.927,449.165 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon170"
+       points="55.855,470.109 55.855,456.147 62.835,456.147 62.835,470.109 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon172"
+       points="62.836,463.127 62.836,456.147 69.817,456.147 69.817,463.127 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon174"
+       points="62.836,456.145 62.836,449.165 69.817,449.165 69.817,456.145 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon176"
+       points="55.855,449.164 55.855,442.183 62.835,442.183 62.835,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon178"
+       points="62.836,449.164 62.836,442.183 69.817,442.183 69.817,449.164 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon182"
+       points="0,442.182 0,435.202 6.98,435.202 6.98,442.182 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon184"
+       points="69.818,512 69.818,505.02 76.798,505.02 76.798,512 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon186"
+       points="6.982,442.182 6.982,435.202 13.962,435.202 13.962,442.182 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon188"
+       points="55.853,449.165 55.853,456.145 41.891,456.145 41.891,449.165 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon192"
+       points="69.818,505.018 69.818,498.038 76.798,498.038 76.798,505.018 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+    <polygon
+       id="polygon194"
+       points="13.964,470.109 13.964,456.147 27.926,456.147 27.926,470.109 "
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  </g>
+  <g
+     id="g1173"
+     inkscape:transform-center-x="-46.091413"
+     inkscape:transform-center-y="0.00026">
+    <path
+       inkscape:original-d="M 325.35175,124.81775 C 306.30923,168.54417 287.2657,212.27158 268.22118,256 c -19.04452,43.72842 38.02837,87.45418 57.04105,131.18277"
+       inkscape:path-effect="#path-effect1113"
+       inkscape:connector-curvature="0"
+       id="path1111"
+       d="M 325.35175,124.81775 C 289.43997,158.24355 268.23266,206.93943 268.22118,256 c -0.0115,49.04776 21.16146,97.7412 57.04105,131.18277"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       inkscape:transform-center-y="-125.8328"
+       inkscape:transform-center-x="125.8328"
+       inkscape:connector-curvature="0"
+       id="path1117"
+       d="m 325.35175,124.81775 10.6099,10.6099"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 306.45181,146.94674 12.13903,8.81952"
+       id="path1123"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="143.96817"
+       inkscape:transform-center-y="-104.599" />
+    <path
+       inkscape:transform-center-y="-80.78963"
+       inkscape:transform-center-x="158.55857"
+       inkscape:connector-curvature="0"
+       id="path1143"
+       d="m 291.2463,171.75988 13.36925,6.81198"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 280.10962,198.6462 14.27028,4.6367"
+       id="path1145"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="169.24473"
+       inkscape:transform-center-y="-54.99095" />
+    <path
+       inkscape:transform-center-y="-27.838215"
+       inkscape:transform-center-x="175.76353"
+       inkscape:connector-curvature="0"
+       id="path1147"
+       d="m 273.316,226.94366 14.81993,2.34725"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 271.03272,255.95549 15.00466,1e-5"
+       id="path1149"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="177.95445"
+       inkscape:transform-center-y="-5e-06" />
+    <path
+       inkscape:transform-center-y="27.838205"
+       inkscape:transform-center-x="175.76353"
+       inkscape:connector-curvature="0"
+       id="path1151"
+       d="m 273.316,284.96732 14.81993,-2.34723"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="M 280.10962,313.26478 294.3799,308.6281"
+       id="path1153"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="169.24473"
+       inkscape:transform-center-y="54.99094" />
+    <path
+       inkscape:transform-center-y="80.78962"
+       inkscape:transform-center-x="158.55857"
+       inkscape:connector-curvature="0"
+       id="path1155"
+       d="m 291.2463,340.1511 13.36925,-6.81196"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 306.45181,364.96424 12.13903,-8.8195"
+       id="path1157"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="143.96817"
+       inkscape:transform-center-y="104.59899" />
+    <path
+       inkscape:transform-center-y="125.83279"
+       inkscape:transform-center-x="125.8328"
+       inkscape:connector-curvature="0"
+       id="path1159"
+       d="m 325.35175,387.09323 10.6099,-10.60988"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+  </g>
+  <g
+     inkscape:transform-center-y="-0.00026"
+     inkscape:transform-center-x="46.091412"
+     id="g1199"
+     transform="rotate(-180,256,256)">
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="M 325.35175,124.81775 C 289.43997,158.24355 268.23266,206.93943 268.22118,256 c -0.0115,49.04776 21.16146,97.7412 57.04105,131.18277"
+       id="path1175"
+       inkscape:connector-curvature="0"
+       inkscape:path-effect="#path-effect1113"
+       inkscape:original-d="M 325.35175,124.81775 C 306.30923,168.54417 287.2657,212.27158 268.22118,256 c -19.04452,43.72842 38.02837,87.45418 57.04105,131.18277" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 325.35175,124.81775 10.6099,10.6099"
+       id="path1177"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="125.8328"
+       inkscape:transform-center-y="-125.8328" />
+    <path
+       inkscape:transform-center-y="-104.599"
+       inkscape:transform-center-x="143.96817"
+       inkscape:connector-curvature="0"
+       id="path1179"
+       d="m 306.45181,146.94674 12.13903,8.81952"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 291.2463,171.75988 13.36925,6.81198"
+       id="path1181"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="158.55857"
+       inkscape:transform-center-y="-80.78963" />
+    <path
+       inkscape:transform-center-y="-54.99095"
+       inkscape:transform-center-x="169.24473"
+       inkscape:connector-curvature="0"
+       id="path1183"
+       d="m 280.10962,198.6462 14.27028,4.6367"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 273.316,226.94366 14.81993,2.34725"
+       id="path1185"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="175.76353"
+       inkscape:transform-center-y="-27.838215" />
+    <path
+       inkscape:transform-center-y="-5e-06"
+       inkscape:transform-center-x="177.95445"
+       inkscape:connector-curvature="0"
+       id="path1187"
+       d="m 271.03272,255.95549 15.00466,1e-5"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 273.316,284.96732 14.81993,-2.34723"
+       id="path1189"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="175.76353"
+       inkscape:transform-center-y="27.838205" />
+    <path
+       inkscape:transform-center-y="54.99094"
+       inkscape:transform-center-x="169.24473"
+       inkscape:connector-curvature="0"
+       id="path1191"
+       d="M 280.10962,313.26478 294.3799,308.6281"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 291.2463,340.1511 13.36925,-6.81196"
+       id="path1193"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="158.55857"
+       inkscape:transform-center-y="80.78962" />
+    <path
+       inkscape:transform-center-y="104.59899"
+       inkscape:transform-center-x="143.96817"
+       inkscape:connector-curvature="0"
+       id="path1195"
+       d="m 306.45181,364.96424 12.13903,-8.8195"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 325.35175,387.09323 10.6099,-10.60988"
+       id="path1197"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="125.8328"
+       inkscape:transform-center-y="125.83279" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="353.35376"
+     y="146.22916"
+     id="text1203"><tspan
+       sodipodi:role="line"
+       id="tspan1201"
+       x="353.35376"
+       y="146.22916">F</tspan><tspan
+       sodipodi:role="line"
+       x="353.35376"
+       y="182.89583"
+       id="tspan1205" /></text>
+  <text
+     id="text1211"
+     y="146.22916"
+     x="162.91447"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     xml:space="preserve"><tspan
+       y="146.22916"
+       x="162.91447"
+       id="tspan1207"
+       sodipodi:role="line">F</tspan><tspan
+       id="tspan1209"
+       y="182.89583"
+       x="162.91447"
+       sodipodi:role="line" /></text>
+  <text
+     id="text1217"
+     y="386.30991"
+     x="162.58505"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     xml:space="preserve"><tspan
+       y="386.30991"
+       x="162.58505"
+       id="tspan1213"
+       sodipodi:role="line">E</tspan><tspan
+       id="tspan1215"
+       y="422.97656"
+       x="162.58505"
+       sodipodi:role="line" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="353.02432"
+     y="386.30991"
+     id="text1223"><tspan
+       sodipodi:role="line"
+       id="tspan1219"
+       x="353.02432"
+       y="386.30991">E</tspan><tspan
+       sodipodi:role="line"
+       x="353.02432"
+       y="422.97656"
+       id="tspan1221" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="184.86534"
+     y="192.41949"
+     id="text1227"><tspan
+       sodipodi:role="line"
+       id="tspan1225"
+       x="184.86534"
+       y="192.41949">40</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="327.8508"
+     y="192.41949"
+     id="text1231"><tspan
+       sodipodi:role="line"
+       id="tspan1229"
+       x="327.8508"
+       y="192.41949">40</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="199.90707"
+     y="239.89366"
+     id="text1235"><tspan
+       sodipodi:role="line"
+       id="tspan1233"
+       x="199.90707"
+       y="239.89366">30</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="313.29605"
+     y="239.89366"
+     id="text1239"><tspan
+       sodipodi:role="line"
+       id="tspan1237"
+       x="313.29605"
+       y="239.89366">30</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="197.27063"
+     y="290.5177"
+     id="text1243"><tspan
+       sodipodi:role="line"
+       id="tspan1241"
+       x="197.27063"
+       y="290.5177">20</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="314.75803"
+     y="290.5177"
+     id="text1247"><tspan
+       sodipodi:role="line"
+       id="tspan1245"
+       x="314.75803"
+       y="290.5177">20</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="186.04434"
+     y="340.78552"
+     id="text1251"><tspan
+       sodipodi:role="line"
+       id="tspan1249"
+       x="186.04434"
+       y="340.78552">10</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="325.98431"
+     y="340.78552"
+     id="text1255"><tspan
+       sodipodi:role="line"
+       id="tspan1253"
+       x="325.98431"
+       y="340.78552">10</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="259.14453"
+     y="94.372879"
+     id="text1259"><tspan
+       sodipodi:role="line"
+       id="tspan1257"
+       x="259.14453"
+       y="94.372879">FUEL</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     x="256.97388"
+     y="443.66101"
+     id="text1263"><tspan
+       sodipodi:role="line"
+       id="tspan1261"
+       x="256.97388"
+       y="443.66101">U.S. GALS</tspan></text>
+</svg>
