@@ -409,6 +409,7 @@
 	
 	<system file="gear"/>
 	<system file="fuel"/>
+	<system file="engines"/>
 			
 	<flight_control file="Systems/fdm-fcs.xml"/>
 	

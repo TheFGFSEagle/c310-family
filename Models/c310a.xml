@@ -315,7 +315,7 @@
 		<axis>
 			<object-name>LeftPropellerBlade1Axis</object-name>
 		</axis>
-		<property>engines/engine/thruster/pitch-deg</property>
+		<property>engines/engine/thruster/pitch</property>
 	</animation>
 	
 	<animation>
@@ -324,7 +324,7 @@
 		<axis>
 			<object-name>LeftPropellerBlade2Axis</object-name>
 		</axis>
-		<property>engines/engine[1]/thruster/pitch-deg</property>
+		<property>engines/engine[1]/thruster/pitch</property>
 	</animation>
 	
 	<animation>
@@ -333,7 +333,7 @@
 		<axis>
 			<object-name>RightPropellerBlade1Axis</object-name>
 		</axis>
-		<property>engines/engine[1]/thruster/pitch-deg</property>
+		<property>engines/engine[1]/thruster/pitch</property>
 	</animation>
 	
 	<animation>
@@ -342,7 +342,7 @@
 		<axis>
 			<object-name>RightPropellerBlade2Axis</object-name>
 		</axis>
-		<property>engines/engine[1]/thruster/pitch-deg</property>
+		<property>engines/engine[1]/thruster/pitch</property>
 	</animation>
 	
 	<!-- nose gear -->
