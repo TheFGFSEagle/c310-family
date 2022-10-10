@@ -740,6 +740,16 @@
 		</interpolation>
 	</animation>
 	
+	<animation>
+		<type>rotate</type>
+		<object-name>CabinEntryStep</object-name>
+		<axis>
+			<object-name>CabinEntryStepAxis</object-name>
+		</axis>
+		<property>gear/gear[2]/position-norm</property>
+		<factor>-93</factor>
+	</animation>
+	
 	<!-- retractable anding lights -->
 	<animation>
 		<type>rotate</type>
