@@ -18,7 +18,7 @@ var EquipmentDialog = {
 		obj.layout.addItem(obj.auxiliary_fuel_tanks_checkbox);
 		
 		obj.auxiliary_fuel_tanks_checkbox.listen("toggled", func (e) {
-			obj.auxiliary_fuel_tanks_node.setBoolValue(e.detail.checked);
+			obj.auxiliary_fuel_tanks_node.setBoolValue(int(e.detail.checked));
 		});
 		#obj.auxiliary_fuel_tanks_listener = setlistener(obj.auxiliary_fuel_tanks_node, func (n) {
 		#	obj.auxiliary_fuel_tanks_checkbox.setChecked(n.getBoolValue());
