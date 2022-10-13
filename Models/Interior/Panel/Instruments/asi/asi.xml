@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>asi.ac</path>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property>instrumentation/airspeed-indicator/indicated-speed-mph</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>20</dep>
+			</entry>
+			<entry>
+				<ind>200</ind>
+				<dep>276</dep>
+			</entry>
+			<entry>
+				<ind>300</ind>
+				<dep>340</dep>
+			</entry>
+		</interpolation>
+	</animation>
+</PropertyList>

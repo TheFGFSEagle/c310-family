@@ -4,7 +4,7 @@ MATERIAL "TrimWheelMaterial" rgb 0.033 0.033 0.033  amb 0.033 0.033 0.033  emis 
 MATERIAL "InteriorMaterial" rgb 0.448 0.205 0.026  amb 0.448 0.205 0.026  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
 MATERIAL "FuselageMaterial" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 102 trans 0.000
 MATERIAL "HandleMaterial" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
-MATERIAL "PanelMaterial" rgb 0.000 0.000 0.000  amb 0.000 0.000 0.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
+MATERIAL "PanelMaterial" rgb 0.000 0.000 0.000  amb 0.000 0.000 0.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 MATERIAL "AxisMaterial" rgb 1.000 0.911 0.000  amb 1.000 0.911 0.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 1.000
 MATERIAL "SeatMaterial" rgb 0.692 0.468 0.223  amb 0.692 0.468 0.223  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.000
 MATERIAL "GlareshieldMaterial" rgb 0.033 0.033 0.033  amb 0.033 0.033 0.033  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
