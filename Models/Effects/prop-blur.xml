@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>prop-blur.ac</path>
+	
+	<params>
+		<gradient-texture>Aircraft/c310-family/Models/Effects/prop-blur-gradient.png</gradient-texture>
+		<diameter-m>1</diameter-m>
+		<num-blades>2</num-blades>
+		<rpm-property>engines/engine/thruster/rpm</rpm-property>
+		<sense>1</sense>
+	</params>
+	
+	<effect>
+		<inherits-from>prop-blur</inherits-from>
+		<object-name>Prop</object-name>
+		<parameters>
+			<texture n="1">
+				<image alias="/params/gradient-texture"/>
+			</texture>
+			<diameter-m alias="/params/diameter-m"/>
+			<num-blades alias="/params/num-blades"/>
+			<rpm><use alias="/params/rpm-property"/></rpm>
+			<sense alias="/params/sense"/>
+		</parameters>
+	</effect>
+	
+	<animation>
+		<type>scale</type>
+		<object-name>Prop</object-name>
+		<x-offset>1</x-offset>
+		<y-offset alias="/params/diameter-m"/>
+		<z-offset alias="/params/diameter-m"/>
+	</animation>
+</PropertyList>

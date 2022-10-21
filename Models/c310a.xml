@@ -283,8 +283,88 @@
 	</animation>
 	
 	<!-- propellers -->
+	<model>
+		<name>LeftPropellerBlur</name>
+		<path>Effects/prop-blur.xml</path>
+		<offsets>
+			<x-m>-0.312</x-m>
+			<y-m>-1.947</y-m>
+			<z-m>-0.474</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<diameter-m>2.13</diameter-m>
+				<num-blades>2</num-blades>
+				<rpm-property>engines/engine[0]/rpm</rpm-property>
+				<sense>1</sense>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightPropellerBlur</name>
+		<path>Effects/prop-blur.xml</path>
+		<offsets>
+			<x-m>-0.312</x-m>
+			<y-m>1.947</y-m>
+			<z-m>-0.474</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<diameter-m>2.13</diameter-m>
+				<num-blades>2</num-blades>
+				<rpm-property>engines/engine[1]/rpm</rpm-property>
+				<sense>1</sense>
+			</params>
+		</overlay>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LeftPropellerBlade1</object-name>
+		<object-name>LeftPropellerBlade2</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[0]/rpm</property>
+				<value>800</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>RightPropellerBlade1</object-name>
+		<object-name>RightPropellerBlade2</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[1]/rpm</property>
+				<value>800</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>blend</type>
+		<object-name>LeftPropellerBlade1</object-name>
+		<object-name>LeftPropellerBlade2</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<factor>0.00015</factor>
+		<min>0</min>
+		<max>1</max>
+	</animation>
+	
+	<animation>
+		<type>blend</type>
+		<object-name>RightPropellerBlade1</object-name>
+		<object-name>RightPropellerBlade2</object-name>
+		<property>engines/engine[1]/rpm</property>
+		<factor>0.00015</factor>
+		<min>0</min>
+		<max>1</max>
+	</animation>
+	
 	<animation>
 		<type>spin</type>
+		<object-name>LeftPropellerBlur</object-name>
 		<object-name>LeftPropellerSpinner</object-name>
 		<object-name>LeftPropellerBlade1</object-name>
 		<object-name>LeftPropellerBlade1Axis</object-name>
@@ -293,11 +373,12 @@
 		<axis>
 			<object-name>LeftPropellerSpinAxis</object-name>
 		</axis>
-		<property>engines/engine/thruster/rpm</property>
+		<property>engines/engine/rpm</property>
 	</animation>
 	
 	<animation>
 		<type>spin</type>
+		<object-name>RightPropellerBlur</object-name>
 		<object-name>RightPropellerSpinner</object-name>
 		<object-name>RightPropellerBlade1</object-name>
 		<object-name>RightPropellerBlade1Axis</object-name>
@@ -306,7 +387,7 @@
 		<axis>
 			<object-name>RightPropellerSpinAxis</object-name>
 		</axis>
-		<property>engines/engine[1]/thruster/rpm</property>
+		<property>engines/engine[1]/rpm</property>
 	</animation>
 	
 	<animation>
@@ -316,6 +397,7 @@
 			<object-name>LeftPropellerBlade1Axis</object-name>
 		</axis>
 		<property>engines/engine/thruster/pitch</property>
+		<factor>-1</factor>
 	</animation>
 	
 	<animation>
@@ -324,7 +406,7 @@
 		<axis>
 			<object-name>LeftPropellerBlade2Axis</object-name>
 		</axis>
-		<property>engines/engine[1]/thruster/pitch</property>
+		<property>engines/engine[0]/thruster/pitch</property>
 	</animation>
 	
 	<animation>
@@ -334,6 +416,7 @@
 			<object-name>RightPropellerBlade1Axis</object-name>
 		</axis>
 		<property>engines/engine[1]/thruster/pitch</property>
+		<factor>-1</factor>
 	</animation>
 	
 	<animation>
