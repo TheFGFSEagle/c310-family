@@ -18,8 +18,6 @@
 		<object-name>LeftBrake</object-name>
 		<object-name>LeftElevator</object-name>
 		<object-name>LeftElevatorTrimTab</object-name>
-		<object-name>LeftPropellerBlade1</object-name>
-		<object-name>LeftPropellerBlade2</object-name>
 		<object-name>LeftPropellerSpinner</object-name>
 		<object-name>LeftEngine</object-name>
 		<object-name>LeftEngineExhaust</object-name>
@@ -59,8 +57,6 @@
 		<object-name>RightBrake</object-name>
 		<object-name>RightElevator</object-name>
 		<object-name>RightElevatorTrimTab</object-name>
-		<object-name>RightPropellerBlade1</object-name>
-		<object-name>RightPropellerBlade2</object-name>
 		<object-name>RightPropellerSpinner</object-name>
 		<object-name>RightEngine</object-name>
 		<object-name>RightEngineExhaust</object-name>
@@ -89,6 +85,10 @@
 	
 	<effect>
 		<inherits-from>Effects/exterior-glass</inherits-from>
+		<object-name>LeftPropellerBlade1</object-name>
+		<object-name>LeftPropellerBlade2</object-name>
+		<object-name>RightPropellerBlade1</object-name>
+		<object-name>RightPropellerBlade2</object-name>
 		<object-name>LeftForwardWindow</object-name>
 		<object-name>LeftRearWindow</object-name>
 		<object-name>OpenableWindow</object-name>
@@ -319,35 +319,11 @@
 	</model>
 	
 	<animation>
-		<type>select</type>
-		<object-name>LeftPropellerBlade1</object-name>
-		<object-name>LeftPropellerBlade2</object-name>
-		<condition>
-			<less-than>
-				<property>engines/engine[0]/rpm</property>
-				<value>800</value>
-			</less-than>
-		</condition>
-	</animation>
-	
-	<animation>
-		<type>select</type>
-		<object-name>RightPropellerBlade1</object-name>
-		<object-name>RightPropellerBlade2</object-name>
-		<condition>
-			<less-than>
-				<property>engines/engine[1]/rpm</property>
-				<value>800</value>
-			</less-than>
-		</condition>
-	</animation>
-	
-	<animation>
 		<type>blend</type>
 		<object-name>LeftPropellerBlade1</object-name>
 		<object-name>LeftPropellerBlade2</object-name>
 		<property>engines/engine[0]/rpm</property>
-		<factor>0.00015</factor>
+		<factor>0.0015</factor>
 		<min>0</min>
 		<max>1</max>
 	</animation>
@@ -357,7 +333,7 @@
 		<object-name>RightPropellerBlade1</object-name>
 		<object-name>RightPropellerBlade2</object-name>
 		<property>engines/engine[1]/rpm</property>
-		<factor>0.00015</factor>
+		<factor>0.0015</factor>
 		<min>0</min>
 		<max>1</max>
 	</animation>
