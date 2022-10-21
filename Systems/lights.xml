@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<filter>
+		<type>noise-spike</type>
+		<input>
+			<expression>
+				<product>
+					<property>/controls/lighting/nav-lights</property>
+					<value>1</value>
+				</product>
+			</expression>
+		</input>
+		<output>/sim/model/lights/nav/brightness-norm</output>
+		<max-rate-of-change>0.3</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>/sim/model/lights/landing[0]/pos-norm</property>
+					<product>
+						<property>/controls/lighting/landing-light[0]</property>
+						<property>/sim/time/dt</property>
+						<value>0.1</value>
+					</product>
+				</sum>
+			</expression>
+		</input>
+		<output>/sim/model/lights/landing[0]/pos-norm</output>
+		<min>0</min>
+		<max>1</max>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<gain>/sim/model/lights/landing[0]/max-extension-deg</gain>
+		<input>/sim/model/lights/landing[0]/pos-norm</input>
+		<output>/sim/model/lights/landing[0]/pos-deg</output>
+	</filter>
+					
+	<filter>
+		<type>noise-spike</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>/sim/model/lights/landing[0]/pos-norm</property>
+					<value>0.95</value>
+				</greater-than>
+			</condition>
+			<expression>
+				<product>
+					<max>
+						<property>/controls/lighting/landing-light[0]</property>
+						<value>0</value>
+					</max>
+					<value>1</value>
+				</product>
+			</expression>
+		</input>
+		<output>/sim/model/lights/nav/brightness-norm</output>
+		<max-rate-of-change>0.5</max-rate-of-change>
+	</filter>
+</PropertyList>

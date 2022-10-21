@@ -21,6 +21,12 @@
 			<controls>
 				<show-yokes type="bool">true</show-yokes>
 			</controls>
+			
+			<lights>
+				<landing>
+					<max-extension-deg type="double">83.25</max-extension-deg>
+				</landing>
+			</lights>
 		</model>
 		
 		<systems>
@@ -31,6 +37,11 @@
 			<property-rule n="100">
 				<name>Instrument indications</name>
 				<path>Systems/instruments.xml</path>
+			</property-rule>
+			
+			<property-rule n="101">
+				<name>Lights</name>
+				<path>Systems/lights.xml</path>
 			</property-rule>
 		</systems>
 		
