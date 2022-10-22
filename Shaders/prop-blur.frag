@@ -6,8 +6,9 @@ uniform int sense;
 varying vec4 vertex;
 
 void main() {
-	float noblur_angle = clamp((rpm - 500) / 10, 0.0, 360.0) * sense;
-	float blur_angle = clamp(rpm / 16, 0.0, 360.0) * sense;
+	float rpm = clamp(rpm - 250, 0.0, 5000.0);
+	float noblur_angle = clamp((rpm - 250) / 5, 0.0, 360.0) * sense;
+	float blur_angle = clamp(rpm / 5, 0.0, 360.0) * sense;
 	float d = distance(vec2(0, 0), vertex.yz) * 2.0;
 	vec4 base = texture2D(gradient_texture, vec2(d, 0));
 	base.a = 0;
@@ -16,7 +17,7 @@ void main() {
 		pixel_angle = -360 + pixel_angle;
 	}
 	float angle = 0.0;
-	float alpha_factor = 0.5;
+	float alpha_factor = 0.6;
 	while (angle * sense < 360.0) {
 		if ((angle * sense <= pixel_angle * sense && pixel_angle * sense <= (angle + noblur_angle) * sense)) {
 			base.a = alpha_factor;
@@ -25,8 +26,8 @@ void main() {
 		}
 		angle += sense * 360.0 / num_blades;
 	}
-	base.a *= clamp(1 / clamp(rpm, 0.5, 999999) * 800, 0.4, 1);
-	base.a = clamp(base.a, 0, 0.8);
+	//base.a *= clamp(1 / clamp(rpm, 0.5, 999999) * 800, 0.4, 1);
+	base.a = clamp(base.a * (1 - d / 1.25), 0, 0.8);
 	if (base.a < 0.01) {
 		discard;
 	}
