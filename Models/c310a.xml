@@ -109,7 +109,7 @@
 	<model>
 		<path>Lights/nav-light-left.xml</path>
 		<offsets>
-			<x-m>0.21</x-m>
+			<x-m>-0.044</x-m>
 			<y-m>-5.53</y-m>
 			<z-m>-0.37</z-m>
 		</offsets>
@@ -117,7 +117,7 @@
 	<model>
 		<path>Lights/nav-light-right.xml</path>
 		<offsets>
-			<x-m>0.21</x-m>
+			<x-m>-0.044</x-m>
 			<y-m>5.53</y-m>
 			<z-m>-0.37</z-m>
 		</offsets>
@@ -125,7 +125,7 @@
 	<model>
 		<path>Lights/nav-light-tail.xml</path>
 		<offsets>
-			<x-m>6.87</x-m>
+			<x-m>6.616</x-m>
 			<y-m>0</y-m>
 			<z-m>-0.18</z-m>
 		</offsets>
@@ -134,7 +134,7 @@
 		<name>LeftLandingLight</name>
 		<path>Lights/landing-light.xml</path>
 		<offsets>
-			<x-m>1.26</x-m>
+			<x-m>1.006</x-m>
 			<y-m>-3.493</y-m>
 			<z-m>-0.608</z-m>
 			<roll-deg>-4.5</roll-deg>
@@ -287,7 +287,7 @@
 		<name>LeftPropellerBlur</name>
 		<path>Effects/prop-blur.xml</path>
 		<offsets>
-			<x-m>-0.312</x-m>
+			<x-m>-0.566</x-m>
 			<y-m>-1.947</y-m>
 			<z-m>-0.474</z-m>
 		</offsets>
@@ -304,7 +304,7 @@
 		<name>RightPropellerBlur</name>
 		<path>Effects/prop-blur.xml</path>
 		<offsets>
-			<x-m>-0.312</x-m>
+			<x-m>-0.566</x-m>
 			<y-m>1.947</y-m>
 			<z-m>-0.474</z-m>
 		</offsets>

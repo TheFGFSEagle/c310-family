@@ -4,7 +4,7 @@
 		<name>LeftYoke</name>
 		<path>Controls/yoke/yoke.xml</path>
 		<offsets>
-			<x-m>0.762</x-m>
+			<x-m>0.508</x-m>
 			<y-m>-0.35</y-m>
 			<z-m>-0.1</z-m>
 			<pitch-deg>-4.1</pitch-deg>
@@ -15,7 +15,7 @@
 		<name>RightYoke</name>
 		<path>Controls/yoke/yoke.xml</path>
 		<offsets>
-			<x-m>0.762</x-m>
+			<x-m>0.508</x-m>
 			<y-m>0.35</y-m>
 			<z-m>-0.1</z-m>
 			<pitch-deg>-4.1</pitch-deg>
@@ -25,7 +25,7 @@
 	<model>
 		<path>Instruments/asi/asi.xml</path>
 		<offsets>
-			<x-m>0.77</x-m>
+			<x-m>0.52</x-m>
 			<y-m>-0.32</y-m>
 			<z-m>0.11</z-m>
 			<pitch-deg>-4.1</pitch-deg>
@@ -35,7 +35,7 @@
 	<model>
 		<path>Instruments/manifold-pressure/manifold-pressure.xml</path>
 		<offsets>
-			<x-m>0.8</x-m>
+			<x-m>0.55</x-m>
 			<y-m>0.05</y-m>
 			<z-m>-0.06</z-m>
 			<pitch-deg>-4.1</pitch-deg>
@@ -45,7 +45,7 @@
 	<model>
 		<path>Instruments/fuel-quantity/fuel-quantity.xml</path>
 		<offsets>
-			<x-m>0.77</x-m>
+			<x-m>0.52</x-m>
 			<y-m>0.32</y-m>
 			<z-m>0.11</z-m>
 			<pitch-deg>-4.1</pitch-deg>
@@ -56,7 +56,7 @@
 		<name>LeftFuelSelector</name>
 		<path>Controls/fuel-selector/left-fuel-selector.xml</path>
 		<offsets>
-			<x-m>1.12</x-m>
+			<x-m>0.866</x-m>
 			<y-m>-0.05</y-m>
 			<z-m>-0.675</z-m>
 			<pitch-deg>-4.7</pitch-deg>
@@ -66,7 +66,7 @@
 		<name>RightFuelSelector</name>
 		<path>Controls/fuel-selector/right-fuel-selector.xml</path>
 		<offsets>
-			<x-m>1.12</x-m>
+			<x-m>0.866</x-m>
 			<y-m>0.05</y-m>
 			<z-m>-0.675</z-m>
 			<pitch-deg>-4.7</pitch-deg>

@@ -17,12 +17,12 @@
 		<vtailarea unit="FT2">11.7</vtailarea>
 		<vtailarm unit="FT">20.1</vtailarm>
 		<location name="AERORP" unit="IN">
-			<x>47</x>
+			<x>37</x>
 			<y>0</y>
 			<z>-14.6</z>
 		</location>
 		<location name="EYEPOINT" unit="IN">
-			<x>62</x>
+			<x>52</x>
 			<y>-12</y>
 			<z>7</z>
 		</location>
@@ -47,7 +47,7 @@
 		<pointmass name="Pilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>55</x>
+				<x>37</x>
 				<y>-10.5</y>
 				<z>0</z>
 			</location>
@@ -56,7 +56,7 @@
 		<pointmass name="Copilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>55</x>
+				<x>37</x>
 				<y>10.5</y>
 				<z>0</z>
 			</location>
@@ -65,7 +65,7 @@
 		<pointmass name="Left passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>87</x>
+				<x>71.25</x>
 				<y>-10.5</y>
 				<z>0</z>
 			</location>
@@ -74,7 +74,7 @@
 		<pointmass name="Right passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>87</x>
+				<x>71.25</x>
 				<y>10.5</y>
 				<z>0</z>
 			</location>
@@ -101,7 +101,7 @@
 		<pointmass name="Baggage">
 			<weight unit="LBS">100</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>105</x>
+				<x>95</x>
 				<y>0</y>
 				<z>-12</z>
 			</location>
@@ -115,7 +115,7 @@
 			<thruster file="Hartzell-HC82XF-2">
 				<sense>1</sense>
 				<location unit="IN">
-					<x>-13</x>
+					<x>-23</x>
 					<y>-76.7</y>
 					<z>-18</z>
 				</location>
@@ -133,7 +133,7 @@
 			<thruster file="Hartzell-HC82XF-2">
 				<sense>1</sense>
 				<location unit="IN">
-					<x>-13</x>
+					<x>-23</x>
 					<y>76.7</y>
 					<z>-18</z>
 				</location>
@@ -148,7 +148,7 @@
 		<!-- main tanks left, right -->
 		<tank type="FUEL" number="0">
 			<location unit="IN">
-				<x>45</x>
+				<x>35</x>
 				<y>-214.4</y>
 				<z>-13</z>
 			</location>
@@ -159,7 +159,7 @@
 		
 		<tank type="FUEL" number="1">
 			<location unit="IN">
-				<x>45</x>
+				<x>35</x>
 				<y>214.4</y>
 				<z>-13</z>
 			</location>
@@ -171,7 +171,7 @@
 		<!-- auxiliary tanks left, right - optional -->
 		<tank type="FUEL" number="2">
 			<location unit="IN">
-				<x>60</x>
+				<x>50</x>
 				<y>-120</y>
 				<z>-20</z>
 			</location>
@@ -182,7 +182,7 @@
 		
 		<tank type="FUEL" number="3">
 			<location unit="IN">
-				<x>60</x>
+				<x>50</x>
 				<y>120</y>
 				<z>-20</z>
 			</location>
@@ -194,7 +194,7 @@
 		<!-- crossfeed lines left to right, right to left -->
 		<tank type="FUEL" number="4">
 			<location unit="IN">
-				<x>45</x>
+				<x>35</x>
 				<y>0</y>
 				<z>-30</z>
 			</location>
@@ -204,7 +204,7 @@
 		
 		<tank type="FUEL" number="5">
 			<location unit="IN">
-				<x>45</x>
+				<x>35</x>
 				<y>0</y>
 				<z>-30</z>
 			</location>
@@ -215,7 +215,7 @@
 		<!-- fuel selector left, right -->
 		<tank type="FUEL" number="6">
 			<location unit="IN">
-				<x>45</x>
+				<x>35</x>
 				<y>-70</y>
 				<z>-22</z>
 			</location>
@@ -225,7 +225,7 @@
 		
 		<tank type="FUEL" number="7">
 			<location unit="IN">
-				<x>45</x>
+				<x>35</x>
 				<y>70</y>
 				<z>-22</z>
 			</location>
@@ -236,7 +236,7 @@
 		<!-- fuel strainer left, right -->
 		<tank type="FUEL" number="8">
 			<location unit="IN">
-				<x>30</x>
+				<x>20</x>
 				<y>-70</y>
 				<z>-15</z>
 			</location>
@@ -246,7 +246,7 @@
 		
 		<tank type="FUEL" number="9">
 			<location unit="IN">
-				<x>30</x>
+				<x>20</x>
 				<y>70</y>
 				<z>-15</z>
 			</location>
@@ -257,7 +257,7 @@
 		<!-- carburetor left, right -->
 		<tank type="FUEL" number="10">
 			<location unit="IN">
-				<x>30</x>
+				<x>20</x>
 				<y>-70</y>
 				<z>-18</z>
 			</location>
@@ -267,7 +267,7 @@
 		
 		<tank type="FUEL" number="11">
 			<location unit="IN">
-				<x>30</x>
+				<x>20</x>
 				<y>70</y>
 				<z>-18</z>
 			</location>
@@ -278,7 +278,7 @@
 		<!-- intake manifold left, right -->
 		<tank type="FUEL" number="12">
 			<location unit="IN">
-				<x>30</x>
+				<x>20</x>
 				<y>-70</y>
 				<z>-18</z>
 			</location>
@@ -288,19 +288,44 @@
 		
 		<tank type="FUEL" number="13">
 			<location unit="IN">
-				<x>30</x>
+				<x>20</x>
 				<y>70</y>
 				<z>-18</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
 		</tank>
+		
+		<!-- oil reservoirs left, right -->
+		<tank type="FUEL" number="14">
+			<location unit="IN">
+				<x>0</x>
+				<y>-75</y>
+				<z>-15</z>
+			</location>
+			<density>7.3</density>
+			<capacity unit="LBS">21.9</capacity>
+			<contents unit="LBS">21.9</contents>
+			<unusable unit="LBS">10.95</unusable>
+		</tank>
+		
+		<tank type="FUEL" number="15">
+			<location unit="IN">
+				<x>0</x>
+				<y>75</y>
+				<z>-15</z>
+			</location>
+			<density>7.3</density>
+			<capacity unit="LBS">21.9</capacity>
+			<contents unit="LBS">21.9</contents>
+			<unusable unit="LBS">10.95</unusable>
+		</tank>
 	</propulsion>
 	
 	<ground_reactions>
 		<contact type="BOGEY" name="NOSE">
 			<location unit="IN">
-				<x>-50.7</x>
+				<x>-60.7</x>
 				<y>0</y>
 				<z>-71.6</z>
 			</location>
@@ -316,7 +341,7 @@
 		
 		<contact type="BOGEY" name="LEFT_MAIN">
 			<location unit="IN">
-				<x>60.2</x>
+				<x>50.2</x>
 				<y>-74.5</y>
 				<z>-67.9</z>
 			</location>
@@ -332,7 +357,7 @@
 		
 		<contact type="BOGEY" name="RIGHT_MAIN">
 			<location unit="IN">
-				<x>60.2</x>
+				<x>50.2</x>
 				<y>74.5</y>
 				<z>-67.9</z>
 			</location>
@@ -348,7 +373,7 @@
 		
 		<contact type="STRUCTURE" name="Left wing tip tank front tip">
 			<location unit="IN">
-				<x>3.1</x>
+				<x>-6.9</x>
 				<y>-214.4</y>
 				<z>-14.9</z>
 			</location>
@@ -360,7 +385,7 @@
 		
 		<contact type="STRUCTURE" name="Left wing tip tank rear tip">
 			<location unit="IN">
-				<x>97.4</x>
+				<x>87.4</x>
 				<y>-214.4</y>
 				<z>-9.9</z>
 			</location>
@@ -372,7 +397,7 @@
 		
 		<contact type="STRUCTURE" name="Right wing tip tank front tip">
 			<location unit="IN">
-				<x>3.1</x>
+				<x>-6.9</x>
 				<y>214.4</y>
 				<z>-14.9</z>
 			</location>
@@ -384,7 +409,7 @@
 		
 		<contact type="STRUCTURE" name="Right wing tip tank rear tip">
 			<location unit="IN">
-				<x>97.4</x>
+				<x>87.4</x>
 				<y>214.4</y>
 				<z>-9.9</z>
 			</location>
@@ -396,7 +421,7 @@
 		
 		<contact type="STRUCTURE" name="Tail stinger tip">
 			<location unit="IN">
-				<x>270.5</x>
+				<x>260.5</x>
 				<y>0</y>
 				<z>-6.7</z>
 			</location>
