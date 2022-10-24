@@ -720,7 +720,7 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>70</dep>
+				<dep>-70</dep>
 			</entry>
 		</interpolation>
 	</animation>
