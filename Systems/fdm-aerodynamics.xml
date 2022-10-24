@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
-	<function name="aero/function/thrustc_sum">
-		<sum>
-	 	   <p> propulsion/engine/thrust-coefficient </p>
-	 	   <p> propulsion/engine[1]/thrust-coefficient </p>
-	 	</sum>
-	</function>
-
-	<function name="aero/function/thruststate_sym">
-			<ifthen>
-			<eq>
-				<sum>
-						<p> propulsion/engine/fuel-flow-rate-gph </p> 
-						<p> propulsion/engine[1]/fuel-flow-rate-gph </p> 
- 				</sum> 
-				<v> 0 </v> 
-			</eq>
-				<ifthen>
-					<eq> 
-					<and>
-						<p> fcs/feather-cmd-norm  </p>
-						<p> fcs/feather-cmd-norm[1] </p>
- 					</and> 
-					<v> 1 </v> 
-					</eq> 
-				<v> -2 </v> 
-				<v> -1 </v> 			
-				</ifthen>
-			  	<p> aero/function/thrustc_sum</p> 
-			</ifthen>
-	</function>
 	<function name="aero/function/kCLge">
 		<description>Change in lift due to ground effect</description>
 		<table>
@@ -52,7 +22,6 @@
 		</table>
 	</function>
 	
-
 	<axis name="LIFT">
 		<function name="aero/force/Lift_alpha">
 			<description>Lift due to alpha</description>
@@ -63,7 +32,7 @@
 			<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
 				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thruststate_sym</independentVar>						
+				<independentVar	lookup="table">propulsion/thrust-state</independentVar>						
 				<tableData	breakPoint="-2">
 					0	15	35
 -4.0628	-0.3248	-0.0794	0.0301
@@ -503,7 +472,7 @@
 			<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
 				<independentVar	lookup="column">fcs/elevator-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thruststate_sym</independentVar>						
+				<independentVar	lookup="table">propulsion/thrust-state</independentVar>						
 				<tableData	breakPoint="0">
 					-13.5	-10	-5	0	5	10
 -4.212	-0.144	-0.102	-0.061	0.000	0.113	0.148
@@ -1011,7 +980,7 @@
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
 				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thruststate_sym</independentVar>	
+				<independentVar	lookup="table">propulsion/thrust-state</independentVar>	
 				<tableData	breakPoint="-2">
 					0	15	35
 -3.9119	0.0445	0.0812	0.1064
