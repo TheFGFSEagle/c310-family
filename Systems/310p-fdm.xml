@@ -317,7 +317,7 @@
 		<!-- oil reservoirs left, right -->
 		<tank type="FUEL" number="14">
 			<location unit="IN">
-				<x>-5</x>
+				<x>-3.5</x>
 				<y>-75</y>
 				<z>-15</z>
 			</location>
@@ -329,7 +329,7 @@
 		
 		<tank type="FUEL" number="15">
 			<location unit="IN">
-				<x>-5</x>
+				<x>-3.5</x>
 				<y>75</y>
 				<z>-15</z>
 			</location>

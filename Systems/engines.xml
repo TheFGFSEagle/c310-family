@@ -33,7 +33,7 @@
 						<p>propulsion/engine[0]/feather-norm</p>
 						<v>0</v> <p>systems/propulsion/prop-high-pitch</p>
 						<v>1</v> <p>systems/propulsion/prop-feather-pitch</p>
-					</interpolate1d>/
+					</interpolate1d>
 					<min>
 						<max>
 							<sum>
