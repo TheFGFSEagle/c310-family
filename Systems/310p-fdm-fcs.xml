@@ -114,11 +114,11 @@
 				<min>-20</min>
 				<max>20</max>
 			</range>
-			<output>fcs/left-aileron-trim-tab-pos-deg</output>
+			<output>fcs/aileron-trim-tab-pos-deg</output>
 		</aerosurface_scale>
 		
 		<aerosurface_scale>
-			<input>fcs/left-aileron-trim-tab-pos-deg</input>
+			<input>fcs/aileron-trim-tab-pos-deg</input>
 			<domain>
 				<min>-20</min>
 				<max>20</max>
@@ -127,29 +127,7 @@
 				<min>-1</min>
 				<max>1</max>
 			</range>
-			<output>fcs/left-aileron-trim-tab-pos-norm</output>
-		</aerosurface_scale>
-		
-		<aerosurface_scale>
-			<input>-fcs/roll-trim-cmd-norm</input>
-			<range>
-				<min>-20</min>
-				<max>20</max>
-			</range>
-			<output>fcs/right-aileron-trim-tab-pos-deg</output>
-		</aerosurface_scale>
-		
-		<aerosurface_scale>
-			<input>fcs/right-aileron-trim-tab-pos-deg</input>
-			<domain>
-				<min>-20</min>
-				<max>20</max>
-			</domain>
-			<range>
-				<min>-1</min>
-				<max>1</max>
-			</range>
-			<output>fcs/right-aileron-trim-tab-pos-norm</output>
+			<output>fcs/aileron-trim-tab-pos-norm</output>
 		</aerosurface_scale>
 		
 		<fcs_function>
@@ -164,7 +142,7 @@
 						</tableData>
 					</table>
 					<product>
-						<property>fcs/left-aileron-trim-tab-pos-deg</property>
+						<property>fcs/aileron-trim-tab-pos-deg</property>
 						<value>0.5</value>
 					</product>
 				</sum>
@@ -184,7 +162,7 @@
 						</tableData>
 					</table>
 					<product>
-						<property>fcs/right-aileron-trim-tab-pos-deg</property>
+						<property>fcs/aileron-trim-tab-pos-deg</property>
 						<value>0.5</value>
 					</product>
 				</sum>

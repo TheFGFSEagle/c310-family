@@ -136,9 +136,8 @@
 		<elevator-deg alias="/fdm/jsbsim/fcs/elevator-pos-deg"/>
 		<elevator-trim-tab-deg alias="/fdm/jsbsim/fcs/elevator-trim-tab-pos-deg"/>
 		<left-aileron-deg alias="/fdm/jsbsim/fcs/left-aileron-pos-deg"/>
-		<left-aileron-trim-tab-deg alias="/fdm/jsbsim/fcs/left-aileron-trim-tab-pos-deg"/>
+		<aileron-trim-tab-deg alias="/fdm/jsbsim/fcs/aileron-trim-tab-pos-deg"/>
 		<right-aileron-deg alias="/fdm/jsbsim/fcs/right-aileron-pos-deg"/>
-		<right-aileron-trim-tab-deg alias="/fdm/jsbsim/fcs/right-aileron-trim-tab-pos-deg"/>
 		<rudder-deg alias="/fdm/jsbsim/fcs/rudder-pos-deg"/>
 		<rudder-trim-tab-deg alias="/fdm/jsbsim/fcs/rudder-trim-tab-pos-deg"/>
 		<flaps-deg alias="/fdm/jsbsim/fcs/flap-pos-deg"/>
