@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aerodynamics>
+	<function name="propulsion/both-feathered">
+		<and>
+			<ge>
+				<p>propulsion/engine[0]/feather-norm</p>
+				<v>0.5</v>
+			</ge>
+			<ge>
+				<p>propulsion/engine[1]/feather-norm</p>
+				<value>0.5</value>
+			</ge>
+		</and>
+	</function>
+	
+	<function name="propulsion/thrust-coefficient-sum">
+		<sum>
+			<p>propulsion/engine[0]/thrust-coefficient</p>
+			<p>propulsion/engine[1]/thrust-coefficient</p>
+		</sum>
+	</function>
+	
+	<function name="propulsion/thrust-state">
+		<ifthen>
+			<p>propulsion/both-feathered</p>
+			<v>-2</v>
+			<ifthen>
+				<eq>
+					<sum>
+						<p>propulsion/engine[0]/fuel-flow-rate-gph</p>
+						<p>propulsion/engine[1]/fuel-flow-rate-gph</p>
+					</sum>
+					<v>0</v>
+				</eq>
+				<v>-1</v>
+			  	<p>propulsion/thrust-coefficient-sum</p> 
+			</ifthen>
+		</ifthen>
+	</function>
+
 	<function name="aero/function/kCLge">
 		<description>Change in lift due to ground effect</description>
 		<table>
