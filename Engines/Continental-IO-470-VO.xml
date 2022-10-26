@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<piston_engine name="Continental-IO-470-VO">
+	<minmp unit="INHG">8</minmp>
+	<maxmp unit="INHG">29.9</maxmp>
+	<air-intake-impedance-factor>0.15</air-intake-impedance-factor>
+	<ram-air-factor>0.1</ram-air-factor>
+	<maxhp>260</maxhp>
+	<cycles>4</cycles>
+	<idlerpm>500</idlerpm>
+	<maxrpm>2625</maxrpm>
+	<sparkfaildrop>0.1</sparkfaildrop>
+	<man-press-lag>1</man-press-lag>
+	<static-friction unit="HP">2</static-friction>
+	<starter-torque>200</starter-torque>
+	<starter-rpm>800</starter-rpm>
+	<bsfc unit="LBS/HP*HR">0.4455</bsfc>
+	<volumetric-efficiency>0.928</volumetric-efficiency>
+	<stroke unit="IN">4</stroke>
+	<bore unit="IN">5</bore>
+	<displacement unit="IN3">471</displacement>
+	<cylinders>6</cylinders>
+	<compression-ratio>7</compression-ratio>
+	<oil-pressure-relief-valve-psi>50</oil-pressure-relief-valve-psi>
+	<oil-pressure-rpm-max>1000</oil-pressure-rpm-max>
+	<design-oil-temp-degK>340</design-oil-temp-degK>
+	<cylinder-head-mass unit="LBS">23.3</cylinder-head-mass>
+</piston_engine>

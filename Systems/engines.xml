@@ -29,13 +29,11 @@
 			<function>
 				<ifthen>
 					<property>fcs/feather-pos-norm[0]</property>
-					<table>
-						<independentVar lookup="row">propulsion[0]/engine/feather-norm</independentVar>
-						<tableData>
-							0	22.5
-							1	82
-						</tableData>
-					</table>
+					<interpolate1d>
+						<p>propulsion/engine[0]/feather-norm</p>
+						<v>0</v> <p>systems/propulsion/prop-high-pitch</p>
+						<v>1</v> <p>systems/propulsion/prop-feather-pitch</p>
+					</interpolate1d>/
 					<min>
 						<max>
 							<sum>
@@ -43,21 +41,19 @@
 								<product>
 									<difference>
 										<property>propulsion/engine[0]/propeller-rpm</property>
-										<table>
-											<independentVar>fcs/advance-pos-norm[0]</independentVar>
-											<tableData>
-												0	1800
-												1	2600
-											</tableData>
-										</table>
+										<interpolate1d>
+											<p>fcs/advance-pos-norm[0]</p>
+											<v>0</v> <p>systems/propulsion/prop-low-rpm</p>
+											<v>1</v> <p>systems/propulsion/prop-high-rpm</p>
+										</interpolate1d>
 									</difference>
 									<property>simulation/channel-dt</property>
 									<value>0.05</value>
 								</product>
 							</sum>
-							<value>12.5</value>
+							<p>systems/propulsion/prop-low-pitch</p>
 						</max>
-						<value>22.5</value>
+						<p>systems/propulsion/prop-high-pitch</p>
 					</min>
 				</ifthen>
 			</function>
@@ -105,13 +101,11 @@
 			<function>
 				<ifthen>
 					<property>fcs/feather-pos-norm[1]</property>
-					<table>
-						<independentVar lookup="row">propulsion/engine[1]/feather-norm</independentVar>
-						<tableData>
-							0	22.5
-							1	82
-						</tableData>
-					</table>
+					<interpolate1d>
+						<p>propulsion/engine[1]/feather-norm</p>
+						<v>0</v> <p>systems/propulsion/prop-high-pitch</p>
+						<v>1</v> <p>systems/propulsion/prop-feather-pitch</p>
+					</interpolate1d>
 					<min>
 						<max>
 							<sum>
@@ -119,21 +113,19 @@
 								<product>
 									<difference>
 										<property>propulsion/engine[1]/propeller-rpm</property>
-										<table>
-											<independentVar>fcs/advance-pos-norm[1]</independentVar>
-											<tableData>
-												0	1800
-												1	2600
-											</tableData>
-										</table>
+										<interpolate1d>
+											<p>fcs/advance-pos-norm[1]</p>
+											<v>0</v> <p>systems/propulsion/prop-low-rpm</p>
+											<v>1</v> <p>systems/propulsion/prop-high-rpm</p>
+										</interpolate1d>
 									</difference>
 									<property>simulation/channel-dt</property>
 									<value>0.05</value>
 								</product>
 							</sum>
-							<value>12.5</value>
+							<p>systems/propulsion/prop-low-pitch</p>
 						</max>
-						<value>22.5</value>
+						<p>systems/propulsion/prop-high-pitch</p>
 					</min>
 				</ifthen>
 			</function>

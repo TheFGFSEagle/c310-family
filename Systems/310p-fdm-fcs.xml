@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flight_control>
+	<channel name="Nose wheel steering">
+		<switch name="gear/unit[0]/steering-enabled">
+			<default value="0"/>
+			<test logic="OR" value="1">
+				gear/unit[0]/pos-norm EQ 1
+			</test>
+		</switch>
+		
+		<fcs_function name="gear/unit[0]/brakes-steer-factor">
+			<function>
+				<product>
+					<sum>
+						<product>
+							<property>fcs/left-brake-cmd-norm</property>
+							<value>-1</value>
+						</product>
+						<property>fcs/right-brake-cmd-norm</property>
+					</sum>
+					<property>/gear/gear[0]/rollspeed-ms</property>
+					<value>0.5</value> <!-- for adjusting braking influence -->
+					<property>gear/unit[0]/steering-enabled</property>
+				</product>
+			</function>
+		</fcs_function>
+		
+		<!-- Drive the nose wheel with the rudder and brakes -->
+		<fcs_function name="fcs/steer-cmd-norm">
+			<function>
+				<quotient>
+					<table name="fcs/steer-cmd-deg">
+						<independentVar lookup="row">gear/unit[0]/brakes-steer-factor</independentVar>
+						<independentVar lookup="column">/controls/flight/rudder</independentVar>
+						<tableData>
+							-1	0	1
+						  -1	-55	0	15
+						   0	-15	0	15
+						   1	-15	0	55
+						</tableData>
+					</table>
+					<value>55</value>
+				</quotient>
+			</function>
+			<output>fcs/steer-pos-norm</output>
+		</fcs_function>
+	</channel>
+	
+	<channel name="Elevator">
+		<aerosurface_scale>
+			<input>-fcs/pitch-trim-cmd-norm</input>
+			<range>
+				<min>-26</min>
+				<max>10</max>
+			</range>
+			<output>fcs/elevator-trim-tab-pos-deg</output>
+		</aerosurface_scale>
+		
+		<aerosurface_scale>
+			<input>fcs/elevator-trim-tab-pos-deg</input>
+			<domain>
+				<min>-26</min>
+				<max>10</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/elevator-trim-tab-pos-norm</output>
+		</aerosurface_scale>
+		
+		<fcs_function>
+			<function>
+				<difference>
+					<table>
+						<independentVar lookup="row">fcs/elevator-cmd-norm</independentVar>
+						<tableData>
+							-1	-16
+							0	0
+							1	15
+						</tableData>
+					</table>
+					<product>
+						<property>fcs/elevator-trim-tab-pos-deg</property>
+						<value>0.5</value>
+					</product>
+				</difference>
+			</function>
+			<clipto>
+				<min>-16</min>
+				<max>15</max>
+			</clipto>
+			<output>fcs/elevator-pos-deg</output>
+		</fcs_function>
+
+		<aerosurface_scale>
+			<input>fcs/elevator-pos-deg</input>
+			<domain>
+				<min>-16</min>
+				<max>15</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/elevator-pos-norm</output>
+		</aerosurface_scale>
+	</channel>
+
+	<channel name="Ailerons">
+		<aerosurface_scale>
+			<input>fcs/roll-trim-cmd-norm</input>
+			<range>
+				<min>-20</min>
+				<max>20</max>
+			</range>
+			<output>fcs/left-aileron-trim-tab-pos-deg</output>
+		</aerosurface_scale>
+		
+		<aerosurface_scale>
+			<input>fcs/left-aileron-trim-tab-pos-deg</input>
+			<domain>
+				<min>-20</min>
+				<max>20</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/left-aileron-trim-tab-pos-norm</output>
+		</aerosurface_scale>
+		
+		<aerosurface_scale>
+			<input>-fcs/roll-trim-cmd-norm</input>
+			<range>
+				<min>-20</min>
+				<max>20</max>
+			</range>
+			<output>fcs/right-aileron-trim-tab-pos-deg</output>
+		</aerosurface_scale>
+		
+		<aerosurface_scale>
+			<input>fcs/right-aileron-trim-tab-pos-deg</input>
+			<domain>
+				<min>-20</min>
+				<max>20</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/right-aileron-trim-tab-pos-norm</output>
+		</aerosurface_scale>
+		
+		<fcs_function>
+			<function>
+				<sum>
+					<table>
+						<independentVar lookup="row">fcs/aileron-cmd-norm</independentVar>
+						<tableData>
+							-1	-20
+							0	0
+							1	20
+						</tableData>
+					</table>
+					<product>
+						<property>fcs/left-aileron-trim-tab-pos-deg</property>
+						<value>0.5</value>
+					</product>
+				</sum>
+			</function>
+			<output>fcs/left-aileron-pos-deg</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<sum>
+					<table>
+						<independentVar lookup="row">-fcs/aileron-cmd-norm</independentVar>
+						<tableData>
+							-1	-20
+							0	0
+							1	20
+						</tableData>
+					</table>
+					<product>
+						<property>fcs/right-aileron-trim-tab-pos-deg</property>
+						<value>0.5</value>
+					</product>
+				</sum>
+			</function>
+			<output>fcs/right-aileron-pos-deg</output>
+		</fcs_function>
+		
+		<aerosurface_scale>
+			<input>fcs/left-aileron-pos-deg</input>
+			<domain>
+				<min>-20</min>
+				<max>20</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/left-aileron-pos-norm</output>
+		</aerosurface_scale>
+		
+		<aerosurface_scale>
+			<input>fcs/right-aileron-pos-deg</input>
+			<domain>
+				<min>-20</min>
+				<max>20</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/right-aileron-pos-norm</output>
+		</aerosurface_scale>
+		
+		<fcs_function>
+			<function>
+				<quotient>
+					<sum>
+						<property>fcs/left-aileron-pos-norm</property>
+						<property>-fcs/right-aileron-pos-norm</property>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+			<output>fcs/aileron-pos-norm</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<quotient>
+					<sum>
+						<property>fcs/left-aileron-pos-deg</property>
+						<property>-fcs/right-aileron-pos-deg</property>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+			<output>fcs/aileron-pos-deg</output>
+		</fcs_function>
+		
+		<fcs_function>
+			<function>
+				<quotient>
+					<sum>
+						<property>fcs/left-aileron-pos-rad</property>
+						<property>-fcs/right-aileron-pos-rad</property>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+			<output>fcs/aileron-pos-rad</output>
+		</fcs_function>
+	</channel>
+
+	<channel name="Rudder">
+		<aerosurface_scale>
+			<input>-fcs/yaw-trim-cmd-norm</input>
+			<range>
+				<min>-20</min>
+				<max>25</max>
+			</range>
+			<output>fcs/rudder-trim-tab-pos-deg</output>
+		</aerosurface_scale>
+		
+		<aerosurface_scale>
+			<input>fcs/rudder-trim-tab-pos-deg</input>
+			<domain>
+				<min>-25</min>
+				<max>20</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/rudder-trim-tab-pos-norm</output>
+		</aerosurface_scale>
+		
+		<fcs_function>
+			<function>
+				<difference>
+					<product>
+						<property>fcs/rudder-cmd-norm</property>
+						<value>29</value>
+					</product>
+					<product>
+						<property>fcs/rudder-trim-tab-pos-deg</property>
+						<value>0.5</value>
+					</product>
+				</difference>
+			</function>
+			<clipto>
+				<min>-29</min>
+				<max>29</max>
+			</clipto>
+			<output>fcs/rudder-pos-deg</output>
+		</fcs_function>
+
+		<aerosurface_scale>
+			<input>fcs/rudder-pos-deg</input>
+			<domain>
+				<min>-29</min>
+				<max>29</max>
+			</domain>
+			<range>
+				<min>-1</min>
+				<max>1</max>
+			</range>
+			<output>fcs/rudder-pos-norm</output>
+		</aerosurface_scale>
+	</channel>
+	
+	<channel name="Gear">
+		<kinematic name="Landing Gear Control">
+			<input>gear/gear-cmd-norm</input>
+			<traverse>
+				<setting>
+					<position>0</position>
+					<time>0</time>
+				</setting>
+				<setting>
+					<position>1</position>
+					<time>10</time>
+				</setting>
+			</traverse>
+			<output>gear/gear-pos-norm</output>
+		</kinematic>
+	</channel>
+	
+	<channel name="Flaps">
+		<switch>
+			<name>Actuator rate</name>
+			<default value="0"/>
+			<!-- 3° per second = 15 seconds for full extension / retraction -->
+			<test value="3">
+				fcs/flap-cmd-norm NE fcs/flap-pos-norm
+				<!-- /systems/flaps/powered EQ 1 -->
+			</test>
+			<output>/systems/flaps/actuator-rate</output>
+		</switch>
+		
+		<aerosurface_scale>
+			<name>Flap command as degrees</name>
+			<input>fcs/flap-cmd-norm</input>
+			<domain>
+				<min>0</min>
+				<max>1</max>
+			</domain>
+			<range>
+				<min>0</min>
+				<max>35</max>
+			</range>
+			<output>fcs/flap-cmd-deg</output>
+		</aerosurface_scale>
+		
+		<actuator name="/systems/flaps/actuator">
+			<name>Flap actuator</name>
+			<input>fcs/flap-cmd-deg</input>
+			<rate_limit>/systems/flaps/actuator-rate</rate_limit>
+			<output>fcs/flap-pos-deg</output>
+		</actuator>
+		
+		<aerosurface_scale>
+			<name>Flap position normalized</name>
+			<input>fcs/flap-pos-deg</input>
+			<domain>
+				<min>0</min>
+				<max>35</max>
+			</domain>
+			<range>
+				<min>0</min>
+				<max>1</max>
+			</range>
+			<output>fcs/flap-pos-norm</output>
+		</aerosurface_scale>
+	</channel>
+</flight_control>
