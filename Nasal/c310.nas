@@ -2,8 +2,8 @@ var disengage_starters_timer = maketimer(5, func {
 	props.globals.setBoolValue("/controls/engines/engine[0]/starter", 0);
 	props.globals.setBoolValue("/controls/engines/engine[1]/starter", 0);
 });
-var disengage_starters_timer.singleShot = 1;
-var disengage_starters_timer.simulatedTime = 1;
+disengage_starters_timer.singleShot = 1;
+disengage_starters_timer.simulatedTime = 1;
 
 
 var autostart_engine = func(i) {
