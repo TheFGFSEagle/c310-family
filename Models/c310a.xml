@@ -85,6 +85,10 @@
 		<object-name>RudderTrimTab</object-name>
 		<object-name>VerticalStabilizer</object-name>
 		<object-name>VerticalStabilizerTip</object-name>
+		<object-name>LeftLandingLightLampCase</object-name>
+		<object-name>LeftLandingLightLampInside</object-name>
+		<object-name>RightLandingLightLampCase</object-name>
+		<object-name>RightLandingLightLampInside</object-name>
 	</effect>
 	
 	<effect>
@@ -97,6 +101,8 @@
 		<object-name>Windshield</object-name>
 		<object-name>LeftNavLightCap</object-name>
 		<object-name>RightNavLightCap</object-name>
+		<object-name>LeftLandingLightLampGlass</object-name>
+		<object-name>RightLandingLightLampGlass</object-name>
 	</effect>
 	
 	<model>
@@ -139,6 +145,26 @@
 			<z-m>-0.608</z-m>
 			<roll-deg>-4.5</roll-deg>
 		</offsets>
+		<overlay>
+			<params>
+				<brightness-prop>sim/model/lights/landing[0]/brightness-norm</brightness-prop>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightLandingLight</name>
+		<path>Lights/landing-light.xml</path>
+		<offsets>
+			<x-m>1.006</x-m>
+			<y-m>3.493</y-m>
+			<z-m>-0.608</z-m>
+			<roll-deg>4.5</roll-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<brightness-prop>sim/model/lights/landing[1]/brightness-norm</brightness-prop>
+			</params>
+		</overlay>
 	</model>
 	
 	<!-- control surfaces -->
@@ -850,6 +876,51 @@
 			<green>0.95</green>
 			<blue>0.95</blue>
 			<factor-prop>sim/model/lights/landing[0]/brightness-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>RightLandingLightLampCase</object-name>
+		<object-name>RightLandingLightLampGlass</object-name>
+		<object-name>RightLandingLightLampInside</object-name>
+		<object-name>RightLandingLight</object-name>
+		<condition>
+			<property>sim/equipment/right-landing-light</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>RightLandingLightCover</object-name>
+		<condition>
+			<not>
+				<property>sim/equipment/right-landing-light</property>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>RightLandingLightLampCase</object-name>
+		<object-name>RightLandingLightLampGlass</object-name>
+		<object-name>RightLandingLightLampInside</object-name>
+		<object-name>RightLandingLight</object-name>
+		<axis>
+			<object-name>RightLandingLightLampAxis</object-name>
+		</axis>
+		<property>sim/model/lights/landing[1]/pos-deg</property>
+		<factor>-1</factor>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>RightLandingLightLampInside</object-name>
+		<emission>
+			<red>1</red>
+			<green>0.95</green>
+			<blue>0.95</blue>
+			<factor-prop>sim/model/lights/landing[1]/brightness-norm</factor-prop>
 		</emission>
 	</animation>
 </PropertyList>

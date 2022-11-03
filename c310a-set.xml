@@ -67,6 +67,9 @@
 				<landing>
 					<max-extension-deg type="double">83.25</max-extension-deg>
 				</landing>
+				<landing>
+					<max-extension-deg type="double">83.25</max-extension-deg>
+				</landing>
 			</lights>
 		</model>
 		
@@ -107,6 +110,7 @@
 		
 		<equipment>
 			<auxiliary-fuel-tanks type="bool">false</auxiliary-fuel-tanks>
+			<right-landing-light type="bool">false</right-landing-light>
 		</equipment>
 		
 		<menubar include="gui/menubar.xml"/>
@@ -166,6 +170,10 @@
 	</limits>
 	
 	<controls>
+		<lighting>
+			<landing-light type="int">0</landing-light>
+			<landing-light type="int">0</landing-light>
+		</lighting>
 		<fuel>
 			<selector type="int">0</selector>
 			<selector type="int">0</selector>
