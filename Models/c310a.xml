@@ -281,7 +281,7 @@
 	</animation>
 	
 	<!-- propellers -->
-	<!--<model>
+	<model>
 		<name>LeftPropellerBlur</name>
 		<path>Effects/prop-blur.xml</path>
 		<offsets>
@@ -314,7 +314,7 @@
 				<sense>1</sense>
 			</params>
 		</overlay>
-	</model>-->
+	</model>
 	
 	<animation>
 		<condition>
@@ -339,49 +339,6 @@
 		<object-name>RightPropellerBlade1</object-name>
 		<object-name>RightPropellerBlade2</object-name>
 	</animation>
-	
-	<model>
-		<name>LeftPropellerBlur</name>
-		<path>Exterior/prop-blur/prop-blur.xml</path>
-		<offsets>
-			<x-m>-0.566</x-m>
-			<y-m>-1.947</y-m>
-			<z-m>-0.474</z-m>
-		</offsets>
-		<overlay>
-			<params>
-				<rpm-prop>engines/engine[0]/thruster/rpm</rpm-prop>
-				<pitch-prop>engines/engine[0]/thruster/pitch</pitch-prop>
-				<blur-onset-rpm>100</blur-onset-rpm>
-				<blur-full-rpm>1000</blur-full-rpm>
-				<total-mesh-number>100</total-mesh-number>
-				<sense>1</sense>
-				<num-blades>2</num-blades>
-				<transparency>0.05</transparency>
-			</params>
-		</overlay>
-	</model>
-	<model>
-		<name>RightPropellerBlur</name>
-		<path>Exterior/prop-blur/prop-blur.xml</path>
-		<offsets>
-			<x-m>-0.566</x-m>
-			<y-m>1.947</y-m>
-			<z-m>-0.474</z-m>
-		</offsets>
-		<overlay>
-			<params>
-				<rpm-prop>engines/engine[1]/thruster/rpm</rpm-prop>
-				<pitch-prop>engines/engine[1]/thruster/pitch</pitch-prop>
-				<blur-onset-rpm>100</blur-onset-rpm>
-				<blur-full-rpm>1000</blur-full-rpm>
-				<total-mesh-number>100</total-mesh-number>
-				<sense>1</sense>
-				<num-blades>2</num-blades>
-				<transparency>0.05</transparency>
-			</params>
-		</overlay>
-	</model>
 	
 	<animation>
 		<type>spin</type>
