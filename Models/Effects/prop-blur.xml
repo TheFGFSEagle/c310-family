@@ -6,8 +6,15 @@
 		<gradient-texture>Aircraft/c310-family/Models/Effects/prop-blur-gradient.png</gradient-texture>
 		<diameter-m>1</diameter-m>
 		<num-blades>2</num-blades>
-		<rpm-property>engines/engine/thruster/rpm</rpm-property>
+		<rpm-property>engines/engine[0]/thruster/rpm</rpm-property>
+		<pitch-property>engines/engine[0]/thruster/pitch</pitch-property>
 		<sense>1</sense>
+		<blade-width n="0">0.07</blade-width>
+		<blade-width n="1">0.12</blade-width>
+		<blade-width n="2">0.16</blade-width>
+		<blade-width n="3">0.14</blade-width>
+		<blur-onset-rpm>100</blur-onset-rpm>
+		<blur-full-rpm>800</blur-full-rpm>
 	</params>
 	
 	<effect>
@@ -20,15 +27,14 @@
 			<diameter-m alias="/params/diameter-m"/>
 			<num-blades alias="/params/num-blades"/>
 			<rpm><use alias="/params/rpm-property"/></rpm>
+			<pitch><use alias="/params/pitch-property"/></pitch>
 			<sense alias="/params/sense"/>
+			<blade-width n="0" alias="/params/blade-width[0]"/>
+			<blade-width n="1" alias="/params/blade-width[1]"/>
+			<blade-width n="2" alias="/params/blade-width[2]"/>
+			<blade-width n="3" alias="/params/blade-width[3]"/>
+			<blur-onset-rpm alias="/params/blur-onset-rpm"/>
+			<blur-full-rpm alias="/params/blur-full-rpm"/>
 		</parameters>
 	</effect>
-	
-	<animation>
-		<type>scale</type>
-		<object-name>Prop</object-name>
-		<x-offset>1</x-offset>
-		<y-offset alias="/params/diameter-m"/>
-		<z-offset alias="/params/diameter-m"/>
-	</animation>
 </PropertyList>
