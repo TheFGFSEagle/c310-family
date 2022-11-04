@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <propeller version="1.01" name="McCauley-D2AF34C71-84JF-3">
-	<ixx>0.5</ixx>
+	<ixx>5</ixx>
 	<diameter unit="IN">81</diameter>
 	<numblades>2</numblades>
 	<gearratio>1</gearratio>
