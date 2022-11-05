@@ -34,49 +34,10 @@
 		<factor>90</factor>
 		<action>
 			<binding>
-				<command>property-adjust</command>
-				<property>controls/fuel/selector[1]</property>
-				<min>0</min>
-				<max>3</max>
-				<factor>1</factor>
+				<command>nasal</command>
+				<script>c310.controls.fuel_selector[1].adjust(cmdarg().getValue("offset"));</script>
 			</binding>
 		</action>
-		<increase>
-			<binding>
-				<condition>
-					<and>
-						<not>
-							<property>sim/equipment/auxiliary-fuel-tanks</property>
-						</not>
-						<equals>
-							<property>controls/fuel/selector[1]</property>
-							<value>2</value>
-						</equals>
-					</and>
-				</condition>
-				<command>property-assign</command>
-				<property>controls/fuel/selector[1]</property>
-				<value>3</value>
-			</binding>
-		</increase>
-		<decrease>
-			<binding>
-				<condition>
-					<and>
-						<not>
-							<property>sim/equipment/auxiliary-fuel-tanks</property>
-						</not>
-						<equals>
-							<property>controls/fuel/selector[1]</property>
-							<value>2</value>
-						</equals>
-					</and>
-				</condition>
-				<command>property-assign</command>
-				<property>controls/fuel/selector[1]</property>
-				<value>1</value>
-			</binding>
-		</decrease>
 		<hovered>
 			<binding>
 				<command>show-tooltip</command>

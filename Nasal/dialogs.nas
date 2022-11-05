@@ -1,8 +1,10 @@
-var EquipmentDialog = {
+var dialogs = {};
+
+dialogs.EquipmentDialog = {
 	new: func {
 		var obj = {
 			parents: [
-				EquipmentDialog,
+				dialogs.EquipmentDialog,
 				canvas.Window.new(size: [200, 100], type: "dialog", destroy_on_close: 0).setTitle("Equipment options")
 			],
 			auxiliary_fuel_tanks_node: props.globals.getNode("sim/equipment/auxiliary-fuel-tanks"),
@@ -44,4 +46,5 @@ var EquipmentDialog = {
 	}
 };
 
-equipment_dialog = EquipmentDialog.new();
+dialogs.equipment_dialog = dialogs.EquipmentDialog.new();
+

@@ -9,7 +9,7 @@
 	<property>propulsion/tank[2]/vent-blocked</property>
 	<property>propulsion/tank[3]/vent-blocked</property>
 	
-	<channel rate="120">
+	<channel>
 		<switch>
 			<default value="1"/>
 			<test value="0">
@@ -17,6 +17,22 @@
 			</test>
 			<output>/consumables/fuel/tank[2]/hidden</output>
 			<output>/consumables/fuel/tank[3]/hidden</output>
+		</switch>
+		
+		<switch name="/controls/fuel/selector[0]">
+			<default value="/controls/fuel/selector[0]"/>
+			<test value="1" logic="AND">
+				/sim/equipment/auxiliary-fuel-tanks EQ 0
+				/controls/fuel/selector[0] EQ 2
+			</test>
+		</switch>
+		
+		<switch name="/controls/fuel/selector[1]">
+			<default value="/controls/fuel/selector[1]"/>
+			<test value="1" logic="AND">
+				/sim/equipment/auxiliary-fuel-tanks EQ 0
+				/controls/fuel/selector[1] EQ 2
+			</test>
 		</switch>
 	</channel>
 	
