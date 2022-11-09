@@ -90,6 +90,7 @@
 		<object-name>LeftLandingLightLampInside</object-name>
 		<object-name>RightLandingLightLampCase</object-name>
 		<object-name>RightLandingLightLampInside</object-name>
+		<object-name>BeaconMount</object-name>
 	</effect>
 	
 	<effect>
@@ -104,6 +105,7 @@
 		<object-name>RightNavLightCap</object-name>
 		<object-name>LeftLandingLightLampGlass</object-name>
 		<object-name>RightLandingLightLampGlass</object-name>
+		<object-name>BeaconGlass</object-name>
 	</effect>
 	
 	<effect>
@@ -145,9 +147,9 @@
 	<model>
 		<path>Lights/beacon-light.xml</path>
 		<offsets>
-			<x-m>5.6</x-m>
+			<x-m>5.57</x-m>
 			<y-m>0</y-m>
-			<z-m>1.96</z-m>
+			<z-m>1.975</z-m>
 		</offsets>
 	</model>
 	<model>
