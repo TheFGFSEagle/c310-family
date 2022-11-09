@@ -114,7 +114,6 @@
 	
 	<model>
 		<usage>interior</usage>
-		<name>Interior</name>
 		<path>Interior/interior.xml</path>
 	</model>
 	
@@ -1028,4 +1027,45 @@
 			</binding>
 		</action>
 	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>LeftSunVisor</object-name>
+		<object-name>LeftSunVisorFrame</object-name>
+		<axis>
+			<object-name>LeftSunVisorAxis</object-name>
+		</axis>
+		<property>sim/model/sun-visors/pos-norm[0]</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>sim/model/sun-visors/pos-norm[0]</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>RightSunVisor</object-name>
+		<object-name>RightSunVisorFrame</object-name>
+		<axis>
+			<object-name>RightSunVisorAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property>sim/model/sun-visors/pos-norm[1]</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>sim/model/sun-visors/pos-norm[1]</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+	</animatio
 </PropertyList>
