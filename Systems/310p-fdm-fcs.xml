@@ -54,6 +54,7 @@
 				<max>10</max>
 			</range>
 			<output>fcs/elevator-trim-tab-pos-deg</output>
+			<output>/surface-positions/elevator-trim-tab-deg</output>
 		</aerosurface_scale>
 		
 		<aerosurface_scale>
@@ -91,6 +92,7 @@
 				<max>15</max>
 			</clipto>
 			<output>fcs/elevator-pos-deg</output>
+			<output>/surface-positions/elevator-deg</output>
 		</fcs_function>
 
 		<aerosurface_scale>
@@ -115,6 +117,7 @@
 				<max>20</max>
 			</range>
 			<output>fcs/aileron-trim-tab-pos-deg</output>
+			<output>/surface-positions/aileron-trim-tab-deg</output>
 		</aerosurface_scale>
 		
 		<aerosurface_scale>
@@ -148,6 +151,7 @@
 				</sum>
 			</function>
 			<output>fcs/left-aileron-pos-deg</output>
+			<output>/surface-positions/left-aileron-deg</output>
 		</fcs_function>
 		
 		<fcs_function>
@@ -168,6 +172,7 @@
 				</sum>
 			</function>
 			<output>fcs/right-aileron-pos-deg</output>
+			<output>/surface-positions/right-aileron-deg</output>
 		</fcs_function>
 		
 		<aerosurface_scale>
@@ -244,6 +249,7 @@
 				<max>25</max>
 			</range>
 			<output>fcs/rudder-trim-tab-pos-deg</output>
+			<output>/surface-positions/rudder-trim-tab-deg</output>
 		</aerosurface_scale>
 		
 		<aerosurface_scale>
@@ -277,6 +283,7 @@
 				<max>29</max>
 			</clipto>
 			<output>fcs/rudder-pos-deg</output>
+			<output>/surface-positions/rudder-deg</output>
 		</fcs_function>
 
 		<aerosurface_scale>
@@ -340,6 +347,7 @@
 			<name>Flap actuator</name>
 			<input>fcs/flap-cmd-deg</input>
 			<rate_limit>/systems/flaps/actuator-rate</rate_limit>
+			<output>/surface-positions/flaps-deg</output>
 			<output>fcs/flap-pos-deg</output>
 		</actuator>
 		
