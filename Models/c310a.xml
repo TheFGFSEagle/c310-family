@@ -1304,4 +1304,41 @@
 			</binding>
 		</hovered>
 	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>CircuitBreakerPanelCover</object-name>
+		<object-name>CircuitBreakerPanelCoverHandle</object-name>
+		<axis>
+			<object-name>CircuitBreakerPanelCoverAxis</object-name>
+		</axis>
+		<property>sim/model/circuit-breaker-panel/cover-pos-norm</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>sim/model/circuit-breaker-panel/cover-pos-norm</property>
+				<min>0</min>
+				<max>1</max>
+				<factor>0.1</factor>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>circuit-breaker-panel-cover</tooltip-id>
+				<label>Circuit breaker panel cover: %s</label>
+				<measure-text>Circuit breaker panel cover: closed</measure-text>
+				<property>sim/model/circuit-breaker-panel/cover-pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] > 0.25) {
+						return "open";
+					} else {
+						return "closed";
+					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
 </PropertyList>
