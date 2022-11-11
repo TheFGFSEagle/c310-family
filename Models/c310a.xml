@@ -901,10 +901,10 @@
 		<action>
 			<binding>
 				<condition>
-					<equals>
+					<less-than>
 						<property>sim/model/openable-window/pos-norm</property>
-						<value>0</value>
-					</equals>
+						<value>0.05</value>
+					</less-than>
 				</condition>
 				<command>property-adjust</command>
 				<property>sim/model/openable-window/handle-pos-norm</property>
@@ -914,10 +914,10 @@
 			</binding>
 			<binding>
 				<condition>
-					<equals>
+					<greater-than>
 						<property>sim/model/openable-window/handle-pos-norm</property>
-						<value>1</value>
-					</equals>
+						<value>0.9</value>
+					</greater-than>
 				</condition>
 				<command>property-adjust</command>
 				<property>sim/model/openable-window/pos-norm</property>
@@ -926,6 +926,30 @@
 				<max>1</max>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>openable-window</tooltip-id>
+				<label>Openable window: %s</label>
+				<measure-text>Openable window: unlatched, closed</measure-text>
+				<property>sim/model/openable-window/handle-pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					var s = ""
+					if (arg[0] > 0.9) {
+						s = "unlatched";
+					} else {
+						s = "latched";
+					}
+					s += ", ";
+					if (getprop("sim/model/openable-window/pos-norm") < 0.05) {
+						s += "closed";
+					} else {
+						s += "open";
+					}
+				]]></script>
+			</binding>
+		</hovered>
 	</animation>
 	
 	<animation>
@@ -972,6 +996,23 @@
 				<max>1</max>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>cabin-door-handle</tooltip-id>
+				<label>Cabin door: %s</label>
+				<measure-text>Cabin door: unlatched</measure-text>
+				<property>sim/model/cabin-door/handle-pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] > 0.95) {
+						return "unlatched";
+					} else {
+						return "latched";
+					}
+				]]></script>
+			</binding>
+		</hovered>
 	</animation>
 	
 	<animation>
@@ -1018,6 +1059,23 @@
 				<max>1</max>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>cabin-door</tooltip-id>
+				<label>Cabin door: %s</label>
+				<measure-text>Cabin door: closed</measure-text>
+				<property>sim/model/cabin-door/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] > 0.05) {
+						return "open";
+					} else {
+						return "closed";
+					}
+				]]></script>
+			</binding>
+		</hovered>
 	</animation>
 	
 	<animation>
@@ -1038,6 +1096,23 @@
 				<max>1</max>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>baggage-door</tooltip-id>
+				<label>Baggage door: %s</label>
+				<measure-text>Baggage door: closed</measure-text>
+				<property>sim/model/baggage-door/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] > 0.05) {
+						return "open";
+					} else {
+						return "closed";
+					}
+				]]></script>
+			</binding>
+		</hovered>
 	</animation>
 	
 	<animation>
@@ -1058,6 +1133,23 @@
 				<max>1</max>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>left-sun-visor</tooltip-id>
+				<label>Left sun visor: %s</label>
+				<measure-text>Right sun visor: stowed</measure-text>
+				<property>sim/model/sun-visors/pos-norm[0]</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] > 0.25) {
+						return "down";
+					} else {
+						return "stowed";
+					}
+				]]></script>
+			</binding>
+		</hovered>
 	</animation>
 	
 	<animation>
@@ -1079,6 +1171,23 @@
 				<max>1</max>
 			</binding>
 		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>right-sun-visor</tooltip-id>
+				<label>Right sun visor: %s</label>
+				<measure-text>Right sun visor: stowed</measure-text>
+				<property>sim/model/sun-visors/pos-norm[1]</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] > 0.25) {
+						return "down";
+					} else {
+						return "stowed";
+					}
+				]]></script>
+			</binding>
+		</hovered>
 	</animation>
 	
 	<animation>
