@@ -1309,6 +1309,8 @@
 		<type>knob</type>
 		<object-name>CircuitBreakerPanelCover</object-name>
 		<object-name>CircuitBreakerPanelCoverHandle</object-name>
+		<object-name>CircuitBreakerPanelCoverLeftHinge</object-name>
+		<object-name>CircuitBreakerPanelCoverRightHinge</object-name>
 		<axis>
 			<object-name>CircuitBreakerPanelCoverAxis</object-name>
 		</axis>
