@@ -23,6 +23,119 @@
 	</model>
 	
 	<model>
+		<name>LeftThrottleLever</name>
+		<path>Controls/engine/throttle-lever.xml</path>
+		<offsets>
+			<x-m>0.598</x-m>
+			<y-m>-0.058</y-m>
+			<z-m>-0.29</z-m>
+			<pitch-deg>56</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<throttle-prop>controls/engines/engine[0]/throttle</throttle-prop>
+				<tooltip-id>left-throttle</tooltip-id>
+				<label>Left throttle: %.0f%%</label>
+				<measure-text>Left throttle: 100%</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightThrottleLever</name>
+		<path>Controls/engine/throttle-lever.xml</path>
+		<offsets>
+			<x-m>0.598</x-m>
+			<y-m>-0.034</y-m>
+			<z-m>-0.29</z-m>
+			<pitch-deg>56</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<throttle-prop>controls/engines/engine[1]/throttle</throttle-prop>
+				<tooltip-id>right-throttle</tooltip-id>
+				<label>Right throttle: %.0f%%</label>
+				<measure-text>Right throttle: 100%</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>LeftPropRPMLever</name>
+		<path>Controls/engine/prop-rpm-lever.xml</path>
+		<offsets>
+			<x-m>0.598</x-m>
+			<y-m>-0.011</y-m>
+			<z-m>-0.29</z-m>
+			<pitch-deg>56</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<path>left-prop-rpm-lever.ac</path>
+				<prop-pitch-prop>controls/engines/engine[0]/propeller-pitch</prop-pitch-prop>
+				<tooltip-id>left-prop-rpm</tooltip-id>
+				<label>Left propeller: %s</label>
+				<measure-text>Left propeller: feathered</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightPropRPMLever</name>
+		<path>Controls/engine/prop-rpm-lever.xml</path>
+		<offsets>
+			<x-m>0.598</x-m>
+			<y-m>0.011</y-m>
+			<z-m>-0.29</z-m>
+			<pitch-deg>56</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<path>right-prop-rpm-lever.ac</path>
+				<prop-pitch-prop>controls/engines/engine[1]/propeller-pitch</prop-pitch-prop>
+				<tooltip-id>right-prop-rpm</tooltip-id>
+				<label>Right propeller: %s</label>
+				<measure-text>Right propeller: feathered</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>LeftMixtureLever</name>
+		<path>Controls/engine/mixture-lever.xml</path>
+		<offsets>
+			<x-m>0.598</x-m>
+			<y-m>0.034</y-m>
+			<z-m>-0.29</z-m>
+			<pitch-deg>56</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<mixture-prop>controls/engines/engine[0]/mixture</mixture-prop>
+				<tooltip-id>left-mixture</tooltip-id>
+				<label>Left mixture: %.0f%%</label>
+				<measure-text>Left mixture: 100%</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightMixtureLever</name>
+		<path>Controls/engine/mixture-lever.xml</path>
+		<offsets>
+			<x-m>0.598</x-m>
+			<y-m>0.058</y-m>
+			<z-m>-0.29</z-m>
+			<pitch-deg>56</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<mixture-prop>controls/engines/engine[1]/mixture</mixture-prop>
+				<tooltip-id>right-mixture</tooltip-id>
+				<label>Right mixture: %.0f%%</label>
+				<measure-text>Right mixture: 100%</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
 		<path>Instruments/asi/asi.xml</path>
 		<offsets>
 			<x-m>0.52</x-m>

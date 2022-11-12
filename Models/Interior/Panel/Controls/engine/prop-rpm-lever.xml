@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<params>
+		<path>left-prop-rpm-lever.ac</path>
+		<prop-pitch-prop>controls/engines/engine[0]/propeller-pitch</prop-pitch-prop>
+		<tooltip-id>left-prop-rpm</tooltip-id>
+		<label>Left propeller: %s</label>
+		<measure-text>Left propeller: feathered</measure-text>
+	</params>
+	
+	<path alias="/params/path"/>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>PropRPMLever</object-name>
+		<object-name>PropRPMHandle</object-name>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/prop-pitch-prop"/>
+		<factor>60</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/prop-pitch-prop"/>
+				<factor>0.01</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<measure-text alias="/params/measure-text"/>
+				<property alias="/params/prop-pitch-prop"/>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] < 0.1) {
+						return "feathered";
+					} else {
+						var low_rpm = getprop("fdm/jsbsim/systems/propulsion/prop-low-rpm");
+						var high_rpm = getprop("fdm/jsbsim/systems/propulsion/prop-high-rpm");
+						return math.round(low_rpm + (high_rpm - low_rpm) * arg[0], 0);
+					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
