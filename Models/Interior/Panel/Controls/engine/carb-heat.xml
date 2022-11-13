@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>carb-heat.ac</path>
+	
+	<params>
+		<carb-heat-prop>controls/engines/engine[0]/carb-heat</carb-heat-prop>
+		<carb-heat-lock-prop>controls/engines/engine[0]/carb-heat-lock-norm</carb-heat-lock-prop>
+		<tooltip-id>left-carb-heat</tooltip-id>
+		<label>Left carburetor heat: %s</label>
+		<measure-text>Left carburetor: off, unlocked</measure-text>
+	</params>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>CarbHeatHandle</object-name>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/carb-heat-prop"/>
+		<factor>0.015</factor>
+		<action>
+			<binding>
+				<condition>
+					<less-than>
+						<property alias="/params/carb-heat-lock-prop"/>
+						<value>0.5</value>
+					</less-than>
+				</condition>
+				<command>property-toggle</command>
+				<property alias="/params/carb-heat-prop"/>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/carb-heat-lock-prop"/>
+				<min>0</min>
+				<max>1</max>
+				<factor>0.1</factor>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<measure-text alias="/params/measure-text"/>
+				<property alias="/params/carb-heat-prop"/>
+				<lock-property alias="/params/carb-heat-lock-prop"/>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					var s = arg[0] == 1 ? "heated" : "unheated";
+					s += ", ";
+					s += getprop(cmdarg().getValue("lock-property")) > 0.5 ? "locked" : "unlocked";
+					return s
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>CarbHeatHandle</object-name>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/carb-heat-lock-prop"/>
+		<factor>180</factor>
+	</animation>
+</PropertyList>

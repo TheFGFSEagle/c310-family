@@ -1229,6 +1229,16 @@
 	</animation>
 	
 	<animation>
+		<type>rotate</type>
+		<object-name>AileronTrimNeedle</object-name>
+		<axis>
+			<object-name>AileronTrimWheelAxis</object-name>
+		</axis>
+		<property>controls/flight/aileron-trim</property>
+		<factor>35</factor>
+	</animation>
+	
+	<animation>
 		<type>knob</type>
 		<object-name>RudderTrimWheel</object-name>
 		<axis>
@@ -1268,6 +1278,16 @@
 	</animation>
 	
 	<animation>
+		<type>rotate</type>
+		<object-name>RudderTrimNeedle</object-name>
+		<axis>
+			<object-name>RudderTrimWheelAxis</object-name>
+		</axis>
+		<property>controls/flight/rudder-trim</property>
+		<factor>35</factor>
+	</animation>
+	
+	<animation>
 		<type>knob</type>
 		<object-name>ElevatorTrimWheel</object-name>
 		<axis>
@@ -1301,6 +1321,52 @@
 						return sprintf("%.1f° down", abs(arg[0]));
 					}
 				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevatorTrimNeedle</object-name>
+		<axis>
+			<object-name>ElevatorTrimWheelAxis</object-name>
+		</axis>
+		<property>controls/flight/elevator-trim</property>
+		<factor>35</factor>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>EngineControlsFrictionKnob</object-name>
+		<axis>
+			<object-name>EngineControlsAxis</object-name>
+		</axis>
+		<property>controls/engines/friction-norm</property>
+		<factor>360</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/friction-norm</property>
+				<min>0</min>
+				<max>1</max>
+				<factor>0.01</factor>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/engines/friction-factor</property>
+				<min>0</min>
+				<max>1</max>
+				<factor>-0.01</factor>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>engine-controls-friction-knob</tooltip-id>
+				<label>Engine controls friction: %.0f%%</label>
+				<measure-text>Engine controls friction: 100%</measure-text>
+				<property>controls/engines/friction-norm</property>
+				<mapping>percent</mapping>
 			</binding>
 		</hovered>
 	</animation>
