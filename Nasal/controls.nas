@@ -29,9 +29,9 @@ controls.Magnetos = {
 			flag: 0
 		};
 		
-		obj.left_mag_listener = setlistener(obj.left_mag_node, func obj.update());
-		obj.right_mag_listener = setlistener(obj.right_mag_node, func obj.update());
-		obj.magnetos_listener = setlistener(obj.left_mag_node, func obj.update());
+		obj.left_mag_listener = setlistener(obj.left_mag_node, func(node) obj.update(node));
+		obj.right_mag_listener = setlistener(obj.right_mag_node, func(node) obj.update(node));
+		obj.magnetos_listener = setlistener(obj.left_mag_node, func(node) obj.update(node));
 	},
 	update: func(node) {
 		me.flag and return;
