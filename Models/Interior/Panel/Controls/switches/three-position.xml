@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>two-position.ac</path>
+	<path>switch.ac</path>
 	
 	<params>
 		<property>controls/lighting/landing-light[0]</property>
