@@ -207,6 +207,9 @@
 				<drain-valve type="bool">false</drain-valve>
 			</tank>
 		</fuel>
+		<electric>
+			<battery-switch type="bool">true</battery-switch>
+		</electric>
 		<engines>
 			<friction-norm type="double">0</friction-norm>
 			<friction-factor type="double">1</friction-factor>
@@ -216,8 +219,10 @@
 				<throttle>0</throttle>
 				<propeller-pitch>1</propeller-pitch>
 				<mixture>0</mixture>
+				<magnetos type="int">0</magnetos>
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
+				<master-alt type="bool">false</master-alt>
 			</engine>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
@@ -225,8 +230,10 @@
 				<throttle>0</throttle>
 				<propeller-pitch>1</propeller-pitch>
 				<mixture>0</mixture>
+				<magnetos type="int">0</magnetos>
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
+				<master-alt type="bool">false</master-alt>
 			</engine>
 		</engines>
 		<gear>
