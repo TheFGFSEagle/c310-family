@@ -9,7 +9,8 @@ disengage_starters_timer.simulatedTime = 1;
 var autostart_engine = func(i) {
 	if (!props.globals.getNode("/engines/engine[" ~ i ~ "]/running").getBoolValue()) {
 		props.globals.setIntValue("/controls/fuel/selector[" ~ i ~ "]", 1);
-		props.globals.setIntValue("/controls/engines/engine[" ~ i ~ "]/magnetos", 3);
+		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/left-magneto", 1);
+		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/right-magneto", 1);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/throttle", 0);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/propeller-pitch", 1);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/mixture", 1);
@@ -20,7 +21,8 @@ var autostart_engine = func(i) {
 var autostop_engine = func(i) {
 	if (props.globals.getNode("/engines/engine[" ~ i ~ "]/running")) {
 		props.globals.setIntValue("/controls/fuel/selector[" ~ i ~ "]", 0);
-		props.globals.setIntValue("/controls/engines/engine[" ~ i ~ "]/magnetos", 0);
+		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/left-magneto", 0);
+		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/right-magneto", 0);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/throttle", 0);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/propeller-pitch", 1);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/mixture", 0);
