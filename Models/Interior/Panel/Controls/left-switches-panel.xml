@@ -162,7 +162,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.017</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -180,7 +180,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.034</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -198,7 +198,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.051</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -219,7 +219,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.072</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -240,7 +240,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.09</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -281,7 +281,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.197</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -302,7 +302,7 @@
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.215</y-m>
-			<z-m>0.725</z-m>
+			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
 			<params>
