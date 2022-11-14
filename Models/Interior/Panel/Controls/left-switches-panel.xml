@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<name>LeftAlternatorSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.017</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[0]/master-alt</property>
+				<tooltip-id>left-alternator-switch</tooltip-id>
+				<label>Left alternator: %s</label>
+				<measure-text>Left alternator: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>BatterySwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.034</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/electric/battery-switch</property>
+				<tooltip-id>battery-switch</tooltip-id>
+				<label>Battery: %s</label>
+				<measure-text>Battery: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightAlternatorSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.051</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[1]/master-alt</property>
+				<tooltip-id>right-alternator-switch</tooltip-id>
+				<label>Right alternator: %s</label>
+				<measure-text>Right alternator: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>LeftFuelBoostPumpSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.075</y-m>
+			<z-m>0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[0]/fuel-pump</property>
+				<tooltip-id>left-fuel-boost-pump-switch</tooltip-id>
+				<label>Left fuel boost pump: %s</label>
+				<measure-text>Left fuel boost pump: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightFuelBoostPumpSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.093</y-m>
+			<z-m>0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[1]/fuel-pump</property>
+				<tooltip-id>right-fuel-boost-pump-switch</tooltip-id>
+				<label>Right fuel boost pump: %s</label>
+				<measure-text>Right fuel boost pump: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>LeftLeftMagnetoSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.118</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[0]/left-magneto</property>
+				<tooltip-id>left-left-magneto-switch</tooltip-id>
+				<label>Left engine, left magneto: %s</label>
+				<measure-text>Left engine, left magneto: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>LeftRightMagnetoSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.136</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[0]/right-magneto</property>
+				<tooltip-id>left-right-magneto-switch</tooltip-id>
+				<label>Left engine, right magneto: %s</label>
+				<measure-text>Left engine, right magneto: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightLeftMagnetoSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.154</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[1]/left-magneto</property>
+				<tooltip-id>right-left-magneto-switch</tooltip-id>
+				<label>Right engine, left magneto: %s</label>
+				<measure-text>Right engine, left magneto: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightRightMagnetoSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.172</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[1]/right-magneto</property>
+				<tooltip-id>right-right-magneto-switch</tooltip-id>
+				<label>Right engine, right magneto: %s</label>
+				<measure-text>Right engine, right magneto: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>ADFSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.017</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>instrumentation/adf/power-btn</property>
+				<tooltip-id>adf-power-switch</tooltip-id>
+				<label>ADF: %s</label>
+				<measure-text>ADF: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>AutopilotSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.034</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>autopilot/power</property>
+				<tooltip-id>adf-power-switch</tooltip-id>
+				<label>Autopilot: %s</label>
+				<measure-text>Autopilot: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>LeftLandingLightSwitch</name>
+		<path>switches/three-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.051</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/lighting/landing-light[0]</property>
+				<tooltip-id>left-landing-light-switch</tooltip-id>
+				<label>Left landing light: %s</label>
+				<one-text>extend and light</one-text>
+				<zero-text>off</zero-text>
+				<minus-one-text>retract</minus-one-text>
+				<measure-text>Left landing light: extend and light</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>RightLandingLightSwitch</name>
+		<path>switches/three-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.072</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/lighting/landing-light[1]</property>
+				<tooltip-id>right-landing-light-switch</tooltip-id>
+				<label>Right landing light: %s</label>
+				<one-text>extend and light</one-text>
+				<zero-text>off</zero-text>
+				<minus-one-text>retract</minus-one-text>
+				<measure-text>Right landing light: extend and light</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>NavLightsSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.09</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/lighting/nav-lights</property>
+				<tooltip-id>nav-lights-switch</tooltip-id>
+				<label>Nav lights: %s</label>
+				<measure-text>Nav lights: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>PrimeSwitch</name>
+		<path>switches/three-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.145</y-m>
+			<z-m>0.08</z-m>
+			<roll-deg>90</roll-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/prime</property>
+				<tooltip-id>prime-switch</tooltip-id>
+				<label>Prime: %s</label>
+				<one-text>right engine</one-text>
+				<zero-text>off</zero-text>
+				<minus-one-text>left engine</minus-one-text>
+				<measure-text>Prime: right engine</measure-text>
+				<spring-loaded type="bool">true</spring-loaded>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>CabinVentilationSwitch</name>
+		<path>switches/three-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.197</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/cabin-air/ventilation</property>
+				<tooltip-id>cabin-ventilation-switch</tooltip-id>
+				<label>Cabin ventilation: %s</label>
+				<one-text>heat</one-text>
+				<zero-text>off</zero-text>
+				<minus-one-text>fan</minus-one-text>
+				<measure-text>Cabin ventilation: heat</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>PitotHeatSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.215</y-m>
+			<z-m>0.725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/anti-ice/pitot-heat</property>
+				<tooltip-id>pitot-heat-switch</tooltip-id>
+				<label>Pitot heat: %s</label>
+				<measure-text>Pitot heat: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+</PropertyList>

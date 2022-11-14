@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>two-position.ac</path>
+	
+	<params>
+		<property>controls/lighting/nav-lights</property>
+		<tooltip-id>nav-lights-switch</tooltip-id>
+		<label>Nav lights: %s</label>
+		<off-text>off</off-text>
+		<on-text>on</on-text>
+		<measure-text>Nav lights: off</measure-text>
+	</params>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>SwitchBase</object-name>
+		<object-name>Switch</object-name>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/property"/>
+		<factor>50</factor>
+		<offset-deg>-25</offset-deg>
+		<action>
+			<binding>
+				<command>property-toggle</command>
+				<property alias="/params/property"/>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<off-text alias="/params/off-text"/>
+				<on-text alias="/params/on-text"/>
+				<measure-text alias="/params/measure-text"/>
+				<property alias="/params/property"/>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] ? cmdarg().getValue("on-text") : cmdarg().getValue("off-text");
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
