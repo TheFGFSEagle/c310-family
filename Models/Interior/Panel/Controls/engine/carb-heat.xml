@@ -8,6 +8,9 @@
 		<tooltip-id>left-carb-heat</tooltip-id>
 		<label>Left carburetor heat: %s</label>
 		<measure-text>Left carburetor: off, unlocked</measure-text>
+		<script><![CDATA[
+			return ["unheated, ", "heated, "][arg[0]] ~ (props.globals.getValue("controls/engines/engine[0]/carb-heat-lock-norm") > 0.5 ? "locked" : "unlocked");
+		]]></script>
 	</params>
 	
 	<animation>
@@ -48,14 +51,8 @@
 				<label alias="/params/label"/>
 				<measure-text alias="/params/measure-text"/>
 				<property alias="/params/carb-heat-prop"/>
-				<lock-property alias="/params/carb-heat-lock-prop"/>
 				<mapping>nasal</mapping>
-				<script><![CDATA[
-					var s = arg[0] == 1 ? "heated" : "unheated";
-					s += ", ";
-					s += getprop(cmdarg().getValue("lock-property")) > 0.5 ? "locked" : "unlocked";
-					return s
-				]]></script>
+				<script alias="/params/script"/>
 			</binding>
 		</hovered>
 	</animation>
@@ -64,7 +61,7 @@
 		<type>rotate</type>
 		<object-name>CarbHeatHandle</object-name>
 		<axis>
-			<x>1</x>
+			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
 		</axis>

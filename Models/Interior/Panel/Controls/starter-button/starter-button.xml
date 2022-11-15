@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>starter-button.ac</path>
+	
+	<params>
+		<property>controls/engines/engine[0]/starter</property>
+		<tooltip-id>left-starter-button</tooltip-id>
+		<label>Left starter: %s</label>
+		<measure-text>Left starter: off</measure-text>
+	</params>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>Button</object-name>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/property"/>
+		<factor>0.007</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<measure-text alias="/params/measure-text"/>
+				<property alias="/params/property"/>
+				<mapping>nasal</mapping>
+				<script>
+					return ["off", "on"][arg[0]];
+				</script>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>

@@ -151,6 +151,9 @@
 				<tooltip-id>left-carb-heat</tooltip-id>
 				<label>Left carburetor heat: %s</label>
 				<measure-text>Left carburetor: off, unlocked</measure-text>
+				<script><![CDATA[
+					return ["unheated, ", "heated, "][arg[0]] ~ (props.globals.getValue("controls/engines/engine[0]/carb-heat-lock-norm") > 0.5 ? "locked" : "unlocked");
+				]]></script>
 			</params>
 		</overlay>
 	</model>
@@ -171,6 +174,9 @@
 				<tooltip-id>right-carb-heat</tooltip-id>
 				<label>Right carburetor heat: %s</label>
 				<measure-text>Right carburetor: off, unlocked</measure-text>
+				<script><![CDATA[
+					return ["unheated, ", "heated, "][arg[0]] ~ (props.globals.getValue("controls/engines/engine[1]/carb-heat-lock-norm") > 0.5 ? "locked" : "unlocked");
+				]]></script>
 			</params>
 		</overlay>
 	</model>

@@ -1351,13 +1351,6 @@
 				<max>1</max>
 				<factor>0.01</factor>
 			</binding>
-			<binding>
-				<command>property-adjust</command>
-				<property>controls/engines/friction-factor</property>
-				<min>0</min>
-				<max>1</max>
-				<factor>-0.01</factor>
-			</binding>
 		</action>
 		<hovered>
 			<binding>

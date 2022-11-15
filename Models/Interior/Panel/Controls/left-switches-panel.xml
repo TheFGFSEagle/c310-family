@@ -249,13 +249,31 @@
 	</model>
 	
 	<model>
+		<name>LeftStarterButton</name>
+		<path>starter-button/starter-button.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.12</y-m>
+			<z-m>0.0725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[0]/starter</property>
+				<tooltip-id>left-starter-button</tooltip-id>
+				<label>Left starter: %s</label>
+				<measure-text>Left starter: off</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
 		<name>PrimeSwitch</name>
 		<path>switches/three-position.xml</path>
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>0.145</y-m>
 			<z-m>0.08</z-m>
-			<roll-deg>90</roll-deg>
+			<roll-deg>-90</roll-deg>
 		</offsets>
 		<overlay>
 			<params>
@@ -265,6 +283,24 @@
 				<script>return ["off", "right engine", "left engine"][arg[0]];</script>
 				<measure-text>Prime: right engine</measure-text>
 				<spring-loaded type="bool">true</spring-loaded>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>RightStarterButton</name>
+		<path>starter-button/starter-button.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.17</y-m>
+			<z-m>0.0725</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/engines/engine[1]/starter</property>
+				<tooltip-id>right-starter-button</tooltip-id>
+				<label>Right starter: %s</label>
+				<measure-text>Right starter: off</measure-text>
 			</params>
 		</overlay>
 	</model>
