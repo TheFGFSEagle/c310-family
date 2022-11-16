@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>circuit-breaker-panel.ac</path>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0275</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/right-alternator</property>
+				<tooltip-id>right-alternator-circuit-breaker</tooltip-id>
+				<label>Right alternator: %s</label>
+				<measure-text>Right alternator: tripped</measure-text>
+				<amps>25</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0475</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/vhf[0]</property>
+				<tooltip-id>vhf-1-circuit-breaker</tooltip-id>
+				<label>VHF 1: %s</label>
+				<measure-text>VHF 1: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0675</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/marker-beacon</property>
+				<tooltip-id>marker-beacon-circuit-breaker</tooltip-id>
+				<label>Marker beacon: %s</label>
+				<measure-text>Marker beacon: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0875</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/ils</property>
+				<tooltip-id>ils-circuit-breaker</tooltip-id>
+				<label>ILS: %s</label>
+				<measure-text>ILS: tripped</measure-text>
+				<amps>10</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1075</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/pitot-heat</property>
+				<tooltip-id>pitot-heat-circuit-breaker</tooltip-id>
+				<label>Pitot heat: %s</label>
+				<measure-text>Pitot heat: tripped</measure-text>
+				<amps>10</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1275</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/left-fuel-boost-pump-oat-gauge</property>
+				<tooltip-id>left-fuel-boost-pump-oat-gauge-circuit-breaker</tooltip-id>
+				<label>Left fuel boost pump and OAT gauge: %s</label>
+				<measure-text>Left fuel boost pump and OAT gauge: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1475</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/right-fuel-boost-pump-starters</property>
+				<tooltip-id>right-fuel-boost-pump-starters-circuit-breaker</tooltip-id>
+				<label>Right fuel boost pump and starters: %s</label>
+				<measure-text>Right fuel boost pump and starters: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1675</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/cabin-heater</property>
+				<tooltip-id>cabin-heater-circuit-breaker</tooltip-id>
+				<label>Cabin heater: %s</label>
+				<measure-text>Cabin heater: tripped</measure-text>
+				<amps>15</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1875</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/left-cht-gauge-turn-and-bank-flap-pos</property>
+				<tooltip-id>left-cht-gauge-turn-and-bank-flap-pos-circuit-breaker</tooltip-id>
+				<label>Left CHT gauge, turn and bank and flap position indicator: %s</label>
+				<measure-text>Left CHT gauge, turn and bank and flap position indicator: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2075</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/right-cht-gauge-stall-warn</property>
+				<tooltip-id>right-cht-gauge-stall-warn-circuit-breaker</tooltip-id>
+				<label>Right CHT gauge and stall warning: %s</label>
+				<measure-text>Right CHT gauge and stall warning: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2275</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/landing-gear-motor</property>
+				<tooltip-id>landing-gear-motor-circuit-breaker</tooltip-id>
+				<label>Landing gear motor and relays: %s</label>
+				<measure-text>Landing gear motor and relays: tripped</measure-text>
+				<amps>15</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2475</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/nav-lights-oil-dilution-primers</property>
+				<tooltip-id>nav-lights-oil-dilution-primers-circuit-breaker</tooltip-id>
+				<label>Nav lights, oil dilution system and primers: %s</label>
+				<measure-text>Nav lights, oil dilution system and primers: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2675</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/left-landing-light-front-cigar-lighter</property>
+				<tooltip-id>left-landing-light-front-cigar-lighter-circuit-breaker</tooltip-id>
+				<label>Left landing light and front cigar lighter: %s</label>
+				<measure-text>Left landing light and front cigar lighter: tripped</measure-text>
+				<amps>15</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2875</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/right-landing-light-rear-cigar-lighter</property>
+				<tooltip-id>right-landing-light-rear-cigar-lighter-circuit-breaker</tooltip-id>
+				<label>Right landing light and rear cigar lighter: %s</label>
+				<measure-text>Right landing light and rear cigar lighter: tripped</measure-text>
+				<amps>15</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.3075</y-m>
+			<z-m>0.08</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/vhf[1]</property>
+				<tooltip-id>vhf-2-circuit-breaker</tooltip-id>
+				<label>VHF 2: %s</label>
+				<measure-text>VHF 2: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0275</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/left-alternator</property>
+				<tooltip-id>left-alternator-circuit-breaker</tooltip-id>
+				<label>Left alternator: %s</label>
+				<measure-text>Left alternator: tripped</measure-text>
+				<amps>25</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0475</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/adf[0]</property>
+				<tooltip-id>adf-1-circuit-breaker</tooltip-id>
+				<label>ADF 1: %s</label>
+				<measure-text>ADF 1: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0675</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/lf-radio</property>
+				<tooltip-id>low-frequency-radio-circuit-breaker</tooltip-id>
+				<label>LF radio: %s</label>
+				<measure-text>LF radio: tripped</measure-text>
+				<amps>10</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.0875</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/adf[1]</property>
+				<tooltip-id>adf-2-circuit-breaker</tooltip-id>
+				<label>ADF 2: %s</label>
+				<measure-text>ADF 2: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1075</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/autopilot</property>
+				<tooltip-id>autopilot-circuit-breaker</tooltip-id>
+				<label>Autopilot: %s</label>
+				<measure-text>Autopilot: tripped</measure-text>
+				<amps>10</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1275</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/left-oil-temp-left-landing-light-motor</property>
+				<tooltip-id>left-oil-temp-left-landing-light-motor-circuit-breaker</tooltip-id>
+				<label>Left oil temperature gauge, left landing light motor: %s</label>
+				<measure-text>Left oil temperature gauge, left landing light motor: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1475</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/right-oil-temp-right-landing-light-motor-taxi-light</property>
+				<tooltip-id>right-oil-temp-right-landing-light-motor-taxi-lightcircuit-breaker</tooltip-id>
+				<label>Right oil temperature gauge, right landing light motor, taxi light: %s</label>
+				<measure-text>Right oil temperature gauge, right landing light motor, taxi light: tripped</measure-text>
+				<amps>10</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1675</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/fuel-quantity-compass-radio-lights</property>
+				<tooltip-id>fuel-quantity-compass-radio-lights-circuit-breaker</tooltip-id>
+				<label>Fuel quantity gauge, compass and radio lights: %s</label>
+				<measure-text>Fuel quantity gauge, compass and radio lights: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.1875</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/prop-anti-ice</property>
+				<tooltip-id>prop-anti-ice-circuit-breaker</tooltip-id>
+				<label>Propeller anti-ice system: %s</label>
+				<measure-text>Propeller anti-ice system: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2075</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/wing-deice-system-light</property>
+				<tooltip-id>wing-deice-system-light-circuit-breaker</tooltip-id>
+				<label>Wing deice system and light: %s</label>
+				<measure-text>Wing deice system and light: tripped</measure-text>
+				<amps>10</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2275</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/flaps</property>
+				<tooltip-id>flaps-circuit-breaker</tooltip-id>
+				<label>Flaps: %s</label>
+				<measure-text>Flaps: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2475</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/gear-indicator-warning-horn</property>
+				<tooltip-id>gear-indicator-warning-horn-circuit-breaker</tooltip-id>
+				<label>Gear indicator lights and warning horn: %s</label>
+				<measure-text>Gear indicator lights and warning horn: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2675</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/uv-inst-lights-rear-dome-light</property>
+				<tooltip-id>uv-inst-lights-rear-dome-light-circuit-breaker</tooltip-id>
+				<label>UV instrument lights and rear dome light: %s</label>
+				<measure-text>UV instrument lights and rear dome light: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.2875</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/red-inst-front-dome-baggage-light</property>
+				<tooltip-id>red-inst-front-dome-baggage-light-circuit-breaker</tooltip-id>
+				<label>Red instrument, front dome baggage compartment light: %s</label>
+				<measure-text>Red instrument, front dome baggage compartment light: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>circuit-breaker-placeholder.ac</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.3075</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+	</model>
+</PropertyList>
