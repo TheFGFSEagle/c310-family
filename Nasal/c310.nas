@@ -1,3 +1,5 @@
+aircraft.data.save(1);
+
 var disengage_starters_timer = maketimer(5, func {
 	props.globals.setBoolValue("/controls/engines/engine[0]/starter", 0);
 	props.globals.setBoolValue("/controls/engines/engine[1]/starter", 0);
