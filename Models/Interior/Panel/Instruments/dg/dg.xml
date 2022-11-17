@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>dg.ac</path>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Scale</object-name>
+		<axis>
+			<object-name>ScaleAxis</object-name>
+		</axis>
+		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Knob</object-name>
+		<axis>
+			<object-name>KnobAxis</object-name>
+		</axis>
+		<property>instrumentation/heading-indicator/offset-deg</property>
+		<factor>10</factor>
+		<action>
+			<binding>
+				<condition>
+					<property>instrumentation/heading-indicator/caged</property>
+				</condition>
+				<command>property-adjust</command>
+				<property>instrumentation/heading-indicator/offset-deg</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>property-toggle</command>
+				<property>instrumentation/heading-indicator/caged</property>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>directional-gyro-caging-knob</tooltip-id>
+				<label>DG offset: %s</label>
+				<measure-text>DG offset: 360.0°, caged</measure-text>
+				<property>instrumentation/heading-indicator/offset-deg</property>
+				<mapping>nasal</mapping>
+				<script>
+					return sprintf("%3.1f°%s", arg[0], props.globals.getBoolValue("instrumentation/heading-indicator/caged") ? ", caged" : "");
+				</script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>Knob</object-name>
+		<object-name>KnobBase</object-name>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property>instrumentation/heading-indicator/caged</property>
+		<factor>0.01</factor>
+	</animation>
+</PropertyList>
