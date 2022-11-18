@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>four-switch-bar.ac</path>
+	
+	<params>
+		<tooltip-id>magnetos-switch-bar</tooltip-id>
+		<label>Magnetos switch bar; can be used to switch off all magneto switches at once</label>
+		<property>controls/engines/engine[0]/left-magneto</property>
+		<property>controls/engines/engine[0]/right-magneto</property>
+		<property>controls/engines/engine[1]/left-magneto</property>
+		<property>controls/engines/engine[1]/right-magneto</property>
+	</params>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Guard</object-name>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<expression>
+			<sum>
+				<product>
+					<min>
+						<sum>
+							<property alias="/params/property[0]"/>
+							<property alias="/params/property[1]"/>
+							<property alias="/params/property[2]"/>
+							<property alias="/params/property[3]"/>
+						</sum>
+						<value>1</value>
+					</min>
+					<value>50</value>
+				</product>
+				<value>-8.5</value>
+			</sum>
+		</expression>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[0]"/>
+				<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[1]"/>
+				<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[2]"/>
+				<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[3]"/>
+				<value type="bool">false</value>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<mapping>none</mapping>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
