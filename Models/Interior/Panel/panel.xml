@@ -225,6 +225,16 @@
 	</model>
 	
 	<model>
+		<name>AttitudeIndicator</name>
+		<path>Instruments/ai/ai.xml</path>
+		<offsets>
+			<x-m>0.51</x-m>
+			<y-m>-0.09</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+	</model>
+	
+	<model>
 		<path>Instruments/manifold-pressure/manifold-pressure.xml</path>
 		<offsets>
 			<x-m>0.55</x-m>
