@@ -131,6 +131,7 @@
 		<equipment>
 			<auxiliary-fuel-tanks type="bool">false</auxiliary-fuel-tanks>
 			<right-landing-light type="bool">false</right-landing-light>
+			<rotating-beacon type="bool">false</rotating-beacon>
 		</equipment>
 		
 		<menubar include="gui/menubar.xml"/>

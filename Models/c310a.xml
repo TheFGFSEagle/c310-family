@@ -147,6 +147,7 @@
 		</offsets>
 	</model>
 	<model>
+		<name>BeaconLight</name>
 		<path>Lights/beacon-light.xml</path>
 		<offsets>
 			<x-m>5.57</x-m>
@@ -887,6 +888,16 @@
 			<blue>0.95</blue>
 			<factor-prop>sim/model/lights/landing[1]/brightness-norm</factor-prop>
 		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>BeaconGlass</object-name>
+		<object-name>BeaconMount</object-name>
+		<object-name>BeaconLight</object-name>
+		<condition>
+			<property>sim/equipment/rotating-beacon</property>
+		</condition>
 	</animation>
 	
 	<animation>

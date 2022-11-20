@@ -9,6 +9,7 @@ dialogs.EquipmentDialog = {
 			],
 			auxiliary_fuel_tanks_node: props.globals.getNode("sim/equipment/auxiliary-fuel-tanks"),
 			right_landing_light_node: props.globals.getNode("sim/equipment/right-landing-light"),
+			rotating_beacon_node: props.globals.getNode("sim/equipment/rotating-beacon"),
 		};
 		obj.canvas = obj.getCanvas(create: 1).set("background", canvas.style.getColor("bg_color"));
 		obj.root = obj.canvas.createGroup();
@@ -36,12 +37,24 @@ dialogs.EquipmentDialog = {
 		obj.right_landing_light_listener = setlistener(obj.right_landing_light_node, func (n) {
 			obj.right_landing_light_checkbox.setChecked(n.getBoolValue());
 		});
+		
+		obj.rotating_beacon_checkbox = canvas.gui.widgets.CheckBox.new(obj.root, canvas.style, {"label-position": "left"})
+											.setText("Rotating beacon installed:")
+											.setChecked(obj.rotating_beacon_node.getBoolValue());
+		obj.layout.addItem(obj.rotating_beacon_checkbox);
+		obj.rotating_beacon_checkbox.listen("toggled", func (e) {
+			obj.rotating_beacon_node.setBoolValue(int(e.detail.checked));
+		});
+		obj.rotating_beacon_listener = setlistener(obj.rotating_beacon_node, func (n) {
+			obj.rotating_beacon_checkbox.setChecked(n.getBoolValue());
+		});
 		return obj;
 	},
 	
 	del: func {
 		removelistener(me.auxiliary_fuel_tanks_listener);
 		removelistener(me.right_landing_light_listener);
+		removelistener(me.rotating_beacon_listener);
 		equipment_dialog = nil;
 	}
 };
