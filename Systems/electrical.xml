@@ -504,6 +504,33 @@
 	</filter>
 	
 	<filter>
+		<name>Rotating beacon volts</name>
+		<type>gain</type>
+		<!--<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers/closed</gain>-->
+		<input>
+			<property>bus/volts</property>
+			<scale>/controls/lighting/beacon</scale>
+		</input>
+		<output>consumers/rotating-beacon/volts</output>
+	</filter>
+	<filter>
+		<name>Rotating beacon amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/rotating-beacon/volts</property>
+					<div>
+						<property>consumers/rotating-beacon/rated-volts</property>
+						<property>consumers/rotating-beacon/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/rotating-beacon/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
@@ -512,6 +539,7 @@
 					<property>consumers/nav-lights/amps</property>
 					<property>consumers/landing-light[0]/amps</property>
 					<property>consumers/landing-light[1]/amps</property>
+					<property>consumers/rotating-beacon/amps</property>
 				</sum>
 			</expression>
 		</input>
@@ -614,7 +642,7 @@
 		<type>gain</type>
 		<input>
 			<!-- battery has sufficient charge and alternators / ground power are not providing enough voltage - discharge -->
-			<!--<condition>
+			<condition>
 				<greater-than>
 					<property>suppliers/batteries/volts</property>
 					<value>12</value>
@@ -634,7 +662,7 @@
 			<min>0</min>
 			<max>100</max>
 		</input>
-		<input>-->
+		<input>
 			<!-- alternators / ground power are providing enough power - charge -->
 			<condition>
 				<greater-than>
