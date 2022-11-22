@@ -87,7 +87,7 @@
 				</product>
 			</expression>
 		</input>
-		<output>suppliers/alternator[0]/available-volts</output>
+		<output>suppliers/alternator[0]/volts</output>
 		<min>0</min>
 		<max>suppliers/alternator[0]/rated-volts</max>
 	</filter>
@@ -506,7 +506,7 @@
 	<filter>
 		<name>Rotating beacon volts</name>
 		<type>gain</type>
-		<!--<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers/closed</gain>-->
+		<gain>/controls/circuit-breakers/rotating-beacon/closed</gain>
 		<input>
 			<property>bus/volts</property>
 			<scale>/controls/lighting/beacon</scale>

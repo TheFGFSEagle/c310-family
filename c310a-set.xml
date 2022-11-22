@@ -280,6 +280,10 @@
 				<closed type="bool">true</closed>
 				<rated-amps>10</rated-amps>
 			</right-oil-temp-right-landing-light-motor-taxi-light>
+			<rotating-beacon>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</rotating-beacon>
 			<uv-inst-lights-rear-dome-light>
 				<closed type="bool">true</closed>
 				<rated-amps>5</rated-amps>
