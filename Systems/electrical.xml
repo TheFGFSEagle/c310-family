@@ -58,6 +58,8 @@
 						<property>suppliers/alternator[0]/rated-amps</property>
 						<value>172</value>
 					</div>
+					<property>/controls/engines/engine[0]/master-alt</property>
+					<property>/controls/circuit-breakers/left-alternator/closed</property>
 				</prod>
 			</expression>
 		</input>
@@ -72,12 +74,16 @@
 			<expression>
 				<product>
 					<property>/engines/engine[0]/rpm</property>
-					<property>/controls/engines/engine[0]/master-alt</property>
 					<value>0.07</value>
 					<div>
 						<property>suppliers/alternator[0]/rated-amps</property>
-						<property>suppliers/alternator[0]/amps</property>
+						<max>
+							<property>suppliers/alternator[0]/amps</property>
+							<value>1</value>
+						</max>
 					</div>
+					<property>/controls/engines/engine[0]/master-alt</property>
+					<property>/controls/circuit-breakers/left-alternator/closed</property>
 				</product>
 			</expression>
 		</input>
@@ -117,6 +123,8 @@
 						<property>suppliers/alternator[1]/rated-amps</property>
 						<value>172</value>
 					</div>
+					<property>/controls/engines/engine[1]/master-alt</property>
+					<property>/controls/circuit-breakers/right-alternator/closed</property>
 				</prod>
 			</expression>
 		</input>
@@ -131,16 +139,20 @@
 			<expression>
 				<product>
 					<property>/engines/engine[1]/rpm</property>
-					<property>/controls/engines/engine[1]/master-alt</property>
 					<value>0.07</value>
 					<div>
 						<property>suppliers/alternator[1]/rated-amps</property>
-						<property>suppliers/alternator[1]/amps</property>
+						<max>
+							<property>suppliers/alternator[1]/amps</property>
+							<value>1</value>
+						</max>
 					</div>
+					<property>/controls/engines/engine[1]/master-alt</property>
+					<property>/controls/circuit-breakers/right-alternator/closed</property>
 				</product>
 			</expression>
 		</input>
-		<output>suppliers/alternator[1]/available-volts</output>
+		<output>suppliers/alternator[1]/volts</output>
 		<min>0</min>
 		<max>suppliers/alternator[1]/rated-volts</max>
 	</filter>
@@ -163,7 +175,10 @@
 		<name>Available ground power amps</name>
 		<type>gain</type>
 		<gain>suppliers/gpu/rated-amps</gain>
-		<input>/controls/electric/ground-power-connected</input>
+		<input>
+			<property>/controls/electric/ground-power-connected</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
 		<output>suppliers/gpu/available-amps</output>
 	</filter>
 	<filter>
@@ -176,12 +191,16 @@
 					<property>suppliers/gpu/rated-volts</property>
 					<div>
 						<property>suppliers/gpu/rated-amps</property>
-						<property>suppliers/gpu/amps</property>
+						<max>
+							<property>suppliers/gpu/amps</property>
+							<value>1</value>
+						</max>
 					</div>
+					<property>/controls/electric/battery-switch</property>
 				</product>
 			</expression>
 		</input>
-		<output>suppliers/gpu/available-volts</output>
+		<output>suppliers/gpu/volts</output>
 		<min>0</min>
 		<max>suppliers/gpu/rated-volts</max>
 	</filter>
@@ -229,12 +248,16 @@
 					<property>suppliers/battery[0]/rated-volts</property>
 					<div>
 						<property>suppliers/battery[0]/rated-amps</property>
-						<property>suppliers/battery[0]/amps</property>
+						<max>
+							<property>suppliers/battery[0]/amps</property>
+							<value>1</value>
+						</max>
 					</div>
+					<property>/controls/electric/battery-switch</property>
 				</product>
 			</expression>
 		</input>
-		<output>suppliers/battery[0]/available-volts</output>
+		<output>suppliers/battery[0]/volts</output>
 		<min>0</min>
 		<max>suppliers/battery[0]/rated-volts</max>
 	</filter>
@@ -242,7 +265,10 @@
 		<name>Available first battery amps</name>
 		<type>gain</type>
 		<gain>suppliers/battery[0]/rated-amps</gain>
-		<input>suppliers/battery[0]/available-power-factor</input>
+		<input>
+			<property>suppliers/battery[0]/available-power-factor</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
 		<output>suppliers/battery[0]/available-amps</output>
 	</filter>
 	<filter>
@@ -287,12 +313,16 @@
 					<property>suppliers/battery[1]/rated-volts</property>
 					<div>
 						<property>suppliers/battery[1]/rated-amps</property>
-						<property>suppliers/battery[1]/amps</property>
+						<max>
+							<property>suppliers/battery[1]/amps</property>
+							<value>1</value>
+						</max>
 					</div>
+					<property>/controls/electric/battery-switch</property>
 				</product>
 			</expression>
 		</input>
-		<output>suppliers/battery[1]/available-volts</output>
+		<output>suppliers/battery[1]/volts</output>
 		<min>0</min>
 		<max>suppliers/battery[1]/rated-volts</max>
 	</filter>
@@ -300,7 +330,10 @@
 		<name>Available second battery amps</name>
 		<type>gain</type>
 		<gain>suppliers/battery[1]/rated-amps</gain>
-		<input>suppliers/battery[1]/available-power-factor</input>
+		<input>
+			<property>suppliers/battery[1]/available-power-factor</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
 		<output>suppliers/battery[1]/available-amps</output>
 	</filter>
 	<filter>
@@ -318,54 +351,7 @@
 	</filter>
 		
 	<filter>
-		<name>Output left alternator volts</name>
-		<type>gain</type>
-		<gain>/controls/circuit-breakers/left-alternator/closed</gain>
-		<input>
-			<property>suppliers/alternator[0]/available-volts</property>
-			<scale>/controls/engines/engine[0]/master-alt</scale>
-		</input>
-		<output>suppliers/alternator[0]/volts</output>
-	</filter>
-	<filter>
-		<name>Output right alternator volts</name>
-		<type>gain</type>
-		<gain>/controls/circuit-breakers/right-alternator/closed</gain>
-		<input>
-			<property>suppliers/alternator[1]/available-volts</property>
-			<scale>/controls/engines/engine[1]/master-alt</scale>
-		</input>
-		<output>suppliers/alternator[1]/volts</output>
-	</filter>
-	<filter>
-		<name>Output ground power volts</name>
-		<type>gain</type>
-		<input>
-			<property>suppliers/gpu/available-volts</property>
-			<scale>/controls/electric/ground-power-connected</scale>
-		</input>
-		<output>suppliers/gpu/volts</output>
-	</filter>
-	<filter>
-		<name>Output first battery volts</name>
-		<type>gain</type>
-		<input>
-			<property>suppliers/battery[0]/available-volts</property>
-			<scale>/controls/electric/battery-switch</scale>
-		</input>
-		<output>suppliers/battery[0]/volts</output>
-	</filter>
-	<filter>
-		<name>Output second battery volts</name>
-		<type>gain</type>
-		<input>
-			<property>suppliers/battery[1]/available-volts</property>
-			<scale>/controls/electric/battery-switch</scale>
-		</input>
-		<output>suppliers/battery[1]/volts</output>
-	</filter>
-	<filter>
-		<name>Output battery volts</name>
+		<name>Available battery volts</name>
 		<type>gain</type>
 		<input>
 			<expression>
@@ -378,7 +364,7 @@
 		<output>suppliers/batteries/volts</output>
 	</filter>
 	<filter>
-		<name>Output alternator volts</name>
+		<name>Available alternator volts</name>
 		<type>gain</type>
 		<input>
 			<expression>
@@ -425,7 +411,7 @@
 	<filter>
 		<name>Nav lights volts</name>
 		<type>gain</type>
-		<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers</gain>
+		<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers/closed</gain>
 		<input>
 			<property>bus/volts</property>
 			<scale>/controls/lighting/nav-lights</scale>
@@ -450,12 +436,82 @@
 	</filter>
 	
 	<filter>
+		<name>Left landing light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-landing-light-front-cigar-lighter/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/landing-light[0]</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/landing-light[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Left landing light amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/landing-light[0]/volts</property>
+					<div>
+						<property>consumers/landing-light[0]/rated-volts</property>
+						<property>consumers/landing-light[0]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right landing light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-landing-light-rear-cigar-lighter/closed</gain>
+		<input>
+			<condition>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/landing-light[1]</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/landing-light[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Right landing light amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<expression>
+				<div>
+					<property>consumers/landing-light[1]/volts</property>
+					<div>
+						<property>consumers/landing-light[1]/rated-volts</property>
+						<property>consumers/landing-light[1]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light[1]/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
 			<expression>
 				<sum>
 					<property>consumers/nav-lights/amps</property>
+					<property>consumers/landing-light[0]/amps</property>
+					<property>consumers/landing-light[1]/amps</property>
 				</sum>
 			</expression>
 		</input>
@@ -472,11 +528,64 @@
 					<value>12</value>
 				</greater-than>
 			</condition>
-			<property>bus/amps</property>
+			<expression>
+				<sum>
+					<property>bus/amps</property>
+					<property>suppliers/batteries/amps</property>
+				</sum>
+			</expression>
 		</input>
 		<output>suppliers/alternators/amps</output>
 		<min>0</min>
 		<max>suppliers/alternators/available-amps</max>
+	</filter>
+	<filter>
+		<name>Left alternator amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[1]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+			<scale>0.5</scale>
+		</input>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[0]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+		</input>
+		<output>suppliers/alternator[0]/amps</output>
+	</filter>
+	<filter>
+		<name>Right alternator amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[0]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+			<scale>0.5</scale>
+		</input>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[1]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+		</input>
+		<output>suppliers/alternator[1]/amps</output>
 	</filter>
 	<filter>
 		<name>Ground power amps load</name>
@@ -490,7 +599,10 @@
 			</condition>
 			<expression>
 				<dif>
-					<property>bus/amps</property>
+					<sum>
+						<property>bus/amps</property>
+						<property>suppliers/batteries/amps</property>
+					</sum>
 					<property>suppliers/alternators/amps</property>
 				</dif>
 			</expression>
@@ -502,7 +614,7 @@
 		<type>gain</type>
 		<input>
 			<!-- battery has sufficient charge and alternators / ground power are not providing enough voltage - discharge -->
-			<condition>
+			<!--<condition>
 				<greater-than>
 					<property>suppliers/batteries/volts</property>
 					<value>12</value>
@@ -522,7 +634,7 @@
 			<min>0</min>
 			<max>100</max>
 		</input>
-		<input>
+		<input>-->
 			<!-- alternators / ground power are providing enough power - charge -->
 			<condition>
 				<greater-than>
