@@ -53,6 +53,10 @@
 						<product>
 							<property>/sim/model/lights/beacon/brightness-norm</property>
 							<value>270</value>
+							<div>
+								<property>/systems/electrical/consumers/rotating-beacon-motor[0]/amps</property>
+								<property>/systems/electrical/consumers/rotating-beacon-motor[0]/rated-amps</property>
+							</div>
 							<property>/sim/time/delta-sec</property>
 						</product>
 					</sum>
@@ -134,6 +138,10 @@
 					<product>
 						<property>/controls/lighting/landing-light[0]</property>
 						<property>/sim/time/delta-sec</property>
+						<div>
+							<property>/systems/electrical/consumers/landing-light-motor[0]/amps</property>
+							<property>/systems/electrical/consumers/landing-light-motor[0]/rated-amps</property>
+						</div>
 						<value>0.2</value>
 					</product>
 				</sum>
@@ -189,6 +197,10 @@
 					<product>
 						<property>/controls/lighting/landing-light[1]</property>
 						<property>/sim/time/delta-sec</property>
+						<div>
+							<property>/systems/electrical/consumers/landing-light-motor[1]/amps</property>
+							<property>/systems/electrical/consumers/landing-light-motor[1]/rated-amps</property>
+						</div>
 						<value>0.2</value>
 					</product>
 				</sum>

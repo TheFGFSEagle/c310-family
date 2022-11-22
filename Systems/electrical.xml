@@ -467,6 +467,46 @@
 	</filter>
 	
 	<filter>
+		<name>Left landing light motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-oil-temp-left-landing-light-motor/closed</gain>
+		<input>
+			<condition>
+				<not-equals>
+					<property>/controls/lighting/landing-light[0]</property>
+					<value>0</value>
+				</not-equals>
+				<greater-than>
+					<property>/sim/model/lights/landing[0]/pos-norm</property>
+					<value>0</value>
+				</greater-than>
+				<less-than>
+					<property>/sim/model/lights/landing[0]/pos-norm</property>
+					<value>1</value>
+				</less-than>
+			</condition>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/landing-light-motor[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Left landing light motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/landing-light-motor[0]/volts</property>
+					<div>
+						<property>consumers/landing-light-motor[0]/rated-volts</property>
+						<property>consumers/landing-light-motor[0]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light-motor[0]/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Right landing light volts</name>
 		<type>gain</type>
 		<gain>/controls/circuit-breakers/right-landing-light-rear-cigar-lighter/closed</gain>
@@ -504,6 +544,47 @@
 	</filter>
 	
 	<filter>
+		<name>Right landing light motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-oil-temp-right-landing-light-motor-taxi-light/closed</gain>
+		<input>
+			<condition>
+				<not-equals>
+					<property>/controls/lighting/landing-light[1]</property>
+					<value>0</value>
+				</not-equals>
+				<greater-than>
+					<property>/sim/model/lights/landing[1]/pos-norm</property>
+					<value>0</value>
+				</greater-than>
+				<less-than>
+					<property>/sim/model/lights/landing[1]/pos-norm</property>
+					<value>1</value>
+				</less-than>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/landing-light-motor[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Right landing light motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/landing-light-motor[1]/volts</property>
+					<div>
+						<property>consumers/landing-light-motor[1]/rated-volts</property>
+						<property>consumers/landing-light-motor[1]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light-motor[1]/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Rotating beacon volts</name>
 		<type>gain</type>
 		<gain>/controls/circuit-breakers/rotating-beacon/closed</gain>
@@ -511,7 +592,10 @@
 			<property>bus/volts</property>
 			<scale>/controls/lighting/beacon</scale>
 		</input>
-		<output>consumers/rotating-beacon/volts</output>
+		<output>
+			<property>consumers/rotating-beacon/volts</property>
+			<property>consumers/rotating-beacon-motor/volts</property>
+		</output>
 	</filter>
 	<filter>
 		<name>Rotating beacon amps</name>
@@ -528,6 +612,22 @@
 			</expression>
 		</input>
 		<output>consumers/rotating-beacon/amps</output>
+	</filter>
+	<filter>
+		<name>Rotating beacon motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/rotating-beacon-motor/volts</property>
+					<div>
+						<property>consumers/rotating-beacon-motor/rated-volts</property>
+						<property>consumers/rotating-beacon-motor/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/rotating-beacon-motor/amps</output>
 	</filter>
 	
 	<filter>
