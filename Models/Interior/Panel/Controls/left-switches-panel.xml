@@ -364,7 +364,7 @@
 		<condition>
 			<property>sim/equipment/rotating-beacon</property>
 		</condition>
-		<name>NavLightsSwitch</name>
+		<name>BeaconLightSwitch</name>
 		<path>switches/two-position.xml</path>
 		<offsets>
 			<x-m>0</x-m>
