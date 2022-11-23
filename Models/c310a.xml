@@ -314,7 +314,6 @@
 				<num-blades>2</num-blades>
 				<rpm-property>engines/engine[0]/thruster/rpm</rpm-property>
 				<pitch-property>engines/engine[0]/thruster/pitch</pitch-property>
-				<sense>1</sense>
 				<blade-width n="0">0.07</blade-width>
 				<blade-width n="1">0.12</blade-width>
 				<blade-width n="2">0.16</blade-width>
@@ -336,7 +335,6 @@
 				<num-blades>2</num-blades>
 				<rpm-property>engines/engine[1]/thruster/rpm</rpm-property>
 				<pitch-property>engines/engine[1]/thruster/pitch</pitch-property>
-				<sense>1</sense>
 				<blade-width n="0">0.07</blade-width>
 				<blade-width n="1">0.12</blade-width>
 				<blade-width n="2">0.16</blade-width>

@@ -16,7 +16,6 @@
 		<num-blades>2</num-blades>
 		<rpm><use>engines/engine[0]/thruster/rpm</use></rpm>
 		<pitch><use>engines/engine[0]/thruster/pitch</use></pitch>
-		<sense>1</sense>
 		<blade-width n="0">0.07</blade-width>
 		<blade-width n="1">0.12</blade-width>
 		<blade-width n="2">0.16</blade-width>
@@ -90,7 +89,11 @@
 				<use>vertex-program-two-side</use>
 			</vertex-program-two-side>
 			<program>
+				<fragment-shader>Shaders/clustered-include.frag</fragment-shader>
+				<fragment-shader>Shaders/shadows-include.frag</fragment-shader>
+				<fragment-shader>Shaders/include_fog.frag</fragment-shader>
 				<fragment-shader>Aircraft/c310-family/Shaders/prop-blur.frag</fragment-shader>
+				<vertex-shader>Shaders/shadows-include.vert</vertex-shader>
 				<vertex-shader>Aircraft/c310-family/Shaders/prop-blur.vert</vertex-shader>
 			</program>
 
@@ -125,11 +128,6 @@
 				<value><use>pitch</use></value>
 			</uniform>
 			<uniform>
-				<name>sense</name>
-				<type>int</type>
-				<value><use>sense</use></value>
-			</uniform>
-			<uniform>
 				<name>blade_width_0</name>
 				<type>float</type>
 				<value><use>blade-width[0]</use></value>
@@ -159,6 +157,60 @@
 				<type>float</type>
 				<value><use>blur-full-rpm</use></value>
 			</uniform>
+			<!-- Begin fog include -->
+			<uniform>
+				<name>visibility</name>
+				<type>float</type>
+				<value><use>visibility</use></value>
+			</uniform>
+			<uniform>
+				<name>avisibility</name>
+				<type>float</type>
+				<value><use>avisibility</use></value>
+			</uniform>
+			<uniform>
+				<name>hazeLayerAltitude</name>
+				<type>float</type>
+				<value><use>lthickness</use></value>
+			</uniform>
+			<uniform>
+				<name>scattering</name>
+				<type>float</type>
+				<value><use>scattering</use></value>
+			</uniform>
+			<uniform>
+				<name>terminator</name>
+				<type>float</type>
+				<value><use>terminator</use></value>
+			</uniform>
+			<uniform>
+				<name>fogType</name>
+				<type>int</type>
+				<value><use>fogtype</use></value>
+			</uniform>
+			<!-- End fog include -->
+			<uniform>
+				<name>colorMode</name>
+				<type>int</type>
+				<value><use>material/color-mode-uniform</use></value>
+			</uniform>
+			<!-- Begin shadows include -->
+			<uniform>
+				<name>shadow_tex</name>
+				<type>sampler-2d</type>
+				<value type="int">10</value>
+			</uniform>
+			<uniform>
+				<name>shadows_enabled</name>
+				<type>bool</type>
+				<value><use>shadows_enabled</use></value>
+			</uniform>
+			<uniform>
+				<name>sun_atlas_size</name>
+				<type>int</type>
+				<value><use>sun_atlas_size</use></value>
+			</uniform>
+			<!-- End shadows include -->
 		</pass>
 	</technique>
 </PropertyList>
