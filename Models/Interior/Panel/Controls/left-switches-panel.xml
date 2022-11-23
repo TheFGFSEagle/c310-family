@@ -359,4 +359,25 @@
 			</params>
 		</overlay>
 	</model>
+	
+	<model>
+		<condition>
+			<property>sim/equipment/rotating-beacon</property>
+		</condition>
+		<name>BeaconLightSwitch</name>
+		<path>switches/two-position.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.072</y-m>
+			<z-m>0.045</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/lighting/beacon</property>
+				<tooltip-id>beacon-light-switch</tooltip-id>
+				<label>Rotating beacon: %s</label>
+				<measure-text>Rotating beacon: off</measure-text>
+			</params>
+		</overlay>
+	</model>
 </PropertyList>
