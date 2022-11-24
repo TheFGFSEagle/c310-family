@@ -461,7 +461,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property>controls/circuit-breakers/flaps/closed</property>
+				<property>controls/circuit-breakers/flaps-motor/closed</property>
 				<tooltip-id>flaps-circuit-breaker</tooltip-id>
 				<label>Flaps: %s</label>
 				<measure-text>Flaps: tripped</measure-text>
