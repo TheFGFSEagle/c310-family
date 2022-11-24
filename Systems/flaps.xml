@@ -55,7 +55,6 @@
 				<min>0</min>
 				<max>1</max>
 			</range>
-			<output></output>
 		</aerosurface_scale>
 	</channel>
 </system>
