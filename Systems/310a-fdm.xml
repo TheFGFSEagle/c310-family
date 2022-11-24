@@ -426,6 +426,7 @@
 	<system file="gear"/>
 	<system file="fuel"/>
 	<system file="engines"/>
+	<system file="flaps"/>
 			
 	<flight_control file="Systems/310a-fdm-fcs.xml"/>
 	

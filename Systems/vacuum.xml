@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<property type="double">/systems/vacuum/pump-line-leak-norm[0]</property>
-	<property type="double">/systems/vacuum/pump-line-clogged-norm[0]</property>
-	<property type="double">/systems/vacuum/pump-line-leak-norm[1]</property>
-	<property type="double">/systems/vacuum/pump-line-clogged-norm[1]</property>
-	<property type="double">/systems/vacuum/directional-gyro-line-leak-norm</property>
-	<property type="double">/systems/vacuum/directional-gyro-line-clogged-norm</property>
-	<property type="double">/systems/vacuum/attitude-indicator-line-leak-norm</property>
-	<property type="double">/systems/vacuum/attitude-indicator-line-clogged-norm</property>
+	<property value="0">/systems/vacuum/pump-line-leak-norm[0]</property>
+	<property value="0">/systems/vacuum/pump-line-clogged-norm[0]</property>
+	<property value="0">/systems/vacuum/pump-line-leak-norm[1]</property>
+	<property value="0">/systems/vacuum/pump-line-clogged-norm[1]</property>
+	<property value="0">/systems/vacuum/directional-gyro-line-leak-norm</property>
+	<property value="0">/systems/vacuum/directional-gyro-line-clogged-norm</property>
+	<property value="0">/systems/vacuum/attitude-indicator-line-leak-norm</property>
+	<property value="0">/systems/vacuum/attitude-indicator-line-clogged-norm</property>
 	
 	<filter>
 		<type>gain</type>
