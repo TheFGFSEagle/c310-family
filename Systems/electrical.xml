@@ -656,8 +656,6 @@
 		<gain>/controls/circuit-breakers/flaps-motor/closed</gain>
 		<input>
 			<property>bus/volts</property>
-			<scale>/systems/flaps/actuator-cmd</scale>
-			<abs type="bool">true</abs>
 		</input>
 		<output>
 			<property>consumers/flaps-motor/volts</property>
@@ -677,12 +675,45 @@
 						</div>
 					</div>
 					<abs>
-						<property>/systems/flaps/actuator-cmd</property>
+						<property>/fdm/jsbsim/systems/flaps/actuator-cmd</property>
 					</abs>
 				</product>
 			</expression>
 		</input>
 		<output>consumers/flaps-motor/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Landing gear motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/landing-gear-motor/closed</gain>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/landing-gear-motor/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Landing gear motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/landing-gear-motor/volts</property>
+						<div>
+							<property>consumers/landing-gear-motor/rated-volts</property>
+							<property>consumers/landing-gear-motor/rated-amps</property>
+						</div>
+					</div>
+					<abs>
+						<property>/fdm/jsbsim/gear/actuator-cmd</property>
+					</abs>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/landing-gear-motor/amps</output>
 	</filter>
 	
 	<filter>
@@ -695,6 +726,8 @@
 					<property>consumers/landing-light[0]/amps</property>
 					<property>consumers/landing-light[1]/amps</property>
 					<property>consumers/rotating-beacon/amps</property>
+					<property>consumers/flaps-motor/amps</property>
+					<property>consumers/landing-gear-motor/amps</property>
 				</sum>
 			</expression>
 		</input>
@@ -981,7 +1014,7 @@
 	<filter>
 		<type>gain</type>
 		<input>
-			<property>/systems/vacuum/suction-inhg</property>
+			<property>/systems/vacuum/directional-gyro-suction-inhg</property>
 			<scale>0.2</scale>
 		</input>
 		<output>outputs/DG</output>
