@@ -1,333 +1,1022 @@
 <?xml version="1.0"?>
- 
-<!-- 24 Volt electrical system -->
-
-<!-- 2 engine driven generators -->
-<!-- 2 12 volt batteries wired in series (to produce 24 volts) -->
-
+<!--
+	Electrical system for the C310B, by TheEagle, started in November 2022
+	
+	Technical data:
+		Batteries (2, wired in series to produce 24 V):
+			Capacity: 24 Ah
+			Voltage: 12 V
+			Current: 35 (?) A
+			Type: Lead-acid
+		Alternators (2):
+			standard:
+				Voltage: 24 V
+				Current: 35 A
+			optional:
+				Voltage: 24V
+				Current: 50 A
+		Ground power:
+			Voltage: 24 (?) V
+			Current 100 (?) A
+		System:
+			Voltage: 24 V
+			Type: Direct current
+-->
 <PropertyList>
-
-  <!-- Supplier list -->
-
-  <supplier>
-    <name>Battery 1</name>
-    <prop>/systems/electrical/suppliers/battery[0]</prop>
-    <kind>battery</kind>
-    <volts>24</volts>
-    <amps>60</amps>   <!-- WAG -->
-  </supplier>
-
-  <supplier>
-    <name>Battery 2</name>
-    <prop>/systems/electrical/suppliers/battery[1]</prop>
-    <kind>battery</kind>
-    <volts>24</volts>
-    <amps>60</amps>   <!-- WAG -->
-  </supplier>
-
-  <supplier>
-    <name>Alternator 1</name>
-    <prop>/systems/electrical/suppliers/alternator[0]</prop>
-    <kind>alternator</kind>
-    <rpm-source>/engines/engine[0]/rpm</rpm-source>
-    <volts>24</volts> <!-- stubbed in -->
-    <amps>60</amps>   <!-- WAG -->
-  </supplier>
-
-  <supplier>
-    <name>Alternator 2</name>
-    <prop>/systems/electrical/suppliers/alternator[1]</prop>
-    <kind>alternator</kind>
-    <rpm-source>/engines/engine[1]/rpm</rpm-source>
-    <volts>24</volts> <!-- stubbed in -->
-    <amps>60</amps>   <!-- WAG -->
-  </supplier>
-
-  <supplier>
-    <name>External 1</name>
-    <prop>/systems/electrical/suppliers/external[0]</prop>
-    <kind>external</kind>
-    <volts>0</volts> <!-- by default not connected -->
-    <amps>0</amps>
-  </supplier>
-
-  <!-- Bus list -->
-
-  <bus>
-    <name>Bus Bar</name>
-    <prop>/systems/electrical/outputs/bus[0]</prop>
-  </bus>
-
-  <!-- Specific Outputs -->
-
-  <output>
-    <name>Starter 1 Power</name>
-    <prop>/systems/electrical/outputs/starter[0]</prop>
-  </output>
-
-  <output>
-    <name>Starter 2 Power</name>
-    <prop>/systems/electrical/outputs/starter[1]</prop>
-  </output>
-
-  <!-- Bus Bar Outputs -->
-
-  <output>
-    <name>Cabin Lights Power</name>
-    <prop>/systems/electrical/outputs/cabin-lights</prop>
-  </output>
-
-  <output>
-    <name>Instrument Power</name>
-    <prop>/systems/electrical/outputs/instr-ignition-switch</prop>
-    <prop>/systems/electrical/outputs/adf</prop>
-    <prop>/systems/electrical/outputs/dme</prop>
-  </output>
-
-  <output>
-    <name>Fuel Pump 1 Power</name>
-    <prop>/systems/electrical/outputs/fuel-pump[0]</prop>
-  </output>
-
-  <output>
-    <name>Fuel Pump 2 Power</name>
-    <prop>/systems/electrical/outputs/fuel-pump[1]</prop>
-  </output>
-
-  <output>
-    <name>Landing Light Power</name>
-    <prop>/systems/electrical/outputs/landing-light</prop>
-  </output>
-
-  <output>
-    <name>Beacon Power</name>
-    <prop>/systems/electrical/outputs/beacon</prop>
-  </output>
-
-  <output>
-    <name>Flaps Power</name>
-    <prop>/systems/electrical/outputs/flaps</prop>
-  </output>
-
-  <output>
-    <name>Turn Coordinator Power</name>
-    <prop>/systems/electrical/outputs/turn-coordinator</prop>
-  </output>
-
-  <output>
-    <name>Map Lights Power</name>
-    <prop>/systems/electrical/outputs/map-lights</prop>
-  </output>
-
-  <output>
-    <name>Instrument Lights Power</name>
-    <prop>/systems/electrical/outputs/instrument-lights</prop>
-  </output>
-
-  <output>
-    <name>Strobe Lights Power</name>
-    <prop>/systems/electrical/outputs/strobe-lights</prop>
-  </output>
-
-  <output>
-    <name>Taxi Lights Power</name>
-    <prop>/systems/electrical/outputs/taxi-lights</prop>
-  </output>
-
-  <output>
-    <name>Pitot Heat Power</name>
-    <prop>/systems/electrical/outputs/pitot-heat</prop>
-  </output>
-
-  <output>
-    <name>GPS Power</name>
-    <prop>/systems/electrical/outputs/gps</prop>
-  </output>
-
-  <output>
-    <name>Nav Radio Power</name>
-    <prop>/systems/electrical/outputs/nav</prop>
-  </output>
-
-  <!-- connect in power sources -->
-
-  <connector>
-    <input>Alternator 1</input>
-    <output>Bus Bar</output>
-    <switch>
-      <prop>/controls/engines/engine[0]/master-alt</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Alternator 2</input>
-    <output>Bus Bar</output>
-    <switch>
-      <prop>/controls/engines/engine[1]/master-alt</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>External 1</input>
-    <output>Bus Bar</output>
-  </connector>
-
-  <connector>
-    <input>Battery 1</input>
-    <output>Bus Bar</output>
-    <switch>
-      <prop>/controls/engines/engine[0]/master-bat</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Battery 2</input>
-    <output>Bus Bar</output>
-    <switch>
-      <prop>/controls/engines/engine[1]/master-bat</prop>
-    </switch>
-  </connector>
-
-  <!-- connect starter output -->
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Starter 1 Power</output>
-    <switch>
-      <prop>/controls/engines/engine[0]/starter</prop>
-      <initial-state>off</initial-state>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Starter 2 Power</output>
-    <switch>
-      <prop>/controls/engines/engine[1]/starter</prop>
-      <initial-state>off</initial-state>
-    </switch>
-  </connector>
-
-  <!-- connect bus bar outputs -->
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Cabin Lights Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/cabin-lights-pwr</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Instrument Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/instr-ignition-switch</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Fuel Pump 1 Power</output>
-    <switch>
-      <prop>/controls/engines/engine[0]/fuel-pump</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Fuel Pump 2 Power</output>
-    <switch>
-      <prop>/controls/engines/engine[1]/fuel-pump</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Landing Light Power</output>
-    <switch>
-      <prop>/controls/switches/landing-light</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Beacon Power</output>
-    <switch>
-      <prop>/controls/switches/flashing-beacon</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Flaps Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/flaps</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Turn Coordinator Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/turn-coordinator</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Map Lights Power</output>
-    <switch>
-      <prop>/controls/switches/nav-lights</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Instrument Lights Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/instrument-lights</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Strobe Lights Power</output>
-    <switch>
-      <prop>/controls/switches/strobe-lights</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Taxi Lights Power</output>
-    <switch>
-      <prop>/controls/switches/taxi-lights</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Pitot Heat Power</output>
-    <switch>
-      <prop>/controls/switches/pitot-heat</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>GPS Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/gps</prop>
-    </switch>
-  </connector>
-
-  <connector>
-    <input>Bus Bar</input>
-    <output>Nav Radio Power</output>
-    <switch>
-      <prop>/controls/circuit-breakers/nav</prop>
-    </switch>
-  </connector>
-
+	<property-root>/systems/electrical</property-root>
+	
+	<!-- Alternators -->
+	<filter>
+		<name>Available left alternator amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than-equals>
+					<property>/engines/engine[0]/rpm</property>
+					<value>133</value>
+				</greater-than-equals>
+			</condition>
+			<!-- graph of this formula: https://www.desmos.com/calculator/z8p9ddnltl where A = alternator/rated-amps -->
+			<expression>
+				<prod>
+					<dif>
+						<prod>
+							<value>30.811</value>
+							<log>
+								<dif>
+									<prod>
+										<property>/engines/engine[0]/rpm</property>
+										<value>10</value>
+									</prod>
+									<value>1300</value>
+								</dif>
+							</log>
+						</prod>
+						<value>98.1</value>
+					</dif>
+					<div>
+						<property>suppliers/alternator[0]/rated-amps</property>
+						<value>172</value>
+					</div>
+					<property>/controls/engines/engine[0]/master-alt</property>
+					<property>/controls/circuit-breakers/left-alternator/closed</property>
+				</prod>
+			</expression>
+		</input>
+		<output>suppliers/alternator[0]/available-amps</output>
+		<min>0</min>
+		<max>suppliers/alternator[0]/rated-amps</max>
+	</filter>
+	<filter>
+		<name>Available left alternator volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<property>/engines/engine[0]/rpm</property>
+					<value>0.07</value>
+					<div>
+						<property>suppliers/alternator[0]/rated-amps</property>
+						<max>
+							<property>suppliers/alternator[0]/amps</property>
+							<value>1</value>
+						</max>
+					</div>
+					<property>/controls/engines/engine[0]/master-alt</property>
+					<property>/controls/circuit-breakers/left-alternator/closed</property>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/alternator[0]/volts</output>
+		<min>0</min>
+		<max>suppliers/alternator[0]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available right alternator amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than-equals>
+					<property>/engines/engine[1]/rpm</property>
+					<value>133</value>
+				</greater-than-equals>
+			</condition>
+			<!-- graph of this formula: https://www.desmos.com/calculator/z8p9ddnltl where A = alternator/rated-amps -->
+			<expression>
+				<prod>
+					<dif>
+						<prod>
+							<value>30.811</value>
+							<log>
+								<dif>
+									<prod>
+										<property>/engines/engine[1]/rpm</property>
+										<value>10</value>
+									</prod>
+									<value>1300</value>
+								</dif>
+							</log>
+						</prod>
+						<value>98.1</value>
+					</dif>
+					<div>
+						<property>suppliers/alternator[1]/rated-amps</property>
+						<value>172</value>
+					</div>
+					<property>/controls/engines/engine[1]/master-alt</property>
+					<property>/controls/circuit-breakers/right-alternator/closed</property>
+				</prod>
+			</expression>
+		</input>
+		<output>suppliers/alternator[1]/available-amps</output>
+		<min>0</min>
+		<max>suppliers/alternator[1]/rated-amps</max>
+	</filter>
+	<filter>
+		<name>Available right alternator volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<property>/engines/engine[1]/rpm</property>
+					<value>0.07</value>
+					<div>
+						<property>suppliers/alternator[1]/rated-amps</property>
+						<max>
+							<property>suppliers/alternator[1]/amps</property>
+							<value>1</value>
+						</max>
+					</div>
+					<property>/controls/engines/engine[1]/master-alt</property>
+					<property>/controls/circuit-breakers/right-alternator/closed</property>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/alternator[1]/volts</output>
+		<min>0</min>
+		<max>suppliers/alternator[1]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available alternators amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/alternator[0]/available-amps</property>
+					<property>suppliers/alternator[1]/available-amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/alternators/available-amps</output>
+	</filter>
+	
+	<!-- Ground power -->
+	<filter>
+		<name>Available ground power amps</name>
+		<type>gain</type>
+		<gain>suppliers/gpu/rated-amps</gain>
+		<input>
+			<property>/controls/electric/ground-power-connected</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
+		<output>suppliers/gpu/available-amps</output>
+	</filter>
+	<filter>
+		<name>Available ground power volts</name>
+		<type>gain</type>
+		<gain>/controls/electric/ground-power-connected</gain>
+		<input>
+			<expression>
+				<product>
+					<property>suppliers/gpu/rated-volts</property>
+					<div>
+						<property>suppliers/gpu/rated-amps</property>
+						<max>
+							<property>suppliers/gpu/amps</property>
+							<value>1</value>
+						</max>
+					</div>
+					<property>/controls/electric/battery-switch</property>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/gpu/volts</output>
+		<min>0</min>
+		<max>suppliers/gpu/rated-volts</max>
+	</filter>
+	
+	<!-- Batteries -->
+	<filter>
+		<name>First battery output factor based on charge</name>
+		<type>gain</type>
+		<gain>/controls/electric/battery-switch</gain>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<pow>
+							<prod>
+								<dif>
+									<prod>
+										<value>3</value>
+										<dif>
+											<value>1</value>
+											<property>suppliers/battery[0]/charge-norm</property>
+										</dif>
+									</prod>
+									<value>1</value>
+								</dif>
+								<value>-1</value>
+							</prod>
+							<value>5</value>
+						</pow>
+						<value>32</value>
+					</sum>
+					<value>32</value>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/available-power-factor</output>
+	</filter>
+	<filter>
+		<name>Available first battery volts</name>
+		<type>gain</type>
+		<gain>suppliers/battery[0]/available-power-factor</gain>
+		<input>
+			<expression>
+				<product>
+					<property>suppliers/battery[0]/rated-volts</property>
+					<div>
+						<property>suppliers/battery[0]/rated-amps</property>
+						<max>
+							<property>suppliers/battery[0]/amps</property>
+							<value>1</value>
+						</max>
+					</div>
+					<property>/controls/electric/battery-switch</property>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/volts</output>
+		<min>0</min>
+		<max>suppliers/battery[0]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available first battery amps</name>
+		<type>gain</type>
+		<gain>suppliers/battery[0]/rated-amps</gain>
+		<input>
+			<property>suppliers/battery[0]/available-power-factor</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
+		<output>suppliers/battery[0]/available-amps</output>
+	</filter>
+	<filter>
+		<name>Second battery output factor based on charge</name>
+		<type>gain</type>
+		<gain>/controls/electric/battery-switch</gain>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<pow>
+							<prod>
+								<dif>
+									<prod>
+										<value>3</value>
+										<dif>
+											<value>1</value>
+											<property>suppliers/battery[1]/charge-norm</property>
+										</dif>
+									</prod>
+									<value>1</value>
+								</dif>
+								<value>-1</value>
+							</prod>
+							<value>5</value>
+						</pow>
+						<value>32</value>
+					</sum>
+					<value>32</value>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/available-power-factor</output>
+	</filter>
+	<filter>
+		<name>Available second battery volts</name>
+		<type>gain</type>
+		<gain>suppliers/battery[1]/available-power-factor</gain>
+		<input>
+			<expression>
+				<product>
+					<property>suppliers/battery[1]/rated-volts</property>
+					<div>
+						<property>suppliers/battery[1]/rated-amps</property>
+						<max>
+							<property>suppliers/battery[1]/amps</property>
+							<value>1</value>
+						</max>
+					</div>
+					<property>/controls/electric/battery-switch</property>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/volts</output>
+		<min>0</min>
+		<max>suppliers/battery[1]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available second battery amps</name>
+		<type>gain</type>
+		<gain>suppliers/battery[1]/rated-amps</gain>
+		<input>
+			<property>suppliers/battery[1]/available-power-factor</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
+		<output>suppliers/battery[1]/available-amps</output>
+	</filter>
+	<filter>
+		<name>Available batteries amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/battery[0]/available-amps</property>
+					<property>suppliers/battery[1]/available-amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/batteries/available-amps</output>
+	</filter>
+		
+	<filter>
+		<name>Available battery volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/battery[0]/volts</property>
+					<property>suppliers/battery[1]/volts</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/batteries/volts</output>
+	</filter>
+	<filter>
+		<name>Available alternator volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<max>
+					<property>suppliers/alternator[0]/volts</property>
+					<property>suppliers/alternator[1]/volts</property>
+				</max>
+			</expression>
+		</input>
+		<output>suppliers/alternators/volts</output>
+	</filter>
+	
+	<filter>
+		<name>Bus available amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/alternators/available-amps</property>
+					<property>suppliers/gpu/available-amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>bus/available-amps</output>
+	</filter>
+	<filter>
+		<name>Bus volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<max>
+					<property>suppliers/alternators/volts</property>
+					<property>suppliers/batteries/volts</property>
+					<property>suppliers/gpu/volts</property>
+				</max>
+			</expression>
+		</input>
+		<output>
+			<property>bus/volts</property>
+			<property>volts</property>
+		</output>
+	</filter>
+	
+	<filter>
+		<name>Nav lights volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/controls/lighting/nav-lights</scale>
+		</input>
+		<output>consumers/nav-lights/volts</output>
+	</filter>
+	<filter>
+		<name>Nav lights amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/nav-lights/volts</property>
+					<div>
+						<property>consumers/nav-lights/rated-volts</property>
+						<property>consumers/nav-lights/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/nav-lights/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Left landing light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-landing-light-front-cigar-lighter/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/landing-light[0]</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/landing-light[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Left landing light amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/landing-light[0]/volts</property>
+					<div>
+						<property>consumers/landing-light[0]/rated-volts</property>
+						<property>consumers/landing-light[0]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Left landing light motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-oil-temp-left-landing-light-motor/closed</gain>
+		<input>
+			<condition>
+				<or>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing-light[0]</property>
+							<value>1</value>
+						</equals>
+						<less-than>
+							<property>/sim/model/lights/landing[0]/pos-norm</property>
+							<value>1</value>
+						</less-than>
+					</and>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing[0]</property>
+							<value>-1</value>
+						</equals>
+						<greater-than>
+							<property>/sim/model/lights/landing[0]/pos-norm</property>
+							<value>0</value>
+						</greater-than>
+					</and>
+				</or>
+			</condition>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/landing-light-motor[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Left landing light motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/landing-light-motor[0]/volts</property>
+					<div>
+						<property>consumers/landing-light-motor[0]/rated-volts</property>
+						<property>consumers/landing-light-motor[0]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light-motor[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right landing light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-landing-light-rear-cigar-lighter/closed</gain>
+		<input>
+			<condition>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/landing-light[1]</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/landing-light[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Right landing light amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<expression>
+				<div>
+					<property>consumers/landing-light[1]/volts</property>
+					<div>
+						<property>consumers/landing-light[1]/rated-volts</property>
+						<property>consumers/landing-light[1]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right landing light motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-oil-temp-right-landing-light-motor-taxi-light/closed</gain>
+		<input>
+			<condition>
+				<or>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing-light[1]</property>
+							<value>1</value>
+						</equals>
+						<less-than>
+							<property>/sim/model/lights/landing[1]/pos-norm</property>
+							<value>1</value>
+						</less-than>
+					</and>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing[1]</property>
+							<value>-1</value>
+						</equals>
+						<greater-than>
+							<property>/sim/model/lights/landing[1]/pos-norm</property>
+							<value>0</value>
+						</greater-than>
+					</and>
+				</or>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/landing-light-motor[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Right landing light motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/landing-light-motor[1]/volts</property>
+					<div>
+						<property>consumers/landing-light-motor[1]/rated-volts</property>
+						<property>consumers/landing-light-motor[1]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/landing-light-motor[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Rotating beacon volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/rotating-beacon/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/controls/lighting/beacon</scale>
+		</input>
+		<output>
+			<property>consumers/rotating-beacon/volts</property>
+			<property>consumers/rotating-beacon-motor/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Rotating beacon amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/rotating-beacon/volts</property>
+					<div>
+						<property>consumers/rotating-beacon/rated-volts</property>
+						<property>consumers/rotating-beacon/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/rotating-beacon/amps</output>
+	</filter>
+	<filter>
+		<name>Rotating beacon motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/rotating-beacon-motor/volts</property>
+					<div>
+						<property>consumers/rotating-beacon-motor/rated-volts</property>
+						<property>consumers/rotating-beacon-motor/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/rotating-beacon-motor/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Flaps motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/flaps-motor/closed</gain>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/flaps-motor/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Flaps motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/flaps-motor/volts</property>
+						<div>
+							<property>consumers/flaps-motor/rated-volts</property>
+							<property>consumers/flaps-motor/rated-amps</property>
+						</div>
+					</div>
+					<abs>
+						<property>/fdm/jsbsim/systems/flaps/actuator-cmd</property>
+					</abs>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/flaps-motor/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Landing gear motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/landing-gear-motor/closed</gain>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/landing-gear-motor/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Landing gear motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/landing-gear-motor/volts</property>
+						<div>
+							<property>consumers/landing-gear-motor/rated-volts</property>
+							<property>consumers/landing-gear-motor/rated-amps</property>
+						</div>
+					</div>
+					<abs>
+						<property>/fdm/jsbsim/gear/actuator-cmd</property>
+					</abs>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/landing-gear-motor/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Bus amps load</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>consumers/nav-lights/amps</property>
+					<property>consumers/landing-light[0]/amps</property>
+					<property>consumers/landing-light[1]/amps</property>
+					<property>consumers/rotating-beacon/amps</property>
+					<property>consumers/flaps-motor/amps</property>
+					<property>consumers/landing-gear-motor/amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>bus/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Alternators amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternators/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<expression>
+				<sum>
+					<property>bus/amps</property>
+					<property>suppliers/batteries/amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/alternators/amps</output>
+		<min>0</min>
+		<max>suppliers/alternators/available-amps</max>
+	</filter>
+	<filter>
+		<name>Left alternator amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[1]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+			<scale>0.5</scale>
+		</input>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[0]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+		</input>
+		<output>suppliers/alternator[0]/amps</output>
+	</filter>
+	<filter>
+		<name>Right alternator amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[0]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+			<scale>0.5</scale>
+		</input>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternator[1]/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>suppliers/alternators/amps</property>
+		</input>
+		<output>suppliers/alternator[1]/amps</output>
+	</filter>
+	<filter>
+		<name>Ground power amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/gpu/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<expression>
+				<dif>
+					<sum>
+						<property>bus/amps</property>
+						<property>suppliers/batteries/amps</property>
+					</sum>
+					<property>suppliers/alternators/amps</property>
+				</dif>
+			</expression>
+		</input>
+		<output>suppliers/gpu/amps</output>
+	</filter>
+	<filter>
+		<name>Batteries amps</name>
+		<type>gain</type>
+		<input>
+			<!-- battery has sufficient charge and alternators / ground power are not providing enough voltage - discharge -->
+			<condition>
+				<greater-than>
+					<property>suppliers/batteries/volts</property>
+					<value>12</value>
+				</greater-than>
+				<greater-than>
+					<property>bus/amps</property>
+					<property>bus/available-amps</property>
+				</greater-than>
+			</condition>
+			<expression>
+				<dif>
+					<property>bus/amps</property>
+					<property>suppliers/alternators/amps</property>
+					<property>suppliers/gpu/amps</property>
+				</dif>
+			</expression>
+			<min>0</min>
+			<max>100</max>
+		</input>
+		<input>
+			<!-- alternators / ground power are providing enough power - charge -->
+			<condition>
+				<greater-than>
+					<property>bus/volts</property>
+					<value>12</value>
+				</greater-than>
+				<less-than>
+					<property>suppliers/batteries/charge-norm</property>
+					<value>1</value>
+				</less-than>
+			</condition>
+			<expression>
+				<dif>
+					<property>bus/amps</property>
+					<property>bus/available-amps</property>
+				</dif>
+			</expression>
+			<min>-100</min>
+			<max>0</max>
+		</input>
+		<output>
+			<property>suppliers/batteries/amps</property>
+			<property>amps</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Left battery amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<less-than>
+					<property>suppliers/battery[1]/charge-norm</property>
+					<value>1</value>
+				</less-than>
+				<less-than>
+					<property>suppliers/batteries/amps</property>
+					<value>0</value>
+				</less-than>
+			</condition>
+			<expression>
+				<div>
+					<property>suppliers/batteries/amps</property>
+					<value>2</value>
+				</div>
+			</expression>
+		</input>
+		<input>suppliers/batteries/amps</input>
+		<output>suppliers/battery[0]/amps</output>
+	</filter>
+	<filter>
+		<name>Right battery amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<less-than>
+					<property>suppliers/battery[0]/charge-norm</property>
+					<value>1</value>
+				</less-than>
+				<less-than>
+					<property>suppliers/batteries/amps</property>
+					<value>0</value>
+				</less-than>
+			</condition>
+			<expression>
+				<div>
+					<property>suppliers/batteries/amps</property>
+					<value>2</value>
+				</div>
+			</expression>
+		</input>
+		<input>suppliers/batteries/amps</input>
+		<output>suppliers/battery[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Left battery charge in ampere hours</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<dif>
+					<property>suppliers/battery[0]/charge-amp_hours</property>
+					<div>
+						<product>
+							<property>suppliers/battery[0]/amps</property>
+							<property>/sim/time/delta-sec</property>
+						</product>
+						<value>3600</value>
+					</div>
+				</dif>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/charge-amp_hours</output>
+		<min>0</min>
+		<max>suppliers/battery[0]/capacity-amp_hours</max>
+	</filter>
+	<filter>
+		<name>Left battery charge normalized</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>suppliers/battery[0]/charge-amp_hours</property>
+					<property>suppliers/battery[0]/capacity-amp_hours</property>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/charge-norm</output>
+	</filter>
+	
+	<filter>
+		<name>Right battery charge in ampere hours</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<dif>
+					<property>suppliers/battery[1]/charge-amp_hours</property>
+					<div>
+						<product>
+							<property>suppliers/battery[1]/amps</property>
+							<property>/sim/time/delta-sec</property>
+						</product>
+						<value>3600</value>
+					</div>
+				</dif>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/charge-amp_hours</output>
+		<min>0</min>
+		<max>suppliers/battery[1]/capacity-amp_hours</max>
+	</filter>
+	<filter>
+		<name>Right battery charge normalized</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>suppliers/battery[1]/charge-amp_hours</property>
+					<property>suppliers/battery[1]/capacity-amp_hours</property>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/charge-norm</output>
+	</filter>
+	<filter>
+		<name>Batteries charge normalized</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<sum>
+						<property>suppliers/battery[0]/charge-norm</property>
+						<property>suppliers/battery[1]/charge-norm</property>
+					</sum>
+					<value>0.5</value>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/batteries/charge-norm</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<property>/systems/vacuum/directional-gyro-suction-inhg</property>
+			<scale>0.2</scale>
+		</input>
+		<output>outputs/DG</output>
+	</filter>
 </PropertyList>

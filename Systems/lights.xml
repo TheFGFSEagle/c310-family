@@ -6,12 +6,46 @@
 			<expression>
 				<product>
 					<property>/controls/lighting/nav-lights</property>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/nav-lights/amps</property>
+						<property>/systems/electrical/consumers/nav-lights/rated-amps</property>
+					</div>
+					<floor>
+						<product>
+							<mod>
+								<property>/sim/time/elapsed-sec</property>
+								<value>1</value>
+							</mod>
+							<value>1.5</value>
+						</product>
+					</floor>
 				</product>
 			</expression>
 		</input>
 		<output>/sim/model/lights/nav/brightness-norm</output>
-		<max-rate-of-change>3</max-rate-of-change>
+		<max-rate-of-change>4</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<type>noise-spike</type>
+		<input>
+			<expression>
+				<product>
+					<abs>
+						<min>
+							<property>/controls/lighting/landing-light[1]</property>
+							<value>0</value>
+						</min>
+					</abs>
+					<div>
+						<property>/systems/electrical/consumers/taxi-light/amps</property>
+						<property>/systems/electrical/consumers/taxi-light/rated-amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>/sim/model/lights/taxi/brightness-norm</output>
+		<max-rate-of-change>4</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -20,12 +54,15 @@
 			<expression>
 				<product>
 					<property>/controls/lighting/beacon</property>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/rotating-beacon/amps</property>
+						<property>/systems/electrical/consumers/rotating-beacon/rated-amps</property>
+					</div>
 				</product>
 			</expression>
 		</input>
 		<output>/sim/model/lights/beacon/brightness-norm</output>
-		<max-rate-of-change>3</max-rate-of-change>
+		<max-rate-of-change>4</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -37,7 +74,11 @@
 						<property>/sim/model/lights/beacon/rotation-deg</property>
 						<product>
 							<property>/sim/model/lights/beacon/brightness-norm</property>
-							<value>360</value>
+							<value>270</value>
+							<div>
+								<property>/systems/electrical/consumers/rotating-beacon-motor[0]/amps</property>
+								<property>/systems/electrical/consumers/rotating-beacon-motor[0]/rated-amps</property>
+							</div>
 							<property>/sim/time/delta-sec</property>
 						</product>
 					</sum>
@@ -59,7 +100,7 @@
 				</cos>
 			</expression>
 		</input>
-		<output>/sim/model/lights/beacon/pointing-x</output>
+		<output>/sim/model/lights/beacon/pointing-x[0]</output>
 	</filter>
 	
 	<filter>
@@ -73,7 +114,41 @@
 				</sin>
 			</expression>
 		</input>
-		<output>/sim/model/lights/beacon/pointing-y</output>
+		<output>/sim/model/lights/beacon/pointing-y[0]</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<cos>
+					<deg2rad>
+						<sum>
+							<property>/sim/model/lights/beacon/rotation-deg</property>
+							<value>180</value>
+						</sum>
+					</deg2rad>
+				</cos>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/pointing-x[1]</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sin>
+					<deg2rad>
+						<sum>
+							<property>/sim/model/lights/beacon/rotation-deg</property>
+							<value>180</value>
+						</sum>
+					</deg2rad>
+				</sin>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/pointing-y[1]</output>
 	</filter>
 	
 	<filter>
@@ -85,6 +160,10 @@
 					<product>
 						<property>/controls/lighting/landing-light[0]</property>
 						<property>/sim/time/delta-sec</property>
+						<div>
+							<property>/systems/electrical/consumers/landing-light-motor[0]/amps</property>
+							<property>/systems/electrical/consumers/landing-light-motor[0]/rated-amps</property>
+						</div>
 						<value>0.2</value>
 					</product>
 				</sum>
@@ -117,12 +196,15 @@
 						<property>/controls/lighting/landing-light[0]</property>
 						<value>0</value>
 					</max>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/landing-light[0]/amps</property>
+						<property>/systems/electrical/consumers/landing-light[0]/rated-amps</property>
+					</div>
 				</product>
 			</expression>
 		</input>
 		<output>/sim/model/lights/landing[0]/brightness-norm</output>
-		<max-rate-of-change>2</max-rate-of-change>
+		<max-rate-of-change>3</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -137,6 +219,10 @@
 					<product>
 						<property>/controls/lighting/landing-light[1]</property>
 						<property>/sim/time/delta-sec</property>
+						<div>
+							<property>/systems/electrical/consumers/landing-light-motor[1]/amps</property>
+							<property>/systems/electrical/consumers/landing-light-motor[1]/rated-amps</property>
+						</div>
 						<value>0.2</value>
 					</product>
 				</sum>
@@ -177,11 +263,14 @@
 						<property>/controls/lighting/landing-light[1]</property>
 						<value>0</value>
 					</max>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/landing-light[1]/amps</property>
+						<property>/systems/electrical/consumers/landing-light[1]/rated-amps</property>
+					</div>
 				</product>
 			</expression>
 		</input>
 		<output>/sim/model/lights/landing[1]/brightness-norm</output>
-		<max-rate-of-change>2</max-rate-of-change>
+		<max-rate-of-change>3</max-rate-of-change>
 	</filter>
 </PropertyList>

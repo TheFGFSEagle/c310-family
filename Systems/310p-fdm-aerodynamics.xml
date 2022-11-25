@@ -1389,6 +1389,44 @@
 				<value>0.02</value>
 			</product>
 		</function>
+		
+		<function name="aero/force/Drag_landing_light[0]">
+			<description>Drag due to left landing light</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<sin>
+					<toradians>
+						<property>/sim/model/lights/landing[0]/pos-deg</property>
+					</toradians>
+				</sin>
+				<!-- drag coefficient of a half sphere with the flat side forward -->
+				<value>1.17</value>
+				<pow>
+					<!-- radius of the landing light -->
+					<value>0.3</value>
+					<value>2</value>
+				</pow>
+			</product>
+		</function>
+		
+		<function name="aero/force/Drag_landing_light[1]">
+			<description>Drag due to right landing light</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<sin>
+					<toradians>
+						<property>/sim/model/lights/landing[1]/pos-deg</property>
+					</toradians>
+				</sin>
+				<!-- drag coefficient of a half sphere with the flat side forward -->
+				<value>1.17</value>
+				<pow>
+					<!-- radius of the landing light -->
+					<value>0.3</value>
+					<value>2</value>
+				</pow>
+			</product>
+		</function>
 	</axis>
 	
 	<axis name="SIDE">

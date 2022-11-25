@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<key n="91">
+		<name>[</name>
+		<desc>Flaps up</desc>
+		<binding>
+			<command>nasal</command>
+			<script>c310.controls.setFlapCommand(-1)</script>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>nasal</command>
+				<script>c310.controls.setFlapCommand(0)</script>
+			</binding>
+		</mod-up>
+	</key>
+
+	<key n="93">
+		<name>]</name>
+		<desc>Flaps down</desc>
+		<binding>
+			<command>nasal</command>
+			<script>c310.controls.setFlapCommand(1)</script>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>nasal</command>
+				<script>c310.controls.setFlapCommand(0)</script>
+			</binding>
+		</mod-up>
+	</key>
+</PropertyList>

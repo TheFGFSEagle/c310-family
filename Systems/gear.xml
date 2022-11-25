@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="gear">
+	<property value="0">gear/up-limit-pos-norm</property>
+	<property value="0">gear/down-limit-pos-norm</property>
+	<property value="0">gear/unit[0]/actuator-linkage-broken</property>
+	<property value="0">gear/unit[1]/actuator-linkage-broken</property>
+	<property value="0">gear/unit[2]/actuator-linkage-broken</property>
+	
 	<channel name="Nose wheel steering">
-		<switch name="gear/unit[0]/steering-enabled">
-			<default value="0"/>
-			<test logic="OR" value="1">
-				gear/unit[0]/pos-norm EQ 1
-			</test>
-		</switch>
-		
-		<fcs_function name="gear/unit[0]/brakes-steer-factor">
+		<fcs_function name="gear/unit[0]/sideforce-steer-factor">
 			<function>
 				<product>
-					<sum>
-						<product>
-							<property>fcs/left-brake-cmd-norm</property>
-							<value>-1</value>
-						</product>
-						<property>fcs/right-brake-cmd-norm</property>
-					</sum>
-					<property>/gear/gear[0]/rollspeed-ms</property>
-					<value>0.5</value> <!-- for adjusting braking influence -->
-					<property>gear/unit[0]/steering-enabled</property>
+					<property>gear/unit[0]/side_friction_coeff</property>
+					<property>gear/unit[0]/wheel-speed-fps</property>
+					<value>0.1</value>
 				</product>
 			</function>
 		</fcs_function>
@@ -30,7 +22,7 @@
 			<function>
 				<quotient>
 					<table name="fcs/steer-cmd-deg">
-						<independentVar lookup="row">gear/unit[0]/brakes-steer-factor</independentVar>
+						<independentVar lookup="row">gear/unit[0]/sideforce-steer-factor</independentVar>
 						<independentVar lookup="column">/controls/flight/rudder</independentVar>
 						<tableData>
 							-1	0	1
@@ -114,5 +106,79 @@
 			<gain>0.14495</gain>
 			<output>/gear/gear[2]/compression-m</output>
 		</pure_gain>
+	</channel>
+	
+	<channel name="Gear position">
+		<switch name="gear/up-limit-switch">
+			<name>Gear actuator upper limit switch</name>
+			<default value="0"/>
+			<test value="1">
+				gear/gear-pos-norm LE gear/up-limit-pos-norm
+			</test>
+		</switch>
+		
+		<switch name="gear/down-limit-switch">
+			<name>Gear actuator down limit switch</name>
+			<default value="0"/>
+			<test value="1">
+				gear/gear-pos-norm GE gear/down-limit-pos-norm
+			</test>
+		</switch>
+		
+		<switch name="gear/actuator-cmd">
+			<name>Actuator command</name>
+			<default value="0"/>
+			<test value="1" logic="AND">
+				gear/gear-cmd-norm EQ 1
+				gear/down-limit-switch EQ 0
+				/systems/electrical/consumers/landing-gear-motor/volts GT 12
+			</test>
+			<test value="-1" logic="AND">
+				gear/gear-cmd-norm EQ 0
+				gear/up-limit-switch EQ 0
+				/systems/electrical/consumers/landing-gear-motor/volts GT 12
+			</test>
+		</switch>
+		
+		<fcs_function name="gear/gear-pos-norm">
+			<name>Actuator position</name>
+			<function>
+				<sum>
+					<property>gear/gear-pos-norm</property>
+					<product>
+						<property>gear/actuator-cmd</property>
+						<property>simulation/channel-dt</property>
+						<quotient>
+							<property>/systems/electrical/consumers/landing-gear-motor/amps</property>
+							<property>/systems/electrical/consumers/landing-gear-motor/rated-amps</property>
+						</quotient>
+						<!-- gives 10 seconds for full extension / retraction -->
+						<value>0.1</value>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		
+		<switch name="gear/unit[0]/pos-norm">
+			<name>Nose gear position</name>
+			<default value="gear/unit[0]/pos-norm"/>
+			<test value="gear/gear-pos-norm">
+				gear/unit[0]/actuator-linkage-broken EQ 0
+			</test>
+		</switch>
+		<switch name="gear/unit[1]/pos-norm">
+			<name>Nose gear position</name>
+			<default value="gear/unit[1]/pos-norm"/>
+			<test value="gear/gear-pos-norm">
+				gear/unit[1]/actuator-linkage-broken EQ 0
+			</test>
+		</switch>
+		<switch name="gear/unit[2]/pos-norm">
+			<name>Nose gear position</name>
+			<default value="gear/unit[0]/pos-norm"/>
+			<test value="gear/gear-pos-norm">
+				gear/unit[2]/actuator-linkage-broken EQ 0
+			</test>
+		</switch>
 	</channel>
 </system>
