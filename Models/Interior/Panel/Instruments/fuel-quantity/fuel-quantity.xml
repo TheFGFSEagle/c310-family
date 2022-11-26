@@ -13,7 +13,7 @@
 		<axis>
 			<object-name>LeftNeedleAxis</object-name>
 		</axis>
-		<property>consumables/fuel/tank[0]/level-gal_us</property>
+		<property>instrumentation/fuel-quantity/indicated-fuel-level-gal_us[0]</property>
 		<factor>-1.78</factor>
 	</animation>
 	
@@ -23,7 +23,7 @@
 		<axis>
 			<object-name>RightNeedleAxis</object-name>
 		</axis>
-		<property>consumables/fuel/tank[1]/level-gal_us</property>
+		<property>instrumentation/fuel-quantity/indicated-fuel-level-gal_us[0]</property>
 		<factor>1.78</factor>
 	</animation>
 </PropertyList>

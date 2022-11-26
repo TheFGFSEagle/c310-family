@@ -15,7 +15,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-		<property>engines/engine[0]/mp-inhg</property>
+		<property>instrumentation/manifold-pressure/indicated-manifold-pressure-inhg[0]</property>
 		<factor>5.4</factor>
 	</animation>
 	
@@ -27,7 +27,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-		<property>engines/engine[1]/mp-inhg</property>
+		<property>instrumentation/manifold-pressure/indicated-manifold-pressure-inhg[1]</property>
 		<factor>5.4</factor>
 	</animation>
 </PropertyList>
