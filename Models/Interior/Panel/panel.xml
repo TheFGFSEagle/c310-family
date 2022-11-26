@@ -258,8 +258,8 @@
 		<path>Instruments/suction/suction.xml</path>
 		<offsets>
 			<x-m>0.525</x-m>
-			<y-m>0.35</y-m>
-			<z-m>-0.1</z-m>
+			<y-m>0.48</y-m>
+			<z-m>0.06</z-m>
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
 	</model>
