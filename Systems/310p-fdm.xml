@@ -17,9 +17,9 @@
 		<vtailarea unit="FT2">11.7</vtailarea>
 		<vtailarm unit="FT">20.1</vtailarm>
 		<location name="AERORP" unit="IN">
-			<x>37</x>
+			<x>37.44</x>
 			<y>0</y>
-			<z>-14.6</z>
+			<z>-13.44</z>
 		</location>
 		<location name="EYEPOINT" unit="IN">
 			<x>52</x>
@@ -41,7 +41,7 @@
 		<location name="CG" unit="IN">
 			<x>34.2</x>
 			<y>0</y>
-			<z>0</z>
+			<z>-13.44</z>
 		</location>
 		
 		<pointmass name="Pilot">
