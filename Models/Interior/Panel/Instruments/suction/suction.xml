@@ -16,16 +16,7 @@
 			<z>0</z>
 		</axis>
 		<property>instrumentation/vacuum/indicated-suction-inhg</property>
-		<interpolation>
-			<entry>
-				<ind>0</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>10</ind>
-				<dep>300</dep>
-			</entry>
-		</interpolation>
+		<factor>32</factor>
 	</animation>
 	
 	<text>
