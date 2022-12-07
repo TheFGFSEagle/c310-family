@@ -245,6 +245,40 @@
 	</model>
 	
 	<model>
+		<path>Instruments/engine-combo/engine-combo.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.14</y-m>
+			<z-m>0.12</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<oil-temp>instrumentation/engine-combo[0]/indicated-oil-temperature-degf</oil-temp>
+				<oil-press>instrumentation/engine-combo[0]/indicated-oil-pressure-psi</oil-press>
+				<fuel-press>instrumentation/engine-combo[0]/indicated-fuel-pressure-psi</fuel-press>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>Instruments/engine-combo/engine-combo.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.23</y-m>
+			<z-m>0.12</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<oil-temp>instrumentation/engine-combo[1]/indicated-oil-temperature-degf</oil-temp>
+				<oil-press>instrumentation/engine-combo[1]/indicated-oil-pressure-psi</oil-press>
+				<fuel-press>instrumentation/engine-combo[1]/indicated-fuel-pressure-psi</fuel-press>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
 		<path>Instruments/fuel-quantity/fuel-quantity.xml</path>
 		<offsets>
 			<x-m>0.525</x-m>
@@ -255,7 +289,7 @@
 	</model>
 	
 	<model>
-		<path>Instruments/suction/suction.xml</path>
+		<path>Instruments/vacuum/vacuum.xml</path>
 		<offsets>
 			<x-m>0.525</x-m>
 			<y-m>0.48</y-m>

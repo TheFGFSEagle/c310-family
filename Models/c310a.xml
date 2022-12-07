@@ -42,9 +42,12 @@
 		<object-name>Mudguard</object-name>
 		<object-name>NoseGearLowerTorqueLink</object-name>
 		<object-name>NoseGearUpperTorqueLink</object-name>
-		<object-name>NoseCap</object-name>
+		<object-name>NoseAirIntake</object-name>
 		<object-name>NoseGearCylinder</object-name>
 		<object-name>NoseGearStrut</object-name>
+		<object-name>NoseGearStrutBarrel</object-name>
+		<object-name>NoseGearActuatorDragBrace</object-name>
+		<object-name>NoseGearActuatorDragRod</object-name>
 		<object-name>NoseGearWell</object-name>
 		<object-name>NoseWheelTyre</object-name>
 		<object-name>NoseWheelHinge</object-name>
@@ -79,7 +82,6 @@
 		<object-name>RightMainWheelRim</object-name>
 		<object-name>RightMainGearDoorOutboard</object-name>
 		<object-name>RightMainGearDoorInboard</object-name>
-		<object-name>RightNavLightCap</object-name>
 		<object-name>RightWing</object-name>
 		<object-name>RightWingtipTank</object-name>
 		<object-name>Rudder</object-name>
@@ -455,14 +457,43 @@
 		<object-name>NoseWheelTyre</object-name>
 		<object-name>NoseGearUpperTorqueLink</object-name>
 		<object-name>NoseGearStrut</object-name>
+		<object-name>NoseGearStrutBarrel</object-name>
 		<object-name>NoseGearCylinder</object-name>
 		<object-name>NoseGearMudguard</object-name>
 		<axis>
 			<object-name>NoseGearStrutAxis</object-name>
 		</axis>
 		<property>gear/gear/position-norm</property>
-		<factor>-100</factor>
-		<offset-deg>100</offset-deg>
+		<factor>-102</factor>
+		<offset-deg>102</offset-deg>
+	</animation>
+	
+	<animation>
+		<type>locked-track</type>
+		<object-name>NoseGearActuatorDragBrace</object-name>
+		<center>
+			<object-name>NoseGearActuatorDragBraceAxis</object-name>
+		</center>
+		<lock-axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</lock-axis>
+		<track-axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0.8</z>
+		</track-axis>
+		
+		<target-name>NoseGearStrutBarrel</target-name>
+		<target-center>
+			<object-name>NoseGearActuatorDragRodAxis</object-name>
+		</target-center>
+		
+		<slave-name>NoseGearActuatorDragRod</slave-name>
+		<slave-center>
+			<object-name>NoseGearActuatorDragRodBraceAxis</object-name>
+		</slave-center>
 	</animation>
 	
 	<animation>
@@ -728,12 +759,12 @@
 		<property>gear/gear/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0</ind>
+				<ind>0.2</ind>
 				<dep>0</dep>
 			</entry>
 			<entry>
-				<ind>0.8</ind>
-				<dep>-85</dep>
+				<ind>1</ind>
+				<dep>-80</dep>
 			</entry>
 		</interpolation>
 	</animation>
