@@ -581,6 +581,7 @@
 			<pump>
 				<serviceable type="bool">true</serviceable>
 			</pump>
+			<test-valve>1</test-valve>
 		</vacuum>
 	</systems>
 	

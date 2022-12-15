@@ -13,7 +13,7 @@
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>/instrumentation/manifold-pressure[0]/serviceable</property>
+				<property>/instrumentation/manifold-pressure/serviceable</property>
 			</condition>
 		</enable>
 		<input>/engines/engine[0]/mp-inhg</input>
@@ -25,7 +25,7 @@
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>/instrumentation/manifold-pressure[1]/serviceable</property>
+				<property>/instrumentation/manifold-pressure/serviceable</property>
 			</condition>
 		</enable>
 		<input>/engines/engine[1]/mp-inhg</input>

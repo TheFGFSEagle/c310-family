@@ -29,7 +29,7 @@
 	<attitude-indicator>
 		<name>attitude-indicator</name>
 		<number>0</number>
-		<suction>/systems/vacuum/suction-inhg</suction>
+		<suction>/systems/vacuum/attitude-indicator-suction-inhg</suction>
 	</attitude-indicator>
 
 	<clock>
@@ -55,8 +55,8 @@
 	<heading-indicator-dg>
 		<name>directional-gyro</name>
 		<number>0</number>
-		<suction>/systems/vacuum/suction-inhg</suction>
-	</heading-indicator>
+		<suction>/systems/vacuum/directional-gyro-suction-inhg</suction>
+	</heading-indicator-dg>
 
 	<magnetic-compass>
 		<name>magnetic-compass</name>
