@@ -98,12 +98,12 @@
 	
 	<effect>
 		<inherits-from>Effects/exterior-glass</inherits-from>
-		<object-name>LeftForwardWindow</object-name>
-		<object-name>LeftRearWindow</object-name>
-		<object-name>OpenableWindow</object-name>
-		<object-name>RightForwardWindow</object-name>
-		<object-name>RightRearWindow</object-name>
-		<object-name>Windshield</object-name>
+		<object-name>LeftForwardWindowExterior</object-name>
+		<object-name>LeftRearWindowExterior</object-name>
+		<object-name>OpenableWindowExterior</object-name>
+		<object-name>RightForwardWindowExterior</object-name>
+		<object-name>RightRearWindowExterior</object-name>
+		<object-name>WindshieldExterior</object-name>
 		<object-name>LeftNavLightCap</object-name>
 		<object-name>RightNavLightCap</object-name>
 		<object-name>LeftLandingLightLampGlass</object-name>
@@ -113,9 +113,15 @@
 	</effect>
 	
 	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
+		<inherits-from>Effects/interior-glass</inherits-from>
 		<object-name>LeftSunVisor</object-name>
 		<object-name>RightSunVisor</object-name>
+		<object-name>LeftForwardWindowInterior</object-name>
+		<object-name>OpenableWindowInterior</object-name>
+		<object-name>LeftRearWindowInterior</object-name>
+		<object-name>RightForwardWindowInterior</object-name>
+		<object-name>RightRearWindowInterior</object-name>
+		<object-name>WindshieldInterior</object-name>
 	</effect>
 	
 	<model>
@@ -1052,7 +1058,8 @@
 	
 	<animation>
 		<type>rotate</type>
-		<object-name>OpenableWindow</object-name>
+		<object-name>OpenableWindowInterior</object-name>
+		<object-name>OpenableWindowExterior</object-name>
 		<object-name>OpenableWindowFrameExterior</object-name>
 		<object-name>OpenableWindowFrameInterior</object-name>
 		<object-name>OpenableWindowLatch</object-name>
