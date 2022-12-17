@@ -30,65 +30,6 @@
 		<output>interior/windows/ground-splash-norm</output>
 	</filter>
 	
-	<!--<filter>
-		<name>splash-x</name>
-		<update-interval-secs type="double">0.1</update-interval-secs>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input>
-			<expression>
-				<table>
-					<property>/velocities/airspeed-kt</property>
-					<entry><ind>0</ind><dep>0.5</dep></entry>
-					<entry><ind>5</ind><dep>0</dep></entry>
-					<entry><ind>10</ind><dep>0.5</dep></entry>
-					<entry><ind>200</ind><dep>-8.4</dep></entry>
-				</table>
-			</expression>
-		</input>
-		<output>
-			<property>interior/windows/front/splash-vector-x</property>
-		</output>
-	</filter>
-	<filter>
-		<name>splash-y</name>
-		<update-interval-secs type="double">0.1</update-interval-secs>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input>
-			<expression>
-				<prod>
-					<sin>
-						<property>/orientation/side-slip-rad</property>
-					</sin>
-					<property>/velocities/airspeed-kt</property>
-					<value>0.2</value>
-				</prod>
-			</expression>
-		</input>
-		<output>
-			<property>/environment/aircraft-effects/splash-vector-y</property>
-		</output>
-	</filter>
-	<filter>
-		<name>splash-z</name>
-		<update-interval-secs type="double">0.1</update-interval-secs>
-		<type>gain</type>
-		<gain>-1.0</gain>
-		<input>
-			<expression>
-				<table>
-					<property>/velocities/airspeed-kt</property>
-					<entry><ind>0</ind><dep>1.25</dep></entry>
-					<entry><ind>5</ind><dep>-0.17</dep></entry>
-					<entry><ind>200</ind><dep>-1.4</dep></entry>
-				</table>
-			</expression>
-		</input>
-		<output>
-			<property>interior/windows/front/splash-vector-z</property>
-		</output>
-	</filter>-->
 	<filter>
 		<name>Splash X</name>
 		<update-interval-secs>0.1</update-interval-secs>
