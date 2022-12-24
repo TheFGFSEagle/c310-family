@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>vsi.ac</path>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<factor>0.09</factor>
+		<min-deg>-180</min-deg>
+		<max-deg>180</max-deg>
+	</animation>
+</PropertyList>
