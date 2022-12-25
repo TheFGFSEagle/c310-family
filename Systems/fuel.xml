@@ -275,7 +275,7 @@
 			<default value="0"/>
 			<test value="0.1" logic="AND">
 				propulsion/tank[10]/pct-full GT 25
-				propulsion/tank[12]/pct-full LT 75
+				propulsion/tank[12]/pct-full LT 50
 			</test>
 		</switch>
 		
@@ -290,7 +290,7 @@
 			<default value="0"/>
 			<test value="0.1" logic="AND">
 				propulsion/tank[11]/pct-full GT 25
-				propulsion/tank[13]/pct-full LT 75
+				propulsion/tank[13]/pct-full LT 50
 			</test>
 		</switch>
 		
@@ -301,12 +301,26 @@
 	</channel>
 	
 	<channel name="Left engine intake manifold">
+		<switch name="propulsion/engine[0]/flooded">
+			<default value="0"/>
+			<test value="1">
+				propulsion/tank[12]/pct-full GT 60
+			</test>
+		</switch>
+		
 		<summer name="propulsion/tank[12]/external-flow-rate-pps">
 			<input>propulsion/tank[10]/to-manifold-flow-rate-pps</input>
 		</summer>
 	</channel>
 	
 	<channel name="Right engine intake manifold">
+		<switch name="propulsion/engine[1]/flooded">
+			<default value="0"/>
+			<test value="1">
+				propulsion/tank[13]/pct-full GT 60
+			</test>
+		</switch>
+		
 		<summer name="propulsion/tank[13]/external-flow-rate-pps">
 			<input>propulsion/tank[11]/to-manifold-flow-rate-pps</input>
 		</summer>

@@ -165,4 +165,16 @@
 		<input>/engines/engine[1]/fuel-flow-gph</input>
 		<output>/instrumentation/engine-combo[1]/indicated-fuel-pressure-psi</output>
 	</filter>
+	
+	<filter>
+		<name>Indicated flap position</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/flap-position/serviceable</property>
+			</condition>
+		</enable>
+		<input>/surface-positions/flaps-deg</input>
+		<output>/instrumentation/flap-position/indicated-flap-position-deg</output>
+	</filter>
 </PropertyList>
