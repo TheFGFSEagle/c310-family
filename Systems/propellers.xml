@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<system name="engines">
+<system name="propellers">
 	<channel name="Left propeller">
 		<switch name="fcs/feather-pos-norm[0]">
 			<default value="0"/>
