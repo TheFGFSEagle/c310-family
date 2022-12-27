@@ -242,9 +242,18 @@
 			</test>
 		</switch>
 		
+		<switch name="propulsion/tank[8]/to-primer-flow-rate-pps">
+			<default value="0"/>
+			<test value="0.1" logic="AND">
+				/controls/engines/primer EQ -1
+				propulsion/tank[8]/pct-full GT 25
+			</test>
+		</switch>
+		
 		<summer name="propulsion/tank[8]/external-flow-rate-pps">
 			<input>-propulsion/tank[8]/drain-flow-rate-pps</input>
 			<input>-propulsion/tank[8]/to-carburetor-flow-rate-pps</input>
+			<input>-propulsion/tank[8]/to-primer-flow-rate-pps</input>
 			<input>propulsion/tank[6]/to-fuel-strainer-flow-rate-pps</input>
 		</summer>
 	</channel>
@@ -263,9 +272,18 @@
 			</test>
 		</switch>
 		
+		<switch name="propulsion/tank[9]/to-primer-flow-rate-pps">
+			<default value="0"/>
+			<test value="0.1" logic="AND">
+				/controls/engines/primer EQ 1
+				propulsion/tank[9]/pct-full GT 25
+			</test>
+		</switch>
+		
 		<summer name="propulsion/tank[9]/external-flow-rate-pps">
 			<input>-propulsion/tank[9]/drain-flow-rate-pps</input>
 			<input>-propulsion/tank[9]/to-carburetor-flow-rate-pps</input>
+			<input>-propulsion/tank[9]/to-primer-flow-rate-pps</input>
 			<input>propulsion/tank[7]/to-fuel-strainer-flow-rate-pps</input>
 		</summer>
 	</channel>
@@ -274,8 +292,8 @@
 		<switch name="propulsion/tank[10]/to-manifold-flow-rate-pps">
 			<default value="0"/>
 			<test value="0.1" logic="AND">
-				propulsion/tank[10]/pct-full GT 25
-				propulsion/tank[12]/pct-full LT 50
+				propulsion/tank[10]/pct-full GT 5
+				propulsion/tank[12]/pct-full LT 45
 			</test>
 		</switch>
 		
@@ -289,8 +307,8 @@
 		<switch name="propulsion/tank[11]/to-manifold-flow-rate-pps">
 			<default value="0"/>
 			<test value="0.1" logic="AND">
-				propulsion/tank[11]/pct-full GT 25
-				propulsion/tank[13]/pct-full LT 50
+				propulsion/tank[11]/pct-full GT 5
+				propulsion/tank[13]/pct-full LT 45
 			</test>
 		</switch>
 		
@@ -301,27 +319,15 @@
 	</channel>
 	
 	<channel name="Left engine intake manifold">
-		<switch name="propulsion/engine[0]/flooded">
-			<default value="0"/>
-			<test value="1">
-				propulsion/tank[12]/pct-full GT 60
-			</test>
-		</switch>
-		
 		<summer name="propulsion/tank[12]/external-flow-rate-pps">
+			<input>propulsion/tank[8]/to-primer-flow-rate-pps</input>
 			<input>propulsion/tank[10]/to-manifold-flow-rate-pps</input>
 		</summer>
 	</channel>
 	
 	<channel name="Right engine intake manifold">
-		<switch name="propulsion/engine[1]/flooded">
-			<default value="0"/>
-			<test value="1">
-				propulsion/tank[13]/pct-full GT 60
-			</test>
-		</switch>
-		
 		<summer name="propulsion/tank[13]/external-flow-rate-pps">
+			<input>propulsion/tank[9]/to-primer-flow-rate-pps</input>
 			<input>propulsion/tank[11]/to-manifold-flow-rate-pps</input>
 		</summer>
 	</channel>
