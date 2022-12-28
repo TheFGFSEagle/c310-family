@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="engines">
+	<property>propulsion/tank[16]/leak-flow-rate-pps</property>
+	<property>propulsion/tank[17]/leak-flow-rate-pps</property>
+	
+	<channel name="Oil">
+		<scheduled_gain name="propulsion/engine[0]/oil-consumption-quarts_hr">
+			<input>propulsion/engine[0]/engine-rpm</input>
+			<table>
+				<independentVar lookup="row">/orientation/pitch-deg</independentVar>
+				<independentVar lookup="column">propulsion/tank[16]/contents-lbs</independentVar>
+				<tableData>
+						0	3	6	12
+					-30	0	0	0	1
+					0	0	0	1	1
+					30	0	0	0	1
+				</tableData>
+			</table>
+			<gain>0.0002</gain> <!-- gives 0.76 lbs == 0.52 quarts per hour at 2600 RPM -->
+		</scheduled_gain>
+		
+		<pure_gain name="propulsion/engine[0]/oil-consumption-lbs_hr">
+			<gain>1.825</gain>
+			<input>propulsion/engine[0]/oil-consumption-quarts_hr</input>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[0]/oil-consumption-lbs_s">
+			<function>
+				<quotient>
+					<property>propulsion/engine[0]/oil-consumption-lbs_hr</property>
+					<value>3600</value>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="propulsion/tank[16]/drain-flow-rate-pps">
+			<input>/controls/fuel/tank[16]/drain-valve</input>
+			<gain>0.5</gain>
+		</pure_gain>
+		
+		<summer name="propulsion/tank[16]/external-flow-rate-pps">
+			<input>-propulsion/engine[0]/oil-consumption-lbs_s</input>
+			<input>-propulsion/tank[16]/leak-flow-rate-pps</input>
+			<input>-propulsion/tank[16]/drain-flow-rate-pps</input>
+		</summer>
+		
+		<scheduled_gain name="propulsion/engine[1]/oil-consumption-quarts_hr">
+			<input>propulsion/engine[1]/engine-rpm</input>
+			<table>
+				<independentVar lookup="row">/orientation/pitch-deg</independentVar>
+				<independentVar lookup="column">propulsion/tank[17]/contents-lbs</independentVar>
+				<tableData>
+						0	3	6	12
+					-30	0	0	0	1
+					0	0	0	1	1
+					30	0	0	0	1
+				</tableData>
+			</table>
+			<gain>0.0002</gain> <!-- gives 0.76 lbs == 0.52 quarts per hour at 2600 RPM -->
+		</scheduled_gain>
+		
+		<pure_gain name="propulsion/engine[1]/oil-consumption-lbs_hr">
+			<gain>1.825</gain>
+			<input>propulsion/engine[1]/oil-consumption-quarts_hr</input>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[1]/oil-consumption-lbs_s">
+			<function>
+				<quotient>
+					<property>propulsion/engine[1]/oil-consumption-lbs_hr</property>
+					<value>3600</value>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="propulsion/tank[17]/drain-flow-rate-pps">
+			<input>/controls/fuel/tank[17]/drain-valve</input>
+			<gain>0.5</gain>
+		</pure_gain>
+		
+		<summer name="propulsion/tank[17]/external-flow-rate-pps">
+			<input>-propulsion/engine[1]/oil-consumption-lbs_s</input>
+			<input>-propulsion/tank[17]/leak-flow-rate-pps</input>
+			<input>-propulsion/tank[17]/drain-flow-rate-pps</input>
+		</summer>
+	</channel>
+</system>

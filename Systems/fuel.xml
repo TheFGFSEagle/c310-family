@@ -8,6 +8,8 @@
 	<property>propulsion/tank[1]/vent-blocked</property>
 	<property>propulsion/tank[2]/vent-blocked</property>
 	<property>propulsion/tank[3]/vent-blocked</property>
+	<property value="1">propulsion/engine[0]/carburetor-ice-norm</property>
+	<property value="1">propulsion/engine[1]/carburetor-ice-norm</property>
 	
 	<channel>
 		<switch>
@@ -242,9 +244,9 @@
 			</test>
 		</switch>
 		
-		<switch name="propulsion/tank[8]/to-primer-flow-rate-pps">
+		<switch name="propulsion/tank[8]/primer-flow-rate-pps">
 			<default value="0"/>
-			<test value="0.1" logic="AND">
+			<test value="0.02" logic="AND">
 				/controls/engines/primer EQ -1
 				propulsion/tank[8]/pct-full GT 25
 			</test>
@@ -253,7 +255,7 @@
 		<summer name="propulsion/tank[8]/external-flow-rate-pps">
 			<input>-propulsion/tank[8]/drain-flow-rate-pps</input>
 			<input>-propulsion/tank[8]/to-carburetor-flow-rate-pps</input>
-			<input>-propulsion/tank[8]/to-primer-flow-rate-pps</input>
+			<input>-propulsion/tank[8]/primer-flow-rate-pps</input>
 			<input>propulsion/tank[6]/to-fuel-strainer-flow-rate-pps</input>
 		</summer>
 	</channel>
@@ -272,9 +274,9 @@
 			</test>
 		</switch>
 		
-		<switch name="propulsion/tank[9]/to-primer-flow-rate-pps">
+		<switch name="propulsion/tank[9]/primer-flow-rate-pps">
 			<default value="0"/>
-			<test value="0.1" logic="AND">
+			<test value="0.02" logic="AND">
 				/controls/engines/primer EQ 1
 				propulsion/tank[9]/pct-full GT 25
 			</test>
@@ -283,19 +285,33 @@
 		<summer name="propulsion/tank[9]/external-flow-rate-pps">
 			<input>-propulsion/tank[9]/drain-flow-rate-pps</input>
 			<input>-propulsion/tank[9]/to-carburetor-flow-rate-pps</input>
-			<input>-propulsion/tank[9]/to-primer-flow-rate-pps</input>
+			<input>-propulsion/tank[9]/primer-flow-rate-pps</input>
 			<input>propulsion/tank[7]/to-fuel-strainer-flow-rate-pps</input>
 		</summer>
 	</channel>
 	
 	<channel name="Left carburetor">
-		<switch name="propulsion/tank[10]/to-manifold-flow-rate-pps">
-			<default value="0"/>
-			<test value="0.1" logic="AND">
-				propulsion/tank[10]/pct-full GT 5
-				propulsion/tank[12]/pct-full LT 45
-			</test>
-		</switch>
+		<fcs_function name="propulsion/tank[10]/to-manifold-flow-rate-pps">
+			<function>
+				<ifthen>
+					<and>
+						<gt>
+							<p>propulsion/tank[10]/pct-full</p>
+							<v>5</v>
+						</gt>
+						<lt>
+							<p>propulsion/tank[12]/pct-full</p>
+							<v>45</v>
+						</lt>
+					</and>
+					<product>
+						<p>propulsion/engine[0]/carburetor-ice-norm</p>
+						<v>0.1</v>
+					</product>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
 		
 		<summer name="propulsion/tank[10]/external-flow-rate-pps">
 			<input>-propulsion/tank[10]/to-manifold-flow-rate-pps</input>
@@ -304,13 +320,27 @@
 	</channel>
 	
 	<channel name="Right carburetor">
-		<switch name="propulsion/tank[11]/to-manifold-flow-rate-pps">
-			<default value="0"/>
-			<test value="0.1" logic="AND">
-				propulsion/tank[11]/pct-full GT 5
-				propulsion/tank[13]/pct-full LT 45
-			</test>
-		</switch>
+		<fcs_function name="propulsion/tank[11]/to-manifold-flow-rate-pps">
+			<function>
+				<ifthen>
+					<and>
+						<gt>
+							<p>propulsion/tank[11]/pct-full</p>
+							<v>5</v>
+						</gt>
+						<lt>
+							<p>propulsion/tank[13]/pct-full</p>
+							<v>45</v>
+						</lt>
+					</and>
+					<product>
+						<p>propulsion/engine[1]/carburetor-ice-norm</p>
+						<v>0.1</v>
+					</product>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
 		
 		<summer name="propulsion/tank[11]/external-flow-rate-pps">
 			<input>-propulsion/tank[11]/to-manifold-flow-rate-pps</input>
@@ -320,15 +350,65 @@
 	
 	<channel name="Left engine intake manifold">
 		<summer name="propulsion/tank[12]/external-flow-rate-pps">
-			<input>propulsion/tank[8]/to-primer-flow-rate-pps</input>
 			<input>propulsion/tank[10]/to-manifold-flow-rate-pps</input>
 		</summer>
 	</channel>
 	
 	<channel name="Right engine intake manifold">
 		<summer name="propulsion/tank[13]/external-flow-rate-pps">
-			<input>propulsion/tank[9]/to-primer-flow-rate-pps</input>
 			<input>propulsion/tank[11]/to-manifold-flow-rate-pps</input>
+		</summer>
+	</channel>
+	
+	<channel name="Left cylinders">
+		<fcs_function name="propulsion/tank[14]/fuel-dissipate-flow-rate-pps">
+			<function>
+				<ifthen>
+					<gt>
+						<p>propulsion/tank[14]/pct-full</p>
+						<v>0</v>
+					</gt>
+					<sum>
+						<product>
+							<p>propulsion/engine[0]/engine-rpm</p>
+							<p>fcs/throttle-pos-norm[0]</p>
+						</product>
+						<v>0.0005</v>
+					</sum>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[14]/external-flow-rate-pps">
+			<input>propulsion/tank[8]/primer-flow-rate-pps</input>
+			<input>-propulsion/tank[14]/fuel-dissipate-flow-rate-pps</input>
+		</summer>
+	</channel>
+	
+	<channel name="Right cylinders">
+		<fcs_function name="propulsion/tank[15]/fuel-dissipate-flow-rate-pps">
+			<function>
+				<ifthen>
+					<gt>
+						<p>propulsion/tank[15]/pct-full</p>
+						<v>0</v>
+					</gt>
+					<sum>
+						<product>
+							<p>propulsion/engine[1]/engine-rpm</p>
+							<p>fcs/throttle-pos-norm[1]</p>
+						</product>
+						<v>0.0005</v>
+					</sum>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[15]/external-flow-rate-pps">
+			<input>propulsion/tank[9]/primer-flow-rate-pps</input>
+			<input>-propulsion/tank[15]/fuel-dissipate-flow-rate-pps</input>
 		</summer>
 	</channel>
 </system>

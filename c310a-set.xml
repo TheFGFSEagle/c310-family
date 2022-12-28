@@ -365,6 +365,12 @@
 			<tank n="9">
 				<drain-valve type="bool">false</drain-valve>
 			</tank>
+			<tank n="16">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="17">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
 		</fuel>
 		<electric>
 			<battery-switch type="bool">false</battery-switch>

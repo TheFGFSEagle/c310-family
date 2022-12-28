@@ -287,8 +287,29 @@
 			<contents unit="LBS">0</contents>
 		</tank>
 		
-		<!-- oil reservoirs left, right -->
+		<!-- cylinders left, right -->
 		<tank type="FUEL" number="14">
+			<location unit="IN">
+				<x>20</x>
+				<y>70</y>
+				<z>-20</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="15">
+			<location unit="IN">
+				<x>20</x>
+				<y>70</y>
+				<z>-20</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<!-- oil reservoirs left, right -->
+		<tank type="FUEL" number="16">
 			<location unit="IN">
 				<x>0</x>
 				<y>-75</y>
@@ -300,7 +321,7 @@
 			<unusable unit="LBS">10.95</unusable>
 		</tank>
 		
-		<tank type="FUEL" number="15">
+		<tank type="FUEL" number="17">
 			<location unit="IN">
 				<x>0</x>
 				<y>75</y>
@@ -426,6 +447,7 @@
 	<system file="gear"/>
 	<system file="fuel"/>
 	<system file="engines"/>
+	<system file="oil"/>
 	<system file="propellers"/>
 	<system file="flaps"/>
 			
