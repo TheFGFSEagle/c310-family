@@ -716,6 +716,131 @@
 		<output>consumers/landing-gear-motor/amps</output>
 	</filter>
 	
+	<logic>
+		<name>Left starter</name>
+		<input>
+			<and>
+				<property>/controls/engines/engine[0]/starter-button</property>
+				<greater-than-equals>
+					<property>consumers/starter[0]/volts</property>
+					<value>12</value>
+				</greater-than-equals>
+			</and>
+		</input>
+		<output>/controls/engines/engine[0]/starter</output>
+	</logic>
+	
+	<logic>
+		<name>Right starter</name>
+		<input>
+			<and>
+				<property>/controls/engines/engine[1]/starter-button</property>
+				<greater-than-equals>
+					<property>consumers/starter[1]/volts</property>
+					<value>12</value>
+				</greater-than-equals>
+			</and>
+		</input>
+		<output>/controls/engines/engine[1]/starter</output>
+	</logic>
+	
+	<filter>
+		<name>Left starter volts</name>
+		<type>gain</type>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/starter[0]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Left starter amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<and>
+					<property>/controls/engines/engine[0]/starter</property>
+					<not>
+						<property>/engines/engine[0]/running</property>
+					</not>
+				</and>
+			</condition>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/starter-motor[0]/volts</property>
+						<div>
+							<property>consumers/starter-motor[0]/rated-volts</property>
+							<property>consumers/starter-motor[0]/rated-amps</property>
+						</div>
+					</div>
+					<table>
+						<property>/engines/engine[0]/rpm</property>
+						<entry>
+							<ind>0</ind>
+							<dep>1</dep>
+						</entry>
+						<entry>
+							<ind>500</ind>
+							<dep>0.5</dep>
+						</entry>
+					</table>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/starter-motor[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right starter volts</name>
+		<type>gain</type>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/starter-motor[0]/volts</property>
+		</output>
+	</filter>
+	
+	<filter>
+		<name>Right starter amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<and>
+					<property>/controls/engines/engine[1]/starter</property>
+					<not>
+						<property>/engines/engine[1]/running</property>
+					</not>
+				</and>
+			</condition>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/starter-motor[1]/volts</property>
+						<div>
+							<property>consumers/starter-motor[1]/rated-volts</property>
+							<property>consumers/starter-motor[1]/rated-amps</property>
+						</div>
+					</div>
+					<table>
+						<property>/engines/engine[1]/rpm</property>
+						<entry>
+							<ind>0</ind>
+							<dep>1</dep>
+						</entry>
+						<entry>
+							<ind>500</ind>
+							<dep>0.5</dep>
+						</entry>
+					</table>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/starter-motor[1]/amps</output>
+	</filter>
+	
 	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
@@ -725,9 +850,13 @@
 					<property>consumers/nav-lights/amps</property>
 					<property>consumers/landing-light[0]/amps</property>
 					<property>consumers/landing-light[1]/amps</property>
+					<property>consumers/landing-light-motor[0]/amps</property>
+					<property>consumers/landing-light-motor[1]/amps</property>
 					<property>consumers/rotating-beacon/amps</property>
 					<property>consumers/flaps-motor/amps</property>
 					<property>consumers/landing-gear-motor/amps</property>
+					<property>consumers/starter-motor[0]/amps</property>
+					<property>consumers/starter-motor[1]/amps</property>
 				</sum>
 			</expression>
 		</input>

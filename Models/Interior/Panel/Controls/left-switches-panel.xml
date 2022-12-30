@@ -276,7 +276,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property>controls/engines/engine[0]/starter</property>
+				<property>controls/engines/engine[0]/starter-button</property>
 				<tooltip-id>left-starter-button</tooltip-id>
 				<label>Left starter: %s</label>
 				<measure-text>Left starter: off</measure-text>
@@ -315,7 +315,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property>controls/engines/engine[1]/starter</property>
+				<property>controls/engines/engine[1]/starter-button</property>
 				<tooltip-id>right-starter-button</tooltip-id>
 				<label>Right starter: %s</label>
 				<measure-text>Right starter: off</measure-text>
