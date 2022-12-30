@@ -167,6 +167,8 @@
 		</equipment>
 		
 		<menubar include="gui/menubar.xml"/>
+		
+		<state include="States/parking.xml"/>
 	</sim>
 	
 	<fdm>
@@ -333,8 +335,6 @@
 			</wing-deice-system-light>
 		</circuit-breakers>
 		<lighting>
-			<beacon type="bool">false</beacon>
-			<nav-lights type="bool">false</nav-lights>
 			<landing-light type="int">0</landing-light>
 			<landing-light type="int">0</landing-light>
 		</lighting>
@@ -373,7 +373,6 @@
 			</tank>
 		</fuel>
 		<electric>
-			<battery-switch type="bool">false</battery-switch>
 			<ground-power-connected type="bool">false</ground-power-connected>
 		</electric>
 		<engines>
@@ -381,31 +380,18 @@
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
 				<carb-heat-lock-norm type="double">1</carb-heat-lock-norm>
-				<throttle>0</throttle>
-				<propeller-pitch>1</propeller-pitch>
-				<mixture>0</mixture>
-				<magnetos type="int">0</magnetos>
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
-				<master-alt type="bool">false</master-alt>
 				<starter-button type="bool">false</starter-button>
 			</engine>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
 				<carb-heat-lock-norm type="double">1</carb-heat-lock-norm>
-				<throttle>0</throttle>
-				<propeller-pitch>1</propeller-pitch>
-				<mixture>0</mixture>
-				<magnetos type="int">0</magnetos>
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
-				<master-alt type="bool">false</master-alt>
 				<starter-button type="bool">false</starter-button>
 			</engine>
 		</engines>
-		<gear>
-			<brake-parking type="bool">true</brake-parking>
-		</gear>
 	</controls>
 	
 	<instrumentation>
