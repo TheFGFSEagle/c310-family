@@ -66,6 +66,6 @@ controls.setFlapCommand = func(direction) {
 
 globals.controls.flapsDown = controls.setFlapCommand;
 
-controls.fuel_selector = [controls.FuelSelector.new(0), controls.FuelSelector.new(1)];
+controls.fuelSelector = [controls.FuelSelector.new(0), controls.FuelSelector.new(1)];
 controls.magneto = [controls.Magnetos.new(0), controls.Magnetos.new(1)];
 
