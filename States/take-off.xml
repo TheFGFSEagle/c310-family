@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name type="string">parked</name>
+	<name type="string">take-off</name>
 	<readable-name type="string">Takeoff</readable-name>
 	<description type="string">Ready for takeoff, engines started, flaps set, electrics on, …</description>
 	<overlay>

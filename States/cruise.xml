@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name type="string">parked</name>
-	<readable-name type="string">Parked</readable-name>
-	<description type="string">Parked, cold and dark. Everything switched off</description>
+	<name type="string">cruise</name>
+	<readable-name type="string">Cruise</readable-name>
+	<description type="string">Cruising state. Gear and flaps retracted</description>
 	<overlay>
 		<fdm>
 			<jsbsim>
