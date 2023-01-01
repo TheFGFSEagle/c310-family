@@ -28,10 +28,5 @@
 		<opacity-cube-angle type="float">0.0</opacity-cube-angle>
 		<use-reflection type="int">1</use-reflection>
 		<reflection-strength type="float">1</reflection-strength>
-		<blend>
-			<active type="bool">true</active>
-			<source>src-alpha</source>
-			<destination>one-minus-src-alpha</destination>
-		</blend>
 	</parameters>
 </PropertyList>
