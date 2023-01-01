@@ -64,6 +64,24 @@ controls.setFlapCommand = func(direction) {
 	props.globals.setDoubleValue("/controls/flight/flaps", 0.5 + (direction * 0.5));
 };
 
+globals.controls.startEngine = func(v = 1, which...) {
+	if (size(which)) {
+		foreach (var i; which) {
+			foreach (var e; globals.controls.engines) {
+				if (e.index == i) {
+					e.controls.getNode("starter-button").setBoolValue(v);
+				}
+			}
+		}
+	} else {
+		foreach (var e; globals.controls.engines) {
+			if (e.selected.getValue()) {
+				e.controls.getNode("starter-button").setBoolValue(v);
+			}
+		}
+	}
+}
+
 globals.controls.flapsDown = controls.setFlapCommand;
 
 controls.fuelSelector = [controls.FuelSelector.new(0), controls.FuelSelector.new(1)];
