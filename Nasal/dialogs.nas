@@ -5,59 +5,93 @@ dialogs.EquipmentDialog = {
 		var obj = {
 			parents: [
 				dialogs.EquipmentDialog,
-				canvas.Window.new(size: [250, 100], type: "dialog", destroy_on_close: 0).setTitle("Equipment options")
+				canvas.Window.new(size: [250, 100], type: "dialog", destroy_on_close: 0)
+					.setTitle("Equipment options")
+					.setBool("resize", 1)
 			],
-			auxiliary_fuel_tanks_node: props.globals.getNode("sim/equipment/auxiliary-fuel-tanks"),
-			right_landing_light_node: props.globals.getNode("sim/equipment/right-landing-light"),
-			rotating_beacon_node: props.globals.getNode("sim/equipment/rotating-beacon"),
+			equipmentNode: props.globals.getNode("sim/equipment"),
 		};
+		obj.auxiliaryFuelTanksNode = obj.equipmentNode.getNode("auxiliary-fuel-tanks");
+		obj.rightLandingLightNode = obj.equipmentNode.getNode("right-landing-light");
+		obj.rotatingBeaconNode = obj.equipmentNode.getNode("rotating-beacon");
 		obj.canvas = obj.getCanvas(create: 1).set("background", canvas.style.getColor("bg_color"));
 		obj.root = obj.canvas.createGroup();
 		obj.layout = canvas.VBoxLayout.new();
 		obj.canvas.setLayout(obj.layout);
 		
-		obj.auxiliary_fuel_tanks_checkbox = canvas.gui.widgets.CheckBox.new(obj.root, canvas.style, {"label-position": "left"})
-											.setText("Auxiliary fuel tanks installed:")
-											.setChecked(obj.auxiliary_fuel_tanks_node.getBoolValue());
-		obj.layout.addItem(obj.auxiliary_fuel_tanks_checkbox);
-		obj.auxiliary_fuel_tanks_checkbox.listen("toggled", func (e) {
-			obj.auxiliary_fuel_tanks_node.setBoolValue(int(e.detail.checked));
-		});
-		obj.auxiliary_fuel_tanks_listener = setlistener(obj.auxiliary_fuel_tanks_node, func (n) {
-			obj.auxiliary_fuel_tanks_checkbox.setChecked(n.getBoolValue());
-		});
+		obj.auxiliaryFuelTanksCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.auxiliaryFuelTanksNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Auxiliary fuel tanks:");
+		obj.layout.addItem(obj.auxiliaryFuelTanksCheckbox);
 		
-		obj.right_landing_light_checkbox = canvas.gui.widgets.CheckBox.new(obj.root, canvas.style, {"label-position": "left"})
-											.setText("Right landing light installed:")
-											.setChecked(obj.right_landing_light_node.getBoolValue());
-		obj.layout.addItem(obj.right_landing_light_checkbox);
-		obj.right_landing_light_checkbox.listen("toggled", func (e) {
-			obj.right_landing_light_node.setBoolValue(int(e.detail.checked));
-		});
-		obj.right_landing_light_listener = setlistener(obj.right_landing_light_node, func (n) {
-			obj.right_landing_light_checkbox.setChecked(n.getBoolValue());
-		});
+		obj.rightLandingLightCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.rightLandingLightNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Right landing light:");
+		obj.layout.addItem(obj.rightLandingLightCheckbox);
 		
-		obj.rotating_beacon_checkbox = canvas.gui.widgets.CheckBox.new(obj.root, canvas.style, {"label-position": "left"})
-											.setText("Rotating beacon installed:")
-											.setChecked(obj.rotating_beacon_node.getBoolValue());
-		obj.layout.addItem(obj.rotating_beacon_checkbox);
-		obj.rotating_beacon_checkbox.listen("toggled", func (e) {
-			obj.rotating_beacon_node.setBoolValue(int(e.detail.checked));
-		});
-		obj.rotating_beacon_listener = setlistener(obj.rotating_beacon_node, func (n) {
-			obj.rotating_beacon_checkbox.setChecked(n.getBoolValue());
-		});
+		obj.rotatingBeaconCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.rotatingBeaconNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Rotating beacon:");
+		obj.layout.addItem(obj.rotatingBeaconCheckbox);
 		return obj;
 	},
 	
 	del: func {
-		removelistener(me.auxiliary_fuel_tanks_listener);
-		removelistener(me.right_landing_light_listener);
-		removelistener(me.rotating_beacon_listener);
+		me.auxiliaryFuelTanksCheckbox.del();
+		me.rightLandingLightCheckbox.del();
+		me.rotatingBeaconCheckbox.del();
 		equipment_dialog = nil;
 	}
 };
 
+dialogs.SettingsDialog = {
+	new: func {
+		var obj = {
+			parents: [
+				dialogs.SettingsDialog,
+				canvas.Window.new(size: [250, 150], type: "dialog", destroy_on_close: 0).setTitle("Settings")
+			],
+			fogNode: props.globals.getNode("/sim/model/effects/interior/windows/fog-enabled"),
+			frostNode: props.globals.getNode("/sim/model/effects/interior/windows/frost-enabled"),
+			rainNode: props.globals.getNode("/sim/model/effects/interior/windows/rain-enabled"),
+			reflectionsNode: props.globals.getNode("/sim/model/effects/interior/windows/reflections-enabled"),
+		};
+		
+		obj.canvas = obj.getCanvas(create: 1).set("background", canvas.style.getColor("bg_color"));
+		obj.root = obj.canvas.createGroup();
+		obj.layout = canvas.VBoxLayout.new();
+		obj.canvas.setLayout(obj.layout);
+		obj.tabs = canvas.gui.widgets.TabWidget.new(obj.root, canvas.style, {});
+		obj.layout.addItem(obj.tabs);
+		
+		obj.effectsTab = canvas.VBoxLayout.new();
+		obj.tabs.addTab("effects", "Effects", obj.effectsTab);
+		
+		obj.fogCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.fogNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Fog:");
+		obj.effectsTab.addItem(obj.fogCheckbox);
+		
+		obj.frostCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.frostNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Frost:");
+		obj.effectsTab.addItem(obj.frostCheckbox);
+		
+		obj.rainCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.rainNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Rain:");
+		obj.effectsTab.addItem(obj.rainCheckbox);
+		
+		obj.reflectionsCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.reflectionsNode, obj.root, canvas.style, {"label-position": "left"})
+											.setText("Reflections:");
+		obj.effectsTab.addItem(obj.reflectionsCheckbox);
+		
+		return obj;
+	},
+	
+	del: func {
+		me.fogCheckbox.del();
+		me.frostCheckbox.del();
+		me.rainCheckbox.del();
+		me.reflectionsCheckbox.del();
+		dialogs.settings_dialog = nil;
+	}
+};
+
 dialogs.equipment_dialog = dialogs.EquipmentDialog.new();
+dialogs.settings_dialog = dialogs.SettingsDialog.new();
 
