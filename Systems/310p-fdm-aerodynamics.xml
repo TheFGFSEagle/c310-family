@@ -4812,7 +4812,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
-				<property>fcs/left-aileron-pos-deg</property> 
+				<property>fcs/aileron-pos-deg</property> 
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>	
 				<tableData>
