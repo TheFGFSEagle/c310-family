@@ -17,7 +17,7 @@
 		<vtailarea unit="FT2">11.7</vtailarea>
 		<vtailarm unit="FT">20.1</vtailarm>
 		<location name="AERORP" unit="IN">
-			<x>37.44</x>
+			<x>37.56</x>
 			<y>0</y>
 			<z>-13.44</z>
 		</location>
@@ -33,13 +33,13 @@
 		</location>
 	</metrics>
 	
-	<mass_balance>
-		<ixx unit="SLUG*FT2">8884</ixx>
-		<iyy unit="SLUG*FT2">1939</iyy>
-		<izz unit="SLUG*FT2">11001</izz>
+	<mass_balance> <!-- * -->
+		<ixx unit="SLUG*FT2">4000</ixx>
+		<iyy unit="SLUG*FT2">3500</iyy>
+		<izz unit="SLUG*FT2">6000</izz>
 		<emptywt unit="LBS">3411</emptywt>
 		<location name="CG" unit="IN">
-			<x>35.74</x>
+			<x>35.56</x>
 			<y>0</y>
 			<z>-13.44</z>
 		</location>

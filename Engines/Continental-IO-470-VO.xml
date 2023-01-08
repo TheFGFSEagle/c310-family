@@ -13,13 +13,13 @@
 	<static-friction unit="HP">2</static-friction>
 	<starter-torque>200</starter-torque>
 	<starter-rpm>800</starter-rpm>
-	<bsfc unit="LBS/HP*HR">0.4455</bsfc>
-	<volumetric-efficiency>0.928</volumetric-efficiency>
+	<bsfc unit="LBS/HP*HR">0.4399</bsfc>
+	<volumetric-efficiency>0.9874</volumetric-efficiency>
 	<stroke unit="IN">4</stroke>
 	<bore unit="IN">5</bore>
 	<displacement unit="IN3">471</displacement>
 	<cylinders>6</cylinders>
-	<compression-ratio>7</compression-ratio>
+	<compression-ratio>8.6</compression-ratio>
 	<oil-pressure-relief-valve-psi>50</oil-pressure-relief-valve-psi>
 	<oil-pressure-rpm-max>1000</oil-pressure-rpm-max>
 	<design-oil-temp-degK>340</design-oil-temp-degK>
