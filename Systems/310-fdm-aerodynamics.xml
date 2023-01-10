@@ -1410,9 +1410,7 @@
 	
 	<axis name="DRAG">
 		<function name="aero/force/Drag_alpha_flaps">
-			<description>Drag due to alpha and flaps symmetric</description>
-			<ifthen>
-			<eq><p>aero/function/thrust-state-sym</p><v>1</v></eq>
+			<description>Drag due to alpha and flaps</description>
 			<product>
 				<property>aero/function/kCDge</property>
 				<property>aero/qbar-psf</property>
@@ -1696,8 +1694,6 @@
 				</tableData>	
 				</table>
 			</product>
-		<v>0</v>
-		</ifthen>
 		</function>
 
 		<function name="aero/model_addeddrag">
