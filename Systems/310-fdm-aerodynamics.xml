@@ -1410,9 +1410,7 @@
 	
 	<axis name="DRAG">
 		<function name="aero/force/Drag_alpha_flaps">
-			<description>Drag due to alpha and flaps symmetric</description>
-			<ifthen>
-			<eq><p>aero/function/thrust-state-sym</p><v>1</v></eq>
+			<description>Drag due to alpha and flaps</description>
 			<product>
 				<property>aero/function/kCDge</property>
 				<property>aero/qbar-psf</property>
@@ -1696,8 +1694,6 @@
 				</tableData>	
 				</table>
 			</product>
-		<v>0</v>
-		</ifthen>
 		</function>
 
 		<function name="aero/model_addeddrag">
@@ -2586,7 +2582,7 @@
 				<property>metrics/cbarw-ft</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/thrust-state-asym</independentVar>						
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
 				<tableData	breakPoint="0">
 					-1	0	1
@@ -3431,7 +3427,7 @@
 				<property>metrics/bw-ft</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/thrust-state-asym</independentVar>						
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>						
 				<tableData	breakPoint="0">
 -1	0	1
@@ -4754,7 +4750,7 @@
 				<property>fcs/rudder-pos-deg</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/thrust-state-asym</independentVar>						
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>						
 				<tableData	breakPoint="0">
 						-1	1
