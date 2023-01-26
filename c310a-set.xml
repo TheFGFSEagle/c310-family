@@ -183,6 +183,9 @@
 				</function>
 			</aero>
 			<systems>
+				<flaps>
+					<max-flap-pos-deg>45</max-flap-pos-deg>
+				</flaps>
 				<propulsion>
 					<prop-low-pitch type="double">12.5</prop-low-pitch>
 					<prop-low-rpm type="double">1800</prop-low-rpm>
