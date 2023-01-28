@@ -65,7 +65,7 @@ dialogs.SettingsDialog = {
 		obj.generalTab = canvas.VBoxLayout.new();
 		obj.tabs.addTab("general", "General", obj.generalTab);
 		
-		obj.realisticFDMCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.realisticFDMNode, obj.root. canvas.style, {"label-position": "left"});
+		obj.realisticFDMCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.realisticFDMNode, obj.root, canvas.style, {"label-position": "left"});
 		obj.generalTab.addItem(obj.realisticFDMCheckbox);
 		
 		obj.effectsTab = canvas.VBoxLayout.new();
