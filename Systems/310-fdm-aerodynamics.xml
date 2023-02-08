@@ -4776,10 +4776,7 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>aero/bi2vel</property>
-				<sum>
 				<property>velocities/r-aero-rad_sec</property>
-				<property>aero/betadot-rad_sec</property>
-				</sum>
 				<property>aero/function/modelfactor_cnr</property>
 				<property>aero/function/easymode_cnr</property>
 				<table>
@@ -4793,6 +4790,7 @@
 				</table>
 			</product>
 		</function>
+<!--
 		<function name="aero/moment/Yaw_dampbetadot">
 			<description>Yaw moment due to beta change </description>
 			<product>
@@ -4807,7 +4805,7 @@
 				</value>
 			</product>
 		</function>
-
+-->
 		
 		<function name="aero/moment/Yaw_rudder_sym">
 			<description>Yaw moment due to rudder sym</description>
