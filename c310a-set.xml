@@ -4,11 +4,11 @@
 		<description>Cessna 310A (JSBsim)</description>
 		<authors>
 			<author n="0">
-				<description>3D</description>
+				<description>3D, Textures</description>
 				<nick>chad3006</nick>
 			</author>
 			<author n="1">
-				<description>FDM, 3D, systems, Nasal</description>
+				<description>FDM, 3D, Textures, Effects, Systems, Nasal, GUI</description>
 				<nick>TheEagle</nick>
 				<email>thefgfseagle@gmail.com</email>
 			</author>
@@ -201,6 +201,8 @@
 			</systems>
 		</jsbsim>
 	</fdm>
+	
+	<constants include="Systems/constants.xml"/>
 	
 	<limits>
 		<max-flap-extension-speed>

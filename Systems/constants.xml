@@ -1,0 +1,12 @@
+<?xml version="UTF-8" encoding="UTF-8"?>
+<PropertyList>
+	<in3-to-us_gal>0.0043290043</in3-to-us_gal>
+	<us_gal-to-in3>231</us_gal-to-in3>
+	<in-to-ft>0.083333333</in-to-ft>
+	<ft-to-in>12</ft-to-in>
+	<lbs-to-slugs>0.03108095</lbs-to-slugs>
+	<slugs-to-lbs>32.174049</slugs-to-lbs>
+	<psi-to-psf>144</psi-to-psf>
+	<psf-to-psi>0.0069444444</psf-to-psi>
+</PropertyList>
+

@@ -54,10 +54,10 @@ controls.Magnetos = {
 
 controls.adjustEngineControlFromBinding = func(binding) {
 	var friction_factor = 1 - props.globals.getValue("/controls/engines/friction-norm");
-	var current_value = props.globals.getValue(binding.getValue("property"));
-	var new_value = current_value + (binding.getValue("factor") * binding.getValue("offset") * friction_factor);
-	new_value = math.clamp(new_value, binding.getValue("min"), binding.getValue("max"));
-	props.globals.setDoubleValue(binding.getValue("property"), new_value);
+	var current_value = props.globals.getValue(binding.getValue("property", ""));
+	var new_value = current_value + (binding.getValue("factor", 1) * binding.getValue("offset", 0) * friction_factor);
+	new_value = math.clamp(new_value, binding.getValue("min", 0), binding.getValue("max", 1));
+	props.globals.setDoubleValue(binding.getValue("property", ""), new_value);
 };
 
 controls.setFlapCommand = func(direction) {
@@ -69,14 +69,14 @@ globals.controls.startEngine = func(v = 1, which...) {
 		foreach (var i; which) {
 			foreach (var e; globals.controls.engines) {
 				if (e.index == i) {
-					e.controls.getNode("starter-button").setBoolValue(v);
+					e.controls.getNode("starter-button", 1).setBoolValue(v);
 				}
 			}
 		}
 	} else {
 		foreach (var e; globals.controls.engines) {
 			if (e.selected.getValue()) {
-				e.controls.getNode("starter-button").setBoolValue(v);
+				e.controls.getNode("starter-button", 1).setBoolValue(v);
 			}
 		}
 	}

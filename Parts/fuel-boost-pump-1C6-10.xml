@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>1C6-10</part-number>
+	<data>
+		<source>https://baspartsales.com/1c6-10-cessna-parker-fuel-booster-pump-volts-28/</source>
+	</data>
+	<nasal>
+		<load>
+			print("Fuel boost pump loaded !");
+		</load>
+		<unload>
+			print("Fuel boost pump unloaded !");
+		</unload>
+	</nasal>
+	<overlay>
+		<fdm>
+			<jsbsim>
+				<propulsion>
+					<tank n="0">
+						<boost-pump>
+							<rated-pump-speed-rpm>4000</rated-pump-speed-rpm>
+							<rated-output-pressure-psig>21</rated-output-pressure-psig>
+						</boost-pump>
+					</tank>
+					<tank n="1">
+						<boost-pump>
+							<rated-pump-speed-rpm>4000</rated-pump-speed-rpm>
+							<rated-output-pressure-psig>21</rated-output-pressure-psig>
+						</boost-pump>
+					</tank>
+				</propulsion>
+			</jsbsim>
+		</fdm>
+		<systems>
+			<electrical>
+				<consumers>
+					<fuel-boost-pump n="0">
+						<rated-volts>28</rated-volts>
+						<rated-amps>6.5</rated-amps>
+					</fuel-boost-pump>
+					<fuel-boost-pump n="1">
+						<rated-volts>28</rated-volts>
+						<rated-amps>6.5</rated-amps>
+					</fuel-boost-pump>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+</PropertyList>

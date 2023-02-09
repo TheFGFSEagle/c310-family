@@ -747,6 +747,7 @@
 	<filter>
 		<name>Left starter volts</name>
 		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-fuel-boost-pump-starters/closed</gain>
 		<input>
 			<property>bus/volts</property>
 		</input>
@@ -795,6 +796,7 @@
 	<filter>
 		<name>Right starter volts</name>
 		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-fuel-boost-pump-starters/closed</gain>
 		<input>
 			<property>bus/volts</property>
 		</input>
@@ -842,6 +844,76 @@
 	</filter>
 	
 	<filter>
+		<name>Left fuel boost pump volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-fuel-boost-pump-oat-gauge/closed</gain>
+		<input>
+			<expression>
+				<product>
+					<property>bus/volts</property>
+					<property>/controls/engines/engine[0]/fuel-pump</property>
+				</product>
+			</expression>
+		</input>
+		<output>
+			<property>consumers/fuel-boost-pump[0]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Left fuel boost pump amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/fuel-boost-pump[0]/volts</property>
+						<div>
+							<property>consumers/fuel-boost-pump[0]/rated-volts</property>
+							<property>consumers/fuel-boost-pump[0]/rated-amps</property>
+						</div>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/fuel-boost-pump[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right fuel boost pump volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-fuel-boost-pump-starters/closed</gain>
+		<input>
+			<expression>
+				<product>
+					<property>bus/volts</property>
+					<property>/controls/engines/engine[1]/fuel-pump</property>
+				</product>
+			</expression>
+		</input>
+		<output>
+			<property>consumers/fuel-boost-pump[1]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Right fuel boost pump amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/fuel-boost-pump[1]/volts</property>
+						<div>
+							<property>consumers/fuel-boost-pump[1]/rated-volts</property>
+							<property>consumers/fuel-boost-pump[1]/rated-amps</property>
+						</div>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/fuel-boost-pump[1]/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
@@ -857,6 +929,8 @@
 					<property>consumers/landing-gear-motor/amps</property>
 					<property>consumers/starter-motor[0]/amps</property>
 					<property>consumers/starter-motor[1]/amps</property>
+					<property>consumers/fuel-boost-pump[0]/amps</property>
+					<property>consumers/fuel-boost-pump[1]/amps</property>
 				</sum>
 			</expression>
 		</input>
