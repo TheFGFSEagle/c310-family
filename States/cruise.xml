@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<name type="string">cruise</name>
+	<readable-name type="string">Cruise</readable-name>
+	<description type="string">Cruising state. Gear and flaps retracted</description>
+	<overlay>
+		<fdm>
+			<jsbsim>
+				<fcs>
+					<flap-pos-deg>0</flap-pos-deg>
+				</fcs>
+				<gear>
+					<gear-pos-norm>0</gear-pos-norm>
+				</gear>
+			</jsbsim>
+		</fdm>
+		
+		<sim>
+			<model>
+				<cabin-door>
+					<pos-norm type="double">0</pos-norm>
+					<handle-pos-norm type="double">0</handle-pos-norm>
+				</cabin-door>
+				
+				<baggage-door>
+					<pos-norm type="double">0</pos-norm>
+				</baggage-door>
+			</model>
+		</sim>
+		
+		<controls>
+			<lighting>
+				<nav-lights type="bool">true</nav-lights>
+				<landing-light type="int">-1</landing-light>
+				<landing-light type="int">-1</landing-light>
+			</lighting>
+			<fuel>
+				<selector type="int">1</selector>
+				<selector type="int">1</selector>
+				<tank n="0">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="1">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="2">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="3">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="4">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="5">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="8">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="9">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="16">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+				<tank n="17">
+					<drain-valve type="bool">false</drain-valve>
+				</tank>
+			</fuel>
+			<electric>
+				<battery-switch type="bool">true</battery-switch>
+				<ground-power-connected type="bool">false</ground-power-connected>
+			</electric>
+			<engines>
+				<friction-norm type="double">0</friction-norm>
+				<engine>
+					<carb-heat type="bool">false</carb-heat>
+					<throttle>1</throttle>
+					<propeller-pitch>1</propeller-pitch>
+					<mixture>1</mixture>
+					<magnetos type="int">3</magnetos>
+					<left-magneto type="bool">true</left-magneto>
+					<right-magneto type="bool">true</right-magneto>
+					<master-alt type="bool">true</master-alt>
+					<starter-button type="bool">false</starter-button>
+				</engine>
+				<engine>
+					<carb-heat type="bool">false</carb-heat>
+					<carb-heat-lock-norm type="double">1</carb-heat-lock-norm>
+					<throttle>1</throttle>
+					<propeller-pitch>1</propeller-pitch>
+					<mixture>1</mixture>
+					<magnetos type="int">3</magnetos>
+					<left-magneto type="bool">true</left-magneto>
+					<right-magneto type="bool">true</right-magneto>
+					<master-alt type="bool">true</master-alt>
+					<starter-button type="bool">false</starter-button>
+				</engine>
+			</engines>
+			<gear>
+				<brake-parking type="bool">false</brake-parking>
+				<gear-down type="bool">false</gear-down>
+			</gear>
+		</controls>
+	</overlay>
+</PropertyList>

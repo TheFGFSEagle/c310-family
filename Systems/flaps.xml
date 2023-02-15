@@ -46,22 +46,19 @@
 			</function>
 			<clipto>
 				<min>0</min>
-				<max>45</max>
+				<max>systems/flaps/max-flap-pos-deg</max>
 			</clipto>
 			<output>/surface-positions/flaps-deg</output>
 		</fcs_function>
 		
-		<aerosurface_scale name="fcs/flap-pos-norm">
+		<fcs_function name="fcs/flap-pos-norm">
 			<name>Flap position normalized</name>
-			<input>fcs/flap-pos-deg</input>
-			<domain>
-				<min>0</min>
-				<max>45</max>
-			</domain>
-			<range>
-				<min>0</min>
-				<max>1</max>
-			</range>
-		</aerosurface_scale>
+			<function>
+				<quotient>
+					<p>fcs/flap-pos-deg</p>
+					<p>systems/flaps/max-flap-pos-deg</p>
+				</quotient>
+			</function>
+		</fcs_function>
 	</channel>
 </system>

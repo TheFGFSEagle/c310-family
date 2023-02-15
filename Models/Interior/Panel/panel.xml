@@ -235,6 +235,27 @@
 	</model>
 	
 	<model>
+		<name>VerticalSpeedIndicator</name>
+		<path>Instruments/vsi/vsi.xml</path>
+		<offsets>
+			<x-m>0.52</x-m>
+			<y-m>-0.07</y-m>
+			<z-m>-0.04</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Instruments/rpm/rpm.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.05</y-m>
+			<z-m>0.03</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<path>Instruments/manifold-pressure/manifold-pressure.xml</path>
 		<offsets>
 			<x-m>0.55</x-m>
@@ -294,6 +315,16 @@
 			<x-m>0.525</x-m>
 			<y-m>0.48</y-m>
 			<z-m>0.06</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Instruments/flap-pos/flap-pos.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.23</y-m>
+			<z-m>-0.06</z-m>
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
 	</model>

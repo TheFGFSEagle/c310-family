@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- References:
+	Pressure to flow rate calculation: https://www.omnicalculator.com/conversion/psi-to-gpm#calculating-gpm-from-pressure
+-->
 <system name="fuel">
+	<property value="0.2">propulsion/tank[0]/drain-radius-in</property>
+	<property value="0.2">propulsion/tank[1]/drain-radius-in</property>
+	<property value="0.2">propulsion/tank[2]/drain-radius-in</property>
+	<property value="0.2">propulsion/tank[3]/drain-radius-in</property>
 	<property>propulsion/tank[0]/leak-flow-rate-pps</property>
 	<property>propulsion/tank[1]/leak-flow-rate-pps</property>
 	<property>propulsion/tank[2]/leak-flow-rate-pps</property>
 	<property>propulsion/tank[3]/leak-flow-rate-pps</property>
+	<property value="23">propulsion/tank[0]/height-in</property>
+	<property value="23">propulsion/tank[1]/height-in</property>
+	<property value="10">propulsion/tank[2]/height-in</property>
+	<property value="10">propulsion/tank[3]/height-in</property>
 	<property>propulsion/tank[0]/vent-blocked</property>
 	<property>propulsion/tank[1]/vent-blocked</property>
 	<property>propulsion/tank[2]/vent-blocked</property>
 	<property>propulsion/tank[3]/vent-blocked</property>
+	<property value="1">propulsion/engine[0]/carburetor-ice-norm</property>
+	<property value="1">propulsion/engine[1]/carburetor-ice-norm</property>
 	
 	<channel>
 		<switch>
@@ -34,13 +47,134 @@
 				/controls/fuel/selector[1] EQ 2
 			</test>
 		</switch>
+		
+		<pure_gain name="accelerations/gravity-in_sec2">
+			<input>accelerations/gravity-ft_sec2</input>
+			<gain>/constants/ft-to-in</gain>
+		</pure_gain>
+	</channel>
+	
+	<channel name="Left fuel boost pump">
+		<fcs_function name="propulsion/tank[0]/boost-pump/pump-speed-rpm">
+			<function>
+				<sum>
+					<p>propulsion/tank[0]/boost-pump/pump-speed-rpm</p>
+					<product>
+						<p>simulation/channel-dt</p>
+						<difference>
+							<product>
+								<p>propulsion/tank[0]/boost-pump/rated-pump-speed-rpm</p>
+								<quotient>
+									<p>/systems/electrical/consumers/fuel-boost-pump[0]/amps</p>
+									<p>/systems/electrical/consumers/fuel-boost-pump[0]/rated-amps</p>
+								</quotient>
+							</product>
+							<p>propulsion/tank[0]/boost-pump/pump-speed-rpm</p>
+						</difference>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/tank[0]/boost-pump/output-pressure-psig">
+			<function>
+				<product>
+					<quotient>
+						<p>propulsion/tank[0]/boost-pump/pump-speed-rpm</p>
+						<p>propulsion/tank[0]/boost-pump/rated-pump-speed-rpm</p>
+					</quotient>
+					<p>propulsion/tank[0]/boost-pump/rated-output-pressure-psig</p>
+				</product>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/tank[1]/boost-pump/pump-speed-rpm">
+			<function>
+				<sum>
+					<p>propulsion/tank[1]/boost-pump/pump-speed-rpm</p>
+					<product>
+						<p>simulation/channel-dt</p>
+						<difference>
+							<product>
+								<p>propulsion/tank[1]/boost-pump/rated-pump-speed-rpm</p>
+								<quotient>
+									<p>/systems/electrical/consumers/fuel-boost-pump[1]/amps</p>
+									<p>/systems/electrical/consumers/fuel-boost-pump[1]/rated-amps</p>
+								</quotient>
+							</product>
+							<p>propulsion/tank[1]/boost-pump/pump-speed-rpm</p>
+						</difference>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/tank[1]/boost-pump/output-pressure-psig">
+			<function>
+				<product>
+					<quotient>
+						<p>propulsion/tank[1]/boost-pump/pump-speed-rpm</p>
+						<p>propulsion/tank[1]/boost-pump/rated-pump-speed-rpm</p>
+					</quotient>
+					<p>propulsion/tank[1]/boost-pump/rated-output-pressure-psig</p>
+				</product>
+			</function>
+		</fcs_function>
 	</channel>
 	
 	<channel name="Left main tank">
-		<pure_gain name="propulsion/tank[0]/drain-flow-rate-pps">
-			<input>/controls/fuel/tank[0]/drain-valve</input>
-			<gain>2</gain>
+		<pure_gain name="propulsion/tank[0]/density-lbs_per_in3">
+			<input>propulsion/tank[0]/density-lbs_per_gal</input>
+			<gain>/constants/in3-to-us_gal</gain>
 		</pure_gain>
+		
+		<fcs_function name="propulsion/tank[0]/gravity-pressure-psig">
+			<function>
+				<product>
+					<p>propulsion/tank[0]/density-lbs_per_gal</p>
+					<p>/constants/in3-to-us_gal</p>
+					<p>/constants/lbs-to-slugs</p>
+					<p>propulsion/tank[0]/height-in</p>
+					<p>propulsion/tank[0]/pct-full</p>
+					<v>0.01</v>
+					<p>accelerations/gravity-in_sec2</p>
+				</product>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[0]/pressure-psig">
+			<input>propulsion/tank[0]/boost-pump/output-pressure-psig</input>
+			<input>propulsion/tank[0]/gravity-pressure-psig</input>
+		</summer>
+		
+		<fcs_function name="propulsion/tank[0]/drain-flow-rate-pps">
+			<function>
+				<product>
+					<p>/controls/fuel/tank[0]/drain-valve</p>
+					<sqrt>
+						<quotient>
+							<product>
+								<v>2</v>
+								<p>propulsion/tank[0]/gravity-pressure-psig</p>
+								<p>/constants/ft-to-in</p>
+							</product>
+							<product name="propulsion/tank[0]/density-slugs_per_in3">
+								<p>propulsion/tank[0]/density-lbs_per_in3</p>
+								<p>/constants/lbs-to-slugs</p>
+							</product>
+						</quotient>
+					</sqrt>
+					<product>
+						<pi/>
+						<pow>
+							<p>propulsion/tank[0]/drain-radius-in</p>
+							<v>2</v>
+						</pow>
+					</product>
+					<p>propulsion/tank[0]/density-lbs_per_in3</p>
+				</product>
+			</function>
+		</fcs_function>
 		
 		<switch name="propulsion/tank[0]/to-fuel-selector-flow-rate-pps">
 			<default value="0"/>
@@ -70,10 +204,57 @@
 	</channel>
 	
 	<channel name="Right main tank">
-		<pure_gain name="propulsion/tank[1]/drain-flow-rate-pps">
-			<input>/controls/fuel/tank[1]/drain-valve</input>
-			<gain>2</gain>
+		<pure_gain name="propulsion/tank[1]/density-lbs_per_in3">
+			<input>propulsion/tank[1]/density-lbs_per_gal</input>
+			<gain>/constants/in3-to-us_gal</gain>
 		</pure_gain>
+		
+		<fcs_function name="propulsion/tank[1]/gravity-pressure-psig">
+			<function>
+				<product>
+					<p>propulsion/tank[1]/density-lbs_per_in3</p>
+					<p>/constants/lbs-to-slugs</p>
+					<p>propulsion/tank[1]/height-in</p>
+					<p>propulsion/tank[1]/pct-full</p>
+					<v>0.01</v>
+					<p>accelerations/gravity-in_sec2</p>
+				</product>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[1]/pressure-psig">
+			<input>propulsion/tank[1]/boost-pump/output-pressure-psig</input>
+			<input>propulsion/tank[1]/gravity-pressure-psig</input>
+		</summer>
+		
+		<fcs_function name="propulsion/tank[1]/drain-flow-rate-pps">
+			<function>
+				<product>
+					<p>/controls/fuel/tank[1]/drain-valve</p>
+					<sqrt>
+						<quotient>
+							<product>
+								<v>2</v>
+								<p>propulsion/tank[1]/gravity-pressure-psig</p>
+								<p>/constants/ft-to-in</p>
+							</product>
+							<product>
+								<p>propulsion/tank[1]/density-lbs_per_in3</p>
+								<p>/constants/lbs-to-slugs</p>
+							</product>
+						</quotient>
+					</sqrt>
+					<product>
+						<pi/>
+						<pow>
+							<p>propulsion/tank[1]/drain-radius-in</p>
+							<v>2</v>
+						</pow>
+					</product>
+					<p>propulsion/tank[1]/density-lbs_per_in3</p>
+				</product>
+			</function>
+		</fcs_function>
 		
 		<switch name="propulsion/tank[1]/to-fuel-selector-flow-rate-pps">
 			<default value="0"/>
@@ -242,9 +423,18 @@
 			</test>
 		</switch>
 		
+		<switch name="propulsion/tank[8]/primer-flow-rate-pps">
+			<default value="0"/>
+			<test value="0.02" logic="AND">
+				/controls/engines/primer EQ -1
+				propulsion/tank[8]/pct-full GT 25
+			</test>
+		</switch>
+		
 		<summer name="propulsion/tank[8]/external-flow-rate-pps">
 			<input>-propulsion/tank[8]/drain-flow-rate-pps</input>
 			<input>-propulsion/tank[8]/to-carburetor-flow-rate-pps</input>
+			<input>-propulsion/tank[8]/primer-flow-rate-pps</input>
 			<input>propulsion/tank[6]/to-fuel-strainer-flow-rate-pps</input>
 		</summer>
 	</channel>
@@ -263,21 +453,44 @@
 			</test>
 		</switch>
 		
+		<switch name="propulsion/tank[9]/primer-flow-rate-pps">
+			<default value="0"/>
+			<test value="0.02" logic="AND">
+				/controls/engines/primer EQ 1
+				propulsion/tank[9]/pct-full GT 25
+			</test>
+		</switch>
+		
 		<summer name="propulsion/tank[9]/external-flow-rate-pps">
 			<input>-propulsion/tank[9]/drain-flow-rate-pps</input>
 			<input>-propulsion/tank[9]/to-carburetor-flow-rate-pps</input>
+			<input>-propulsion/tank[9]/primer-flow-rate-pps</input>
 			<input>propulsion/tank[7]/to-fuel-strainer-flow-rate-pps</input>
 		</summer>
 	</channel>
 	
 	<channel name="Left carburetor">
-		<switch name="propulsion/tank[10]/to-manifold-flow-rate-pps">
-			<default value="0"/>
-			<test value="0.1" logic="AND">
-				propulsion/tank[10]/pct-full GT 25
-				propulsion/tank[12]/pct-full LT 75
-			</test>
-		</switch>
+		<fcs_function name="propulsion/tank[10]/to-manifold-flow-rate-pps">
+			<function>
+				<ifthen>
+					<and>
+						<gt>
+							<p>propulsion/tank[10]/pct-full</p>
+							<v>5</v>
+						</gt>
+						<lt>
+							<p>propulsion/tank[12]/pct-full</p>
+							<v>45</v>
+						</lt>
+					</and>
+					<product>
+						<p>propulsion/engine[0]/carburetor-ice-norm</p>
+						<v>0.1</v>
+					</product>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
 		
 		<summer name="propulsion/tank[10]/external-flow-rate-pps">
 			<input>-propulsion/tank[10]/to-manifold-flow-rate-pps</input>
@@ -286,13 +499,27 @@
 	</channel>
 	
 	<channel name="Right carburetor">
-		<switch name="propulsion/tank[11]/to-manifold-flow-rate-pps">
-			<default value="0"/>
-			<test value="0.1" logic="AND">
-				propulsion/tank[11]/pct-full GT 25
-				propulsion/tank[13]/pct-full LT 75
-			</test>
-		</switch>
+		<fcs_function name="propulsion/tank[11]/to-manifold-flow-rate-pps">
+			<function>
+				<ifthen>
+					<and>
+						<gt>
+							<p>propulsion/tank[11]/pct-full</p>
+							<v>5</v>
+						</gt>
+						<lt>
+							<p>propulsion/tank[13]/pct-full</p>
+							<v>45</v>
+						</lt>
+					</and>
+					<product>
+						<p>propulsion/engine[1]/carburetor-ice-norm</p>
+						<v>0.1</v>
+					</product>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
 		
 		<summer name="propulsion/tank[11]/external-flow-rate-pps">
 			<input>-propulsion/tank[11]/to-manifold-flow-rate-pps</input>
@@ -309,6 +536,58 @@
 	<channel name="Right engine intake manifold">
 		<summer name="propulsion/tank[13]/external-flow-rate-pps">
 			<input>propulsion/tank[11]/to-manifold-flow-rate-pps</input>
+		</summer>
+	</channel>
+	
+	<channel name="Left cylinders">
+		<fcs_function name="propulsion/tank[14]/fuel-dissipate-flow-rate-pps">
+			<function>
+				<ifthen>
+					<gt>
+						<p>propulsion/tank[14]/pct-full</p>
+						<v>0</v>
+					</gt>
+					<sum>
+						<product>
+							<p>propulsion/engine[0]/engine-rpm</p>
+							<p>fcs/throttle-pos-norm[0]</p>
+						</product>
+						<v>0.0005</v>
+					</sum>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[14]/external-flow-rate-pps">
+			<input>propulsion/tank[8]/primer-flow-rate-pps</input>
+			<input>-propulsion/tank[14]/fuel-dissipate-flow-rate-pps</input>
+		</summer>
+	</channel>
+	
+	<channel name="Right cylinders">
+		<fcs_function name="propulsion/tank[15]/fuel-dissipate-flow-rate-pps">
+			<function>
+				<ifthen>
+					<gt>
+						<p>propulsion/tank[15]/pct-full</p>
+						<v>0</v>
+					</gt>
+					<sum>
+						<product>
+							<p>propulsion/engine[1]/engine-rpm</p>
+							<p>fcs/throttle-pos-norm[1]</p>
+						</product>
+						<v>0.0005</v>
+					</sum>
+					<v>0</v>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[15]/external-flow-rate-pps">
+			<input>propulsion/tank[9]/primer-flow-rate-pps</input>
+			<input>-propulsion/tank[15]/fuel-dissipate-flow-rate-pps</input>
 		</summer>
 	</channel>
 </system>

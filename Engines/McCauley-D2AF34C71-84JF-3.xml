@@ -9,6 +9,7 @@
 	<maxpitch>25</maxpitch>
 	<minrpm>1800</minrpm>
 	<maxrpm>2625</maxrpm>	
+        <ct_factor>1.31</ct_factor> <!-- * -->
 	
 	<table name="C_THRUST" type="internal">
 		<tableData>

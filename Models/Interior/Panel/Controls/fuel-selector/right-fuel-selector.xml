@@ -35,7 +35,7 @@
 		<action>
 			<binding>
 				<command>nasal</command>
-				<script>c310.controls.fuel_selector[1].adjust(cmdarg().getValue("offset"));</script>
+				<script>c310.controls.fuelSelector[1].adjust(cmdarg().getValue("offset"));</script>
 			</binding>
 		</action>
 		<hovered>

@@ -1,146 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="engines">
-	<channel name="Left propeller">
-		<switch name="fcs/feather-pos-norm[0]">
-			<default value="0"/>
-			<test value="1">
-				fcs/advance-cmd-norm[0] LT 0.1
-			</test>
-			<output>fcs/feather-cmd-norm[0]</output>
-			<output>/controls/engines/engine[0]/propeller-feather</output>
-		</switch>
-		
-		<kinematic>
-			<input>fcs/feather-cmd-norm[0]</input>
-			<traverse>
-				<setting>
-					<position>0</position>
-					<time>0</time>
-				</setting>
-				<setting>
-					<position>1</position>
-					<time>5</time>
-				</setting>
-			</traverse>
-			<output>propulsion/engine[0]/feather-norm</output>
-		</kinematic>
-		
-		<fcs_function name="propulsion/engine[0]/blade-angle">
-			<function>
-				<ifthen>
-					<property>fcs/feather-pos-norm[0]</property>
-					<interpolate1d>
-						<p>propulsion/engine[0]/feather-norm</p>
-						<v>0</v> <p>systems/propulsion/prop-high-pitch</p>
-						<v>1</v> <p>systems/propulsion/prop-feather-pitch</p>
-					</interpolate1d>
-					<min>
-						<max>
-							<sum>
-								<property>propulsion/engine[0]/blade-angle</property>
-								<product>
-									<difference>
-										<property>propulsion/engine[0]/propeller-rpm</property>
-										<interpolate1d>
-											<p>fcs/advance-pos-norm[0]</p>
-											<v>0</v> <p>systems/propulsion/prop-low-rpm</p>
-											<v>1</v> <p>systems/propulsion/prop-high-rpm</p>
-										</interpolate1d>
-									</difference>
-									<property>simulation/channel-dt</property>
-									<value>0.05</value>
-								</product>
-							</sum>
-							<p>systems/propulsion/prop-low-pitch</p>
-						</max>
-						<p>systems/propulsion/prop-high-pitch</p>
-					</min>
-				</ifthen>
-			</function>
-		</fcs_function>
-		
-		<fcs_function name="fcs/advance-pos-norm[0]">
+	<channel name="Cylinder vaporized fuel">
+		<fcs_function name="propulsion/engine[0]/cylinder-vaporized-fuel-norm">
 			<function>
 				<table>
-					<independentVar lookup="row">fcs/advance-cmd-norm[0]</independentVar>
+					<independentVar lookup="row">propulsion/engine[0]/cht-degF</independentVar>
+					<independentVar lookup="column">propulsion/tank[14]/pct-full</independentVar>
 					<tableData>
-						0.1	0
-						1	1
+							0	100
+						-13	0	1
+						75	1	2
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+	
+		<fcs_function name="propulsion/engine[1]/cylinder-vaporized-fuel-norm">
+			<function>
+				<table>
+					<independentVar lookup="row">propulsion/engine[1]/cht-degF</independentVar>
+					<independentVar lookup="column">propulsion/tank[15]/pct-full</independentVar>
+					<tableData>
+							0	100
+						-13	0	1
+						75	1	2
 					</tableData>
 				</table>
 			</function>
 		</fcs_function>
 	</channel>
 	
-	<channel name="Right propeller">
-		<switch name="fcs/feather-pos-norm[1]">
-			<default value="0"/>
-			<test value="1">
-				fcs/advance-cmd-norm[1] LT 0.1
-			</test>
-			<output>fcs/feather-cmd-norm[1]</output>
-			<output>/controls/engines/engine[1]/propeller-feather</output>
-		</switch>
+	<channel name="Mixture">
+		<pure_gain name="fcs/mixture-pos-norm[0]">
+			<input>fcs/mixture-cmd-norm[0]</input>
+			<gain>propulsion/engine[0]/cylinder-vaporized-fuel-norm</gain>
+		</pure_gain>
 		
-		<kinematic>
-			<input>fcs/feather-pos-norm[1]</input>
-			<traverse>
-				<setting>
-					<position>0</position>
-					<time>0</time>
-				</setting>
-				<setting>
-					<position>1</position>
-					<time>5</time>
-				</setting>
-			</traverse>
-			<output>propulsion/engine[1]/feather-norm</output>
-		</kinematic>
-		
-		<fcs_function name="propulsion/engine[1]/blade-angle">
-			<function>
-				<ifthen>
-					<property>fcs/feather-pos-norm[1]</property>
-					<interpolate1d>
-						<p>propulsion/engine[1]/feather-norm</p>
-						<v>0</v> <p>systems/propulsion/prop-high-pitch</p>
-						<v>1</v> <p>systems/propulsion/prop-feather-pitch</p>
-					</interpolate1d>
-					<min>
-						<max>
-							<sum>
-								<property>propulsion/engine[1]/blade-angle</property>
-								<product>
-									<difference>
-										<property>propulsion/engine[1]/propeller-rpm</property>
-										<interpolate1d>
-											<p>fcs/advance-pos-norm[1]</p>
-											<v>0</v> <p>systems/propulsion/prop-low-rpm</p>
-											<v>1</v> <p>systems/propulsion/prop-high-rpm</p>
-										</interpolate1d>
-									</difference>
-									<property>simulation/channel-dt</property>
-									<value>0.05</value>
-								</product>
-							</sum>
-							<p>systems/propulsion/prop-low-pitch</p>
-						</max>
-						<p>systems/propulsion/prop-high-pitch</p>
-					</min>
-				</ifthen>
-			</function>
-		</fcs_function>
-		
-		<fcs_function name="fcs/advance-pos-norm[1]">
-			<function>
-				<table>
-					<independentVar lookup="row">fcs/advance-cmd-norm[1]</independentVar>
-					<tableData>
-						0.1	0
-						1	1
-					</tableData>
-				</table>
-			</function>
-		</fcs_function>
+		<pure_gain name="fcs/mixture-pos-norm[1]">
+			<input>fcs/mixture-cmd-norm[1]</input>
+			<gain>propulsion/engine[1]/cylinder-vaporized-fuel-norm</gain>
+		</pure_gain>
 	</channel>
 </system>

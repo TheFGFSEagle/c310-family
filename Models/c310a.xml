@@ -24,7 +24,9 @@
 		<object-name>LeftEngine</object-name>
 		<object-name>LeftEngineExhaust</object-name>
 		<object-name>LeftEngineIntake</object-name>
-		<object-name>LeftFuelFillerCap</object-name>
+		<object-name>LeftWingtipTankFillerCapCover</object-name>
+		<object-name>LeftWingtipTankFillerCap</object-name>
+		<object-name>LeftWingtipTankFillerNeck</object-name>
 		<object-name>LeftInboardFlap</object-name>
 		<object-name>LeftOutboardFlap</object-name>
 		<object-name>LeftMainGearDoorInboard</object-name>
@@ -69,7 +71,9 @@
 		<object-name>RightEngine</object-name>
 		<object-name>RightEngineExhaust</object-name>
 		<object-name>RightEngineIntake</object-name>
-		<object-name>RightFuelFillerCap</object-name>
+		<object-name>RightWingtipTankFillerCapCover</object-name>
+		<object-name>RightWingtipTankFillerCap</object-name>
+		<object-name>RightWingtipTankFillerNeck</object-name>
 		<object-name>RightInboardFlap</object-name>
 		<object-name>RightOutboardFlap</object-name>
 		<object-name>RightMainGearCylinder</object-name>
@@ -1215,6 +1219,219 @@
 					} else {
 						return "closed";
 					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>LeftWingtipTankFillerCoverFastenerForward</object-name>
+		<axis>
+			<object-name>LeftWingtipTankFillerCoverFastenerForwardAxis</object-name>
+		</axis>
+		<property>controls/fuel/tank[0]/filler-cover/fastener[0]/pos-norm</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank[0]/filler-cover/fastener[0]/pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>left-wingtip-tank-filler-cover-fastener-forward</tooltip-id>
+				<label>Forward left wingtip fuel filler cover fastener: %s</label>
+				<measure-text>Forward left wingtip fuel filler cover fastener: fastened</measure-text>
+				<property>controls/fuel/tank[0]/filler-cover/fastener[0]/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] < 0.5 ? "fastened": "loose";
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>LeftWingtipTankFillerCoverFastenerRear</object-name>
+		<axis>
+			<object-name>LeftWingtipTankFillerCoverFastenerRearAxis</object-name>
+		</axis>
+		<property>controls/fuel/tank[0]/filler-cover/fastener[1]/pos-norm</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank[0]/filler-cover/fastener[1]/pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>left-wingtip-tank-filler-cover-fastener-rear</tooltip-id>
+				<label>Rear left wingtip fuel filler cover fastener: %s</label>
+				<measure-text>Rear left wingtip fuel filler cover fastener: fastened</measure-text>
+				<property>controls/fuel/tank[0]/filler-cover/fastener[1]/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] < 0.5 ? "fastened": "loose";
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>LeftWingtipTankFillerCover</object-name>
+		<axis>
+			<object-name>LeftWingtipTankFillerCoverAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property>controls/fuel/tank[0]/filler-cover/pos-norm</property>
+		<factor>120</factor>
+		<action>
+			<binding>
+				<condition>
+					<greater-than>
+						<property>controls/fuel/tank[0]/filler-cover/fastener[0]/pos-norm</property>
+						<value>0.5</value>
+					</greater-than>
+					<greater-than>
+						<property>controls/fuel/tank[0]/filler-cover/fastener[1]/pos-norm</property>
+						<value>0.5</value>
+					</greater-than>
+				</condition>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank[0]/filler-cover/pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>left-wingtip-tank-filler-cover</tooltip-id>
+				<label>Left wingtip fuel filler cover: %s</label>
+				<measure-text>Left wingtip fuel filler cover: closed</measure-text>
+				<property>controls/fuel/tank[0]/filler-cover/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] < 0.5 ? "open": "closed";
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>RightWingtipTankFillerCoverFastenerForward</object-name>
+		<axis>
+			<object-name>RightWingtipTankFillerCoverFastenerForwardAxis</object-name>
+		</axis>
+		<property>controls/fuel/tank[1]/filler-cover/fastener[0]/pos-norm</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank[1]/filler-cover/fastener[0]/pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>Right-wingtip-tank-filler-cover-fastener-forward</tooltip-id>
+				<label>Forward right wingtip fuel filler cover fastener: %s</label>
+				<measure-text>Forward right wingtip fuel filler cover fastener: fastened</measure-text>
+				<property>controls/fuel/tank[1]/filler-cover/fastener[0]/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] < 0.5 ? "fastened": "loose";
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>RightWingtipTankFillerCoverFastenerRear</object-name>
+		<axis>
+			<object-name>RightWingtipTankFillerCoverFastenerRearAxis</object-name>
+		</axis>
+		<property>controls/fuel/tank[0]/filler-cover/fastener[1]/pos-norm</property>
+		<factor>160</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank[1]/filler-cover/fastener[1]/pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>Right-wingtip-tank-filler-cover-fastener-rear</tooltip-id>
+				<label>Rear right wingtip fuel filler cover fastener: %s</label>
+				<measure-text>Rear right wingtip fuel filler cover fastener: fastened</measure-text>
+				<property>controls/fuel/tank[1]/filler-cover/fastener[1]/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] < 0.5 ? "fastened": "loose";
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>RightWingtipTankFillerCover</object-name>
+		<axis>
+			<object-name>RightWingtipTankFillerCoverAxis</object-name>
+		</axis>
+		<property>controls/fuel/tank[1]/filler-cover/pos-norm</property>
+		<factor>120</factor>
+		<action>
+			<binding>
+				<condition>
+					<greater-than>
+						<property>controls/fuel/tank[1]/filler-cover/fastener[0]/pos-norm</property>
+						<value>0.5</value>
+					</greater-than>
+					<greater-than>
+						<property>controls/fuel/tank[1]/filler-cover/fastener[1]/pos-norm</property>
+						<value>0.5</value>
+					</greater-than>
+				</condition>
+				<command>property-adjust</command>
+				<property>controls/fuel/tank[1]/filler-cover/pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>right-wingtip-tank-filler-cover</tooltip-id>
+				<label>Right wingtip fuel filler cover: %s</label>
+				<measure-text>Right wingtip fuel filler cover: closed</measure-text>
+				<property>controls/fuel/tank[1]/filler-cover/pos-norm</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					return arg[0] < 0.5 ? "closed": "open";
 				]]></script>
 			</binding>
 		</hovered>

@@ -17,7 +17,7 @@
 		<vtailarea unit="FT2">11.7</vtailarea>
 		<vtailarm unit="FT">20.1</vtailarm>
 		<location name="AERORP" unit="IN">
-			<x>37</x>
+			<x>37.44</x>
 			<y>0</y>
 			<z>-14.6</z>
 		</location>
@@ -54,7 +54,7 @@
 		</pointmass>		
 
 		<pointmass name="Copilot">
-			<weight unit="LBS">200</weight>
+			<weight unit="LBS">175</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>37</x>
 				<y>10.5</y>
@@ -63,7 +63,7 @@
 		</pointmass>
 			
 		<pointmass name="Left passenger">
-			<weight unit="LBS">200</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>71.25</x>
 				<y>-10.5</y>
@@ -72,7 +72,7 @@
 		</pointmass>
 		
 		<pointmass name="Center passenger">
-			<weight unit="LBS">200</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>71.25</x>
 				<y>0</y>
@@ -81,7 +81,7 @@
 		</pointmass>
 			
 		<pointmass name="Right passenger">
-			<weight unit="LBS">200</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>71.25</x>
 				<y>10.5</y>
@@ -90,7 +90,7 @@
 		</pointmass>
 				
 		<pointmass name="Baggage">
-			<weight unit="LBS">100</weight>
+			<weight unit="LBS">20</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>95</x>
 				<y>0</y>
@@ -287,8 +287,29 @@
 			<contents unit="LBS">0</contents>
 		</tank>
 		
-		<!-- oil reservoirs left, right -->
+		<!-- cylinders left, right -->
 		<tank type="FUEL" number="14">
+			<location unit="IN">
+				<x>20</x>
+				<y>70</y>
+				<z>-20</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="15">
+			<location unit="IN">
+				<x>20</x>
+				<y>70</y>
+				<z>-20</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<!-- oil reservoirs left, right -->
+		<tank type="FUEL" number="16">
 			<location unit="IN">
 				<x>0</x>
 				<y>-75</y>
@@ -300,7 +321,7 @@
 			<unusable unit="LBS">10.95</unusable>
 		</tank>
 		
-		<tank type="FUEL" number="15">
+		<tank type="FUEL" number="17">
 			<location unit="IN">
 				<x>0</x>
 				<y>75</y>
@@ -426,11 +447,13 @@
 	<system file="gear"/>
 	<system file="fuel"/>
 	<system file="engines"/>
+	<system file="oil"/>
+	<system file="propellers"/>
 	<system file="flaps"/>
 			
 	<flight_control file="Systems/310a-fdm-fcs.xml"/>
 	
-	<aerodynamics file="Systems/310a-fdm-aerodynamics.xml"/>
+	<aerodynamics file="Systems/310-fdm-aerodynamics.xml"/>
 	
 	<external_reactions/>
 </fdm_config>

@@ -4,11 +4,11 @@
 		<description>Cessna 310A (JSBsim)</description>
 		<authors>
 			<author n="0">
-				<description>3D</description>
+				<description>3D, Textures</description>
 				<nick>chad3006</nick>
 			</author>
 			<author n="1">
-				<description>FDM, 3D, systems, Nasal</description>
+				<description>FDM, 3D, Textures, Effects, Systems, Nasal, GUI</description>
 				<nick>TheEagle</nick>
 				<email>thefgfseagle@gmail.com</email>
 			</author>
@@ -18,14 +18,14 @@
 			</author>
 		</authors>
 		<aircraft-version>1.0.0</aircraft-version>
-		<status>alpha</status>
+		<status>beta</status>
 		<minimum-fg-version>2020.4.0</minimum-fg-version>
 		
 		<rating>
-			<FDM type="int">4</FDM>
-			<systems type="int">4</systems>
-			<cockpit type="int">4</cockpit>
-			<model type="int">5</model>
+			<FDM type="int">1</FDM>
+			<systems type="int">3</systems>
+			<cockpit type="int">2</cockpit>
+			<model type="int">3</model>
 		</rating>
 		
 		<tags>
@@ -48,6 +48,10 @@
 		<aero>Systems/310a-fdm</aero>
 		<primary-set type="bool">true</primary-set>
 		
+		<realism>
+			<realistic-fdm type="bool">true</realistic-fdm>
+		</realism>
+		
 		<previews>
 			<preview>
 				<type>exterior</type>
@@ -66,7 +70,6 @@
 						<fog-enabled type="bool">true</fog-enabled>
 						<frost-enabled type="bool">true</frost-enabled>
 						<reflections-enabled type="bool">true</reflections-enabled>
-						<surface-mapping-scheme type="int">1</surface-mapping-scheme>
 					</windows>
 					<instruments>
 						<reflections-enabled type="bool">true</reflections-enabled>
@@ -148,6 +151,7 @@
 			<path>/sim/model/controls/show-yokes</path>
 			<path>/sim/equipment</path>
 			<path>/sim/model/effects/interior/windows</path>
+			<path>/sim/realism</path>
 		</aircraft-data>
 		
 		<view n="0">
@@ -168,11 +172,25 @@
 		</equipment>
 		
 		<menubar include="gui/menubar.xml"/>
+		
+		<state include="States/saved.xml"/>
+		<state include="States/parked.xml"/>
+		<state include="States/take-off.xml"/>
+		<state include="States/cruise.xml"/>
+		<state include="States/approach.xml"/>
 	</sim>
 	
 	<fdm>
 		<jsbsim>
+			<aero>
+				<function>
+					<runtimeaircraftmodel>1</runtimeaircraftmodel>
+				</function>
+			</aero>
 			<systems>
+				<flaps>
+					<max-flap-pos-deg>45</max-flap-pos-deg>
+				</flaps>
 				<propulsion>
 					<prop-low-pitch type="double">12.5</prop-low-pitch>
 					<prop-low-rpm type="double">1800</prop-low-rpm>
@@ -183,6 +201,8 @@
 			</systems>
 		</jsbsim>
 	</fdm>
+	
+	<constants include="Systems/constants.xml"/>
 	
 	<limits>
 		<max-flap-extension-speed>
@@ -334,8 +354,6 @@
 			</wing-deice-system-light>
 		</circuit-breakers>
 		<lighting>
-			<beacon type="bool">false</beacon>
-			<nav-lights type="bool">false</nav-lights>
 			<landing-light type="int">0</landing-light>
 			<landing-light type="int">0</landing-light>
 		</lighting>
@@ -366,9 +384,14 @@
 			<tank n="9">
 				<drain-valve type="bool">false</drain-valve>
 			</tank>
+			<tank n="16">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
+			<tank n="17">
+				<drain-valve type="bool">false</drain-valve>
+			</tank>
 		</fuel>
 		<electric>
-			<battery-switch type="bool">false</battery-switch>
 			<ground-power-connected type="bool">false</ground-power-connected>
 		</electric>
 		<engines>
@@ -376,29 +399,18 @@
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
 				<carb-heat-lock-norm type="double">1</carb-heat-lock-norm>
-				<throttle>0</throttle>
-				<propeller-pitch>1</propeller-pitch>
-				<mixture>0</mixture>
-				<magnetos type="int">0</magnetos>
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
-				<master-alt type="bool">false</master-alt>
+				<starter-button type="bool">false</starter-button>
 			</engine>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
 				<carb-heat-lock-norm type="double">1</carb-heat-lock-norm>
-				<throttle>0</throttle>
-				<propeller-pitch>1</propeller-pitch>
-				<mixture>0</mixture>
-				<magnetos type="int">0</magnetos>
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
-				<master-alt type="bool">false</master-alt>
+				<starter-button type="bool">false</starter-button>
 			</engine>
 		</engines>
-		<gear>
-			<brake-parking type="bool">true</brake-parking>
-		</gear>
 	</controls>
 	
 	<instrumentation>
@@ -408,12 +420,18 @@
 		<engine-combo>
 			<serviceable type="bool">true</serviceable>
 		</engine-combo>
+		<flap-position>
+			<serviceable type="bool">true</serviceable>
+		</flap-position>
 		<fuel-quantity>
 			<serviceable type="bool">true</serviceable>
 		</fuel-quantity>
 		<manifold-pressure>
 			<serviceable type="bool">true</serviceable>
 		</manifold-pressure>
+		<rpm>
+			<serviceable type="bool">true</serviceable>
+		</rpm>
 		<vacuum>
 			<serviceable type="bool">true</serviceable>
 		</vacuum>
@@ -474,6 +492,12 @@
 			<tank>
 				<hidden type="bool">true</hidden>
 			</tank>
+			<tank>
+				<name>Left engine oil</name>
+			</tank>
+			<tank>
+				<name>Right engine oil</name>
+			</tank>
 		</fuel>
 	</consumables>
 	
@@ -521,6 +545,8 @@
 			<file>Nasal/c310.nas</file>
 			<file>Nasal/dialogs.nas</file>
 			<file>Nasal/controls.nas</file>
+			<file>Nasal/states.nas</file>
+			<file>Nasal/parts.nas</file>
 		</c310>
 	</nasal>
 	
@@ -581,6 +607,14 @@
 					<rated-volts>28</rated-volts>
 					<rated-amps>3.5</rated-amps>
 				</landing-light-motor>
+				<starter-motor n="0">
+					<rated-volts>24</rated-volts>
+					<rated-amps>91</rated-amps>
+				</starter-motor>
+				<starter-motor n="1">
+					<rated-volts>24</rated-volts>
+					<rated-amps>91</rated-amps>
+				</starter-motor>
 				<rotating-beacon>
 					<rated-volts>28</rated-volts>
 					<rated-amps>3.1</rated-amps>

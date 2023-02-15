@@ -21,6 +21,14 @@
 				</binding>
 			</item>
 			
+			<item>
+				<label>Settings</label>
+				<binding>
+					<command>nasal</command>
+					<script>c310.dialogs.settings_dialog.show();</script>
+				</binding>
+			</item>
+			
 			<!--<item>
 				<label>Select Livery</label>
 				<binding>

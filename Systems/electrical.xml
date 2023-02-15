@@ -485,7 +485,7 @@
 					</and>
 					<and>
 						<equals>
-							<property>/controls/lighting/landing[0]</property>
+							<property>/controls/lighting/landing-light[0]</property>
 							<value>-1</value>
 						</equals>
 						<greater-than>
@@ -572,7 +572,7 @@
 					</and>
 					<and>
 						<equals>
-							<property>/controls/lighting/landing[1]</property>
+							<property>/controls/lighting/landing-light[1]</property>
 							<value>-1</value>
 						</equals>
 						<greater-than>
@@ -716,6 +716,203 @@
 		<output>consumers/landing-gear-motor/amps</output>
 	</filter>
 	
+	<logic>
+		<name>Left starter</name>
+		<input>
+			<and>
+				<property>/controls/engines/engine[0]/starter-button</property>
+				<greater-than-equals>
+					<property>consumers/starter-motor[0]/volts</property>
+					<value>12</value>
+				</greater-than-equals>
+			</and>
+		</input>
+		<output>/controls/engines/engine[0]/starter</output>
+	</logic>
+	
+	<logic>
+		<name>Right starter</name>
+		<input>
+			<and>
+				<property>/controls/engines/engine[1]/starter-button</property>
+				<greater-than-equals>
+					<property>consumers/starter-motor[1]/volts</property>
+					<value>12</value>
+				</greater-than-equals>
+			</and>
+		</input>
+		<output>/controls/engines/engine[1]/starter</output>
+	</logic>
+	
+	<filter>
+		<name>Left starter volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-fuel-boost-pump-starters/closed</gain>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/starter-motor[0]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Left starter amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<and>
+					<property>/controls/engines/engine[0]/starter</property>
+					<not>
+						<property>/engines/engine[0]/running</property>
+					</not>
+				</and>
+			</condition>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/starter-motor[0]/volts</property>
+						<div>
+							<property>consumers/starter-motor[0]/rated-volts</property>
+							<property>consumers/starter-motor[0]/rated-amps</property>
+						</div>
+					</div>
+					<table>
+						<property>/engines/engine[0]/rpm</property>
+						<entry>
+							<ind>0</ind>
+							<dep>1</dep>
+						</entry>
+						<entry>
+							<ind>500</ind>
+							<dep>0.5</dep>
+						</entry>
+					</table>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/starter-motor[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right starter volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-fuel-boost-pump-starters/closed</gain>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/starter-motor[1]/volts</property>
+		</output>
+	</filter>
+	
+	<filter>
+		<name>Right starter amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<and>
+					<property>/controls/engines/engine[1]/starter</property>
+					<not>
+						<property>/engines/engine[1]/running</property>
+					</not>
+				</and>
+			</condition>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/starter-motor[1]/volts</property>
+						<div>
+							<property>consumers/starter-motor[1]/rated-volts</property>
+							<property>consumers/starter-motor[1]/rated-amps</property>
+						</div>
+					</div>
+					<table>
+						<property>/engines/engine[1]/rpm</property>
+						<entry>
+							<ind>0</ind>
+							<dep>1</dep>
+						</entry>
+						<entry>
+							<ind>500</ind>
+							<dep>0.5</dep>
+						</entry>
+					</table>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/starter-motor[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Left fuel boost pump volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-fuel-boost-pump-oat-gauge/closed</gain>
+		<input>
+			<expression>
+				<product>
+					<property>bus/volts</property>
+					<property>/controls/engines/engine[0]/fuel-pump</property>
+				</product>
+			</expression>
+		</input>
+		<output>
+			<property>consumers/fuel-boost-pump[0]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Left fuel boost pump amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/fuel-boost-pump[0]/volts</property>
+						<div>
+							<property>consumers/fuel-boost-pump[0]/rated-volts</property>
+							<property>consumers/fuel-boost-pump[0]/rated-amps</property>
+						</div>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/fuel-boost-pump[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Right fuel boost pump volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-fuel-boost-pump-starters/closed</gain>
+		<input>
+			<expression>
+				<product>
+					<property>bus/volts</property>
+					<property>/controls/engines/engine[1]/fuel-pump</property>
+				</product>
+			</expression>
+		</input>
+		<output>
+			<property>consumers/fuel-boost-pump[1]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Right fuel boost pump amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/fuel-boost-pump[1]/volts</property>
+						<div>
+							<property>consumers/fuel-boost-pump[1]/rated-volts</property>
+							<property>consumers/fuel-boost-pump[1]/rated-amps</property>
+						</div>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/fuel-boost-pump[1]/amps</output>
+	</filter>
+	
 	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
@@ -725,9 +922,15 @@
 					<property>consumers/nav-lights/amps</property>
 					<property>consumers/landing-light[0]/amps</property>
 					<property>consumers/landing-light[1]/amps</property>
+					<property>consumers/landing-light-motor[0]/amps</property>
+					<property>consumers/landing-light-motor[1]/amps</property>
 					<property>consumers/rotating-beacon/amps</property>
 					<property>consumers/flaps-motor/amps</property>
 					<property>consumers/landing-gear-motor/amps</property>
+					<property>consumers/starter-motor[0]/amps</property>
+					<property>consumers/starter-motor[1]/amps</property>
+					<property>consumers/fuel-boost-pump[0]/amps</property>
+					<property>consumers/fuel-boost-pump[1]/amps</property>
 				</sum>
 			</expression>
 		</input>

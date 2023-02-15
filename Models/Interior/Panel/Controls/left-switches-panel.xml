@@ -276,7 +276,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property>controls/engines/engine[0]/starter</property>
+				<property>controls/engines/engine[0]/starter-button</property>
 				<tooltip-id>left-starter-button</tooltip-id>
 				<label>Left starter: %s</label>
 				<measure-text>Left starter: off</measure-text>
@@ -295,11 +295,11 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property>controls/engines/prime</property>
-				<tooltip-id>prime-switch</tooltip-id>
-				<label>Prime: %s</label>
+				<property>controls/engines/primer</property>
+				<tooltip-id>primer-switch</tooltip-id>
+				<label>Primer: %s</label>
 				<script>return ["off", "right engine", "left engine"][arg[0]];</script>
-				<measure-text>Prime: right engine</measure-text>
+				<measure-text>Primer: right engine</measure-text>
 				<spring-loaded type="bool">true</spring-loaded>
 			</params>
 		</overlay>
@@ -315,7 +315,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property>controls/engines/engine[1]/starter</property>
+				<property>controls/engines/engine[1]/starter-button</property>
 				<tooltip-id>right-starter-button</tooltip-id>
 				<label>Right starter: %s</label>
 				<measure-text>Right starter: off</measure-text>
