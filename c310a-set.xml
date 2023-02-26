@@ -414,6 +414,12 @@
 	</controls>
 	
 	<instrumentation>
+		<cht>
+			<serviceable type="bool">true</serviceable>
+		</cht>
+		<cht>
+			<serviceable type="bool">true</serviceable>
+		</cht>
 		<engine-combo>
 			<serviceable type="bool">true</serviceable>
 		</engine-combo>
