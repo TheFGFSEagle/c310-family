@@ -2,11 +2,6 @@
 <PropertyList>
 	<path>ai.ac</path>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
-	
 	<animation>
 		<type>translate</type>
 		<object-name>PitchScale</object-name>
@@ -113,4 +108,9 @@
 			</binding>
 		</hovered>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
 </PropertyList>

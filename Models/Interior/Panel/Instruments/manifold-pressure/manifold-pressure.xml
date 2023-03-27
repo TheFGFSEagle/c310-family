@@ -2,11 +2,6 @@
 <PropertyList>
 	<path>manifold-pressure.ac</path>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
-	
 	<animation>
 		<type>rotate</type>
 		<object-name>Needle1</object-name>
@@ -30,4 +25,9 @@
 		<property>instrumentation/manifold-pressure/indicated-manifold-pressure-inhg[1]</property>
 		<factor>5.4</factor>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
 </PropertyList>

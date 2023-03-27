@@ -2,11 +2,6 @@
 <PropertyList>
 	<path>dg.ac</path>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
-	
 	<animation>
 		<type>rotate</type>
 		<object-name>Scale</object-name>
@@ -79,4 +74,9 @@
 			<property>instrumentation/directional-gyro/caged</property>
 		</condition>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
 </PropertyList>
