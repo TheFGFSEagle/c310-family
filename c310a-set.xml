@@ -157,6 +157,7 @@
 			<path>/sim/equipment</path>
 			<path>/sim/model/effects/interior/windows</path>
 			<path>/sim/realism</path>
+			<path>/instrumentation/clock/windup-norm</path>
 		</aircraft-data>
 		
 		<view n="0">
@@ -425,6 +426,9 @@
 		<cht>
 			<serviceable type="bool">true</serviceable>
 		</cht>
+		<clock>
+			<serviceable type="bool">true</serviceable>
+		</clock>
 		<engine-combo>
 			<serviceable type="bool">true</serviceable>
 		</engine-combo>

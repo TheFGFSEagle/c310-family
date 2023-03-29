@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
+	<property-root>/instrumentation</property-root>
+	
 	<filter>
 		<name>Indicated airspeed (miles per hour)</name>
 		<type>gain</type>
@@ -200,5 +202,104 @@
 		</enable>
 		<input>/surface-positions/flaps-deg</input>
 		<output>/instrumentation/flap-position/indicated-flap-position-deg</output>
+	</filter>
+	
+	<filter>
+		<name>Clock hours hand rotation</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>instrumentation/clock/serviceable</property>
+				<property>instrumentation/clock/windup-norm</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<sum>
+					<product>
+						<property>clock/indicated-hour</property>
+						<value>30</value>
+					</product>
+					<product>
+						<property>clock/indicated-min</property>
+						<value>0.5</value>
+					</product>
+				</sum>
+			</expression>
+		</input>
+		<output>clock/hours-hand-rotation-deg</output>
+	</filter>
+	<filter>
+		<name>Clock minutes hand rotation</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>instrumentation/clock/serviceable</property>
+				<property>instrumentation/clock/windup-norm</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<sum>
+					<product>
+						<property>clock/indicated-min</property>
+						<value>6</value>
+					</product>
+					<product>
+						<mod>
+							<property>clock/indicated-sec</property>
+							<value>60</value>
+						</mod>
+						<value>0.1</value>
+					</product>
+				</sum>
+			</expression>
+		</input>
+		<output>clock/minutes-hand-rotation-deg</output>
+	</filter>
+	<filter>
+		<name>Clock seconds hand rotation</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>instrumentation/clock/serviceable</property>
+				<property>instrumentation/clock/windup-norm</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<product>
+					<mod>
+						<property>clock/indicated-sec</property>
+						<value>60</value>
+					</mod>
+					<value>6</value>
+				</product>
+			</expression>
+		</input>
+		<output>clock/seconds-hand-rotation-deg</output>
+	</filter>
+	<filter>
+		<name>Clock windup</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>instrumentation/clock/serviceable</property>
+				<property>instrumentation/clock/windup-norm</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<dif>
+					<property>clock/windup-norm</property>
+					<product>
+						<property>/sim/time/delta-sec</property>
+						<!-- 1 / (8 days * 24 hours * 60 minutes * 60 seconds) -->
+						<value>0.0000014467592592592592</value>
+					</product>
+				</dif>
+			</expression>
+		</input>
+		<output>clock/windup-norm</output>
 	</filter>
 </PropertyList>
