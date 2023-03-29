@@ -8,7 +8,12 @@
 		<axis>
 			<x>-1</x>
 		</axis>
-		<property>instrumentation/clock/hours-hand-rotation-deg</property>
+		<expression>
+			<product>
+				<property>clock/indicated-hours</property>
+				<value>30</value>
+			</product>
+		</expression>
 	</animation>
 	
 	<animation>
@@ -17,7 +22,12 @@
 		<axis>
 			<x>-1</x>
 		</axis>
-		<property>instrumentation/clock/minutes-hand-rotation-deg</property>
+		<expression>
+			<product>
+				<property>clock/indicated-minutes</property>
+				<value>6</value>
+			</product>
+		</expression>
 	</animation>
 	
 	<animation>
@@ -26,7 +36,17 @@
 		<axis>
 			<x>-1</x>
 		</axis>
-		<property>instrumentation/clock/seconds-hand-rotation-deg</property>
+		<expression>
+			<product>
+				<floor>
+					<sum>
+						<property>clock/indicated-seconds</property>
+						<value>0.5</value>
+					</sum>
+				</floor>
+				<value>6</value>
+			</product>
+		</expression>
 	</animation>
 	
 	<animation>

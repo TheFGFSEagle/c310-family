@@ -1,4 +1,7 @@
 aircraft.data.save(1);
+if (props.globals.getValue("/instrumentation/clock/internal-seconds") == 0) {
+	props.globals.setDoubleValue("/instrumentation/clock/internal-seconds", props.globals.getValue("/sim/time/local-day-seconds")); 
+}
 
 var disengageStartersTimerDelay = 5;
 var disengageStartersTimer = maketimer(disengageStartersTimerDelay, func {
