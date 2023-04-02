@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<part-number>1C6-10</part-number>
-	<data>
-		<source>https://baspartsales.com/1c6-10-cessna-parker-fuel-booster-pump-volts-28/</source>
-	</data>
+	<brand>Parker</brand>
+	<type></type>
+	<data-source>https://baspartsales.com/1c6-10-cessna-parker-fuel-booster-pump-volts-28/</data-source>
 	<nasal>
 		<load>
 			print("Fuel boost pump loaded !");
