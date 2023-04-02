@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<filter>
+		<name>Zero clock rate due to day jump</name>
+		<type>derivative</type>
+		<input>/sim/time/utc/day</input>
+		<output>
+			<property>/sim/time/day-jump-zero-rate</property>
+			<abs type="bool">true</abs>
+			<min>0</min>
+			<max>1</max>
+		</output>
+	</filter>
+	<filter>
+		<name>Time rate (per-frame)</name>
+		<type>derivative</type>
+		<enable>
+			<condition>
+				<not>
+					<property>/sim/time/day-jump-zero-rate</property>
+				</not>
+			</condition>
+		</enable>
+		<input>/sim/time/local-day-seconds</input>
+		<output>/sim/time/rate-per-frame</output>
+		<filter-time>1</filter-time>
+	</filter>
+	<filter>
+		<name>Time rate (per FDM iteration)</name>
+		<type>derivative</type>
+		<update-interval-secs>0.0083333333</update-interval-secs>
+		<enable>
+			<condition>
+				<not>
+					<property>/sim/time/day-jump-zero-rate</property>
+				</not>
+			</condition>
+		</enable>
+		<input>/sim/time/local-day-seconds</input>
+		<output>/sim/time/rate-fdm</output>
+		<filter-time>1</filter-time>
+	</filter>
+</PropertyList>
+

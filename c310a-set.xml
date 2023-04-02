@@ -123,26 +123,31 @@
 			<path>Systems/systems.xml</path>
 			
 			<property-rule n="100">
+				<name>Time properties</name>
+				<path>Systems/time.xml</path>
+			</property-rule>
+			
+			<property-rule n="101">
 				<name>Instrument indications</name>
 				<path>Systems/instruments.xml</path>
 			</property-rule>
 			
-			<property-rule n="101">
+			<property-rule n="102">
 				<name>Lights</name>
 				<path>Systems/lights.xml</path>
 			</property-rule>
 			
-			<property-rule n="102">
+			<property-rule n="103">
 				<name>Electrical system</name>
 				<path>Systems/electrical.xml</path>
 			</property-rule>
 			
-			<property-rule n="103">
+			<property-rule n="104">
 				<name>Vacuum system</name>
 				<path>Systems/vacuum.xml</path>
 			</property-rule>
 			
-			<property-rule n="104">
+			<property-rule n="105">
 				<name>Effects</name>
 				<path>Systems/effects.xml</path>
 			</property-rule>
@@ -157,8 +162,6 @@
 			<path>/sim/equipment</path>
 			<path>/sim/model/effects/interior/windows</path>
 			<path>/sim/realism</path>
-			<path>/instrumentation/clock/windup-norm</path>
-			<path>/instrumentation/clock/internal-seconds</path>
 		</aircraft-data>
 		
 		<view n="0">
@@ -361,6 +364,7 @@
 			</wing-deice-system-light>
 		</circuit-breakers>
 		<lighting>
+			<red-instrument-norm type="float">0</red-instrument-norm>
 			<landing-light type="int">0</landing-light>
 			<landing-light type="int">0</landing-light>
 		</lighting>
@@ -429,7 +433,6 @@
 		</cht>
 		<clock>
 			<serviceable type="bool">true</serviceable>
-			<internal-seconds type="double">0</internal-seconds>
 		</clock>
 		<engine-combo>
 			<serviceable type="bool">true</serviceable>
@@ -559,11 +562,11 @@
 	
 	<nasal>
 		<c310>
+			<file>Nasal/parts.nas</file>
 			<file>Nasal/c310.nas</file>
 			<file>Nasal/dialogs.nas</file>
 			<file>Nasal/controls.nas</file>
 			<file>Nasal/states.nas</file>
-			<file>Nasal/parts.nas</file>
 		</c310>
 	</nasal>
 	

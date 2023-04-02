@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>AT420100</part-number>
+	<brand>AstroTech</brand>
+	<type>LC2</type>
+	<data-source></data-source>
+	<nasal>
+		<load>
+			io.load_nasal("Nasal/Instruments/astrotech-lc2.nas", "astrotech_lc2");
+			print("AstroTech LC2 loaded !");
+			astrotech_lc2.install();
+		</load>
+		<unload>
+			astrotech_lc2.uninstall();
+			delete(globals, "astrotech_lc2");
+			props.globals.getNode("/instrumentation/clock/timer", 1).remove();
+			props.globals.getNode("/instrumentation/clock/mode", 1).remove();
+			props.globals.getNode("/instrumentation/clock/powered", 1).remove();
+		</unload>
+	</nasal>
+	<overlay>
+		<instrumentation>
+			<clock>
+				<timer>
+					<elapsed type="int">0</elapsed>
+					<active type="bool">false</active>
+				</timer>
+				<mode type="string">timer</mode>
+				<powered type="bool">true</powered>
+			</clock>
+		</instrumentation>
+		<systems>
+			<electrical>
+				<consumers>
+					<clock-backlight>
+						<rated-volts>28</rated-volts>
+						<rated-amps>0.05</rated-amps>
+					</clock-backlight>
+					<clock>
+						<rated-volts>28</rated-volts>
+						<rated-amps>0.01</rated-amps>
+					</clock>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+</PropertyList>

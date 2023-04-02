@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>35-380004-1</part-number>
+	<brand>Wakmann</brand>
+	<type>8-Day clock</type>
+	<data-source></data-source>
+	<nasal>
+		<load>
+			print("Wakmann Clock loaded !");
+			aircraft.data.add("/instrumentation/clock/windup-norm")
+		</load>
+		<unload>
+			print("Wakmann Clock unloaded !");
+			aircraft.data.remove("/instrumentation/clock/windup-norm");
+			props.globals.getNode("/instrumentation/clock/rate", 1).remove();
+			props.globals.getNode("/instrumentation/clock/indicated-hours", 1).remove();
+			props.globals.getNode("/instrumentation/clock/indicated-minutes", 1).remove();
+			props.globals.getNode("/instrumentation/clock/indicated-seconds", 1).remove();
+			props.globals.getNode("/instrumentation/clock/internal-seconds", 1).remove();
+			props.globals.getNode("/instrumentation/clock/windup-norm", 1).remove();
+		</unload>
+	</nasal>
+	<overlay>
+		<instrumentation>
+			<clock>
+				<internal-seconds type="double">-1</internal-seconds>
+			</clock>
+		</instrumentation>
+	</overlay>
+	<persistent-overlay>
+		<instrumentation>
+			<clock>
+				<windup-norm type="double">1</windup-norm>
+			</clock>
+		</instrumentation>
+	</persistent-overlay>
+</PropertyList>

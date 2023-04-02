@@ -205,55 +205,46 @@
 	</filter>
 	
 	<filter>
-		<name>Zero clock rate due to day jump</name>
-		<type>derivative</type>
-		<input>/sim/time/utc/day</input>
-		<output>
-			<property>clock/day-jump-zero-rate</property>
-			<abs type="bool">true</abs>
-			<min>0</min>
-			<max>1</max>
-		</output>
-	</filter>
-	<filter>
-		<name>Warp rate</name>
-		<type>derivative</type>
+		<name>Wakmann 8-Day windup-clock rate</name>
+		<type>gain</type>
 		<enable>
 			<condition>
-				<not>
-					<property>instrumentation/clock/day-jump-zero-rate</property>
-				</not>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>35-380004-1</value>
+				</equals>
 			</condition>
 		</enable>
-		<input>/sim/time/warp</input>
-		<output>/sim/time/warp-rate</output>
-		<filter-time>1</filter-time>
-	</filter>
-	<filter>
-		<name>Clock rate</name>
-		<type>gain</type>
-		<input>
-			<expression>
-				<sum>
-					<product>
-						<property>/sim/time/delta-sec</property>
-						<property>/sim/speed-up</property>
-					</product>
-					<property>/sim/time/warp-rate</property>
-				</sum>
-			</expression>
-		</input>
+		<gain>/sim/time/delta-sec</gain>
+		<input>/sim/time/rate-per-frame</input>
 		<output>clock/rate</output>
 	</filter>
 	<filter>
-		<name>Clock internal seconds</name>
+		<name>Wakmann 8-Day windup-clock internal seconds</name>
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>instrumentation/clock/serviceable</property>
-				<property>instrumentation/clock/windup-norm</property>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>35-380004-1</value>
+				</equals>
+				<property>/instrumentation/clock/serviceable</property>
+				<property>/instrumentation/clock/windup-norm</property>
 			</condition>
 		</enable>
+		<input>
+			<condition>
+				<equals>
+					<property>clock/internal-seconds</property>
+					<value>-1</value>
+				</equals>
+				<not-equals>
+					<property>/sim/time/local-day-seconds</property>
+					<value>0</value>
+				</not-equals>
+			</condition>
+			<property>/sim/time/local-day-seconds</property>
+		</input>
 		<input>
 			<expression>
 				<sum>
@@ -281,12 +272,16 @@
 		</output>
 	</filter>
 	<filter>
-		<name>Clock seconds</name>
+		<name>Wakmann 8-Day windup-clock seconds</name>
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>instrumentation/clock/serviceable</property>
-				<property>instrumentation/clock/windup-norm</property>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>35-380004-1</value>
+				</equals>
+				<property>/instrumentation/clock/serviceable</property>
+				<property>/instrumentation/clock/windup-norm</property>
 			</condition>
 		</enable>
 		<input>
@@ -300,12 +295,16 @@
 		<output>clock/indicated-seconds</output>
 	</filter>
 	<filter>
-		<name>Clock minutes</name>
+		<name>Wakmann 8-Day windup-clock minutes</name>
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>instrumentation/clock/serviceable</property>
-				<property>instrumentation/clock/windup-norm</property>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>35-380004-1</value>
+				</equals>
+				<property>/instrumentation/clock/serviceable</property>
+				<property>/instrumentation/clock/windup-norm</property>
 			</condition>
 		</enable>
 		<input>
@@ -322,12 +321,16 @@
 		<output>clock/indicated-minutes</output>
 	</filter>
 	<filter>
-		<name>Clock hours</name>
+		<name>Wakmann 8-Day windup-clock hours</name>
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>instrumentation/clock/serviceable</property>
-				<property>instrumentation/clock/windup-norm</property>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>35-380004-1</value>
+				</equals>
+				<property>/instrumentation/clock/serviceable</property>
+				<property>/instrumentation/clock/windup-norm</property>
 			</condition>
 		</enable>
 		<input>
@@ -344,12 +347,16 @@
 		<output>clock/indicated-hours</output>
 	</filter>
 	<filter>
-		<name>Clock windup</name>
+		<name>Wakmann 8-Day windup-clock windup</name>
 		<type>gain</type>
 		<enable>
 			<condition>
-				<property>instrumentation/clock/serviceable</property>
-				<property>instrumentation/clock/windup-norm</property>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>35-380004-1</value>
+				</equals>
+				<property>/instrumentation/clock/serviceable</property>
+				<property>/instrumentation/clock/windup-norm</property>
 			</condition>
 		</enable>
 		<input>

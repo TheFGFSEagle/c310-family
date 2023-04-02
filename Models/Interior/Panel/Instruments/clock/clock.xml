@@ -10,7 +10,7 @@
 		</axis>
 		<expression>
 			<product>
-				<property>clock/indicated-hours</property>
+				<property>instrumentation/clock/indicated-hours</property>
 				<value>30</value>
 			</product>
 		</expression>
@@ -24,7 +24,7 @@
 		</axis>
 		<expression>
 			<product>
-				<property>clock/indicated-minutes</property>
+				<property>instrumentation/clock/indicated-minutes</property>
 				<value>6</value>
 			</product>
 		</expression>
@@ -40,7 +40,7 @@
 			<product>
 				<floor>
 					<sum>
-						<property>clock/indicated-seconds</property>
+						<property>instrumentation/clock/indicated-seconds</property>
 						<value>0.5</value>
 					</sum>
 				</floor>
