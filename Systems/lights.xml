@@ -293,4 +293,70 @@
 		</input>
 		<output>/instrumentation/clock/backlight-norm</output>
 	</filter>
+	
+	<filter>
+		<name>Left UV instrument light intensity</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>/systems/electrical/consumers/uv-instrument-light[0]/amps</property>
+					<property>/systems/electrical/consumers/uv-instrument-light[0]/rated-amps</property>
+				</div>
+			</expression>
+		</input>
+		<output>/sim/model/lights/uv-instrument[0]/brightness-norm</output>
+	</filter>
+	<filter>
+		<name>Right UV instrument light intensity</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>/systems/electrical/consumers/uv-instrument-light[1]/amps</property>
+					<property>/systems/electrical/consumers/uv-instrument-light[1]/rated-amps</property>
+				</div>
+			</expression>
+		</input>
+		<output>/sim/model/lights/uv-instrument[1]/brightness-norm</output>
+	</filter>
+	<filter>
+		<name>Red instrument light intensity</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>/systems/electrical/consumers/red-instrument-light/amps</property>
+					<property>/systems/electrical/consumers/red-instrument-light/rated-amps</property>
+				</div>
+			</expression>
+		</input>
+		<output>/sim/model/lights/red-instrument/brightness-norm</output>
+	</filter>
+	<filter>
+		<name>Front dome light intensity</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>/systems/electrical/consumers/front-dome-light/amps</property>
+					<property>/systems/electrical/consumers/front-dome-light/rated-amps</property>
+				</div>
+			</expression>
+		</input>
+		<output>/sim/model/lights/front-dome/brightness-norm</output>
+	</filter>
+	<filter>
+		<name>Rear dome light intensity</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>/systems/electrical/consumers/rear-dome-light/amps</property>
+					<property>/systems/electrical/consumers/rear-dome-light/rated-amps</property>
+				</div>
+			</expression>
+		</input>
+		<output>/sim/model/lights/rear-dome/brightness-norm</output>
+	</filter>
 </PropertyList>

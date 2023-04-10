@@ -3,6 +3,32 @@
 	<path>fuel-quantity.ac</path>
 	
 	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>LeftNeedle</object-name>
+		<object-name>RightNeedle</object-name>
+		<emission>
+			<red>0.95</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>
+				<expression>
+					<sum>
+						<product>
+							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+							<value>0.34</value>
+						</product>
+						<product>
+							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+							<value>0.66</value>
+						</product>
+					</sum>
+				</expression>
+			</factor>
+		</emission>
+	</animation>
+	
+	<animation>
 		<type>rotate</type>
 		<object-name>LeftNeedle</object-name>
 		<axis>

@@ -3,6 +3,32 @@
 	<path>dg.ac</path>
 	
 	<animation>
+		<type>material</type>
+		<object-name>Scale</object-name>
+		<object-name>CagedFlag</object-name>
+		<object-name>Needle</object-name>
+		<emission>
+			<red>0.95</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>
+				<expression>
+					<sum>
+						<product>
+							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+							<value>0.6</value>
+						</product>
+						<product>
+							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+							<value>0.4</value>
+						</product>
+					</sum>
+				</expression>
+			</factor>
+		</emission>
+	</animation>
+	
+	<animation>
 		<type>rotate</type>
 		<object-name>Scale</object-name>
 		<axis>

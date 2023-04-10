@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>AN3125-1</part-number>
+	<brand></brand>
+	<type>UV instrument light</type>
+	<data-source>https://www.wbparts.com/rfq/6240-00-178-9935.html</data-source>
+	<nasal>
+		<load>
+			aircraft.data.add("/controls/lighting/uv-instrument-norm");
+		</load>
+		<unload>
+			aircraft.data.remove("/controls/lighting/uv-instrument-norm");
+		</unload>
+	</nasal>
+	<overlay>
+		<controls>
+			<lighting>
+				<uv-instrument-starter-button-pressed type="bool" n="0">false</uv-instrument-starter-button-pressed>
+				<uv-instrument-starter-button-pressed type="bool" n="1">false</uv-instrument-starter-button-pressed>
+			</lighting>
+		</controls>
+		<systems>
+			<electrical>
+				<consumers>
+					<uv-instrument-light n="0">
+						<active type="bool">false</active>
+						<rated-volts>24</rated-volts>
+						<rated-amps>0.166</rated-amps>
+					</uv-instrument-light>
+					<uv-instrument-light n="1">
+						<active type="bool">false</active>
+						<rated-volts>24</rated-volts>
+						<rated-amps>0.166</rated-amps>
+					</uv-instrument-light>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+	<persistent-overlay>
+		<controls>
+			<lighting>
+				<uv-instrument-norm type="float">0</uv-instrument-norm>
+			</lighting>
+		</controls>
+	</persistent-overlay>
+</PropertyList>

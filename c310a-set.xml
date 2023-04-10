@@ -365,6 +365,7 @@
 		</circuit-breakers>
 		<lighting>
 			<red-instrument-norm type="float">0</red-instrument-norm>
+			<uv-instrument-norm type="float">0</uv-instrument-norm>
 			<landing-light type="int">0</landing-light>
 			<landing-light type="int">0</landing-light>
 		</lighting>

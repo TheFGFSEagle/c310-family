@@ -544,6 +544,189 @@
 		<output>consumers/landing-light[0]/amps</output>
 	</filter>
 	
+	<logic>
+		<name>Left UV instrument light active</name>
+		<input>
+			<or>
+				<and>
+					<property>/systems/electrical/consumers/uv-instrument-light[0]/active</property>
+					<property>/systems/electrical/consumers/uv-instrument-light[0]/volts</property>
+				</and>
+				<and>
+					<property>/controls/lighting/uv-instrument-starter-button-pressed[0]</property>
+					<!-- To start the UV lights, the dimming rheostat needs to be turned to full intensity -->
+					<greater-than>
+						<property>/systems/electrical/consumers/uv-instrument-light[0]/volts</property>
+						<value>20</value>
+					</greater-than>
+				</and>
+			</or>
+		</input>
+		<output>/systems/electrical/consumers/uv-instrument-light[0]/active</output>
+	</logic>
+	<logic>
+		<name>Right UV instrument light active</name>
+		<input>
+			<or>
+				<and>
+					<property>/systems/electrical/consumers/uv-instrument-light[1]/active</property>
+					<property>/systems/electrical/consumers/uv-instrument-light[1]/volts</property>
+				</and>
+				<and>
+					<property>/controls/lighting/uv-instrument-starter-button-pressed[1]</property>
+					<!-- To start the UV lights, the dimming rheostat needs to be turned to full intensity -->
+					<greater-than>
+						<property>/systems/electrical/consumers/uv-instrument-light[1]/volts</property>
+						<value>20</value>
+					</greater-than>
+				</and>
+			</or>
+		</input>
+		<output>/systems/electrical/consumers/uv-instrument-light[1]/active</output>
+	</logic>
+	
+	<filter>
+		<name>UV instrument light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/uv-inst-lights-rear-dome-light/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/uv-instrument-norm</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/uv-instrument-light[0]/volts</output>
+		<output>consumers/uv-instrument-light[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Left UV instrument light amps</name>
+		<type>gain</type>
+		<gain>/systems/electrical/consumers/uv-instrument-light[0]/active</gain>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/uv-instrument-light[0]/volts</property>
+					<div>
+						<property>consumers/uv-instrument-light[0]/rated-volts</property>
+						<property>consumers/uv-instrument-light[0]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/uv-instrument-light[0]/amps</output>
+	</filter>
+	<filter>
+		<name>Right UV instrument light amps</name>
+		<type>gain</type>
+		<gain>/systems/electrical/consumers/uv-instrument-light[1]/active</gain>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/uv-instrument-light[1]/volts</property>
+					<div>
+						<property>consumers/uv-instrument-light[1]/rated-volts</property>
+						<property>consumers/uv-instrument-light[1]/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/uv-instrument-light[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Red instrument light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/red-inst-front-dome-baggage-light/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/red-instrument-norm</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/red-instrument-light[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Red instrument light amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/red-instrument-light/volts</property>
+					<div>
+						<property>consumers/red-instrument-light/rated-volts</property>
+						<property>consumers/red-instrument-light/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/red-instrument-light/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Front dome light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/red-inst-front-dome-baggage-light/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/front-dome</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/front-dome-light/volts</output>
+	</filter>
+	<filter>
+		<name>Front dome light amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/front-dome-light/volts</property>
+					<div>
+						<property>consumers/front-dome-light/rated-volts</property>
+						<property>consumers/front-dome-light/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/front-dome-light/amps</output>
+	</filter>
+	<filter>
+		<name>Rear dome light volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/uv-inst-lights-rear-dome-light/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/rear-dome</property>
+				<min>0</min>
+				<max>1</max>
+			</scale>
+		</input>
+		<output>consumers/rear-dome-light/volts</output>
+	</filter>
+	<filter>
+		<name>Rear dome light amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/rear-dome-light/volts</property>
+					<div>
+						<property>consumers/rear-dome-light/rated-volts</property>
+						<property>consumers/rear-dome-light/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/rear-dome-light/amps</output>
+	</filter>
+	
 	<filter>
 		<name>Left landing light motor volts</name>
 		<type>gain</type>
@@ -861,8 +1044,8 @@
 							<dep>1</dep>
 						</entry>
 						<entry>
-							<ind>500</ind>
-							<dep>0.5</dep>
+							<ind>800</ind>
+							<dep>0</dep>
 						</entry>
 					</table>
 				</product>
@@ -911,8 +1094,8 @@
 							<dep>1</dep>
 						</entry>
 						<entry>
-							<ind>500</ind>
-							<dep>0.5</dep>
+							<ind>800</ind>
+							<dep>0</dep>
 						</entry>
 					</table>
 				</product>
@@ -1003,6 +1186,11 @@
 					<property>consumers/landing-light-motor[0]/amps</property>
 					<property>consumers/landing-light-motor[1]/amps</property>
 					<property>consumers/rotating-beacon/amps</property>
+					<property>consumers/red-instrument-light/amps</property>
+					<property>consumers/uv-instrument-light[0]/amps</property>
+					<property>consumers/uv-instrument-light[1]/amps</property>
+					<property>consumers/front-dome-light/amps</property>
+					<property>consumers/rear-dome-light/amps</property>
 					<property>consumers/clock-backlight/amps</property>
 					<property>consumers/clock/amps</property>
 					<property>consumers/flaps-motor/amps</property>

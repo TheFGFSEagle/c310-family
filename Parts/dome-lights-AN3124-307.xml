@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>AN3124-307</part-number>
+	<brand></brand>
+	<type>Dome lights</type>
+	<data-source>https://www.wbparts.com/rfq/6240-00-155-7784.html</data-source>
+	<overlay>
+		<systems>
+			<electrical>
+				<consumers>
+					<front-dome-light>
+						<rated-volts>28</rated-volts>
+						<rated-amps>0.67</rated-amps>
+					</front-dome-light>
+					<rear-dome-light>
+						<rated-volts>28</rated-volts>
+						<rated-amps>0.67</rated-amps>
+					</rear-dome-light>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+	<persistent-overlay>
+		<controls>
+			<lighting>
+				<front-dome type="bool">false</front-dome>
+				<rear-dome type="bool">false</rear-dome>
+			</lighting>
+		</controls>
+	</persistent-overlay>
+</PropertyList>
