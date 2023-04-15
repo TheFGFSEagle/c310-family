@@ -373,4 +373,17 @@
 		</input>
 		<output>clock/windup-norm</output>
 	</filter>
+	
+	<filter>
+		<name>Ammeter amps</name>
+		<type>noise-spike</type>
+		<max-rate-of-change>30</max-rate-of-change>
+		<enable>
+			<condition>
+				<property>/instrumentation/ammeter/serviceable</property>
+			</condition>
+		</enable>
+		<input>/systems/electrical/amps</input>
+		<output>ammeter/indicated-battery-amps</output>
+	</filter>
 </PropertyList>
