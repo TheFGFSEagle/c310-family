@@ -22,6 +22,7 @@
 				<max>1</max>
 			</range>
 			<output>fcs/elevator-trim-tab-pos-norm</output>
+			<output>/surface-positions/elevator-trim-tab-norm</output>
 		</aerosurface_scale>
 		
 		<fcs_function>
@@ -48,7 +49,7 @@
 			<output>fcs/elevator-pos-deg</output>
 			<output>/surface-positions/elevator-deg</output>
 		</fcs_function>
-
+		
 		<aerosurface_scale>
 			<input>fcs/elevator-pos-deg</input>
 			<domain>
@@ -60,9 +61,10 @@
 				<max>1</max>
 			</range>
 			<output>fcs/elevator-pos-norm</output>
+			<output>/surface-positions/left-aileron-norm</output>
 		</aerosurface_scale>
 	</channel>
-
+	
 	<channel name="Ailerons">
 		<aerosurface_scale>
 			<input>fcs/roll-trim-cmd-norm</input>
@@ -85,6 +87,7 @@
 				<max>1</max>
 			</range>
 			<output>fcs/aileron-trim-tab-pos-norm</output>
+			<output>/surface-positions/aileron-trim-tab-norm</output>
 		</aerosurface_scale>
 		
 		<fcs_function>
@@ -140,6 +143,7 @@
 				<max>1</max>
 			</range>
 			<output>fcs/left-aileron-pos-norm</output>
+			<output>/surface-positions/left-aileron-norm</output>
 		</aerosurface_scale>
 		
 		<aerosurface_scale>
@@ -153,6 +157,7 @@
 				<max>1</max>
 			</range>
 			<output>fcs/right-aileron-pos-norm</output>
+			<output>/surface-positions/right-aileron-norm</output>
 		</aerosurface_scale>
 		
 		<fcs_function>
@@ -166,6 +171,7 @@
 				</quotient>
 			</function>
 			<output>fcs/aileron-pos-norm</output>
+			<output>/surface-positions/left-aileron-norm</output>
 		</fcs_function>
 		
 		<fcs_function>
@@ -194,7 +200,7 @@
 			<output>fcs/aileron-pos-rad</output>
 		</fcs_function>
 	</channel>
-
+	
 	<channel name="Rudder">
 		<aerosurface_scale>
 			<input>-fcs/yaw-trim-cmd-norm</input>
@@ -217,6 +223,7 @@
 				<max>1</max>
 			</range>
 			<output>fcs/rudder-trim-tab-pos-norm</output>
+			<output>/surface-positions/rudder-trim-tab-norm</output>
 		</aerosurface_scale>
 		
 		<fcs_function>
@@ -239,7 +246,7 @@
 			<output>fcs/rudder-pos-deg</output>
 			<output>/surface-positions/rudder-deg</output>
 		</fcs_function>
-
+		
 		<aerosurface_scale>
 			<input>fcs/rudder-pos-deg</input>
 			<domain>
@@ -251,6 +258,7 @@
 				<max>1</max>
 			</range>
 			<output>fcs/rudder-pos-norm</output>
+			<output>/surface-positions/rudder-norm</output>
 		</aerosurface_scale>
 	</channel>
 </flight_control>
