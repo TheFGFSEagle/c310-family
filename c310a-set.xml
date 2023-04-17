@@ -239,7 +239,6 @@
 	<controls>
 		<flight>
 			<flaps type="double">0.5</flaps>
-			<auto-coordination-factor>1</auto-coordination-factor>
 		</flight>
 		<circuit-breakers>
 			<adf n="0">
@@ -453,6 +452,9 @@
 		<manifold-pressure>
 			<serviceable type="bool">true</serviceable>
 		</manifold-pressure>
+		<oat>
+			<serviceable type="bool">true</serviceable>
+		</oat>
 		<rpm>
 			<serviceable type="bool">true</serviceable>
 		</rpm>

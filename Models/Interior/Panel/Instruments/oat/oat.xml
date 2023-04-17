@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<path>ammeter.ac</path>
+	<path>oat.ac</path>
 	
 	<animation>
 		<type>material</type>
@@ -15,11 +15,11 @@
 					<sum>
 						<product>
 							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
-							<value>0.3</value>
+							<value>0.34</value>
 						</product>
 						<product>
 							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
-							<value>0.7</value>
+							<value>0.66</value>
 						</product>
 					</sum>
 				</expression>
@@ -33,15 +33,15 @@
 		<axis>
 			<object-name>NeedleAxis</object-name>
 		</axis>
-		<property>instrumentation/ammeter/indicated-battery-amps</property>
+		<property>instrumentation/oat/indicated-outside-air-temperature-degf</property>
 		<interpolation>
 			<entry>
-				<ind>-60</ind>
-				<dep>36</dep>
+				<ind>-50</ind>
+				<dep>0</dep>
 			</entry>
 			<entry>
-				<ind>60</ind>
-				<dep>-36</dep>
+				<ind>120</ind>
+				<dep>110</dep>
 			</entry>
 		</interpolation>
 	</animation>

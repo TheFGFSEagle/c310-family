@@ -1,0 +1,2244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg164"
+   sodipodi:docname="oat.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs168">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8524"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8518"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8512"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8506"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8500"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8494"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8488"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8482"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8476"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8470"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8464"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8458"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8452"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8446"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8440"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8434"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8428"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8422"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8416"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8410"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8404"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8398"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8392"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8386"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8380"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8374"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8362"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8356"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8350"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8344"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8338"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8332"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8326"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8320"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8314"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8308"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8302"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8296"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect7503"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect7313"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect7307"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect7295"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect7117"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect6941"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect6935"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect6763"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect6745"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5290"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect5044"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4849"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4843"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4837"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4831"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4825"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4819"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4813"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4807"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4801"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4795"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4789"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4783"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4777"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4771"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4765"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4759"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4434"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4224"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4095"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4089"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4083"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4077"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4029"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4023"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4017"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4011"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4005"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3999"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3993"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3987"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3981"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3860"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3759"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3753"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3747"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1383"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview166"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.62073453"
+     inkscape:cx="345.55835"
+     inkscape:cy="318.97694"
+     inkscape:window-width="1323"
+     inkscape:window-height="701"
+     inkscape:window-x="33"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg164"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true" />
+  <desc
+     id="desc2">oat.blend, (Blender 2.83.0)</desc>
+  <g
+     id="Face"
+     style="fill:#000000;stroke:#000000"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="480.996,216.327 484.467,256.000 512.000,256.000 508.111,211.546 "
+       id="polygon6"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="470.688,177.860 480.996,216.327 508.111,211.546 496.561,168.443 "
+       id="polygon8"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="453.858,141.767 470.688,177.860 496.561,168.443 477.702,128.000 "
+       id="polygon10"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="431.016,109.144 453.858,141.767 477.702,128.000 452.107,91.446 "
+       id="polygon12"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="402.856,80.984 431.016,109.144 452.107,91.446 420.554,59.893 "
+       id="polygon14"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="370.233,58.142 402.856,80.984 420.554,59.893 384.000,34.297 "
+       id="polygon16"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="334.140,41.312 370.233,58.142 384.000,34.297 343.557,15.439 "
+       id="polygon18"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="295.673,31.004 334.140,41.312 343.557,15.439 300.454,3.889 "
+       id="polygon20"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="256.000,27.533 295.673,31.004 300.454,3.889 256.000,0.000 "
+       id="polygon22"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="216.327,31.004 256.000,27.533 256.000,0.000 211.546,3.889 "
+       id="polygon24"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="177.860,41.312 216.327,31.004 211.546,3.889 168.443,15.439 "
+       id="polygon26"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="141.767,58.142 177.860,41.312 168.443,15.439 128.000,34.297 "
+       id="polygon28"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="109.145,80.984 141.767,58.142 128.000,34.297 91.446,59.893 "
+       id="polygon30"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="80.984,109.144 109.145,80.984 91.446,59.893 59.893,91.446 "
+       id="polygon32"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="58.142,141.767 80.984,109.144 59.893,91.446 34.298,128.000 "
+       id="polygon34"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="41.312,177.860 58.142,141.767 34.298,128.000 15.439,168.443 "
+       id="polygon36"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="31.004,216.327 41.312,177.860 15.439,168.443 3.889,211.546 "
+       id="polygon38"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="27.533,256.000 31.004,216.327 3.889,211.546 0.000,256.000 "
+       id="polygon40"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="31.004,295.673 27.533,256.000 0.000,256.000 3.889,300.454 "
+       id="polygon42"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="41.312,334.140 31.004,295.673 3.889,300.454 15.439,343.557 "
+       id="polygon44"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="58.142,370.233 41.312,334.140 15.439,343.557 34.297,384.000 "
+       id="polygon46"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="80.984,402.855 58.142,370.233 34.297,384.000 59.893,420.554 "
+       id="polygon48"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="109.144,431.016 80.984,402.855 59.893,420.554 91.446,452.107 "
+       id="polygon50"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="141.767,453.858 109.144,431.016 91.446,452.107 128.000,477.702 "
+       id="polygon52"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="177.860,470.688 141.767,453.858 128.000,477.702 168.443,496.561 "
+       id="polygon54"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="216.327,480.996 177.860,470.688 168.443,496.561 211.546,508.111 "
+       id="polygon56"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="256.000,484.467 216.327,480.996 211.546,508.111 256.000,512.000 "
+       id="polygon58"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="295.673,480.996 256.000,484.467 256.000,512.000 300.454,508.111 "
+       id="polygon60"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="334.140,470.688 295.673,480.996 300.454,508.111 343.557,496.561 "
+       id="polygon62"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="370.233,453.858 334.140,470.688 343.557,496.561 384.000,477.703 "
+       id="polygon64"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="402.855,431.016 370.233,453.858 384.000,477.703 420.554,452.107 "
+       id="polygon66"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="431.016,402.856 402.855,431.016 420.554,452.107 452.107,420.554 "
+       id="polygon68"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="453.858,370.233 431.016,402.856 452.107,420.554 477.702,384.000 "
+       id="polygon70"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="470.688,334.140 453.858,370.233 477.702,384.000 496.561,343.557 "
+       id="polygon72"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="480.996,295.673 470.688,334.140 496.561,343.557 508.111,300.454 "
+       id="polygon74"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="484.467,256.000 480.996,295.673 508.111,300.454 512.000,256.000 "
+       id="polygon76"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="146.286,314.907 179.844,256.000 332.155,256.000 365.714,314.907 475.842,314.907 480.996,295.673 484.467,256.000 480.996,216.327 470.688,177.860 453.858,141.767 431.016,109.144 402.856,80.984 370.233,58.142 334.140,41.312 295.673,31.004 256.000,27.533 216.327,31.004 177.860,41.312 141.767,58.142 109.145,80.984 80.984,109.144 58.142,141.767 41.312,177.860 31.004,216.327 27.533,256.000 31.004,295.673 36.158,314.906 "
+       id="polygon148"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="365.714,314.907 332.155,256.000 179.844,256.000 146.286,314.907 36.158,314.906 41.312,334.140 58.142,370.233 80.984,402.855 109.144,431.016 141.767,453.858 177.860,470.688 216.327,480.996 256.000,484.467 295.673,480.996 334.140,470.688 370.233,453.858 402.855,431.016 431.016,402.856 453.858,370.233 470.688,334.140 475.842,314.907 "
+       id="polygon152"
+       style="fill:#000000;stroke:#000000" />
+  </g>
+  <g
+     id="FaceWalls"
+     style="fill:#000000;stroke:#000000">
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="451.199,511.999 439.041,511.999 439.041,499.841 451.199,499.841 "
+       id="polygon4"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="451.199,499.839 439.041,499.839 439.041,487.681 451.199,487.681 "
+       id="polygon78"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="463.359,511.999 451.201,511.999 451.201,499.841 463.359,499.841 "
+       id="polygon80"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="463.359,499.839 451.201,499.839 451.201,487.681 463.359,487.681 "
+       id="polygon82"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="451.199,487.679 439.041,487.679 439.041,475.521 451.199,475.521 "
+       id="polygon84"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="475.519,511.999 463.361,511.999 463.361,499.841 475.519,499.841 "
+       id="polygon86"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="463.359,487.679 451.201,487.679 451.201,475.521 463.359,475.521 "
+       id="polygon88"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="475.519,499.839 463.361,499.839 463.361,487.681 475.519,487.681 "
+       id="polygon90"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="475.519,487.679 463.361,487.679 463.361,475.521 475.519,475.521 "
+       id="polygon92"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="451.199,475.519 439.041,475.519 439.041,463.361 451.199,463.361 "
+       id="polygon94"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="487.679,511.999 475.521,511.999 475.521,499.841 487.679,499.841 "
+       id="polygon96"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="463.359,475.519 451.201,475.519 451.201,463.361 463.359,463.361 "
+       id="polygon98"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="487.679,499.839 475.521,499.839 475.521,487.681 487.679,487.681 "
+       id="polygon100"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="475.519,475.519 463.361,475.519 463.361,463.361 475.519,463.361 "
+       id="polygon102"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="487.679,487.679 475.521,487.679 475.521,475.521 487.679,475.521 "
+       id="polygon104"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="487.679,475.519 475.521,475.519 475.521,463.361 487.679,463.361 "
+       id="polygon106"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="451.199,463.359 439.041,463.359 439.041,451.201 451.199,451.201 "
+       id="polygon108"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="499.839,511.999 487.681,511.999 487.681,499.841 499.839,499.841 "
+       id="polygon110"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="463.359,463.359 451.201,463.359 451.201,451.201 463.359,451.201 "
+       id="polygon112"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="499.839,487.681 487.681,487.681 487.681,492.892 493.760,492.892 493.760,499.839 499.839,499.839 "
+       id="polygon114"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="475.519,463.359 463.361,463.359 463.361,451.201 475.519,451.201 "
+       id="polygon116"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="499.839,487.679 487.681,487.679 487.681,475.521 499.839,475.521 "
+       id="polygon118"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="487.679,463.359 475.521,463.359 475.521,451.201 487.679,451.201 "
+       id="polygon120"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="499.839,475.519 487.681,475.519 487.681,463.361 499.839,463.361 "
+       id="polygon122"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="499.839,451.201 487.681,451.201 487.681,463.359 493.760,463.359 493.760,456.412 499.839,456.412 "
+       id="polygon124"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="451.199,451.199 439.041,451.199 439.041,439.041 451.199,439.041 "
+       id="polygon126"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="511.999,511.999 499.841,511.999 499.841,499.841 511.999,499.841 "
+       id="polygon128"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="463.359,451.199 451.201,451.199 451.201,439.041 463.359,439.041 "
+       id="polygon130"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="511.999,499.839 499.841,499.839 499.841,487.681 511.999,487.681 "
+       id="polygon132"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="475.519,451.199 463.361,451.199 463.361,439.041 475.519,439.041 "
+       id="polygon134"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="511.999,487.679 499.841,487.679 499.841,475.521 511.999,475.521 "
+       id="polygon136"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="487.679,451.199 475.521,451.199 475.521,439.041 487.679,439.041 "
+       id="polygon138"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="511.999,475.519 499.841,475.519 499.841,463.361 511.999,463.361 "
+       id="polygon140"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="499.839,451.199 487.681,451.199 487.681,439.041 499.839,439.041 "
+       id="polygon142"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="511.999,463.359 499.841,463.359 499.841,451.201 511.999,451.201 "
+       id="polygon144"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="511.999,451.199 499.841,451.199 499.841,439.041 511.999,439.041 "
+       id="polygon146"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="43.519,511.999 0.001,511.999 0.001,482.988 43.519,482.988 "
+       id="polygon150"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="43.519,482.986 0.001,482.986 0.001,453.974 43.519,453.974 "
+       id="polygon154"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="87.039,511.999 43.521,511.999 43.521,482.988 87.039,482.988 "
+       id="polygon156"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="87.039,482.986 43.521,482.986 43.521,453.974 87.039,453.974 "
+       id="polygon158"
+       style="fill:#000000;stroke:#000000" />
+    <polygon
+       stroke="black"
+       stroke-width="1"
+       fill="rgb(204, 204, 204)"
+       fill-opacity="1"
+       points="43.519,453.972 0.001,453.972 0.001,424.961 43.519,424.961 "
+       id="polygon160"
+       style="fill:#000000;stroke:#000000" />
+  </g>
+  <polygon
+     stroke="black"
+     stroke-width="1"
+     fill="rgb(204, 204, 204)"
+     fill-opacity="1"
+     points="347.765,13.139 512.000,26.278 512.000,0.000 "
+     id="Needle"
+     style="fill:#ffffff;stroke:#ffffff" />
+  <path
+     style="fill:none;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 79.297444,241.98553 58.818643,227.64612 v -48.75757"
+     id="path1381"
+     inkscape:path-effect="#path-effect1383"
+     inkscape:original-d="m 79.297444,241.98553 -20.478801,-14.33941 0,-48.75757"
+     sodipodi:nodetypes="ccc"
+     inkscape:transform-center-y="-130.89816"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="186.94196" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 163.31247,143.56033 9.62631,23.07237"
+     id="path3743"
+     inkscape:path-effect="#path-effect3747"
+     inkscape:original-d="m 163.31247,143.56033 c 8.92772,21.39537 0.70121,1.67808 9.62631,23.07237"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-210.61747"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="87.874379" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 296.58259,128.44562 -4.21482,24.64214"
+     id="path3749"
+     inkscape:path-effect="#path-effect3753"
+     inkscape:original-d="m 296.58259,128.44562 c -3.90754,22.85163 -0.30564,1.79282 -4.21482,24.64214"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-224.94729"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-38.475176" />
+  <path
+     style="fill:none;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 400.50582,205.55596 16.74739,-18.56138 v -27.62566"
+     id="path3755"
+     inkscape:path-effect="#path-effect3759"
+     inkscape:original-d="m 400.50582,205.55596 c 16.74639,-18.56238 16.74739,-18.56138 16.74739,-18.56138 v -27.62566"
+     sodipodi:nodetypes="ccc"
+     inkscape:transform-center-y="-169.43871"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-152.87951" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 75.635171,206.30335 18.732275,16.55602"
+     id="path3977"
+     inkscape:path-effect="#path-effect3981"
+     inkscape:original-d="m 75.635171,206.30335 c 17.371708,15.35218 1.36339,1.20366 18.732275,16.55602"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-151.13262"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="170.99869" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 94.749898,186.99178 16.747062,18.56167"
+     id="path3983"
+     inkscape:path-effect="#path-effect3987"
+     inkscape:original-d="m 94.749898,186.99178 c 15.530842,17.21217 1.219051,1.34965 16.747062,18.56167"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-169.44136"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="152.87657" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 115.91926,169.95748 14.54847,20.33081"
+     id="path3989"
+     inkscape:path-effect="#path-effect3993"
+     inkscape:original-d="m 115.91926,169.95748 c 13.49208,18.85284 1.05918,1.47844 14.54847,20.33081"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-185.59109"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="132.8065" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 138.87353,155.4175 12.16449,21.8409"
+     id="path3995"
+     inkscape:path-effect="#path-effect3999"
+     inkscape:original-d="m 138.87353,155.4175 c 11.2814,20.25329 0.88581,1.58839 12.16449,21.8409"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-199.37603"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="111.04422" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 188.94783,134.52742 6.96388,24.0105"
+     id="path4001"
+     inkscape:path-effect="#path-effect4005"
+     inkscape:original-d="m 188.94783,134.52742 c 6.4588,22.26544 0.50756,1.74644 6.96388,24.0105"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-219.18131"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="63.570225" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 215.42981,128.4435 4.21353,24.64237"
+     id="path4007"
+     inkscape:path-effect="#path-effect4011"
+     inkscape:original-d="m 215.42981,128.4435 c 3.90833,22.8515 0.30751,1.79252 4.21353,24.64237"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-224.9493"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="38.46342" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 242.42874,125.38287 1.40948,24.96024"
+     id="path4013"
+     inkscape:path-effect="#path-effect4017"
+     inkscape:original-d="m 242.42874,125.38287 c 1.30806,23.14639 0.10353,1.81576 1.40948,24.96024"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-227.85099"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="12.866515" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 269.60059,125.38453 -1.41252,24.96007"
+     id="path4019"
+     inkscape:path-effect="#path-effect4023"
+     inkscape:original-d="m 269.60059,125.38453 c -1.30888,23.14634 -0.10176,1.81586 -1.41252,24.96007"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-227.84941"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-12.894335" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 323.08038,134.5356 -6.96681,24.00966"
+     id="path4025"
+     inkscape:path-effect="#path-effect4029"
+     inkscape:original-d="m 323.08038,134.5356 c -6.45959,22.26522 -0.50586,1.74695 -6.96681,24.00966"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-219.17354"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-63.59698" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 348.70689,143.56841 -9.62832,23.07153"
+     id="path4073"
+     inkscape:path-effect="#path-effect4077"
+     inkscape:original-d="m 348.70689,143.56841 c -8.92774,21.39537 -0.69952,1.67881 -9.62832,23.07153"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-210.6098"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-87.892735" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 373.15213,155.43179 -12.16715,21.83943"
+     id="path4079"
+     inkscape:path-effect="#path-effect4083"
+     inkscape:original-d="m 373.15213,155.43179 c -11.28213,20.2529 -0.88427,1.58928 -12.16715,21.83943"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-199.36247"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-111.06856" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 396.10462,169.97457 -14.55094,20.32905"
+     id="path4085"
+     inkscape:path-effect="#path-effect4089"
+     inkscape:original-d="m 396.10462,169.97457 c -13.49276,18.85237 -1.05775,1.4795 -14.55094,20.32905"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-185.57488"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-132.82916" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 436.38428,206.32536 -18.7343,16.55374"
+     id="path4091"
+     inkscape:path-effect="#path-effect4095"
+     inkscape:original-d="m 436.38428,206.32536 c -17.37228,15.35157 -1.36223,1.20502 -18.7343,16.55374"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-151.11175"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-171.01713" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 453.1982,227.67018 432.71765,242.0071"
+     id="path4220"
+     inkscape:path-effect="#path-effect4224"
+     inkscape:original-d="m 453.1982,227.67018 c -18.99173,13.29591 -1.48935,1.04382 -20.48055,14.33692"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-130.87534"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-186.95793" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 74.779013,222.92778 11.782185,9.28333"
+     id="path4430"
+     inkscape:path-effect="#path-effect4434"
+     inkscape:original-d="m 74.779013,222.92778 c 18.210623,14.3471 -6.425634,-5.06409 11.782185,9.28333"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-138.14453"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="175.32988" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 92.025615,203.41381 102.6865,213.96585"
+     id="path4755"
+     inkscape:path-effect="#path-effect4759"
+     inkscape:original-d="m 92.025615,203.41381 c 16.477685,16.30804 -5.813972,-5.756 10.660885,10.55204"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-157.02414"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="158.64393" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 111.36157,185.96786 9.40375,11.6863"
+     id="path4761"
+     inkscape:path-effect="#path-effect4765"
+     inkscape:original-d="m 111.36157,185.96786 c 14.53478,18.06118 -5.12823,-6.37457 9.40375,11.6863"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-173.90296"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="139.93654" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 132.5405,170.81222 8.02679,12.67166"
+     id="path4767"
+     inkscape:path-effect="#path-effect4771"
+     inkscape:original-d="m 132.5405,170.81222 c 12.40668,19.58419 -4.37714,-6.91191 8.02679,12.67166"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-188.56592"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="119.44609" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 155.29254,158.14001 6.54756,13.49555"
+     id="path4773"
+     inkscape:path-effect="#path-effect4777"
+     inkscape:original-d="m 155.29254,158.14001 c 10.1205,20.85766 -3.57027,-7.36118 6.54756,13.49555"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-200.82619"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="97.433665" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 179.32779,148.1127 4.9849,14.14748"
+     id="path4779"
+     inkscape:path-effect="#path-effect4783"
+     inkscape:original-d="m 179.32779,148.1127 c 7.70536,21.86536 -2.71791,-7.71665 4.9849,14.14748"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-210.52754"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="74.179745" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 204.34,140.85805 3.35871,14.61915"
+     id="path4785"
+     inkscape:path-effect="#path-effect4789"
+     inkscape:original-d="m 204.34,140.85805 c 5.19203,22.59446 -1.83093,-7.97379 3.35871,14.61915"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-217.54636"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="49.98063" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 230.01046,136.46851 1.68973,14.90453"
+     id="path4791"
+     inkscape:path-effect="#path-effect4795"
+     inkscape:original-d="m 230.01046,136.46851 c 2.61255,23.03565 -0.92062,-8.12934 1.68973,14.90453"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-221.79321"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="25.14466" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 256.01207,135 -7.8e-4,15.00001"
+     id="path4797"
+     inkscape:path-effect="#path-effect4801"
+     inkscape:original-d="m 256.01207,135 c -2.2e-4,23.18333 0.001,-8.1813 -7.8e-4,15.00001"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-223.21398"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-0.011695" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 282.01353,136.47123 -1.69128,14.90436"
+     id="path4803"
+     inkscape:path-effect="#path-effect4807"
+     inkscape:original-d="m 282.01353,136.47123 c -2.61299,23.03561 0.92303,-8.12906 -1.69128,14.90436"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-221.79057"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-25.167905" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 307.68353,140.86346 -3.36023,14.6188"
+     id="path4809"
+     inkscape:path-effect="#path-effect4813"
+     inkscape:original-d="m 307.68353,140.86346 c -5.19247,22.59437 1.83329,-7.97324 -3.36023,14.6188"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-217.54112"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-50.00343" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 332.69498,148.12073 -4.98637,14.14696"
+     id="path4815"
+     inkscape:path-effect="#path-effect4819"
+     inkscape:original-d="m 332.69498,148.12073 c -7.70578,21.86523 2.72019,-7.71583 -4.98637,14.14696"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-210.51977"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-74.20181" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 356.72918,158.15056 -6.54896,13.49487"
+     id="path4821"
+     inkscape:path-effect="#path-effect4825"
+     inkscape:original-d="m 356.72918,158.15056 c -10.1209,20.85748 3.57244,-7.36011 -6.54896,13.49487"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-200.81598"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-97.454715" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 379.4799,170.82515 -8.02812,12.67083"
+     id="path4827"
+     inkscape:path-effect="#path-effect4831"
+     inkscape:original-d="m 379.4799,170.82515 c -12.40707,19.58397 4.37916,-6.9106 -8.02812,12.67083"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-188.55341"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-119.46585" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 400.65724,185.98301 -9.40498,11.68533"
+     id="path4833"
+     inkscape:path-effect="#path-effect4837"
+     inkscape:original-d="m 400.65724,185.98301 c -14.53514,18.06092 5.13009,-6.37304 -9.40498,11.68533"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-173.8883"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-139.95476" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 419.99137,203.43099 -10.662,10.55094"
+     id="path4839"
+     inkscape:path-effect="#path-effect4843"
+     inkscape:original-d="m 419.99137,203.43099 c -16.47801,16.30774 5.81565,-5.75428 -10.662,10.55094"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-157.00752"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-158.66038" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 437.23593,222.94677 -11.78317,9.28211"
+     id="path4845"
+     inkscape:path-effect="#path-effect4849"
+     inkscape:original-d="m 437.23593,222.94677 c -18.21092,14.34677 6.42711,-5.06219 -11.78317,9.28211"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-138.12616"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-175.34435" />
+  <path
+     style="fill:none;stroke:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 79.297444,241.98553 c 23.288426,-33.25933 56.169836,-59.71888 93.641336,-75.35284 37.4715,-15.63395 79.40803,-20.39015 119.42899,-13.54493 56.03775,9.58475 107.74687,42.34531 140.34988,88.91934"
+     id="path5042"
+     inkscape:path-effect="#path-effect5044"
+     inkscape:original-d="m 79.297444,241.98553 c 71.024446,-29.63159 142.047886,-59.26418 213.070326,-88.89777 71.02244,-29.63359 93.56759,59.28056 140.34988,88.91934" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 113.10772,239.40633 94.374929,222.8509"
+     id="path5286"
+     inkscape:path-effect="#path-effect5290"
+     inkscape:original-d="M 113.10772,239.40633 C 130.47863,254.75945 77.006562,207.49795 94.374929,222.8509"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-134.58537"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="152.25866" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 174.70346,193.1953 164.04445,170.58147"
+     id="path6741"
+     inkscape:path-effect="#path-effect6745"
+     inkscape:original-d="m 174.70346,193.1953 c 9.88359,20.97096 -20.54033,-43.58364 -10.65901,-22.61383"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-183.8256"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="86.626029" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 249.55252,175.10902 248.70497,150.1234"
+     id="path6759"
+     inkscape:path-effect="#path-effect6763"
+     inkscape:original-d="m 249.55252,175.10902 c 0.785,23.17003 -1.63093,-48.1537 -0.84755,-24.98562"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-203.09778"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="6.871239" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 325.45267,188.09601 9.10209,-23.28415"
+     id="path6931"
+     inkscape:path-effect="#path-effect6935"
+     inkscape:original-d="m 325.45267,188.09601 c -8.44156,21.59181 17.54436,-44.87354 9.10209,-23.28415"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-189.26005"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-74.003731" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 390.03034,230.03906 407.5982,212.25227"
+     id="path6937"
+     inkscape:path-effect="#path-effect6941"
+     inkscape:original-d="m 390.03034,230.03906 c -16.29194,16.4936 33.85949,-34.27789 17.56786,-17.78679"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-144.56832"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-142.81429" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 141.54904,213.15972 126.54419,193.16336"
+     id="path7113"
+     inkscape:path-effect="#path-effect7117"
+     inkscape:original-d="m 141.54904,213.15972 c 13.91374,18.54386 -28.91612,-38.53954 -15.00485,-19.99636"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-162.55244"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="121.95337" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 211.20567,180.33521 -5.87423,-24.30008"
+     id="path7291"
+     inkscape:path-effect="#path-effect7295"
+     inkscape:original-d="m 211.20567,180.33521 c 5.44644,22.53449 -11.31867,-46.83296 -5.87423,-24.30008"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-197.52881"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="47.73143" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 288.16486,177.73196 4.21405,-24.64228"
+     id="path7303"
+     inkscape:path-effect="#path-effect7307"
+     inkscape:original-d="m 288.16486,177.73196 c -3.90875,22.85144 8.12401,-47.49146 4.21405,-24.64228"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-200.30316"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-34.2719" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 359.88039,205.77436 13.61533,-20.96718"
+     id="path7309"
+     inkscape:path-effect="#path-effect7313"
+     inkscape:original-d="m 359.88039,205.77436 c -12.62672,19.44306 26.24227,-40.40769 13.61533,-20.96718"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-170.4232"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-110.68807" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 111.13263,226.79116 -10.8264,-10.38214"
+     id="path7499"
+     inkscape:path-effect="#path-effect7503"
+     inkscape:original-d="m 111.13263,226.79116 c 16.73266,16.04634 -27.556357,-26.42838 -10.8264,-10.38214"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-144.11389"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="150.28055" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 116.89778,221.01887 106.50222,210.20534"
+     id="path8292"
+     inkscape:path-effect="#path-effect8296"
+     inkscape:original-d="m 116.89778,221.01887 c 16.06675,16.71305 -26.459614,-27.52638 -10.39556,-10.81353"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-150.10188"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="144.29998" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 122.89274,215.48563 112.9452,204.25858"
+     id="path8298"
+     inkscape:path-effect="#path-effect8302"
+     inkscape:original-d="m 122.89274,215.48563 c 15.3743,17.35215 -25.319157,-28.5789 -9.94754,-11.22705"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-155.84188"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="138.08101" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 129.1076,210.20058 -9.48308,-11.62202"
+     id="path8304"
+     inkscape:path-effect="#path-effect8308"
+     inkscape:original-d="m 129.1076,210.20058 c 14.65645,17.96259 -24.13687,-29.5842 -9.48308,-11.62202"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-161.32441"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="131.63392" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 142.15562,200.40955 -8.50796,-12.35374"
+     id="path8310"
+     inkscape:path-effect="#path-effect8314"
+     inkscape:original-d="m 142.15562,200.40955 c 13.14934,19.09348 -21.65467,-31.4466 -8.50796,-12.35374"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-171.48129"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="118.09834" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 148.96722,195.91975 -7.9989,-12.68928"
+     id="path8316"
+     inkscape:path-effect="#path-effect8320"
+     inkscape:original-d="m 148.96722,195.91975 c 12.36257,19.61206 -20.35887,-32.30062 -7.9989,-12.68928"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-176.13886"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="111.03221" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 155.95565,191.71046 -7.47663,-13.00385"
+     id="path8322"
+     inkscape:path-effect="#path-effect8326"
+     inkscape:original-d="m 155.95565,191.71046 c 11.55537,20.09825 -19.02943,-33.10127 -7.47663,-13.00385"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-180.50544"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="103.78265" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 163.10936,187.78864 156.16735,174.4917"
+     id="path8328"
+     inkscape:path-effect="#path-effect8332"
+     inkscape:original-d="m 163.10936,187.78864 c 10.72908,20.55123 -17.66855,-33.84724 -6.94201,-13.29694"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-184.57381"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="96.36163" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 177.86511,180.83284 -5.83927,-13.81676"
+     id="path8334"
+     inkscape:path-effect="#path-effect8338"
+     inkscape:original-d="m 177.86511,180.83284 c 9.02471,21.35464 -14.86153,-35.17028 -5.83927,-13.81676"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-191.78952"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="81.05451" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 185.44276,177.81035 180.1698,163.76771"
+     id="path8340"
+     inkscape:path-effect="#path-effect8344"
+     inkscape:original-d="m 185.44276,177.81035 c 8.14946,21.70374 -13.42002,-35.74516 -5.27296,-14.04264"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-194.92495"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="73.193705" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 193.13698,175.0983 -4.69794,-14.24532"
+     id="path8346"
+     inkscape:path-effect="#path-effect8350"
+     inkscape:original-d="m 193.13698,175.0983 c 7.26074,22.01698 -11.95634,-36.26099 -4.69794,-14.24532"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-197.73834"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="65.211975" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 200.93506,172.70116 -4.11517,-14.42447"
+     id="path8352"
+     inkscape:path-effect="#path-effect8356"
+     inkscape:original-d="m 200.93506,172.70116 c 6.36002,22.29385 -10.47291,-36.71691 -4.11517,-14.42447"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-200.22505"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="57.12251" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 208.82411,170.6229 -3.5256,-14.57979"
+     id="path8358"
+     inkscape:path-effect="#path-effect8362"
+     inkscape:original-d="m 208.82411,170.6229 c 5.4488,22.53388 -8.97218,-37.11218 -3.5256,-14.57979"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-202.38097"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="48.938675" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 216.7911,168.86694 -2.9302,-14.71101"
+     id="path8370"
+     inkscape:path-effect="#path-effect8374"
+     inkscape:original-d="m 216.7911,168.86694 c 4.52858,22.7367 -7.45662,-37.44613 -2.9302,-14.71101"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-204.20254"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="40.673985" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 224.82286,167.43619 222.4929,152.61826"
+     id="path8376"
+     inkscape:path-effect="#path-effect8380"
+     inkscape:original-d="m 224.82286,167.43619 c 3.60088,22.90195 -5.92874,-37.71821 -2.32996,-14.81793"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-205.68675"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="32.342105" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 232.90613,166.33302 -1.72587,-14.90038"
+     id="path8382"
+     inkscape:path-effect="#path-effect8386"
+     inkscape:original-d="m 232.90613,166.33302 c 2.66723,23.02936 -4.39107,-37.92799 -1.72587,-14.90038"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-206.83114"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="23.95679" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 241.02755,165.55924 -1.11892,-14.95821"
+     id="path8388"
+     inkscape:path-effect="#path-effect8392"
+     inkscape:original-d="m 241.02755,165.55924 c 1.72918,23.11873 -2.84614,-38.0751 -1.11892,-14.95821"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-207.63384"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="15.531895" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 257.33115,165.00443 0.0995,-14.99967"
+     id="path8394"
+     inkscape:path-effect="#path-effect8398"
+     inkscape:original-d="m 257.33115,165.00443 c -0.15396,23.1828 0.25526,-38.18047 0.0995,-14.99967"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-208.20938"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-1.380915" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 265.48639,165.22432 0.70897,-14.98324"
+     id="path8400"
+     inkscape:path-effect="#path-effect8404"
+     inkscape:original-d="m 265.48639,165.22432 c -1.09592,23.15739 1.80661,-38.13856 0.70897,-14.98324"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-207.98127"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-9.84089" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 273.62596,165.77544 1.31726,-14.94205"
+     id="path8406"
+     inkscape:path-effect="#path-effect8410"
+     inkscape:original-d="m 273.62596,165.77544 c -2.03608,23.09372 3.35497,-38.03364 1.31726,-14.94205"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-207.40956"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-18.284605" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 281.73641,166.65687 1.92338,-14.87617"
+     id="path8412"
+     inkscape:path-effect="#path-effect8416"
+     inkscape:original-d="m 281.73641,166.65687 c -2.97287,22.99191 4.89779,-37.86588 1.92338,-14.87617"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-206.49519"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-26.698115" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 297.81642,169.40432 3.12509,-14.67085"
+     id="path8418"
+     inkscape:path-effect="#path-effect8422"
+     inkscape:original-d="m 297.81642,169.40432 c -4.83018,22.67455 7.95662,-37.34307 3.12509,-14.67085"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-203.64508"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-43.37898" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 305.75942,171.2658 3.71869,-14.53174"
+     id="path8424"
+     inkscape:path-effect="#path-effect8428"
+     inkscape:original-d="m 305.75942,171.2658 c -5.74763,22.45953 9.46757,-36.98889 3.71869,-14.53174"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-201.71404"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-51.61878" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 313.62021,173.44852 4.30615,-14.36861"
+     id="path8430"
+     inkscape:path-effect="#path-effect8434"
+     inkscape:original-d="m 313.62021,173.44852 c -6.65558,22.20741 10.96289,-36.57359 4.30615,-14.36861"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-199.44976"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-59.7733" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 321.38581,175.94888 4.88649,-14.18175"
+     id="path8436"
+     inkscape:path-effect="#path-effect8440"
+     inkscape:original-d="m 321.38581,175.94888 c -7.55254,21.9186 12.44009,-36.09787 4.88649,-14.18175"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-196.85597"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-67.82907" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 336.58028,181.88548 6.02202,-13.73809"
+     id="path8442"
+     inkscape:path-effect="#path-effect8446"
+     inkscape:original-d="m 336.58028,181.88548 c -9.30756,21.23289 15.33043,-34.9684 6.02202,-13.73809"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-190.69754"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-83.591305" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 343.98405,185.31191 6.57533,-13.48202"
+     id="path8448"
+     inkscape:path-effect="#path-effect8452"
+     inkscape:original-d="m 343.98405,185.31191 c -10.16272,20.83712 16.7388,-34.31652 6.57533,-13.48202"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-187.14308"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-91.27173" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 351.24246,189.03638 7.11778,-13.20367"
+     id="path8454"
+     inkscape:path-effect="#path-effect8458"
+     inkscape:original-d="m 351.24246,189.03638 c -11.00109,20.40692 18.11952,-33.60794 7.11778,-13.20367"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-183.27943"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-98.801365" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 358.34353,193.05274 7.64846,-12.90351"
+     id="path8460"
+     inkscape:path-effect="#path-effect8464"
+     inkscape:original-d="m 358.34353,193.05274 c -11.82129,19.94301 19.47029,-32.84384 7.64846,-12.90351"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-179.11299"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-106.16778" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 372.02696,201.93411 8.67107,-12.23977"
+     id="path8466"
+     inkscape:path-effect="#path-effect8470"
+     inkscape:original-d="m 372.02696,201.93411 c -13.40177,18.91716 22.07317,-31.15422 8.67107,-12.23977"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-169.89975"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-120.36252" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 378.58672,206.78445 9.16131,-11.87729"
+     id="path8472"
+     inkscape:path-effect="#path-effect8476"
+     inkscape:original-d="m 378.58672,206.78445 c -14.15944,18.35692 23.32097,-30.23149 9.16131,-11.87729"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-164.86817"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-127.1674" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 384.94396,211.89735 9.63641,-11.49518"
+     id="path8478"
+     inkscape:path-effect="#path-effect8482"
+     inkscape:original-d="m 384.94396,211.89735 c -14.89372,17.76636 24.53024,-29.25881 9.63641,-11.49518"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-159.56422"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-133.76219" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 391.08817,217.26437 10.09559,-11.09408"
+     id="path8484"
+     inkscape:path-effect="#path-effect8488"
+     inkscape:original-d="m 391.08817,217.26437 c -15.60339,17.14644 25.69899,-28.23779 10.09559,-11.09408"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-153.99665"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-140.13599" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 402.69729,228.72491 10.96316,-10.2376"
+     id="path8490"
+     inkscape:path-effect="#path-effect8494"
+     inkscape:original-d="m 402.69729,228.72491 c -16.94429,15.82268 27.90723,-26.05757 10.96316,-10.2376"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-142.10787"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-152.17889" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 408.14301,234.79948 11.37013,-9.78362"
+     id="path8496"
+     inkscape:path-effect="#path-effect8500"
+     inkscape:original-d="m 408.14301,234.79948 c -17.57329,15.12104 28.94309,-24.90196 11.37013,-9.78362"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-135.80631"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-157.82809" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 413.33737,241.09034 11.75832,-9.31349"
+     id="path8502"
+     inkscape:path-effect="#path-effect8506"
+     inkscape:original-d="m 413.33737,241.09034 c -18.17325,14.39441 29.93114,-23.70522 11.75832,-9.31349"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-129.28038"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-163.21655" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="m 418.2718,247.58709 12.12708,-8.82797"
+     id="path8508"
+     inkscape:path-effect="#path-effect8512"
+     inkscape:original-d="m 418.2718,247.58709 c -18.74319,13.644 30.86974,-22.46931 12.12708,-8.82797"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-122.54087"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="-168.33536" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 100.32947,239.01437 88.695714,229.54571"
+     id="path8514"
+     inkscape:path-effect="#path-effect8518"
+     inkscape:original-d="m 100.32947,239.01437 c 17.98048,14.63452 -29.611539,-24.1033 -11.633756,-9.46866"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-131.43393"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="161.48739" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 95.309303,245.44509 83.300374,236.45702"
+     id="path8520"
+     inkscape:path-effect="#path-effect8524"
+     inkscape:original-d="M 95.309303,245.44509 C 113.86964,259.33684 64.742726,222.56504 83.300374,236.45702"
+     sodipodi:nodetypes="cc"
+     inkscape:transform-center-y="-124.76292"
+     inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/oat/oat.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:transform-center-x="166.69514" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="250.57729"
+     y="201.22389"
+     id="text10572"><tspan
+       sodipodi:role="line"
+       id="tspan10570"
+       x="250.57729"
+       y="201.22389">0</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill;letter-spacing:-5px"
+     x="254.94997"
+     y="242.77492"
+     id="text17066"><tspan
+       sodipodi:role="line"
+       id="tspan17064"
+       x="254.94997"
+       y="242.77492">°C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="182.73177"
+     y="218.82959"
+     id="text25156"><tspan
+       sodipodi:role="line"
+       id="tspan25154"
+       x="182.73177"
+       y="218.82959">-20</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="122.00437"
+     y="261.91998"
+     id="text27074"><tspan
+       sodipodi:role="line"
+       id="tspan27072"
+       x="122.00437"
+       y="261.91998">-40</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="77.604836"
+     y="174.63382"
+     id="text29204"><tspan
+       sodipodi:role="line"
+       id="tspan29202"
+       x="77.604836"
+       y="174.63382">-50</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="160.30188"
+     y="135.66759"
+     id="text32684"><tspan
+       sodipodi:role="line"
+       id="tspan32682"
+       x="160.30188"
+       y="135.66759">0</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="297.44751"
+     y="122.08779"
+     id="text34470"><tspan
+       sodipodi:role="line"
+       id="tspan34468"
+       x="297.44751"
+       y="122.08779">50</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="319.87784"
+     y="214.93513"
+     id="text36300"><tspan
+       sodipodi:role="line"
+       id="tspan36298"
+       x="319.87784"
+       y="214.93513">20</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="372.70493"
+     y="252.76277"
+     id="text37338"><tspan
+       sodipodi:role="line"
+       id="tspan37336"
+       x="372.70493"
+       y="252.76277">40</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="415.38812"
+     y="155.23177"
+     id="text38574"><tspan
+       sodipodi:role="line"
+       id="tspan38572"
+       x="415.38812"
+       y="155.23177">100</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="255.21599"
+     y="89.575279"
+     id="text45160"><tspan
+       sodipodi:role="line"
+       id="tspan45158"
+       x="255.21599"
+       y="89.575279">°F</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1;font-family:Alata;-inkscape-font-specification:Alata;text-align:center;letter-spacing:2.5px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     x="257.02997"
+     y="363.01578"
+     id="text47882"><tspan
+       sodipodi:role="line"
+       id="tspan47880"
+       x="257.02997"
+       y="363.01578">OUTSIDE AIR</tspan><tspan
+       sodipodi:role="line"
+       x="258.27997"
+       y="403.01578"
+       id="tspan47884">TEMP.</tspan></text>
+</svg>

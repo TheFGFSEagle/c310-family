@@ -5,7 +5,7 @@
 		<path>Controls/yoke/yoke.xml</path>
 		<offsets>
 			<x-m>0.508</x-m>
-			<y-m>-0.35</y-m>
+			<y-m>-0.32</y-m>
 			<z-m>-0.1</z-m>
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
@@ -16,7 +16,7 @@
 		<path>Controls/yoke/yoke.xml</path>
 		<offsets>
 			<x-m>0.508</x-m>
-			<y-m>0.35</y-m>
+			<y-m>0.32</y-m>
 			<z-m>-0.1</z-m>
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
@@ -333,8 +333,8 @@
 		<path>Instruments/ammeter/ammeter.xml</path>
 		<offsets>
 			<x-m>0.55</x-m>
-			<y-m>0.335</y-m>
-			<z-m>0.03</z-m>
+			<y-m>0.4</y-m>
+			<z-m>-0.005</z-m>
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
 	</model>
@@ -415,6 +415,16 @@
 			<x-m>0.55</x-m>
 			<y-m>0.14</y-m>
 			<z-m>-0.06</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Instruments/oat/oat.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.32</y-m>
+			<z-m>0.015</z-m>
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
 	</model>
