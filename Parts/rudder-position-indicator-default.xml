@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>default</part-number>
+	<brand></brand>
+	<type></type>
+	<data-source></data-source>
+	<nasal>
+		<load>
+			print("Rudder position indicator loaded !");
+		</load>
+		<unload>
+			print("Rudder position indicator unloaded !");
+			props.globals.getNode("/instrumentation/rudder-position", 1).remove();
+		</unload>
+	</nasal>
+	<overlay>
+		<instrumentation>
+			<rudder-position>
+				<serviceable type="bool">true</serviceable>
+			</rudder-position>
+		</instrumentation>
+	</overlay>
+</PropertyList>

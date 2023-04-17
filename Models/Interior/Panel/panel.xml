@@ -404,6 +404,22 @@
 	</model>
 	
 	<model>
+		<condition>
+			<equals>
+				<property>parts/selected-rudder-position-indicator</property>
+				<value>default</value>
+			</equals>
+		</condition>
+		<path>Instruments/rudder-pos/rudder-pos.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.14</y-m>
+			<z-m>-0.06</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<name>LeftFuelSelector</name>
 		<path>Controls/fuel-selector/left-fuel-selector.xml</path>
 		<offsets>

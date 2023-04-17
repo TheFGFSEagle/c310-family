@@ -386,4 +386,16 @@
 		<input>/systems/electrical/amps</input>
 		<output>ammeter/indicated-battery-amps</output>
 	</filter>
+	
+	<filter>
+		<name>Rudder position</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/rudder-position/serviceable</property>
+			</condition>
+		</enable>
+		<input>/surface-positions/rudder-norm</input>
+		<output>rudder-position/indicated-rudder-position-norm</output>
+	</filter>
 </PropertyList>
