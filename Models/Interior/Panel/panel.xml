@@ -340,6 +340,16 @@
 	</model>
 	
 	<model>
+		<path>Instruments/stall-warning/stall-warning.xml</path>
+		<offsets>
+			<x-m>0.55</x-m>
+			<y-m>0.4</y-m>
+			<z-m>0.08</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<path>Instruments/engine-combo/engine-combo.xml</path>
 		<offsets>
 			<x-m>0.55</x-m>

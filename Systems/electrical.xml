@@ -697,6 +697,79 @@
 		<output>consumers/front-dome-light/amps</output>
 	</filter>
 	<filter>
+		<name>Stall warning horn volts</name>
+		<type>gain</type>
+		<!--<gain>/controls/circuit-breakers/uv-inst-lights-rear-dome-light/closed</gain>-->
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/stall-warning-horn/volts</output>
+	</filter>
+	<filter>
+		<name>Stall warning horn amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/stall-warning-horn/volts</property>
+						<div>
+							<property>consumers/stall-warning-horn/rated-volts</property>
+							<property>consumers/stall-warning-horn/rated-amps</property>
+						</div>
+					</div>
+					<property>/systems/stall-warning/horn-volume-norm</property>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/stall-warning-horn/amps</output>
+	</filter>
+	<filter>
+		<name>Stall warning indicator volts</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<equals>
+					<property>/parts/selected-stall-warning</property>
+					<value>0511062-7</value>
+				</equals>
+			</condition>
+		</enable>
+		<!--<gain>/controls/circuit-breakers/uv-inst-lights-rear-dome-light/closed</gain>-->
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/stall-warning-indicator/volts</output>
+	</filter>
+	<filter>
+		<name>Stall warning indicator amps</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<equals>
+					<property>/parts/selected-stall-warning</property>
+					<value>0511062-7</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/stall-warning-indicator/volts</property>
+						<div>
+							<property>consumers/stall-warning-indicator/rated-volts</property>
+							<property>consumers/stall-warning-indicator/rated-amps</property>
+						</div>
+					</div>
+					<property>/instrumentation/stall-warning/lamp-brightness-norm</property>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/stall-warning-indicator/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Rear dome light volts</name>
 		<type>gain</type>
 		<gain>/controls/circuit-breakers/uv-inst-lights-rear-dome-light/closed</gain>
@@ -1199,6 +1272,8 @@
 					<property>consumers/starter-motor[1]/amps</property>
 					<property>consumers/fuel-boost-pump[0]/amps</property>
 					<property>consumers/fuel-boost-pump[1]/amps</property>
+					<property>consumers/stall-warning-horn/amps</property>
+					<property>consumers/stall-warning-indicator/amps</property>
 				</sum>
 			</expression>
 		</input>
