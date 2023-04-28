@@ -1924,6 +1924,55 @@
 			<property>sim/model/lights/front-dome/brightness-norm</property>
 		</dim-factor>
 	</light>
+	
+	<model>
+		<path>Exterior/chocks/chocks-stowed.xml</path>
+		<offsets>
+			<x-m>2.5</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.445</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<stowed-prop>sim/model/chocks/chocks[0]/stowed</stowed-prop>
+				<click-script>c310.chocks[0].put();</click-script>
+				<tooltip-id>front-chocks-stowed</tooltip-id>
+				<tooltip-label>Put front chocks</tooltip-label>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<path>Exterior/chocks/chocks-stowed.xml</path>
+		<offsets>
+			<x-m>2.5</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.525</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<stowed-prop>sim/model/chocks/chocks[1]/stowed</stowed-prop>
+				<click-script>c310.chocks[1].put();</click-script>
+				<tooltip-id>left-chocks-stowed</tooltip-id>
+				<tooltip-label>Put left chocks</tooltip-label>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<path>Exterior/chocks/chocks-stowed.xml</path>
+		<offsets>
+			<x-m>2.5</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.605</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<stowed-prop>sim/model/chocks/chocks[2]/stowed</stowed-prop>
+				<click-script>c310.chocks[2].put();</click-script>
+				<tooltip-id>right-chocks-stowed</tooltip-id>
+				<tooltip-label>Put right chocks</tooltip-label>
+			</params>
+		</overlay>
+	</model>
 
 	<effect>
 		<inherits-from>Effects/exterior-opaque</inherits-from>
@@ -2036,9 +2085,13 @@
 	</effect>
 	
 	<effect>
-		<inherits-from>Effects/interior-glass</inherits-from>
+		<inherits-from>Effects/model-transparent</inherits-from>
 		<object-name>LeftSunVisor</object-name>
 		<object-name>RightSunVisor</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/interior-glass</inherits-from>
 		<object-name>LeftForwardWindowInterior</object-name>
 		<object-name>OpenableWindowInterior</object-name>
 		<object-name>LeftRearWindowInterior</object-name>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<model>
+		<path>chocks-put.xml</path>
+		<overlay>
+			<params>
+				<stowed-prop>sim/model/chocks/chocks[0]/stowed</stowed-prop>
+				<click-script>c310.chocks[0].stow();</click-script>
+				<tooltip-id>front-chocks-put</tooltip-id>
+				<tooltip-label>Stow front chocks</tooltip-label>
+			</params>
+		</overlay>
+	</model>
+</PropertyList>
