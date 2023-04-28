@@ -37,4 +37,9 @@
 			</binding>
 		</hovered>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>PositionForcer</object-name>
+	</effect>
 </PropertyList>
