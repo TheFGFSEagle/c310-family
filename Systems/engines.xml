@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="engines">
+	<property value="1">propulsion/engine[0]/lubrication-norm</property>
+	<property value="1">propulsion/engine[1]/lubrication-norm</property>
+	<property>propulsion/engine[0]/external-power-hp</property>
+	<property>propulsion/engine[1]/external-power-hp</property>
+	
 	<channel name="Cylinder vaporized fuel">
 		<fcs_function name="propulsion/engine[0]/cylinder-vaporized-fuel-norm">
 			<function>
@@ -40,5 +45,249 @@
 			<input>fcs/mixture-cmd-norm[1]</input>
 			<gain>propulsion/engine[1]/cylinder-vaporized-fuel-norm</gain>
 		</pure_gain>
+	</channel>
+	
+	<channel name="Engine friction">
+		<fcs_function name="propulsion/engine[0]/lubrication-norm">
+			<function>
+				<sum>
+					<p>propulsion/engine[0]/lubrication-norm</p>
+					<product>
+						<p>propulsion/engine[0]/oil/consumption-norm</p>
+						<p>propulsion/engine[0]/oil/system/level-norm</p>
+						<p>simulation/channel-dt</p>
+						<v>1</v>
+					</product>
+					<product>
+						<p>-propulsion/engine[0]/engine-rpm</p>
+						<p>simulation/channel-dt</p>
+						<v>0.0003</v>
+					</product>
+				</sum>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1</max>
+			</clipto>
+			<output>/engines/engine[0]/lubrication-norm</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/friction-hp">
+			<function>
+				<sum>
+					<v>2</v>
+					<product>
+						<difference>
+							<v>1</v>
+							<p>propulsion/engine[0]/lubrication-norm</p>
+						</difference>
+						<v>100</v>
+					</product>
+					<p>propulsion/engine[0]/external-power-hp</p>
+				</sum>
+			</function>
+			<output>/engines/engine[0]/friction-hp</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/cooling-factor">
+			<function>
+				<sum>
+					<v>0.6</v>
+					<product>
+						<difference>
+							<max>
+								<p>propulsion/engine[0]/friction-hp</p>
+								<v>2</v>
+							</max>
+							<v>2</v>
+						</difference>
+						<v>-0.01</v>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/fire-norm">
+			<function>
+				<ifthen>
+					<or>
+						<gt>
+							<p>propulsion/engine[0]/cht-degF</p>
+							<v>700</v>
+						</gt>
+						<gt>
+							<p>propulsion/engine[0]/fire-norm</p>
+							<v>0</v>
+						</gt>
+					</or>
+					<sum>
+						<p>propulsion/engine[0]/fire-norm</p>
+						<p>simulation/channel-dt</p>
+						<v>0.02</v>
+					</sum>
+					<v>0</v>
+				</ifthen>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1</max>
+			</clipto>
+			<output>/engines/engine[0]/fire-norm</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/smoke-norm">
+			<function>
+				<product>
+					<ifthen>
+						<gt>
+							<p>propulsion/engine[0]/fire-norm</p>
+							<v>0</v>
+						</gt>
+						<sum>
+							<v>1</v>
+							<p>propulsion/engine[0]/fire-norm</p>
+						</sum>
+						<table>
+							<independentVar>propulsion/engine[0]/cht-degF</independentVar>
+							<tableData>
+								600		0
+								700		1
+							</tableData>
+						</table>
+					</ifthen>
+					<v>0.5</v>
+				</product>
+			</function>
+			<output>/engines/engine[0]/smoke-norm</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/combustion-efficiency-norm">
+			<function>
+				<table>
+					<independentVar>propulsion/engine[0]/AFR</independentVar>
+					<tableData>
+						6	0
+						9	1
+					</tableData>
+				</table>
+			</function>
+			<output>/engines/engine[0]/combustion-efficiency-norm</output>
+		</fcs_function>
+
+		<fcs_function name="propulsion/engine[1]/lubrication-norm">
+			<function>
+				<sum>
+					<p>propulsion/engine[1]/lubrication-norm</p>
+					<product>
+						<p>propulsion/engine[1]/oil/consumption-norm</p>
+						<p>propulsion/engine[1]/oil/system/level-norm</p>
+						<p>simulation/channel-dt</p>
+						<v>1</v>
+					</product>
+					<product>
+						<p>-propulsion/engine[1]/engine-rpm</p>
+						<p>simulation/channel-dt</p>
+						<v>0.0003</v>
+					</product>
+				</sum>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1</max>
+			</clipto>
+			<output>/engines/engine[1]/lubrication-norm</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/friction-hp">
+			<function>
+				<sum>
+					<v>2</v>
+					<product>
+						<difference>
+							<v>1</v>
+							<p>propulsion/engine[1]/lubrication-norm</p>
+						</difference>
+						<v>100</v>
+					</product>
+					<p>propulsion/engine[1]/external-power-hp</p>
+				</sum>
+			</function>
+			<output>/engines/engine[1]/friction-hp</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/cooling-factor">
+			<function>
+				<sum>
+					<v>0.6</v>
+					<product>
+						<difference>
+							<max>
+								<p>propulsion/engine[1]/friction-hp</p>
+								<v>2</v>
+							</max>
+							<v>2</v>
+						</difference>
+						<v>-0.01</v>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/fire-norm">
+			<function>
+				<ifthen>
+					<or>
+						<gt>
+							<p>propulsion/engine[1]/cht-degF</p>
+							<v>700</v>
+						</gt>
+						<gt>
+							<p>propulsion/engine[1]/fire-norm</p>
+							<v>0</v>
+						</gt>
+					</or>
+					<sum>
+						<p>propulsion/engine[1]/fire-norm</p>
+						<p>simulation/channel-dt</p>
+						<v>0.02</v>
+					</sum>
+					<v>0</v>
+				</ifthen>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>1</max>
+			</clipto>
+			<output>/engines/engine[1]/fire-norm</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/smoke-norm">
+			<function>
+				<product>
+					<ifthen>
+						<gt>
+							<p>propulsion/engine[1]/fire-norm</p>
+							<v>0</v>
+						</gt>
+						<sum>
+							<v>1</v>
+							<p>propulsion/engine[1]/fire-norm</p>
+						</sum>
+						<table>
+							<independentVar>propulsion/engine[1]/cht-degF</independentVar>
+							<tableData>
+								600		0
+								700		1
+							</tableData>
+						</table>
+					</ifthen>
+					<v>0.5</v>
+				</product>
+			</function>
+			<output>/engines/engine[1]/smoke-norm</output>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/combustion-efficiency-norm">
+			<function>
+				<table>
+					<independentVar>propulsion/engine[1]/AFR</independentVar>
+					<tableData>
+						6	0
+						9	1
+					</tableData>
+				</table>
+			</function>
+			<output>/engines/engine[1]/combustion-efficiency-norm</output>
+		</fcs_function>
 	</channel>
 </system>

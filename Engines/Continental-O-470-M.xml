@@ -20,8 +20,8 @@
 	<displacement unit="IN3">471</displacement>
 	<cylinders>6</cylinders>
 	<compression-ratio>7</compression-ratio>
-	<oil-pressure-relief-valve-psi>50</oil-pressure-relief-valve-psi>
-	<oil-pressure-rpm-max>1000</oil-pressure-rpm-max>
+	<oil-pressure-relief-valve-psi>100</oil-pressure-relief-valve-psi>
+	<oil-pressure-rpm-max>1250</oil-pressure-rpm-max>
 	<design-oil-temp-degK>340</design-oil-temp-degK>
 	<cylinder-head-mass unit="LBS">23.3</cylinder-head-mass>
 </piston_engine>

@@ -430,6 +430,9 @@
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
 				<starter-button type="bool">false</starter-button>
+				<oil>
+					<drain-valve type="bool">false</drain-valve>
+				</oil>
 			</engine>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
@@ -437,6 +440,9 @@
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
 				<starter-button type="bool">false</starter-button>
+				<oil>
+					<drain-valve type="bool">false</drain-valve>
+				</oil>
 			</engine>
 		</engines>
 	</controls>
