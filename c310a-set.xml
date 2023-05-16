@@ -234,6 +234,8 @@
 						</system>
 						<reservoir>
 							<leak-flow-rate-lbs_s>0</leak-flow-rate-lbs_s>
+							<level-lbs>21.9</level-lbs>
+							<capacity-quarts>12</capacity-quarts>
 						</reservoir>
 					</oil>
 				</engine>
@@ -244,6 +246,8 @@
 						</system>
 						<reservoir>
 							<leak-flow-rate-lbs_s>0</leak-flow-rate-lbs_s>
+							<level-lbs>21.9</level-lbs>
+							<capacity-quarts>12</capacity-quarts>
 						</reservoir>
 					</oil>
 				</engine>
@@ -259,6 +263,10 @@
 				</system>
 				<reservoir>
 					<leak-flow-rate-lbs_s alias="/fdm/jsbsim/propulsion/engine[0]/oil/reservoir/leak-flow-rate-lbs_s"/>
+					<level-lbs alias="/fdm/jsbsim/propulsion/engine[0]/oil/reservoir/level-lbs"/>
+					<level-quarts alias="/fdm/jsbsim/propulsion/engine[0]/oil/reservoir/level-quarts"/>
+					<capacity-quarts alias="/fdm/jsbsim/propulsion/engine[0]/oil/reservoir/capacity-quarts"/>
+					<capacity-lbs alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/capacity-lbs"/>
 				</reservoir>
 			</oil>
 		</engine>
@@ -269,6 +277,10 @@
 				</system>
 				<reservoir>
 					<leak-flow-rate-lbs_s alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/leak-flow-rate-lbs_s"/>
+					<level-lbs alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/level-lbs"/>
+					<level-quarts alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/level-quarts"/>
+					<capacity-quarts alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/capacity-quarts"/>
+					<capacity-lbs alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/capacity-lbs"/>
 				</reservoir>
 			</oil>
 		</engine>
@@ -586,11 +598,17 @@
 			<tank>
 				<hidden type="bool">true</hidden>
 			</tank>
-			<tank>
+			<tank n="16">
 				<name>Left engine oil</name>
+				<level-lbs alias="/engines/engine[0]/oil/reservoir/level-lbs"/>
+				<capacity-gal_us alias="/engines/engine[0]/oil/reservoir/capacity-lbs"/>
+				<level-gal_us alias="/engines/engine[0]/oil/reservoir/level-lbs"/>
 			</tank>
-			<tank>
+			<tank n="17">
 				<name>Right engine oil</name>
+				<level-lbs alias="/engines/engine[1]/oil/reservoir/level-lbs"/>
+				<capacity-gal_us alias="/engines/engine[1]/oil/reservoir/capacity-lbs"/>
+				<level-gal_us alias="/engines/engine[1]/oil/reservoir/level-lbs"/>
 			</tank>
 		</fuel>
 	</consumables>

@@ -307,31 +307,6 @@
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
 		</tank>
-		
-		<!-- oil reservoirs left, right -->
-		<tank type="FUEL" number="16">
-			<location unit="IN">
-				<x>0</x>
-				<y>-75</y>
-				<z>-15</z>
-			</location>
-			<density>7.3</density>
-			<capacity unit="LBS">21.9</capacity>
-			<contents unit="LBS">21.9</contents>
-			<unusable unit="LBS">10.95</unusable>
-		</tank>
-		
-		<tank type="FUEL" number="17">
-			<location unit="IN">
-				<x>0</x>
-				<y>75</y>
-				<z>-15</z>
-			</location>
-			<density>7.3</density>
-			<capacity unit="LBS">21.9</capacity>
-			<contents unit="LBS">21.9</contents>
-			<unusable unit="LBS">10.95</unusable>
-		</tank>
 	</propulsion>
 	
 	<ground_reactions>

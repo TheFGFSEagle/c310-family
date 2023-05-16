@@ -12,10 +12,6 @@
 	<property value="225">propulsion/engine[1]/oil/system/design-temperature-degf</property>
 	<property value="0.25">propulsion/engine[0]/oil/viscosity-index</property>
 	<property value="0.25">propulsion/engine[1]/oil/viscosity-index</property>
-	<property value="12">propulsion/engine[0]/oil/reservoir/capacity-quarts</property>
-	<property value="12">propulsion/engine[1]/oil/reservoir/capacity-quarts</property>
-	<property value="21.9">propulsion/engine[0]/oil/reservoir/level-lbs</property>
-	<property value="21.9">propulsion/engine[1]/oil/reservoir/level-lbs</property>
 	<property value="3">propulsion/engine[0]/oil/system/capacity-lbs</property>
 	<property value="3">propulsion/engine[1]/oil/system/capacity-lbs</property>
 	<property value="3">propulsion/engine[0]/oil/system/level-lbs</property>
@@ -69,7 +65,7 @@
 					</product>
 				</sum>
 			</function>
-			<output>/engines/engine[0]/oil-temperature-degf</output>
+			<output>/engines/engine[0]/oil/system/temperature-degf</output>
 		</fcs_function>
 		
 		<fcs_function name="propulsion/engine[0]/oil/system/pressure-psi">
@@ -105,7 +101,7 @@
 					</ifthen>
 				</min>
 			</function>
-			<output>/engines/engine[0]/oil-pressure-psi</output>
+			<output>/engines/engine[0]/oil/system/pressure-psi</output>
 		</fcs_function>
 		
 		<fcs_function name="propulsion/engine[0]/oil/system/intake-covered">
@@ -327,7 +323,7 @@
 					</product>
 				</sum>
 			</function>
-			<output>/engines/engine[1]/oil-temperature-degf</output>
+			<output>/engines/engine[1]/oil/system/temperature-degf</output>
 		</fcs_function>
 		
 		<fcs_function name="propulsion/engine[1]/oil/system/pressure-psi">
@@ -363,7 +359,7 @@
 					</ifthen>
 				</min>
 			</function>
-			<output>/engines/engine[1]/oil-pressure-psi</output>
+			<output>/engines/engine[1]/oil/system/pressure-psi</output>
 		</fcs_function>
 		
 		<fcs_function name="propulsion/engine[1]/oil/system/intake-covered">
