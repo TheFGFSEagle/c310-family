@@ -226,8 +226,53 @@
 					<prop-feather-pitch type="double">82</prop-feather-pitch>
 				</propulsion>
 			</systems>
+			<propulsion>
+				<engine n="0">
+					<oil>
+						<system>
+							<leak-flow-rate-lbs_s>0</leak-flow-rate-lbs_s>
+						</system>
+						<reservoir>
+							<leak-flow-rate-lbs_s>0</leak-flow-rate-lbs_s>
+						</reservoir>
+					</oil>
+				</engine>
+				<engine n="1">
+					<oil>
+						<system>
+							<leak-flow-rate-lbs_s>0</leak-flow-rate-lbs_s>
+						</system>
+						<reservoir>
+							<leak-flow-rate-lbs_s>0</leak-flow-rate-lbs_s>
+						</reservoir>
+					</oil>
+				</engine>
+			</propulsion>
 		</jsbsim>
 	</fdm>
+	
+	<engines>
+		<engine n="0">
+			<oil>
+				<system>
+					<leak-flow-rate-lbs_s alias="/fdm/jsbsim/propulsion/engine[0]/oil/system/leak-flow-rate-lbs_s"/>
+				</system>
+				<reservoir>
+					<leak-flow-rate-lbs_s alias="/fdm/jsbsim/propulsion/engine[0]/oil/reservoir/leak-flow-rate-lbs_s"/>
+				</reservoir>
+			</oil>
+		</engine>
+		<engine n="1">
+			<oil>
+				<system>
+					<leak-flow-rate-lbs_s alias="/fdm/jsbsim/propulsion/engine[1]/oil/system/leak-flow-rate-lbs_s"/>
+				</system>
+				<reservoir>
+					<leak-flow-rate-lbs_s alias="/fdm/jsbsim/propulsion/engine[1]/oil/reservoir/leak-flow-rate-lbs_s"/>
+				</reservoir>
+			</oil>
+		</engine>
+	</engines>
 	
 	<constants include="Systems/constants.xml"/>
 	
@@ -597,6 +642,7 @@
 			<file>Nasal/dialogs.nas</file>
 			<file>Nasal/controls.nas</file>
 			<file>Nasal/states.nas</file>
+			<file>Nasal/failures.nas</file>
 		</c310>
 	</nasal>
 	

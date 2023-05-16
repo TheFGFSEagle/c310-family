@@ -99,7 +99,7 @@
 							</max>
 							<v>2</v>
 						</difference>
-						<v>-0.01</v>
+						<v>-0.02</v>
 					</product>
 				</sum>
 			</function>
@@ -119,8 +119,10 @@
 					</or>
 					<sum>
 						<p>propulsion/engine[0]/fire-norm</p>
-						<p>simulation/channel-dt</p>
-						<v>0.02</v>
+						<product>
+							<p>simulation/channel-dt</p>
+							<v>0.02</v>
+						</product>
 					</sum>
 					<v>0</v>
 				</ifthen>
@@ -220,7 +222,7 @@
 							</max>
 							<v>2</v>
 						</difference>
-						<v>-0.01</v>
+						<v>-0.02</v>
 					</product>
 				</sum>
 			</function>
@@ -240,8 +242,10 @@
 					</or>
 					<sum>
 						<p>propulsion/engine[1]/fire-norm</p>
-						<p>simulation/channel-dt</p>
-						<v>0.02</v>
+						<product>
+							<p>simulation/channel-dt</p>
+							<v>0.02</v>
+						</product>
 					</sum>
 					<v>0</v>
 				</ifthen>
