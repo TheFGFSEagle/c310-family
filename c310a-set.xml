@@ -102,15 +102,15 @@
 				<path>Systems/instruments.xml</path>
 			</property-rule>
 			
-			<autopilot n="101">
+			<property-rule n="101">
 				<name>Lights</name>
 				<path>Systems/lights.xml</path>
-			</autopilot>
+			</property-rule>
 			
-			<autopilot n="102">
+			<property-rule n="102">
 				<name>Electrical system</name>
 				<path>Systems/electrical.xml</path>
-			</autopilot>
+			</property-rule>
 		</systems>
 		
 		<sound>
