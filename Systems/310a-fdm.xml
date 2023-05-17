@@ -110,10 +110,10 @@
 	
 	<propulsion>
 		<engine file="Continental-O-470-M">
-			<feed>0</feed>
+			<feed>12</feed>
 			
 			<thruster file="Hartzell-HC82XF-2">
-				<sense> 1 </sense>
+				<sense>1</sense>
 				<location unit="IN">
 					<x>-13</x>
 					<y>-76.7</y>
@@ -128,7 +128,7 @@
 		</engine>
 		
 		<engine file="Continental-O-470-M">
-			<feed>1</feed>
+			<feed>13</feed>
 			
 			<thruster file="Hartzell-HC82XF-2">
 				<sense>1</sense>
@@ -145,15 +145,16 @@
 			</thruster>
 		</engine>
 		
+		<!-- main tanks left, right -->
 		<tank type="FUEL" number="0">
 			<location unit="IN">
 				<x>45</x>
 				<y>-214.4</y>
 				<z>-13</z>
 			</location>
-			<capacity unit="LBS">316.2</capacity>
+			<capacity unit="LBS">341.7</capacity>
 			<contents unit="LBS">100</contents>
-			<unusable unit="LBS">6</unusable>
+			<unusable unit="LBS">3.35</unusable>
 		</tank>
 		
 		<tank type="FUEL" number="1">
@@ -162,9 +163,137 @@
 				<y>214.4</y>
 				<z>-13</z>
 			</location>
-			<capacity unit="LBS">316.2</capacity>
+			<capacity unit="LBS">341.7</capacity>
 			<contents unit="LBS">100</contents>
-			<unusable unit="LBS">6</unusable>
+			<unusable unit="LBS">3.35</unusable>
+		</tank>
+		
+		<!-- auxiliary tanks left, right - optional -->
+		<tank type="FUEL" number="2">
+			<location unit="IN">
+				<x>60</x>
+				<y>-120</y>
+				<z>-20</z>
+			</location>
+			<capacity unit="LBS">103.85</capacity>
+			<contents unit="LBS">0</contents>
+			<unusable unit="LBS">3.35</unusable>
+		</tank>
+		
+		<tank type="FUEL" number="3">
+			<location unit="IN">
+				<x>60</x>
+				<y>120</y>
+				<z>-20</z>
+			</location>
+			<capacity unit="LBS">103.85</capacity>
+			<contents unit="LBS">0</contents>
+			<unusable unit="LBS">3.35</unusable>
+		</tank>
+		
+		<!-- crossfeed lines left to right, right to left -->
+		<tank type="FUEL" number="4">
+			<location unit="IN">
+				<x>45</x>
+				<y>0</y>
+				<z>-30</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="5">
+			<location unit="IN">
+				<x>45</x>
+				<y>0</y>
+				<z>-30</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<!-- fuel selector left, right -->
+		<tank type="FUEL" number="6">
+			<location unit="IN">
+				<x>45</x>
+				<y>-70</y>
+				<z>-22</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="7">
+			<location unit="IN">
+				<x>45</x>
+				<y>70</y>
+				<z>-22</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<!-- fuel strainer left, right -->
+		<tank type="FUEL" number="8">
+			<location unit="IN">
+				<x>30</x>
+				<y>-70</y>
+				<z>-15</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="9">
+			<location unit="IN">
+				<x>30</x>
+				<y>70</y>
+				<z>-15</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<!-- carburetor left, right -->
+		<tank type="FUEL" number="10">
+			<location unit="IN">
+				<x>30</x>
+				<y>-70</y>
+				<z>-18</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="11">
+			<location unit="IN">
+				<x>30</x>
+				<y>70</y>
+				<z>-18</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<!-- intake manifold left, right -->
+		<tank type="FUEL" number="12">
+			<location unit="IN">
+				<x>30</x>
+				<y>-70</y>
+				<z>-18</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
+		</tank>
+		
+		<tank type="FUEL" number="13">
+			<location unit="IN">
+				<x>30</x>
+				<y>70</y>
+				<z>-18</z>
+			</location>
+			<capacity unit="LBS">0.1</capacity>
+			<contents unit="LBS">0</contents>
 		</tank>
 	</propulsion>
 	
@@ -265,7 +394,7 @@
 			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
 		</contact>
 		
-		<contact type="STRUCTURE" name="Tail cone tip">
+		<contact type="STRUCTURE" name="Tail stinger tip">
 			<location unit="IN">
 				<x>270.5</x>
 				<y>0</y>
@@ -279,11 +408,11 @@
 	</ground_reactions>
 	
 	<system file="gear"/>
-	
+	<system file="fuel"/>
+			
 	<flight_control file="Systems/fdm-fcs.xml"/>
 	
 	<aerodynamics file="Systems/fdm-aerodynamics.xml"/>
 	
-	<external_reactions>
-	</external_reactions>
+	<external_reactions/>
 </fdm_config>
