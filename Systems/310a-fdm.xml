@@ -56,107 +56,86 @@
 		<htailarm unit="FT">13.5</htailarm>
 		<vtailarea unit="FT2">31.5</vtailarea>
 		<vtailarm unit="FT">13.5</vtailarm>
-		<location name="AERORP" unit="FT">
-			<x>13.5</x>
+		<location name="AERORP" unit="IN">
+			<x>42.1</x>
+			<y>0</y>
+			<z>-3.9</z>
+		</location>
+		<location name="EYEPOINT" unit="IN">
+			<x>40</x>
+			<y>-12</y>
+			<z>28</z>
+		</location>
+		<location name="VRP" unit="IN">
+			<x>0</x>
 			<y>0</y>
 			<z>0</z>
-		</location>
-		<location name="EYEPOINT" unit="FT">
-			<x>     4.59 </x>
-			<y>    -1.50 </y>
-			<z>     3.75 </z>
-		</location>
-		<location name="VRP" unit="FT">
-			<x>     0.0 </x>
-			<y>     0.0 </y>
-			<z>     0.0 </z>
 		</location>
 	</metrics>
 	
 	<mass_balance>
-		<ixx unit="SLUG*FT2">   8884.00 </ixx>
-		<iyy unit="SLUG*FT2">   1939.00 </iyy>
-		<izz unit="SLUG*FT2">  11001.00 </izz>
-		<emptywt unit="LBS">   2850.00 </emptywt>
-		<location name="CG" unit="FT">
-			<x>    13.12 </x>
-			<y>     0.00 </y>
-			<z>    -0.68 </z>
+		<ixx unit="SLUG*FT2">8884</ixx>
+		<iyy unit="SLUG*FT2">1939</iyy>
+		<izz unit="SLUG*FT2">11001</izz>
+		<emptywt unit="LBS">2850</emptywt>
+		<location name="CG" unit="IN">
+			<x>35</x>
+			<y>0</y>
+			<z>5</z>
 		</location>
 		
-		<pointmass name="Payload">
-			<description> 1561.80 lbs should bring model up to entered max weight </description>
-			<weight unit="LBS"> 0</weight>
-			<location name="POINTMASS" unit="FT">
-				<x>    13.12 </x>
-				<y>     0.00 </y>
-				<z>    -0.68 </z>
+		<pointmass name="Baggage">
+			<weight unit="LBS">200</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>96</x>
+				<y>0</y>
+				<z>4</z>
 			</location>
 		</pointmass>
 	</mass_balance>
 	
 	<propulsion>
 		<engine file="Continental-O-470-M">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>    -5.83 </y>
-				<z>    -3.33 </z>
-			</location>
-			<orient unit="DEG">
-				<pitch>     0.00 </pitch>
-				<roll>     0.00 </roll>
-				<yaw>     0.00 </yaw>
-			</orient>
-			<feed> 0 </feed>
+			<feed>0</feed>
 			
 			<thruster file="Hartzell-HC82XF-2">
 				<sense> 1 </sense>
-				<location unit="FT">
-					<x>    13.12 </x>
-					<y>    -5.83 </y>
-					<z>    -3.33 </z>
+				<location unit="IN">
+					<x>-22.5</x>
+					<y>-76.7</y>
+					<z>2.5</z>
 				</location>
 				<orient unit="DEG">
-					<pitch>     0.00 </pitch>
-					<roll>     0.00 </roll>
-					<yaw>     0.00 </yaw>
+					<pitch>2</pitch>
+					<roll>0</roll>
+					<yaw>0</yaw>
 				</orient>
 			</thruster>
 		</engine>
 		
 		<engine file="Continental-O-470-M">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>     5.83 </y>
-				<z>    -3.33 </z>
-			</location>
-			<orient unit="DEG">
-				<pitch>     0.00 </pitch>
-				<roll>     0.00 </roll>
-				<yaw>     0.00 </yaw>
-			</orient>
-			<feed> 1 </feed>
+			<feed>1</feed>
 			
 			<thruster file="Hartzell-HC82XF-2">
-				<sense> 1 </sense>
-				<location unit="FT">
-					<x>    13.12 </x>
-					<y>     5.83 </y>
-					<z>    -3.33 </z>
+				<sense>1</sense>
+				<location unit="IN">
+					<x>-22.5</x>
+					<y>76.7</y>
+					<z>2.5</z>
 				</location>
 				<orient unit="DEG">
-					<pitch>     0.00 </pitch>
-					<roll>     0.00 </roll>
-					<yaw>     0.00 </yaw>
+					<pitch>2</pitch>
+					<roll>0</roll>
+					<yaw>0</yaw>
 				</orient>
 			</thruster>
 		</engine>
 		
 		<tank type="FUEL" number="0">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>     0.00 </y>
-				<z>    -0.68 </z>
+			<location unit="IN">
+				<x>35</x>
+				<y>-214</y>
+				<z>6.8</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
@@ -164,10 +143,10 @@
 		</tank>
 		
 		<tank type="FUEL" number="1">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>     0.00 </y>
-				<z>    -0.68 </z>
+			<location unit="IN">
+				<x>35</x>
+				<y>214.4</y>
+				<z>6.8</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
