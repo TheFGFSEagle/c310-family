@@ -381,6 +381,12 @@
 	</controls>
 	
 	<instrumentation>
+		<fuel-quantity>
+			<serviceable type="bool">true</serviceable>
+		</fuel-quantity>
+		<manifold-pressure>
+			<serviceable type="bool">true</serviceable>
+		</manifold-pressure>
 		<vacuum>
 			<serviceable type="bool">true</serviceable>
 		</vacuum>
