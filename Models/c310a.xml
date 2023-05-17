@@ -484,7 +484,7 @@
 		<type>locked-track</type>
 		<object-name>NoseGearUpperTorqueLink</object-name>
 		<center> <!-- upper hinge -->
-			<x-m>-1.259</x-m>
+			<x-m>-1.513</x-m>
 			<y-m>0</y-m>
 			<z-m>-1.216</z-m>
 		</center>
@@ -501,14 +501,14 @@
 		
 		<target-name>NoseGearCylinder</target-name>
 		<target-center>	<!-- lower hinge -->
-			<x-m>-1.29</x-m>
+			<x-m>-1.544</x-m>
 			<y-m>0</y-m>
 			<z-m>-1.382</z-m>
 		</target-center>
 		
 		<slave-name>NoseGearLowerTorqueLink</slave-name>
 		<slave-center>	<!-- middle hinge -->
-			<x-m>-1.353</x-m>
+			<x-m>-1.607</x-m>
 			<y-m>0</y-m>
 			<z-m>-1.283</z-m>
 		</slave-center>
@@ -562,7 +562,7 @@
 		<type>locked-track</type>
 		<object-name>LeftMainGearUpperTorqueLink</object-name>
 		<center> <!-- upper hinge -->
-			<x-m>1.572</x-m>
+			<x-m>1.318</x-m>
 			<y-m>-1.927</y-m>
 			<z-m>-1.003</z-m>
 		</center>
@@ -579,14 +579,14 @@
 		
 		<target-name>LeftMainGearCylinder</target-name>
 		<target-center> <!-- lower hinge -->
-			<x-m>1.567</x-m>
+			<x-m>1.313</x-m>
 			<y-m>-1.927</y-m>
 			<z-m>-1.196</z-m>
 		</target-center>
 		
 		<slave-name>LeftMainGearLowerTorqueLink</slave-name>
 		<slave-center> <!-- middle hinge -->
-			<x-m>1.634</x-m>
+			<x-m>1.38</x-m>
 			<y-m>-1.927</y-m>
 			<z-m>-1.101</z-m>
 		</slave-center>
@@ -640,7 +640,7 @@
 		<type>locked-track</type>
 		<object-name>RightMainGearUpperTorqueLink</object-name>
 		<center> <!-- upper hinge -->
-			<x-m>1.572</x-m>
+			<x-m>1.318</x-m>
 			<y-m>1.927</y-m>
 			<z-m>-1.003</z-m>
 		</center>
@@ -657,14 +657,14 @@
 		
 		<target-name>RightMainGearCylinder</target-name>
 		<target-center> <!-- lower hinge -->
-			<x-m>1.567</x-m>
+			<x-m>1.313</x-m>
 			<y-m>1.927</y-m>
 			<z-m>-1.196</z-m>
 		</target-center>
 		
 		<slave-name>RightMainGearLowerTorqueLink</slave-name>
 		<slave-center> <!-- middle hinge -->
-			<x-m>1.634</x-m>
+			<x-m>1.38</x-m>
 			<y-m>1.927</y-m>
 			<z-m>-1.101</z-m>
 		</slave-center>
