@@ -508,14 +508,26 @@
 					<rated-volts>28</rated-volts>
 					<rated-amps>8.929</rated-amps>
 				</landing-light>
+				<landing-light-motor n="0">
+					<rated-volts>28</rated-volts>
+					<rated-amps>3.5</rated-amps>
+				</landing-light-motor>
 				<landing-light n="1">
 					<rated-volts>28</rated-volts>
 					<rated-amps>8.929</rated-amps>
 				</landing-light>
+				<landing-light-motor n="1">
+					<rated-volts>28</rated-volts>
+					<rated-amps>3.5</rated-amps>
+				</landing-light-motor>
 				<rotating-beacon>
 					<rated-volts>28</rated-volts>
 					<rated-amps>3.1</rated-amps>
 				</rotating-beacon>
+				<rotating-beacon-motor>
+					<rated-volts>28.5</rated-volts>
+					<rated-amps>0.24</rated-amps>
+				</rotating-beacon-motor>
 			</consumers>
 		</electrical>
 	</systems>
