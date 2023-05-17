@@ -7,64 +7,24 @@
 		<version>$Revision: 1.80 $</version>
 		<description> Models a c310. </description>
 	</fileheader>
-	<!--
-  File:     c310.xml
-  Inputs:
-    name:          c310
-    type:          Multi-engine Glider, Small Commuter
-    stall speed:   73.00 kt
-    max weight:    5400.00 lbs
-    length:        27.00 ft
-    wing: 
-     span:         35.00 ft
-     area:         175.00 ft2
-     mean chord:   4.06 ft
-     aspect ratio: 7.78:1
-     taper ratio:  0.67:1
-     incidence:    2.50 degrees
-     dihedral:     5.00 degrees
-     sweep:        0.00 degrees
-
-    no. engines:   2
-    engine type:   Piston Engine
-    engine layout: wings
-
-    gear type:     tricycle
-    steering type: steering
-    retractable?:  yes
-
-  Outputs:
-    wing loading:       30.86 lbs/sq-ft
-     - thickness ratio: 7.24%
-    payload:            1561.80 lbs
-    CL-alpha:           5.24 per radian
-    CL-0:               0.35
-    CL-max:             1.71
-    CD-0:               0.02
-    K:                  0.04
-    Mcrit:              0.72
-
-    min. turn radius    260.48 ft
-    max. turn rate:     0.52 deg/s
--->
 	<metrics>
-		<wingarea unit="FT2">179</wingarea>
-		<wingspan unit="FT">35</wingspan>
+		<wingarea unit="FT2">175</wingarea>
+		<wingspan unit="FT">35.77</wingspan>
 		<wing_incidence unit="DEG">2.5</wing_incidence>
-		<chord unit="FT">5.13</chord>
-		<htailarea unit="FT2">28</htailarea>
-		<htailarm unit="FT">13.5</htailarm>
-		<vtailarea unit="FT2">31.5</vtailarea>
-		<vtailarm unit="FT">13.5</vtailarm>
+		<chord unit="FT">5.08</chord>
+		<htailarea unit="FT2">22.1</htailarea>
+		<htailarm unit="FT">19</htailarm>
+		<vtailarea unit="FT2">11.7</vtailarea>
+		<vtailarm unit="FT">20.1</vtailarm>
 		<location name="AERORP" unit="FT">
 			<x>3.12</x>
 			<y>0</y>
 			<z>-1.12</z>
 		</location>
 		<location name="EYEPOINT" unit="IN">
-			<x>40</x>
+			<x>53</x>
 			<y>-12</y>
-			<z>28</z>
+			<z>8</z>
 		</location>
 		<location name="VRP" unit="IN">
 			<x>0</x>
@@ -87,36 +47,36 @@
 		<pointmass name="Pilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>36.25</x>
+				<x>46</x>
 				<y>-10.5</y>
-				<z>4</z>
+				<z>1</z>
 			</location>
 		</pointmass>		
 
 		<pointmass name="Copilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>36.25</x>
+				<x>46</x>
 				<y>10.5</y>
-				<z>4</z>
+				<z>1</z>
 			</location>
 		</pointmass>
 			
-		<pointmass name="seat 3 STD">
+		<pointmass name="Left passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>71</x>
+				<x>78</x>
 				<y>-10.5</y>
-				<z>4</z>
+				<z>1</z>
 			</location>
 		</pointmass>
 			
-		<pointmass name="seat 4 STD">
+		<pointmass name="Right passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>71</x>
+				<x>78</x>
 				<y>10.5</y>
-				<z>4</z>
+				<z>1</z>
 			</location>
 		</pointmass>			
 <!-- later models only		
@@ -138,21 +98,12 @@
 			</location>
 		</pointmass>				
 --> 						
-		<pointmass name="Baggage STA.96">
-			<weight unit="LBS">50</weight>
+		<pointmass name="Baggage">
+			<weight unit="LBS">100</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>98</x>
+				<x>96</x>
 				<y>0</y>
-				<z>-12</z>
-			</location>
-		</pointmass>
-
-		<pointmass name="Baggage STA.124">
-			<weight unit="LBS">50</weight>
-			<location name="POINTMASS" unit="IN">
-				<x>125</x>
-				<y>0</y>
-				<z>-12</z>
+				<z>-11</z>
 			</location>
 		</pointmass>
 	</mass_balance>
@@ -166,7 +117,7 @@
 				<location unit="IN">
 					<x>-22.5</x>
 					<y>-76.7</y>
-					<z>2.5</z>
+					<z>-16.7</z>
 				</location>
 				<orient unit="DEG">
 					<pitch>0</pitch>
@@ -184,7 +135,7 @@
 				<location unit="IN">
 					<x>-22.5</x>
 					<y>76.7</y>
-					<z>2.5</z>
+					<z>-16.7</z>
 				</location>
 				<orient unit="DEG">
 					<pitch>0</pitch>
@@ -196,9 +147,9 @@
 		
 		<tank type="FUEL" number="0">
 			<location unit="IN">
-				<x>32.5</x>
-				<y>-216</y>
-				<z>-14</z>
+				<x>35.4</x>
+				<y>-214.4</y>
+				<z>-11.5</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
@@ -207,9 +158,9 @@
 		
 		<tank type="FUEL" number="1">
 			<location unit="IN">
-				<x>32.5</x>
-				<y>216</y>
-				<z>-14</z>
+				<x>35.4</x>
+				<y>214.4</y>
+				<z>-11.5</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
@@ -220,11 +171,11 @@
 	<ground_reactions>
 		<contact type="BOGEY" name="NOSE">
 			<location unit="IN">
-				<x>-62.7</x>
+				<x>-60.3</x>
 				<y>0</y>
-				<z>-49.2</z>
+				<z>-70.4</z>
 			</location>
-			<static_friction>0.8</static_friction>
+			<static_friction>1.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
 			<spring_coeff unit="LBS/FT">1620</spring_coeff>
@@ -236,9 +187,9 @@
 		
 		<contact type="BOGEY" name="LEFT_MAIN">
 			<location unit="IN">
-				<x>48.3</x>
+				<x>50.6</x>
 				<y>-74.5</y>
-				<z>-49.2</z>
+				<z>-66.7</z>
 			</location>
 			<static_friction>0.8</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -252,9 +203,9 @@
 		
 		<contact type="BOGEY" name="RIGHT_MAIN">
 			<location unit="IN">
-				<x>48.3</x>
+				<x>50.6</x>
 				<y>74.5</y>
-				<z>-49.2</z>
+				<z>-66.7</z>
 			</location>
 			<static_friction>0.8</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -266,11 +217,11 @@
 			<retractable>1</retractable>
 		</contact>
 		
-		<contact type="STRUCTURE" name="LEFT_WING">
+		<contact type="STRUCTURE" name="Left wing tip tank front tip">
 			<location unit="IN">
-				<x>-6.7</x>
-				<y>-214.2</y>
-				<z>8.1</z>
+				<x>-6.5</x>
+				<y>-214.4</y>
+				<z>-13.7</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -278,11 +229,35 @@
 			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
 		</contact>
 		
-		<contact type="STRUCTURE" name="RIGHT_WING">
+		<contact type="STRUCTURE" name="Left wing tip tank rear tip">
 			<location unit="IN">
-				<x>-6.7</x>
-				<y>214.2</y>
-				<z>8.1</z>
+				<x>87.8</x>
+				<y>-214.4</y>
+				<z>-8.7</z>
+			</location>
+			<static_friction>0.5</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
+		</contact>
+		
+		<contact type="STRUCTURE" name="Right wing tip tank front tip">
+			<location unit="IN">
+				<x>-6.5</x>
+				<y>214.4</y>
+				<z>-13.7</z>
+			</location>
+			<static_friction>0.5</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
+		</contact>
+		
+		<contact type="STRUCTURE" name="Right wing tip tank rear tip">
+			<location unit="IN">
+				<x>87.8</x>
+				<y>214.4</y>
+				<z>-8.7</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
