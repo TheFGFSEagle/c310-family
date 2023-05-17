@@ -1,0 +1,6 @@
+C310P to C310 FDM conversion to-do-list
+- tuning clp to more neutral
+- correcting lift and drag for 45°-flaps instead of 35°-flaps
+- correcting lateral stability for missing ventral fin
+
+author: Ysop/FGFS
