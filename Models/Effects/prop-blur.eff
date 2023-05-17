@@ -54,13 +54,13 @@
 				<color-mode><use>material/color-mode</use></color-mode>
 			</material>
 			<blend>
-				<active><use>blend/active</use></active>
-				<source><use>blend/source</use></source>
-				<destination><use>blend/destination</use></destination>
+				<active>true</active>
+				<source>src-alpha</source>
+				<destination>one-minus-src-alpha</destination>
 			</blend>
 			<shade-model><use>shade-model</use></shade-model>
-			<cull-face>off</cull-face>
-			<rendering-hint><use>rendering-hint</use></rendering-hint>
+			<cull-face>back</cull-face>
+			<rendering-hint>transparent</rendering-hint>
 			<render-bin>
 				<bin-number>111</bin-number>
 				<bin-name>DepthSortedBin</bin-name>
