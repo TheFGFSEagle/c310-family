@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>fuel-quantity.ac</path>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftNeedle</object-name>
+		<axis>
+			<object-name>LeftNeedleAxis</object-name>
+		</axis>
+		<property>consumables/fuel/tank[0]/level-gal_us</property>
+		<factor>-1.78</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>RightNeedle</object-name>
+		<axis>
+			<object-name>RightNeedleAxis</object-name>
+		</axis>
+		<property>consumables/fuel/tank[1]/level-gal_us</property>
+		<factor>1.78</factor>
+	</animation>
+</PropertyList>
