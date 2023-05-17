@@ -63,6 +63,20 @@
 				<show-yokes type="bool">true</show-yokes>
 			</controls>
 			
+			<cabin-door>
+				<pos-norm type="double">0</pos-norm>
+				<handle-pos-norm type="double">0</handle-pos-norm>
+			</cabin-door>
+			
+			<baggage-door>
+				<pos-norm type="double">0</pos-norm>
+			</baggage-door>
+			
+			<openable-window>
+				<pos-norm type="double">0</pos-norm>
+				<handle-pos-norm type="double">0</handle-pos-norm>
+			</openable-window>
+			
 			<lights>
 				<landing>
 					<max-extension-deg type="double">83.25</max-extension-deg>

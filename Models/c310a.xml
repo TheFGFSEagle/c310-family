@@ -52,6 +52,7 @@
 		<object-name>NoseGearDoorForward</object-name>
 		<object-name>NoseGearDoorRearLeft</object-name>
 		<object-name>NoseGearDoorRearRight</object-name>
+		<object-name>OpenableWindowFrameExterior</object-name>
 		<object-name>PitotTube</object-name>
 		<object-name>RetractableStep</object-name>
 		<object-name>RightAileron</object-name>
@@ -869,5 +870,155 @@
 			<blue>0.95</blue>
 			<factor-prop>sim/model/lights/landing[1]/brightness-norm</factor-prop>
 		</emission>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>OpenableWindowHandle</object-name>
+		<axis>
+			<object-name>OpenableWindowHandleAxis</object-name>
+		</axis>
+		<property>sim/model/openable-window/handle-pos-norm</property>
+		<factor>90</factor>
+		<action>
+			<binding>
+				<condition>
+					<equals>
+						<property>sim/model/openable-window/pos-norm</property>
+						<value>0</value>
+					</equals>
+				</condition>
+				<command>property-adjust</command>
+				<property>sim/model/openable-window/handle-pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+			<binding>
+				<condition>
+					<equals>
+						<property>sim/model/openable-window/handle-pos-norm</property>
+						<value>1</value>
+					</equals>
+				</condition>
+				<command>property-adjust</command>
+				<property>sim/model/openable-window/pos-norm</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>OpenableWindow</object-name>
+		<object-name>OpenableWindowFrameExterior</object-name>
+		<object-name>OpenableWindowFrameInterior</object-name>
+		<object-name>OpenableWindowLatch</object-name>
+		<object-name>OpenableWindowHandle</object-name>
+		<axis>
+			<object-name>OpenableWindowAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property>sim/model/openable-window/pos-norm</property>
+		<factor>90</factor>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>CabinDoorHandle</object-name>
+		<axis>
+			<object-name>CabinDoorHandleAxis</object-name>
+		</axis>
+		<property>sim/model/cabin-door/handle-pos-norm</property>
+		<factor>90</factor>
+		<action>
+			<binding>
+				<condition>
+					<or>
+						<greater-than-equals>
+							<property>sim/model/cabin-door/pos-norm</property>
+							<value>0.05</value>
+						</greater-than-equals>
+						<equals>
+							<property>sim/model/cabin-door/pos-norm</property>
+							<value>0</value>
+						</equals>
+					</or>
+				</condition>
+				<command>property-adjust</command>
+				<property>sim/model/cabin-door/handle-pos-norm</property>
+				<factor>0.1</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>CabinDoorHandle</object-name>
+		<object-name>CabinDoorExterior</object-name>
+		<object-name>CabinDoorInterior</object-name>
+		<object-name>RightAshTray</object-name>
+		<axis>
+			<object-name>CabinDoorAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property>sim/model/cabin-door/pos-norm</property>
+		<factor>80</factor>
+		<action>
+			<binding>
+				<condition>
+					<less-than-equals>
+						<property>sim/model/cabin-door/pos-norm</property>
+						<value>0.05</value>
+					</less-than-equals>
+					<equals>
+						<property>sim/model/cabin-door/handle-pos-norm</property>
+						<value>1</value>
+					</equals>
+				</condition>
+				<command>property-adjust</command>
+				<property>sim/model/cabin-door/pos-norm</property>
+				<factor>0.025</factor>
+				<min>0</min>
+				<max>0.05</max>
+			</binding>
+			<binding>
+				<condition>
+					<greater-than-equals>
+						<property>sim/model/cabin-door/pos-norm</property>
+						<value>0.05</value>
+					</greater-than-equals>
+				</condition>
+				<command>property-adjust</command>
+				<property>sim/model/cabin-door/pos-norm</property>
+				<factor>0.025</factor>
+				<min>0.05</min>
+				<max>1</max>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>BaggageDoorExterior</object-name>
+		<object-name>BaggageDoorInterior</object-name>
+		<axis>
+			<object-name>BaggageDoorAxis</object-name>
+		</axis>
+		<property>sim/model/baggage-door/pos-norm</property>
+		<factor>100</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>sim/model/baggage-door/pos-norm</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
 	</animation>
 </PropertyList>
