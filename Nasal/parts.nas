@@ -110,6 +110,9 @@ parts.Part = {
 	},
 	
 	_install: func(pn) {
+		if (!pn) {
+			return;
+		}
 		if (!contains(me.pns, pn)) {
 			die("Could not install part: No " ~ me.name ~ " with part number " ~ pn ~ " !");
 		}
@@ -131,6 +134,9 @@ parts.Part = {
 	},
 	
 	uninstall: func {
+		if (!me._pn) {
+			return
+		}
 		if (!me._cfg) {
 			logprint(DEV_WARN, "Trying to uninstall not currently installed part '" ~ me.name ~ "' !");
 			return;
@@ -140,6 +146,7 @@ parts.Part = {
 		me.selectedNode.setValue("");
 		me._pn = "";
 		me.node.getNode("current", 1).removeChildren();
+		me._cfg = nil;
 	},
 	
 	del: func {
@@ -271,6 +278,7 @@ parts.Dialog = {
 			partSelector.addMenuItem(pn, pn);
 		}
 		partSelector.setPropertySynced(1);
+		partSelector.setCurrentByValue(parts.selectedNode.getValue());
 	},
 	
 	show: func {
