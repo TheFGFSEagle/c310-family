@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<PropertyList include="c310-jsbsim-base.xml">
+	<sim>
+		<description>Cessna 310A (JSBsim)</description>
+		
+		<rating>
+			<FDM type="int">4</FDM>
+			<systems type="int">4</systems>
+			<cockpit type="int">4</cockpit>
+			<model type="int">5</model>
+		</rating>
+		
+		<flight-model>jsb</flight-model>
+		<aero>Systems/310a</aero>
+		
+		<model>
+			<path></path>
+		</model>
+		
+		<systems>
+			<electrical>
+				<path>Systems/electrical.xml</path>
+			</electrical>
+		</systems>
+		
+		<sound>
+			<path>Systems/sound.xml</path>
+		</sound>
+		
+		<view n="0">
+			<internal>true</internal>
+			<config>
+				<x-offset-m>-0.2</x-offset-m>
+				<y-offset-m>1.0</y-offset-m>
+				<z-offset-m>-0.2</z-offset-m>
+				<pitch-offset-deg>-15</pitch-offset-deg>
+			</config>
+		</view>
+	</sim>
+	
+	<limits>
+		<max-flap-extension-speed>
+			<flaps>0.3</flaps>
+			<speed>155</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed>
+			<flaps>0.6</flaps>
+			<speed>140</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed>
+			<flaps>0.9</flaps>
+			<speed>140</speed>
+		</max-flap-extension-speed>
+		<max-gear-extension-speed>140</max-gear-extension-speed>
+		<max-positive-g>3.5</max-positive-g>
+		<max-negative-g>-1.52</max-negative-g>
+		<vne>223</vne>
+	</limits>
+</PropertyList>
