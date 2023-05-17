@@ -7,7 +7,7 @@
 	<constspeed>1</constspeed>
 	<minpitch>12.5</minpitch>
 	<maxpitch>22.5</maxpitch>
-	<minrpm>2000</minrpm>
+	<minrpm>1800</minrpm>
 	<maxrpm>2600</maxrpm>	
 	
 	<table name="C_THRUST" type="internal">
