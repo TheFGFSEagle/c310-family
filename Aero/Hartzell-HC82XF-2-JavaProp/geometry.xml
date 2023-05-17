@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<proppy>
+ <run>
+  <creator>JavaProp</creator>
+  <host>ZEHN</host>
+  <user>frederic</user>
+  <timestamp>Wed Oct 19 16:49:08 2022</timestamp>
+ </run>
+ <geometry>
+  <name>Hartzell-HC82XF-2</name>
+  <diameter unit="m">2.1336</diameter>
+  <nblades>2</nblades>
+  <radius unit="m">1.0668</radius>
+  <r_spinner unit="m">0.15</r_spinner>
+  <pitch75 unit="m">2.0820127159477133</pitch75>
+  <beta75 unit="deg">22.496964783210984</beta75>
+  <section>
+   <rr>0.0</rr>
+   <cr>0.0</cr>
+   <beta unit="deg">0.0</beta>
+   <pitch unit="m">0.0</pitch>
+  </section>
+  <section>
+   <rr>0.05</rr>
+   <cr>0.0</cr>
+   <beta unit="deg">0.0</beta>
+   <pitch unit="m">0.0</pitch>
+  </section>
+  <section>
+   <rr>0.1</rr>
+   <cr>0.0</cr>
+   <beta unit="deg">0.0</beta>
+   <pitch unit="m">0.0</pitch>
+  </section>
+  <section>
+   <rr>0.15</rr>
+   <cr>0.15231642747446242</cr>
+   <beta unit="deg">71.06952686602534</beta>
+   <pitch unit="m">2.931547549705657</pitch>
+  </section>
+  <section>
+   <rr>0.2</rr>
+   <cr>0.16248121226570772</cr>
+   <beta unit="deg">63.51694901040899</beta>
+   <pitch unit="m">2.6907813924413664</pitch>
+  </section>
+  <section>
+   <rr>0.25</rr>
+   <cr>0.17019792048802612</cr>
+   <beta unit="deg">56.821937352142605</beta>
+   <pitch unit="m">2.562918177170546</pitch>
+  </section>
+  <section>
+   <rr>0.3</rr>
+   <cr>0.17459719993415815</cr>
+   <beta unit="deg">50.956350097737904</beta>
+   <pitch unit="m">2.4793539218420917</pitch>
+  </section>
+  <section>
+   <rr>0.35</rr>
+   <cr>0.17581080948659727</cr>
+   <beta unit="deg">45.84784064849598</beta>
+   <pitch unit="m">2.4164946495681026</pitch>
+  </section>
+  <section>
+   <rr>0.4</rr>
+   <cr>0.17439066045218302</cr>
+   <beta unit="deg">41.409481795308665</beta>
+   <pitch unit="m">2.3645499246199133</pitch>
+  </section>
+  <section>
+   <rr>0.45</rr>
+   <cr>0.17103698838346315</cr>
+   <beta unit="deg">37.54912442050326</beta>
+   <pitch unit="m">2.318604474452782</pitch>
+  </section>
+  <section>
+   <rr>0.5</rr>
+   <cr>0.16635774067871106</cr>
+   <beta unit="deg">34.18224206975042</beta>
+   <pitch unit="m">2.2761256239036096</pitch>
+  </section>
+  <section>
+   <rr>0.55</rr>
+   <cr>0.16082618954251385</cr>
+   <beta unit="deg">31.234284762468405</beta>
+   <pitch unit="m">2.2356981825262845</pitch>
+  </section>
+  <section>
+   <rr>0.6</rr>
+   <cr>0.15479491750724905</cr>
+   <beta unit="deg">28.640275989219504</beta>
+   <pitch unit="m">2.1963933803881623</pitch>
+  </section>
+  <section>
+   <rr>0.65</rr>
+   <cr>0.14846730396012556</cr>
+   <beta unit="deg">26.348668481140074</beta>
+   <pitch unit="m">2.157914125701413</pitch>
+  </section>
+  <section>
+   <rr>0.7</rr>
+   <cr>0.1420012219245715</cr>
+   <beta unit="deg">24.31337257235881</beta>
+   <pitch unit="m">2.119851930785725</pitch>
+  </section>
+  <section>
+   <rr>0.75</rr>
+   <cr>0.13547469247305358</cr>
+   <beta unit="deg">22.496964783210984</beta>
+   <pitch unit="m">2.0820127159477133</pitch>
+  </section>
+  <section>
+   <rr>0.8</rr>
+   <cr>0.12891027853126388</cr>
+   <beta unit="deg">20.86830227385746</beta>
+   <pitch unit="m">2.0442730637125774</pitch>
+  </section>
+  <section>
+   <rr>0.85</rr>
+   <cr>0.12227127693268323</cr>
+   <beta unit="deg">19.401426548686466</beta>
+   <pitch unit="m">2.00655422329655</pitch>
+  </section>
+  <section>
+   <rr>0.9</rr>
+   <cr>0.11542359187150314</cr>
+   <beta unit="deg">18.074636912784214</beta>
+   <pitch unit="m">1.9688061815462479</pitch>
+  </section>
+  <section>
+   <rr>0.95</rr>
+   <cr>0.10795068532820007</cr>
+   <beta unit="deg">16.869724163122473</beta>
+   <pitch unit="m">1.9309976772871842</pitch>
+  </section>
+  <section>
+   <rr>1.0</rr>
+   <cr>0.10033261055207728</cr>
+   <beta unit="deg">15.7722195801357</beta>
+   <pitch unit="m">1.8932203842158997</pitch>
+  </section>
+ </geometry>
+</proppy>
