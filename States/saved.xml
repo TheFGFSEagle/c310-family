@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<name type="string">saved</name>
+	<readable-name type="string">Saved</readable-name>
+	<description type="string">Saved state. You'll find the aircraft just as you left it.</description>
+	<overlay>
+	</overlay>
+</PropertyList>
