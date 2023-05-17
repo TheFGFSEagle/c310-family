@@ -92,10 +92,12 @@
 			</lights>
 		</model>
 		
+		<instrumentation>
+			<path>Systems/instrumentation.xml</path>
+		</instrumentation>
+		
 		<systems>
-			<electrical>
-				<path></path>
-			</electrical>
+			<path>Systems/systems.xml</path>
 			
 			<property-rule n="100">
 				<name>Instrument indications</name>
@@ -110,6 +112,11 @@
 			<property-rule n="102">
 				<name>Electrical system</name>
 				<path>Systems/electrical.xml</path>
+			</property-rule>
+			
+			<property-rule n="103">
+				<name>Vacuum system</name>
+				<path>Systems/vacuum.xml</path>
 			</property-rule>
 		</systems>
 		
@@ -196,10 +203,10 @@
 				<closed type="bool">true</closed>
 				<rated-amps>15</rated-amps>
 			</cabin-heater>
-			<flaps>
+			<flaps-motor>
 				<closed type="bool">true</closed>
 				<rated-amps>5</rated-amps>
-			</flaps>
+			</flaps-motor>
 			<fuel-quantity-compass-radio-lights>
 				<closed type="bool">true</closed>
 				<rated-amps>5</rated-amps>
@@ -500,6 +507,10 @@
 				</gpu>
 			</suppliers>
 			<consumers>
+				<flaps-motor>
+					<rated-volts>24</rated-volts>
+					<rated-amps>3.73</rated-amps>
+				</flaps-motor>
 				<nav-lights>
 					<rated-volts>28</rated-volts>
 					<rated-amps>3</rated-amps>

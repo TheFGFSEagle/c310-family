@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="flaps">
 	<channel name="Flaps">
-		<switch>
-			<name>Actuator rate</name>
+		<switch name="systems/flaps/actuator-cmd">
+			<name>Flap actuator command</name>
 			<default value="0"/>
-			<!-- 3° per second = 10 seconds for full extension / retraction -->
-			<test value="3">
-				fcs/flap-cmd-norm NE fcs/flap-pos-norm
-				<!-- /systems/flaps/powered EQ 1 -->
+			<test logic="AND" value="/controls/flight/flaps">
+				fcs/flap-pos-norm GT 0
+				fcs/flap-pos-norm LT 1
+				/systems/electrical/consumers/flaps-motor/volts GT 12
 			</test>
-			<output>/systems/flaps/actuator-rate</output>
-		</switch>
+		</fcs_function>
 		
-		<aerosurface_scale>
-			<name>Flap command as degrees</name>
-			<input>fcs/flap-cmd-norm</input>
-			<domain>
-				<min>0</min>
-				<max>1</max>
-			</domain>
-			<range>
+		<fcs_function name="systems/flaps/actuator-rate">
+			<name>Flap actuator rate</name>
+			<function>
+				<product>
+					<property>systems/flaps/actuator-cmd</property>
+					<quotient>
+						<property>/systems/electrical/consumers/flaps-motor/amps</property>
+						<property>/systems/electrical/consumers/flaps-motor/rated-amps</property>
+					</quotient>
+					<!-- 5° degrees flaps movement per sec - gives 9 secs for full extension -->
+					<value>5</value>
+				</product>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fcs/flap-pos-deg">
+			<name>Flap actuator</name>
+			<function>
+				<sum>
+					<property>fcs/flap-pos-deg</property>
+					<product>
+						<property>systems/flaps/actuator-rate</property>
+						<property>simulation/channel-dt</property>
+					</product>
+				</sum>
+			</function>
+			<clipto>
 				<min>0</min>
 				<max>45</max>
-			</range>
-			<output>fcs/flap-cmd-deg</output>
-		</aerosurface_scale>
+			</clipto>
+			<output>/surface-positions/flaps-deg</output>
+		</fcs_function>
 		
-		<actuator name="/systems/flaps/actuator">
-			<name>Flap actuator</name>
-			<input>fcs/flap-cmd-deg</input>
-			<rate_limit>/systems/flaps/actuator-rate</rate_limit>
-			<output>fcs/flap-pos-deg</output>
-		</actuator>
-		
-		<aerosurface_scale>
+		<aerosurface_scale name="fcs/flap-pos-norm">
 			<name>Flap position normalized</name>
 			<input>fcs/flap-pos-deg</input>
 			<domain>
@@ -44,7 +55,7 @@
 				<min>0</min>
 				<max>1</max>
 			</range>
-			<output>fcs/flap-pos-norm</output>
+			<output></output>
 		</aerosurface_scale>
 	</channel>
 </system>

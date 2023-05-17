@@ -651,6 +651,41 @@
 	</filter>
 	
 	<filter>
+		<name>Flaps motor volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/flaps-motor/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/systems/flaps/actuator-cmd</scale>
+			<abs type="bool">true</abs>
+		</input>
+		<output>
+			<property>consumers/flaps-motor/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Flaps motor amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/flaps-motor/volts</property>
+						<div>
+							<property>consumers/flaps-motor/rated-volts</property>
+							<property>consumers/flaps-motor/rated-amps</property>
+						</div>
+					</div>
+					<abs>
+						<property>/systems/flaps/actuator-cmd</property>
+					</abs>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/flaps-motor/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
@@ -941,5 +976,14 @@
 			</expression>
 		</input>
 		<output>suppliers/batteries/charge-norm</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<property>/systems/vacuum/suction-inhg</property>
+			<scale>0.2</scale>
+		</input>
+		<output>outputs/DG</output>
 	</filter>
 </PropertyList>
