@@ -14,7 +14,7 @@
 			<internal-format>normalized</internal-format>
 		</texture>
 		<num-blades>2</num-blades>
-		<rpm><use>engines/engine/thruster/rpm</use></rpm>
+		<rpm><use>engines/engine/rpm</use></rpm>
 		<sense>1</sense>
 	</parameters>
 
