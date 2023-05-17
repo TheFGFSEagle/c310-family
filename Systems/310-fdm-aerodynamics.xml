@@ -192,6 +192,50 @@
 		</ifthen>
 	</function>
 
+	<function name="aero/function/easymode_cmq">	
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>1.5</v>
+				</ifthen>
+	</function>
+
+
+	<function name="aero/function/easymode_clp">	
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>2</v>
+				</ifthen>
+	</function>
+
+	<function name="aero/function/easymode_clb">	
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>2</v>
+				</ifthen>
+	</function>
+
+
+	<function name="aero/function/easymode_cnb">	
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>1.5</v>
+				</ifthen>
+	</function>
+
+	<function name="aero/function/easymode_cnr">	
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>1.5</v>
+				</ifthen>
+	</function>
+
+
+
 	<function name="aero/function/kCLge">
 		<description>Change in lift due to ground effect</description>
 		<table>
@@ -1728,7 +1772,7 @@
 			</product>
 		</function>
 
-		<function name="aero/model_addeddrag">
+		<function name="aero/Drag_model">
 			<description>Drag increase for C310A</description>
 			<product>
 				<property>aero/qbar-psf</property>
@@ -1738,7 +1782,7 @@
 			</product>
 		</function>
 
-		<function name="aero/drag_finetune">
+		<function name="aero/force/Drag_finetune">
 			<description>Drag corrections Reynolds etc.</description>
 			<product>
 				<property>aero/qbar-psf</property>
@@ -3406,11 +3450,7 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/ci2vel</property>
 				<property>velocities/q-aero-rad_sec</property>
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>4</v>
-				</ifthen>
+				<property>aero/function/easymode_cmq</property>
 				<value>-26.3</value> 
 			</product>
 		</function>
@@ -3423,7 +3463,7 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/ci2vel</property>
 				<property>aero/alphadot-rad_sec</property>
-				<value>-12.7</value> <!-- * -->
+				<value>-1.6</value> <!-- * -->
 			</product>
 		</function>
 
@@ -3467,6 +3507,30 @@
 			</product>
 		</function>
 
+	<function name="aero/function/easymode_pitch">	
+			<description>increased pitch gradient</description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/cbarw-ft</property>
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>0</v>
+				<table>
+					<independentVar>aero/alpha-deg</independentVar>						
+					<tableData>
+						-10	0.5
+						-5	0.1
+						5	-0.1
+						10	-0.2
+						20	-0.5
+					</tableData>
+				</table>	
+				</ifthen>
+			</product>
+	</function>
+
+
 	</axis>
 	
 	<axis name="ROLL">
@@ -3479,7 +3543,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
-
+				<value>0.0</value>  <!-- test only -->
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
 				<independentVar	lookup="column">aero/function/thrust-state</independentVar>
@@ -3684,6 +3748,7 @@
 				<property>metrics/bw-ft</property>
 				<property>aero/beta-deg</property>
 				<property>aero/function/modelfactor_clbeta</property>
+				<property>aero/function/easymode_clb</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
 				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
@@ -3838,6 +3903,7 @@
 				<property>metrics/bw-ft</property>
 				<property>aero/bi2vel</property>
 				<property>velocities/p-aero-rad_sec</property>
+				<property>aero/function/easymode_clp</property>
 				<table>
 					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>
@@ -4534,6 +4600,7 @@
 				<property>metrics/bw-ft</property>
 				<property>aero/beta-deg</property>
 				<property>aero/function/modelfactor_cnbeta</property>
+				<property>aero/function/easymode_cnb</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
 				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
@@ -4709,13 +4776,12 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>aero/bi2vel</property>
+				<sum>
 				<property>velocities/r-aero-rad_sec</property>
+				<property>aero/betadot-rad_sec</property>
+				</sum>
 				<property>aero/function/modelfactor_cnr</property>
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>2</v>
-				</ifthen>
+				<property>aero/function/easymode_cnr</property>
 				<table>
 					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>
@@ -4727,6 +4793,21 @@
 				</table>
 			</product>
 		</function>
+		<function name="aero/moment/Yaw_dampbetadot">
+			<description>Yaw moment due to beta change </description>
+			<product>
+				<property>aero/qbar-psf</property>
+				<property>metrics/Sw-sqft</property>
+				<property>metrics/bw-ft</property>
+				<property>aero/bi2vel</property>
+				<property>aero/betadot-rad_sec</property>
+				<property>aero/function/modelfactor_cnr</property>
+				<value>
+					-0.15
+				</value>
+			</product>
+		</function>
+
 		
 		<function name="aero/moment/Yaw_rudder_sym">
 			<description>Yaw moment due to rudder sym</description>
