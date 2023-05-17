@@ -106,6 +106,12 @@
 		<object-name>RightLandingLightLampGlass</object-name>
 	</effect>
 	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>LeftSunVisor</object-name>
+		<object-name>RightSunVisor</object-name>
+	</effect>
+	
 	<model>
 		<usage>interior</usage>
 		<name>Interior</name>
@@ -877,6 +883,7 @@
 		<object-name>OpenableWindowHandle</object-name>
 		<axis>
 			<object-name>OpenableWindowHandleAxis</object-name>
+			<swap-axis-direction/>
 		</axis>
 		<property>sim/model/openable-window/handle-pos-norm</property>
 		<factor>90</factor>
