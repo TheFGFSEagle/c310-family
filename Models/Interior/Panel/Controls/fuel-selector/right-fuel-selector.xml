@@ -3,6 +3,11 @@
 	<path>fuel-selector.ac</path>
 	
 	<animation>
+		<condition>
+			<not>
+				<property>sim/equipment/auxiliary-fuel-tanks</property>
+			</not>
+		</condition>
 		<type>material</type>
 		<object-name>Face</object-name>
 		<texture>right-fuel-selector.png</texture>
