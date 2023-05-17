@@ -151,6 +151,11 @@
 				<name>Effects</name>
 				<path>Systems/effects.xml</path>
 			</property-rule>
+			
+			<property-rule n="106">
+				<name>Miscellaneous systems</name>
+				<path>Systems/misc.xml</path>
+			</property-rule>
 		</systems>
 		
 		<sound>
@@ -664,6 +669,12 @@
 			</pump>
 			<test-valve>1</test-valve>
 		</vacuum>
+		<stall-warning>
+			<vane-serviceable type="bool">true</vane-serviceable>
+			<horn-serviceable type="bool">true</horn-serviceable>
+			<stall-begin-aoa-deg>13</stall-begin-aoa-deg>
+			<stall-end-aoa-deg>16</stall-end-aoa-deg>
+		</stall-warning>
 	</systems>
 	
 	<input>

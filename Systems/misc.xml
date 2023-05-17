@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<property-root>/systems</property-root>
+	
+	<filter>
+		<name>Stall warning normalized stall</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/systems/stall-warning/vane-serviceable</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<div>
+					<difference>
+						<property>/orientation/alpha-deg</property>
+						<property>stall-warning/stall-begin-aoa-deg</property>
+					</difference>
+					<difference>
+						<property>stall-warning/stall-end-aoa-deg</property>
+						<property>stall-warning/stall-begin-aoa-deg</property>
+					</difference>
+				</div>
+			</expression>
+		</input>
+		<output>stall-warning/stall-norm</output>
+		<min>0</min>
+		<max>1</max>
+	</filter>
+	<filter>
+		<name>Stall warning horn volume</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<property>/systems/stall-warning/horn-serviceable</property>
+			</condition>
+			<expression>
+				<product>
+					<div>
+						<property>electrical/consumers/stall-warning-horn/volts</property>
+						<property>electrical/consumers/stall-warning-horn/rated-volts</property>
+					</div>
+					<property>stall-warning/stall-norm</property>
+				</product>
+			</expression>
+		</input>
+		<output>stall-warning/horn-volume-norm</output>
+	</filter>
+</PropertyList>
+

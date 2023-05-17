@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>0511062-7</part-number>
+	<brand>Safe Flight</brand>
+	<type>Model S</type>
+	<data-source>https://baspartsales.com/135-safe-flight-warning-unit/</data-source>
+	<data-source>https://www.wbparts.com/rfq/6240-01-205-7514.html</data-source>
+	<nasal>
+		<unload>
+			props.globals.getNode("/instrumentation/stall-warning", 1).remove();
+			props.globals.getNode("/systems/electrical/consumers/stall-warning-indicator", 1).remove()
+		</unload>
+	</nasal>
+	<overlay>
+		<instrumentation>
+			<stall-warning>
+				<serviceable type="bool">true</serviceable>
+			</stall-warning>
+		</instrumentation>
+		<systems>
+			<electrical>
+				<consumers>
+					<stall-warning-horn>
+						<rated-volts>28</rated-volts>
+						<rated-amps>0.4</rated-amps>
+					</stall-warning-horn>
+					<stall-warning-indicator>
+						<rated-volts>24</rated-volts>
+						<rated-amps>0.7</rated-amps>
+					</stall-warning-indicator>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+</PropertyList>
