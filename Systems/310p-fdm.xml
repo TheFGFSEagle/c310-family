@@ -37,9 +37,9 @@
 		<ixx unit="SLUG*FT2">8884</ixx>
 		<iyy unit="SLUG*FT2">1939</iyy>
 		<izz unit="SLUG*FT2">11001</izz>
-		<emptywt unit="LBS">3170</emptywt>
+		<emptywt unit="LBS">3411</emptywt>
 		<location name="CG" unit="IN">
-			<x>34.2</x>
+			<x>35.74</x>
 			<y>0</y>
 			<z>0</z>
 		</location>
@@ -47,7 +47,7 @@
 		<pointmass name="Pilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>37.5</x>
+				<x>37.05</x>
 				<y>-10.5</y>
 				<z>0</z>
 			</location>
@@ -56,7 +56,7 @@
 		<pointmass name="Copilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>37.5</x>
+				<x>37.05</x>
 				<y>10.5</y>
 				<z>0</z>
 			</location>
@@ -65,7 +65,7 @@
 		<pointmass name="Left forward passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>72.5</x>
+				<x>70.9</x>
 				<y>-10.5</y>
 				<z>0</z>
 			</location>
@@ -74,7 +74,7 @@
 		<pointmass name="Center forward passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>72.5</x>
+				<x>70.9</x>
 				<y>0</y>
 				<z>0</z>
 			</location>
@@ -83,7 +83,7 @@
 		<pointmass name="Right forward passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>72.5</x>
+				<x>70.9</x>
 				<y>10.5</y>
 				<z>0</z>
 			</location>
