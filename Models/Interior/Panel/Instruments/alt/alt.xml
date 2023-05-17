@@ -146,9 +146,4 @@
 			<property>/sim/panel-hotspots</property>
 		</condition>
 	</animation>
-	
-	<effect>
-		<inherits-from>../../../../Effects/p210n-instrument-glass</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
 </PropertyList>
