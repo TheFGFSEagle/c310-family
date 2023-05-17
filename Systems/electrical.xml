@@ -409,6 +409,84 @@
 	</filter>
 	
 	<filter>
+		<name>Clock backlight volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/red-inst-front-dome-baggage-light/closed</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>AT420100</value>
+				</equals>
+			</condition>
+			<property>bus/volts</property>
+			<scale>
+				<property>/controls/lighting/red-instrument-norm</property>
+			</scale>
+		</input>
+		<output>consumers/clock-backlight/volts</output>
+	</filter>
+	<filter>
+		<name>Clock backlight amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>AT420100</value>
+				</equals>
+			</condition>
+			<expression>
+				<div>
+					<property>consumers/clock-backlight/volts</property>
+					<div>
+						<property>consumers/clock-backlight/rated-volts</property>
+						<property>consumers/clock-backlight/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/clock-backlight/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Clock volts</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>AT420100</value>
+				</equals>
+			</condition>
+			<property>bus/volts</property>
+		</input>
+		<output>consumers/clock/volts</output>
+	</filter>
+	<filter>
+		<name>Clock amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>AT420100</value>
+				</equals>
+			</condition>
+			<expression>
+				<div>
+					<property>consumers/clock/volts</property>
+					<div>
+						<property>consumers/clock/rated-volts</property>
+						<property>consumers/clock/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/clock/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Nav lights volts</name>
 		<type>gain</type>
 		<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers/closed</gain>
@@ -925,6 +1003,8 @@
 					<property>consumers/landing-light-motor[0]/amps</property>
 					<property>consumers/landing-light-motor[1]/amps</property>
 					<property>consumers/rotating-beacon/amps</property>
+					<property>consumers/clock-backlight/amps</property>
+					<property>consumers/clock/amps</property>
 					<property>consumers/flaps-motor/amps</property>
 					<property>consumers/landing-gear-motor/amps</property>
 					<property>consumers/starter-motor[0]/amps</property>

@@ -273,4 +273,24 @@
 		<output>/sim/model/lights/landing[1]/brightness-norm</output>
 		<max-rate-of-change>3</max-rate-of-change>
 	</filter>
+	
+	<filter>
+		<name>Clock backlight intensity</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<equals>
+					<property>/parts/selected-clock</property>
+					<value>AT420100</value>
+				</equals>
+			</condition>
+			<expression>
+				<div>
+					<property>/systems/electrical/consumers/clock-backlight/amps</property>
+					<property>/systems/electrical/consumers/clock-backlight/rated-amps</property>
+				</div>
+			</expression>
+		</input>
+		<output>/instrumentation/clock/backlight-norm</output>
+	</filter>
 </PropertyList>

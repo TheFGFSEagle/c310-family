@@ -246,6 +246,12 @@
 	</model>
 	
 	<model>
+		<condition>
+			<equals>
+				<property>parts/selected-clock</property>
+				<value>35-380004-1</value>
+			</equals>
+		</condition>
 		<name>Clock</name>
 		<path>Instruments/clock/clock.xml</path>
 		<offsets>
@@ -255,6 +261,27 @@
 			<pitch-deg>-4.1</pitch-deg>
 		</offsets>
 	</model>
+	
+	<model>
+		<name>AstrotechLC2</name>
+		<path>Instruments/astrotech-lc2/astrotech-lc2.xml</path>
+		<offsets>
+			<x-m>0.52</x-m>
+			<y-m>-0.145</y-m>
+			<z-m>-0.04</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	<animation>
+		<type>select</type>
+		<object-name>AstrotechLC2</object-name>
+		<condition>
+			<equals>
+				<property>parts/selected-clock</property>
+				<value>AT420100</value>
+			</equals>
+		</condition>
+	</animation>
 	
 	<model>
 		<path>Instruments/rpm/rpm.xml</path>
