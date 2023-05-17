@@ -61,10 +61,10 @@
 				<expression>
 					<abs>
 						<dif>
-							<property>sim/model/lights/beacon/rotation-deg</property>
+							<property>sim/current-view/heading-offset-deg</property>
 							<mod>
 								<sum>
-									<property>sim/current-view/heading-offset-deg</property>
+									<property>sim/model/lights/beacon/rotation-deg</property>
 									<value>180</value>
 								</sum>
 								<value>360</value>
