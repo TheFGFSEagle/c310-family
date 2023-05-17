@@ -33,6 +33,5 @@
 			</images>
 		</texture>
 		<rain-enabled>2</rain-enabled>
-		<snow-enabled>2</snow-enabled>
 	</parameters>
 </PropertyList>
