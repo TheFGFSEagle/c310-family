@@ -2582,7 +2582,7 @@
 				<property>metrics/cbarw-ft</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/thrust-state-asym</independentVar>						
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
 				<tableData	breakPoint="0">
 					-1	0	1
@@ -3427,7 +3427,7 @@
 				<property>metrics/bw-ft</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/thrust-state-asym</independentVar>						
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>						
 				<tableData	breakPoint="0">
 -1	0	1
@@ -4750,7 +4750,7 @@
 				<property>fcs/rudder-pos-deg</property>
 				<table>
 				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/thrust-state-asym</independentVar>						
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>						
 				<tableData	breakPoint="0">
 						-1	1
