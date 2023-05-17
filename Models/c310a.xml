@@ -1080,4 +1080,119 @@
 			</binding>
 		</action>
 	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>AileronTrimWheel</object-name>
+		<axis>
+			<object-name>AileronTrimWheelAxis</object-name>
+		</axis>
+		<property>controls/flight/aileron-trim</property>
+		<factor>180</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/aileron-trim</property>
+				<factor>0.01</factor>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>aileron-trim-wheel</tooltip-id>
+				<label>Aileron trim: %s</label>
+				<measure-text>Aileron trim: 10.0° right</measure-text>
+				<property>surface-positions/aileron-trim-tab-deg</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] == 0) {
+						return "neutral";
+					} else if (arg[0] > 0) {
+						return sprintf("%.1f° left", abs(arg[0]));
+					} else {
+						return sprintf("%.1f° right", abs(arg[0]));
+					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>RudderTrimWheel</object-name>
+		<axis>
+			<object-name>RudderTrimWheelAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property>controls/flight/rudder-trim</property>
+		<factor>180</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/rudder-trim</property>
+				<factor>0.01</factor>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>rudder-trim-wheel</tooltip-id>
+				<label>Rudder trim: %s</label>
+				<measure-text>Rudder trim: 10.0° right</measure-text>
+				<property>surface-positions/rudder-trim-tab-deg</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] == 0) {
+						return "neutral";
+					} else if (arg[0] > 0) {
+						return sprintf("%.1f° left", abs(arg[0]));
+					} else {
+						return sprintf("%.1f° right", abs(arg[0]));
+					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>ElevatorTrimWheel</object-name>
+		<axis>
+			<object-name>ElevatorTrimWheelAxis</object-name>
+		</axis>
+		<property>controls/flight/elevator-trim</property>
+		<factor>180</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/flight/elevator-trim</property>
+				<factor>0.01</factor>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>elevator-trim-wheel</tooltip-id>
+				<label>Elevator trim: %s</label>
+				<measure-text>Elevator trim: 10.0° down</measure-text>
+				<property>surface-positions/elevator-trim-tab-deg</property>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] == 0) {
+						return "neutral";
+					} else if (arg[0] > 0) {
+						return sprintf("%.1f° up", abs(arg[0]));
+					} else {
+						return sprintf("%.1f° down", abs(arg[0]));
+					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
 </PropertyList>

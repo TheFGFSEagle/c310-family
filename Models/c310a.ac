@@ -23,7 +23,7 @@ MATERIAL "TailNavLightGlassMaterial" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.00
 MATERIAL "ThrottleMaterial" rgb 0.010 0.010 0.010  amb 0.010 0.010 0.010  emis 0.000 0.000 0.000  spec 0.200 0.200 0.200  shi 64 trans 0.000
 OBJECT world
 name "Blender_exporter_v3.3__c310a.ac"
-kids 174
+kids 177
 OBJECT poly
 name "AileronTrimTab"
 data 23
@@ -161,7 +161,7 @@ numvert 770
 0.60281 -0.5434 -0.06073
 0.59244 -0.55432 -0.0535
 0.59199 -0.55385 -0.0535
-0.5957 -0.55769 -0.0535
+0.59571 -0.55769 -0.0535
 0.59615 -0.55815 -0.0535
 0.60867 -0.54606 0.06547
 0.60996 -0.54481 -0.06547
@@ -282,7 +282,7 @@ numvert 770
 0.63405 -0.52063 -0.05905
 0.63215 -0.52248 0.05869
 0.63213 -0.52248 -0.0587
-0.63062 -0.52396 0.06033
+0.63062 -0.52397 0.06033
 0.63061 -0.52397 -0.06033
 0.63028 -0.52428 0.06254
 0.63027 -0.52429 -0.06254
@@ -319,7 +319,7 @@ numvert 770
 0.59067 -0.56256 -0.04544
 0.59018 -0.56304 0.0476
 0.583 -0.56998 0.03039
-0.58324 -0.56973 -0.03304
+0.58324 -0.56974 -0.03304
 0.58325 -0.56973 0.03305
 0.58299 -0.56998 -0.03038
 0.58146 -0.57146 0.02875
@@ -7189,6 +7189,21 @@ refs 3
 515 0.414462 0.370632
 702 0.414462 0.370887
 769 0.414462 0.370857
+kids 0
+OBJECT poly
+name "AileronTrimWheelAxis"
+data 9
+Plane.027
+crease 40.0
+numvert 2
+0.68867 -0.60366 -0
+0.54974 -0.45979 -0
+numsurf 1
+SURF 0X12
+mat 0
+refs 2
+0 0 0
+1 0 0
 kids 0
 OBJECT poly
 name "BaggageCompartment"
@@ -18754,6 +18769,21 @@ refs 4
 319 0.548925 0.786023
 0 0.549064 0.786022
 52 0.549064 0.786063
+kids 0
+OBJECT poly
+name "ElevatorTrimWheelAxis"
+data 9
+Plane.004
+crease 40.0
+numvert 2
+0.61535 -0.31172 0.18873
+0.61535 -0.31172 -0.01127
+numsurf 1
+SURF 0X12
+mat 0
+refs 2
+0 0 0
+1 0 0
 kids 0
 OBJECT group
 name "EmptyWeightCG"
@@ -127333,6 +127363,21 @@ refs 3
 515 0.414462 0.371061
 702 0.414462 0.371316
 769 0.414462 0.371285
+kids 0
+OBJECT poly
+name "RudderTrimWheelAxis"
+data 9
+Plane.005
+crease 40.0
+numvert 2
+0.60799 -0.49152 -0
+0.60799 -0.29152 -0
+numsurf 1
+SURF 0X12
+mat 0
+refs 2
+0 0 0
+1 0 0
 kids 0
 OBJECT poly
 name "TailNavLightGlass"
