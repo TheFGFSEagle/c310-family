@@ -24,7 +24,7 @@
 			<binding>
 				<command>property-adjust</command>
 				<property alias="/params/mixture-prop"/>
-				<factor>0.01</factor>
+				<factor alias="controls/engines/friction-factor"/>
 				<min>0</min>
 				<max>1</max>
 			</binding>

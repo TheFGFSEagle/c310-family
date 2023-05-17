@@ -136,6 +136,46 @@
 	</model>
 	
 	<model>
+		<name>LeftCarbHeatHandle</name>
+		<path>Controls/engine/carb-heat.xml</path>
+		<offsets>
+			<x-m>0.628</x-m>
+			<y-m>-0.04</y-m>
+			<z-m>-0.47</z-m>
+			<pitch-deg>-24</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<carb-heat-prop>controls/engines/engine[0]/carb-heat</carb-heat-prop>
+				<carb-heat-lock-prop>controls/engines/engine[0]/carb-heat-lock-norm</carb-heat-lock-prop>
+				<tooltip-id>left-carb-heat</tooltip-id>
+				<label>Left carburetor heat: %s</label>
+				<measure-text>Left carburetor: off, unlocked</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>RightCarbHeatHandle</name>
+		<path>Controls/engine/carb-heat.xml</path>
+		<offsets>
+			<x-m>0.628</x-m>
+			<y-m>0.04</y-m>
+			<z-m>-0.47</z-m>
+			<pitch-deg>-24</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<carb-heat-prop>controls/engines/engine[1]/carb-heat</carb-heat-prop>
+				<carb-heat-lock-prop>controls/engines/engine[1]/carb-heat-lock-norm</carb-heat-lock-prop>
+				<tooltip-id>right-carb-heat</tooltip-id>
+				<label>Right carburetor heat: %s</label>
+				<measure-text>Right carburetor: off, unlocked</measure-text>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
 		<path>Instruments/asi/asi.xml</path>
 		<offsets>
 			<x-m>0.52</x-m>
