@@ -17,22 +17,30 @@
 		<model>
 			<path>Aircraft/c310-family/Models/c310p.xml</path>
 		</model>
+		<variant-of>c310a</variant-of>
+		<primary-set type="bool">false</primary-set>
 	</sim>
+	
+	<fdm>
+		<jsbsim>
+			<systems>
+				<propulsion>
+					<prop-low-pitch type="double">12.8</prop-low-pitch>
+					<prop-low-rpm type="double">1800</prop-low-rpm>
+					<prop-high-pitch type="double">25</prop-high-pitch> <!-- guessed -->
+					<prop-high-rpm type="double">2625</prop-high-rpm>
+					<prop-feather-pitch type="double">82.6</prop-feather-pitch>
+				</propulsion>
+			</systems>
+		</jsbsim>
+	</fdm>
 	
 	<limits>
 		<max-flap-extension-speed>
-			<flaps>0.3</flaps>
-			<speed>155</speed>
+			<flaps>1</flaps>
+			<speed>139</speed>
 		</max-flap-extension-speed>
-		<max-flap-extension-speed>
-			<flaps>0.6</flaps>
-			<speed>140</speed>
-		</max-flap-extension-speed>
-		<max-flap-extension-speed>
-			<flaps>0.9</flaps>
-			<speed>140</speed>
-		</max-flap-extension-speed>
-		<max-gear-extension-speed>140</max-gear-extension-speed>
+		<max-gear-extension-speed>139</max-gear-extension-speed>
 		<max-positive-g>3.5</max-positive-g>
 		<max-negative-g>-1.52</max-negative-g>
 		<vne>223</vne>
@@ -46,32 +54,40 @@
 			<max-lb type="double">300.0</max-lb>
 		</weight>
 		<weight n="3">
-			<name type="string">Right forward passenger</name>
+			<name type="string">Center forward passenger</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">300.0</max-lb>
 		</weight>
 		<weight n="4">
-			<name type="string">Left rear passenger</name>
+			<name type="string">Right forward passenger</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">300.0</max-lb>
 		</weight>
-		<weight n="4">
-			<name type="string">Right rear passenger</name>
+		<weight n="5">
+			<name type="string">Left rear passenger</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">300.0</max-lb>
+			<hidden type="bool">true</hidden>
 		</weight>
 		<weight n="6">
-			<name type="string">Forward baggage</name>
+			<name type="string">Right rear passenger</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+			<min-lb type="double">0.0</min-lb>
+			<max-lb type="double">300.0</max-lb>
+			<hidden type="bool">true</hidden>
+		</weight>
+		<weight n="7">
+			<name type="string">Forward baggage</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">200.0</max-lb>
 		</weight>
-		<weight n="6">
+		<weight n="8">
 			<name type="string">Rear baggage</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
 			<min-lb type="double">0.0</min-lb>
 			<max-lb type="double">200.0</max-lb>
 		</weight>

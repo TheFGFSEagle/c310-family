@@ -70,6 +70,15 @@
 				<z>0</z>
 			</location>
 		</pointmass>
+		
+		<pointmass name="Center passenger">
+			<weight unit="LBS">140</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>71.25</x>
+				<y>0</y>
+				<z>0</z>
+			</location>
+		</pointmass>
 			
 		<pointmass name="Right passenger">
 			<weight unit="LBS">140</weight>
@@ -78,26 +87,8 @@
 				<y>10.5</y>
 				<z>0</z>
 			</location>
-		</pointmass>			
-<!-- later models only		
-		<pointmass name="seat 5 OPT">
-			<weight unit="LBS">110</weight>
-			<location name="POINTMASS" unit="IN">
-				<x>95</x>
-				<y>-10.5</y>
-				<z>4</z>
-			</location>
-		</pointmass>				
-			
-		<pointmass name="seat 6 OPT">
-			<weight unit="LBS">110</weight>
-			<location name="POINTMASS" unit="IN">
-				<x>95</x>
-				<y>10.5</y>
-				<z>4</z>
-			</location>
-		</pointmass>				
---> 						
+		</pointmass>
+				
 		<pointmass name="Baggage">
 			<weight unit="LBS">100</weight>
 			<location name="POINTMASS" unit="IN">
@@ -436,7 +427,7 @@
 	<system file="fuel"/>
 	<system file="engines"/>
 			
-	<flight_control file="Systems/fdm-fcs.xml"/>
+	<flight_control file="Systems/310a-fdm-fcs.xml"/>
 	
 	<aerodynamics file="Systems/310a-fdm-aerodynamics.xml"/>
 	

@@ -37,7 +37,7 @@
 		<ixx unit="SLUG*FT2">8884</ixx>
 		<iyy unit="SLUG*FT2">1939</iyy>
 		<izz unit="SLUG*FT2">11001</izz>
-		<emptywt unit="LBS">2905</emptywt>
+		<emptywt unit="LBS">3170</emptywt>
 		<location name="CG" unit="IN">
 			<x>34.2</x>
 			<y>0</y>
@@ -70,7 +70,16 @@
 				<z>0</z>
 			</location>
 		</pointmass>
-			
+		
+		<pointmass name="Center forward passenger">
+			<weight unit="LBS">140</weight>
+			<location name="POINTMASS" unit="IN">
+				<x>72.5</x>
+				<y>0</y>
+				<z>0</z>
+			</location>
+		</pointmass>
+		
 		<pointmass name="Right forward passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
@@ -80,7 +89,7 @@
 			</location>
 		</pointmass>
 				
-		<pointmass name="Left forward passenger">
+		<pointmass name="Left rear passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>105</x>
@@ -89,7 +98,7 @@
 			</location>
 		</pointmass>
 			
-		<pointmass name="Right forward passenger">
+		<pointmass name="Right rear passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>105</x>
@@ -445,7 +454,7 @@
 	<system file="fuel"/>
 	<system file="engines"/>
 			
-	<flight_control file="Systems/fdm-fcs.xml"/>
+	<flight_control file="Systems/310p-fdm-fcs.xml"/>
 	
 	<aerodynamics file="Systems/310p-fdm-aerodynamics.xml"/>
 	
