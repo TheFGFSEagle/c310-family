@@ -68,7 +68,6 @@
 	<filter>
 		<name>Available left alternator volts</name>
 		<type>gain</type>
-		<gain>/controls/circuit-breakers/left-alternator</gain>
 		<input>
 			<expression>
 				<product>
@@ -128,7 +127,6 @@
 	<filter>
 		<name>Available right alternator volts</name>
 		<type>gain</type>
-		<gain>/controls/circuit-breakers/right-alternator</gain>
 		<input>
 			<expression>
 				<product>
@@ -322,7 +320,7 @@
 	<filter>
 		<name>Output left alternator volts</name>
 		<type>gain</type>
-		<gain>/controls/circuit-breakers/left-alternator</gain>
+		<gain>/controls/circuit-breakers/left-alternator/closed</gain>
 		<input>
 			<property>suppliers/alternator[0]/available-volts</property>
 			<scale>/controls/engines/engine[0]/master-alt</scale>
@@ -332,7 +330,7 @@
 	<filter>
 		<name>Output right alternator volts</name>
 		<type>gain</type>
-		<gain>/controls/circuit-breakers/right-alternator</gain>
+		<gain>/controls/circuit-breakers/right-alternator/closed</gain>
 		<input>
 			<property>suppliers/alternator[1]/available-volts</property>
 			<scale>/controls/engines/engine[1]/master-alt</scale>

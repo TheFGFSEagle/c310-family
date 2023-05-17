@@ -180,35 +180,122 @@
 	
 	<controls>
 		<circuit-breakers>
-			<adf n="0" type="bool">true</adf>
-			<adf n="1" type="bool">true</adf>
-			<autopilot type="bool">true</autopilot>
-			<cabin-heater type="bool">true</cabin-heater>
-			<flaps type="bool">true</flaps>
-			<fuel-quantity-compass-radio-lights type="bool">true</fuel-quantity-compass-radio-lights>
-			<gear-indicator-warning-horn type="bool">true</gear-indicator-warning-horn>
-			<ils type="bool">true</ils>
-			<landing-gear-motor type="bool">true</landing-gear-motor>
-			<left-alternator type="bool">true</left-alternator>
-			<left-cht-gauge-turn-and-bank-flap-pos type="bool">true</left-cht-gauge-turn-and-bank-flap-pos>
-			<left-fuel-boost-pump-oat-gauge type="bool">true</left-fuel-boost-pump-oat-gauge>
-			<left-landing-light-front-cigar-lighter type="bool">true</left-landing-light-front-cigar-lighter>
-			<left-oil-temp-left-landing-light-motor type="bool">true</left-oil-temp-left-landing-light-motor>
-			<lf-radio type="bool">true</lf-radio>
-			<marker-beacon type="bool">true</marker-beacon>
-			<nav-lights-oil-dilution-primers type="bool">true</nav-lights-oil-dilution-primers>
-			<pitot-heat type="bool">true</pitot-heat>
-			<prop-anti-ice type="bool">true</prop-anti-ice>
-			<red-inst-front-dome-baggage-light type="bool">true</red-inst-front-dome-baggage-light>
-			<right-alternator type="bool">true</right-alternator>
-			<right-cht-gauge-stall-warn type="bool">true</right-cht-gauge-stall-warn>
-			<right-fuel-boost-pump-starters type="bool">true</right-fuel-boost-pump-starters>
-			<right-landing-light-rear-cigar-lighter type="bool">true</right-landing-light-rear-cigar-lighter>
-			<right-oil-temp-right-landing-light-motor-taxi-light type="bool">true</right-oil-temp-right-landing-light-motor-taxi-light>
-			<uv-inst-lights-rear-dome-light type="bool">true</uv-inst-lights-rear-dome-light>
-			<vhf n="0" type="bool">true</vhf>
-			<vhf n="1" type="bool">true</vhf>
-			<wing-deice-system-light type="bool">true</wing-deice-system-light>
+			<adf n="0">
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</adf>
+			<adf n="1">
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</adf>
+			<autopilot>
+				<closed type="bool">true</closed>
+				<rated-amps>10</rated-amps>
+			</autopilot>
+			<cabin-heater>
+				<closed type="bool">true</closed>
+				<rated-amps>15</rated-amps>
+			</cabin-heater>
+			<flaps>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</flaps>
+			<fuel-quantity-compass-radio-lights>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</fuel-quantity-compass-radio-lights>
+			<gear-indicator-warning-horn>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</gear-indicator-warning-horn>
+			<ils>
+				<closed type="bool">true</closed>
+				<rated-amps>10</rated-amps>
+			</ils>
+			<landing-gear-motor>
+				<closed type="bool">true</closed>
+				<rated-amps>15</rated-amps>
+			</landing-gear-motor>
+			<left-alternator>
+				<closed type="bool">true</closed>
+				<rated-amps>25</rated-amps>
+			</left-alternator>
+			<left-cht-gauge-turn-and-bank-flap-pos>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</left-cht-gauge-turn-and-bank-flap-pos>
+			<left-fuel-boost-pump-oat-gauge>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</left-fuel-boost-pump-oat-gauge>
+			<left-landing-light-front-cigar-lighter>
+				<closed type="bool">true</closed>
+				<rated-amps>15</rated-amps>
+			</left-landing-light-front-cigar-lighter>
+			<left-oil-temp-left-landing-light-motor>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</left-oil-temp-left-landing-light-motor>
+			<lf-radio>
+				<closed type="bool">true</closed>
+				<rated-amps>10</rated-amps>
+			</lf-radio>
+			<marker-beacon>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</marker-beacon>
+			<nav-lights-oil-dilution-primers>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</nav-lights-oil-dilution-primers>
+			<pitot-heat>
+				<closed type="bool">true</closed>
+				<rated-amps>10</rated-amps>
+			</pitot-heat>
+			<prop-anti-ice>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</prop-anti-ice>
+			<red-inst-front-dome-baggage-light>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</red-inst-front-dome-baggage-light>
+			<right-alternator>
+				<closed type="bool">true</closed>
+				<rated-amps>25</rated-amps>
+			</right-alternator>
+			<right-cht-gauge-stall-warn>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</right-cht-gauge-stall-warn>
+			<right-fuel-boost-pump-starters>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</right-fuel-boost-pump-starters>
+			<right-landing-light-rear-cigar-lighter>
+				<closed type="bool">true</closed>
+				<rated-amps>15</rated-amps>
+			</right-landing-light-rear-cigar-lighter>
+			<right-oil-temp-right-landing-light-motor-taxi-light>
+				<closed type="bool">true</closed>
+				<rated-amps>10</rated-amps>
+			</right-oil-temp-right-landing-light-motor-taxi-light>
+			<uv-inst-lights-rear-dome-light>
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</uv-inst-lights-rear-dome-light>
+			<vhf n="0">
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</vhf>
+			<vhf n="1">
+				<closed type="bool">true</closed>
+				<rated-amps>5</rated-amps>
+			</vhf>
+			<wing-deice-system-light>
+				<closed type="bool">true</closed>
+				<rated-amps>10</rated-amps>
+			</wing-deice-system-light>
 		</circuit-breakers>
 		<lighting>
 			<beacon type="bool">false</beacon>
