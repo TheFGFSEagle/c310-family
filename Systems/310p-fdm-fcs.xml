@@ -47,7 +47,7 @@
 					<table>
 						<independentVar lookup="row">fcs/elevator-cmd-norm-traverse</independentVar>
 						<tableData>
-							-1	-16
+							-1	-16.5
 							0	0
 							1	15
 						</tableData>
@@ -59,7 +59,7 @@
 				</difference>
 			</function>
 			<clipto>
-				<min>-16</min>
+				<min>-16.5</min>
 				<max>15</max>
 			</clipto>
 			<output>fcs/elevator-pos-deg</output>
@@ -69,7 +69,7 @@
 		<aerosurface_scale>
 			<input>fcs/elevator-pos-deg</input>
 			<domain>
-				<min>-16</min>
+				<min>-16.5</min>
 				<max>15</max>
 			</domain>
 			<range>
