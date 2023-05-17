@@ -10,20 +10,32 @@
 			<output>/controls/engines/engine[0]/propeller-feather</output>
 		</switch>
 		
+		<kinematic>
+			<input>fcs/feather-cmd-norm[0]</input>
+			<traverse>
+				<setting>
+					<position>0</position>
+					<time>0</time>
+				</setting>
+				<setting>
+					<position>1</position>
+					<time>5</time>
+				</setting>
+			</traverse>
+			<output>propulsion/engine[0]/feather-norm</output>
+		</kinematic>
+		
 		<fcs_function name="propulsion/engine[0]/blade-angle">
 			<function>
 				<ifthen>
 					<property>fcs/feather-pos-norm[0]</property>
-					<min>
-						<sum>
-							<property>propulsion/engine[0]/blade-angle</property>
-							<product>
-								<property>simulation/channel-dt</property>
-								<value>5</value>
-							</product>
-						</sum>
-						<value>82</value>
-					</min>
+					<table>
+						<independentVar lookup="row">propulsion[0]/engine/feather-norm</independentVar>
+						<tableData>
+							0	22.5
+							1	82
+						</tableData>
+					</table>
 					<min>
 						<max>
 							<sum>
@@ -54,7 +66,7 @@
 		<fcs_function name="fcs/advance-pos-norm[0]">
 			<function>
 				<table>
-					<independentVar lookup="row">fcs/feather-cmd-norm[0]</independentVar>
+					<independentVar lookup="row">fcs/advance-cmd-norm[0]</independentVar>
 					<tableData>
 						0.1	0
 						1	1
@@ -74,20 +86,32 @@
 			<output>/controls/engines/engine[1]/propeller-feather</output>
 		</switch>
 		
+		<kinematic>
+			<input>fcs/feather-pos-norm[1]</input>
+			<traverse>
+				<setting>
+					<position>0</position>
+					<time>0</time>
+				</setting>
+				<setting>
+					<position>1</position>
+					<time>5</time>
+				</setting>
+			</traverse>
+			<output>propulsion/engine[1]/feather-norm</output>
+		</kinematic>
+		
 		<fcs_function name="propulsion/engine[1]/blade-angle">
 			<function>
 				<ifthen>
 					<property>fcs/feather-pos-norm[1]</property>
-					<min>
-						<sum>
-							<property>propulsion/engine[1]/blade-angle</property>
-							<product>
-								<property>simulation/channel-dt</property>
-								<value>5</value>
-							</product>
-						</sum>
-						<value>82</value>
-					</min>
+					<table>
+						<independentVar lookup="row">propulsion/engine[1]/feather-norm</independentVar>
+						<tableData>
+							0	22.5
+							1	82
+						</tableData>
+					</table>
 					<min>
 						<max>
 							<sum>
@@ -118,12 +142,55 @@
 		<fcs_function name="fcs/advance-pos-norm[1]">
 			<function>
 				<table>
-					<independentVar lookup="row">fcs/feather-cmd-norm[1]</independentVar>
+					<independentVar lookup="row">fcs/advance-cmd-norm[1]</independentVar>
 					<tableData>
 						0.1	0
 						1	1
 					</tableData>
 				</table>
+			</function>
+		</fcs_function>
+	</channel>
+	
+	<channel name="Sums and means">
+		<fcs_function name="propulsion/mean-feather-pos-norm">
+			<function>
+				<quotient>
+					<sum>
+						<p>propulsion/engine[0]/feather-norm</p>
+						<p>propulsion/engine[1]/feather-norm</p>
+					</sum>
+					<value>2</value>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/thrust-coefficient-sum">
+			<input>propulsion/engine[0]/thrust-coefficient</input>
+			<input>propulsion/engine[1]/thrust-coefficient</input>
+		</summer>
+		
+		<fcs_function name="propulsion/thrust-state">
+			<function>
+				<ifthen>
+					<or>
+						<not>
+							<and>
+								<p>/engines/engine/running</p>
+								<p>/engines/engine[1]/running</p>
+							</and>
+						</not>
+						<p>propulsion/mean-feather-pos-norm</p>
+					</or>
+					<table>
+						<independentVar lookup="row">propulsion/mean-feather-pos-norm</independentVar>
+						<tableData>
+							0	-1
+							1	-2
+						</tableData>
+					</table>
+				  	<p>propulsion/thrust-coefficient-sum</p> 
+				</ifthen>
 			</function>
 		</fcs_function>
 	</channel>
