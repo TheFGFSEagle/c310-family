@@ -498,8 +498,20 @@
 			<consumers>
 				<nav-lights>
 					<rated-volts>28</rated-volts>
-					<rated-amps>1</rated-amps>
+					<rated-amps>3</rated-amps>
 				</nav-lights>
+				<landing-light n="0">
+					<rated-volts>28</rated-volts>
+					<rated-amps>8.929</rated-amps>
+				</landing-light>
+				<landing-light n="1">
+					<rated-volts>28</rated-volts>
+					<rated-amps>8.929</rated-amps>
+				</landing-light>
+				<rotating-beacon>
+					<rated-volts>28</rated-volts>
+					<rated-amps>1.55</rated-amps>
+				</rotating-beacon>
 			</consumers>
 		</electrical>
 	</systems>

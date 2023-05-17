@@ -6,12 +6,24 @@
 			<expression>
 				<product>
 					<property>/controls/lighting/nav-lights</property>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/nav-lights/amps</property>
+						<property>/systems/electrical/consumers/nav-lights/rated-amps</property>
+					</div>
+					<floor>
+						<product>
+							<mod>
+								<property>/sim/time/elapsed-sec</property>
+								<value>0.5</value>
+							</mod>
+							<value>4</value>
+						</product>
+					</floor>
 				</product>
 			</expression>
 		</input>
 		<output>/sim/model/lights/nav/brightness-norm</output>
-		<max-rate-of-change>3</max-rate-of-change>
+		<max-rate-of-change>4</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -117,7 +129,10 @@
 						<property>/controls/lighting/landing-light[0]</property>
 						<value>0</value>
 					</max>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/landing-light[0]/amps</property>
+						<property>/systems/electrical/consumers/landing-light[0]/rated-amps</property>
+					</div>
 				</product>
 			</expression>
 		</input>
@@ -177,7 +192,10 @@
 						<property>/controls/lighting/landing-light[1]</property>
 						<value>0</value>
 					</max>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/landing-light[1]/amps</property>
+						<property>/systems/electrical/consumers/landing-light[1]/rated-amps</property>
+					</div>
 				</product>
 			</expression>
 		</input>
