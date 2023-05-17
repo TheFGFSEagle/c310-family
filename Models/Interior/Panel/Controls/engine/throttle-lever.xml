@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>throttle-lever.ac</path>
+	
+	<params>
+		<throttle-prop>controls/engines/engine[0]/throttle</throttle-prop>
+		<tooltip-id>left-throttle</tooltip-id>
+		<label>Left throttle: %.0f%%</label>
+		<measure-text>Left throttle: 100%</measure-text>
+	</params>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>ThrottleLever</object-name>
+		<object-name>ThrottleHandle</object-name>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/throttle-prop"/>
+		<factor>60</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/throttle-prop"/>
+				<factor>0.01</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<measure-text alias="/params/measure-text"/>
+				<property alias="/params/throttle-prop"/>
+				<mapping>percent</mapping>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
