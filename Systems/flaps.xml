@@ -17,27 +17,15 @@
 		<switch name="systems/flaps/actuator-cmd">
 			<name>Flap actuator command</name>
 			<default value="0"/>
-			<test logic="AND" value="fcs/flap-cmd-norm">
-				fcs/flap-pos-norm GT 0
+			<test logic="AND" value="1">
+				fcs/flap-cmd-norm EQ 1
 				fcs/flap-pos-norm LT 1
-				/systems/electrical/consumers/flaps-motor/volts GT 12
+			</test>
+			<test logic="AND" value="-1">
+				fcs/flap-cmd-norm EQ -1
+				fcs/flap-pos-norm GT 0
 			</test>
 		</switch>
-		
-		<fcs_function name="systems/flaps/actuator-rate">
-			<name>Flap actuator rate</name>
-			<function>
-				<product>
-					<property>systems/flaps/actuator-cmd</property>
-					<quotient>
-						<property>/systems/electrical/consumers/flaps-motor/amps</property>
-						<property>/systems/electrical/consumers/flaps-motor/rated-amps</property>
-					</quotient>
-					<!-- 5° degrees flaps movement per sec - gives 9 secs for full extension -->
-					<value>5</value>
-				</product>
-			</function>
-		</fcs_function>
 		
 		<fcs_function name="fcs/flap-pos-deg">
 			<name>Flap actuator</name>
@@ -45,8 +33,14 @@
 				<sum>
 					<property>fcs/flap-pos-deg</property>
 					<product>
-						<property>systems/flaps/actuator-rate</property>
+						<property>systems/flaps/actuator-cmd</property>
 						<property>simulation/channel-dt</property>
+						<quotient>
+							<property>/systems/electrical/consumers/flaps-motor/amps</property>
+							<property>/systems/electrical/consumers/flaps-motor/rated-amps</property>
+						</quotient>
+						<!-- 5° degrees flaps movement per sec - gives 9 secs for full extension -->
+						<value>5</value>
 					</product>
 				</sum>
 			</function>
