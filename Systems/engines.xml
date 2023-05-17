@@ -143,47 +143,4 @@
 			</function>
 		</fcs_function>
 	</channel>
-	
-	<channel name="Sums and means">
-		<fcs_function name="propulsion/mean-feather-pos-norm">
-			<function>
-				<quotient>
-					<sum>
-						<p>propulsion/engine[0]/feather-norm</p>
-						<p>propulsion/engine[1]/feather-norm</p>
-					</sum>
-					<value>2</value>
-				</quotient>
-			</function>
-		</fcs_function>
-		
-		<summer name="propulsion/thrust-coefficient-sum">
-			<input>propulsion/engine[0]/thrust-coefficient</input>
-			<input>propulsion/engine[1]/thrust-coefficient</input>
-		</summer>
-		
-		<fcs_function name="propulsion/thrust-state">
-			<function>
-				<ifthen>
-					<or>
-						<not>
-							<and>
-								<p>/engines/engine/running</p>
-								<p>/engines/engine[1]/running</p>
-							</and>
-						</not>
-						<p>propulsion/mean-feather-pos-norm</p>
-					</or>
-					<table>
-						<independentVar lookup="row">propulsion/mean-feather-pos-norm</independentVar>
-						<tableData>
-							0	-1
-							1	-2
-						</tableData>
-					</table>
-				  	<p>propulsion/thrust-coefficient-sum</p> 
-				</ifthen>
-			</function>
-		</fcs_function>
-	</channel>
 </system>
