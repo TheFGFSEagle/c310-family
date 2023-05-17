@@ -525,6 +525,32 @@
 	</model>
 	
 	<model>
+		<condition>
+			<property>sim/equipment/rotating-beacon</property>
+		</condition>
+		<path>circuit-breaker-push-reset.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.3075</y-m>
+			<z-m>0.04</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property>controls/circuit-breakers/rotating-beacon/closed</property>
+				<tooltip-id>rotating-beacon-circuit-breaker</tooltip-id>
+				<label>Rotating beacon: %s</label>
+				<measure-text>Rotating beacon: tripped</measure-text>
+				<amps>5</amps>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<condition>
+			<not>
+				<property>sim/equipment/rotating-beacon</property>
+			</not>
+		</condition>
 		<path>circuit-breaker-placeholder.ac</path>
 		<offsets>
 			<x-m>0</x-m>

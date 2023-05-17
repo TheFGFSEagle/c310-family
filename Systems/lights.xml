@@ -33,8 +33,8 @@
 				<product>
 					<property>/controls/lighting/beacon</property>
 					<div>
-						<property>/systems/electrical/consumers/beacon/amps</property>
-						<property>/systems/electrical/consumers/beacon/rated-amps</property>
+						<property>/systems/electrical/consumers/rotating-beacon/amps</property>
+						<property>/systems/electrical/consumers/rotating-beacon/rated-amps</property>
 					</div>
 				</product>
 			</expression>
@@ -140,7 +140,7 @@
 			</expression>
 		</input>
 		<output>/sim/model/lights/landing[0]/brightness-norm</output>
-		<max-rate-of-change>2</max-rate-of-change>
+		<max-rate-of-change>3</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -203,6 +203,6 @@
 			</expression>
 		</input>
 		<output>/sim/model/lights/landing[1]/brightness-norm</output>
-		<max-rate-of-change>2</max-rate-of-change>
+		<max-rate-of-change>3</max-rate-of-change>
 	</filter>
 </PropertyList>
