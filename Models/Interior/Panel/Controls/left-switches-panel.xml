@@ -205,9 +205,7 @@
 				<property>controls/lighting/landing-light[0]</property>
 				<tooltip-id>left-landing-light-switch</tooltip-id>
 				<label>Left landing light: %s</label>
-				<one-text>extend and light</one-text>
-				<zero-text>off</zero-text>
-				<minus-one-text>retract</minus-one-text>
+				<script>return ["off", "extend / on", "retract"][arg[0]];</script>
 				<measure-text>Left landing light: extend and light</measure-text>
 			</params>
 		</overlay>
@@ -226,9 +224,7 @@
 				<property>controls/lighting/landing-light[1]</property>
 				<tooltip-id>right-landing-light-switch</tooltip-id>
 				<label>Right landing light: %s</label>
-				<one-text>extend and light</one-text>
-				<zero-text>off</zero-text>
-				<minus-one-text>retract</minus-one-text>
+				<script>return ["off", "extend / on", "retract"][arg[0]];</script>
 				<measure-text>Right landing light: extend and light</measure-text>
 			</params>
 		</overlay>
@@ -266,9 +262,7 @@
 				<property>controls/engines/prime</property>
 				<tooltip-id>prime-switch</tooltip-id>
 				<label>Prime: %s</label>
-				<one-text>right engine</one-text>
-				<zero-text>off</zero-text>
-				<minus-one-text>left engine</minus-one-text>
+				<script>return ["off", "right engine", "left engine"][arg[0]];</script>
 				<measure-text>Prime: right engine</measure-text>
 				<spring-loaded type="bool">true</spring-loaded>
 			</params>
@@ -288,9 +282,7 @@
 				<property>controls/cabin-air/ventilation</property>
 				<tooltip-id>cabin-ventilation-switch</tooltip-id>
 				<label>Cabin ventilation: %s</label>
-				<one-text>heat</one-text>
-				<zero-text>off</zero-text>
-				<minus-one-text>fan</minus-one-text>
+				<script>return ["off", "heat", "fan"][arg[0]];</script>
 				<measure-text>Cabin ventilation: heat</measure-text>
 			</params>
 		</overlay>

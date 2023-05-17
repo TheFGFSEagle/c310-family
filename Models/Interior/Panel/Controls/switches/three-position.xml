@@ -6,10 +6,8 @@
 		<property>controls/lighting/landing-light[0]</property>
 		<tooltip-id>left-landing-light-switch</tooltip-id>
 		<label>Left landing light: %s</label>
-		<one-text>extend and on</one-text>
-		<zero-text>off</zero-text>
-		<minus-one-text>retract</minus-one-text>
-		<measure-text>Left landing light: extend and on</measure-text>
+		<measure-text>Left landing light: extend / on</measure-text>
+		<script>return ["off", "extend / on", "retract"][arg[0]];</script>
 		<spring-loaded type="bool">false</spring-loaded>
 	</params>
 	
@@ -35,7 +33,7 @@
 		<release>
 			<binding>
 				<condition>
-					<value alias="/params/spring-loaded"/>
+					<value type="bool" alias="/params/spring-loaded"/>
 				</condition>
 				<command>property-assign</command>
 				<property alias="/params/property"/>
@@ -53,15 +51,7 @@
 				<measure-text alias="/params/measure-text"/>
 				<property alias="/params/property"/>
 				<mapping>nasal</mapping>
-				<script><![CDATA[
-					if (arg[0] == 1) {
-						return cmdarg().getValue("one-text");
-					} else if (arg[0] == 0) {
-						return cmdarg().getValue("zero-text");
-					} else {
-						return cmdarg().getValue("minus-one-text");
-					}
-				]]></script>
+				<script alias="/params/script"/>
 			</binding>
 		</hovered>
 	</animation>
