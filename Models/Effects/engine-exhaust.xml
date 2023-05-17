@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<params>
+		<rpm-prop>/engines/engine[0]/rpm</rpm-prop>
+		<running-prop>/engines/engine[0]/running</running-prop>
+		<combustion-efficiency-norm-prop>/engines/engine[0]/combustion-efficiency-norm</combustion-efficiency-norm-prop>
+	</params>
+	
+	<particlesystem>
+		<name>engine-exhaust</name>
+		<texture>smoke.png</texture>
+		<emissive>false</emissive>
+		<lighting>false</lighting>
+		
+		<offsets>
+			<x-m>-0.15</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+		
+		<placer>
+			<type>point</type>
+		</placer>
+
+		<attach>world</attach>
+		<shooter>
+			<theta-min-deg>85</theta-min-deg>
+			<theta-max-deg>95</theta-max-deg>
+			<phi-min-deg>5</phi-min-deg>
+			<phi-max-deg>-5</phi-max-deg>
+			<speed-mps>
+				<property alias="/params/rpm-prop"/>
+				<spread>5</spread>
+				<factor>0.004</factor>
+			</speed-mps>
+			<rotation-speed>
+				<x-min-deg-sec>-20</x-min-deg-sec>
+				<y-min-deg-sec>-20</y-min-deg-sec>
+				<z-min-deg-sec>-20</z-min-deg-sec>
+				<x-max-deg-sec>20</x-max-deg-sec>
+				<y-max-deg-sec>20</y-max-deg-sec>
+				<z-max-deg-sec>20</z-max-deg-sec>
+			</rotation-speed>
+		</shooter>
+		
+		<counter>
+			<particles-per-sec>
+				<property alias="/params/rpm-prop"/>
+				<factor>0.05</factor>
+				<spread>10</spread>
+			</particles-per-sec>
+		</counter>
+		
+		<align>billboard</align>
+		
+		<particle>
+			<start>
+				<color>
+					<red>
+						<value>0.2</value>
+					</red>
+					<green>
+						<value>0.2</value>
+					</green>
+					<blue>
+						<value>0.25</value>
+					</blue>
+					<alpha>
+						<property alias="/params/combustion-efficiency-norm-prop"/>
+						<interpolation>
+							<entry>
+								<ind>0</ind>
+								<dep>0.4</dep>
+							</entry>
+							<entry>
+								<ind>1</ind>
+								<dep>0.01</dep>
+							</entry>
+						</interpolation>
+					</alpha>
+				</color>
+				<size>
+					<value>0.1</value>
+				</size>
+			</start>
+			<end>
+				<color>
+					<red>
+						<value>0.2</value>
+					</red>
+					<green>
+						<value>0.2</value>
+					</green>
+					<blue>
+						<value>0.25</value>
+					</blue>
+					<alpha>
+						<property alias="/params/combustion-efficiency-norm-prop"/>
+						<interpolation>
+							<entry>
+								<ind>0</ind>
+								<dep>0.1</dep>
+							</entry>
+							<entry>
+								<ind>1</ind>
+								<dep>0.01</dep>
+							</entry>
+						</interpolation>
+					</alpha>
+				</color>
+				<size>
+					<value>1</value>
+				</size>
+			</end>
+			<life-sec>
+				<value>5</value>
+			</life-sec>
+			<mass-kg>0.1</mass-kg>
+			<radius-m>0.0125</radius-m>
+		</particle>
+		
+		<program>
+			<fluid>air</fluid>
+			<gravity>false</gravity>
+			<wind>true</wind>
+		</program>
+	</particlesystem>
+</PropertyList>

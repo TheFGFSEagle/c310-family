@@ -61,13 +61,25 @@
 		
 		<fcs_function name="fcs/advance-pos-norm[0]">
 			<function>
-				<table>
-					<independentVar lookup="row">fcs/advance-cmd-norm[0]</independentVar>
-					<tableData>
-						0.1	0
-						1	1
-					</tableData>
-				</table>
+				<max>
+					<difference>
+						<value>1</value>
+						<sum>
+							<value>-1</value>
+							<product>
+								<property>propulsion/engine[0]/oil/system/pressure-psi</property>
+								<v>0.04</v>
+							</product>
+						</sum>
+					</difference>
+					<table>
+						<independentVar lookup="row">fcs/advance-cmd-norm[0]</independentVar>
+						<tableData>
+							0.1	0
+							1	1
+						</tableData>
+					</table>
+				</max>
 			</function>
 		</fcs_function>
 	</channel>
@@ -133,13 +145,25 @@
 		
 		<fcs_function name="fcs/advance-pos-norm[1]">
 			<function>
-				<table>
-					<independentVar lookup="row">fcs/advance-cmd-norm[1]</independentVar>
-					<tableData>
-						0.1	0
-						1	1
-					</tableData>
-				</table>
+				<max>
+					<difference>
+						<value>1</value>
+						<sum>
+							<value>-1</value>
+							<product>
+								<property>propulsion/engine[1]/oil/system/pressure-psi</property>
+								<v>0.04</v>
+							</product>
+						</sum>
+					</difference>
+					<table>
+						<independentVar lookup="row">fcs/advance-cmd-norm[1]</independentVar>
+						<tableData>
+							0.1	0
+							1	1
+						</tableData>
+					</table>
+				</max>
 			</function>
 		</fcs_function>
 	</channel>

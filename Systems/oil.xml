@@ -1,87 +1,543 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="engines">
-	<property>propulsion/tank[16]/leak-flow-rate-pps</property>
-	<property>propulsion/tank[17]/leak-flow-rate-pps</property>
+	<property value="0.666">propulsion/engine[0]/oil/cooler/efficiency-norm</property>
+	<property value="0.666">propulsion/engine[1]/oil/cooler/efficiency-norm</property>
+	<property value="100">propulsion/engine[0]/oil/relief-valve/setting-psi</property>
+	<property value="100">propulsion/engine[1]/oil/relief-valve/setting-psi</property>
+	<property>propulsion/engine[0]/oil/relief-valve/stuck</property>
+	<property>propulsion/engine[1]/oil/relief-valve/stuck</property>
+	<property value="1250">propulsion/engine[0]/oil/pump/rated-speed-rpm</property>
+	<property value="1250">propulsion/engine[1]/oil/pump/rated-speed-rpm</property>
+	<property value="225">propulsion/engine[0]/oil/system/design-temperature-degf</property>
+	<property value="225">propulsion/engine[1]/oil/system/design-temperature-degf</property>
+	<property value="0.25">propulsion/engine[0]/oil/viscosity-index</property>
+	<property value="0.25">propulsion/engine[1]/oil/viscosity-index</property>
+	<property>propulsion/engine[0]/oil/reservoir/leak-flow-rate-lbs_s</property>
+	<property>propulsion/engine[1]/oil/reservoir/leak-flow-rate-lbs_s</property>
+	<property value="12">propulsion/engine[0]/oil/reservoir/capacity-quarts</property>
+	<property value="12">propulsion/engine[1]/oil/reservoir/capacity-quarts</property>
+	<property value="21.9">propulsion/engine[0]/oil/reservoir/level-lbs</property>
+	<property value="21.9">propulsion/engine[1]/oil/reservoir/level-lbs</property>
+	<property>propulsion/engine[0]/oil/system/leak-flow-rate-lbs_s</property>
+	<property>propulsion/engine[1]/oil/system/leak-flow-rate-lbs_s</property>
+	<property value="3">propulsion/engine[0]/oil/system/capacity-lbs</property>
+	<property value="3">propulsion/engine[1]/oil/system/capacity-lbs</property>
+	<property value="3">propulsion/engine[0]/oil/system/level-lbs</property>
+	<property value="3">propulsion/engine[1]/oil/system/level-lbs</property>
 	
-	<channel name="Oil">
-		<scheduled_gain name="propulsion/engine[0]/oil-consumption-quarts_hr">
+	<channel name="Left oil">
+		<pure_gain name="propulsion/engine[0]/oil/pump/speed-rpm">
 			<input>propulsion/engine[0]/engine-rpm</input>
-			<table>
-				<independentVar lookup="row">/orientation/pitch-deg</independentVar>
-				<independentVar lookup="column">propulsion/tank[16]/contents-lbs</independentVar>
-				<tableData>
-						0	3	6	12
-					-30	0	0	0	1
-					0	0	0	1	1
-					30	0	0	0	1
-				</tableData>
-			</table>
-			<gain>0.0002</gain> <!-- gives 0.76 lbs == 0.52 quarts per hour at 2600 RPM -->
-		</scheduled_gain>
-		
-		<pure_gain name="propulsion/engine[0]/oil-consumption-lbs_hr">
-			<gain>1.825</gain>
-			<input>propulsion/engine[0]/oil-consumption-quarts_hr</input>
+			<gain>1</gain>
 		</pure_gain>
+		<fcs_function name="propulsion/engine[0]/oil/pump/speed-norm">
+			<function>
+				<min>
+					<quotient>
+						<p>propulsion/engine[0]/oil/pump/speed-rpm</p>
+						<p>propulsion/engine[0]/oil/pump/rated-speed-rpm</p>
+					</quotient>
+					<v>1</v>
+				</min>
+			</function>
+		</fcs_function>
 		
-		<fcs_function name="propulsion/engine[0]/oil-consumption-lbs_s">
+		<fcs_function name="propulsion/engine[0]/oil/system/temperature-degf">
+			<function>
+				<sum>
+					<p>propulsion/engine[0]/oil/system/temperature-degf</p>
+					<product>
+						<quotient>
+							<difference>
+								<sum>
+									<p>propulsion/engine[0]/cht-degF</p>
+									<product>
+										<p>propulsion/engine[0]/oil/cooler/efficiency-norm</p>
+										<difference>
+											<p>propulsion/engine[0]/cht-degF</p>
+											<p>/environment/temperature-degf</p>
+										</difference>
+									</product>
+								</sum>
+								<p>propulsion/engine[0]/oil/system/temperature-degf</p>
+							</difference>
+							<min>
+								<quotient>
+									<v>5000</v>
+									<p>propulsion/engine[0]/oil/system/pressure-psi</p>
+								</quotient>
+								<v>1000</v>
+							</min>
+						</quotient>
+						<p>simulation/channel-dt</p>
+					</product>
+				</sum>
+			</function>
+			<output>/engines/engine[0]/oil-temperature-degf</output>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[0]/oil/system/pressure-psi">
+			<function>
+				<min>
+					<sum>
+						<product>
+							<p>propulsion/engine[0]/oil/relief-valve/setting-psi</p>
+							<p>propulsion/engine[0]/oil/system/level-norm</p>
+							<!-- see https://www.desmos.com/calculator/un0oscg6zz -->
+							<pow>
+								<p>propulsion/engine[0]/oil/pump/speed-rpm</p>
+								<v>2.5</v>
+							</pow>
+							<v>0.00018</v>
+						</product>
+						<product>
+							<difference>
+								<p>propulsion/engine[0]/oil/system/design-temperature-degf</p>
+								<p>propulsion/engine[0]/oil/system/temperature-degf</p>
+							</difference>
+							<p>propulsion/engine[0]/oil/viscosity-index</p>
+							<quotient>
+								<p>propulsion/engine[0]/oil/system/pressure-psi</p>
+								<p>propulsion/engine[0]/oil/relief-valve/setting-psi</p>
+							</quotient>
+						</product>
+					</sum>
+					<ifthen>
+						<p>propulsion/engine[0]/oil/relief-valve/stuck</p>
+						<v>99999</v> <!-- dummy for no clamping -->
+						<p>propulsion/engine[0]/oil/relief-valve/setting-psi</p>
+					</ifthen>
+				</min>
+			</function>
+			<output>/engines/engine[0]/oil-pressure-psi</output>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[0]/oil/system/intake-covered">
+			<function>
+				<floor>
+					<sum>
+						<table>
+							<independentVar lookup="row">/orientation/pitch-deg</independentVar>
+							<independentVar lookup="column">propulsion/engine[0]/oil/reservoir/level-lbs</independentVar>
+							<tableData>
+									0	3	6	12
+								-90	0	0	0	0
+								-60	0	0	0	1
+								-30	0	0	1	1
+								0	0	1	1	1
+								30	0	0	1	1
+								60	0	0	0	1
+								90	0	0	0	0
+							</tableData>
+						</table>
+						<v>0.5</v>
+					</sum>
+				</floor>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[0]/oil/consumption-quarts_hr">
+			<function>
+				<product>
+					<p>propulsion/engine[0]/engine-rpm</p>
+					<gt>
+						<p>propulsion/engine[0]/oil/system/level-norm</p>
+						<v>0</v>
+					</gt>
+					<v>0.0002</v> <!-- gives 0.52 quarts = 0.949 lbs per hour at 2600 RPM -->
+				</product>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[0]/oil/consumption-quarts_s">
 			<function>
 				<quotient>
-					<property>propulsion/engine[0]/oil-consumption-lbs_hr</property>
+					<p>propulsion/engine[0]/oil/consumption-quarts_hr</p>
+					<v>3600</v>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[0]/oil/consumption-norm">
+			<function>
+				<quotient>
+					<p>propulsion/engine[0]/oil/consumption-quarts_hr</p>
+					<v>0.52</v>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="propulsion/engine[0]/oil/consumption-lbs_hr">
+			<gain>1.825</gain>
+			<input>propulsion/engine[0]/oil/consumption-quarts_hr</input>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[0]/oil/consumption-lbs_s">
+			<function>
+				<quotient>
+					<property>propulsion/engine[0]/oil/consumption-lbs_hr</property>
 					<value>3600</value>
 				</quotient>
 			</function>
 		</fcs_function>
 		
-		<pure_gain name="propulsion/tank[16]/drain-flow-rate-pps">
-			<input>/controls/fuel/tank[16]/drain-valve</input>
+		<fcs_function name="propulsion/engine[0]/oil/system/in-flow-rate-lbs_s">
+			<function>
+				<sum>
+					<product>
+						<p>propulsion/engine[0]/oil/pump/speed-norm</p>
+						<p>propulsion/engine[0]/oil/system/intake-covered</p>
+						<v>1</v>
+					</product>
+					<p>propulsion/engine[0]/oil/consumption-lbs_s</p>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/oil/system/out-flow-rate-lbs_s">
+			<function>
+				<ifthen>
+					<gt>
+						<p>propulsion/engine[0]/oil/system/level-norm</p>
+						<v>0.95</v>
+					</gt>
+					<product>
+						<p>propulsion/engine[0]/oil/pump/speed-norm</p>
+						<v>1</v>
+					</product>
+					<product>
+						<p>propulsion/engine[0]/oil/system/level-lbs</p>
+						<v>0.005</v>
+					</product>
+				</ifthen>
+			</function>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/oil/system/level-lbs">
+			<function>
+				<sum>
+					<p>propulsion/engine[0]/oil/system/level-lbs</p>
+					<product>
+						<sum>
+							<p>propulsion/engine[0]/oil/system/in-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[0]/oil/system/out-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[0]/oil/system/leak-flow-rate-lbs_s</p>
+						</sum>
+						<p>simulation/channel-dt</p>
+					</product>
+				</sum>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>propulsion/engine[0]/oil/system/capacity-lbs</max>
+			</clipto>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[0]/oil/system/level-norm">
+			<function>
+				<quotient>
+					<p>propulsion/engine[0]/oil/system/level-lbs</p>
+					<p>propulsion/engine[0]/oil/system/capacity-lbs</p>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="propulsion/engine[0]/oil/reservoir/drain-flow-rate-lbs_s">
+			<input>/controls/engines/engine[0]/oil/drain-valve</input>
 			<gain>0.5</gain>
 		</pure_gain>
 		
-		<summer name="propulsion/tank[16]/external-flow-rate-pps">
-			<input>-propulsion/engine[0]/oil-consumption-lbs_s</input>
-			<input>-propulsion/tank[16]/leak-flow-rate-pps</input>
-			<input>-propulsion/tank[16]/drain-flow-rate-pps</input>
-		</summer>
+		<pure_gain name="propulsion/engine[0]/oil/reservoir/capacity-lbs">
+			<input>propulsion/engine[0]/oil/reservoir/capacity-quarts</input>
+			<gain>1.825</gain>
+		</pure_gain>
 		
-		<scheduled_gain name="propulsion/engine[1]/oil-consumption-quarts_hr">
+		<fcs_function name="propulsion/engine[0]/oil/reservoir/level-lbs">
+			<function>
+				<sum>
+					<p>propulsion/engine[0]/oil/reservoir/level-lbs</p>
+					<product>
+						<sum>
+							<p>-propulsion/engine[0]/oil/system/in-flow-rate-lbs_s</p>
+							<p>propulsion/engine[0]/oil/system/out-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[0]/oil/reservoir/drain-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[0]/oil/reservoir/leak-flow-rate-lbs_s</p>
+						</sum>
+						<p>simulation/channel-dt</p>
+					</product>
+				</sum>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>propulsion/engine[0]/oil/reservoir/capacity-lbs</max>
+			</clipto>
+		</fcs_function>
+		<pure_gain name="propulsion/engine[0]/oil/reservoir/level-quarts">
+			<input>propulsion/engine[0]/oil/reservoir/level-lbs</input>
+			<gain>0.547945205</gain>
+		</pure_gain>
+		<fcs_function name="propulsion/engine[0]/oil/reservoir/level-norm">
+			<function>
+				<quotient>
+					<p>propulsion/engine[0]/oil/reservoir/level-quarts</p>
+					<p>propulsion/engine[0]/oil/reservoir/capacity-quarts</p>
+				</quotient>
+			</function>
+		</fcs_function>
+	</channel>
+	
+	<channel name="Right oil">
+		<pure_gain name="propulsion/engine[1]/oil/pump/speed-rpm">
 			<input>propulsion/engine[1]/engine-rpm</input>
-			<table>
-				<independentVar lookup="row">/orientation/pitch-deg</independentVar>
-				<independentVar lookup="column">propulsion/tank[17]/contents-lbs</independentVar>
-				<tableData>
-						0	3	6	12
-					-30	0	0	0	1
-					0	0	0	1	1
-					30	0	0	0	1
-				</tableData>
-			</table>
-			<gain>0.0002</gain> <!-- gives 0.76 lbs == 0.52 quarts per hour at 2600 RPM -->
-		</scheduled_gain>
-		
-		<pure_gain name="propulsion/engine[1]/oil-consumption-lbs_hr">
-			<gain>1.825</gain>
-			<input>propulsion/engine[1]/oil-consumption-quarts_hr</input>
+			<gain>1</gain>
 		</pure_gain>
+		<fcs_function name="propulsion/engine[1]/oil/pump/speed-norm">
+			<function>
+				<min>
+					<quotient>
+						<p>propulsion/engine[1]/oil/pump/speed-rpm</p>
+						<p>propulsion/engine[1]/oil/pump/rated-speed-rpm</p>
+					</quotient>
+					<v>1</v>
+				</min>
+			</function>
+		</fcs_function>
 		
-		<fcs_function name="propulsion/engine[1]/oil-consumption-lbs_s">
+		<fcs_function name="propulsion/engine[1]/oil/system/temperature-degf">
+			<function>
+				<sum>
+					<p>propulsion/engine[1]/oil/system/temperature-degf</p>
+					<product>
+						<quotient>
+							<difference>
+								<sum>
+									<p>propulsion/engine[1]/cht-degF</p>
+									<product>
+										<p>propulsion/engine[1]/oil/cooler/efficiency-norm</p>
+										<difference>
+											<p>propulsion/engine[1]/cht-degF</p>
+											<p>/environment/temperature-degf</p>
+										</difference>
+									</product>
+								</sum>
+								<p>propulsion/engine[1]/oil/system/temperature-degf</p>
+							</difference>
+							<min>
+								<quotient>
+									<v>5000</v>
+									<p>propulsion/engine[1]/oil/system/pressure-psi</p>
+								</quotient>
+								<v>1000</v>
+							</min>
+						</quotient>
+						<p>simulation/channel-dt</p>
+					</product>
+				</sum>
+			</function>
+			<output>/engines/engine[1]/oil-temperature-degf</output>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[1]/oil/system/pressure-psi">
+			<function>
+				<min>
+					<sum>
+						<product>
+							<p>propulsion/engine[1]/oil/relief-valve/setting-psi</p>
+							<p>propulsion/engine[1]/oil/system/level-norm</p>
+							<!-- see https://www.desmos.com/calculator/un0oscg6zz -->
+							<pow>
+								<p>propulsion/engine[1]/oil/pump/speed-rpm</p>
+								<v>2.5</v>
+							</pow>
+							<v>0.00018</v>
+						</product>
+						<product>
+							<difference>
+								<p>propulsion/engine[1]/oil/system/design-temperature-degf</p>
+								<p>propulsion/engine[1]/oil/system/temperature-degf</p>
+							</difference>
+							<p>propulsion/engine[1]/oil/viscosity-index</p>
+							<quotient>
+								<p>propulsion/engine[1]/oil/system/pressure-psi</p>
+								<p>propulsion/engine[1]/oil/relief-valve/setting-psi</p>
+							</quotient>
+						</product>
+					</sum>
+					<ifthen>
+						<p>propulsion/engine[1]/oil/relief-valve/stuck</p>
+						<v>99999</v> <!-- dummy for no clamping -->
+						<p>propulsion/engine[1]/oil/relief-valve/setting-psi</p>
+					</ifthen>
+				</min>
+			</function>
+			<output>/engines/engine[1]/oil-pressure-psi</output>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[1]/oil/system/intake-covered">
+			<function>
+				<floor>
+					<sum>
+						<table>
+							<independentVar lookup="row">/orientation/pitch-deg</independentVar>
+							<independentVar lookup="column">propulsion/engine[1]/oil/reservoir/level-lbs</independentVar>
+							<tableData>
+									0	3	6	12
+								-90	0	0	0	0
+								-60	0	0	0	1
+								-30	0	0	1	1
+								0	0	1	1	1
+								30	0	0	1	1
+								60	0	0	0	1
+								90	0	0	0	0
+							</tableData>
+						</table>
+						<v>0.5</v>
+					</sum>
+				</floor>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[1]/oil/consumption-quarts_hr">
+			<function>
+				<product>
+					<p>propulsion/engine[1]/engine-rpm</p>
+					<gt>
+						<p>propulsion/engine[1]/oil/system/level-norm</p>
+						<v>0</v>
+					</gt>
+					<v>0.0002</v> <!-- gives 0.52 quarts = 0.949 lbs per hour at 2600 RPM -->
+				</product>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[1]/oil/consumption-quarts_s">
 			<function>
 				<quotient>
-					<property>propulsion/engine[1]/oil-consumption-lbs_hr</property>
+					<p>propulsion/engine[1]/oil/consumption-quarts_hr</p>
+					<v>3600</v>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="propulsion/engine[1]/oil/consumption-norm">
+			<function>
+				<quotient>
+					<p>propulsion/engine[1]/oil/consumption-quarts_hr</p>
+					<v>0.52</v>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="propulsion/engine[1]/oil/consumption-lbs_hr">
+			<gain>1.825</gain>
+			<input>propulsion/engine[1]/oil/consumption-quarts_hr</input>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[1]/oil/consumption-lbs_s">
+			<function>
+				<quotient>
+					<property>propulsion/engine[1]/oil/consumption-lbs_hr</property>
 					<value>3600</value>
 				</quotient>
 			</function>
 		</fcs_function>
 		
-		<pure_gain name="propulsion/tank[17]/drain-flow-rate-pps">
-			<input>/controls/fuel/tank[17]/drain-valve</input>
+		<fcs_function name="propulsion/engine[1]/oil/system/in-flow-rate-lbs_s">
+			<function>
+				<sum>
+					<product>
+						<p>propulsion/engine[1]/oil/pump/speed-norm</p>
+						<p>propulsion/engine[1]/oil/system/intake-covered</p>
+						<v>1</v>
+					</product>
+					<p>propulsion/engine[1]/oil/consumption-lbs_s</p>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/oil/system/out-flow-rate-lbs_s">
+			<function>
+				<ifthen>
+					<gt>
+						<p>propulsion/engine[1]/oil/system/level-norm</p>
+						<v>0.95</v>
+					</gt>
+					<product>
+						<p>propulsion/engine[1]/oil/pump/speed-norm</p>
+						<v>1</v>
+					</product>
+					<product>
+						<p>propulsion/engine[1]/oil/system/level-lbs</p>
+						<v>0.005</v>
+					</product>
+				</ifthen>
+		</function>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/oil/system/level-lbs">
+			<function>
+				<sum>
+					<p>propulsion/engine[1]/oil/system/level-lbs</p>
+					<product>
+						<sum>
+							<p>propulsion/engine[1]/oil/system/in-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[1]/oil/system/out-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[1]/oil/system/leak-flow-rate-lbs_s</p>
+						</sum>
+						<p>simulation/channel-dt</p>
+					</product>
+				</sum>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>propulsion/engine[1]/oil/system/capacity-lbs</max>
+			</clipto>
+		</fcs_function>
+		<fcs_function name="propulsion/engine[1]/oil/system/level-norm">
+			<function>
+				<quotient>
+					<p>propulsion/engine[1]/oil/system/level-lbs</p>
+					<p>propulsion/engine[1]/oil/system/capacity-lbs</p>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="propulsion/engine[1]/oil/reservoir/drain-flow-rate-lbs_s">
+			<input>/controls/engines/engine[1]/oil/drain-valve</input>
 			<gain>0.5</gain>
 		</pure_gain>
 		
-		<summer name="propulsion/tank[17]/external-flow-rate-pps">
-			<input>-propulsion/engine[1]/oil-consumption-lbs_s</input>
-			<input>-propulsion/tank[17]/leak-flow-rate-pps</input>
-			<input>-propulsion/tank[17]/drain-flow-rate-pps</input>
-		</summer>
+		<pure_gain name="propulsion/engine[1]/oil/reservoir/capacity-lbs">
+			<input>propulsion/engine[1]/oil/reservoir/capacity-quarts</input>
+			<gain>1.825</gain>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[1]/oil/reservoir/level-lbs">
+			<function>
+				<sum>
+					<p>propulsion/engine[1]/oil/reservoir/level-lbs</p>
+					<product>
+						<sum>
+							<p>-propulsion/engine[1]/oil/system/in-flow-rate-lbs_s</p>
+							<p>propulsion/engine[1]/oil/system/out-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[1]/oil/reservoir/drain-flow-rate-lbs_s</p>
+							<p>-propulsion/engine[1]/oil/reservoir/leak-flow-rate-lbs_s</p>
+						</sum>
+						<p>simulation/channel-dt</p>
+					</product>
+				</sum>
+			</function>
+			<clipto>
+				<min>0</min>
+				<max>propulsion/engine[1]/oil/reservoir/capacity-lbs</max>
+			</clipto>
+		</fcs_function>
+		<pure_gain name="propulsion/engine[1]/oil/reservoir/level-quarts">
+			<input>propulsion/engine[1]/oil/reservoir/level-lbs</input>
+			<gain>0.547945205</gain>
+		</pure_gain>
+		<fcs_function name="propulsion/engine[1]/oil/reservoir/level-norm">
+			<function>
+				<quotient>
+					<p>propulsion/engine[1]/oil/reservoir/level-quarts</p>
+					<p>propulsion/engine[1]/oil/reservoir/capacity-quarts</p>
+				</quotient>
+			</function>
+		</fcs_function>
 	</channel>
 </system>
