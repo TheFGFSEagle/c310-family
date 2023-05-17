@@ -278,7 +278,7 @@ parts.Dialog = {
 			partSelector.addMenuItem(pn, pn);
 		}
 		partSelector.setPropertySynced(1);
-		partSelector.setCurrentByValue(parts.selectedNode.getValue());
+		partSelector.setCurrentByValue(part.selectedNode.getValue());
 	},
 	
 	show: func {
