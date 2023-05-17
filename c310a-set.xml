@@ -59,6 +59,21 @@
 		<model>
 			<path>Aircraft/c310-family/Models/c310a.xml</path>
 			
+			<effects>
+				<interior>
+					<windows>
+						<rain-enabled type="bool">true</rain-enabled>
+						<fog-enabled type="bool">true</fog-enabled>
+						<frost-enabled type="bool">true</frost-enabled>
+						<reflections-enabled type="bool">true</reflections-enabled>
+						<surface-mapping-scheme type="int">1</surface-mapping-scheme>
+					</windows>
+					<instruments>
+						<reflections-enabled type="bool">true</reflections-enabled>
+					</instruments>
+				</interior>
+			</effects>
+			
 			<controls>
 				<show-yokes type="bool">true</show-yokes>
 			</controls>
@@ -118,6 +133,11 @@
 				<name>Vacuum system</name>
 				<path>Systems/vacuum.xml</path>
 			</property-rule>
+			
+			<property-rule n="104">
+				<name>Effects</name>
+				<path>Systems/effects.xml</path>
+			</property-rule>
 		</systems>
 		
 		<sound>
@@ -127,6 +147,7 @@
 		<aircraft-data>
 			<path>/sim/model/controls/show-yokes</path>
 			<path>/sim/equipment</path>
+			<path>/sim/model/effects/interior/windows</path>
 		</aircraft-data>
 		
 		<view n="0">

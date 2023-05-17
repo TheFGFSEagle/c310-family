@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+	<name>Effects/interior-glass</name>
+	<inherits-from>Effects/glass</inherits-from>
+	<parameters>
+		<fog-level><use>sim/model/effects/interior/windows/fog-level</use></fog-level>
+		<frost-level><use>sim/model/effects/interior/windows/frost-level</use></frost-level>
+		<rnorm><use>sim/model/effects/interior/windows/rain-norm</use></rnorm>
+		<gsnorm><use>sim/model/effects/interior/windows/ground-splash-norm</use></gsnorm>
+		<surface-mapping-scheme type="int">sim/model/effects/interior/windows/surface-mapping-scheme</surface-mapping-scheme>
+		<glass-tint type="vec4d" n="0">0.692 1.0 1.0 1.0</glass-tint>
+		<!--<texture n="3">
+			<type>cubemap</type>
+			<images>
+				<positive-x>Aircraft/c310-family/Models/Effects/interior-reflection-px.png</positive-x>
+				<negative-x>Aircraft/c310-family/Models/Effects/interior-reflection-nx.png</negative-x>
+				<positive-y>Aircraft/c310-family/Models/Effects/interior-reflection-py.png</positive-y>
+				<negative-y>Aircraft/c310-family/Models/Effects/interior-reflection-ny.png</negative-y>
+				<positive-z>Aircraft/c310-family/Models/Effects/interior-reflection-pz.png</positive-z>
+				<negative-z>Aircraft/c310-family/Models/Effects/interior-reflection-nz.png</negative-z>
+			</images>
+		</texture>-->
+		<opacity-cube-center type="vec3d" n="0">1.2 0.0 0.5</opacity-cube-center>
+		<opacity-cube-scale type="vec3d" n="0">3.4 1.2 1.8</opacity-cube-scale>
+		<opacity-cube-angle type="float">0.0</opacity-cube-angle>
+		<use-reflection type="int"><use>sim/model/effects/interior/windows/reflections-enabled</use></use-reflection>
+		<reflection-strength type="float">1</reflection-strength>
+	</parameters>
+</PropertyList>
