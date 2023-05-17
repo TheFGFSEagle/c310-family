@@ -66,7 +66,6 @@
 						<fog-enabled type="bool">true</fog-enabled>
 						<frost-enabled type="bool">true</frost-enabled>
 						<reflections-enabled type="bool">true</reflections-enabled>
-						<surface-mapping-scheme type="int">1</surface-mapping-scheme>
 					</windows>
 					<instruments>
 						<reflections-enabled type="bool">true</reflections-enabled>
@@ -408,6 +407,9 @@
 		<engine-combo>
 			<serviceable type="bool">true</serviceable>
 		</engine-combo>
+		<flap-position>
+			<serviceable type="bool">true</serviceable>
+		</flap-position>
 		<fuel-quantity>
 			<serviceable type="bool">true</serviceable>
 		</fuel-quantity>
