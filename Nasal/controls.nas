@@ -33,7 +33,7 @@ controls.Magnetos = {
 		obj.right_mag_listener = setlistener(obj.right_mag_node, func obj.update());
 		obj.magnetos_listener = setlistener(obj.left_mag_node, func obj.update());
 	},
-	update_magnetos: func(node) {
+	update: func(node) {
 		me.flag and return;
 		me.flag = 1;
 		
