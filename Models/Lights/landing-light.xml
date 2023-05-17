@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<path>procedural-light.ac</path>
+	
+	<params>
+		<brightness-prop>sim/model/lights/landing/brightness-norm</brightness-prop>
+	</params>
 
 	<effect>
 		<inherits-from>Effects/procedural-light</inherits-from>
@@ -12,7 +16,7 @@
 			<light_color_center_r type="float">1</light_color_center_r>
 			<light_color_center_g type="float">1</light_color_center_g>
 			<light_color_center_b type="float">1</light_color_center_b>
-			<intensity_scale type="float"><use>sim/model/lights/landing/brightness-norm</use></intensity_scale>
+			<intensity_scale type="float"><use alias="/params/brightness-prop"/></intensity_scale>
 
 			<pointing_x type="float">0</pointing_x>
 			<pointing_y type="float">0</pointing_y>
@@ -54,7 +58,7 @@
 		<overlay>
 			<params>
 				<light-used>landing</light-used>
-				<show-prop>sim/model/lights/landing/brightness-norm</show-prop>
+				<show-prop alias="/params/brightness-prop"/>
 			</params>
 		</overlay>
 		<offsets>
@@ -102,7 +106,7 @@
 		<spot-cutoff>45</spot-cutoff>
 		<range-m>500</range-m>
 		<dim-factor>
-			<property>sim/model/lights/landing/brightness-norm</property>
+			<property alias="/params/brightness-prop"/>
 		</dim-factor>
 	</light>
 </PropertyList>

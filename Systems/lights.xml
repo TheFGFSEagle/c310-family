@@ -62,4 +62,64 @@
 		<output>/sim/model/lights/landing[0]/brightness-norm</output>
 		<max-rate-of-change>2</max-rate-of-change>
 	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<condition>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<expression>
+				<sum>
+					<property>/sim/model/lights/landing[1]/pos-norm</property>
+					<product>
+						<property>/controls/lighting/landing-light[1]</property>
+						<property>/sim/time/delta-sec</property>
+						<value>0.2</value>
+					</product>
+				</sum>
+			</expression>
+		</input>
+		<output>/sim/model/lights/landing[1]/pos-norm</output>
+		<min>0</min>
+		<max>1</max>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<gain>/sim/model/lights/landing[1]/max-extension-deg</gain>
+		<input>
+			<condition>
+				<property>/sim/equipment/right-landing-light</property>
+			</condition>
+			<property>/sim/model/lights/landing[1]/pos-norm</property>
+		</input>
+		<output>/sim/model/lights/landing[1]/pos-deg</output>
+	</filter>
+					
+	<filter>
+		<type>noise-spike</type>
+		<input>
+			<condition>
+				<and>
+					<greater-than>
+						<property>/sim/model/lights/landing[1]/pos-norm</property>
+						<value>0.95</value>
+					</greater-than>
+					<property>/sim/equipment/right-landing-light</property>
+				</and>
+			</condition>
+			<expression>
+				<product>
+					<max>
+						<property>/controls/lighting/landing-light[1]</property>
+						<value>0</value>
+					</max>
+					<value>1</value>
+				</product>
+			</expression>
+		</input>
+		<output>/sim/model/lights/landing[1]/brightness-norm</output>
+		<max-rate-of-change>2</max-rate-of-change>
+	</filter>
 </PropertyList>
