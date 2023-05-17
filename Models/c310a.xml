@@ -19,6 +19,8 @@
 		<object-name>LeftElevator</object-name>
 		<object-name>LeftElevatorTrimTab</object-name>
 		<object-name>LeftPropellerSpinner</object-name>
+		<object-name>LeftPropellerBlade1</object-name>
+		<object-name>LeftPropellerBlade2</object-name>
 		<object-name>LeftEngine</object-name>
 		<object-name>LeftEngineExhaust</object-name>
 		<object-name>LeftEngineIntake</object-name>
@@ -58,6 +60,8 @@
 		<object-name>RightElevator</object-name>
 		<object-name>RightElevatorTrimTab</object-name>
 		<object-name>RightPropellerSpinner</object-name>
+		<object-name>RightPropellerBlade1</object-name>
+		<object-name>RightPropellerBlade2</object-name>
 		<object-name>RightEngine</object-name>
 		<object-name>RightEngineExhaust</object-name>
 		<object-name>RightEngineIntake</object-name>
@@ -95,14 +99,6 @@
 		<object-name>RightNavLightCap</object-name>
 	</effect>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>LeftPropellerBlade1</object-name>
-		<object-name>LeftPropellerBlade2</object-name>
-		<object-name>RightPropellerBlade1</object-name>
-		<object-name>RightPropellerBlade2</object-name>
-	</effect>
-		
 	<model>
 		<usage>interior</usage>
 		<name>Interior</name>
@@ -259,7 +255,7 @@
 	</animation>
 	
 	<!-- propellers -->
-	<model>
+	<!--<model>
 		<name>LeftPropellerBlur</name>
 		<path>Effects/prop-blur.xml</path>
 		<offsets>
@@ -292,27 +288,74 @@
 				<sense>1</sense>
 			</params>
 		</overlay>
-	</model>
+	</model>-->
 	
 	<animation>
-		<type>blend</type>
+		<condition>
+			<less-than>
+				<property>engines/engine[0]/thruster/rpm</property>
+				<value>125</value>
+			</less-than>
+		</condition>
+		<type>select</type>
 		<object-name>LeftPropellerBlade1</object-name>
 		<object-name>LeftPropellerBlade2</object-name>
-		<property>engines/engine[0]/rpm</property>
-		<factor>0.0015</factor>
-		<min>0</min>
-		<max>1</max>
 	</animation>
 	
 	<animation>
-		<type>blend</type>
+		<condition>
+			<less-than>
+				<property>engines/engine[1]/thruster/rpm</property>
+				<value>125</value>
+			</less-than>
+		</condition>
+		<type>select</type>
 		<object-name>RightPropellerBlade1</object-name>
 		<object-name>RightPropellerBlade2</object-name>
-		<property>engines/engine[1]/rpm</property>
-		<factor>0.0015</factor>
-		<min>0</min>
-		<max>1</max>
 	</animation>
+	
+	<model>
+		<name>LeftPropellerBlur</name>
+		<path>Exterior/prop-blur/prop-blur.xml</path>
+		<offsets>
+			<x-m>-0.566</x-m>
+			<y-m>-1.947</y-m>
+			<z-m>-0.474</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<rpm-prop>engines/engine[0]/thruster/rpm</rpm-prop>
+				<pitch-prop>engines/engine[0]/thruster/pitch</pitch-prop>
+				<blur-onset-rpm>100</blur-onset-rpm>
+				<blur-full-rpm>1000</blur-full-rpm>
+				<total-mesh-number>100</total-mesh-number>
+				<sense>1</sense>
+				<num-blades>2</num-blades>
+				<transparency>0.05</transparency>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<name>RightPropellerBlur</name>
+		<path>Exterior/prop-blur/prop-blur.xml</path>
+		<offsets>
+			<x-m>-0.566</x-m>
+			<y-m>1.947</y-m>
+			<z-m>-0.474</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<rpm-prop>engines/engine[1]/thruster/rpm</rpm-prop>
+				<pitch-prop>engines/engine[1]/thruster/pitch</pitch-prop>
+				<blur-onset-rpm>100</blur-onset-rpm>
+				<blur-full-rpm>1000</blur-full-rpm>
+				<total-mesh-number>100</total-mesh-number>
+				<sense>1</sense>
+				<num-blades>2</num-blades>
+				<transparency>0.05</transparency>
+			</params>
+		</overlay>
+	</model>
 	
 	<animation>
 		<type>spin</type>
@@ -325,7 +368,7 @@
 		<axis>
 			<object-name>LeftPropellerSpinAxis</object-name>
 		</axis>
-		<property>engines/engine/rpm</property>
+		<property>engines/engine/thruster[0]/rpm</property>
 	</animation>
 	
 	<animation>
@@ -339,7 +382,7 @@
 		<axis>
 			<object-name>RightPropellerSpinAxis</object-name>
 		</axis>
-		<property>engines/engine[1]/rpm</property>
+		<property>engines/engine[1]/thruster/rpm</property>
 	</animation>
 	
 	<animation>
@@ -348,7 +391,7 @@
 		<axis>
 			<object-name>LeftPropellerBlade1Axis</object-name>
 		</axis>
-		<property>engines/engine/thruster/pitch</property>
+		<property>engines/engine[0]/thruster/pitch</property>
 		<factor>-1</factor>
 	</animation>
 	
