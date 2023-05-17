@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1024"
    height="64"
    viewBox="0 0 1024 64"
    version="1.1"
    id="svg76"
    sodipodi:docname="dg-scale.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/dg/dg-scale.png"
    inkscape:export-xdpi="192"
-   inkscape:export-ydpi="192">
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata82">
     <rdf:RDF>
@@ -192,14 +192,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1362"
-     inkscape:window-height="706"
+     inkscape:window-width="1323"
+     inkscape:window-height="701"
      id="namedview78"
      showgrid="false"
      inkscape:zoom="1.3893543"
-     inkscape:cx="140.91785"
-     inkscape:cy="28.529691"
-     inkscape:window-x="0"
+     inkscape:cx="140.71285"
+     inkscape:cy="28.790352"
+     inkscape:window-x="33"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg76"
@@ -207,156 +207,157 @@
      inkscape:snap-object-midpoints="true"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-intersection-paths="false"
-     inkscape:snap-center="true" />
+     inkscape:snap-center="true"
+     inkscape:pagecheckerboard="0" />
   <desc
      id="desc2">dg.blend, (Blender 2.83.0)</desc>
   <g
      id="Scale"
-     style="fill:#1a1a1a;stroke:#1a1a1a">
+     style="fill:#000000;stroke:#000000">
     <polygon
        id="polygon4"
        points="255.999,0 227.554,0 227.556,64 255.999,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon6"
        points="227.554,0 199.111,0 199.111,64 227.556,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon8"
        points="199.111,0 170.667,0 170.667,64 199.111,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon10"
        points="170.667,0 142.222,0 142.222,64 170.667,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon12"
        points="142.222,0 113.777,0 113.777,64 142.222,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon14"
        points="113.777,0 85.332,0 85.332,64 113.777,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon16"
        points="85.332,0 56.888,0 56.89,64 85.332,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon18"
        points="56.888,0 28.445,0 28.445,64 56.89,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon20"
        points="28.445,0 0,0 0,64 28.445,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon22"
        points="1024,0 995.555,0 995.555,64 1024,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon24"
        points="995.555,0 967.111,0 967.111,64 995.555,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon26"
        points="967.111,0 938.667,0 938.667,64 967.111,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon28"
        points="938.667,0 910.222,0 910.222,64 938.667,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon30"
        points="910.222,0 881.778,0 881.778,64 910.222,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon32"
        points="881.778,0 853.333,0 853.333,64 881.778,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon34"
        points="853.333,0 824.889,0 824.889,64 853.333,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon36"
        points="824.889,0 796.444,0 796.444,64 824.889,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon38"
        points="796.444,0 768,0 768,64 796.444,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon40"
        points="768,0 739.555,0 739.555,64 768,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon42"
        points="739.555,0 711.11,0 711.111,64 739.555,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon44"
        points="711.11,0 682.667,0 682.667,64 711.111,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon46"
        points="682.667,0 654.222,0 654.222,64 682.667,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon48"
        points="654.222,0 625.777,0 625.777,64 654.222,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon50"
        points="625.777,0 597.333,0 597.333,64 625.777,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon52"
        points="597.333,0 568.889,0 568.889,64 597.333,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon54"
        points="568.889,0 540.444,0 540.444,64 568.889,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon56"
        points="540.444,0 512,0 512,64 540.444,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon58"
        points="512,0 483.555,0 483.555,64 512,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon60"
        points="483.555,0 455.11,0 455.11,64 483.555,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon62"
        points="455.11,0 426.666,0 426.666,64 455.11,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon64"
        points="426.666,0 398.221,0 398.221,64 426.666,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon66"
        points="398.221,0 369.778,0 369.778,64 398.221,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon68"
        points="369.778,0 341.333,0 341.333,64 369.778,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon70"
        points="341.333,0 312.889,0 312.889,64 341.333,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon72"
        points="312.889,0 284.444,0 284.444,64 312.889,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon74"
        points="284.444,0 255.999,0 255.999,64 284.444,64 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
   </g>
   <path
      sodipodi:nodetypes="cc"
@@ -1350,7 +1351,7 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="1024.1702"
      y="31.037256"
      id="text1306"><tspan
@@ -1360,7 +1361,7 @@
        y="31.037256">0</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="939.39679"
      y="30.969549"
      id="text1310"><tspan
@@ -1370,7 +1371,7 @@
        y="30.969549">3</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="852.89685"
      y="30.766424"
      id="text1314"><tspan
@@ -1380,7 +1381,7 @@
        y="30.766424">6</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="767.95416"
      y="31.121893"
      id="text1318"><tspan
@@ -1390,7 +1391,7 @@
        y="31.121893">9</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="683.18073"
      y="31.105959"
      id="text1322"><tspan
@@ -1400,7 +1401,7 @@
        y="31.105959">12</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;letter-spacing:-3px;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="596.83313"
      y="31.037256"
      id="text1326"><tspan
@@ -1410,7 +1411,7 @@
        y="31.037256">15</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="511.7381"
      y="30.934801"
      id="text1330"><tspan
@@ -1420,7 +1421,7 @@
        y="30.934801">18</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="427.01547"
      y="31.105959"
      id="text1334"><tspan
@@ -1430,7 +1431,7 @@
        y="31.105959">21</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="341.61575"
      y="31.341944"
      id="text1338"><tspan
@@ -1440,7 +1441,7 @@
        y="31.341944">24</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="255.52205"
      y="31.105959"
      id="text1342"><tspan
@@ -1450,7 +1451,7 @@
        y="31.105959">27</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-1px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-1px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="171.37494"
      y="31.037256"
      id="text1346"><tspan
@@ -1460,7 +1461,7 @@
        y="31.037256">30</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-1px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-1px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="86.07679"
      y="30.969549"
      id="text1350"><tspan
@@ -1470,7 +1471,7 @@
        y="30.969549">33</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:'Beteckna, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-3px;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="0.18619792"
      y="31.037256"
      id="text1354"><tspan
@@ -1480,7 +1481,7 @@
        y="31.037256">0</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="995.71771"
      y="31.284828"
      id="text1358"><tspan
@@ -1490,7 +1491,7 @@
        y="31.284828">1</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="967.3584"
      y="31.344572"
      id="text1362"><tspan
@@ -1500,7 +1501,7 @@
        y="31.344572">2</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="910.55499"
      y="31.471027"
      id="text1366"><tspan
@@ -1510,7 +1511,7 @@
        y="31.471027">4</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="881.51855"
      y="31.310219"
      id="text1370"><tspan
@@ -1520,7 +1521,7 @@
        y="31.310219">5</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="824.63904"
      y="31.284828"
      id="text1374"><tspan
@@ -1530,7 +1531,7 @@
        y="31.284828">7</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="796.30505"
      y="31.258993"
      id="text1378"><tspan
@@ -1540,7 +1541,7 @@
        y="31.258993">8</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="739.55249"
      y="31.310219"
      id="text1382"><tspan
@@ -1550,7 +1551,7 @@
        y="31.310219">10</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="711.27771"
      y="31.284828"
      id="text1386"><tspan
@@ -1560,7 +1561,7 @@
        y="31.284828">11</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="654.23737"
      y="31.276365"
      id="text1390"><tspan
@@ -1570,7 +1571,7 @@
        y="31.276365">13</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="625.91187"
      y="31.471027"
      id="text1394"><tspan
@@ -1580,7 +1581,7 @@
        y="31.471027">14</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="568.6684"
      y="31.183266"
      id="text1398"><tspan
@@ -1590,7 +1591,7 @@
        y="31.183266">16</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="540.19904"
      y="31.284828"
      id="text1402"><tspan
@@ -1600,7 +1601,7 @@
        y="31.284828">17</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="483.53107"
      y="31.352537"
      id="text1406"><tspan
@@ -1610,7 +1611,7 @@
        y="31.352537">19</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="455.11246"
      y="31.310219"
      id="text1410"><tspan
@@ -1620,7 +1621,7 @@
        y="31.310219">20</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="398.47836"
      y="31.344572"
      id="text1414"><tspan
@@ -1630,7 +1631,7 @@
        y="31.344572">22</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="369.79739"
      y="31.293791"
      id="text1418"><tspan
@@ -1640,7 +1641,7 @@
        y="31.293791">23</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="312.63855"
      y="31.344572"
      id="text1422"><tspan
@@ -1650,7 +1651,7 @@
        y="31.344572">25</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="284.22842"
      y="31.251472"
      id="text1426"><tspan
@@ -1660,7 +1661,7 @@
        y="31.251472">26</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="227.42505"
      y="31.259491"
      id="text1430"><tspan
@@ -1670,7 +1671,7 @@
        y="31.259491">28</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="199.09108"
      y="31.344572"
      id="text1434"><tspan
@@ -1680,7 +1681,7 @@
        y="31.344572">29</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="142.74474"
      y="31.276365"
      id="text1438"><tspan
@@ -1690,7 +1691,7 @@
        y="31.276365">31</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="114.38538"
      y="31.293791"
      id="text1442"><tspan
@@ -1700,7 +1701,7 @@
        y="31.293791">32</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="57.378887"
      y="31.411781"
      id="text1446"><tspan
@@ -1710,7 +1711,7 @@
        y="31.411781">34</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="28.545563"
      y="31.276365"
      id="text1450"><tspan

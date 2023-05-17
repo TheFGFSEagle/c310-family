@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="512"
    height="512"
    viewBox="0 0 512 512"
    version="1.1"
    id="svg124"
    sodipodi:docname="manifold-pressure.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    inkscape:export-filename="/media/frederic/TOSHIBA EXT/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Instruments/manifold-pressure/manifold-pressure.png"
    inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata130">
     <rdf:RDF>
@@ -60,225 +60,226 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1362"
-     inkscape:window-height="706"
+     inkscape:window-width="1323"
+     inkscape:window-height="701"
      id="namedview126"
      showgrid="false"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="231.75299"
-     inkscape:cy="297.38319"
-     inkscape:window-x="0"
+     inkscape:zoom="0.71377693"
+     inkscape:cx="229.06316"
+     inkscape:cy="298.41256"
+     inkscape:window-x="33"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg124"
+     inkscape:current-layer="RightNeedle"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
      inkscape:snap-midpoints="false"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-intersection-paths="true"
-     inkscape:object-paths="true" />
+     inkscape:object-paths="true"
+     inkscape:pagecheckerboard="0" />
   <desc
      id="desc2">manifold.blend, (Blender 2.83.0)</desc>
   <g
      id="Face"
-     style="fill:#1a1a1a;stroke:#1a1a1a"
+     style="fill:#000000;stroke:#000000"
      transform="translate(4e-5,5e-6)">
     <polygon
        id="polygon4"
        points="256,16 193.883,24.179 136.003,48.156 86.296,86.296 48.156,136.003 24.179,193.884 16,256 24.179,318.117 48.156,375.997 86.296,425.704 136.003,463.844 193.884,487.821 256,496 318.117,487.821 375.997,463.844 425.704,425.704 463.844,375.997 487.821,318.116 496,256 487.821,193.883 463.844,136.003 425.704,86.296 375.997,48.156 318.116,24.179 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon6"
        points="256,496 193.884,487.821 256,496 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon8"
        points="24.179,193.884 16,256 24.179,193.884 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon10"
        points="136.003,48.156 193.883,24.179 136.003,48.156 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon12"
        points="318.117,487.821 318.117,487.821 256,496 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon14"
        points="24.179,318.117 48.156,375.997 24.179,318.117 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon16"
        points="463.844,375.997 463.844,375.997 487.821,318.116 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon18"
        points="487.821,193.883 496,256 512,256 503.277,189.741 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon20"
        points="425.704,425.704 375.997,463.844 384,477.702 437.018,437.018 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon22"
        points="322.259,8.723 318.116,24.179 375.997,48.156 384,34.298 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon24"
        points="375.997,463.844 318.117,487.821 322.259,503.277 384,477.702 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon26"
        points="256,0 256,16 318.116,24.179 322.259,8.723 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon28"
        points="74.982,74.982 86.296,86.296 136.003,48.156 128,34.298 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon30"
        points="189.741,8.723 128,34.298 136.003,48.156 193.883,24.179 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon32"
        points="463.844,375.997 425.704,425.704 437.018,437.018 477.702,384 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon34"
        points="384,34.298 375.997,48.156 425.704,86.296 437.018,74.982 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon36"
        points="477.702,128 463.844,136.003 487.821,193.883 503.277,189.741 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon38"
        points="24.179,193.884 48.156,136.003 34.298,128 8.723,189.741 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon40"
        points="24.179,318.117 16,256 0,256 8.723,322.259 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon42"
        points="34.298,128 48.156,136.003 86.296,86.296 74.982,74.982 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon44"
        points="16,256 24.179,193.884 8.723,189.741 0,256 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon46"
        points="487.821,318.116 463.844,375.997 477.702,384 503.277,322.259 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon48"
        points="193.884,487.821 189.741,503.277 256,512 256,496 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon50"
        points="256,496 256,512 322.259,503.277 318.117,487.821 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon52"
        points="136.003,463.844 128,477.702 189.741,503.277 193.884,487.821 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon54"
        points="86.296,425.704 74.982,437.018 128,477.702 136.003,463.844 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon56"
        points="48.156,375.997 34.298,384 74.982,437.018 86.296,425.704 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon58"
        points="256,0 189.741,8.723 193.883,24.179 256,16 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon60"
        points="48.156,375.997 24.179,318.117 8.723,322.259 34.298,384 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon62"
        points="16,256 24.179,318.117 16,256 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon64"
        points="375.997,463.844 318.117,487.821 375.997,463.844 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon66"
        points="318.116,24.179 375.997,48.156 318.116,24.179 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon68"
        points="375.997,48.156 425.704,86.296 375.997,48.156 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon70"
        points="193.883,24.179 256,16 193.883,24.179 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon72"
        points="487.821,318.116 487.821,318.116 496,256 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon74"
        points="48.156,136.003 48.156,136.003 86.296,86.296 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon76"
        points="487.821,193.883 487.821,193.883 463.844,136.003 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon78"
        points="86.296,425.704 86.296,425.704 48.156,375.997 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon80"
        points="437.018,74.982 425.704,86.296 463.844,136.003 477.702,128 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon82"
        points="48.156,136.003 24.179,193.884 48.156,136.003 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon84"
        points="86.296,86.296 136.003,48.156 86.296,86.296 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon86"
        points="463.844,136.003 463.844,136.003 425.704,86.296 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon88"
        points="136.003,463.844 136.003,463.844 86.296,425.704 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon90"
        points="256,16 318.116,24.179 256,16 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon92"
        points="193.884,487.821 193.884,487.821 136.003,463.844 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon94"
        points="496,256 487.821,318.116 503.277,322.259 512,256 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon96"
        points="425.704,425.704 425.704,425.704 375.997,463.844 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon98"
        points="425.704,425.704 425.704,425.704 463.844,375.997 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
     <polygon
        id="polygon100"
        points="496,256 496,256 487.821,193.883 "
-       style="fill:#1a1a1a;fill-opacity:1;stroke:#1a1a1a;stroke-width:1" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1" />
   </g>
   <g
      id="LeftNeedle">
@@ -294,7 +295,7 @@
        style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
        x="11.39475"
        y="398.25"
        id="text1495"><tspan
@@ -319,7 +320,7 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
        x="11.498917"
        y="426.25"
        id="text1499"><tspan
@@ -330,7 +331,7 @@
   </g>
   <g
      id="Walls"
-     style="fill:#1a1a1a;stroke:#1a1a1a">
+     style="fill:#000000;stroke:#000000">
     <polygon
        stroke="black"
        stroke-width="1"
@@ -338,7 +339,7 @@
        fill-opacity="1"
        points="454.399,71.999 440.001,71.999 440.001,57.601 454.399,57.601 "
        id="polygon63"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -346,7 +347,7 @@
        fill-opacity="1"
        points="454.399,57.599 440.001,57.599 440.001,43.201 454.399,43.201 "
        id="polygon65"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -354,7 +355,7 @@
        fill-opacity="1"
        points="468.799,71.999 454.401,71.999 454.401,57.601 468.799,57.601 "
        id="polygon67"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -362,7 +363,7 @@
        fill-opacity="1"
        points="468.799,57.599 454.401,57.599 454.401,43.201 468.799,43.201 "
        id="polygon69"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -370,7 +371,7 @@
        fill-opacity="1"
        points="454.399,43.199 440.001,43.199 440.001,28.801 454.399,28.801 "
        id="polygon71"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -378,7 +379,7 @@
        fill-opacity="1"
        points="483.199,71.999 468.801,71.999 468.801,57.601 483.199,57.601 "
        id="polygon73"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -386,7 +387,7 @@
        fill-opacity="1"
        points="468.799,43.199 454.401,43.199 454.401,28.801 468.799,28.801 "
        id="polygon75"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -394,7 +395,7 @@
        fill-opacity="1"
        points="483.199,57.599 468.801,57.599 468.801,43.201 483.199,43.201 "
        id="polygon77"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -402,7 +403,7 @@
        fill-opacity="1"
        points="483.199,43.199 468.801,43.199 468.801,28.801 483.199,28.801 "
        id="polygon79"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -410,7 +411,7 @@
        fill-opacity="1"
        points="454.399,28.799 440.001,28.799 440.001,14.401 454.399,14.401 "
        id="polygon81"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -418,7 +419,7 @@
        fill-opacity="1"
        points="497.599,71.999 483.201,71.999 483.201,57.601 497.599,57.601 "
        id="polygon83"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -426,7 +427,7 @@
        fill-opacity="1"
        points="468.799,28.799 454.401,28.799 454.401,14.401 468.799,14.401 "
        id="polygon85"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -434,7 +435,7 @@
        fill-opacity="1"
        points="497.599,57.599 483.201,57.599 483.201,43.201 497.599,43.201 "
        id="polygon87"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -442,7 +443,7 @@
        fill-opacity="1"
        points="483.199,28.799 468.801,28.799 468.801,14.401 483.199,14.401 "
        id="polygon89"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -450,7 +451,7 @@
        fill-opacity="1"
        points="497.599,43.199 483.201,43.199 483.201,28.801 497.599,28.801 "
        id="polygon91"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -458,7 +459,7 @@
        fill-opacity="1"
        points="497.599,28.799 483.201,28.799 483.201,14.401 497.599,14.401 "
        id="polygon93"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -466,7 +467,7 @@
        fill-opacity="1"
        points="454.399,14.399 440.001,14.399 440.001,0.001 454.399,0.001 "
        id="polygon95"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -474,7 +475,7 @@
        fill-opacity="1"
        points="511.999,71.999 497.601,71.999 497.601,57.601 511.999,57.601 "
        id="polygon97"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -482,7 +483,7 @@
        fill-opacity="1"
        points="468.799,14.399 454.401,14.399 454.401,0.001 468.799,0.001 "
        id="polygon99"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -490,7 +491,7 @@
        fill-opacity="1"
        points="511.999,57.599 497.601,57.599 497.601,43.201 511.999,43.201 "
        id="polygon101"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -498,7 +499,7 @@
        fill-opacity="1"
        points="483.199,14.399 468.801,14.399 468.801,0.001 483.199,0.001 "
        id="polygon103"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -506,7 +507,7 @@
        fill-opacity="1"
        points="511.999,43.199 497.601,43.199 497.601,28.801 511.999,28.801 "
        id="polygon105"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -514,7 +515,7 @@
        fill-opacity="1"
        points="497.599,14.399 483.201,14.399 483.201,0.001 497.599,0.001 "
        id="polygon107"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
     <polygon
        stroke="black"
        stroke-width="1"
@@ -522,7 +523,7 @@
        fill-opacity="1"
        points="511.999,28.799 497.601,28.799 497.601,14.401 511.999,14.401 "
        id="polygon109"
-       style="fill:#1a1a1a;stroke:#1a1a1a" />
+       style="fill:#000000;stroke:#000000" />
   </g>
   <path
      style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:6;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
@@ -991,7 +992,7 @@
        y="327">50</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="300"
      y="430"
      id="text1465"><tspan
@@ -1001,7 +1002,7 @@
        y="430">60</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="94.438599"
      y="238.39993"
      id="text1469"><tspan
@@ -1011,7 +1012,7 @@
        y="238.39993">15</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="186"
      y="122"
      id="text1473"><tspan
@@ -1021,7 +1022,7 @@
        y="122">25</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="339"
      y="126"
      id="text1477"><tspan
@@ -1031,7 +1032,7 @@
        y="126">35</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="413"
      y="245"
      id="text1481"><tspan
@@ -1041,7 +1042,7 @@
        y="245">45</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66666794px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:1.25;font-family:Beteckna;-inkscape-font-specification:Beteckna;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="369"
      y="388"
      id="text1485"><tspan
@@ -1051,7 +1052,7 @@
        y="388">55</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.33333397px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
      x="255.42712"
      y="190.97353"
      id="text1489"><tspan
