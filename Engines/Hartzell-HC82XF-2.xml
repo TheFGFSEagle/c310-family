@@ -4,7 +4,7 @@
 	<diameter unit="IN">84</diameter>
 	<numblades>2</numblades>
 	<gearratio>1</gearratio>
-	<constspeed>1</constspeed>
+	<constspeed>0</constspeed>
 	<minpitch>12.5</minpitch>
 	<maxpitch>22.5</maxpitch>
 	<minrpm>1800</minrpm>

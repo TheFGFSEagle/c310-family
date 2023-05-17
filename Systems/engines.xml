@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="engines">
+	<channel name="Left propeller">
+		<switch name="fcs/feather-pos-norm[0]">
+			<default value="0"/>
+			<test value="1">
+				fcs/advance-cmd-norm[0] LT 0.1
+			</test>
+			<output>fcs/feather-cmd-norm[0]</output>
+			<output>/controls/engines/engine[0]/propeller-feather</output>
+		</switch>
+		
+		<fcs_function name="propulsion/engine[0]/blade-angle">
+			<function>
+				<ifthen>
+					<property>fcs/feather-pos-norm[0]</property>
+					<min>
+						<sum>
+							<property>propulsion/engine[0]/blade-angle</property>
+							<product>
+								<property>simulation/channel-dt</property>
+								<value>5</value>
+							</product>
+						</sum>
+						<value>82</value>
+					</min>
+					<min>
+						<max>
+							<sum>
+								<property>propulsion/engine[0]/blade-angle</property>
+								<product>
+									<difference>
+										<property>propulsion/engine[0]/propeller-rpm</property>
+										<table>
+											<independentVar>fcs/advance-pos-norm[0]</independentVar>
+											<tableData>
+												0	1800
+												1	2600
+											</tableData>
+										</table>
+									</difference>
+									<property>simulation/channel-dt</property>
+									<value>0.05</value>
+								</product>
+							</sum>
+							<value>12.5</value>
+						</max>
+						<value>22.5</value>
+					</min>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fcs/advance-pos-norm[0]">
+			<function>
+				<table>
+					<independentVar lookup="row">fcs/feather-cmd-norm[0]</independentVar>
+					<tableData>
+						0.1	0
+						1	1
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+	</channel>
+	
+	<channel name="Right propeller">
+		<switch name="fcs/feather-pos-norm[1]">
+			<default value="0"/>
+			<test value="1">
+				fcs/advance-cmd-norm[1] LT 0.1
+			</test>
+			<output>fcs/feather-cmd-norm[1]</output>
+			<output>/controls/engines/engine[1]/propeller-feather</output>
+		</switch>
+		
+		<fcs_function name="propulsion/engine[1]/blade-angle">
+			<function>
+				<ifthen>
+					<property>fcs/feather-pos-norm[1]</property>
+					<min>
+						<sum>
+							<property>propulsion/engine[1]/blade-angle</property>
+							<product>
+								<property>simulation/channel-dt</property>
+								<value>5</value>
+							</product>
+						</sum>
+						<value>82</value>
+					</min>
+					<min>
+						<max>
+							<sum>
+								<property>propulsion/engine[1]/blade-angle</property>
+								<product>
+									<difference>
+										<property>propulsion/engine[1]/propeller-rpm</property>
+										<table>
+											<independentVar>fcs/advance-pos-norm[1]</independentVar>
+											<tableData>
+												0	1800
+												1	2600
+											</tableData>
+										</table>
+									</difference>
+									<property>simulation/channel-dt</property>
+									<value>0.05</value>
+								</product>
+							</sum>
+							<value>12.5</value>
+						</max>
+						<value>22.5</value>
+					</min>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fcs/advance-pos-norm[1]">
+			<function>
+				<table>
+					<independentVar lookup="row">fcs/feather-cmd-norm[1]</independentVar>
+					<tableData>
+						0.1	0
+						1	1
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+	</channel>
+</system>
