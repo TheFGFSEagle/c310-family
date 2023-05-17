@@ -11,7 +11,7 @@
 			</expression>
 		</input>
 		<output>/sim/model/lights/nav/brightness-norm</output>
-		<max-rate-of-change>0.3</max-rate-of-change>
+		<max-rate-of-change>3</max-rate-of-change>
 	</filter>
 	
 	<filter>
@@ -22,8 +22,8 @@
 					<property>/sim/model/lights/landing[0]/pos-norm</property>
 					<product>
 						<property>/controls/lighting/landing-light[0]</property>
-						<property>/sim/time/dt</property>
-						<value>0.1</value>
+						<property>/sim/time/delta-sec</property>
+						<value>0.2</value>
 					</product>
 				</sum>
 			</expression>
@@ -59,7 +59,7 @@
 				</product>
 			</expression>
 		</input>
-		<output>/sim/model/lights/nav/brightness-norm</output>
-		<max-rate-of-change>0.5</max-rate-of-change>
+		<output>/sim/model/lights/landing[0]/brightness-norm</output>
+		<max-rate-of-change>2</max-rate-of-change>
 	</filter>
 </PropertyList>
