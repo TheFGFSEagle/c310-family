@@ -95,6 +95,18 @@
 				<pos-norm type="double">0</pos-norm>
 			</baggage-door>
 			
+			<chocks>
+				<chocks>
+					<stowed type="bool">true</stowed>
+				</chocks>
+				<chocks>
+					<stowed type="bool">true</stowed>
+				</chocks>
+				<chocks>
+					<stowed type="bool">true</stowed>
+				</chocks>
+			</chocks>
+			
 			<openable-window>
 				<pos-norm type="double">0</pos-norm>
 				<handle-pos-norm type="double">0</handle-pos-norm>
@@ -575,6 +587,7 @@
 		<c310>
 			<file>Nasal/parts.nas</file>
 			<file>Nasal/c310.nas</file>
+			<file>Nasal/chocks.nas</file>
 			<file>Nasal/dialogs.nas</file>
 			<file>Nasal/controls.nas</file>
 			<file>Nasal/states.nas</file>

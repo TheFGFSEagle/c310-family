@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>chocks-stowed.ac</path>
+	
+	<params>
+		<stowed-prop>sim/model/chocks/chocks[0]/stowed</stowed-prop>
+		<click-script>c310.chocks[0].put();</click-script>
+		<tooltip-id>front-chocks-stowed</tooltip-id>
+		<tooltip-label>Put front chocks</tooltip-label>
+	</params>
+	
+	<animation>
+		<type>select</type>
+		<condition>
+			<property alias="/params/stowed-prop"/>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>FrontChock</object-name>
+		<object-name>RearChock</object-name>
+		<object-name>String</object-name>
+		<action>
+			<binding>
+				<command>nasal</command>
+				<script alias="/params/click-script"/>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/tooltip-label"/>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
