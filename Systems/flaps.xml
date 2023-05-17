@@ -9,7 +9,7 @@
 				fcs/flap-pos-norm LT 1
 				/systems/electrical/consumers/flaps-motor/volts GT 12
 			</test>
-		</fcs_function>
+		</switch>
 		
 		<fcs_function name="systems/flaps/actuator-rate">
 			<name>Flap actuator rate</name>
