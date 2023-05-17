@@ -2,8 +2,8 @@ aircraft.data.save(1);
 
 var disengageStartersTimerDelay = 5;
 var disengageStartersTimer = maketimer(disengageStartersTimerDelay, func {
-	props.globals.setBoolValue("/controls/engines/engine[0]/starter", 0);
-	props.globals.setBoolValue("/controls/engines/engine[1]/starter", 0);
+	props.globals.setBoolValue("/controls/engines/engine[0]/starter-button", 0);
+	props.globals.setBoolValue("/controls/engines/engine[1]/starter-button", 0);
 });
 disengageStartersTimer.singleShot = 1;
 disengageStartersTimer.simulatedTime = 1;
@@ -17,7 +17,7 @@ var autostartEngine = func(i) {
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/throttle", 0);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/propeller-pitch", 1);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/mixture", 1);
-		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/starter", 1);
+		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/starter-button", 1);
 	}
 };
 
@@ -29,7 +29,7 @@ var autostopEngine = func(i) {
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/throttle", 0);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/propeller-pitch", 1);
 		props.globals.setDoubleValue("/controls/engines/engine[" ~ i ~ "]/mixture", 0);
-		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/starter", 0);
+		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/starter-button", 0);
 	}
 };
 

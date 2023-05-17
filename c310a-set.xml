@@ -388,6 +388,7 @@
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
 				<master-alt type="bool">false</master-alt>
+				<starter-button type="bool">false</starter-button>
 			</engine>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
@@ -399,6 +400,7 @@
 				<left-magneto type="bool">false</left-magneto>
 				<right-magneto type="bool">false</right-magneto>
 				<master-alt type="bool">false</master-alt>
+				<starter-button type="bool">false</starter-button>
 			</engine>
 		</engines>
 		<gear>
@@ -484,6 +486,12 @@
 			</tank>
 			<tank>
 				<hidden type="bool">true</hidden>
+			</tank>
+			<tank>
+				<name>Left engine oil</name>
+			</tank>
+			<tank>
+				<name>Right engine oil</name>
 			</tank>
 		</fuel>
 	</consumables>
@@ -592,6 +600,14 @@
 					<rated-volts>28</rated-volts>
 					<rated-amps>3.5</rated-amps>
 				</landing-light-motor>
+				<starter-motor n="0">
+					<rated-volts>24</rated-volts>
+					<rated-amps>91</rated-amps>
+				</starter-motor>
+				<starter-motor n="1">
+					<rated-volts>24</rated-volts>
+					<rated-amps>91</rated-amps>
+				</starter-motor>
 				<rotating-beacon>
 					<rated-volts>28</rated-volts>
 					<rated-amps>3.1</rated-amps>
