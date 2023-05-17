@@ -37,6 +37,14 @@
 				</binding>
 			</item>
 			
+			<item>
+				<label>Failures</label>
+				<binding>
+					<command>nasal</command>
+					<script>c310.failures.dialog.show();</script>
+				</binding>
+			</item>
+			
 			<!--<item>
 				<label>Select Livery</label>
 				<binding>

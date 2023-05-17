@@ -12,14 +12,10 @@
 	<property value="225">propulsion/engine[1]/oil/system/design-temperature-degf</property>
 	<property value="0.25">propulsion/engine[0]/oil/viscosity-index</property>
 	<property value="0.25">propulsion/engine[1]/oil/viscosity-index</property>
-	<property>propulsion/engine[0]/oil/reservoir/leak-flow-rate-lbs_s</property>
-	<property>propulsion/engine[1]/oil/reservoir/leak-flow-rate-lbs_s</property>
 	<property value="12">propulsion/engine[0]/oil/reservoir/capacity-quarts</property>
 	<property value="12">propulsion/engine[1]/oil/reservoir/capacity-quarts</property>
 	<property value="21.9">propulsion/engine[0]/oil/reservoir/level-lbs</property>
 	<property value="21.9">propulsion/engine[1]/oil/reservoir/level-lbs</property>
-	<property>propulsion/engine[0]/oil/system/leak-flow-rate-lbs_s</property>
-	<property>propulsion/engine[1]/oil/system/leak-flow-rate-lbs_s</property>
 	<property value="3">propulsion/engine[0]/oil/system/capacity-lbs</property>
 	<property value="3">propulsion/engine[1]/oil/system/capacity-lbs</property>
 	<property value="3">propulsion/engine[0]/oil/system/level-lbs</property>
