@@ -526,12 +526,41 @@
 		<object-name>LeftMainGearUpperTorqueLink</object-name>
 		<object-name>LeftMainGearStrut</object-name>
 		<object-name>LeftMainGearCylinder</object-name>
+		<object-name>LeftMainGearLowerSideBrace</object-name>
 		<axis>
 			<object-name>LeftMainGearStrutAxis</object-name>
 		</axis>
 		<property>gear/gear[1]/position-norm</property>
 		<factor>85</factor>
 		<offset-deg>-85</offset-deg>
+	</animation>
+	
+	<animation>
+		<type>locked-track</type>
+		<object-name>LeftMainGearLowerSideBrace</object-name>
+		<center>
+			<object-name>LeftMainGearLowerSideBraceAxis</object-name>
+		</center>
+		<lock-axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</lock-axis>
+		<track-axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0.8</z>
+		</track-axis>
+		
+		<target-name>LeftMainGearSideBraceMount</target-name>
+		<target-center>
+			<object-name>LeftMainGearUpperSideBraceAxis</object-name>
+		</target-center>
+		
+		<slave-name>LeftMainGearUpperSideBrace</slave-name>
+		<slave-center>
+			<object-name>LeftMainGearMiddleSideBraceAxis</object-name>
+		</slave-center>
 	</animation>
 	
 	<animation>
@@ -598,12 +627,41 @@
 		<object-name>RightMainGearUpperTorqueLink</object-name>
 		<object-name>RightMainGearStrut</object-name>
 		<object-name>RightMainGearCylinder</object-name>
+		<object-name>RightMainGearLowerSideBrace</object-name>
 		<axis>
 			<object-name>RightMainGearStrutAxis</object-name>
 		</axis>
 		<property>gear/gear[2]/position-norm</property>
 		<factor>-85</factor>
 		<offset-deg>85</offset-deg>
+	</animation>
+	
+	<animation>
+		<type>locked-track</type>
+		<object-name>RightMainGearLowerSideBrace</object-name>
+		<center>
+			<object-name>RightMainGearLowerSideBraceAxis</object-name>
+		</center>
+		<lock-axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</lock-axis>
+		<track-axis>
+			<x>0</x>
+			<y>1</y>
+			<z>-0.8</z>
+		</track-axis>
+		
+		<target-name>RightMainGearSideBraceMount</target-name>
+		<target-center>
+			<object-name>RightMainGearUpperSideBraceAxis</object-name>
+		</target-center>
+		
+		<slave-name>RightMainGearUpperSideBrace</slave-name>
+		<slave-center>
+			<object-name>RightMainGearMiddleSideBraceAxis</object-name>
+		</slave-center>
 	</animation>
 	
 	<animation>
