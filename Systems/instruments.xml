@@ -398,4 +398,16 @@
 		<input>/surface-positions/rudder-norm</input>
 		<output>rudder-position/indicated-rudder-position-norm</output>
 	</filter>
+	
+	<filter>
+		<name>Outside air temperature</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/oat/serviceable</property>
+			</condition>
+		</enable>
+		<input>/environment/temperature-degf</input>
+		<output>oat/indicated-outside-air-temperature-degf</output>
+	</filter>
 </PropertyList>
