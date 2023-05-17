@@ -15,6 +15,68 @@
 	</filter>
 	
 	<filter>
+		<type>noise-spike</type>
+		<input>
+			<expression>
+				<product>
+					<property>/controls/lighting/beacon</property>
+					<value>1</value>
+				</product>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/brightness-norm</output>
+		<max-rate-of-change>3</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<mod>
+					<sum>
+						<property>/sim/model/lights/beacon/rotation-deg</property>
+						<product>
+							<property>/sim/model/lights/beacon/brightness-norm</property>
+							<value>360</value>
+							<property>/sim/time/delta-sec</property>
+						</product>
+					</sum>
+					<value>360</value>
+				</mod>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/rotation-deg</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<cos>
+					<deg2rad>
+						<property>/sim/model/lights/beacon/rotation-deg</property>
+					</deg2rad>
+				</cos>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/pointing-x</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sin>
+					<deg2rad>
+						<property>/sim/model/lights/beacon/rotation-deg</property>
+					</deg2rad>
+				</sin>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/pointing-y</output>
+	</filter>
+	
+	<filter>
 		<type>gain</type>
 		<input>
 			<expression>

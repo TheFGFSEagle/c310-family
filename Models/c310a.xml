@@ -143,6 +143,14 @@
 		</offsets>
 	</model>
 	<model>
+		<path>Lights/beacon-light.xml</path>
+		<offsets>
+			<x-m>5.6</x-m>
+			<y-m>0</y-m>
+			<z-m>1.96</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>LeftLandingLight</name>
 		<path>Lights/landing-light.xml</path>
 		<offsets>
