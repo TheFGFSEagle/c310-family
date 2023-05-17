@@ -158,6 +158,7 @@
 			<path>/sim/model/effects/interior/windows</path>
 			<path>/sim/realism</path>
 			<path>/instrumentation/clock/windup-norm</path>
+			<path>/instrumentation/clock/internal-seconds</path>
 		</aircraft-data>
 		
 		<view n="0">
@@ -428,6 +429,7 @@
 		</cht>
 		<clock>
 			<serviceable type="bool">true</serviceable>
+			<internal-seconds type="double">0</internal-seconds>
 		</clock>
 		<engine-combo>
 			<serviceable type="bool">true</serviceable>

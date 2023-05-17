@@ -205,7 +205,48 @@
 	</filter>
 	
 	<filter>
-		<name>Clock hours hand rotation</name>
+		<name>Zero clock rate due to day jump</name>
+		<type>derivative</type>
+		<input>/sim/time/utc/day</input>
+		<output>
+			<property>clock/day-jump-zero-rate</property>
+			<abs type="bool">true</abs>
+			<min>0</min>
+			<max>1</max>
+		</output>
+	</filter>
+	<filter>
+		<name>Warp rate</name>
+		<type>derivative</type>
+		<enable>
+			<condition>
+				<not>
+					<property>instrumentation/clock/day-jump-zero-rate</property>
+				</not>
+			</condition>
+		</enable>
+		<input>/sim/time/warp</input>
+		<output>/sim/time/warp-rate</output>
+		<filter-time>1</filter-time>
+	</filter>
+	<filter>
+		<name>Clock rate</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<product>
+						<property>/sim/time/delta-sec</property>
+						<property>/sim/speed-up</property>
+					</product>
+					<property>/sim/time/warp-rate</property>
+				</sum>
+			</expression>
+		</input>
+		<output>clock/rate</output>
+	</filter>
+	<filter>
+		<name>Clock internal seconds</name>
 		<type>gain</type>
 		<enable>
 			<condition>
@@ -216,21 +257,31 @@
 		<input>
 			<expression>
 				<sum>
+					<property>clock/internal-seconds</property>
 					<product>
-						<property>clock/indicated-hour</property>
-						<value>30</value>
-					</product>
-					<product>
-						<property>clock/indicated-min</property>
-						<value>0.5</value>
+						<property>clock/rate</property>
+						<min>
+							<product>
+								<property>clock/windup-norm</property>
+								<value>1000</value>
+							</product>
+							<value>1</value>
+						</min>
+						<value>1</value>
 					</product>
 				</sum>
 			</expression>
 		</input>
-		<output>clock/hours-hand-rotation-deg</output>
+		<output>
+			<property>clock/internal-seconds</property>
+			<period>
+				<min>0</min>
+				<max>86400</max>
+			</period>
+		</output>
 	</filter>
 	<filter>
-		<name>Clock minutes hand rotation</name>
+		<name>Clock seconds</name>
 		<type>gain</type>
 		<enable>
 			<condition>
@@ -240,25 +291,16 @@
 		</enable>
 		<input>
 			<expression>
-				<sum>
-					<product>
-						<property>clock/indicated-min</property>
-						<value>6</value>
-					</product>
-					<product>
-						<mod>
-							<property>clock/indicated-sec</property>
-							<value>60</value>
-						</mod>
-						<value>0.1</value>
-					</product>
-				</sum>
+				<mod>
+					<property>clock/internal-seconds</property>
+					<value>60</value>
+				</mod>
 			</expression>
 		</input>
-		<output>clock/minutes-hand-rotation-deg</output>
+		<output>clock/indicated-seconds</output>
 	</filter>
 	<filter>
-		<name>Clock seconds hand rotation</name>
+		<name>Clock minutes</name>
 		<type>gain</type>
 		<enable>
 			<condition>
@@ -268,16 +310,38 @@
 		</enable>
 		<input>
 			<expression>
-				<product>
+				<div>
 					<mod>
-						<property>clock/indicated-sec</property>
-						<value>60</value>
+						<property>clock/internal-seconds</property>
+						<value>3600</value>
 					</mod>
-					<value>6</value>
-				</product>
+					<value>60</value>
+				</div>
 			</expression>
 		</input>
-		<output>clock/seconds-hand-rotation-deg</output>
+		<output>clock/indicated-minutes</output>
+	</filter>
+	<filter>
+		<name>Clock hours</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>instrumentation/clock/serviceable</property>
+				<property>instrumentation/clock/windup-norm</property>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<div>
+					<mod>
+						<property>clock/internal-seconds</property>
+						<value>86400</value>
+					</mod>
+					<value>3600</value>
+				</div>
+			</expression>
+		</input>
+		<output>clock/indicated-hours</output>
 	</filter>
 	<filter>
 		<name>Clock windup</name>
@@ -293,7 +357,7 @@
 				<dif>
 					<property>clock/windup-norm</property>
 					<product>
-						<property>/sim/time/delta-sec</property>
+						<property>clock/rate</property>
 						<!-- 1 / (8 days * 24 hours * 60 minutes * 60 seconds) -->
 						<value>0.0000014467592592592592</value>
 					</product>
