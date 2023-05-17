@@ -168,7 +168,11 @@
 		
 		<menubar include="gui/menubar.xml"/>
 		
+		<state include="States/saved.xml"/>
 		<state include="States/parking.xml"/>
+		<state include="States/take-off.xml"/>
+		<state include="States/cruise.xml"/>
+		<state include="States/approach.xml"/>
 	</sim>
 	
 	<fdm>
@@ -526,6 +530,7 @@
 			<file>Nasal/c310.nas</file>
 			<file>Nasal/dialogs.nas</file>
 			<file>Nasal/controls.nas</file>
+			<file>Nasal/states.nas</file>
 		</c310>
 	</nasal>
 	
