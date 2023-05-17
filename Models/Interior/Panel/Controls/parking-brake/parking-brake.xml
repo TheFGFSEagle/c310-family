@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>parking-brake.ac</path>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Handle</object-name>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property>controls/gear/brake-parking</property>
+		<factor>90</factor>
+		<action>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/gear/brake-parking</property>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>parking-brake</tooltip-id>
+				<label>Parking brake: %s</label>
+				<measure-text>Parking brake: unset</measure-text>
+				<property>controls/gear/brake-parking</property>
+				<mapping>nasal</mapping>
+				<script>
+					return ["unset", "set"][arg[0]];
+				</script>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
