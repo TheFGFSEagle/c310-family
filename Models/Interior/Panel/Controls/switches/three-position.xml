@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>two-position.ac</path>
+	
+	<params>
+		<property>controls/lighting/landing-light[0]</property>
+		<tooltip-id>left-landing-light-switch</tooltip-id>
+		<label>Left landing light: %s</label>
+		<one-text>extend and on</one-text>
+		<zero-text>off</zero-text>
+		<minus-one-text>retract</minus-one-text>
+		<measure-text>Left landing light: extend and on</measure-text>
+		<spring-loaded type="bool">false</spring-loaded>
+	</params>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>SwitchBase</object-name>
+		<object-name>Switch</object-name>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<property alias="/params/property"/>
+		<factor>25</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/property"/>
+				<min>-1</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<condition>
+					<value alias="/params/spring-loaded"/>
+				</condition>
+				<command>property-assign</command>
+				<property alias="/params/property"/>
+				<value>0</value>
+			</binding>
+		</release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<one-text alias="/params/one-text"/>
+				<zero-text alias="/params/zero-text"/>
+				<minus-one-text alias="/params/minus-one-text"/>
+				<measure-text alias="/params/measure-text"/>
+				<property alias="/params/property"/>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					if (arg[0] == 1) {
+						return cmdarg().getValue("one-text");
+					} else if (arg[0] == 0) {
+						return cmdarg().getValue("zero-text");
+					} else {
+						return cmdarg().getValue("minus-one-text");
+					}
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
