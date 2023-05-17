@@ -12,6 +12,7 @@
 		<object-name>Scale</object-name>
 		<axis>
 			<object-name>ScaleAxis</object-name>
+			<swap-axis-direction/>
 		</axis>
 		<property>instrumentation/directional-gyro/indicated-heading-deg</property>
 	</animation>
@@ -69,5 +70,13 @@
 		</axis>
 		<property>instrumentation/directional-gyro/caged</property>
 		<factor>0.01</factor>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>CagedFlag</object-name>
+		<condition>
+			<property>instrumentation/directional-gyro/caged</property>
+		</condition>
 	</animation>
 </PropertyList>
