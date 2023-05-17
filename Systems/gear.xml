@@ -45,14 +45,14 @@
 		</fcs_function>
 		
 		<pure_gain name="fcs/steer-pos-norm">
+			<input>fcs/steer-cmd-norm</input>
 			<gain>gear/unit[0]/pos-norm</gain>
-			<p>fcs/steer-cmd-norm</p>
 			<output>/gear/gear[0]/steering-norm</output>
 		</pure_gain>
 		
 		<pure_gain name="fcs/steer-pos-deg">
+			<input>fcs/steer-pos-norm</input>
 			<gain>55</gain>
-			<p>fcs/steer-pos-norm</p>
 			<output>/gear/gear[0]/steering-deg</output>
 		</pure_gain>
 	</channel>
