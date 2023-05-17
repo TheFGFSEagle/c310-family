@@ -2,11 +2,6 @@
 <PropertyList>
 	<path>vsi.ac</path>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
-	
 	<animation>
 		<type>rotate</type>
 		<object-name>Needle</object-name>
@@ -20,4 +15,9 @@
 		<min-deg>-180</min-deg>
 		<max-deg>180</max-deg>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
 </PropertyList>

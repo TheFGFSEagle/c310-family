@@ -8,11 +8,6 @@
 		<fuel-press>instrumentation/engine-combo[0]/indicated-fuel-pressure-psi</fuel-press>
 	</params>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
-	
 	<animation>
 		<type>rotate</type>
 		<object-name>OilTemperatureNeedle</object-name>
@@ -70,4 +65,9 @@
 			</entry>
 		</interpolation>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
 </PropertyList>

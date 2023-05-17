@@ -2,11 +2,6 @@
 <PropertyList>
 	<path>fuel-quantity.ac</path>
 	
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Glass</object-name>
-	</effect>
-	
 	<animation>
 		<type>rotate</type>
 		<object-name>LeftNeedle</object-name>
@@ -26,4 +21,9 @@
 		<property>instrumentation/fuel-quantity/indicated-fuel-level-gal_us[0]</property>
 		<factor>1.78</factor>
 	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
 </PropertyList>
