@@ -59,10 +59,10 @@
 				<destination>one-minus-src-alpha</destination>
 			</blend>
 			<shade-model><use>shade-model</use></shade-model>
-			<cull-face>back</cull-face>
+			<cull-face>off</cull-face>
 			<rendering-hint>transparent</rendering-hint>
 			<render-bin>
-				<bin-number>111</bin-number>
+				<bin-number>10</bin-number>
 				<bin-name>DepthSortedBin</bin-name>
 			</render-bin>
 			<texture-unit>

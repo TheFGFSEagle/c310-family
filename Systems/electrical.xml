@@ -722,7 +722,7 @@
 			<and>
 				<property>/controls/engines/engine[0]/starter-button</property>
 				<greater-than-equals>
-					<property>consumers/starter[0]/volts</property>
+					<property>consumers/starter-motor[0]/volts</property>
 					<value>12</value>
 				</greater-than-equals>
 			</and>
@@ -736,7 +736,7 @@
 			<and>
 				<property>/controls/engines/engine[1]/starter-button</property>
 				<greater-than-equals>
-					<property>consumers/starter[1]/volts</property>
+					<property>consumers/starter-motor[1]/volts</property>
 					<value>12</value>
 				</greater-than-equals>
 			</and>
@@ -751,7 +751,7 @@
 			<property>bus/volts</property>
 		</input>
 		<output>
-			<property>consumers/starter[0]/volts</property>
+			<property>consumers/starter-motor[0]/volts</property>
 		</output>
 	</filter>
 	<filter>
@@ -799,7 +799,7 @@
 			<property>bus/volts</property>
 		</input>
 		<output>
-			<property>consumers/starter-motor[0]/volts</property>
+			<property>consumers/starter-motor[1]/volts</property>
 		</output>
 	</filter>
 	
