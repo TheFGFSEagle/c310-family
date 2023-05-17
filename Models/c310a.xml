@@ -105,6 +105,32 @@
 		<path>Interior/interior.xml</path>
 	</model>
 	
+	<!-- lights -->
+	<model>
+		<path>Lights/nav-light-left.xml</path>
+		<offsets>
+			<x-m>0.21</x-m>
+			<y-m>-5.53</y-m>
+			<z-m>-0.37</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Lights/nav-light-right.xml</path>
+		<offsets>
+			<x-m>0.21</x-m>
+			<y-m>5.53</y-m>
+			<z-m>-0.37</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Lights/nav-light-tail.xml</path>
+		<offsets>
+			<x-m>6.87</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.18</z-m>
+		</offsets>
+	</model>
+	
 	<!-- control surfaces -->
 	<animation>
 		<type>rotate</type>
@@ -566,11 +592,11 @@
 		<property>gear/gear/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.2</ind>
+				<ind>0</ind>
 				<dep>0</dep>
 			</entry>
 			<entry>
-				<ind>1</ind>
+				<ind>0.8</ind>
 				<dep>-85</dep>
 			</entry>
 		</interpolation>
@@ -598,7 +624,7 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>0</dep>
+				<dep>70</dep>
 			</entry>
 		</interpolation>
 	</animation>
@@ -625,7 +651,7 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>0</dep>
+				<dep>70</dep>
 			</entry>
 		</interpolation>
 	</animation>
@@ -654,11 +680,11 @@
 			</entry>
 			<entry>
 				<ind>0.1</ind>
-				<dep>-90</dep>
+				<dep>-75</dep>
 			</entry>
 			<entry>
 				<ind>0.9</ind>
-				<dep>-90</dep>
+				<dep>-75</dep>
 			</entry>
 			<entry>
 				<ind>1</ind>
@@ -691,11 +717,11 @@
 			</entry>
 			<entry>
 				<ind>0.1</ind>
-				<dep>90</dep>
+				<dep>75</dep>
 			</entry>
 			<entry>
 				<ind>0.9</ind>
-				<dep>90</dep>
+				<dep>75</dep>
 			</entry>
 			<entry>
 				<ind>1</ind>
