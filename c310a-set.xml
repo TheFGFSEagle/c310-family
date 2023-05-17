@@ -216,6 +216,8 @@
 				<throttle>0</throttle>
 				<propeller-pitch>1</propeller-pitch>
 				<mixture>0</mixture>
+				<left-magneto type="bool">false</left-magneto>
+				<right-magneto type="bool">false</right-magneto>
 			</engine>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
@@ -223,6 +225,8 @@
 				<throttle>0</throttle>
 				<propeller-pitch>1</propeller-pitch>
 				<mixture>0</mixture>
+				<left-magneto type="bool">false</left-magneto>
+				<right-magneto type="bool">false</right-magneto>
 			</engine>
 		</engines>
 		<gear>
