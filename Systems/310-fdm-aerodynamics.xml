@@ -5,7 +5,7 @@
 
 <!--- #########################################  -->
 <!--- ###########  work in progress  ##########  -->
-<!--- #########################################  -->		
+<!--- #########################################  -->
 
 
 	
@@ -27,20 +27,20 @@
 	<function name="aero/function/thrust-coeff-tc">
 		<ifthen>
 			<or>
-			<gt> <property>aero/qbar-psf</property> <v>0</v> </gt>
-			<lt> <property>aero/qbar-psf</property> <v>0</v> </lt>
+				<gt> <property>aero/qbar-psf</property> <v>0</v> </gt>
+				<lt> <property>aero/qbar-psf</property> <v>0</v> </lt>
 			</or>
-		<quotient>
-			<sum>
-				<p>propulsion/engine[0]/thrust-lbs</p>
-				<p>propulsion/engine[1]/thrust-lbs</p>
-			</sum>
-			<product>
-				<property>aero/qbar-psf</property>
-				<property>metrics/Sw-sqft</property>
-			</product>
-		</quotient>
- 		<v>0</v>
+			<quotient>
+				<sum>
+					<p>propulsion/engine[0]/thrust-lbs</p>
+					<p>propulsion/engine[1]/thrust-lbs</p>
+				</sum>
+				<product>
+					<property>aero/qbar-psf</property>
+					<property>metrics/Sw-sqft</property>
+				</product>
+			</quotient>
+ 			<v>0</v>
 		</ifthen>
 	</function>
 
@@ -48,12 +48,12 @@
 	
 	<!-- 0: C310P  1:C310A -->
 	
-	<function name="aero/function/modelfactor_cnbeta"> 
+	<function name="aero/function/modelfactor_cnbeta">
 	<ifthen>
 		<eq><p>aero/function/runtimeaircraftmodel</p> <v>1</v></eq>
 		<v>0.96</v> <!-- * -->
 		<v>1</v>
-	</ifthen>	
+	</ifthen>
 	</function>
 	
 	<function name="aero/function/modelfactor_cnr">
@@ -61,7 +61,7 @@
 		<eq><p>aero/function/runtimeaircraftmodel</p> <v>1</v></eq>
 		<v>0.9</v> <!-- * -->
 		<v>1</v>
-	</ifthen>	
+	</ifthen>
 	</function>
 
 
@@ -70,15 +70,15 @@
 		<eq><p>aero/function/runtimeaircraftmodel</p> <v>1</v></eq>
 		<v>0.62</v> <!-- * -->
 		<v>1</v>
-	</ifthen>	
+	</ifthen>
 	</function>
 
-	<function name="aero/model_dragaddition"> 
+	<function name="aero/model_dragaddition">
 	<ifthen>
 		<eq><p>aero/function/runtimeaircraftmodel</p> <v>1</v></eq>
 		<v>0</v> <!-- * -->
 		<v>0</v>
-	</ifthen>	
+	</ifthen>
 	</function>
 
 	<property>aero/function/runtime_ice</property>
@@ -142,28 +142,28 @@
 		</ifthen>
 	</function>
 
-<!--ersetzt durch thrust balance
-	<function name="aero/function/asymthrust-norm">  
+<!-- replaced with thrust balance
+	<function name="aero/function/asymthrust-norm">
 		<ifthen>
-		<eq><p>aero/function/thrust-state</p><v>-1</v></eq> 
+		<eq><p>aero/function/thrust-state</p><v>-1</v></eq>
 			<quotient>
 				<p>propulsion/engine[1]/thrust-coefficient</p>
-				<p>aero/function/ct_fullthust</p>			
-			</quotient>			
+				<p>aero/function/ct_fullthust</p>
+			</quotient>
 		<ifthen>
 		<eq><p>aero/function/thrust-state</p><v>-2</v></eq>
 			<quotient>
 				<p>propulsion/engine[0]/thrust-coefficient</p>
-				<p>aero/function/ct_fullthust</p>			
-			</quotient>		
+				<p>aero/function/ct_fullthust</p>
+			</quotient>
 		<v>0</v>
-		</ifthen> 
+		</ifthen>
 		</ifthen>
 	</function>
 -->
 
 	<function name="aero/function/power-balance"> <!-- left:neg. right:pos +-1=max -->
-		<quotient>	
+		<quotient>
 			<difference>
 				<p>propulsion/engine[1]/power-hp</p>
 				<p>propulsion/engine[0]/power-hp</p>
@@ -177,7 +177,7 @@
 			<le><p>aero/function/power-balance</p><v>-0.1</v></le> <!-- * -->
 			<v>-1</v>
 			<ifthen>
-				<gt><p>aero/function/power-balance</p><v>0.1</v></gt> 
+				<gt><p>aero/function/power-balance</p><v>0.1</v></gt>
 				<v>1</v>
 				<v>0</v>
 			</ifthen>
@@ -186,52 +186,52 @@
 
 	<function name="aero/function/thrust-state-sym">	<!-- deactivates asymmetric parts -->
 		<ifthen>
-		<eq><p>aero/function/thrust-state-asym</p><v>0</v></eq> 
+		<eq><p>aero/function/thrust-state-asym</p><v>0</v></eq>
 		<v>1</v>
 		<v>0</v>
 		</ifthen>
 	</function>
 
-	<function name="aero/function/easymode_cmq">	
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>1.5</v>
-				</ifthen>
+	<function name="aero/function/easymode_cmq">
+		<ifthen>
+			<p>/sim/realism/realistic-fdm</p>
+			<v>1</v>
+			<v>1.5</v>
+		</ifthen>
 	</function>
 
 
-	<function name="aero/function/easymode_clp">	
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>2</v>
-				</ifthen>
+	<function name="aero/function/easymode_clp">
+		<ifthen>
+			<p>/sim/realism/realistic-fdm</p>
+			<v>1</v>
+			<v>2</v>
+		</ifthen>
 	</function>
 
-	<function name="aero/function/easymode_clb">	
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>2</v>
-				</ifthen>
+	<function name="aero/function/easymode_clb">
+		<ifthen>
+			<p>/sim/realism/realistic-fdm</p>
+			<v>1</v>
+			<v>2</v>
+		</ifthen>
 	</function>
 
 
-	<function name="aero/function/easymode_cnb">	
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>1.5</v>
-				</ifthen>
+	<function name="aero/function/easymode_cnb">
+		<ifthen>
+			<p>/sim/realism/realistic-fdm</p>
+			<v>1</v>
+			<v>1.5</v>
+		</ifthen>
 	</function>
 
-	<function name="aero/function/easymode_cnr">	
-				<ifthen>
-					<p>/sim/realism/realistic-fdm</p>
-					<v>1</v>
-					<v>1.5</v>
-				</ifthen>
+	<function name="aero/function/easymode_cnr">
+		<ifthen>
+			<p>/sim/realism/realistic-fdm</p>
+			<v>1</v>
+			<v>1.5</v>
+		</ifthen>
 	</function>
 
 
@@ -268,16 +268,16 @@
 		<function name="aero/force/Lift_alpha_sym">
 			<description>Lift due to alpha symmetric state</description>
 			<ifthen>
-			<eq><p>aero/function/thrust-state-sym</p><v>1</v></eq>
-			<product>
-				<property>aero/qbar-psf</property>
-				<property>metrics/Sw-sqft</property>
-				<property>aero/function/kCLge</property>
-			<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>						
-				<tableData	breakPoint="-2">
+				<eq><p>aero/function/thrust-state-sym</p><v>1</v></eq>
+				<product>
+					<property>aero/qbar-psf</property>
+					<property>metrics/Sw-sqft</property>
+					<property>aero/function/kCLge</property>
+					<table>
+						<independentVar	lookup="row">aero/alpha-deg</independentVar>
+						<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+						<independentVar	lookup="table">aero/function/thrust-state</independentVar>
+						<tableData	breakPoint="-2">
 					0	15	35
 -4.0628	-0.3248	-0.0794	0.0301
 -4.0484	-0.3235	-0.0781	0.0315
@@ -352,7 +352,7 @@
 24.4572	1.3503	1.3855	1.4273
 24.4740	1.3506	1.3855	1.4275
 24.4800	1.3507	1.3855	1.4275
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="-1">
 					0	15	35
 -4.1510	-0.3257	-0.1320	0.0862
@@ -451,7 +451,7 @@
 24.0700	1.3425	1.3513	1.4226
 24.0720	1.3425	1.3513	1.4226
 24.1090	1.3430	1.3515	1.4228
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0">
 					0	15	35
 -4.359	-0.3864	-0.15362	0.10264
@@ -537,7 +537,7 @@
 23.001	1.39762	1.42019	1.48248
 24.044	1.38195	1.40965	1.47272
 24.159	1.38016	1.40882	1.47149
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.19">
 					0	15	35
 -4.2710	-0.3983	-0.1201	0.1414
@@ -600,8 +600,8 @@
 22.6150	1.6241	1.6974	1.7678
 23.9410	1.6551	1.6950	1.7618
 23.9710	1.6558	1.6949	1.7614
-				</tableData>						
-				<tableData	breakPoint="0.28">	
+				</tableData>
+				<tableData	breakPoint="0.28">
 					0	15	35
 -4.1640	-0.3983	-0.1287	0.1568
 -4.1360	-0.3957	-0.1259	0.1598
@@ -671,7 +671,7 @@
 23.9220	1.7619	1.8366	1.9767
 23.9510	1.7618	1.8366	1.9768
 24.1010	1.7610	1.8365	1.9772
-				</tableData>							
+				</tableData>
 			</table>
 			</product>
 		<v>0</v>
@@ -685,13 +685,12 @@
 				<property>metrics/Sw-sqft</property>
 				<property>aero/function/kCLge</property>
 				<table>
-					<independentVar>fcs/flap-pos-deg</independentVar>			
+					<independentVar>fcs/flap-pos-deg</independentVar>
 					<tableData>
 					35	0
-					45	0.04	
-					</tableData>					
+					45	0.04
+					</tableData>
 				</table>
-
 			</product>
 		</function>
 
@@ -704,10 +703,10 @@
 				<property>metrics/Sw-sqft</property>
 				<property>aero/function/kCLge</property>
 				<table>
-					<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-					<independentVar	lookup="column">aero/function/power-balance</independentVar>						
-					<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>	
-					<tableData	breakPoint="0">	
+					<independentVar	lookup="row">aero/alpha-deg</independentVar>
+					<independentVar	lookup="column">aero/function/power-balance</independentVar>
+					<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
+					<tableData	breakPoint="0">
 						-1	0	1
 -3.9330	-0.3265	-0.3806	-0.3187
 -3.9130	-0.3243	-0.3785	-0.3166
@@ -772,8 +771,8 @@
 23.8900	1.5780	1.7706	1.5740
 23.9610	1.5784	1.7708	1.5756
 24.0040	1.5786	1.7710	1.5766
-					</tableData>						
-					<tableData	breakPoint="35">	
+					</tableData>
+					<tableData	breakPoint="35">
 						-1	0	1
 -4.0930	0.1050	0.1569	0.1037
 -4.0100	0.1144	0.1659	0.1130
@@ -850,11 +849,11 @@
 23.2360	1.7218	1.9763	1.7240
 24.1180	1.7069	1.9761	1.7070
 24.1730	1.7060	1.9761	1.7058
-					</tableData>							
-				</table>
-			</product>
-		<v>0</v>
-		</ifthen>
+						</tableData>
+					</table>
+				</product>
+				<v>0</v>
+			</ifthen>
 		</function>
 
 		<function name="aero/force/Lift_pitch_rate">
@@ -865,8 +864,8 @@
 				<property>velocities/q-aero-rad_sec</property>
 				<property>aero/ci2vel</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>	<!-- new -->					
-				<tableData>	
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>	<!-- new -->
+				<tableData>
 					-5	12.93
 					0	13.1
 					5	14.39
@@ -893,9 +892,9 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 			<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/elevator-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/elevator-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-state</independentVar>
 				<tableData	breakPoint="0">
 					-13.5	-10	-5	0	5	10
 -4.212	-0.144	-0.102	-0.061	0.000	0.113	0.148
@@ -1084,7 +1083,7 @@
 24.131	-0.063	-0.033	0.005	0.000	0.008	0.054
 24.179	-0.060	-0.030	0.007	0.000	0.008	0.054
 24.203	-0.059	-0.029	0.008	0.000	0.007	0.054
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.19">
 					-13.5	-10	-5	0	5	10
 -4.332	-0.155	-0.109	-0.045	0.000	0.117	0.157
@@ -1388,7 +1387,7 @@
 24.009	-0.127	-0.046	-0.026	0.000	0.062	0.084
 24.057	-0.124	-0.043	-0.023	0.000	0.062	0.084
 24.077	-0.123	-0.042	-0.022	0.000	0.062	0.084
-				</tableData>						
+				</tableData>
 			</table>
 			</product>
 		</function>
@@ -1403,7 +1402,7 @@
 					<p>fcs/elevator-pos-deg</p>
 					<v>0</v>
 					<table>
-						<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+						<independentVar	lookup="row">aero/alpha-deg</independentVar>
 						<tableData>
 -0.053	0.003
 -0.025	0.003
@@ -1426,11 +1425,11 @@
 19.097	-0.291
 20.104	-0.249
 20.150	-0.248
-						</tableData>	
-					</table>	
+						</tableData>
+					</table>
 					<v>35</v>
 					<table>
-						<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+						<independentVar	lookup="row">aero/alpha-deg</independentVar>
 						<tableData>
 -0.028	-0.028
 0.083	-0.028
@@ -1461,7 +1460,7 @@
 19.222	-0.213
 20.028	-0.211
 20.056	-0.212
-						</tableData>	
+						</tableData>
 					</table>
 					</interpolate1d>
 			</product>
@@ -1477,9 +1476,9 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>	
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-state</independentVar>
 
 				<tableData	breakPoint="-1"> <!-- -4 table. drag in propeller -->
 					0	15	35
@@ -1530,7 +1529,7 @@
 24.1519	0.5036	0.5769	0.6314
 24.2649	0.5073	0.5777	0.6350
 
-				</tableData>						
+				</tableData>
 
 				<tableData	breakPoint="0">
 					0	15	35
@@ -1607,7 +1606,7 @@
 24.0547	0.4862	0.5506	0.6232
 24.0686	0.4869	0.5512	0.6237
 24.1084	0.4889	0.5527	0.6253
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.19">
 					0	15	35
 -3.9821	0.0586	0.0912	0.1199
@@ -1681,8 +1680,8 @@
 24.0165	0.5130	0.6194	0.6947
 24.0342	0.5138	0.6202	0.6953
 24.0696	0.5155	0.6216	0.6967
-				</tableData>					
-				<tableData	breakPoint="0.28">	
+				</tableData>
+				<tableData	breakPoint="0.28">
 					0	15	35
 -3.9979	0.0555	0.0961	0.1375
 -3.9103	0.0554	0.0962	0.1377
@@ -1752,7 +1751,7 @@
 24.0690	0.5634	0.7126	0.7782
 24.1060	0.5651	0.7143	0.7798
 
-				</tableData>	
+				</tableData>
 				</table>
 			</product>
 		</function>
@@ -1763,10 +1762,10 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-					<independentVar>fcs/flap-pos-deg</independentVar>			
+					<independentVar>fcs/flap-pos-deg</independentVar>
 					<tableData>
 					35	0
-					45	0.04	
+					45	0.04
 					</tableData>
 				</table>
 			</product>
@@ -1819,7 +1818,7 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
 				<independentVar	lookup="column">fcs/elevator-pos-deg</independentVar>
 					<tableData>
 	-13.5	0	10
@@ -1881,7 +1880,7 @@
 		                <abs><property>fcs/rudder-pos-rad</property></abs>
 		                <value>0.0016</value>
 			</product>
-		</function>		
+		</function>
 		
 		<function name="aero/force/Drag_gear">
 			<description>Drag due to gear</description>
@@ -1931,7 +1930,7 @@
 			</product>
 		</function>
 
-		<function name="aero/force/Drag_ice"> 
+		<function name="aero/force/Drag_ice">
 			<description>Drag due to ice accreation</description>
 			<product>
 				<property>aero/function/runtime_ice</property>
@@ -1939,12 +1938,12 @@
 				<property>metrics/Sw-sqft</property>
  				<interpolate1d>
 					<p>aero/function/thrust-state</p>
-					<v> 0 </v> 
+					<v> 0 </v>
   						<interpolate1d>
 							<p> fcs/flap-pos-deg </p>
-							<v> 0 </v>  
+							<v> 0 </v>
 								<table>
-									<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+									<independentVar	lookup="row">aero/alpha-deg</independentVar>
 									<tableData>
 -4.1809	0.0253
 -4.0147	0.0254
@@ -1980,9 +1979,9 @@
 24.0993	0.0205
 									</tableData>
 								</table>
-							<v> 35 </v>  
+							<v> 35 </v>
 								<table>
-									<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+									<independentVar	lookup="row">aero/alpha-deg</independentVar>
 									<tableData>
 -4.1408	0.0361
 -3.8662	0.0360
@@ -2021,12 +2020,12 @@
 									</tableData>
 								</table>
 						</interpolate1d>
-					<v> 0.28 </v> 
+					<v> 0.28 </v>
   						<interpolate1d>
 			    				<p> fcs/flap-pos-deg </p>
-			    				<v> 0 </v>  
+			    				<v> 0 </v>
 							<table>
-								<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+								<independentVar	lookup="row">aero/alpha-deg</independentVar>
 								<tableData>
 -3.9123	0.0364
 -3.8751	0.0361
@@ -2062,9 +2061,9 @@
 24.1629	0.0343
 								</tableData>
 							</table>
-		    					<v> 35 </v>  
+		    					<v> 35 </v>
 							<table>
-								<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+								<independentVar	lookup="row">aero/alpha-deg</independentVar>
 								<tableData>
 -4.2149	0.0339
 -3.8929	0.0328
@@ -2116,9 +2115,9 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/beta-deg</independentVar>						
-				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>	
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">aero/beta-deg</independentVar>
+				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
 				<tableData	breakPoint="0">
 -8	-4	0	4	8
 -4.1499	0.0997	0.0477	-0.0036	-0.0523	-0.1039
@@ -2202,7 +2201,7 @@
 24.0217	0.0681	0.0436	-0.0054	-0.0284	-0.0657
 24.0367	0.0680	0.0436	-0.0055	-0.0284	-0.0657
 
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="15">
 -8	-4	0	4	8
 -4.2306	0.1170	0.0569	-0.0058	-0.0704	-0.1362
@@ -2286,8 +2285,8 @@
 24.0602	0.0787	0.0379	0.0001	-0.0338	-0.0748
 24.1151	0.0785	0.0378	0.0000	-0.0334	-0.0744
 
-				</tableData>					
-				<tableData	breakPoint="35">	
+				</tableData>
+				<tableData	breakPoint="35">
 -8	-4	0	4	8
 -4.1832	0.1187	0.0499	-0.0370	-0.0677	-0.1353
 -4.0242	0.1184	0.0500	-0.0378	-0.0679	-0.1346
@@ -2375,10 +2374,10 @@
 23.9980	0.0630	0.0235	0.0035	-0.0261	-0.0574
 24.0164	0.0629	0.0235	0.0035	-0.0260	-0.0573
 24.0273	0.0628	0.0234	0.0034	-0.0259	-0.0572
-				</tableData>	
+				</tableData>
 				</table>
 			</product>
-		</function>		
+		</function>
 
 		<function name="aero/force/Side_roll_rate">
 			<description>Side force due to roll rate</description>
@@ -2448,9 +2447,9 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 			<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>		
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-state</independentVar>
 				<tableData	breakPoint="-4">
 					0	15	35
 -4.1186	0.1730	0.2138	0.2813
@@ -2667,8 +2666,8 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>
 				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
 				<tableData	breakPoint="0">
 					-1	0	1
@@ -2792,9 +2791,9 @@
     			<p> fcs/flap-pos-deg </p>
     			<v> 0 </v>  <interpolate1d>
                   	<p> aero/function/thrust-coeff-tc</p>
-                  	<v> 0.00 </v>  
+                  	<v> 0.00 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -2861,9 +2860,9 @@
 				</tableData>
                   	</table>
 
-			<v> 0.19 </v>  
+			<v> 0.19 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 			<tableData>
 -4	0	4	8	12	16	20
@@ -2935,9 +2934,9 @@
 10.0391	-0.4516	-0.4848	-0.4741	-0.4771	-0.4646	-0.3825	-0.3592
 				</tableData>
                   	</table>
-			<v> 0.28 </v>  
+			<v> 0.28 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3012,9 +3011,9 @@
                 </interpolate1d>
 			<v> 15 </v> <interpolate1d>
                   	<p> aero/function/thrust-coeff-tc </p>
-			<v> 0.00 </v>  
+			<v> 0.00 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3078,9 +3077,9 @@
 5.0242	-0.2121	-0.1911	-0.2034	-0.1977	-0.1980	-0.1932	-0.1604
 				</tableData>
                   	</table>
-			<v> 0.19 </v>  
+			<v> 0.19 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3132,9 +3131,9 @@
 5.0811	-0.2190	-0.2269	-0.2541	-0.2415	-0.2340	-0.1995	-0.1898
 				</tableData>
                   	</table>
-			<v> 0.28 </v>  
+			<v> 0.28 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3206,9 +3205,9 @@
 
 			<v> 35 </v> <interpolate1d>
                 	<p> aero/function/thrust-coeff-tc </p>
-			<v> 0.00 </v>  
+			<v> 0.00 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3273,9 +3272,9 @@
 10.1012	-0.3895	-0.3908	-0.3791	-0.3713	-0.3322	-0.2067	-0.2457
 				</tableData>
                   	</table>
-			<v> 0.19 </v>  
+			<v> 0.19 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3336,9 +3335,9 @@
 10.0820	-0.4168	-0.4341	-0.4425	-0.4811	-0.4580	-0.2921	-0.2657
 				</tableData>
                   	</table>
-			<v> 0.28 </v>  
+			<v> 0.28 </v>
                   	<table>
-				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>						
+				<independentVar	lookup="row">fcs/elevator-pos-deg</independentVar>
 				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
 -4	0	4	8	12	16	20
@@ -3403,7 +3402,7 @@
 				</tableData>
                   	</table>
                 	</interpolate1d>
-  		</interpolate1d>				
+  		</interpolate1d>
 			</product>
 		</function>
 
@@ -3414,10 +3413,10 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<table>
-					<independentVar>fcs/elevator-pos-deg</independentVar>			
+					<independentVar>fcs/elevator-pos-deg</independentVar>
 					<tableData>
 					13.93	0
-					25	0.33	
+					25	0.33
 					</tableData>
 				</table>
 			</product>
@@ -3433,10 +3432,10 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/cbarw-ft</property>
 				<table>
-					<independentVar>fcs/flap-pos-deg</independentVar>			
+					<independentVar>fcs/flap-pos-deg</independentVar>
 					<tableData>
 					35	0
-					45	0.0094	
+					45	0.0094
 					</tableData>
 				</table>
 			</product>
@@ -3451,7 +3450,7 @@
 				<property>aero/ci2vel</property>
 				<property>velocities/q-aero-rad_sec</property>
 				<property>aero/function/easymode_cmq</property>
-				<value>-26.3</value> 
+				<value>-26.3</value>
 			</product>
 		</function>
 		
@@ -3487,10 +3486,10 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/function/runtime_ice</property>
 				<table>
-					<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+					<independentVar	lookup="row">aero/alpha-deg</independentVar>
 					<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
 					<tableData>
-							0	35	
+							0	35
 						0	0	-0.01
 						2	-0.01	-0.01
 						4	-0.02	-0.01
@@ -3503,11 +3502,11 @@
 						18	-0.1	-0.06
 						20	-0.05	-0.08
 				</tableData>
-				</table>	
+				</table>
 			</product>
 		</function>
 
-	<function name="aero/function/easymode_pitch">	
+	<function name="aero/function/easymode_pitch">
 			<description>increased pitch gradient</description>
 			<product>
 				<property>aero/qbar-psf</property>
@@ -3517,7 +3516,7 @@
 					<p>/sim/realism/realistic-fdm</p>
 					<v>0</v>
 				<table>
-					<independentVar>aero/alpha-deg</independentVar>						
+					<independentVar>aero/alpha-deg</independentVar>
 					<tableData>
 						-10	0.5
 						-5	0.1
@@ -3525,7 +3524,7 @@
 						10	-0.2
 						20	-0.5
 					</tableData>
-				</table>	
+				</table>
 				</ifthen>
 			</product>
 	</function>
@@ -3545,7 +3544,7 @@
 				<property>metrics/bw-ft</property>
 				<value>0.0</value>  <!-- test only -->
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
 				<independentVar	lookup="column">aero/function/thrust-state</independentVar>
 				<tableData>
 -0.1	0	0.19	0.28
@@ -3571,9 +3570,9 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
-				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>
+				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
 				<tableData	breakPoint="0">
 -1	0	1
 -4.01180	-0.00308	0.00034	-0.00219
@@ -3655,8 +3654,8 @@
 24.09080	0.02327	-0.01288	-0.06227
 
 
-				</tableData>						
-				<tableData	breakPoint="35">	
+				</tableData>
+				<tableData	breakPoint="35">
 	-1	0	1
 -4.37010	0.00274	0.00381	-0.00637
 -4.06750	0.00288	0.00394	-0.00694
@@ -3750,9 +3749,9 @@
 				<property>aero/function/modelfactor_clbeta</property>
 				<property>aero/function/easymode_clb</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-state</independentVar>
 				<tableData	breakPoint="0">
 				0	15	35
 -0.0464	-0.0026	-0.0027	-0.0023
@@ -3787,7 +3786,7 @@
 15.9329	-0.0036	-0.0032	-0.0021
 15.9414	-0.0036	-0.0032	-0.0021
 15.9437	-0.0036	-0.0032	-0.0021
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.19">
 				0	15	35
 -0.0448	-0.0022	-0.0027	-0.0019
@@ -3835,7 +3834,7 @@
 15.8944	-0.0039	-0.0032	-0.0024
 15.9053	-0.0039	-0.0032	-0.0024
 15.9672	-0.0039	-0.0032	-0.0024
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.28">
 				0	15	35
 -0.0274	-0.0028	-0.0020	-0.0020
@@ -3894,7 +3893,7 @@
 			</table>
 			</product>
 
-		</function>		
+		</function>
 		<function name="aero/moment/Roll_damp">
 			<description>Roll moment due to roll rate</description>
 			<product>
@@ -3944,11 +3943,11 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<property>fcs/aileron-pos-deg</property>
-				<value>-1</value> 
+				<value>-1</value>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-state</independentVar>
 				<tableData	breakPoint="0">
 			0 35
 0.0114	-0.0018	-0.0017
@@ -3978,8 +3977,8 @@
 15.4943	-0.0015	-0.0017
 15.9205	-0.0015	-0.0018
 15.9746	-0.0015	-0.0018
-				</tableData>						
-				<tableData	breakPoint="0.19">		
+				</tableData>
+				<tableData	breakPoint="0.19">
 0	35
 0.0251	-0.0016	-0.0017
 0.0504	-0.0016	-0.0017
@@ -4006,8 +4005,8 @@
 15.0963	-0.0016	-0.0016
 15.9410	-0.0015	-0.0015
 15.9636	-0.0015	-0.0015
-				</tableData>						
-				<tableData	breakPoint="0.28">		
+				</tableData>
+				<tableData	breakPoint="0.28">
 0	35
 0.5277	-0.0018	-0.0018
 0.5278	-0.0018	-0.0018
@@ -4052,10 +4051,10 @@
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
 				<table>
-				<independentVar	lookup="row">fcs/rudder-pos-deg</independentVar>						
-				<independentVar	lookup="column">aero/alpha-deg</independentVar>				
+				<independentVar	lookup="row">fcs/rudder-pos-deg</independentVar>
+				<independentVar	lookup="column">aero/alpha-deg</independentVar>
 				<tableData>
-	0	6	12	16				
+	0	6	12	16
 -25.041500	-0.014425	-0.002961	-0.002961	0.009474
 -25.014400	-0.014393	-0.002999	-0.002999	0.009417
 -24.981400	-0.014353	-0.003046	-0.003046	0.009347
@@ -4105,7 +4104,7 @@
 24.988300	0.007509	0.005727	0.005727	0.004933
 24.994500	0.007514	0.005728	0.005728	0.004933
 25.001200	0.007520	0.005729	0.005729	0.004932
-				</tableData>				
+				</tableData>
 				</table>
 			</product>
 		</function>
@@ -4133,464 +4132,463 @@
 		</function>-->
 
 
-		<function name="aero/moment/Yaw_base">
+		<!--<function name="aero/moment/Yaw_base">
 			<description>Yaw moment base</description>
 			<product>
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
+				<interpolate1d>
+					<property>aero/function/thrust-state</property>
+					<v>-0.1</v>
+					<v>0</v>
+					<v>0</v>
 					<interpolate1d>
-						<property>aero/function/thrust-state</property>
-							<v>-0.1</v>
-								<v>0</v>
-							<v>0</v>
-								<interpolate1d>
-									<property>fcs/flap-pos-deg</property>
-									<v>0</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-3.9507	-0.0014
-					-3.7013	-0.0015
-					-3.0848	-0.0020
-					-2.1571	-0.0026
-					-0.9202	-0.0023
-					-0.4286	-0.0021
-					0.1312	-0.0018
-					1.1826	-0.0014
-					2.4814	-0.0010
-					2.7273	-0.0009
-					3.7802	-0.0005
-					5.0171	-0.0001
-					5.2597	0.0000
-					6.5015	0.0004
-					7.9239	0.0007
-					8.2597	0.0008
-					9.4083	0.0011
-					10.6452	0.0010
-					11.1429	0.0008
-					11.7584	0.0005
-					12.6861	-0.0002
-					13.3046	-0.0010
-					13.9849	-0.0019
-					14.5714	-0.0021
-					15.1600	-0.0022
-					15.7785	-0.0017
-					16.2732	-0.0011
-					16.5825	-0.0005
-					16.8917	0.0002
-					17.2010	0.0008
-					17.4483	0.0014
-					17.6883	0.0019
-					17.7576	0.0021
-					18.1905	0.0027
-					18.9945	0.0023
-					19.0130	0.0023
-					19.6748	0.0019
-					20.2314	0.0014
-					20.9736	0.0011
-					21.5455	0.0011
-					22.1487	0.0014
-					22.4579	0.0013
-					22.4805	0.0012
-					22.6435	0.0008
-					22.8290	0.0004
-					23.0146	-0.0001
-					23.1382	-0.0006
-					23.2619	-0.0012
-					23.3856	-0.0017
-					23.5093	-0.0023
-					23.6949	-0.0028
-					23.8186	-0.0033
-					24.0041	-0.0038
-					24.1169	-0.0041
-											</tableData>
-										</table>
-									<v>15</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-4.0428	0.0008
-					-3.9607	0.0008
-					-2.8811	0.0006
-					-2.2670	0.0005
-					-1.6816	0.0005
-					-0.9019	0.0004
-					0.1889	0.0003
-					0.4776	0.0003
-					1.9770	0.0000
-					2.9849	-0.0002
-					3.4165	-0.0003
-					4.8560	-0.0004
-					5.4408	-0.0005
-					6.2354	-0.0005
-					7.3150	-0.0008
-					7.8589	-0.0010
-					8.1547	-0.0011
-					8.8744	-0.0014
-					9.4081	-0.0017
-					9.4742	-0.0018
-					10.1939	-0.0022
-					11.4535	-0.0023
-					11.7506	-0.0022
-					12.7130	-0.0017
-					13.8526	-0.0009
-					14.5088	-0.0005
-					14.9322	-0.0002
-					15.7119	0.0004
-					16.3602	0.0010
-					16.4316	0.0011
-					17.0913	0.0017
-					17.7511	0.0023
-					18.6508	0.0030
-					19.0806	0.0033
-					19.5504	0.0036
-					20.4501	0.0038
-					20.8699	0.0033
-					21.2298	0.0028
-					21.2343	0.0028
-					21.5297	0.0022
-					21.7696	0.0016
-					22.0095	0.0010
-					22.1894	0.0004
-					22.3694	-0.0002
-					22.5493	-0.0008
-					22.6692	-0.0014
-					22.7892	-0.0020
-					22.9691	-0.0026
-					23.1491	-0.0033
-					23.2690	-0.0039
-					23.4489	-0.0045
-					23.6289	-0.0051
-					23.8035	-0.0057
-					23.8088	-0.0057
-					24.0487	-0.0064
-											</tableData>
-										</table>
-									<v>35</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-4.0270	-0.0067
-					-3.1701	-0.0060
-					-2.4791	-0.0056
-					-1.9740	-0.0056
-					-1.1986	-0.0059
-					-0.6577	-0.0060
-					0.5726	-0.0060
-					0.6586	-0.0060
-					1.7795	-0.0058
-					1.9150	-0.0056
-					2.9528	-0.0043
-					3.2916	-0.0038
-					4.2804	-0.0019
-					4.7888	-0.0009
-					6.2264	0.0019
-					6.3688	0.0022
-					7.0502	0.0028
-					7.6647	0.0025
-					7.9553	0.0024
-					9.1034	0.0015
-					9.2734	0.0013
-					10.4823	-0.0004
-					10.5895	-0.0006
-					11.6425	-0.0022
-					11.7420	-0.0023
-					12.5109	-0.0021
-					13.0791	-0.0012
-					13.1191	-0.0012
-					13.6097	-0.0002
-					14.1961	0.0005
-					14.2910	0.0005
-					14.7381	-0.0001
-					15.0082	-0.0008
-					15.2802	-0.0015
-					15.8224	-0.0031
-					16.4242	-0.0047
-					16.6625	-0.0050
-					17.6807	-0.0057
-					18.5808	-0.0069
-					18.6943	-0.0071
-					19.1828	-0.0082
-					19.7850	-0.0095
-					20.3869	-0.0107
-					20.5405	-0.0109
-					21.0487	-0.0116
-					21.7703	-0.0125
-					21.8990	-0.0127
-					22.3931	-0.0122
-					22.4919	-0.0120
-					23.7515	-0.0096
-					24.1796	-0.0088
-											</tableData>
-										</table>
-									</interpolate1d>
-								<v>0.19</v>
-									<interpolate1d>
-									<property>fcs/flap-pos-deg</property>
-									<v>0</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-3.9648	-0.0027
-					-3.6584	-0.0028
-					-2.0619	-0.0032
-					-1.6800	-0.0033
-					-1.0690	-0.0034
-					0.9158	-0.0036
-					2.0698	-0.0036
-					2.9822	-0.0035
-					4.9653	-0.0032
-					5.1427	-0.0032
-					6.9491	-0.0027
-					7.6456	-0.0025
-					8.8517	-0.0024
-					10.3568	-0.0022
-					10.8371	-0.0022
-					11.8671	-0.0027
-					12.4110	-0.0031
-					13.7374	-0.0042
-					14.7816	-0.0051
-					14.8987	-0.0052
-					15.8950	-0.0064
-					16.9681	-0.0062
-					17.1753	-0.0061
-					18.0397	-0.0058
-					18.3722	-0.0061
-					18.7055	-0.0067
-					19.2888	-0.0075
-					19.7894	-0.0083
-					20.4554	-0.0091
-					20.5634	-0.0091
-					21.9463	-0.0092
-					21.9721	-0.0091
-					23.0251	-0.0087
-					23.6084	-0.0089
-					24.0679	-0.0091
-											</tableData>
-										</table>
-
-									<v>15</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-3.9328	-0.0014
-					-3.8912	-0.0014
-					-2.0168	-0.0021
-					-1.9704	-0.0021
-					-0.3025	-0.0025
-					-0.0495	-0.0025
-					1.6134	-0.0028
-					1.8714	-0.0028
-					3.8723	-0.0033
-					3.9832	-0.0033
-					5.7932	-0.0035
-					6.0000	-0.0035
-					7.6341	-0.0034
-					8.6723	-0.0034
-					9.5550	-0.0034
-					10.2857	-0.0034
-					11.3158	-0.0035
-					12.4034	-0.0041
-					12.4363	-0.0041
-					12.9966	-0.0050
-					13.5568	-0.0059
-					14.0370	-0.0069
-					14.5173	-0.0078
-					15.0252	-0.0085
-					15.1576	-0.0087
-					15.9579	-0.0095
-					17.0924	-0.0090
-					17.3986	-0.0088
-					18.5191	-0.0077
-					18.8067	-0.0073
-					19.2395	-0.0066
-					20.5200	-0.0056
-					20.6723	-0.0056
-					22.1208	-0.0061
-					22.4874	-0.0063
-					23.1613	-0.0070
-					23.9496	-0.0078					
-											</tableData>
-										</table>
-									<v>35</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-4.0772	-0.0093
-					-3.9759	-0.0093
-					-2.5168	-0.0086
-					-2.1381	-0.0086
-					-1.1577	-0.0090
-					-0.8597	-0.0090
-					0.8982	-0.0087
-					0.9060	-0.0087
-					1.8121	-0.0087
-					2.8159	-0.0078
-					3.0201	-0.0076
-					4.6309	-0.0048
-					4.7335	-0.0046
-					6.4430	-0.0018
-					6.6512	-0.0016
-					7.1477	-0.0014
-					7.8497	-0.0026
-					7.9530	-0.0028
-					8.6488	-0.0047
-					9.2880	-0.0068
-					9.6644	-0.0080
-					10.0071	-0.0091
-					10.6463	-0.0115
-					11.2752	-0.0135
-					11.4453	-0.0139
-					11.8289	-0.0142
-					12.7852	-0.0139
-					13.2032	-0.0134
-					13.8926	-0.0124
-					14.6980	-0.0117
-					15.1209	-0.0118
-					15.6040	-0.0122
-					17.0385	-0.0136
-					17.9195	-0.0142
-					18.8763	-0.0147
-					20.2852	-0.0152
-					20.7940	-0.0154
-					21.6443	-0.0151
-					22.4719	-0.0131
-					22.8523	-0.0119
-					23.5906	-0.0090
-					24.0604	-0.0072
-											</tableData>
-										</table>
-									</interpolate1d>
-									<v>0.28</v>
-									<interpolate1d>
-										<property>fcs/flap-pos-deg</property>
-									<v>0</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-3.8678	-0.0027
-					-3.8400	-0.0027
-					-1.8875	-0.0031
-					-0.8978	-0.0034
-					0.6322	-0.0037
-					1.0823	-0.0038
-					2.9788	-0.0045
-					4.7097	-0.0053
-					5.3114	-0.0055
-					6.5231	-0.0059
-					8.1715	-0.0064
-					8.6368	-0.0065
-					9.8195	-0.0068
-					11.2348	-0.0076
-					11.4673	-0.0077
-					13.1189	-0.0076
-					13.9450	-0.0076
-					14.3534	-0.0093
-					14.6790	-0.0111
-					15.0874	-0.0129
-					15.1365	-0.0131
-					15.7434	-0.0147
-					16.5647	-0.0165
-					18.0475	-0.0177
-					18.2573	-0.0176
-					19.2888	-0.0162
-					20.1183	-0.0144
-					20.6177	-0.0125
-					20.6992	-0.0122
-					21.0349	-0.0106
-					21.3694	-0.0088
-					21.7038	-0.0069
-					22.3084	-0.0057
-					22.4486	-0.0055
-					23.3526	-0.0058
-					24.0179	-0.0061
-											</tableData>
-										</table>
-									<v>15</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-4.0008	-0.0029
-					-3.8299	-0.0030
-					-1.8297	-0.0038
-					-1.5395	-0.0039
-					0.4102	-0.0043
-					0.6747	-0.0043
-					2.4118	-0.0047
-					4.0993	-0.0049
-					4.3331	-0.0049
-					5.2953	-0.0051
-					6.9809	-0.0055
-					7.8332	-0.0057
-					8.5875	-0.0059
-					9.7951	-0.0065
-					10.6840	-0.0073
-					10.8133	-0.0074
-					11.5725	-0.0081
-					12.5410	-0.0088
-					13.6693	-0.0094
-					14.8044	-0.0091
-					15.1081	-0.0089
-					15.8200	-0.0078
-					17.0128	-0.0067
-					17.9855	-0.0064
-					18.6943	-0.0064
-					20.2208	-0.0068
-					20.2583	-0.0068
-					21.7471	-0.0073
-					21.7720	-0.0074
-					23.0347	-0.0082
-					24.0402	-0.0089
-											</tableData>
-										</table>
-									<v>35</v>
-										<table>
-										<independentVar lookup="row">aero/alpha-deg</independentVar>
-											<tableData>
-					-4.0336	-0.0088
-					-3.9177	-0.0087
-					-3.0252	-0.0084
-					-2.2689	-0.0084
-					-1.9168	-0.0088
-					-1.3613	-0.0092
-					-0.8763	-0.0094
-					0.7059	-0.0099
-					1.1246	-0.0101
-					1.6639	-0.0102
-					2.7731	-0.0097
-					2.8855	-0.0096
-					3.8824	-0.0095
-					4.0860	-0.0095
-					5.2065	-0.0094
-					5.4958	-0.0094
-					6.4071	-0.0091
-					6.4538	-0.0091
-					7.0588	-0.0089
-					7.8151	-0.0091
-					8.2479	-0.0094
-					9.2773	-0.0105
-					10.0888	-0.0119
-					10.7899	-0.0137
-					11.2893	-0.0152
-					11.7479	-0.0164
-					12.4034	-0.0174
-					12.4099	-0.0174
-					13.4118	-0.0183
-					13.4503	-0.0183
-					14.1681	-0.0182
-					14.6218	-0.0180
-					15.1311	-0.0184
-					15.1765	-0.0184
-					16.7395	-0.0192
-					16.8919	-0.0192
-					18.4034	-0.0189
-											</tableData>
-										</table>
-									</interpolate1d>
-								</interpolate1d>
-							</product>
-		</function>
+						<property>fcs/flap-pos-deg</property>
+						<v>0</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-3.9507	-0.0014
+								-3.7013	-0.0015
+								-3.0848	-0.0020
+								-2.1571	-0.0026
+								-0.9202	-0.0023
+								-0.4286	-0.0021
+								0.1312	-0.0018
+								1.1826	-0.0014
+								2.4814	-0.0010
+								2.7273	-0.0009
+								3.7802	-0.0005
+								5.0171	-0.0001
+								5.2597	0.0000
+								6.5015	0.0004
+								7.9239	0.0007
+								8.2597	0.0008
+								9.4083	0.0011
+								10.6452	0.0010
+								11.1429	0.0008
+								11.7584	0.0005
+								12.6861	-0.0002
+								13.3046	-0.0010
+								13.9849	-0.0019
+								14.5714	-0.0021
+								15.1600	-0.0022
+								15.7785	-0.0017
+								16.2732	-0.0011
+								16.5825	-0.0005
+								16.8917	0.0002
+								17.2010	0.0008
+								17.4483	0.0014
+								17.6883	0.0019
+								17.7576	0.0021
+								18.1905	0.0027
+								18.9945	0.0023
+								19.0130	0.0023
+								19.6748	0.0019
+								20.2314	0.0014
+								20.9736	0.0011
+								21.5455	0.0011
+								22.1487	0.0014
+								22.4579	0.0013
+								22.4805	0.0012
+								22.6435	0.0008
+								22.8290	0.0004
+								23.0146	-0.0001
+								23.1382	-0.0006
+								23.2619	-0.0012
+								23.3856	-0.0017
+								23.5093	-0.0023
+								23.6949	-0.0028
+								23.8186	-0.0033
+								24.0041	-0.0038
+								24.1169	-0.0041
+							</tableData>
+						</table>
+						<v>15</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-4.0428	0.0008
+								-3.9607	0.0008
+								-2.8811	0.0006
+								-2.2670	0.0005
+								-1.6816	0.0005
+								-0.9019	0.0004
+								0.1889	0.0003
+								0.4776	0.0003
+								1.9770	0.0000
+								2.9849	-0.0002
+								3.4165	-0.0003
+								4.8560	-0.0004
+								5.4408	-0.0005
+								6.2354	-0.0005
+								7.3150	-0.0008
+								7.8589	-0.0010
+								8.1547	-0.0011
+								8.8744	-0.0014
+								9.4081	-0.0017
+								9.4742	-0.0018
+								10.1939	-0.0022
+								11.4535	-0.0023
+								11.7506	-0.0022
+								12.7130	-0.0017
+								13.8526	-0.0009
+								14.5088	-0.0005
+								14.9322	-0.0002
+								15.7119	0.0004
+								16.3602	0.0010
+								16.4316	0.0011
+								17.0913	0.0017
+								17.7511	0.0023
+								18.6508	0.0030
+								19.0806	0.0033
+								19.5504	0.0036
+								20.4501	0.0038
+								20.8699	0.0033
+								21.2298	0.0028
+								21.2343	0.0028
+								21.5297	0.0022
+								21.7696	0.0016
+								22.0095	0.0010
+								22.1894	0.0004
+								22.3694	-0.0002
+								22.5493	-0.0008
+								22.6692	-0.0014
+								22.7892	-0.0020
+								22.9691	-0.0026
+								23.1491	-0.0033
+								23.2690	-0.0039
+								23.4489	-0.0045
+								23.6289	-0.0051
+								23.8035	-0.0057
+								23.8088	-0.0057
+								24.0487	-0.0064
+							</tableData>
+						</table>
+						<v>35</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-4.0270	-0.0067
+								-3.1701	-0.0060
+								-2.4791	-0.0056
+								-1.9740	-0.0056
+								-1.1986	-0.0059
+								-0.6577	-0.0060
+								0.5726	-0.0060
+								0.6586	-0.0060
+								1.7795	-0.0058
+								1.9150	-0.0056
+								2.9528	-0.0043
+								3.2916	-0.0038
+								4.2804	-0.0019
+								4.7888	-0.0009
+								6.2264	0.0019
+								6.3688	0.0022
+								7.0502	0.0028
+								7.6647	0.0025
+								7.9553	0.0024
+								9.1034	0.0015
+								9.2734	0.0013
+								10.4823	-0.0004
+								10.5895	-0.0006
+								11.6425	-0.0022
+								11.7420	-0.0023
+								12.5109	-0.0021
+								13.0791	-0.0012
+								13.1191	-0.0012
+								13.6097	-0.0002
+								14.1961	0.0005
+								14.2910	0.0005
+								14.7381	-0.0001
+								15.0082	-0.0008
+								15.2802	-0.0015
+								15.8224	-0.0031
+								16.4242	-0.0047
+								16.6625	-0.0050
+								17.6807	-0.0057
+								18.5808	-0.0069
+								18.6943	-0.0071
+								19.1828	-0.0082
+								19.7850	-0.0095
+								20.3869	-0.0107
+								20.5405	-0.0109
+								21.0487	-0.0116
+								21.7703	-0.0125
+								21.8990	-0.0127
+								22.3931	-0.0122
+								22.4919	-0.0120
+								23.7515	-0.0096
+								24.1796	-0.0088
+							</tableData>
+						</table>
+					</interpolate1d>
+					<v>0.19</v>
+					<interpolate1d>
+						<property>fcs/flap-pos-deg</property>
+						<v>0</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-3.9648	-0.0027
+								-3.6584	-0.0028
+								-2.0619	-0.0032
+								-1.6800	-0.0033
+								-1.0690	-0.0034
+								0.9158	-0.0036
+								2.0698	-0.0036
+								2.9822	-0.0035
+								4.9653	-0.0032
+								5.1427	-0.0032
+								6.9491	-0.0027
+								7.6456	-0.0025
+								8.8517	-0.0024
+								10.3568	-0.0022
+								10.8371	-0.0022
+								11.8671	-0.0027
+								12.4110	-0.0031
+								13.7374	-0.0042
+								14.7816	-0.0051
+								14.8987	-0.0052
+								15.8950	-0.0064
+								16.9681	-0.0062
+								17.1753	-0.0061
+								18.0397	-0.0058
+								18.3722	-0.0061
+								18.7055	-0.0067
+								19.2888	-0.0075
+								19.7894	-0.0083
+								20.4554	-0.0091
+								20.5634	-0.0091
+								21.9463	-0.0092
+								21.9721	-0.0091
+								23.0251	-0.0087
+								23.6084	-0.0089
+								24.0679	-0.0091
+							</tableData>
+						</table>
+						<v>15</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-3.9328	-0.0014
+								-3.8912	-0.0014
+								-2.0168	-0.0021
+								-1.9704	-0.0021
+								-0.3025	-0.0025
+								-0.0495	-0.0025
+								1.6134	-0.0028
+								1.8714	-0.0028
+								3.8723	-0.0033
+								3.9832	-0.0033
+								5.7932	-0.0035
+								6.0000	-0.0035
+								7.6341	-0.0034
+								8.6723	-0.0034
+								9.5550	-0.0034
+								10.2857	-0.0034
+								11.3158	-0.0035
+								12.4034	-0.0041
+								12.4363	-0.0041
+								12.9966	-0.0050
+								13.5568	-0.0059
+								14.0370	-0.0069
+								14.5173	-0.0078
+								15.0252	-0.0085
+								15.1576	-0.0087
+								15.9579	-0.0095
+								17.0924	-0.0090
+								17.3986	-0.0088
+								18.5191	-0.0077
+								18.8067	-0.0073
+								19.2395	-0.0066
+								20.5200	-0.0056
+								20.6723	-0.0056
+								22.1208	-0.0061
+								22.4874	-0.0063
+								23.1613	-0.0070
+								23.9496	-0.0078
+							</tableData>
+						</table>
+						<v>35</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-4.0772	-0.0093
+								-3.9759	-0.0093
+								-2.5168	-0.0086
+								-2.1381	-0.0086
+								-1.1577	-0.0090
+								-0.8597	-0.0090
+								0.8982	-0.0087
+								0.9060	-0.0087
+								1.8121	-0.0087
+								2.8159	-0.0078
+								3.0201	-0.0076
+								4.6309	-0.0048
+								4.7335	-0.0046
+								6.4430	-0.0018
+								6.6512	-0.0016
+								7.1477	-0.0014
+								7.8497	-0.0026
+								7.9530	-0.0028
+								8.6488	-0.0047
+								9.2880	-0.0068
+								9.6644	-0.0080
+								10.0071	-0.0091
+								10.6463	-0.0115
+								11.2752	-0.0135
+								11.4453	-0.0139
+								11.8289	-0.0142
+								12.7852	-0.0139
+								13.2032	-0.0134
+								13.8926	-0.0124
+								14.6980	-0.0117
+								15.1209	-0.0118
+								15.6040	-0.0122
+								17.0385	-0.0136
+								17.9195	-0.0142
+								18.8763	-0.0147
+								20.2852	-0.0152
+								20.7940	-0.0154
+								21.6443	-0.0151
+								22.4719	-0.0131
+								22.8523	-0.0119
+								23.5906	-0.0090
+								24.0604	-0.0072
+							</tableData>
+						</table>
+					</interpolate1d>
+					<v>0.28</v>
+					<interpolate1d>
+						<property>fcs/flap-pos-deg</property>
+						<v>0</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-3.8678	-0.0027
+								-3.8400	-0.0027
+								-1.8875	-0.0031
+								-0.8978	-0.0034
+								0.6322	-0.0037
+								1.0823	-0.0038
+								2.9788	-0.0045
+								4.7097	-0.0053
+								5.3114	-0.0055
+								6.5231	-0.0059
+								8.1715	-0.0064
+								8.6368	-0.0065
+								9.8195	-0.0068
+								11.2348	-0.0076
+								11.4673	-0.0077
+								13.1189	-0.0076
+								13.9450	-0.0076
+								14.3534	-0.0093
+								14.6790	-0.0111
+								15.0874	-0.0129
+								15.1365	-0.0131
+								15.7434	-0.0147
+								16.5647	-0.0165
+								18.0475	-0.0177
+								18.2573	-0.0176
+								19.2888	-0.0162
+								20.1183	-0.0144
+								20.6177	-0.0125
+								20.6992	-0.0122
+								21.0349	-0.0106
+								21.3694	-0.0088
+								21.7038	-0.0069
+								22.3084	-0.0057
+								22.4486	-0.0055
+								23.3526	-0.0058
+								24.0179	-0.0061
+							</tableData>
+						</table>
+						<v>15</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-4.0008	-0.0029
+								-3.8299	-0.0030
+								-1.8297	-0.0038
+								-1.5395	-0.0039
+								0.4102	-0.0043
+								0.6747	-0.0043
+								2.4118	-0.0047
+								4.0993	-0.0049
+								4.3331	-0.0049
+								5.2953	-0.0051
+								6.9809	-0.0055
+								7.8332	-0.0057
+								8.5875	-0.0059
+								9.7951	-0.0065
+								10.6840	-0.0073
+								10.8133	-0.0074
+								11.5725	-0.0081
+								12.5410	-0.0088
+								13.6693	-0.0094
+								14.8044	-0.0091
+								15.1081	-0.0089
+								15.8200	-0.0078
+								17.0128	-0.0067
+								17.9855	-0.0064
+								18.6943	-0.0064
+								20.2208	-0.0068
+								20.2583	-0.0068
+								21.7471	-0.0073
+								21.7720	-0.0074
+								23.0347	-0.0082
+								24.0402	-0.0089
+							</tableData>
+						</table>
+						<v>35</v>
+						<table>
+							<independentVar lookup="row">aero/alpha-deg</independentVar>
+							<tableData>
+								-4.0336	-0.0088
+								-3.9177	-0.0087
+								-3.0252	-0.0084
+								-2.2689	-0.0084
+								-1.9168	-0.0088
+								-1.3613	-0.0092
+								-0.8763	-0.0094
+								0.7059	-0.0099
+								1.1246	-0.0101
+								1.6639	-0.0102
+								2.7731	-0.0097
+								2.8855	-0.0096
+								3.8824	-0.0095
+								4.0860	-0.0095
+								5.2065	-0.0094
+								5.4958	-0.0094
+								6.4071	-0.0091
+								6.4538	-0.0091
+								7.0588	-0.0089
+								7.8151	-0.0091
+								8.2479	-0.0094
+								9.2773	-0.0105
+								10.0888	-0.0119
+								10.7899	-0.0137
+								11.2893	-0.0152
+								11.7479	-0.0164
+								12.4034	-0.0174
+								12.4099	-0.0174
+								13.4118	-0.0183
+								13.4503	-0.0183
+								14.1681	-0.0182
+								14.6218	-0.0180
+								15.1311	-0.0184
+								15.1765	-0.0184
+								16.7395	-0.0192
+								16.8919	-0.0192
+								18.4034	-0.0189
+							</tableData>
+						</table>
+					</interpolate1d>
+				</interpolate1d>
+			</product>
+		</function>-->
 		
 		<function name="aero/moment/Yaw_beta">
 			<description>Yaw moment due to beta</description>
@@ -4602,9 +4600,9 @@
 				<property>aero/function/modelfactor_cnbeta</property>
 				<property>aero/function/easymode_cnb</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-state</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-state</independentVar>
 				<tableData	breakPoint="0.0">
 					0	15	35
 					-0.0265	0.0027	0.0027	0.0029
@@ -4643,9 +4641,9 @@
 					15.9616	0.0018	0.0015	0.0027
 					16.0286	0.0018	0.0015	0.0028
 					16.0481	0.0018	0.0015	0.0028
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.19">
-					0	15	35
+							0		15		35
 					-0.0079	0.0024	0.0026	0.0027
 					0.0143	0.0024	0.0026	0.0027
 					0.0282	0.0024	0.0026	0.0027
@@ -4699,9 +4697,9 @@
 					16.0334	0.0031	0.0019	0.0025
 					16.0513	0.0031	0.0019	0.0025
 					16.0632	0.0031	0.0019	0.0025
-				</tableData>						
+				</tableData>
 				<tableData	breakPoint="0.28">
-					0	15	35
+							0		15		35
 					-0.0425	0.0024	0.0026	0.0027
 					-0.0243	0.0024	0.0026	0.0027
 					-0.0231	0.0024	0.0026	0.0027
@@ -4722,7 +4720,7 @@
 					7.0136	0.0015	0.0018	0.0014
 					7.6611	0.0014	0.0017	0.0014
 					7.8228	0.0013	0.0017	0.0014
-					8.4916	0.0012	0.0017	0.0015	
+					8.4916	0.0012	0.0017	0.0015
 					8.9953	0.0011	0.0017	0.0016
 					9.0598	0.0011	0.0017	0.0016
 					9.8701	0.0010	0.0016	0.0017
@@ -4761,7 +4759,7 @@
 				<table>
 					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>
-						0	-0.02517 
+						0	-0.02517
 						5	-0.0615
 						6.6	-0.1021
 					</tableData>
@@ -4817,9 +4815,9 @@
 				<property>metrics/bw-ft</property>
 				<property>fcs/rudder-pos-deg</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>						
-				<independentVar	lookup="table">aero/function/thrust-coeff-tc</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">fcs/flap-pos-deg</independentVar>
+				<independentVar	lookup="table">aero/function/thrust-coeff-tc</independentVar>
 				<tableData	breakPoint="0.0">
 					0	35
 					0.0246	-0.0013	-0.0015
@@ -4842,8 +4840,8 @@
 					15.2354	-0.0012	-0.0011
 					15.9940	-0.0011	-0.0009
 					16.0115	-0.0011	-0.0009
-				</tableData>						
-				<tableData	breakPoint="0.19">		
+				</tableData>
+				<tableData	breakPoint="0.19">
 						0	35
 					-0.0431	-0.0013	-0.0016
 					-0.0100	-0.0013	-0.0016
@@ -4867,8 +4865,8 @@
 					14.6355	-0.0012	-0.0012
 					15.9096	-0.0012	-0.0011
 					15.9693	-0.0012	-0.0011
-				</tableData>						
-				<tableData	breakPoint="0.28">		
+				</tableData>
+				<tableData	breakPoint="0.28">
 					0	35
 					0.0044	-0.0014	-0.0016
 					0.0351	-0.0014	-0.0016
@@ -4914,9 +4912,9 @@
 				<property>metrics/bw-ft</property>
 				<property>fcs/rudder-pos-deg</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>						
-				<independentVar	lookup="column">aero/function/power-balance</independentVar>						
-				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>						
+				<independentVar	lookup="row">aero/alpha-deg</independentVar>
+				<independentVar	lookup="column">aero/function/power-balance</independentVar>
+				<independentVar	lookup="table">fcs/flap-pos-deg</independentVar>
 				<tableData	breakPoint="0">
 						-1	1
 					-0.028100	-0.001493	-0.001493
@@ -4938,8 +4936,8 @@
 					15.296700	-0.001335	-0.001514
 					15.989300	-0.001201	-0.001411
 					16.015600	-0.001196	-0.001406
-				</tableData>						
-				<tableData	breakPoint="35">	
+				</tableData>
+				<tableData	breakPoint="35">
 						-1	1
 					0.000300	-0.001493	-0.001493
 					4.365000	-0.001509	-0.001526
@@ -4973,17 +4971,16 @@
 				<property>aero/qbar-psf</property>
 				<property>metrics/Sw-sqft</property>
 				<property>metrics/bw-ft</property>
-				<property>fcs/aileron-pos-deg</property> 
+				<property>fcs/aileron-pos-deg</property>
 				<table>
-				<independentVar	lookup="row">aero/alpha-deg</independentVar>	
-				<tableData>
-					-0.0166	0.0000
-					9.3688	0.0002
-					15.9759	0.0004
-					19.9942	0.0005
-				</tableData>
-			</table>
-
+					<independentVar	lookup="row">aero/alpha-deg</independentVar>
+					<tableData>
+						-0.0166	0.0000
+						9.3688	0.0002
+						15.9759	0.0004
+						19.9942	0.0005
+					</tableData>
+				</table>
 			</product>
 		</function>
 	</axis>
