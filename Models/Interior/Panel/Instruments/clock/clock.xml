@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>clock.ac</path>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>HoursHand</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property>instrumentation/clock/hours-hand-rotation-deg</property>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>MinutesHand</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property>instrumentation/clock/minutes-hand-rotation-deg</property>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>SecondsHand</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property>instrumentation/clock/seconds-hand-rotation-deg</property>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>WindupKnob</object-name>
+		<axis>
+			<object-name>WindupKnobAxis</object-name>
+		</axis>
+		<property>instrumentation/clock/windup-norm</property>
+		<factor>1440</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/clock/windup-norm</property>
+				<min>0</min>
+				<max>1</max>
+				<step>0.005</step>
+			</binding>
+		</action>
+	</animation>
+	
+	<effect>
+		<object-name>Glass</object-name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+	</effect>
+</PropertyList>
