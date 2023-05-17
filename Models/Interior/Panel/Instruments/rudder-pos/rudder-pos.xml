@@ -1,3 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
+	<path>rudder-pos.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Needle</object-name>
+		<emission>
+			<red>0.95</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>
+				<expression>
+					<sum>
+						<product>
+							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+							<value>0.43</value>
+						</product>
+						<product>
+							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+							<value>0.57</value>
+						</product>
+					</sum>
+				</expression>
+			</factor>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<axis>
+			<object-name>NeedleAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property>instrumentation/rudder-position/indicated-rudder-position-norm</property>
+		<factor>40</factor>
+	</animation>
+	
+	<effect>
+		<object-name>Glass</object-name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+	</effect>
 </PropertyList>
