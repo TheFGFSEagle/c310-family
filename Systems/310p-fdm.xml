@@ -127,10 +127,10 @@
 	</mass_balance>
 	
 	<propulsion>
-		<engine file="Continental-O-470-M">
+		<engine file="Continental-IO-470-VO">
 			<feed>12</feed>
 			
-			<thruster file="Hartzell-HC82XF-2">
+			<thruster file="McCauley-D2AF34C71-84JF-3">
 				<sense>1</sense>
 				<location unit="IN">
 					<x>-23</x>
@@ -145,10 +145,10 @@
 			</thruster>
 		</engine>
 		
-		<engine file="Continental-O-470-M">
+		<engine file="Continental-IO-470-VO">
 			<feed>13</feed>
 			
-			<thruster file="Hartzell-HC82XF-2">
+			<thruster file="McCauley-D2AF34C71-84JF-3">
 				<sense>1</sense>
 				<location unit="IN">
 					<x>-23</x>
