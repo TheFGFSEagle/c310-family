@@ -7,7 +7,7 @@ fig.8 longitudinal aerodynamic characteristics with propellers removed        do
 fig.9 longitudinal aerodynamic characteristics with propellers windmilling    done
 fig.10 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
 fig.11 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
-fig.12 longitudinal aerodynamic characteristics with power and flap deflections
+fig.12 longitudinal aerodynamic characteristics with power and flap deflections done (no CD)
 fig.13 longitudinal aerodynamic characteristics with asymmetric power
 fig.19 longitudinal aerodynamic characteristics with smooth ice on horizontal tail
 fig.20 longitudinal aerodynamic characteristics with smooth ice on horizontal tail
