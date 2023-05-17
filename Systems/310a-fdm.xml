@@ -119,7 +119,7 @@
 				<z>4</z>
 			</location>
 		</pointmass>			
-		
+<!-- later models only		
 		<pointmass name="seat 5 OPT">
 			<weight unit="LBS">110</weight>
 			<location name="POINTMASS" unit="IN">
@@ -137,7 +137,7 @@
 				<z>4</z>
 			</location>
 		</pointmass>				
-						
+--> 						
 		<pointmass name="Baggage STA.96">
 			<weight unit="LBS">50</weight>
 			<location name="POINTMASS" unit="IN">
