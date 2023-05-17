@@ -39,7 +39,7 @@
 		<izz unit="SLUG*FT2">11001</izz>
 		<emptywt unit="LBS">2850</emptywt>
 		<location name="CG" unit="IN">
-			<x>35.56/x>
+			<x>35.56</x>
 			<y>0</y>
 			<z>-1.12</z>
 		</location>
@@ -258,6 +258,18 @@
 				<x>87.8</x>
 				<y>214.4</y>
 				<z>-8.7</z>
+			</location>
+			<static_friction>0.5</static_friction>
+			<dynamic_friction>0.5</dynamic_friction>
+			<spring_coeff unit="LBS/FT">5400</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
+		</contact>
+		
+		<contact type="STRUCTURE" name="Tail cone tip">
+			<location unit="IN">
+				<x>260.9</x>
+				<y>0</y>
+				<z>-5.5</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
