@@ -426,6 +426,9 @@
 	</controls>
 	
 	<instrumentation>
+		<ammeter>
+			<serviceable type="bool">true</serviceable>
+		</ammeter>
 		<cht>
 			<serviceable type="bool">true</serviceable>
 		</cht>
