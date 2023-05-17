@@ -149,12 +149,6 @@
 		</jsbsim>
 	</fdm>
 	
-	<gear>
-		<gear>
-			<steering-deg alias="/fdm/jsbsim/fcs/steer-pos-deg"/>
-		</gear>
-	</gear>
-	
 	<limits>
 		<max-flap-extension-speed>
 			<flaps>0.333</flaps>

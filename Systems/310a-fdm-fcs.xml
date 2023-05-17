@@ -1,51 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flight_control>
-	<channel name="Nose wheel steering">
-		<switch name="gear/unit[0]/steering-enabled">
-			<default value="0"/>
-			<test logic="OR" value="1">
-				gear/unit[0]/pos-norm EQ 1
-			</test>
-		</switch>
-		
-		<fcs_function name="gear/unit[0]/brakes-steer-factor">
-			<function>
-				<product>
-					<sum>
-						<product>
-							<property>fcs/left-brake-cmd-norm</property>
-							<value>-1</value>
-						</product>
-						<property>fcs/right-brake-cmd-norm</property>
-					</sum>
-					<property>/gear/gear[0]/rollspeed-ms</property>
-					<value>0.5</value> <!-- for adjusting braking influence -->
-					<property>gear/unit[0]/steering-enabled</property>
-				</product>
-			</function>
-		</fcs_function>
-		
-		<!-- Drive the nose wheel with the rudder and brakes -->
-		<fcs_function name="fcs/steer-cmd-norm">
-			<function>
-				<quotient>
-					<table name="fcs/steer-cmd-deg">
-						<independentVar lookup="row">gear/unit[0]/brakes-steer-factor</independentVar>
-						<independentVar lookup="column">/controls/flight/rudder</independentVar>
-						<tableData>
-							-1	0	1
-						  -1	-55	0	15
-						   0	-15	0	15
-						   1	-15	0	55
-						</tableData>
-					</table>
-					<value>55</value>
-				</quotient>
-			</function>
-			<output>fcs/steer-pos-norm</output>
-		</fcs_function>
-	</channel>
-	
 	<channel name="Elevator">
 		<aerosurface_scale>
 			<input>-fcs/pitch-trim-cmd-norm</input>
