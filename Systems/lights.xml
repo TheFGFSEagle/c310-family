@@ -14,9 +14,9 @@
 						<product>
 							<mod>
 								<property>/sim/time/elapsed-sec</property>
-								<value>0.5</value>
+								<value>1</value>
 							</mod>
-							<value>4</value>
+							<value>1.5</value>
 						</product>
 					</floor>
 				</product>
@@ -52,7 +52,7 @@
 						<property>/sim/model/lights/beacon/rotation-deg</property>
 						<product>
 							<property>/sim/model/lights/beacon/brightness-norm</property>
-							<value>360</value>
+							<value>270</value>
 							<property>/sim/time/delta-sec</property>
 						</product>
 					</sum>
@@ -74,7 +74,7 @@
 				</cos>
 			</expression>
 		</input>
-		<output>/sim/model/lights/beacon/pointing-x</output>
+		<output>/sim/model/lights/beacon/pointing-x[0]</output>
 	</filter>
 	
 	<filter>
@@ -88,7 +88,41 @@
 				</sin>
 			</expression>
 		</input>
-		<output>/sim/model/lights/beacon/pointing-y</output>
+		<output>/sim/model/lights/beacon/pointing-y[0]</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<cos>
+					<deg2rad>
+						<sum>
+							<property>/sim/model/lights/beacon/rotation-deg</property>
+							<value>180</value>
+						</sum>
+					</deg2rad>
+				</cos>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/pointing-x[1]</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sin>
+					<deg2rad>
+						<sum>
+							<property>/sim/model/lights/beacon/rotation-deg</property>
+							<value>180</value>
+						</sum>
+					</deg2rad>
+				</sin>
+			</expression>
+		</input>
+		<output>/sim/model/lights/beacon/pointing-y[1]</output>
 	</filter>
 	
 	<filter>

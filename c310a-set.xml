@@ -102,10 +102,10 @@
 				<path>Systems/instruments.xml</path>
 			</property-rule>
 			
-			<property-rule n="101">
+			<autopilot n="101">
 				<name>Lights</name>
 				<path>Systems/lights.xml</path>
-			</property-rule>
+			</autopilot>
 			
 			<autopilot n="102">
 				<name>Electrical system</name>
@@ -514,7 +514,7 @@
 				</landing-light>
 				<rotating-beacon>
 					<rated-volts>28</rated-volts>
-					<rated-amps>1.55</rated-amps>
+					<rated-amps>3.1</rated-amps>
 				</rotating-beacon>
 			</consumers>
 		</electrical>
