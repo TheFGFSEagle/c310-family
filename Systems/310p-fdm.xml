@@ -8,10 +8,10 @@
 		<description> Models a c310. </description>
 	</fileheader>
 	<metrics>
-		<wingarea unit="FT2">175</wingarea>
-		<wingspan unit="FT">35.77</wingspan>
+		<wingarea unit="FT2">179</wingarea>
+		<wingspan unit="FT">36.93</wingspan>
 		<wing_incidence unit="DEG">2.5</wing_incidence>
-		<chord unit="FT">5.08</chord>
+		<chord unit="FT">5.13</chord>
 		<htailarea unit="FT2">22.1</htailarea>
 		<htailarm unit="FT">19</htailarm>
 		<vtailarea unit="FT2">11.7</vtailarea>
@@ -108,7 +108,7 @@
 		</pointmass>			
 		
 		<pointmass name="Forward baggage">
-			<weight unit="LBS">100</weight>
+			<weight unit="LBS">10</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>95</x>
 				<y>0</y>
@@ -117,7 +117,7 @@
 		</pointmass>
 		
 		<pointmass name="Rear baggage">
-			<weight unit="LBS">100</weight>
+			<weight unit="LBS">10</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>122.5</x>
 				<y>0</y>
@@ -343,7 +343,7 @@
 	<ground_reactions>
 		<contact type="BOGEY" name="NOSE">
 			<location unit="IN">
-				<x>-60.7</x>
+				<x>-51.3</x>
 				<y>0</y>
 				<z>-71.6</z>
 			</location>
@@ -359,7 +359,7 @@
 		
 		<contact type="BOGEY" name="LEFT_MAIN">
 			<location unit="IN">
-				<x>50.2</x>
+				<x>55.7</x>
 				<y>-74.5</y>
 				<z>-67.9</z>
 			</location>
@@ -375,7 +375,7 @@
 		
 		<contact type="BOGEY" name="RIGHT_MAIN">
 			<location unit="IN">
-				<x>50.2</x>
+				<x>55.7</x>
 				<y>74.5</y>
 				<z>-67.9</z>
 			</location>
