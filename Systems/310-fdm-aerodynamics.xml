@@ -3406,6 +3406,11 @@
 				<property>metrics/cbarw-ft</property>
 				<property>aero/ci2vel</property>
 				<property>velocities/q-aero-rad_sec</property>
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>4</v>
+				</ifthen>
 				<value>-26.3</value> 
 			</product>
 		</function>
@@ -4706,6 +4711,11 @@
 				<property>aero/bi2vel</property>
 				<property>velocities/r-aero-rad_sec</property>
 				<property>aero/function/modelfactor_cnr</property>
+				<ifthen>
+					<p>/sim/realism/realistic-fdm</p>
+					<v>1</v>
+					<v>2</v>
+				</ifthen>
 				<table>
 					<independentVar lookup="row">aero/alpha-deg</independentVar>
 					<tableData>

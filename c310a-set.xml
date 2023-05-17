@@ -48,6 +48,10 @@
 		<aero>Systems/310a-fdm</aero>
 		<primary-set type="bool">true</primary-set>
 		
+		<realism>
+			<realistic-fdm type="bool">true</realistic-fdm>
+		</realism>
+		
 		<previews>
 			<preview>
 				<type>exterior</type>
@@ -147,6 +151,7 @@
 			<path>/sim/model/controls/show-yokes</path>
 			<path>/sim/equipment</path>
 			<path>/sim/model/effects/interior/windows</path>
+			<path>/sim/realism</path>
 		</aircraft-data>
 		
 		<view n="0">
