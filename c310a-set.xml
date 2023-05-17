@@ -217,5 +217,8 @@
 		<c310>
 			<file>Nasal/c310.nas</file>
 		</c310>
+		<dialogs>
+			<file>Nasal/dialogs.nas</file>
+		</dialogs>
 	</nasal>
 </PropertyList>
