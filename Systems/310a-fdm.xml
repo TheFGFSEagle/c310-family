@@ -16,15 +16,15 @@
 		<htailarm unit="FT">19</htailarm>
 		<vtailarea unit="FT2">11.7</vtailarea>
 		<vtailarm unit="FT">20.1</vtailarm>
-		<location name="AERORP" unit="FT">
-			<x>3.12</x>
+		<location name="AERORP" unit="IN">
+			<x>47</x>
 			<y>0</y>
-			<z>-1.12</z>
+			<z>-14.6</z>
 		</location>
 		<location name="EYEPOINT" unit="IN">
-			<x>53</x>
+			<x>62</x>
 			<y>-12</y>
-			<z>8</z>
+			<z>7</z>
 		</location>
 		<location name="VRP" unit="IN">
 			<x>0</x>
@@ -39,44 +39,44 @@
 		<izz unit="SLUG*FT2">11001</izz>
 		<emptywt unit="LBS">2850</emptywt>
 		<location name="CG" unit="IN">
-			<x>24.4</x>
+			<x>34.2</x>
 			<y>0</y>
-			<z>0.8</z>
+			<z>0</z>
 		</location>
 		
 		<pointmass name="Pilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>46</x>
+				<x>55</x>
 				<y>-10.5</y>
-				<z>1</z>
+				<z>0</z>
 			</location>
 		</pointmass>		
 
 		<pointmass name="Copilot">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>46</x>
+				<x>55</x>
 				<y>10.5</y>
-				<z>1</z>
+				<z>0</z>
 			</location>
 		</pointmass>
 			
 		<pointmass name="Left passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>78</x>
+				<x>87</x>
 				<y>-10.5</y>
-				<z>1</z>
+				<z>0</z>
 			</location>
 		</pointmass>
 			
 		<pointmass name="Right passenger">
 			<weight unit="LBS">140</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>78</x>
+				<x>87</x>
 				<y>10.5</y>
-				<z>1</z>
+				<z>0</z>
 			</location>
 		</pointmass>			
 <!-- later models only		
@@ -101,9 +101,9 @@
 		<pointmass name="Baggage">
 			<weight unit="LBS">100</weight>
 			<location name="POINTMASS" unit="IN">
-				<x>96</x>
+				<x>105</x>
 				<y>0</y>
-				<z>-11</z>
+				<z>-12</z>
 			</location>
 		</pointmass>
 	</mass_balance>
@@ -115,9 +115,9 @@
 			<thruster file="Hartzell-HC82XF-2">
 				<sense> 1 </sense>
 				<location unit="IN">
-					<x>-22.5</x>
+					<x>-13</x>
 					<y>-76.7</y>
-					<z>-16.7</z>
+					<z>-18</z>
 				</location>
 				<orient unit="DEG">
 					<pitch>0</pitch>
@@ -133,9 +133,9 @@
 			<thruster file="Hartzell-HC82XF-2">
 				<sense>1</sense>
 				<location unit="IN">
-					<x>-22.5</x>
+					<x>-13</x>
 					<y>76.7</y>
-					<z>-16.7</z>
+					<z>-18</z>
 				</location>
 				<orient unit="DEG">
 					<pitch>0</pitch>
@@ -147,9 +147,9 @@
 		
 		<tank type="FUEL" number="0">
 			<location unit="IN">
-				<x>35.4</x>
+				<x>45</x>
 				<y>-214.4</y>
-				<z>-11.5</z>
+				<z>-13</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
@@ -158,9 +158,9 @@
 		
 		<tank type="FUEL" number="1">
 			<location unit="IN">
-				<x>35.4</x>
+				<x>45</x>
 				<y>214.4</y>
-				<z>-11.5</z>
+				<z>-13</z>
 			</location>
 			<capacity unit="LBS">316.2</capacity>
 			<contents unit="LBS">100</contents>
@@ -171,15 +171,15 @@
 	<ground_reactions>
 		<contact type="BOGEY" name="NOSE">
 			<location unit="IN">
-				<x>-60.3</x>
+				<x>-50.7</x>
 				<y>0</y>
-				<z>-70.4</z>
+				<z>-71.6</z>
 			</location>
 			<static_friction>1.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">1620</spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC">810</damping_coeff>
+			<spring_coeff unit="LBS/FT">2000</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">500</damping_coeff>
 			<max_steer unit="DEG">55</max_steer>
 			<brake_group>NONE</brake_group>
 			<retractable>1</retractable>
@@ -187,15 +187,15 @@
 		
 		<contact type="BOGEY" name="LEFT_MAIN">
 			<location unit="IN">
-				<x>50.6</x>
+				<x>60.2</x>
 				<y>-74.5</y>
-				<z>-66.7</z>
+				<z>-67.9</z>
 			</location>
 			<static_friction>0.8</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
 			<rolling_friction>0.02</rolling_friction>
-			<spring_coeff unit="LBS/FT">5400</spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
+			<spring_coeff unit="LBS/FT">8000</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">1000</damping_coeff>
 			<max_steer unit="DEG">0</max_steer>
 			<brake_group>LEFT</brake_group>
 			<retractable>1</retractable>
@@ -203,15 +203,15 @@
 		
 		<contact type="BOGEY" name="RIGHT_MAIN">
 			<location unit="IN">
-				<x>50.6</x>
+				<x>60.2</x>
 				<y>74.5</y>
-				<z>-66.7</z>
+				<z>-67.9</z>
 			</location>
 			<static_friction>0.8</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
 			<rolling_friction>0.02</rolling_friction>
-			<spring_coeff unit="LBS/FT">5400</spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC">2700</damping_coeff>
+			<spring_coeff unit="LBS/FT">8000</spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC">1000</damping_coeff>
 			<max_steer unit="DEG">0</max_steer>
 			<brake_group>RIGHT</brake_group>
 			<retractable>1</retractable>
@@ -219,9 +219,9 @@
 		
 		<contact type="STRUCTURE" name="Left wing tip tank front tip">
 			<location unit="IN">
-				<x>-6.5</x>
+				<x>3.1</x>
 				<y>-214.4</y>
-				<z>-13.7</z>
+				<z>-14.9</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -231,9 +231,9 @@
 		
 		<contact type="STRUCTURE" name="Left wing tip tank rear tip">
 			<location unit="IN">
-				<x>87.8</x>
+				<x>97.4</x>
 				<y>-214.4</y>
-				<z>-8.7</z>
+				<z>-9.9</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -243,9 +243,9 @@
 		
 		<contact type="STRUCTURE" name="Right wing tip tank front tip">
 			<location unit="IN">
-				<x>-6.5</x>
+				<x>3.1</x>
 				<y>214.4</y>
-				<z>-13.7</z>
+				<z>-14.9</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -255,9 +255,9 @@
 		
 		<contact type="STRUCTURE" name="Right wing tip tank rear tip">
 			<location unit="IN">
-				<x>87.8</x>
+				<x>97.4</x>
 				<y>214.4</y>
-				<z>-8.7</z>
+				<z>-9.9</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
@@ -267,9 +267,9 @@
 		
 		<contact type="STRUCTURE" name="Tail cone tip">
 			<location unit="IN">
-				<x>260.9</x>
+				<x>270.5</x>
 				<y>0</y>
-				<z>-5.5</z>
+				<z>-6.7</z>
 			</location>
 			<static_friction>0.5</static_friction>
 			<dynamic_friction>0.5</dynamic_friction>
