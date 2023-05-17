@@ -85,10 +85,6 @@
 	
 	<effect>
 		<inherits-from>Effects/exterior-glass</inherits-from>
-		<object-name>LeftPropellerBlade1</object-name>
-		<object-name>LeftPropellerBlade2</object-name>
-		<object-name>RightPropellerBlade1</object-name>
-		<object-name>RightPropellerBlade2</object-name>
 		<object-name>LeftForwardWindow</object-name>
 		<object-name>LeftRearWindow</object-name>
 		<object-name>OpenableWindow</object-name>
@@ -99,6 +95,14 @@
 		<object-name>RightNavLightCap</object-name>
 	</effect>
 	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>LeftPropellerBlade1</object-name>
+		<object-name>LeftPropellerBlade2</object-name>
+		<object-name>RightPropellerBlade1</object-name>
+		<object-name>RightPropellerBlade2</object-name>
+	</effect>
+		
 	<model>
 		<usage>interior</usage>
 		<name>Interior</name>
