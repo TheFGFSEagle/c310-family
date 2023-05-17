@@ -8,7 +8,7 @@
 		<axis>
 			<object-name>ScaleAxis</object-name>
 		</axis>
-		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
+		<property>instrumentation/directional-gyro/indicated-heading-deg</property>
 	</animation>
 	
 	<animation>
@@ -17,15 +17,15 @@
 		<axis>
 			<object-name>KnobAxis</object-name>
 		</axis>
-		<property>instrumentation/heading-indicator/offset-deg</property>
+		<property>instrumentation/directional-gyro/align-deg</property>
 		<factor>10</factor>
 		<action>
 			<binding>
 				<condition>
-					<property>instrumentation/heading-indicator/caged</property>
+					<property>instrumentation/directional-gyro/caged</property>
 				</condition>
 				<command>property-adjust</command>
-				<property>instrumentation/heading-indicator/offset-deg</property>
+				<property>instrumentation/directional-gyro/align-deg</property>
 				<factor>0.1</factor>
 				<min>0</min>
 				<max>360</max>
@@ -35,7 +35,7 @@
 		<shift-action>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/heading-indicator/caged</property>
+				<property>instrumentation/directional-gyro/caged</property>
 			</binding>
 		</shift-action>
 		<hovered>
@@ -44,10 +44,10 @@
 				<tooltip-id>directional-gyro-caging-knob</tooltip-id>
 				<label>DG offset: %s</label>
 				<measure-text>DG offset: 360.0°, caged</measure-text>
-				<property>instrumentation/heading-indicator/offset-deg</property>
+				<property>instrumentation/directional-gyro/align-deg</property>
 				<mapping>nasal</mapping>
 				<script>
-					return sprintf("%3.1f°%s", arg[0], props.globals.getBoolValue("instrumentation/heading-indicator/caged") ? ", caged" : "");
+					return sprintf("%3.1f°%s", arg[0], props.globals.getBoolValue("instrumentation/directional-gyro/caged") ? ", caged" : "");
 				</script>
 			</binding>
 		</hovered>
@@ -62,7 +62,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-		<property>instrumentation/heading-indicator/caged</property>
+		<property>instrumentation/directional-gyro/caged</property>
 		<factor>0.01</factor>
 	</animation>
 </PropertyList>
