@@ -6,8 +6,8 @@ dialogs.EquipmentDialog = {
 			parents: [
 				dialogs.EquipmentDialog,
 				canvas.Window.new(size: [250, 100], type: "dialog", destroy_on_close: 0)
-					.setTitle("Equipment options")
-					.setBool("resize", 1)
+								.setTitle("Equipment options")
+								.setBool("resize", 1)
 			],
 			equipmentNode: props.globals.getNode("sim/equipment"),
 		};
@@ -19,24 +19,32 @@ dialogs.EquipmentDialog = {
 		obj.layout = canvas.VBoxLayout.new();
 		obj.canvas.setLayout(obj.layout);
 		
-		obj.auxiliaryFuelTanksCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.auxiliaryFuelTanksNode, obj.root, canvas.style, {"label-position": "left"})
-											.setText("Auxiliary fuel tanks:");
+		obj.auxiliaryFuelTanksCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"node": obj.auxiliaryFuelTanksNode, "label-position": "left"}
+		)
+						.setText("Auxiliary fuel tanks:");
 		obj.layout.addItem(obj.auxiliaryFuelTanksCheckbox);
 		
-		obj.rightLandingLightCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.rightLandingLightNode, obj.root, canvas.style, {"label-position": "left"})
-											.setText("Right landing light:");
+		obj.rightLandingLightCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"node": obj.rightLandingLightNode, "label-position": "left"}
+		)
+						.setText("Right landing light:");
 		obj.layout.addItem(obj.rightLandingLightCheckbox);
 		
-		obj.rotatingBeaconCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.rotatingBeaconNode, obj.root, canvas.style, {"label-position": "left"})
-											.setText("Rotating beacon:");
+		obj.rotatingBeaconCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"node": obj.rotatingBeaconNode, "label-position": "left"}
+		)
+						.setText("Rotating beacon:");
 		obj.layout.addItem(obj.rotatingBeaconCheckbox);
 		return obj;
 	},
 	
 	del: func {
-		me.auxiliaryFuelTanksCheckbox.del();
-		me.rightLandingLightCheckbox.del();
-		me.rotatingBeaconCheckbox.del();
+		var widget = me.layout.takeAt(0);
+		while (widget) {
+			widget.del();
+			widget = me.layout.takeAt(0);
+		}
 		equipment_dialog = nil;
 	}
 };
@@ -65,25 +73,36 @@ dialogs.SettingsDialog = {
 		obj.generalTab = canvas.VBoxLayout.new();
 		obj.tabs.addTab("general", "General", obj.generalTab);
 		
-		obj.realisticFDMCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.realisticFDMNode, obj.root, canvas.style, {"label-position": "left"});
+		obj.realisticFDMCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"label-position": "left", "node": obj.realisticFDMNode}
+		)
+						.setText("Realistic FDM:");
 		obj.generalTab.addItem(obj.realisticFDMCheckbox);
 		
 		obj.effectsTab = canvas.VBoxLayout.new();
 		obj.tabs.addTab("effects", "Effects", obj.effectsTab);
 		
-		obj.fogCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.fogNode, obj.root, canvas.style, {"label-position": "left"})
+		obj.fogCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"label-position": "left", "node": obj.fogNode}
+		)
 											.setText("Fog:");
 		obj.effectsTab.addItem(obj.fogCheckbox);
 		
-		obj.frostCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.frostNode, obj.root, canvas.style, {"label-position": "left"})
+		obj.frostCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"label-position": "left", "node": obj.frostNode}
+		)
 											.setText("Frost:");
 		obj.effectsTab.addItem(obj.frostCheckbox);
 		
-		obj.rainCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.rainNode, obj.root, canvas.style, {"label-position": "left"})
+		obj.rainCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"label-position": "left", "node": obj.rainNode}
+		)
 											.setText("Rain:");
 		obj.effectsTab.addItem(obj.rainCheckbox);
 		
-		obj.reflectionsCheckbox = canvas.gui.widgets.PropertyCheckBox.new(obj.reflectionsNode, obj.root, canvas.style, {"label-position": "left"})
+		obj.reflectionsCheckbox = canvas.gui.widgets.PropertyCheckBox.new(
+			obj.root, canvas.style, {"label-position": "left", "node": obj.reflectionsNode}
+		)
 											.setText("Reflections:");
 		obj.effectsTab.addItem(obj.reflectionsCheckbox);
 		
@@ -91,11 +110,13 @@ dialogs.SettingsDialog = {
 	},
 	
 	del: func {
-		me.realisticFDMCheckbox.del();
-		me.fogCheckbox.del();
-		me.frostCheckbox.del();
-		me.rainCheckbox.del();
-		me.reflectionsCheckbox.del();
+		foreach (var tab; me.tabs.getTabs()) {
+			var widget = tab.takeAt(0);
+			while (widget) {
+				widget.del();
+				widget = tab.takeAt(0);
+			}
+		}
 		dialogs.settings_dialog = nil;
 	}
 };
