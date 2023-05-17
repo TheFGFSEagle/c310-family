@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
+		<name>Panel</name>
 		<path>Panel/panel.xml</path>
+	</model>
+	
+	<model>
+		<name>CircuitBreakerPanel</name>
+		<path>circuit-breaker-panel/circuit-breaker-panel.xml</path>
+		<offsets>
+			<x-m>0.935</x-m>
+			<y-m>-0.597</y-m>
+			<z-m>-0.196</z-m>
+			<heading-deg>86.15</heading-deg>
+		</offsets>
 	</model>
 </PropertyList>
