@@ -380,6 +380,15 @@
 		</gear>
 	</controls>
 	
+	<instrumentation>
+		<vacuum>
+			<serviceable type="bool">true</serviceable>
+		</vacuum>
+		<directional-gyro>
+			<serviceable type="bool">true</serviceable>
+		</directional-gyro>
+	</instrumentation>
+	
 	<consumables>
 		<fuel>
 			<tank>
