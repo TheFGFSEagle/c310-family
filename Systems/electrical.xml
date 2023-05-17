@@ -1,3 +1,687 @@
 <?xml version="1.0"?>
+<!--
+	Electrical system for the C310B, by TheEagle, started in November 2022
+	
+	Technical data:
+		Batteries (2, wired in series to produce 24 V):
+			Capacity: 24 Ah
+			Voltage: 12 V
+			Current: 35 (?) A
+			Type: Lead-acid
+		Alternators (2):
+			standard:
+				Voltage: 24 V
+				Current: 35 A
+			optional:
+				Voltage: 24V
+				Current: 50 A
+		Ground power:
+			Voltage: 24 (?) V
+			Current 100 (?) A
+		System:
+			Voltage: 24 V
+			Type: Direct current
+-->
 <PropertyList>
+	<property-root>/systems/electrical</property-root>
+	
+	<!-- Alternators -->
+	<filter>
+		<name>Available left alternator amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than-equals>
+					<property>/engines/engine[0]/rpm</property>
+					<value>133</value>
+				</greater-than-equals>
+			</condition>
+			<!-- graph of this formula: https://www.desmos.com/calculator/z8p9ddnltl where A = alternator/rated-amps -->
+			<expression>
+				<prod>
+					<dif>
+						<prod>
+							<value>30.811</value>
+							<log>
+								<dif>
+									<prod>
+										<property>/engines/engine[0]/rpm</property>
+										<value>10</value>
+									</prod>
+									<value>1300</value>
+								</dif>
+							</log>
+						</prod>
+						<value>98.1</value>
+					</dif>
+					<div>
+						<property>suppliers/alternator[0]/rated-amps</property>
+						<value>172</value>
+					</div>
+				</prod>
+			</expression>
+		</input>
+		<output>suppliers/alternator[0]/available-amps</output>
+		<min>0</min>
+		<max>suppliers/alternator[0]/rated-amps</max>
+	</filter>
+	<filter>
+		<name>Available left alternator volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-alternator</gain>
+		<input>
+			<expression>
+				<product>
+					<property>/engines/engine[0]/rpm</property>
+					<property>/controls/engines/engine[0]/master-alt</property>
+					<value>0.07</value>
+					<div>
+						<property>suppliers/alternator[0]/rated-amps</property>
+						<property>suppliers/alternator[0]/amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/alternator[0]/available-volts</output>
+		<min>0</min>
+		<max>suppliers/alternator[0]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available right alternator amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than-equals>
+					<property>/engines/engine[1]/rpm</property>
+					<value>133</value>
+				</greater-than-equals>
+			</condition>
+			<!-- graph of this formula: https://www.desmos.com/calculator/z8p9ddnltl where A = alternator/rated-amps -->
+			<expression>
+				<prod>
+					<dif>
+						<prod>
+							<value>30.811</value>
+							<log>
+								<dif>
+									<prod>
+										<property>/engines/engine[1]/rpm</property>
+										<value>10</value>
+									</prod>
+									<value>1300</value>
+								</dif>
+							</log>
+						</prod>
+						<value>98.1</value>
+					</dif>
+					<div>
+						<property>suppliers/alternator[1]/rated-amps</property>
+						<value>172</value>
+					</div>
+				</prod>
+			</expression>
+		</input>
+		<output>suppliers/alternator[1]/available-amps</output>
+		<min>0</min>
+		<max>suppliers/alternator[1]/rated-amps</max>
+	</filter>
+	<filter>
+		<name>Available right alternator volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-alternator</gain>
+		<input>
+			<expression>
+				<product>
+					<property>/engines/engine[1]/rpm</property>
+					<property>/controls/engines/engine[1]/master-alt</property>
+					<value>0.07</value>
+					<div>
+						<property>suppliers/alternator[1]/rated-amps</property>
+						<property>suppliers/alternator[1]/amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/alternator[1]/available-volts</output>
+		<min>0</min>
+		<max>suppliers/alternator[1]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available alternators amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/alternator[0]/available-amps</property>
+					<property>suppliers/alternator[1]/available-amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/alternators/available-amps</output>
+	</filter>
+	
+	<!-- Ground power -->
+	<filter>
+		<name>Available ground power amps</name>
+		<type>gain</type>
+		<gain>suppliers/gpu/rated-amps</gain>
+		<input>/controls/electric/ground-power-connected</input>
+		<output>suppliers/gpu/available-amps</output>
+	</filter>
+	<filter>
+		<name>Available ground power volts</name>
+		<type>gain</type>
+		<gain>/controls/electric/ground-power-connected</gain>
+		<input>
+			<expression>
+				<product>
+					<property>suppliers/gpu/rated-volts</property>
+					<div>
+						<property>suppliers/gpu/rated-amps</property>
+						<property>suppliers/gpu/amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/gpu/available-volts</output>
+		<min>0</min>
+		<max>suppliers/gpu/rated-volts</max>
+	</filter>
+	
+	<!-- Batteries -->
+	<filter>
+		<name>First battery output factor based on charge</name>
+		<type>gain</type>
+		<gain>/controls/electric/battery-switch</gain>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<pow>
+							<prod>
+								<dif>
+									<prod>
+										<value>3</value>
+										<dif>
+											<value>1</value>
+											<property>suppliers/battery[0]/charge-norm</property>
+										</dif>
+									</prod>
+									<value>1</value>
+								</dif>
+								<value>-1</value>
+							</prod>
+							<value>5</value>
+						</pow>
+						<value>32</value>
+					</sum>
+					<value>32</value>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/available-power-factor</output>
+	</filter>
+	<filter>
+		<name>Available first battery volts</name>
+		<type>gain</type>
+		<gain>suppliers/battery[0]/available-power-factor</gain>
+		<input>
+			<expression>
+				<product>
+					<property>suppliers/battery[0]/rated-volts</property>
+					<div>
+						<property>suppliers/battery[0]/rated-amps</property>
+						<property>suppliers/battery[0]/amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/available-volts</output>
+		<min>0</min>
+		<max>suppliers/battery[0]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available first battery amps</name>
+		<type>gain</type>
+		<gain>suppliers/battery[0]/rated-amps</gain>
+		<input>suppliers/battery[0]/available-power-factor</input>
+		<output>suppliers/battery[0]/available-amps</output>
+	</filter>
+	<filter>
+		<name>Second battery output factor based on charge</name>
+		<type>gain</type>
+		<gain>/controls/electric/battery-switch</gain>
+		<input>
+			<expression>
+				<div>
+					<sum>
+						<pow>
+							<prod>
+								<dif>
+									<prod>
+										<value>3</value>
+										<dif>
+											<value>1</value>
+											<property>suppliers/battery[1]/charge-norm</property>
+										</dif>
+									</prod>
+									<value>1</value>
+								</dif>
+								<value>-1</value>
+							</prod>
+							<value>5</value>
+						</pow>
+						<value>32</value>
+					</sum>
+					<value>32</value>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/available-power-factor</output>
+	</filter>
+	<filter>
+		<name>Available second battery volts</name>
+		<type>gain</type>
+		<gain>suppliers/battery[1]/available-power-factor</gain>
+		<input>
+			<expression>
+				<product>
+					<property>suppliers/battery[1]/rated-volts</property>
+					<div>
+						<property>suppliers/battery[1]/rated-amps</property>
+						<property>suppliers/battery[1]/amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/available-volts</output>
+		<min>0</min>
+		<max>suppliers/battery[1]/rated-volts</max>
+	</filter>
+	<filter>
+		<name>Available second battery amps</name>
+		<type>gain</type>
+		<gain>suppliers/battery[1]/rated-amps</gain>
+		<input>suppliers/battery[1]/available-power-factor</input>
+		<output>suppliers/battery[1]/available-amps</output>
+	</filter>
+	<filter>
+		<name>Available batteries amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/battery[0]/available-amps</property>
+					<property>suppliers/battery[1]/available-amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/batteries/available-amps</output>
+	</filter>
+		
+	<filter>
+		<name>Output left alternator volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-alternator</gain>
+		<input>
+			<property>suppliers/alternator[0]/available-volts</property>
+			<scale>/controls/engines/engine[0]/master-alt</scale>
+		</input>
+		<output>suppliers/alternator[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Output right alternator volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/right-alternator</gain>
+		<input>
+			<property>suppliers/alternator[1]/available-volts</property>
+			<scale>/controls/engines/engine[1]/master-alt</scale>
+		</input>
+		<output>suppliers/alternator[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Output ground power volts</name>
+		<type>gain</type>
+		<input>
+			<property>suppliers/gpu/available-volts</property>
+			<scale>/controls/electric/ground-power-connected</scale>
+		</input>
+		<output>suppliers/gpu/volts</output>
+	</filter>
+	<filter>
+		<name>Output first battery volts</name>
+		<type>gain</type>
+		<input>
+			<property>suppliers/battery[0]/available-volts</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
+		<output>suppliers/battery[0]/volts</output>
+	</filter>
+	<filter>
+		<name>Output second battery volts</name>
+		<type>gain</type>
+		<input>
+			<property>suppliers/battery[1]/available-volts</property>
+			<scale>/controls/electric/battery-switch</scale>
+		</input>
+		<output>suppliers/battery[1]/volts</output>
+	</filter>
+	<filter>
+		<name>Output battery volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/battery[0]/volts</property>
+					<property>suppliers/battery[1]/volts</property>
+				</sum>
+			</expression>
+		</input>
+		<output>suppliers/batteries/volts</output>
+	</filter>
+	<filter>
+		<name>Output alternator volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<max>
+					<property>suppliers/alternator[0]/volts</property>
+					<property>suppliers/alternator[1]/volts</property>
+				</max>
+			</expression>
+		</input>
+		<output>suppliers/alternators/volts</output>
+	</filter>
+	
+	<filter>
+		<name>Bus available amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>suppliers/alternators/available-amps</property>
+					<property>suppliers/gpu/available-amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>bus/available-amps</output>
+	</filter>
+	<filter>
+		<name>Bus volts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<max>
+					<property>suppliers/alternators/volts</property>
+					<property>suppliers/batteries/volts</property>
+					<property>suppliers/gpu/volts</property>
+				</max>
+			</expression>
+		</input>
+		<output>
+			<property>bus/volts</property>
+			<property>volts</property>
+		</output>
+	</filter>
+	
+	<filter>
+		<name>Nav lights volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/nav-lights-oil-dilution-primers</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/controls/lighting/nav-lights</scale>
+		</input>
+		<output>consumers/nav-lights/volts</output>
+	</filter>
+	<filter>
+		<name>Nav lights amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/nav-lights/volts</property>
+					<div>
+						<property>consumers/nav-lights/rated-volts</property>
+						<property>consumers/nav-lights/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/nav-lights/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Bus amps load</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<property>consumers/nav-lights/amps</property>
+				</sum>
+			</expression>
+		</input>
+		<output>bus/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Alternators amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/alternators/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<property>bus/amps</property>
+		</input>
+		<output>suppliers/alternators/amps</output>
+		<min>0</min>
+		<max>suppliers/alternators/available-amps</max>
+	</filter>
+	<filter>
+		<name>Ground power amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<greater-than>
+					<property>suppliers/gpu/volts</property>
+					<value>12</value>
+				</greater-than>
+			</condition>
+			<expression>
+				<dif>
+					<property>bus/amps</property>
+					<property>suppliers/alternators/amps</property>
+				</dif>
+			</expression>
+		</input>
+		<output>suppliers/gpu/amps</output>
+	</filter>
+	<filter>
+		<name>Batteries amps</name>
+		<type>gain</type>
+		<input>
+			<!-- battery has sufficient charge and alternators / ground power are not providing enough voltage - discharge -->
+			<condition>
+				<greater-than>
+					<property>suppliers/batteries/volts</property>
+					<value>12</value>
+				</greater-than>
+				<greater-than>
+					<property>bus/amps</property>
+					<property>bus/available-amps</property>
+				</greater-than>
+			</condition>
+			<expression>
+				<dif>
+					<property>bus/amps</property>
+					<property>suppliers/alternators/amps</property>
+					<property>suppliers/gpu/amps</property>
+				</dif>
+			</expression>
+			<min>0</min>
+			<max>100</max>
+		</input>
+		<input>
+			<!-- alternators / ground power are providing enough power - charge -->
+			<condition>
+				<greater-than>
+					<property>bus/volts</property>
+					<value>12</value>
+				</greater-than>
+				<less-than>
+					<property>suppliers/batteries/charge-norm</property>
+					<value>1</value>
+				</less-than>
+			</condition>
+			<expression>
+				<dif>
+					<property>bus/amps</property>
+					<property>bus/available-amps</property>
+				</dif>
+			</expression>
+			<min>-100</min>
+			<max>0</max>
+		</input>
+		<output>
+			<property>suppliers/batteries/amps</property>
+			<property>amps</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Left battery amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<less-than>
+					<property>suppliers/battery[1]/charge-norm</property>
+					<value>1</value>
+				</less-than>
+				<less-than>
+					<property>suppliers/batteries/amps</property>
+					<value>0</value>
+				</less-than>
+			</condition>
+			<expression>
+				<div>
+					<property>suppliers/batteries/amps</property>
+					<value>2</value>
+				</div>
+			</expression>
+		</input>
+		<input>suppliers/batteries/amps</input>
+		<output>suppliers/battery[0]/amps</output>
+	</filter>
+	<filter>
+		<name>Right battery amps load</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<less-than>
+					<property>suppliers/battery[0]/charge-norm</property>
+					<value>1</value>
+				</less-than>
+				<less-than>
+					<property>suppliers/batteries/amps</property>
+					<value>0</value>
+				</less-than>
+			</condition>
+			<expression>
+				<div>
+					<property>suppliers/batteries/amps</property>
+					<value>2</value>
+				</div>
+			</expression>
+		</input>
+		<input>suppliers/batteries/amps</input>
+		<output>suppliers/battery[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Left battery charge in ampere hours</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<dif>
+					<property>suppliers/battery[0]/charge-amp_hours</property>
+					<div>
+						<product>
+							<property>suppliers/battery[0]/amps</property>
+							<property>/sim/time/delta-sec</property>
+						</product>
+						<value>3600</value>
+					</div>
+				</dif>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/charge-amp_hours</output>
+		<min>0</min>
+		<max>suppliers/battery[0]/capacity-amp_hours</max>
+	</filter>
+	<filter>
+		<name>Left battery charge normalized</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>suppliers/battery[0]/charge-amp_hours</property>
+					<property>suppliers/battery[0]/capacity-amp_hours</property>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[0]/charge-norm</output>
+	</filter>
+	
+	<filter>
+		<name>Right battery charge in ampere hours</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<dif>
+					<property>suppliers/battery[1]/charge-amp_hours</property>
+					<div>
+						<product>
+							<property>suppliers/battery[1]/amps</property>
+							<property>/sim/time/delta-sec</property>
+						</product>
+						<value>3600</value>
+					</div>
+				</dif>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/charge-amp_hours</output>
+		<min>0</min>
+		<max>suppliers/battery[1]/capacity-amp_hours</max>
+	</filter>
+	<filter>
+		<name>Right battery charge normalized</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>suppliers/battery[1]/charge-amp_hours</property>
+					<property>suppliers/battery[1]/capacity-amp_hours</property>
+				</div>
+			</expression>
+		</input>
+		<output>suppliers/battery[1]/charge-norm</output>
+	</filter>
+	<filter>
+		<name>Batteries charge normalized</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<sum>
+						<property>suppliers/battery[0]/charge-norm</property>
+						<property>suppliers/battery[1]/charge-norm</property>
+					</sum>
+					<value>0.5</value>
+				</product>
+			</expression>
+		</input>
+		<output>suppliers/batteries/charge-norm</output>
+	</filter>
 </PropertyList>

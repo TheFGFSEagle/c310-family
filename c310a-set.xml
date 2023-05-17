@@ -94,7 +94,7 @@
 		
 		<systems>
 			<electrical>
-				<path>Systems/electrical.xml</path>
+				<path></path>
 			</electrical>
 			
 			<property-rule n="100">
@@ -106,6 +106,11 @@
 				<name>Lights</name>
 				<path>Systems/lights.xml</path>
 			</property-rule>
+			
+			<autopilot n="102">
+				<name>Electrical system</name>
+				<path>Systems/electrical.xml</path>
+			</autopilot>
 		</systems>
 		
 		<sound>
@@ -240,7 +245,8 @@
 			</tank>
 		</fuel>
 		<electric>
-			<battery-switch type="bool">true</battery-switch>
+			<battery-switch type="bool">false</battery-switch>
+			<ground-power-connected type="bool">false</ground-power-connected>
 		</electric>
 		<engines>
 			<friction-norm type="double">0</friction-norm>
@@ -373,4 +379,41 @@
 			<file>Nasal/controls.nas</file>
 		</c310>
 	</nasal>
+	
+	<systems>
+		<electrical>
+			<suppliers>
+				<alternator>
+					<rated-amps>35</rated-amps>
+					<rated-volts>24</rated-volts>
+				</alternator>
+				<alternator>
+					<rated-amps>35</rated-amps>
+					<rated-volts>24</rated-volts>
+				</alternator>
+				<battery>
+					<rated-amps>35</rated-amps>
+					<rated-volts>12</rated-volts>
+					<capacity-amp_hours>24</capacity-amp_hours>
+					<charge-amp_hours>24</charge-amp_hours>
+				</battery>
+				<battery>
+					<rated-amps>35</rated-amps>
+					<rated-volts>12</rated-volts>
+					<capacity-amp_hours>24</capacity-amp_hours>
+					<charge-amp_hours>24</charge-amp_hours>
+				</battery>
+				<gpu>
+					<rated-amps>100</rated-amps>
+					<rated-volts>24</rated-volts>
+				</gpu>
+			</suppliers>
+			<consumers>
+				<nav-lights>
+					<rated-volts>28</rated-volts>
+					<rated-amps>1</rated-amps>
+				</nav-lights>
+			</consumers>
+		</electrical>
+	</systems>
 </PropertyList>
