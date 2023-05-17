@@ -19,8 +19,8 @@
 	<filter>
 		<type>gain</type>
 		<gain>interior/windows/rain-enabled</gain>
-		<input>/environment/aircraft-effects/rain-norm</input>
-		<output>interior/windows/rain</output>
+		<input>/environment/rain-norm</input>
+		<output>interior/windows/rain-norm</output>
 	</filter>
 	
 	<filter>
@@ -30,7 +30,7 @@
 		<output>interior/windows/ground-splash-norm</output>
 	</filter>
 	
-	<filter>
+	<!--<filter>
 		<name>splash-x</name>
 		<update-interval-secs type="double">0.1</update-interval-secs>
 		<type>gain</type>
@@ -39,15 +39,15 @@
 			<expression>
 				<table>
 					<property>/velocities/airspeed-kt</property>
-					<entry><ind>0</ind><dep>-0.33 </dep></entry>
-					<entry><ind>4</ind><dep>-0.33</dep></entry>
-					<entry><ind>5</ind><dep>-1.7</dep></entry>
+					<entry><ind>0</ind><dep>0.5</dep></entry>
+					<entry><ind>5</ind><dep>0</dep></entry>
+					<entry><ind>10</ind><dep>0.5</dep></entry>
 					<entry><ind>200</ind><dep>-8.4</dep></entry>
 				</table>
 			</expression>
 		</input>
 		<output>
-			<property>/environment/aircraft-effects/splash-x</property>
+			<property>interior/windows/front/splash-vector-x</property>
 		</output>
 	</filter>
 	<filter>
@@ -67,27 +67,87 @@
 			</expression>
 		</input>
 		<output>
-			<property>/environment/aircraft-effects/splash-y</property>
+			<property>/environment/aircraft-effects/splash-vector-y</property>
 		</output>
 	</filter>
 	<filter>
 		<name>splash-z</name>
 		<update-interval-secs type="double">0.1</update-interval-secs>
 		<type>gain</type>
-		<gain>1.0</gain>
+		<gain>-1.0</gain>
 		<input>
 			<expression>
 				<table>
 					<property>/velocities/airspeed-kt</property>
-					<entry><ind>0</ind><dep>0.82</dep></entry>
-					<!--<entry><ind>4</ind><dep>0.82</dep></entry>-->
+					<entry><ind>0</ind><dep>1.25</dep></entry>
 					<entry><ind>5</ind><dep>-0.17</dep></entry>
 					<entry><ind>200</ind><dep>-1.4</dep></entry>
 				</table>
 			</expression>
 		</input>
 		<output>
-			<property>/environment/aircraft-effects/splash-z</property>
+			<property>interior/windows/front/splash-vector-z</property>
 		</output>
+	</filter>-->
+	<filter>
+		<name>Splash X</name>
+		<update-interval-secs>0.1</update-interval-secs>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<dif>
+						<value>0.85</value>
+						<product>
+							<property>/velocities/airspeed-kt</property>
+							<value>0.06</value>
+						</product>
+					</dif>
+					<cos>
+						<property>/orientation/beta-rad</property>
+					</cos>
+				</product>
+			</expression>
+		</input>
+		<output>interior/windows/front/splash-vector-x</output>
+	</filter>
+	<filter>
+		<name>Splash Y</name>
+		<update-interval-secs>0.1</update-interval-secs>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<dif>
+						<value>0.35</value>
+						<product>
+							<property>/velocities/airspeed-kt</property>
+							<value>-0.03</value>
+						</product>
+					</dif>
+					<sin>
+						<property>/orientation/beta-rad</property>
+					</sin>
+				</product>
+			</expression>
+		</input>
+		<output>interior/windows/front/splash-vector-y</output>
+	</filter>
+	<filter>
+		<name>Splash Z</name>
+		<update-interval-secs>0.1</update-interval-secs>
+		<type>gain</type>
+		<input>
+			<expression>
+				<dif>
+					<value>1</value>
+					<product>
+						<value>-0.002</value>
+						<property>/velocities/airspeed-kt</property>
+					</product>
+				</dif>
+			</expression>
+		</input>
+		<output>interior/windows/front/splash-vector-z</output>
 	</filter>
 </PropertyList>

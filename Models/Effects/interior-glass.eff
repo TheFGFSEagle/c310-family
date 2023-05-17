@@ -7,7 +7,10 @@
 		<frost-level><use>sim/model/effects/interior/windows/frost-level</use></frost-level>
 		<rnorm><use>sim/model/effects/interior/windows/rain-norm</use></rnorm>
 		<gsnorm><use>sim/model/effects/interior/windows/ground-splash-norm</use></gsnorm>
-		<surface-mapping-scheme type="int">sim/model/effects/interior/windows/surface-mapping-scheme</surface-mapping-scheme>
+		<surface-mapping-scheme type="int">0</surface-mapping-scheme>
+		<splash-x><use>sim/model/effects/interior/windows/front/splash-vector-x</use></splash-x>
+		<splash-y><use>sim/model/effects/interior/windows/front/splash-vector-y</use></splash-y>
+		<splash-z><use>sim/model/effects/interior/windows/front/splash-vector-z</use></splash-z>
 		<glass-tint type="vec4d" n="0">0.692 1.0 1.0 1.0</glass-tint>
 		<!--<texture n="3">
 			<type>cubemap</type>
