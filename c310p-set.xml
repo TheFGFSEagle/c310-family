@@ -37,13 +37,24 @@
 	
 	<limits>
 		<max-flap-extension-speed>
+			<flaps>0.428</flaps>
+			<speed>139</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed>
 			<flaps>1</flaps>
 			<speed>139</speed>
 		</max-flap-extension-speed>
 		<max-gear-extension-speed>139</max-gear-extension-speed>
-		<max-positive-g>3.5</max-positive-g>
+		<max-gear-operation-speed>139</max-gear-operation-speed>
+		<max-positive-g>3.8</max-positive-g>
 		<max-negative-g>-1.52</max-negative-g>
-		<vne>223</vne>
+		<vne>224</vne>
+		<mass-and-balance>
+			<maximum-ramp-mass-lbs>5200</maximum-ramp-mass-lbs>
+			<maximum-takeoff-mass-lbs>5200</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>5200</maximum-landing-mass-lbs>
+			<!--<maximum-zero-fuel-mass-lbs>3475.1</maximum-zero-fuel-mass-lbs>-->
+		</mass-and-balance>
 	</limits>
 	
 	<payload>
