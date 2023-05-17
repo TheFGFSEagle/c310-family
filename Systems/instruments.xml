@@ -33,6 +33,30 @@
 	</filter>
 	
 	<filter>
+		<name>Indicated left RPM</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/rpm/serviceable</property>
+			</condition>
+		</enable>
+		<input>/engines/engine[0]/thruster/rpm</input>
+		<output>/instrumentation/rpm/indicated-rpm[0]</output>
+	</filter>
+	
+	<filter>
+		<name>Indicated right RPM</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/rpm/serviceable</property>
+			</condition>
+		</enable>
+		<input>/engines/engine[1]/thruster/rpm</input>
+		<output>/instrumentation/rpm/indicated-rpm[1]</output>
+	</filter>
+	
+	<filter>
 		<name>Indicated left fuel level</name>
 		<type>noise-spike</type>
 		<enable>
