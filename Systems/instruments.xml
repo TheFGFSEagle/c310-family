@@ -104,7 +104,7 @@
 				<property>/instrumentation/engine-combo[0]/serviceable</property>
 			</condition>
 		</enable>
-		<input>/engines/engine[0]/oil-temperature-degf</input>
+		<input>/engines/engine[0]/oil/system/temperature-degf</input>
 		<output>/instrumentation/engine-combo[0]/indicated-oil-temperature-degf</output>
 	</filter>
 	
@@ -116,7 +116,7 @@
 				<property>/instrumentation/engine-combo[0]/serviceable</property>
 			</condition>
 		</enable>
-		<input>/engines/engine[0]/oil-pressure-psi</input>
+		<input>/engines/engine[0]/oil/system/pressure-psi</input>
 		<output>/instrumentation/engine-combo[0]/indicated-oil-pressure-psi</output>
 	</filter>
 	
@@ -140,7 +140,7 @@
 				<property>/instrumentation/engine-combo[1]/serviceable</property>
 			</condition>
 		</enable>
-		<input>/engines/engine[1]/oil-temperature-degf</input>
+		<input>/engines/engine[1]/oil/system/temperature-degf</input>
 		<output>/instrumentation/engine-combo[1]/indicated-oil-temperature-degf</output>
 	</filter>
 	
@@ -152,7 +152,7 @@
 				<property>/instrumentation/engine-combo[1]/serviceable</property>
 			</condition>
 		</enable>
-		<input>/engines/engine[1]/oil-pressure-psi</input>
+		<input>/engines/engine[1]/oil/system/pressure-psi</input>
 		<output>/instrumentation/engine-combo[1]/indicated-oil-pressure-psi</output>
 	</filter>
 	
