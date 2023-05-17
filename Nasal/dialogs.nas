@@ -5,7 +5,7 @@ dialogs.EquipmentDialog = {
 		var obj = {
 			parents: [
 				dialogs.EquipmentDialog,
-				canvas.Window.new(size: [200, 100], type: "dialog", destroy_on_close: 0).setTitle("Equipment options")
+				canvas.Window.new(size: [250, 100], type: "dialog", destroy_on_close: 0).setTitle("Equipment options")
 			],
 			auxiliary_fuel_tanks_node: props.globals.getNode("sim/equipment/auxiliary-fuel-tanks"),
 			right_landing_light_node: props.globals.getNode("sim/equipment/right-landing-light"),

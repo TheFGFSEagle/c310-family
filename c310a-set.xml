@@ -77,6 +77,11 @@
 				<handle-pos-norm type="double">0</handle-pos-norm>
 			</openable-window>
 			
+			<sun-visors>
+				<pos-norm type="double">0</pos-norm>
+				<pos-norm type="double">0</pos-norm>
+			</sun-visors>
+			
 			<lights>
 				<landing>
 					<max-extension-deg type="double">83.25</max-extension-deg>
