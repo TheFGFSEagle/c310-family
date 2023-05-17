@@ -15,14 +15,14 @@
 			<expression>
 				<product>
 					<property>/systems/vacuum/pump[0]/suction-inhg</property>
-					<diff>
+					<dif>
 						<value>1</value>
 						<product>
 							<property>/systems/vacuum/pump-line-leak-norm[0]</property>
 							<value>0.5</value>
 						</product>
 						<property>/systems/vacuum/pump-line-clogged-norm[0]</property>
-					</diff>
+					</dif>
 				</product>
 			</expression>
 		</input>
@@ -36,14 +36,14 @@
 			<expression>
 				<product>
 					<property>/systems/vacuum/pump[1]/suction-inhg</property>
-					<diff>
+					<dif>
 						<value>1</value>
 						<product>
 							<property>/systems/vacuum/pump-line-leak-norm[1]</property>
 							<value>0.5</value>
 						</product>
 						<property>/systems/vacuum/pump-line-clogged-norm[1]</property>
-					</diff>
+					</dif>
 				</product>
 			</expression>
 		</input>
@@ -69,14 +69,14 @@
 			<expression>
 				<product>
 					<property>/systems/vacuum/test-valve-suction-inhg</property>
-					<diff>
+					<dif>
 						<value>1</value>
 						<product>
 							<property>/systems/vacuum/directional-gyro-line-leak-norm</property>
 							<value>0.5</value>
 						</product>
 						<property>/systems/vacuum/directional-gyro-line-clogged-norm</property>
-					</diff>
+					</dif>
 				</product>
 			</expression>
 		</input>
@@ -90,14 +90,14 @@
 			<expression>
 				<product>
 					<property>/systems/vacuum/test-valve-suction-inhg</property>
-					<diff>
+					<dif>
 						<value>1</value>
 						<product>
 							<property>/systems/vacuum/attitude-indicator-line-leak-norm</property>
 							<value>0.5</value>
 						</product>
 						<property>/systems/vacuum/attitude-indicator-line-clogged-norm</property>
-					</diff>
+					</dif>
 				</product>
 			</expression>
 		</input>

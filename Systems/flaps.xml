@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="flaps">
 	<channel name="Flaps">
+		<fcs_function name="fcs/flap-cmd-norm">
+			<name>Map flap command from range 0...1 (0=retract, 0.5=neutral, 1=extend) into range -1...1</name>
+			<function>
+				<product>
+					<difference>
+						<property>/controls/flight/flaps</property>
+						<value>0.5</value>
+					</difference>
+					<value>2</value>
+				</product>
+			</function>
+		</fcs_function>
+		
 		<switch name="systems/flaps/actuator-cmd">
 			<name>Flap actuator command</name>
 			<default value="0"/>
-			<test logic="AND" value="/controls/flight/flaps">
+			<test logic="AND" value="fcs/flap-cmd-norm">
 				fcs/flap-pos-norm GT 0
 				fcs/flap-pos-norm LT 1
 				/systems/electrical/consumers/flaps-motor/volts GT 12
