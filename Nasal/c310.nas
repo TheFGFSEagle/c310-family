@@ -1,7 +1,10 @@
 aircraft.data.save(1);
-if (props.globals.getValue("/instrumentation/clock/internal-seconds") == 0) {
-	props.globals.setDoubleValue("/instrumentation/clock/internal-seconds", props.globals.getValue("/sim/time/local-day-seconds")); 
-}
+
+parts.manager.createCategory("instruments", "Instruments")
+				.createPart("clock", "Clock", ["AT420100", "35-380004-1"], 1)
+				.createCategory("fuel-system", "Fuel system")
+				.createPart("fuel-boost-pump", "Fuel boost pump", ["1C6-10"]);
+
 
 var disengageStartersTimerDelay = 5;
 var disengageStartersTimer = maketimer(disengageStartersTimerDelay, func {
