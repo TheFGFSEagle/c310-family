@@ -46,7 +46,7 @@
 			</function>
 			<clipto>
 				<min>0</min>
-				<max>45</max>
+				<max>systems/flaps/max-flap-pos-deg</max>
 			</clipto>
 			<output>/surface-positions/flaps-deg</output>
 		</fcs_function>
@@ -56,7 +56,7 @@
 			<input>fcs/flap-pos-deg</input>
 			<domain>
 				<min>0</min>
-				<max>45</max>
+				<max>systems/flaps/max-flap-pos-deg</max>
 			</domain>
 			<range>
 				<min>0</min>
