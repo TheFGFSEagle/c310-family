@@ -145,8 +145,8 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>LeftAileron</object-name>
-		<object-name>LeftAileronTrimTab</object-name>
-		<object-name>LeftAileronTrimTabAxis</object-name>
+		<object-name>AileronTrimTab</object-name>
+		<object-name>AileronTrimTabAxis</object-name>
 		<axis>
 			<object-name>LeftAileronAxis</object-name>
 		</axis>
@@ -156,18 +156,16 @@
 	
 	<animation>
 		<type>rotate</type>
-		<object-name>LeftAileronTrimTab</object-name>
+		<object-name>AileronTrimTab</object-name>
 		<axis>
-			<object-name>LeftAileronTrimTabAxis</object-name>
+			<object-name>AileronTrimTabAxis</object-name>
 		</axis>
-		<property>surface-positions/left-aileron-trim-tab-deg</property>
+		<property>surface-positions/aileron-trim-tab-deg</property>
 	</animation>
 	
 	<animation>
 		<type>rotate</type>
 		<object-name>RightAileron</object-name>
-		<object-name>RightAileronTrimTab</object-name>
-		<object-name>RightAileronTrimTabAxis</object-name>
 		<axis>
 			<object-name>RightAileronAxis</object-name>
 		</axis>
@@ -176,18 +174,7 @@
 	
 	<animation>
 		<type>rotate</type>
-		<object-name>RightAileronTrimTab</object-name>
-		<axis>
-			<object-name>RightAileronTrimTabAxis</object-name>
-		</axis>
-		<property>surface-positions/right-aileron-trim-tab-deg</property>
-		<factor>-1</factor>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>LeftElevatorTrimTab</object-name>
-		<object-name>RightElevatorTrimTab</object-name>
+		<object-name>ElevatorTrimTab</object-name>
 		<object-name>ElevatorTrimTabAxis</object-name>
 		<object-name>LeftElevator</object-name>
 		<object-name>RightElevator</object-name>
@@ -200,26 +187,11 @@
 	
 	<animation>
 		<type>rotate</type>
-		<object-name>LeftElevatorTrimTab</object-name>
-		<object-name>RightElevatorTrimTab</object-name>
+		<object-name>ElevatorTrimTab</object-name>
 		<axis>
 			<object-name>ElevatorTrimTabAxis</object-name>
 		</axis>
 		<property>surface-positions/elevator-trim-tab-deg</property>
-		<factor>-1</factor>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>LeftElevatorTrimTab</object-name>
-		<object-name>RightElevatorTrimTab</object-name>
-		<object-name>ElevatorTrimTabAxis</object-name>
-		<object-name>LeftElevator</object-name>
-		<object-name>RightElevator</object-name>
-		<axis>
-			<object-name>ElevatorAxis</object-name>
-		</axis>
-		<property>surface-positions/elevator-deg</property>
 		<factor>-1</factor>
 	</animation>
 	
