@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="engines">
+	<channel name="Oil">
+		<pure_gain name="propulsion/engine[0]/oil-consumption-quarts_hr">
+			<gain>0.0002</gain> <!-- gives 0.76 lbs == 0.52 quarts per hour at 2600 RPM -->
+			<input>propulsion/engine[0]/engine-rpm</input>
+		</pure_gain>
+		
+		<pure_gain name="propulsion/engine[0]/oil-consumption-lbs_hr">
+			<gain>1.825</gain>
+			<input>propulsion/engine[0]/oil-consumption-quarts_hr</input>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[0]/oil-consumption-lbs_s">
+			<function>
+				<quotient>
+					<property>propulsion/engine[0]/oil-consumption-lbs_hr</property>
+					<value>3600</value>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[14]/external-flow-rate-pps">
+			<input>-propulsion/engine[0]/oil-consumption-lbs_s</input>
+		</summer>
+		
+		<pure_gain name="propulsion/engine[1]/oil-consumption-quarts_hr">
+			<gain>0.0002</gain> <!-- gives 0.76 lbs == 0.52 quarts per hour at 2600 RPM -->
+			<input>propulsion/engine[1]/engine-rpm</input>
+		</pure_gain>
+		
+		<pure_gain name="propulsion/engine[1]/oil-consumption-lbs_hr">
+			<gain>1.825</gain>
+			<input>propulsion/engine[1]/oil-consumption-quarts_hr</input>
+		</pure_gain>
+		
+		<fcs_function name="propulsion/engine[1]/oil-consumption-lbs_s">
+			<function>
+				<quotient>
+					<property>propulsion/engine[1]/oil-consumption-lbs_hr</property>
+					<value>3600</value>
+				</quotient>
+			</function>
+		</fcs_function>
+		
+		<summer name="propulsion/tank[15]/external-flow-rate-pps">
+			<input>-propulsion/engine[1]/oil-consumption-lbs_s</input>
+		</summer>
+	</channel>
+	
+	<channel name="Mixture">
+		<fcs_function name="fcs/mixture-pos-norm[0]">
+			<function>
+				<table>
+					<independentVar lookup="row">propulsion/tank[12]/pct-full</independentVar>
+					<independentVar lookup="column">fcs/mixture-cmd-norm[0]</independentVar>
+					<tableData>
+							0	1
+						0	0	0
+						25	0	0
+						45	0	1
+						75	2	2
+					</tableData>
+				</table>
+			</function>
+		</pure_gain>
+		
+		<fcs_function name="fcs/mixture-pos-norm[1]">
+			<function>
+				<table>
+					<independentVar lookup="row">propulsion/tank[13]/pct-full</independentVar>
+					<independentVar lookup="column">fcs/mixture-cmd-norm[1]</independentVar>
+					<tableData>
+							0	1
+						0	0	0
+						25	0	0
+						45	0	1
+						75	2	2
+					</tableData>
+				</table>
+			</function>
+		</pure_gain>
+	</channel>
+</system>

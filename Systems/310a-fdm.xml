@@ -425,6 +425,7 @@
 	
 	<system file="gear"/>
 	<system file="fuel"/>
+	<system file="engines"/>
 	<system file="propellers"/>
 	<system file="flaps"/>
 			
