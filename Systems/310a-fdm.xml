@@ -48,18 +48,18 @@
     max. turn rate:     0.52 deg/s
 -->
 	<metrics>
-		<wingarea unit="FT2">   175.00 </wingarea>
-		<wingspan unit="FT">    35.00 </wingspan>
-		<wing_incidence unit="DEG"> 2.50 </wing_incidence>
-		<chord unit="FT">     4.06 </chord>
-		<htailarea unit="FT2">    28.00 </htailarea>
-		<htailarm unit="FT">    13.50 </htailarm>
-		<vtailarea unit="FT2">   31.50 </vtailarea>
-		<vtailarm unit="FT">    13.50 </vtailarm>
+		<wingarea unit="FT2">175</wingarea>
+		<wingspan unit="FT">35</wingspan>
+		<wing_incidence unit="DEG">1</wing_incidence>
+		<chord unit="FT">4.06</chord>
+		<htailarea unit="FT2">28</htailarea>
+		<htailarm unit="FT">13.5</htailarm>
+		<vtailarea unit="FT2">31.5</vtailarea>
+		<vtailarm unit="FT">13.5</vtailarm>
 		<location name="AERORP" unit="FT">
-			<x>    13.50 </x>
-			<y>     0.00 </y>
-			<z>     0.00 </z>
+			<x>13.5</x>
+			<y>0</y>
+			<z>0</z>
 		</location>
 		<location name="EYEPOINT" unit="FT">
 			<x>     4.59 </x>
@@ -86,7 +86,7 @@
 		
 		<pointmass name="Payload">
 			<description> 1561.80 lbs should bring model up to entered max weight </description>
-			<weight unit="LBS"> 780.90 </weight>
+			<weight unit="LBS"> 0</weight>
 			<location name="POINTMASS" unit="FT">
 				<x>    13.12 </x>
 				<y>     0.00 </y>
@@ -96,7 +96,7 @@
 	</mass_balance>
 	
 	<propulsion>
-		<engine file="O-470-B">
+		<engine file="Continental-O-470-M">
 			<location unit="FT">
 				<x>    13.12 </x>
 				<y>    -5.83 </y>
@@ -109,7 +109,7 @@
 			</orient>
 			<feed> 0 </feed>
 			
-			<thruster file="Propeller">
+			<thruster file="Hartzell-HC82XF-2">
 				<sense> 1 </sense>
 				<location unit="FT">
 					<x>    13.12 </x>
@@ -124,7 +124,7 @@
 			</thruster>
 		</engine>
 		
-		<engine file="O-470-B">
+		<engine file="Continental-O-470-M">
 			<location unit="FT">
 				<x>    13.12 </x>
 				<y>     5.83 </y>
@@ -137,7 +137,7 @@
 			</orient>
 			<feed> 1 </feed>
 			
-			<thruster file="Propeller">
+			<thruster file="Hartzell-HC82XF-2">
 				<sense> 1 </sense>
 				<location unit="FT">
 					<x>    13.12 </x>
@@ -158,8 +158,9 @@
 				<y>     0.00 </y>
 				<z>    -0.68 </z>
 			</location>
-			<capacity unit="LBS"> 329.40 </capacity>
-			<contents unit="LBS"> 164.70 </contents>
+			<capacity unit="LBS">316.2</capacity>
+			<contents unit="LBS">100</contents>
+			<unusable unit="LBS">6</unusable>
 		</tank>
 		
 		<tank type="FUEL" number="1">
@@ -168,18 +169,9 @@
 				<y>     0.00 </y>
 				<z>    -0.68 </z>
 			</location>
-			<capacity unit="LBS"> 329.40 </capacity>
-			<contents unit="LBS"> 164.70 </contents>
-		</tank>
-		
-		<tank type="FUEL" number="2">
-			<location unit="FT">
-				<x>    13.12 </x>
-				<y>     0.00 </y>
-				<z>    -0.68 </z>
-			</location>
-			<capacity unit="LBS"> 329.40 </capacity>
-			<contents unit="LBS"> 164.70 </contents>
+			<capacity unit="LBS">316.2</capacity>
+			<contents unit="LBS">100</contents>
+			<unusable unit="LBS">6</unusable>
 		</tank>
 	</propulsion>
 	
@@ -199,6 +191,7 @@
 			<brake_group> NONE </brake_group>
 			<retractable> 1 </retractable>
 		</contact>
+		
 		<contact type="BOGEY" name="LEFT_MAIN">
 			<location unit="FT">
 				<x>    13.65 </x>
@@ -214,6 +207,7 @@
 			<brake_group> LEFT </brake_group>
 			<retractable> 1 </retractable>
 		</contact>
+		
 		<contact type="BOGEY" name="RIGHT_MAIN">
 			<location unit="FT">
 				<x>    13.65 </x>
@@ -229,6 +223,7 @@
 			<brake_group> RIGHT </brake_group>
 			<retractable> 1 </retractable>
 		</contact>
+		
 		<contact type="STRUCTURE" name="LEFT_WING">
 			<location unit="FT">
 				<x>    13.12 </x>
@@ -240,6 +235,7 @@
 			<spring_coeff unit="LBS/FT">     5400.00 </spring_coeff>
 			<damping_coeff unit="LBS/FT/SEC"> 2700.00 </damping_coeff>
 		</contact>
+		
 		<contact type="STRUCTURE" name="RIGHT_WING">
 			<location unit="FT">
 				<x>    13.12 </x>

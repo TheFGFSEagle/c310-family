@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<propeller version="1.01" name="Hartzell-HC82XF-2">
+	<ixx>5</ixx>
+	<diameter unit="IN">80</diameter>
+	<numblades>2</numblades>
+	<gearratio>1</gearratio>
+	<constspeed>1</constspeed>
+	<minpitch>12.5</minpitch>
+	<maxpitch>82</maxpitch>
+	<minrpm>2000</minrpm>
+	<maxrpm>2600</maxrpm>	
+	
+	<table name="C_THRUST" type="internal">
+		 <tableData>
+			0.00	0.0684
+			0.05	0.0648
+			0.10	0.0613
+			0.15	0.0580
+			0.20	0.0549
+			0.25	0.0518
+			0.30	0.0489
+			0.35	0.0461
+			0.40	0.0434
+			0.45	0.0408
+			0.50	0.0382
+			0.55	0.0357
+			0.60	0.0332
+			0.65	0.0308
+			0.70	0.0284
+			0.75	0.0261
+			0.80	0.0237
+			0.85	0.0214
+			0.90	0.0191
+			0.95	0.0168
+			1.00	0.0145
+			1.05	0.0121
+			1.10	0.0098
+			1.15	0.0075
+			1.20	0.0051
+			1.25	0.0027
+			1.30	0.0002
+			1.35	-0.0022
+			1.40	-0.0047
+			1.50	-0.0099
+			1.60	-0.0152
+			1.70	-0.0206
+			1.80	-0.0264
+			1.90	-0.0323
+			2.00	-0.0384
+		 </tableData>
+	</table>
+	
+	<table name="C_POWER" type="internal">
+		 <tableData>
+			0.00	0.0456
+			0.05	0.0452
+			0.10	0.0446
+			0.15	0.0440
+			0.20	0.0433
+			0.25	0.0426
+			0.30	0.0417
+			0.35	0.0407
+			0.40	0.0397
+			0.45	0.0385
+			0.50	0.0373
+			0.55	0.0359
+			0.60	0.0345
+			0.65	0.0330
+			0.70	0.0314
+			0.75	0.0296
+			0.80	0.0278
+			0.85	0.0258
+			0.90	0.0237
+			0.95	0.0215
+			1.00	0.0191
+			1.05	0.0167
+			1.10	0.0140
+			1.15	0.0113
+			1.20	0.0084
+			1.25	0.0053
+			1.30	0.0021
+			1.35	-0.0013
+			1.40	-0.0048
+			1.50	-0.0124
+			1.60	-0.0207
+			1.70	-0.0298
+			1.80	-0.0396
+			1.90	-0.0503
+			2.00	-0.0618
+		 </tableData>
+	</table>
+	
+	<!-- thrust effects of helical tip Mach -->
+	<table name="CT_MACH" type="internal">
+		<tableData>
+			0.85	 1.0
+			1.05	 0.8
+		</tableData>
+	</table>
+
+	<!-- power-required effects of helical tip Mach -->
+	<table name="CP_MACH" type="internal">
+		<tableData>
+			0.85	 1.0
+			1.05	 1.8
+			2.00	 1.4
+		</tableData>
+	</table>
+</propeller>
