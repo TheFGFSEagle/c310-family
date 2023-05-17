@@ -23,6 +23,11 @@
 	
 	<fdm>
 		<jsbsim>
+			<aero>
+				<function>
+					<runtimeaircraftmodel>0</runtimeaircraftmodel>
+				</function>
+			</aero>
 			<systems>
 				<propulsion>
 					<prop-low-pitch type="double">12.8</prop-low-pitch>

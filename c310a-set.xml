@@ -177,6 +177,11 @@
 	
 	<fdm>
 		<jsbsim>
+			<aero>
+				<function>
+					<runtimeaircraftmodel>1</runtimeaircraftmodel>
+				</function>
+			</aero>
 			<systems>
 				<propulsion>
 					<prop-low-pitch type="double">12.5</prop-low-pitch>
@@ -531,6 +536,7 @@
 			<file>Nasal/dialogs.nas</file>
 			<file>Nasal/controls.nas</file>
 			<file>Nasal/states.nas</file>
+			<file>Nasal/parts.nas</file>
 		</c310>
 	</nasal>
 	

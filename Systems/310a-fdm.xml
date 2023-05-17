@@ -453,7 +453,7 @@
 			
 	<flight_control file="Systems/310a-fdm-fcs.xml"/>
 	
-	<aerodynamics file="Systems/310a-fdm-aerodynamics.xml"/>
+	<aerodynamics file="Systems/310-fdm-aerodynamics.xml"/>
 	
 	<external_reactions/>
 </fdm_config>
