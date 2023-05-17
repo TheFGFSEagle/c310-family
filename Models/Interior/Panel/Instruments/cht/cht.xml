@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>cht.ac</path>
+	
+	<params>
+		<indicated-cht-degf-prop>instrumentation/cht[0]/indicated-cht-degf</indicated-cht-degf-prop>
+	</params>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<axis>
+			<object-name>NeedleAxis</object-name>
+		</axis>
+		<property alias="/params/indicated-cht-degf-prop"/>
+		<interpolation>
+			<entry>	<ind>30</ind>	<dep>0</dep>	</entry>
+			<entry>	<ind>50</ind>	<dep>1</dep>	</entry>
+			<entry>	<ind>70</ind>	<dep>3</dep>	</entry>
+			<entry>	<ind>90</ind>	<dep>6</dep>	</entry>
+			<entry>	<ind>110</ind>	<dep>10</dep>	</entry>
+			<entry>	<ind>130</ind>	<dep>15</dep>	</entry>
+			<entry>	<ind>150</ind>	<dep>21</dep>	</entry>
+			<entry>	<ind>450</ind>	<dep>111</dep>	</entry>
+			<entry>	<ind>470</ind>	<dep>117</dep>	</entry>
+			<entry>	<ind>490</ind>	<dep>122</dep>	</entry>
+			<entry>	<ind>510</ind>	<dep>126</dep>	</entry>
+			<entry>	<ind>530</ind>	<dep>129</dep>	</entry>
+			<entry>	<ind>550</ind>	<dep>131</dep>	</entry>
+			<entry>	<ind>570</ind>	<dep>132</dep>	</entry>
+		</interpolation>
+	</animation>
+	
+	<effect>
+		<object-name>Glass</object-name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+	</effect>
+</PropertyList>
+

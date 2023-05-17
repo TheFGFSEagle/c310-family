@@ -167,6 +167,30 @@
 	</filter>
 	
 	<filter>
+		<name>Indicated left cylinder head temperature</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/cht[0]/serviceable</property>
+			</condition>
+		</enable>
+		<input>/engines/engine[0]/cht-degf</input>
+		<output>/instrumentation/cht[0]/indicated-cht-degf</output>
+	</filter>
+	
+	<filter>
+		<name>Indicated right cylinder head temperature</name>
+		<type>gain</type>
+		<enable>
+			<condition>
+				<property>/instrumentation/cht[1]/serviceable</property>
+			</condition>
+		</enable>
+		<input>/engines/engine[1]/cht-degf</input>
+		<output>/instrumentation/cht[1]/indicated-cht-degf</output>
+	</filter>
+	
+	<filter>
 		<name>Indicated flap position</name>
 		<type>gain</type>
 		<enable>
