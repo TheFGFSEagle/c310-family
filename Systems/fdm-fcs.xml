@@ -82,7 +82,7 @@
 					</table>
 					<product>
 						<property>fcs/elevator-trim-tab-pos-deg</property>
-						<value>0.056</value> <!-- trim tab area / elevator area -->
+						<value>0.5</value>
 					</product>
 				</difference>
 			</function>
@@ -164,8 +164,8 @@
 						</tableData>
 					</table>
 					<product>
-						<property>fcs/left-aileron-trim-tab-pos-norm</property>
-						<value>0.041</value>
+						<property>fcs/left-aileron-trim-tab-pos-deg</property>
+						<value>0.05</value>
 					</product>
 				</sum>
 			</function>
@@ -184,8 +184,8 @@
 						</tableData>
 					</table>
 					<product>
-						<property>fcs/right-aileron-trim-tab-pos-norm</property>
-						<value>0.041</value>
+						<property>fcs/right-aileron-trim-tab-pos-deg</property>
+						<value>0.5</value>
 					</product>
 				</sum>
 			</function>
@@ -290,7 +290,7 @@
 					</product>
 					<product>
 						<property>fcs/rudder-trim-tab-pos-deg</property>
-						<value>0.0561</value>
+						<value>0.5</value>
 					</product>
 				</difference>
 			</function>
