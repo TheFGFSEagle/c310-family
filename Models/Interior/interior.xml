@@ -15,4 +15,25 @@
 			<heading-deg>86.15</heading-deg>
 		</offsets>
 	</model>
+	
+	<model>
+		<name>LeftPedals</name>
+		<path>pedals/pedals.xml</path>
+		<offsets>
+			<x-m>0.314</x-m>
+			<y-m>-0.304</y-m>
+			<z-m>-0.578</z-m>
+			<pitch-deg>13.3</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>LeftPedals</name>
+		<path>pedals/pedals.xml</path>
+		<offsets>
+			<x-m>0.314</x-m>
+			<y-m>0.304</y-m>
+			<z-m>-0.578</z-m>
+			<pitch-deg>13.3</pitch-deg>
+		</offsets>
+	</model>
 </PropertyList>
