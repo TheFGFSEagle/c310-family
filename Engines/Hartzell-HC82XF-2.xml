@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <propeller version="1.01" name="Hartzell-HC82XF-2">
-	<ixx>4</ixx>
+	<ixx>0.5</ixx>
 	<diameter unit="IN">84</diameter>
 	<numblades>2</numblades>
 	<gearratio>1</gearratio>
