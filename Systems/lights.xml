@@ -32,12 +32,15 @@
 			<expression>
 				<product>
 					<property>/controls/lighting/beacon</property>
-					<value>1</value>
+					<div>
+						<property>/systems/electrical/consumers/beacon/amps</property>
+						<property>/systems/electrical/consumers/beacon/rated-amps</property>
+					</div>
 				</product>
 			</expression>
 		</input>
 		<output>/sim/model/lights/beacon/brightness-norm</output>
-		<max-rate-of-change>3</max-rate-of-change>
+		<max-rate-of-change>4</max-rate-of-change>
 	</filter>
 	
 	<filter>
