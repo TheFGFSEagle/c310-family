@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
-	<name type="string">parked</name>
+	<name type="string">approach</name>
 	<readable-name type="string">Approach</readable-name>
 	<description type="string">Approach state - low power, flaps 30°, landing lights extended, …</description>
 	<overlay>
