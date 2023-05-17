@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>manifold-pressure.ac</path>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle1</object-name>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property>engines/engine[0]/mp-inhg</property>
+		<factor>5.4</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle2</object-name>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<property>engines/engine[1]/mp-inhg</property>
+		<factor>5.4</factor>
+	</animation>
+</PropertyList>
