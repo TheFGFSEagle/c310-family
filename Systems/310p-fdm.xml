@@ -45,7 +45,7 @@
 		</location>
 		
 		<pointmass name="Pilot">
-			<weight unit="LBS">140</weight>
+			<weight unit="LBS">180</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>37.05</x>
 				<y>-10.5</y>
@@ -63,7 +63,7 @@
 		</pointmass>
 			
 		<pointmass name="Left forward passenger">
-			<weight unit="LBS">140</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>70.9</x>
 				<y>-10.5</y>
@@ -72,7 +72,7 @@
 		</pointmass>
 		
 		<pointmass name="Center forward passenger">
-			<weight unit="LBS">140</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>70.9</x>
 				<y>0</y>
@@ -81,7 +81,7 @@
 		</pointmass>
 		
 		<pointmass name="Right forward passenger">
-			<weight unit="LBS">140</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>70.9</x>
 				<y>10.5</y>
@@ -90,7 +90,7 @@
 		</pointmass>
 				
 		<pointmass name="Left rear passenger">
-			<weight unit="LBS">140</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>105</x>
 				<y>-10.5</y>
@@ -99,7 +99,7 @@
 		</pointmass>
 			
 		<pointmass name="Right rear passenger">
-			<weight unit="LBS">140</weight>
+			<weight unit="LBS">0</weight>
 			<location name="POINTMASS" unit="IN">
 				<x>105</x>
 				<y>10.5</y>
