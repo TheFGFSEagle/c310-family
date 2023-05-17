@@ -130,6 +130,16 @@
 			<z-m>-0.18</z-m>
 		</offsets>
 	</model>
+	<model>
+		<name>LeftLandingLight</name>
+		<path>Lights/landing-light.xml</path>
+		<offsets>
+			<x-m>1.26</x-m>
+			<y-m>-3.493</y-m>
+			<z-m>-0.608</z-m>
+			<roll-deg>-4.5</roll-deg>
+		</offsets>
+	</model>
 	
 	<!-- control surfaces -->
 	<animation>
@@ -728,5 +738,30 @@
 				<dep>0</dep>
 			</entry>
 		</interpolation>
+	</animation>
+	
+	<!-- retractable anding lights -->
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftLandingLightLampCase</object-name>
+		<object-name>LeftLandingLightLampGlass</object-name>
+		<object-name>LeftLandingLightLampInside</object-name>
+		<object-name>LeftLandingLight</object-name>
+		<axis>
+			<object-name>LeftLandingLightLampAxis</object-name>
+		</axis>
+		<property>sim/model/lights/landing[0]/pos-deg</property>
+		<factor>-1</factor>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LeftLandingLightLampInside</object-name>
+		<emission>
+			<red>1</red>
+			<green>0.95</green>
+			<blue>0.95</blue>
+			<factor-prop>sim/model/lights/landing[0]/brightness-norm</factor-prop>
+		</emission>
 	</animation>
 </PropertyList>
