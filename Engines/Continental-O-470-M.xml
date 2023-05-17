@@ -8,10 +8,10 @@
 	<maxrpm>2600</maxrpm>
 	<sparkfaildrop>0.1</sparkfaildrop>
 	<man-press-lag>0.1</man-press-lag>
-	<static-friction unit="HP">0.5</static-friction>
+	<static-friction unit="HP">2</static-friction>
 	<starter-torque>200</starter-torque>
 	<starter-rpm>1400</starter-rpm>
-	<!--<bsfc>0.45</bsfc>-->
+	<bsfc>0.9713</bsfc>
 	<volumetric-efficiency>0.85</volumetric-efficiency>
 	<stroke unit="IN">4</stroke>
 	<bore unit="IN">5</bore>
