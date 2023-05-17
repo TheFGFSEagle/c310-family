@@ -12,7 +12,9 @@
 		<name>Indicated left manifold pressure</name>
 		<type>gain</type>
 		<enable>
-			<property>/instrumentation/manifold-pressure/serviceable</property>
+			<condition>
+				<property>/instrumentation/manifold-pressure/serviceable</property>
+			</condition>
 		</enable>
 		<input>/engines/engine[0]/mp-inhg</input>
 		<output>/instrumentation/manifold-pressure/indicated-manifold-pressure-inhg[0]</output>
@@ -22,7 +24,9 @@
 		<name>Indicated right manifold pressure</name>
 		<type>gain</type>
 		<enable>
-			<property>/instrumentation/manifold-pressure/serviceable</property>
+			<condition>
+				<property>/instrumentation/manifold-pressure/serviceable</property>
+			</condition>
 		</enable>
 		<input>/engines/engine[1]/mp-inhg</input>
 		<output>/instrumentation/manifold-pressure/indicated-manifold-pressure-inhg[1]</output>
@@ -32,7 +36,9 @@
 		<name>Indicated left fuel level</name>
 		<type>noise-spike</type>
 		<enable>
-			<property>/instrumentation/fuel-quantity/serviceable</property>
+			<condition>
+				<property>/instrumentation/fuel-quantity/serviceable</property>
+			</condition>
 		</enable>
 		<input>/consumables/fuel/tank[0]/level-gal_us</input>
 		<output>/instrumentation/fuel-quantity/indicated-fuel-level-gal_us[0]</output>
@@ -43,7 +49,9 @@
 		<name>Indicated right fuel level</name>
 		<type>noise-spike</type>
 		<enable>
-			<property>/instrumentation/fuel-quantity/serviceable</property>
+			<condition>
+				<property>/instrumentation/fuel-quantity/serviceable</property>
+			</condition>
 		</enable>
 		<input>/consumables/fuel/tank[1]/level-gal_us</input>
 		<output>/instrumentation/fuel-quantity/indicated-fuel-level-gal_us[1]</output>
@@ -54,7 +62,9 @@
 		<name>Suction gauge</name>
 		<type>gain</type>
 		<enable>
-			<property>/instrumentation/suction/serviceable</property>
+			<condition>
+				<property>/instrumentation/suction/serviceable</property>
+			</condition>
 		</enable>
 		<input>/systems/vacuum/gauge-suction-inhg</input>
 		<output>/instrumentation/suction/indicated-suction-inhg</output>
