@@ -4,7 +4,7 @@
 		<name>Indicated airspeed (miles per hour)</name>
 		<type>gain</type>
 		<gain>1.1507794</gain>
-		<input>/instrumentation/airspeed-indicator/indicated-airspeed-kt</input>
-		<output>/instrumentation/airspeed-indicator/indicated-airspeed-mph</output>
+		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+		<output>/instrumentation/airspeed-indicator/indicated-speed-mph</output>
 	</filter>
 </PropertyList>
