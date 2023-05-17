@@ -27,6 +27,11 @@
 			<electrical>
 				<path>Systems/electrical.xml</path>
 			</electrical>
+			
+			<property-rule n="100">
+				<name>Instrument indications</name>
+				<path>Systems/instruments.xml</path>
+			</property-rule>
 		</systems>
 		
 		<sound>

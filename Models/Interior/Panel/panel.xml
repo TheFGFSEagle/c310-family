@@ -23,6 +23,16 @@
 	</model>
 	
 	<model>
+		<path>Instruments/asi/asi.xml</path>
+		<offsets>
+			<x-m>0.77</x-m>
+			<y-m>-0.32</y-m>
+			<z-m>0.11</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<path>Instruments/manifold-pressure/manifold-pressure.xml</path>
 		<offsets>
 			<x-m>0.8</x-m>
