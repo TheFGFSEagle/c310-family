@@ -9,6 +9,9 @@
 				<fcs>
 					<flap-pos-deg>15</flap-pos-deg>
 				</fcs>
+				<gear>
+					<gear-pos-norm>1</gear-pos-norm>
+				</gear>
 			</jsbsim>
 		</fdm>
 		<sim>

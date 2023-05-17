@@ -485,7 +485,7 @@
 					</and>
 					<and>
 						<equals>
-							<property>/controls/lighting/landing[0]</property>
+							<property>/controls/lighting/landing-light[0]</property>
 							<value>-1</value>
 						</equals>
 						<greater-than>
@@ -572,7 +572,7 @@
 					</and>
 					<and>
 						<equals>
-							<property>/controls/lighting/landing[1]</property>
+							<property>/controls/lighting/landing-light[1]</property>
 							<value>-1</value>
 						</equals>
 						<greater-than>
