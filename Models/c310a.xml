@@ -1603,6 +1603,328 @@
 		</hovered>
 	</animation>
 	
+	<animation>
+		<type>knob</type>
+		<object-name>RedInstrumentLightRheostat</object-name>
+		<axis>
+			<object-name>RedInstrumentLightRheostatAxis</object-name>
+		</axis>
+		<property>controls/lighting/red-instrument-norm</property>
+		<factor>360</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../property"/>
+				<min>0</min>
+				<max>1</max>
+				<factor>0.05</factor>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>red-instrument-light-rheostat</tooltip-id>
+				<label>Red instrument light intensity: %3d%%</label>
+				<measure-text>Red instrument light intensity: 100%</measure-text>
+				<property alias="../../../property"/>
+				<mapping>percent</mapping>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>UVInstrumentLightRheostat</object-name>
+		<axis>
+			<object-name>UVInstrumentLightRheostatAxis</object-name>
+		</axis>
+		<property>controls/lighting/uv-instrument-norm</property>
+		<factor>360</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../property"/>
+				<min>0</min>
+				<max>1</max>
+				<factor>0.05</factor>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>uv-instrument-light-rheostat</tooltip-id>
+				<label>UV instrument light intensity: %3d%%</label>
+				<measure-text>UV instrument light intensity: 100%</measure-text>
+				<property alias="../../../property"/>
+				<mapping>percent</mapping>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>FrontDomeLightSwitch</object-name>
+		<axis>
+			<y>1</y>
+		</axis>
+		<property>controls/lighting/front-dome</property>
+		<factor>0.006</factor>
+		<action>
+			<binding>
+				<command>property-toggle</command>
+				<property alias="../../../property"/>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>front-dome-light-switch</tooltip-id>
+				<label>Front dome light: %s</label>
+				<measure-text>Front dome light: on</measure-text>
+				<property alias="../../../property"/>
+				<mapping>nasal</mapping>
+				<script>
+					return arg[0] ? "on" : "off";
+				</script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>LeftUVInstrumentLightStarterButton</object-name>
+		<axis>
+			<z>1</z>
+		</axis>
+		<property>controls/lighting/uv-instrument-starter-button-pressed[0]</property>
+		<factor>0.007</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="../../../property"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="../../../property"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>left-uv-instrument-light-starter-button</tooltip-id>
+				<label>Start left UV instrument light</label>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>RightUVInstrumentLightStarterButton</object-name>
+		<axis>
+			<z>1</z>
+		</axis>
+		<property>controls/lighting/uv-instrument-starter-button-pressed[1]</property>
+		<factor>0.007</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="../../../property"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="../../../property"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>right-uv-instrument-light-starter-button</tooltip-id>
+				<label>Start right UV instrument light</label>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<light>
+		<name>RedInstrumentLight</name>
+		<type>spot</type>
+		<position>
+			<x-m>1.226</x-m>
+			<y-m>0</y-m>
+			<z-m>0.59</z-m>
+		</position>
+		<direction>
+			<x>-1</x>
+			<y>0</y>
+			<z>-1</z>
+		</direction>
+		<ambient>
+			<r>0.1</r>
+			<g>0.03</g>
+			<b>0.03</b>
+			<a>0</a>
+		</ambient>
+		<diffuse>
+			<r>1</r>
+			<g>0.3</g>
+			<b>0.3</b>
+			<a>0</a>
+		</diffuse>
+		<specular>
+			<r>1</r>
+			<g>0.3</g>
+			<b>0.3</b>
+			<a>0</a>
+		</specular>
+		<attenuation>
+			<c>0.005</c>
+			<l>0</l>
+			<q>1.5</q>
+		</attenuation>
+		<spot-exponent>6</spot-exponent>
+		<spot-cutoff>70</spot-cutoff>
+		<range-m>1</range-m>
+		<dim-factor>
+			<property>sim/model/lights/red-instrument/brightness-norm</property>
+		</dim-factor>
+	</light>
+	<light>
+		<name>LeftUVInstrumentLight</name>
+		<type>spot</type>
+		<position>
+			<x-m>1.221</x-m>
+			<y-m>-0.04</y-m>
+			<z-m>0.592</z-m>
+		</position>
+		<direction>
+			<x>-1</x>
+			<y>0</y>
+			<z>-1</z>
+		</direction>
+		<ambient>
+			<r>0</r>
+			<g>0</g>
+			<b>0</b>
+			<a>0</a>
+		</ambient>
+		<diffuse>
+			<r>0.03</r>
+			<g>0.03</g>
+			<b>0.1</b>
+			<a>0</a>
+		</diffuse>
+		<specular>
+			<r>0.03</r>
+			<g>0.03</g>
+			<b>0.1</b>
+			<a>0</a>
+		</specular>
+		<attenuation>
+			<c>0.02</c>
+			<l>0</l>
+			<q>1.5</q>
+		</attenuation>
+		<spot-exponent>6</spot-exponent>
+		<spot-cutoff>70</spot-cutoff>
+		<range-m>1</range-m>
+		<dim-factor>
+			<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+		</dim-factor>
+	</light>
+	<light>
+		<name>RightUVInstrumentLight</name>
+		<type>spot</type>
+		<position>
+			<x-m>1.221</x-m>
+			<y-m>0.04</y-m>
+			<z-m>0.592</z-m>
+		</position>
+		<direction>
+			<x>-1</x>
+			<y>0</y>
+			<z>-1</z>
+		</direction>
+		<ambient>
+			<r>0</r>
+			<g>0</g>
+			<b>0</b>
+			<a>0</a>
+		</ambient>
+		<diffuse>
+			<r>0.03</r>
+			<g>0.03</g>
+			<b>0.01</b>
+			<a>0</a>
+		</diffuse>
+		<specular>
+			<r>0.03</r>
+			<g>0.03</g>
+			<b>0.01</b>
+			<a>0</a>
+		</specular>
+		<attenuation>
+			<c>0.02</c>
+			<l>0</l>
+			<q>1.5</q>
+		</attenuation>
+		<spot-exponent>6</spot-exponent>
+		<spot-cutoff>70</spot-cutoff>
+		<range-m>1</range-m>
+		<dim-factor>
+			<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+		</dim-factor>
+	</light>
+	<light>
+		<name>FrontDomeLight</name>
+		<type>spot</type>
+		<position>
+			<x-m>1.415</x-m>
+			<y-m>0</y-m>
+			<z-m>0.575</z-m>
+		</position>
+		<direction>
+			<x>0.2</x>
+			<y>0</y>
+			<z>-1</z>
+		</direction>
+		<ambient>
+			<r>0.3</r>
+			<g>0.3</g>
+			<b>0.3</b>
+			<a>0</a>
+		</ambient>
+		<diffuse>
+			<r>1</r>
+			<g>1</g>
+			<b>1</b>
+			<a>0</a>
+		</diffuse>
+		<specular>
+			<r>1</r>
+			<g>1</g>
+			<b>1</b>
+			<a>0</a>
+		</specular>
+		<attenuation>
+			<c>0.05</c>
+			<l>0</l>
+			<q>5.5</q>
+		</attenuation>
+		<spot-exponent>3</spot-exponent>
+		<spot-cutoff>70</spot-cutoff>
+		<range-m>1</range-m>
+		<dim-factor>
+			<property>sim/model/lights/front-dome/brightness-norm</property>
+		</dim-factor>
+	</light>
+
 	<effect>
 		<inherits-from>Effects/exterior-opaque</inherits-from>
 		<object-name>BaggageDoorExterior</object-name>

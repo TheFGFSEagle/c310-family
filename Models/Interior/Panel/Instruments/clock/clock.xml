@@ -3,6 +3,35 @@
 	<path>clock.ac</path>
 	
 	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>InHgScale</object-name>
+		<object-name>Flag</object-name>
+		<object-name>AltNeedle100</object-name>
+		<object-name>AltNeedle1000</object-name>
+		<object-name>AltNeedle10000</object-name>
+		<emission>
+			<red>0.95</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>
+				<expression>
+					<sum>
+						<product>
+							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+							<value>0.58</value>
+						</product>
+						<product>
+							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+							<value>0.42</value>
+						</product>
+					</sum>
+				</expression>
+			</factor>
+		</emission>
+	</animation>
+	
+	<animation>
 		<type>rotate</type>
 		<object-name>HoursHand</object-name>
 		<axis>
