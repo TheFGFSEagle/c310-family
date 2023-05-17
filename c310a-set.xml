@@ -212,7 +212,6 @@
 		</electric>
 		<engines>
 			<friction-norm type="double">0</friction-norm>
-			<friction-factor type="double">1</friction-factor>
 			<engine>
 				<carb-heat type="bool">false</carb-heat>
 				<carb-heat-lock-norm type="double">1</carb-heat-lock-norm>

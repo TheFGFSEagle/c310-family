@@ -33,7 +33,10 @@
 		<release>
 			<binding>
 				<condition>
-					<value type="bool" alias="/params/spring-loaded"/>
+					<equals>
+						<value type="bool" alias="/params/spring-loaded"/>
+						<value type="bool">true</value>
+					</equals>
 				</condition>
 				<command>property-assign</command>
 				<property alias="/params/property"/>

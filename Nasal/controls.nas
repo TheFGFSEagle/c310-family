@@ -52,6 +52,14 @@ controls.Magnetos = {
 	}
 };
 
+controls.adjustEngineControlFromBinding = func(binding) {
+	var friction_factor = 1 - props.globals.getValue("/controls/engines/friction-norm");
+	var current_value = props.globals.getValue(binding.getValue("property"));
+	var new_value = current_value + (binding.getValue("factor") * binding.getValue("offset") * friction_factor);
+	new_value = math.clamp(new_value, binding.getValue("min"), binding.getValue("max"));
+	props.globals.setDoubleValue(binding.getValue("property"), new_value);
+}
+
 controls.fuel_selector = [controls.FuelSelector.new(0), controls.FuelSelector.new(1)];
 controls.magneto = [controls.Magnetos.new(0), controls.Magnetos.new(1)];
 

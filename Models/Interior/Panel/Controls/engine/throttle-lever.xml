@@ -22,11 +22,12 @@
 		<factor>60</factor>
 		<action>
 			<binding>
-				<command>property-adjust</command>
+				<command>nasal</command>
 				<property alias="/params/throttle-prop"/>
-				<factor alias="controls/engines/friction-factor"/>
+				<factor>0.01</factor>
 				<min>0</min>
 				<max>1</max>
+				<script>c310.controls.adjustEngineControlFromBinding(cmdarg());</script>
 			</binding>
 		</action>
 		<hovered>
