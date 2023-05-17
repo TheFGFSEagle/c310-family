@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
 	<model>
+		<name>AlternatorsBatterySwitchBar</name>
+		<path>switches/three-switch-bar.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.034</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+	</model>
+	<model>
 		<name>LeftAlternatorSwitch</name>
 		<path>switches/two-position.xml</path>
 		<offsets>
@@ -87,6 +96,15 @@
 		</overlay>
 	</model>
 	
+	<model>
+		<name>MagnetosSwitchBar</name>
+		<path>switches/four-switch-bar.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.145</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+	</model>
 	<model>
 		<name>LeftLeftMagnetoSwitch</name>
 		<path>switches/two-position.xml</path>

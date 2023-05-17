@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>three-switch-bar.ac</path>
+	
+	<params>
+		<tooltip-id>alternator-battery-switch-bar</tooltip-id>
+		<label>Alternators and battery switch bar; can be used to switch off both alternator switches and the battery switch at once</label>
+		<property>controls/engines/engine[0]/master-alt</property>
+		<property>controls/electric/battery-switch</property>
+		<property>controls/engines/engine[1]/master-alt</property>
+	</params>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Guard</object-name>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<expression>
+			<sum>
+				<product>
+					<min>
+						<sum>
+							<property alias="/params/property[0]"/>
+							<property alias="/params/property[1]"/>
+							<property alias="/params/property[2]"/>
+						</sum>
+						<value>1</value>
+					</min>
+					<value>50</value>
+				</product>
+				<value>-8.5</value>
+			</sum>
+		</expression>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[0]"/>
+				<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[1]"/>
+				<value type="bool">false</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/property[2]"/>
+				<value type="bool">false</value>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/label"/>
+				<mapping>none</mapping>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
