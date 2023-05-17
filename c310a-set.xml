@@ -528,6 +528,10 @@
 					<rated-volts>28.5</rated-volts>
 					<rated-amps>0.24</rated-amps>
 				</rotating-beacon-motor>
+				<taxi-light>
+					<rated-volts>28</rated-volts>
+					<rated-amps>3.57</rated-amps>
+				</taxi-light>
 			</consumers>
 		</electrical>
 	</systems>

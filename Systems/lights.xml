@@ -31,6 +31,28 @@
 		<input>
 			<expression>
 				<product>
+					<abs>
+						<min>
+							<property>/controls/lighting/landing-light[1]</property>
+							<value>0</value>
+						</min>
+					</abs>
+					<div>
+						<property>/systems/electrical/consumers/taxi-light/amps</property>
+						<property>/systems/electrical/consumers/taxi-light/rated-amps</property>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>/sim/model/lights/taxi/brightness-norm</output>
+		<max-rate-of-change>4</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<type>noise-spike</type>
+		<input>
+			<expression>
+				<product>
 					<property>/controls/lighting/beacon</property>
 					<div>
 						<property>/systems/electrical/consumers/rotating-beacon/amps</property>

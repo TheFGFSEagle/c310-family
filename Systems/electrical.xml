@@ -472,18 +472,28 @@
 		<gain>/controls/circuit-breakers/left-oil-temp-left-landing-light-motor/closed</gain>
 		<input>
 			<condition>
-				<not-equals>
-					<property>/controls/lighting/landing-light[0]</property>
-					<value>0</value>
-				</not-equals>
-				<greater-than>
-					<property>/sim/model/lights/landing[0]/pos-norm</property>
-					<value>0</value>
-				</greater-than>
-				<less-than>
-					<property>/sim/model/lights/landing[0]/pos-norm</property>
-					<value>1</value>
-				</less-than>
+				<or>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing-light[0]</property>
+							<value>1</value>
+						</equals>
+						<less-than>
+							<property>/sim/model/lights/landing[0]/pos-norm</property>
+							<value>1</value>
+						</less-than>
+					</and>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing[0]</property>
+							<value>-1</value>
+						</equals>
+						<greater-than>
+							<property>/sim/model/lights/landing[0]/pos-norm</property>
+							<value>0</value>
+						</greater-than>
+					</and>
+				</or>
 			</condition>
 			<property>bus/volts</property>
 		</input>
@@ -549,18 +559,28 @@
 		<gain>/controls/circuit-breakers/right-oil-temp-right-landing-light-motor-taxi-light/closed</gain>
 		<input>
 			<condition>
-				<not-equals>
-					<property>/controls/lighting/landing-light[1]</property>
-					<value>0</value>
-				</not-equals>
-				<greater-than>
-					<property>/sim/model/lights/landing[1]/pos-norm</property>
-					<value>0</value>
-				</greater-than>
-				<less-than>
-					<property>/sim/model/lights/landing[1]/pos-norm</property>
-					<value>1</value>
-				</less-than>
+				<or>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing-light[1]</property>
+							<value>1</value>
+						</equals>
+						<less-than>
+							<property>/sim/model/lights/landing[1]/pos-norm</property>
+							<value>1</value>
+						</less-than>
+					</and>
+					<and>
+						<equals>
+							<property>/controls/lighting/landing[1]</property>
+							<value>-1</value>
+						</equals>
+						<greater-than>
+							<property>/sim/model/lights/landing[1]/pos-norm</property>
+							<value>0</value>
+						</greater-than>
+					</and>
+				</or>
 				<property>/sim/equipment/right-landing-light</property>
 			</condition>
 			<property>bus/volts</property>
