@@ -17,7 +17,7 @@
 				<label>Equipment options</label>
 				<binding>
 					<command>nasal</command>
-					<script>dialogs.equipment_dialog.show();</script>
+					<script>c310.dialogs.equipment_dialog.show();</script>
 				</binding>
 			</item>
 			
