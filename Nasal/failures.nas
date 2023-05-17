@@ -252,7 +252,7 @@ failures.Dialog = {
 						})
 						.setCheckable(1)
 						.setText("Right");
-		obj.enginesTab.addItem(obj.oilReservoirrLeakButtonRight, 2, 1);
+		obj.enginesTab.addItem(obj.oilReservoirLeakButtonRight, 2, 1);
 		
 		return obj;
 	},
