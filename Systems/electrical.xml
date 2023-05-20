@@ -35,6 +35,7 @@
 					<property>/engines/engine[0]/rpm</property>
 					<value>133</value>
 				</greater-than-equals>
+				<property>/engines/engine[0]/running</property>
 			</condition>
 			<!-- graph of this formula: https://www.desmos.com/calculator/z8p9ddnltl where A = alternator/rated-amps -->
 			<expression>
@@ -71,6 +72,9 @@
 		<name>Available left alternator volts</name>
 		<type>gain</type>
 		<input>
+			<condition>
+				<property>/engines/engine[0]/running</property>
+			</condition>
 			<expression>
 				<product>
 					<property>/engines/engine[0]/rpm</property>
@@ -100,6 +104,7 @@
 					<property>/engines/engine[1]/rpm</property>
 					<value>133</value>
 				</greater-than-equals>
+				<property>/engines/engine[1]/running</property>
 			</condition>
 			<!-- graph of this formula: https://www.desmos.com/calculator/z8p9ddnltl where A = alternator/rated-amps -->
 			<expression>
@@ -136,6 +141,9 @@
 		<name>Available right alternator volts</name>
 		<type>gain</type>
 		<input>
+			<condition>
+				<property>/engines/engine[1]/running</property>
+			</condition>
 			<expression>
 				<product>
 					<property>/engines/engine[1]/rpm</property>
@@ -397,8 +405,11 @@
 			<expression>
 				<max>
 					<property>suppliers/alternators/volts</property>
-					<property>suppliers/batteries/volts</property>
 					<property>suppliers/gpu/volts</property>
+					<product>
+						<property>suppliers/batteries/volts</property>
+						<property>suppliers/batteries/contactor</property>
+					</product>
 				</max>
 			</expression>
 		</input>
@@ -1055,13 +1066,13 @@
 		<input>
 			<and>
 				<property>/controls/engines/engine[0]/starter-button</property>
-				<greater-than-equals>
+				<greater-than>
 					<property>consumers/starter-motor[0]/volts</property>
-					<value>12</value>
-				</greater-than-equals>
+					<value>0</value>
+				</greater-than>
 			</and>
 		</input>
-		<output>/controls/engines/engine[0]/starter</output>
+		<output>/engines/engine[0]/starter</output>
 	</logic>
 	
 	<logic>
@@ -1069,13 +1080,13 @@
 		<input>
 			<and>
 				<property>/controls/engines/engine[1]/starter-button</property>
-				<greater-than-equals>
+				<greater-than>
 					<property>consumers/starter-motor[1]/volts</property>
-					<value>12</value>
-				</greater-than-equals>
+					<value>0</value>
+				</greater-than>
 			</and>
 		</input>
-		<output>/controls/engines/engine[1]/starter</output>
+		<output>/engines/engine[1]/starter</output>
 	</logic>
 	
 	<filter>
@@ -1095,7 +1106,7 @@
 		<input>
 			<condition>
 				<and>
-					<property>/controls/engines/engine[0]/starter</property>
+					<property>/engines/engine[0]/starter</property>
 					<not>
 						<property>/engines/engine[0]/running</property>
 					</not>
@@ -1110,21 +1121,23 @@
 							<property>consumers/starter-motor[0]/rated-amps</property>
 						</div>
 					</div>
-					<table>
-						<property>/engines/engine[0]/rpm</property>
-						<entry>
-							<ind>0</ind>
-							<dep>1</dep>
-						</entry>
-						<entry>
-							<ind>800</ind>
-							<dep>0</dep>
-						</entry>
-					</table>
 				</product>
 			</expression>
 		</input>
 		<output>consumers/starter-motor[0]/amps</output>
+	</filter>
+	<filter>
+		<name>Left starter watts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<property>consumers/starter-motor[0]/volts</property>
+					<property>consumers/starter-motor[0]/amps</property>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/starter-motor[0]/watts</output>
 	</filter>
 	
 	<filter>
@@ -1145,7 +1158,7 @@
 		<input>
 			<condition>
 				<and>
-					<property>/controls/engines/engine[1]/starter</property>
+					<property>/engines/engine[1]/starter</property>
 					<not>
 						<property>/engines/engine[1]/running</property>
 					</not>
@@ -1160,21 +1173,23 @@
 							<property>consumers/starter-motor[1]/rated-amps</property>
 						</div>
 					</div>
-					<table>
-						<property>/engines/engine[1]/rpm</property>
-						<entry>
-							<ind>0</ind>
-							<dep>1</dep>
-						</entry>
-						<entry>
-							<ind>800</ind>
-							<dep>0</dep>
-						</entry>
-					</table>
 				</product>
 			</expression>
 		</input>
 		<output>consumers/starter-motor[1]/amps</output>
+	</filter>
+	<filter>
+		<name>Right starter watts</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<property>consumers/starter-motor[1]/volts</property>
+					<property>consumers/starter-motor[1]/amps</property>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/starter-motor[1]/watts</output>
 	</filter>
 	
 	<filter>
@@ -1274,6 +1289,7 @@
 					<property>consumers/fuel-boost-pump[1]/amps</property>
 					<property>consumers/stall-warning-horn/amps</property>
 					<property>consumers/stall-warning-indicator/amps</property>
+					<property>consumers/test-amps</property>
 				</sum>
 			</expression>
 		</input>
@@ -1287,7 +1303,7 @@
 			<condition>
 				<greater-than>
 					<property>suppliers/alternators/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 			</condition>
 			<expression>
@@ -1299,7 +1315,13 @@
 		</input>
 		<output>suppliers/alternators/amps</output>
 		<min>0</min>
-		<max>suppliers/alternators/available-amps</max>
+		<max>
+			<condition>
+				<property>suppliers/batteries/contactor</property>
+			</condition>
+			<property>suppliers/alternators/available-amps</property>
+		</max>
+		<max>9999</max>
 	</filter>
 	<filter>
 		<name>Left alternator amps load</name>
@@ -1308,7 +1330,7 @@
 			<condition>
 				<greater-than>
 					<property>suppliers/alternator[1]/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 			</condition>
 			<property>suppliers/alternators/amps</property>
@@ -1318,7 +1340,7 @@
 			<condition>
 				<greater-than>
 					<property>suppliers/alternator[0]/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 			</condition>
 			<property>suppliers/alternators/amps</property>
@@ -1332,7 +1354,7 @@
 			<condition>
 				<greater-than>
 					<property>suppliers/alternator[0]/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 			</condition>
 			<property>suppliers/alternators/amps</property>
@@ -1342,7 +1364,7 @@
 			<condition>
 				<greater-than>
 					<property>suppliers/alternator[1]/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 			</condition>
 			<property>suppliers/alternators/amps</property>
@@ -1356,7 +1378,7 @@
 			<condition>
 				<greater-than>
 					<property>suppliers/gpu/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 			</condition>
 			<expression>
@@ -1371,37 +1393,46 @@
 		</input>
 		<output>suppliers/gpu/amps</output>
 	</filter>
+	<logic>
+		<name>Battery contactor</name>
+		<input>
+			<and>
+				<greater-than>
+					<property>suppliers/batteries/volts</property>
+					<value>0</value>
+				</greater-than>
+				<greater-than-equals>
+					<property>bus/amps</property>
+					<property>bus/available-amps</property>
+				</greater-than-equals>
+			</and>
+		</input>
+		<output>suppliers/batteries/contactor</output>
+	</logic>
 	<filter>
 		<name>Batteries amps</name>
 		<type>gain</type>
 		<input>
 			<!-- battery has sufficient charge and alternators / ground power are not providing enough voltage - discharge -->
 			<condition>
-				<greater-than>
-					<property>suppliers/batteries/volts</property>
-					<value>12</value>
-				</greater-than>
-				<greater-than>
-					<property>bus/amps</property>
-					<property>bus/available-amps</property>
-				</greater-than>
+				<property>suppliers/batteries/contactor</property>
 			</condition>
 			<expression>
 				<dif>
 					<property>bus/amps</property>
-					<property>suppliers/alternators/amps</property>
-					<property>suppliers/gpu/amps</property>
+					<property>suppliers/alternators/available-amps</property>
+					<property>suppliers/gpu/available-amps</property>
 				</dif>
 			</expression>
 			<min>0</min>
-			<max>100</max>
+			<max>9999</max>
 		</input>
 		<input>
 			<!-- alternators / ground power are providing enough power - charge -->
 			<condition>
 				<greater-than>
 					<property>bus/volts</property>
-					<value>12</value>
+					<value>0</value>
 				</greater-than>
 				<less-than>
 					<property>suppliers/batteries/charge-norm</property>
@@ -1414,7 +1445,7 @@
 					<property>bus/available-amps</property>
 				</dif>
 			</expression>
-			<min>-100</min>
+			<min>-9999</min>
 			<max>0</max>
 		</input>
 		<output>

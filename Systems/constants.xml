@@ -8,5 +8,7 @@
 	<slugs-to-lbs>32.174049</slugs-to-lbs>
 	<psi-to-psf>144</psi-to-psf>
 	<psf-to-psi>0.0069444444</psf-to-psi>
+	<watts-to-hp>0.00134102209</watts-to-hp>
+	<hp-to-watts>745.699872</hp-to-watts>
 </PropertyList>
 
