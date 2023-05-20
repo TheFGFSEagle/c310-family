@@ -45,6 +45,20 @@
 				</binding>
 			</item>
 			
+			<item>
+				<label>Recharge batteries</label>
+				<binding>
+					<command>property-assign</command>
+					<property>/systems/electrical/suppliers/battery[0]/charge-amp_hours</property>
+					<property>/systems/electrical/suppliers/battery[0]/capacity-amp_hours</property>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>/systems/electrical/suppliers/battery[1]/charge-amp_hours</property>
+					<property>/systems/electrical/suppliers/battery[1]/capacity-amp_hours</property>
+				</binding>
+			</item>
+			
 			<!--<item>
 				<label>Select Livery</label>
 				<binding>
