@@ -71,10 +71,14 @@
 			</clipto>
 			<output>/engines/engine[0]/lubrication-norm</output>
 		</fcs_function>
+		<pure_gain name="propulsion/engine[0]/starter-power-hp">
+			<input>/systems/electrical/consumers/starter-motor[0]/watts</input>
+			<gain>/constants/watts-to-hp</gain>
+		</pure_gain>
 		<fcs_function name="propulsion/engine[0]/friction-hp">
 			<function>
 				<sum>
-					<v>2</v>
+					<v>1</v>
 					<product>
 						<difference>
 							<v>1</v>
@@ -83,6 +87,10 @@
 						<v>100</v>
 					</product>
 					<p>propulsion/engine[0]/external-power-hp</p>
+					<product>
+						<p>-propulsion/engine[0]/starter-power-hp</p>
+						<v>3</v>
+					</product>
 				</sum>
 			</function>
 			<output>/engines/engine[0]/friction-hp</output>
@@ -95,9 +103,9 @@
 						<difference>
 							<max>
 								<p>propulsion/engine[0]/friction-hp</p>
-								<v>2</v>
+								<v>1</v>
 							</max>
-							<v>2</v>
+							<v>1</v>
 						</difference>
 						<v>-0.02</v>
 					</product>
@@ -194,10 +202,14 @@
 			</clipto>
 			<output>/engines/engine[1]/lubrication-norm</output>
 		</fcs_function>
+		<pure_gain name="propulsion/engine[1]/starter-power-hp">
+			<input>/systems/electrical/consumers/starter-motor[1]/watts</input>
+			<gain>/constants/watts-to-hp</gain>
+		</pure_gain>
 		<fcs_function name="propulsion/engine[1]/friction-hp">
 			<function>
 				<sum>
-					<v>2</v>
+					<v>1</v>
 					<product>
 						<difference>
 							<v>1</v>
@@ -206,6 +218,10 @@
 						<v>100</v>
 					</product>
 					<p>propulsion/engine[1]/external-power-hp</p>
+					<product>
+						<p>-propulsion/engine[1]/starter-power-hp</p>
+						<v>3</v>
+					</product>
 				</sum>
 			</function>
 			<output>/engines/engine[1]/friction-hp</output>
@@ -218,9 +234,9 @@
 						<difference>
 							<max>
 								<p>propulsion/engine[1]/friction-hp</p>
-								<v>2</v>
+								<v>1</v>
 							</max>
-							<v>2</v>
+							<v>1</v>
 						</difference>
 						<v>-0.02</v>
 					</product>

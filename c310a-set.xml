@@ -149,10 +149,10 @@
 				<path>Systems/lights.xml</path>
 			</property-rule>
 			
-			<property-rule n="103">
+			<autopilot n="103">
 				<name>Electrical system</name>
 				<path>Systems/electrical.xml</path>
-			</property-rule>
+			</autopilot>
 			
 			<property-rule n="104">
 				<name>Vacuum system</name>

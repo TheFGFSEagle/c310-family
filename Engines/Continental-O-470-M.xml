@@ -11,8 +11,8 @@
 	<sparkfaildrop>0.1</sparkfaildrop>
 	<man-press-lag>1</man-press-lag>
 	<static-friction unit="HP">2</static-friction>
-	<starter-torque>200</starter-torque>
-	<starter-rpm>800</starter-rpm>
+	<starter-torque>0</starter-torque>
+	<starter-rpm>0</starter-rpm>
 	<bsfc unit="LBS/HP*HR">0.4455</bsfc>
 	<volumetric-efficiency>0.928</volumetric-efficiency>
 	<stroke unit="IN">4</stroke>
