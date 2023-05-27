@@ -100,7 +100,7 @@
 		</specular>
 		<attenuation>
 			<c>0.25</c>
-			<l>0.1</l>
+			<l>0.15</l>
 			<q>0.25</q>
 		</attenuation>
 		<spot-exponent>3</spot-exponent>
@@ -144,7 +144,7 @@
 		</specular>
 		<attenuation>
 			<c>0.25</c>
-			<l>0.1</l>
+			<l>0.15</l>
 			<q>0.25</q>
 		</attenuation>
 		<spot-exponent>3</spot-exponent>
