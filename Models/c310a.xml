@@ -2,6 +2,80 @@
 <PropertyList>
 	<path>c310a.ac</path>
 	
+	<nasal>
+		<load>
+			var rplayer = cmdarg();
+			rplayer.getNode("engines/engine[0]/running", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/bool[0]"));
+			rplayer.getNode("engines/engine[1]/running", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/bool[1]"));
+			rplayer.getNode("sim/equipment/rotating-beacon", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/bool[2]"));
+
+			rplayer.getNode("sim/model/lights/nav/brightness-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[0]"));
+			rplayer.getNode("sim/model/lights/landing[0]/brightness-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[1]"));
+			rplayer.getNode("sim/model/lights/landing[1]/brightness-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[2]"));
+			rplayer.getNode("sim/model/lights/beacon/brightness-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[3]"));
+			rplayer.getNode("engines/engine[0]/combustion-efficiency-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[4]"));
+			rplayer.getNode("engines/engine[1]/combustion-efficiency-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[5]"));
+			rplayer.getNode("engines/engine[0]/smoke-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[6]"));
+			rplayer.getNode("engines/engine[1]/smoke-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[7]"));
+			rplayer.getNode("engines/engine[0]/fire-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[8]"));
+			rplayer.getNode("engines/engine[1]/fire-norm", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/float[9]"));
+			
+			rplayer.getNode("sim/model/lights/landing[0]/pos-deg", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[0]"));
+			rplayer.getNode("sim/model/lights/landing[1]/pos-deg", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[1]"));
+			rplayer.getNode("sim/model/lights/beacon/rotation-deg", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[2]"));
+			var beaconRotationListener = setlistener(rplayer.getNode("sim/model/lights/beacon/rotation-deg"), func (n) {
+				rplayer.setDoubleValue("sim/model/lights/beacon/pointing-x[0]", math.cos(n.getValue() * D2R));
+				rplayer.setDoubleValue("sim/model/lights/beacon/pointing-y[0]", math.sin(n.getValue() * D2R));
+				rplayer.setDoubleValue("sim/model/lights/beacon/pointing-x[1]", math.cos((n.getValue() + 180) * D2R));
+				rplayer.setDoubleValue("sim/model/lights/beacon/pointing-y[1]", math.sin((n.getValue() + 180) * D2R));
+			});
+			rplayer.getNode("engines/engine[0]/cht-degf", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[3]"));
+			rplayer.getNode("engines/engine[1]/cht-degf", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[4]"));
+			rplayer.getNode("engines/engine[0]/thruster/pitch", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[5]"));
+			rplayer.getNode("engines/engine[1]/thruster/pitch", 1)
+							.alias(rplayer.getNode("sim/multiplay/generic/short[6]"));
+			rplayer.getNode("engines/engine[0]/thruster/rpm", 1)
+							.alias(rplayer.getNode("engines/engine[0]/rpm"));
+			rplayer.getNode("engines/engine[1]/thruster/rpm", 1)
+							.alias(rplayer.getNode("engines/engine[1]/rpm"));
+			rplayer.getNode("surface-positions/flaps-deg")
+							.alias(rplayer.getNode("sim/multiplay/generic/short[7]"));
+			rplayer.getNode("surface-positions/elevator-deg")
+							.alias(rplayer.getNode("sim/multiplay/generic/short[8]"));
+			rplayer.getNode("surface-positions/rudder-deg")
+							.alias(rplayer.getNode("sim/multiplay/generic/short[9]"));
+			rplayer.getNode("surface-positions/left-aileron-deg")
+							.alias(rplayer.getNode("sim/multiplay/generic/short[10]"));
+			rplayer.getNode("surface-positions/right-aileron-deg")
+							.alias(rplayer.getNode("sim/multiplay/generic/short[11]"));
+			
+			var livery_update = aircraft.livery_update.new("Aircraft/c310-family/Models/Liveries", 10);
+		</load>
+		<unload>
+			livery_update.stop();
+			removelistener(beaconRotationListener)
+		</unload>
+	</nasal>
+	
 	<defaults>
 		<axis-animation-vertex-order-xyz/>
 	</defaults>

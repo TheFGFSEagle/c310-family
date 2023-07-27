@@ -205,6 +205,38 @@
 		<state include="States/take-off.xml"/>
 		<state include="States/cruise.xml"/>
 		<state include="States/approach.xml"/>
+		
+		<multiplay>
+			<generic>
+				<bool n="0" alias="/engines/engine[0]/running"/>
+				<bool n="1" alias="/engines/engine[1]/running"/>
+				<bool n="2" alias="/sim/equipment/rotating-beacon"/>
+				
+				<float n="0" alias="/sim/model/lights/nav/brightness-norm"/>
+				<float n="1" alias="/sim/model/lights/landing[0]/brightness-norm"/>
+				<float n="2" alias="/sim/model/lights/landing[1]/brightness-norm"/>
+				<float n="3" alias="/sim/model/lights/beacon/brightness-norm"/>
+				<float n="4" alias="/engines/engine[0]/combustion-efficiency-norm"/>
+				<float n="5" alias="/engines/engine[1]/combustion-efficiency-norm"/>
+				<float n="6" alias="/engines/engine[0]/smoke-norm"/>
+				<float n="7" alias="/engines/engine[1]/smoke-norm"/>
+				<float n="8" alias="/engines/engine[0]/fire-norm"/>
+				<float n="9" alias="/engines/engine[1]/fire-norm"/>
+				
+				<short n="0" alias="/sim/model/lights/landing[0]/pos-deg"/>
+				<short n="1" alias="/sim/model/lights/landing[1]/pos-deg"/>
+				<short n="2" alias="/sim/model/lights/beacon/rotation-deg"/>
+				<short n="3" alias="/engines/engine[0]/cht-degf"/>
+				<short n="4" alias="/engines/engine[1]/cht-degf"/>
+				<short n="5" alias="/engines/engine[0]/thruster/pitch"/>
+				<short n="6" alias="/engines/engine[1]/thruster/pitch"/>
+				<short n="7" alias="/surface-positions/flaps-deg"/>
+				<short n="8" alias="/surface-positions/elevator-deg"/>
+				<short n="9" alias="/surface-positions/rudder-deg"/>
+				<short n="10" alias="/surface-positions/left-aileron-deg"/>
+				<short n="11" alias="/surface-positions/right-aileron-deg"/>
+			</generic>
+		</multiplay>
 	</sim>
 	
 	<fdm>
