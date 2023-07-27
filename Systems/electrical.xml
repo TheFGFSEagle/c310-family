@@ -1286,6 +1286,17 @@
 							<property>consumers/turn-coordinator/rated-amps</property>
 						</div>
 					</div>
+					<!--  https://www.desmos.com/calculator/czzjglqmyh -->
+					<difference>
+						<v>10</v>
+						<product>
+							<value>9</value>
+							<pow>
+								<property>/instrumentation/turn-indicator/spin</property>
+								<value>0.1</value>
+							</pow>
+						</product>
+					</difference>
 				</product>
 			</expression>
 		</input>
