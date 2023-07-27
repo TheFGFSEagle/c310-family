@@ -246,6 +246,17 @@
 	</model>
 	
 	<model>
+		<name>TurnCoordinator</name>
+		<path>Instruments/tc/tc.xml</path>
+		<offsets>
+			<x-m>0.52</x-m>
+			<y-m>-0.22</y-m>
+			<z-m>-0.04</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<condition>
 			<equals>
 				<property>parts/selected-clock</property>

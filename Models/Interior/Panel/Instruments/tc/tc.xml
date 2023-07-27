@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>tc.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Face</object-name>
+		<object-name>Needle</object-name>
+		<object-name>BallTube</object-name>
+		<object-name>Ball</object-name>
+		<emission>
+			<red>0.95</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>
+				<expression>
+					<sum>
+						<product>
+							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+							<value>0.65</value>
+						</product>
+						<product>
+							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+							<value>0.35</value>
+						</product>
+					</sum>
+				</expression>
+			</factor>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Ball</object-name>
+		<axis>
+			<object-name>BallAxis</object-name>
+		</axis>
+		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<factor>5.729</factor>
+		<min-deg>-14</min-deg>
+		<max-deg>14</max-deg>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle</object-name>
+		<axis>
+			<object-name>NeedleAxis</object-name>
+		</axis>
+		<property>instrumentation/turn-indicator/indicated-turn-rate</property>
+		<factor>20</factor>
+		<min-deg>-32</min-deg>
+		<max-deg>32</max-deg>
+	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+		<object-name>BallTubeGlass</object-name>
+	</effect>
+</PropertyList>

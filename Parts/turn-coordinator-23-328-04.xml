@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>23-328-04</part-number>
+	<brand>Garwin</brand>
+	<type>Turn coordinator</type>
+	<data-source></data-source>
+	<nasal>
+		<load>
+		</load>
+		<unload>
+		</unload>
+	</nasal>
+	<overlay>
+		<systems>
+			<electrical>
+				<consumers>
+					<turn-coordinator>
+						<rated-volts>24</rated-volts>
+						<rated-amps>0.3</rated-amps> <!-- https://www.pilotsofamerica.com/community/threads/turn-coordinator-power-draw.11904/post-150894 -->
+					</turn-coordinator>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+	<persistent-overlay>
+	</persistent-overlay>
+</PropertyList>

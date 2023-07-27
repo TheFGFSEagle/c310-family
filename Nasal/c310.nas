@@ -3,6 +3,7 @@ aircraft.data.save(1);
 parts.manager.createCategory("instruments", "Instruments")
 				.createPart("clock", "Clock", ["AT420100", "35-380004-1"], 1)
 				.createPart("rudder-position-indicator", "Rudder position indicator", ["default"], 1, 1)
+				.createPart("turn-coordinator", "Turn coordinator", ["23-328-04"])
 				.createCategory("misc", "Miscellaneous")
 				.createPart("stall-warning", "Stall warning", ["0511062-7"])
 				.createCategory("lighting", "Lighting")

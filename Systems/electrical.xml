@@ -1263,6 +1263,36 @@
 	</filter>
 	
 	<filter>
+		<name>Turn coordinator volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/left-cht-gauge-turn-and-bank-flap-pos/closed</gain>
+		<input>
+			<property>bus/volts</property>
+		</input>
+		<output>
+			<property>consumers/turn-coordinator/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Turn coordinator amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<product>
+					<div>
+						<property>consumers/turn-coordinator/volts</property>
+						<div>
+							<property>consumers/turn-coordinator/rated-volts</property>
+							<property>consumers/turn-coordinator/rated-amps</property>
+						</div>
+					</div>
+				</product>
+			</expression>
+		</input>
+		<output>consumers/turn-coordinator/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
@@ -1289,6 +1319,7 @@
 					<property>consumers/fuel-boost-pump[1]/amps</property>
 					<property>consumers/stall-warning-horn/amps</property>
 					<property>consumers/stall-warning-indicator/amps</property>
+					<property>consumers/turn-coordinator/amps</property>
 					<property>consumers/test-amps</property>
 				</sum>
 			</expression>
@@ -1595,5 +1626,18 @@
 			<scale>0.2</scale>
 		</input>
 		<output>outputs/DG</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/turn-coordinator/volts</property>
+					<property>consumers/turn-coordinator/rated-volts</property>
+				</div>
+			</expression>
+		</input>
+		<output>outputs/turn-coordinator</output>
 	</filter>
 </PropertyList>
