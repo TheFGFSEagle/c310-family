@@ -361,6 +361,16 @@
 	</model>
 	
 	<model>
+		<name>VacuumGaugeSourceSelector</name>
+		<path>vacuum-gauge-source-selector/vacuum-gauge-source-selector.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.215</y-m>
+			<z-m>0.1</z-m>
+		</offsets>
+	</model>
+	
+	<model>
 		<condition>
 			<property>sim/equipment/rotating-beacon</property>
 		</condition>

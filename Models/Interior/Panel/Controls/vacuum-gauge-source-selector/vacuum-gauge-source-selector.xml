@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>vacuum-gauge-source-selector.ac</path>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Knob</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property>controls/vacuum/gauge-source-selector</property>
+		<factor>90</factor>
+		<offset-deg>-135</offset-deg>
+		<action>
+			<binding>
+				<condition>
+					<not>
+						<property>controls/vacuum/gauge-source-selector-lock</property>
+					</not>
+				</condition>
+				<command>property-adjust</command>
+				<property>controls/vacuum/gauge-source-selector</property>
+				<factor>1</factor>
+				<min>0</min>
+				<max>3</max>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/vacuum/gauge-source-selector-lock</property>
+				<value type="bool">false</value>
+			</binding>
+		</shift-action>
+		<shift-release>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/vacuum/gauge-source-selector-lock</property>
+				<value type="bool">true</value>
+			</binding>
+		</shift-release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>vacuum-gauge-source-selector</tooltip-id>
+				<label>Vacuum gauge source selector: %s</label>
+				<measure-text>Vacuum gauge source selector: Heading indicator</measure-text>
+				<property>controls/vacuum/gauge-source-selector</property>
+				<mapping>nasal</mapping>
+				<script>
+					return ["left pump", "directional gyro", "attitude gyro", "right pump"][arg[0]];
+				</script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>Knob</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property>controls/vacuum/gauge-source-selector-lock</property>
+		<factor>0.015</factor>
+		<offset-m>-0.015</offset-m>
+	</animation>
+</PropertyList>

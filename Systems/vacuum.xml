@@ -11,6 +11,12 @@
 	
 	<filter>
 		<type>gain</type>
+		<input>/controls/vacuum/gauge-source-selector</input>
+		<output>/systems/vacuum/gauge-source</output>
+	</filter>
+	
+	<filter>
+		<type>gain</type>
 		<input>
 			<expression>
 				<product>
@@ -47,7 +53,7 @@
 				</product>
 			</expression>
 		</input>
-		<output>/systems/vacuum/line-suction-inhg[1]</output>
+		<output>/systems/vacuum/pump-line-suction-inhg[1]</output>
 		<min>0</min>
 		<max>10</max>
 	</filter>
@@ -56,8 +62,8 @@
 		<input>
 			<expression>
 				<max>
-					<property>/systems/vacuum/line-suction-inhg[0]</property>
-					<property>/systems/vacuum/line-suction-inhg[1]</property>
+					<property>/systems/vacuum/pump-line-suction-inhg[0]</property>
+					<property>/systems/vacuum/pump-line-suction-inhg[1]</property>
 				</max>
 			</expression>
 		</input>
@@ -111,7 +117,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/systems/vacuum/test-valve</property>
+					<property>/systems/vacuum/gauge-source</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -120,7 +126,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/systems/vacuum/test-valve</property>
+					<property>/systems/vacuum/gauge-source</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -129,7 +135,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/systems/vacuum/test-valve</property>
+					<property>/systems/vacuum/gauge-source</property>
 					<value>2</value>
 				</equals>
 			</condition>
@@ -138,7 +144,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/systems/vacuum/test-valve</property>
+					<property>/systems/vacuum/gauge-source</property>
 					<value>3</value>
 				</equals>
 			</condition>

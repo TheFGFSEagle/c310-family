@@ -149,10 +149,10 @@
 				<path>Systems/lights.xml</path>
 			</property-rule>
 			
-			<autopilot n="103">
+			<property-rule n="103">
 				<name>Electrical system</name>
 				<path>Systems/electrical.xml</path>
-			</autopilot>
+			</property-rule>
 			
 			<property-rule n="104">
 				<name>Vacuum system</name>
@@ -534,6 +534,10 @@
 				</oil>
 			</engine>
 		</engines>
+		<vacuum>
+			<gauge-source-selector>0</gauge-source-selector>
+			<gauge-source-selector-lock type="bool">true</gauge-source-selector-lock>
+		</vacuum>
 	</controls>
 	
 	<instrumentation>
@@ -782,7 +786,6 @@
 			<pump>
 				<serviceable type="bool">true</serviceable>
 			</pump>
-			<test-valve>1</test-valve>
 		</vacuum>
 		<stall-warning>
 			<vane-serviceable type="bool">true</vane-serviceable>
