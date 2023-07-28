@@ -28,7 +28,8 @@ This aircraft is currently being worked on by @ysopflying, chad3006 (on the foru
 
 ### Features
 * Exterior 3D model only missing some details like gear actuators etc.
-* Interior model: Seats, fuel selectors, engine controls, doors, yokes, … are modelled and fully interactive; the panel is missing most of the instruments; no switches and circuit breakers yet
+* Interior model: Seats, fuel selectors, engine controls, doors, yokes, most switches, most instruments, all circuit breakers, … are modelled and fully interactive.
 * FDM: Work in progress by @ysopflying, using wind tunnel data from a C310P and OpenVSP to adapt that to the C310A.
-* Systems: Propeller feathering and lights are implemented so far
-* Equipment: Optional auxiliary fuel tanks and right landing light are available
+* Systems: Propeller feathering, oil system, engine overheating, lights …
+* Equipment: Optional auxiliary fuel tanks, right landing light and rotating beacon are available
+* Some failures are implemented
