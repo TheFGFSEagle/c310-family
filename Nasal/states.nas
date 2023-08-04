@@ -21,18 +21,20 @@ var checkPausedApplyState = func {
 	if (unpauseListener != nil) {
 		removelistener(unpauseListener);
 		unpauseListener = nil;
+		applyState();
 	} else {
 		if (getprop("/sim/freeze/clock")) {
-			unpauseListener = setlistener("/sim/freeze/clock", applyState);
+			unpauseListener = setlistener("/sim/freeze/clock", checkPausedApplyState);
 			return;
+		} else {
+			applyState();
 		}
 	}
-	applyState();
 };
 
 if (!getprop("/sim/presets/onground") and !getprop("/sim/presets/airspeed-kt")) {
 	setprop("/sim/presets/airspeed-kt", 100);
 }
 
-setlistener("/sim/signals/fdm-initialized", applyState);
+setlistener("/sim/signals/fdm-initialized", checkPausedApplyState);
 

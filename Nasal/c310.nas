@@ -17,7 +17,6 @@ parts.manager.createCategory("instruments", "Instruments")
 var maxStartingTime = 6;
 
 var disengageLeftStarterTimer = maketimer(maxStartingTime, func {
-	print("disengageLeftStarterTimer");
 	props.globals.setBoolValue("/controls/engines/engine[0]/starter-button", 0);
 	props.globals.setBoolValue("/controls/engines/engine[0]/master-alt", 1);
 	startRightEngineTimer.start();
@@ -25,7 +24,6 @@ var disengageLeftStarterTimer = maketimer(maxStartingTime, func {
 disengageLeftStarterTimer.singleShot = 1;
 disengageLeftStarterTimer.simulatedTime = 1;
 var disengageRightStarterTimer = maketimer(maxStartingTime, func {
-	print("disengageRightStarterTimer");
 	props.globals.setBoolValue("/controls/engines/engine[1]/starter-button", 0);
 	props.globals.setBoolValue("/controls/engines/engine[1]/master-alt", 1);
 	autostartElectricsAfterEngineStart();
@@ -35,7 +33,6 @@ disengageRightStarterTimer.simulatedTime = 1;
 var disengageStarterTimers = [disengageLeftStarterTimer, disengageRightStarterTimer];
 
 var startRightEngineTimer = maketimer(3, func {
-	print("startRightEngineTimer");
 	autostartEngine(1);
 });
 startRightEngineTimer.singleShot = 1;
@@ -43,7 +40,6 @@ startRightEngineTimer.simulatedTime = 1;
 
 var autostartEngine = func(i) {
 	if (!props.globals.getNode("/engines/engine[" ~ i ~ "]/running").getBoolValue()) {
-		print("autostartEngine(" ~ i ~ ")");
 		props.globals.setIntValue("/controls/fuel/selector[" ~ i ~ "]", 1);
 		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/left-magneto", 1);
 		props.globals.setBoolValue("/controls/engines/engine[" ~ i ~ "]/right-magneto", 1);
@@ -68,13 +64,11 @@ var autostopEngine = func(i) {
 };
 
 var autostartElectricsBeforeEngineStart = func {
-	print("autostartElectricsBeforeEngineStart");
 	props.globals.setBoolValue("/controls/electric/battery-switch", 1);
 	props.globals.setBoolValue("/controls/lighting/beacon", 1);
 }
 
 var autostartElectricsAfterEngineStart = func {
-	print("autostartElectricsAfterEngineStart");
 	props.globals.setBoolValue("/controls/lighting/nav-lights", 1);
 	props.globals.setIntValue("/controls/lighting/landing-light[0]", 1);
 	props.globals.setIntValue("/controls/lighting/landing-light[1]", 1);
@@ -91,7 +85,6 @@ var autostopElectrics = func {
 }
 
 var autostart = func {
-	print("autostart");
 	autostopElectrics();
 	autostartElectricsBeforeEngineStart();
 	autostartEngine(0);
