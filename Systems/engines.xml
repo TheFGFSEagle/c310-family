@@ -98,7 +98,7 @@
 		<fcs_function name="propulsion/engine[0]/cooling-factor">
 			<function>
 				<sum>
-					<v>0.6</v>
+					<v>0.8</v>
 					<product>
 						<difference>
 							<max>
@@ -229,7 +229,7 @@
 		<fcs_function name="propulsion/engine[1]/cooling-factor">
 			<function>
 				<sum>
-					<v>0.6</v>
+					<v>0.8</v>
 					<product>
 						<difference>
 							<max>

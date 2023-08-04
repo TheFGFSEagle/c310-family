@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <system name="engines">
-	<property value="0.666">propulsion/engine[0]/oil/cooler/efficiency-norm</property>
-	<property value="0.666">propulsion/engine[1]/oil/cooler/efficiency-norm</property>
+	<property value="0.7">propulsion/engine[0]/oil/cooler/efficiency-norm</property>
+	<property value="0.7">propulsion/engine[1]/oil/cooler/efficiency-norm</property>
 	<property value="100">propulsion/engine[0]/oil/relief-valve/setting-psi</property>
 	<property value="100">propulsion/engine[1]/oil/relief-valve/setting-psi</property>
 	<property>propulsion/engine[0]/oil/relief-valve/stuck</property>
@@ -46,8 +46,8 @@
 									<product>
 										<p>propulsion/engine[0]/oil/cooler/efficiency-norm</p>
 										<difference>
-											<p>propulsion/engine[0]/cht-degF</p>
 											<p>/environment/temperature-degf</p>
+											<p>propulsion/engine[0]/cht-degF</p>
 										</difference>
 									</product>
 								</sum>
@@ -304,8 +304,8 @@
 									<product>
 										<p>propulsion/engine[1]/oil/cooler/efficiency-norm</p>
 										<difference>
-											<p>propulsion/engine[1]/cht-degF</p>
 											<p>/environment/temperature-degf</p>
+											<p>propulsion/engine[1]/cht-degF</p>
 										</difference>
 									</product>
 								</sum>

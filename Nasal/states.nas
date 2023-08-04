@@ -6,33 +6,35 @@ var applyState = func {
 		c310.autostart();
 	} else if (state == "cruise") {
 		c310.autostart();
-		props.globals.setDoubleValue("/controls/engines/engine[0]/throttle", 1);
-		props.globals.setDoubleValue("/controls/engines/engine[0]/throttle", 1);
+		props.globals.setDoubleValue("/controls/engines/engine[0]/throttle", 0.95);
+		props.globals.setDoubleValue("/controls/engines/engine[0]/throttle", 0.95);
 	} else if (state == "approach") {
 		c310.autostart();
-		props.globals.setDoubleValue("/controls/engines/engine[0]/throttle", 0.5);
-		props.globals.setDoubleValue("/controls/engines/engine[1]/throttle", 0.5);
+		props.globals.setDoubleValue("/controls/engines/engine[0]/throttle", 0.7);
+		props.globals.setDoubleValue("/controls/engines/engine[1]/throttle", 0.7);
 	}
 };
 
 var unpauseListener = nil;
 
 var checkPausedApplyState = func {
+	if (!getprop("/sim/presets/onground") and !getprop("/sim/presets/airspeed-kt")) {
+		setprop("/sim/presets/airspeed-kt", 100);
+	}
+	
 	if (unpauseListener != nil) {
 		removelistener(unpauseListener);
 		unpauseListener = nil;
+		applyState();
 	} else {
 		if (getprop("/sim/freeze/clock")) {
-			unpauseListener = setlistener("/sim/freeze/clock", applyState);
+			unpauseListener = setlistener("/sim/freeze/clock", checkPausedApplyState);
 			return;
+		} else {
+			applyState();
 		}
 	}
-	applyState();
 };
 
-if (!getprop("/sim/presets/onground") and !getprop("/sim/presets/airspeed-kt")) {
-	setprop("/sim/presets/airspeed-kt", 100);
-}
-
-setlistener("/sim/signals/fdm-initialized", applyState);
+setlistener("/sim/signals/fdm-initialized", checkPausedApplyState);
 

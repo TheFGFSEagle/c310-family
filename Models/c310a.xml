@@ -1905,13 +1905,6 @@
 				<value type="bool">true</value>
 			</binding>
 		</action>
-		<release>
-			<binding>
-				<command>property-assign</command>
-				<property alias="../../../property"/>
-				<value type="bool">false</value>
-			</binding>
-		</release>
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>
@@ -1936,13 +1929,6 @@
 				<value type="bool">true</value>
 			</binding>
 		</action>
-		<release>
-			<binding>
-				<command>property-assign</command>
-				<property alias="../../../property"/>
-				<value type="bool">false</value>
-			</binding>
-		</release>
 		<hovered>
 			<binding>
 				<command>set-tooltip</command>

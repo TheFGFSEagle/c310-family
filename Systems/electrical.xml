@@ -595,6 +595,20 @@
 		</input>
 		<output>/systems/electrical/consumers/uv-instrument-light[1]/active</output>
 	</logic>
+	<logic>
+		<name>Reset left UV instrument light starter button</name>
+		<input>
+			<value type="bool">false</value>
+		</input>
+		<output>/controls/lighting/uv-instrument-starter-button-pressed[0]</output>
+	</logic>
+	<logic>
+		<name>Reset right UV instrument light starter button</name>
+		<input>
+			<value type="bool">false</value>
+		</input>
+		<output>/controls/lighting/uv-instrument-starter-button-pressed[1]</output>
+	</logic>
 	
 	<filter>
 		<name>UV instrument light volts</name>
