@@ -128,7 +128,7 @@
 				<property>/instrumentation/engine-combo[0]/serviceable</property>
 			</condition>
 		</enable>
-		<input>/engines/engine[0]/fuel-flow-gph</input>
+		<input>/engines/engine[0]/fuel-pressure-psig</input>
 		<output>/instrumentation/engine-combo[0]/indicated-fuel-pressure-psi</output>
 	</filter>
 	
@@ -164,7 +164,7 @@
 				<property>/instrumentation/engine-combo[1]/serviceable</property>
 			</condition>
 		</enable>
-		<input>/engines/engine[1]/fuel-flow-gph</input>
+		<input>/engines/engine[1]/fuel-pressure-psig</input>
 		<output>/instrumentation/engine-combo[1]/indicated-fuel-pressure-psi</output>
 	</filter>
 	
