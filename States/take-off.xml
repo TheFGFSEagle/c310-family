@@ -69,7 +69,8 @@
 				</tank>
 			</fuel>
 			<flight>
-				<elevator-trim>0.1</elevator-trim>
+				<aileron-trim>0.05</aileron-trim>
+				<elevator-trim>-0.1</elevator-trim>
 			</flight>
 			<electric>
 				<battery-switch type="bool">true</battery-switch>

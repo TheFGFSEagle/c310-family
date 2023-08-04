@@ -66,6 +66,10 @@ var autostopEngine = func(i) {
 var autostartElectricsBeforeEngineStart = func {
 	props.globals.setBoolValue("/controls/electric/battery-switch", 1);
 	props.globals.setBoolValue("/controls/lighting/beacon", 1);
+	props.globals.setDoubleValue("/controls/lighting/uv-instrument-norm", 1);
+	props.globals.setBoolValue("/controls/lighting/uv-instrument-starter-button-pressed[0]", 1);
+	props.globals.setBoolValue("/controls/lighting/uv-instrument-starter-button-pressed[1]", 1);
+	props.globals.setDoubleValue("/controls/lighting/red-instrument-norm", 1);
 }
 
 var autostartElectricsAfterEngineStart = func {
