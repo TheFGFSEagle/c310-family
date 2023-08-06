@@ -1,0 +1,65 @@
+AC3Db
+MATERIAL "Material" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
+OBJECT world
+name "Blender_exporter_v4.1__left-switches-panel.ac"
+kids 3
+OBJECT poly
+name "BeaconLightSwitchLabel"
+data 9
+Plane.003
+crease 40.0
+texture "left-switches-panel.png"
+numvert 4
+0.0001 0.059 -0.083
+0.0001 0.031 -0.083
+0.0001 0.059 -0.065
+0.0001 0.031 -0.065
+numsurf 1
+SURF 0X0
+mat 0
+refs 4
+1 0.166666 0.383334
+0 0.166666 0.500001
+2 0.091666 0.5
+3 0.091666 0.383334
+kids 0
+OBJECT poly
+name "LeftSwitchesPanel"
+data 9
+Plane.054
+crease 40.0
+texture "left-switches-panel.png"
+numvert 4
+0 0.12 0
+0 0 0
+0 0.12 -0.23
+0 0 -0.23
+numsurf 1
+SURF 0X0
+mat 0
+refs 4
+0 0 1
+1 0 0.5
+3 0.958332 0.500001
+2 0.958332 1
+kids 0
+OBJECT poly
+name "RightLandingLightSwitchLabel"
+data 9
+Plane.002
+crease 40.0
+texture "left-switches-panel.png"
+numvert 4
+0.0001 0.089 -0.085
+0.0001 0.059 -0.085
+0.0001 0.089 -0.063
+0.0001 0.059 -0.063
+numsurf 1
+SURF 0X0
+mat 0
+refs 4
+1 0.091666 0.375001
+0 0.091666 0.500001
+2 0 0.5
+3 0 0.375001
+kids 0

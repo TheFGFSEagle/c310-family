@@ -475,10 +475,10 @@
 		<name>LeftSwitchesPanel</name>
 		<path>Controls/left-switches-panel.xml</path>
 		<offsets>
-			<x-m>0.524</x-m>
-			<y-m>-0.567</y-m>
-			<z-m>-0.29</z-m>
-			<pitch-deg>-4.1</pitch-deg>
+			<x-m>0.52408</x-m>
+			<y-m>-0.56749</y-m>
+			<z-m>-0.28984</z-m>
+			<pitch-deg>-4.0829</pitch-deg>
 		</offsets>
 	</model>
 </PropertyList>
