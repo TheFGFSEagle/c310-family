@@ -2,32 +2,6 @@
 <PropertyList>
 	<path>left-switches-panel.ac</path>
 	
-	<animation>
-		<type>material</type>
-		<object-name>LeftSwitchesPanel</object-name>
-		<object-name>BeaconLightSwitchLabel</object-name>
-		<object-name>RightLandingLightSwitchLabel</object-name>
-		<emission>
-			<red>0.95</red>
-			<green>1</green>
-			<blue>1</blue>
-			<factor>
-				<expression>
-					<sum>
-						<product>
-							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
-							<value>0.73</value>
-						</product>
-						<product>
-							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
-							<value>0.27</value>
-						</product>
-					</sum>
-				</expression>
-			</factor>
-		</emission>
-	</animation>
-	
 	<model>
 		<name>AlternatorsBatterySwitchBar</name>
 		<path>switches/three-switch-bar.xml</path>
