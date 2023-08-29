@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
+	<path>left-switches-panel.ac</path>
+	
 	<model>
 		<name>AlternatorsBatterySwitchBar</name>
 		<path>switches/three-switch-bar.xml</path>
@@ -232,9 +234,12 @@
 	<model>
 		<name>RightLandingLightSwitch</name>
 		<path>switches/three-position.xml</path>
+		<condition>
+			<property>sim/equipment/right-landing-light</property>
+		</condition>
 		<offsets>
 			<x-m>0</x-m>
-			<y-m>0.072</y-m>
+			<y-m>0.074</y-m>
 			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
@@ -248,12 +253,20 @@
 		</overlay>
 	</model>
 	
+	<animation>
+		<type>select</type>
+		<object-name>RightLandingLightSwitchLabel</object-name>
+		<condition>
+			<property>sim/equipment/right-landing-light</property>
+		</condition>
+	</animation>
+	
 	<model>
 		<name>NavLightsSwitch</name>
 		<path>switches/two-position.xml</path>
 		<offsets>
 			<x-m>0</x-m>
-			<y-m>0.09</y-m>
+			<y-m>0.095</y-m>
 			<z-m>0.0725</z-m>
 		</offsets>
 		<overlay>
@@ -365,8 +378,8 @@
 		<path>vacuum-gauge-source-selector/vacuum-gauge-source-selector.xml</path>
 		<offsets>
 			<x-m>0</x-m>
-			<y-m>0.215</y-m>
-			<z-m>0.1</z-m>
+			<y-m>0.205</y-m>
+			<z-m>0.105</z-m>
 		</offsets>
 	</model>
 	
@@ -378,8 +391,8 @@
 		<path>switches/two-position.xml</path>
 		<offsets>
 			<x-m>0</x-m>
-			<y-m>0.072</y-m>
-			<z-m>0.045</z-m>
+			<y-m>0.074</y-m>
+			<z-m>0.043</z-m>
 		</offsets>
 		<overlay>
 			<params>
@@ -390,4 +403,13 @@
 			</params>
 		</overlay>
 	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>BeaconLightSwitchLabel</object-name>
+		<condition>
+			<property>sim/equipment/rotating-beacon</property>
+		</condition>
+	</animation>
 </PropertyList>
+
