@@ -179,7 +179,8 @@ parts.Manager = {
 			die("Could not create part: no part numbers given !");
 		}
 		var part = parts.Part.new(me.current_category, id, name, pns, user_selectable, optional);
-		part.install(part.selectedNode.getValue() or pns[0]);
+		var selected_pn = part.selectedNode.getValue();
+		part.install(contains(part.pns, selected_pn) ? selected_pn : pns[0]);
 		me.parts[id] = part;
 		
 		return me;
