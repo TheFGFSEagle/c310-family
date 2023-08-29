@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>A-1425A-2-12</part-number>
+	<brand></brand>
+	<type>Map light</type>
+	<data-source>https://baspartsales.com/a-1425a-2-12-mooney-m20e-grimes-map-light-volts-14/</data-source>
+	<data-source>https://www.interlightus.com/light-bulb/WW-82D5-7</data-source>
+	<overlay>
+		<controls>
+			<lighting>
+				<map>
+					<spot-cutoff-deg-min type="float">10</spot-cutoff-deg-min>
+					<spot-cutoff-deg-max type="float">80</spot-cutoff-deg-max>
+					<pitch-deg-min type="float">-45</pitch-deg-min>
+					<pitch-deg-max type="float">90</pitch-deg-max>
+				</map>
+			</lighting>
+		</controls>
+		<systems>
+			<electrical>
+				<consumers>
+					<map-light>
+						<rated-volts type="float">28</rated-volts>
+						<rated-amps type="float">0.17</rated-amps>
+					</map-light>
+				</consumers>
+			</electrical>
+		</systems>
+	</overlay>
+	<persistent-overlay>
+		<controls>
+			<lighting>
+				<map>
+					<intensity-norm type="float">0</intensity-norm>
+					<spot-cutoff-deg type="float">60</spot-cutoff-deg>
+					<pitch-deg type="float">0</pitch-deg>
+					<yaw-deg type="float">0</yaw-deg>
+				</map>
+			</lighting>
+		</controls>
+	</persistent-overlay>
+</PropertyList>
+

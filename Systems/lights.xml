@@ -359,4 +359,64 @@
 		</input>
 		<output>/sim/model/lights/rear-dome/brightness-norm</output>
 	</filter>
+	
+	<filter>
+		<name>Map light spot exponent</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<sum>
+					<value>1</value>
+					<div>
+						<value>300</value>
+						<max>
+							<property>controls/lighting/map/spot-cutoff-deg</property>
+							<value>1</value>
+						</max>
+					</div>
+				</sum>
+			</expression>
+		</input>
+		<output>/sim/model/lights/map/spot-exponent</output>
+	</filter>
+	
+	<filter>
+		<name>Map light attenuation factor</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<pow>
+					<div>
+						<property>controls/lighting/map/spot-cutoff-deg</property>
+						<property>controls/lighting/map/spot-cutoff-deg-max</property>
+					</div>
+					<div>
+						<value>1</value>
+						<value>1.2</value>
+					</div>
+				</pow>
+			</expression>
+		</input>
+		<output>sim/model/lights/map/attenuation-factor</output>
+	</filter>
+	
+	<filter>
+		<name>Map light intensity</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<product>
+						<property>/systems/electrical/consumers/map-light/volts</property>
+						<property>/systems/electrical/consumers/map-light/amps</property>
+					</product>
+					<product>
+						<property>/systems/electrical/consumers/map-light/rated-volts</property>
+						<property>/systems/electrical/consumers/map-light/rated-amps</property>
+					</product>
+				</div>
+			</expression>
+		</input>
+		<output>/sim/model/lights/map/brightness-norm</output>
+	</filter>
 </PropertyList>

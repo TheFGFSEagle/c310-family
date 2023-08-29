@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>map-light.ac</path>
+	
+	<params>
+		<spot-cutoff-deg>controls/lighting/map/spot-cutoff-deg</spot-cutoff-deg>
+		<spot-cutoff-deg-min>controls/lighting/map/spot-cutoff-deg-min</spot-cutoff-deg-min>
+		<spot-cutoff-deg-max>controls/lighting/map/spot-cutoff-deg-max</spot-cutoff-deg-max>
+		<spot-exponent>sim/model/lights/map/spot-exponent</spot-exponent>
+	</params>
+	
+	<light>
+		<name>MapLight</name>
+		<type>spot</type>
+		<position>
+			<x-m>-0.003</x-m>
+			<y-m>0.0418</y-m>
+			<z-m>0.0302</z-m>
+		</position>
+		<direction>
+			<pitch-deg>90</pitch-deg>
+			<roll-deg>0</roll-deg>
+			<yaw-deg>0</yaw-deg>
+		</direction>
+		<ambient>
+			<r>0.03</r>
+			<g>0.03</g>
+			<b>0.03</b>
+		</ambient>
+		<diffuse>
+			<r>0.4</r>
+			<g>0.4</g>
+			<b>0.4</b>
+		</diffuse>
+		<specular>
+			<r>0.1</r>
+			<g>0.1</g>
+			<b>0.1</b>
+		</specular>
+		<attenuation>
+			<c>
+				<value>0.05</value>
+				<scale>sim/model/lights/map/attenuation-factor</scale>
+			</c>
+			<l>
+				<value>0</value>
+				<scale>sim/model/lights/map/attenuation-factor</scale>
+			</l>
+			<q>
+				<value>5</value>
+				<scale>sim/model/lights/map/attenuation-factor</scale>
+			</q>
+		</attenuation>
+		<spot-exponent>
+			<property alias="/params/spot-exponent"/>
+		</spot-exponent>
+		<spot-cutoff>
+			<property alias="/params/spot-cutoff-deg"/>
+		</spot-cutoff>
+		<range-m>0.2</range-m>
+		<dim-factor>
+			<property>sim/model/lights/map/brightness-norm</property>
+		</dim-factor>
+	</light>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>BeamWidthKnob</object-name>
+		<axis>
+			<object-name>BeamWidthKnobAxis</object-name>
+		</axis>
+		<property>controls/lighting/map/spot-cutoff-deg</property>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/map/spot-cutoff-deg</property>
+				<factor>1</factor>
+				<min-prop>controls/lighting/map/spot-cutoff-deg-min</min-prop>
+				<max-prop>controls/lighting/map/spot-cutoff-deg-max</max-prop>
+				<script>
+					props.dump(cmdarg());
+				</script>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>map-light-beam-width</tooltip-id>
+				<label>Map light beam width: %3.1f°</label>
+				<measure-text>Map light beam width: -160.0°</measure-text>
+				<property>controls/lighting/map/spot-cutoff-deg</property>
+				<mapping>nasal</mapping>
+				<script>
+					return arg[0] * 2;
+				</script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>Bulb</object-name>
+		<object-name>BulbSocket</object-name>
+		<object-name>MapLight</object-name>
+		<axis>
+			<object-name>BeamWidthKnobAxis</object-name>
+		</axis>
+		<expression>
+			<product>
+				<difference>
+					<sin>
+						<deg2rad>
+							<property>controls/lighting/map/spot-cutoff-deg</property>
+						</deg2rad>
+					</sin>
+					<value>0.17</value> <!-- ~ sin(10°) -->
+				</difference>
+				<value>0.025</value>
+			</product>
+		</expression>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Bulb</object-name>
+		<object-name>BulbHousing</object-name>
+		<object-name>BulbSocket</object-name>
+		<object-name>CableTube</object-name>
+		<object-name>Lens</object-name>
+		<object-name>MapLight</object-name>
+		<axis>
+			<object-name>YawAxis</object-name>
+		</axis>
+		<property>controls/lighting/map/yaw-deg</property>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/map/yaw-deg</property>
+				<factor>1</factor>
+				<wrap type="bool">true</wrap>
+				<min>-180</min>
+				<max>180</max>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/map/pitch-deg</property>
+				<factor>1</factor>
+				<min-prop>controls/lighting/map/pitch-deg-min</min-prop>
+				<max-prop>/controls/lighting/map/pitch-deg-max</max-prop>
+			</binding>
+		</shift-action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>map-light-yaw</tooltip-id>
+				<label>Map light pitch: %3.1f°, yaw: %3.1f°</label>
+				<measure-text>Map light yaw: -180.0°</measure-text>
+				<property>controls/lighting/map/pitch-deg</property>
+				<property>controls/lighting/map/yaw-deg</property>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Bracket</object-name>
+		<object-name>Bulb</object-name>
+		<object-name>BulbHousing</object-name>
+		<object-name>BulbSocket</object-name>
+		<object-name>CableTube</object-name>
+		<object-name>Lens</object-name>
+		<object-name>MapLight</object-name>
+		<object-name>BeamWidthKnob</object-name>
+		<object-name>BeamWidthKnobAxis</object-name>
+		<axis>
+			<object-name>PitchAxis</object-name>
+		</axis>
+		<property>controls/lighting/map/pitch-deg</property>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>BeamWidthKnob</object-name>
+		<object-name>BeamWidthKnobAxis</object-name>
+		<axis>
+			<object-name>YawAxis</object-name>
+		</axis>
+		<property>controls/lighting/map/yaw-deg</property>
+	</animation>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Lens</object-name>
+		<object-name>Bulb</object-name>
+	</effect>
+</PropertyList>
+

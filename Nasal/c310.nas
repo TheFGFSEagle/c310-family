@@ -10,6 +10,7 @@ parts.manager.createCategory("instruments", "Instruments")
 				.createPart("uv-instrument-lights", "UV instrument lights", ["AN3125-1"])
 				.createPart("red-instrument-light", "Red instrument light", ["AN3124-307"])
 				.createPart("dome-lights", "Dome lights", ["AN3124-307"])
+				.createPart("map-light", "Map light", ["A-1425A-2-12"])
 				.createCategory("fuel-system", "Fuel system")
 				.createPart("fuel-boost-pump", "Fuel boost pump", ["1C6-10"]);
 

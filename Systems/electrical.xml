@@ -1318,6 +1318,35 @@
 	</filter>
 	
 	<filter>
+		<name>Map light volts</name>
+		<type>gain</type>
+		<!--<gain>/controls/circuit-breakers/left-cht-gauge-turn-and-bank-flap-pos/closed</gain>-->
+		<input>
+			<property>bus/volts</property>
+			<scale>/controls/lighting/map/intensity-norm</scale>
+		</input>
+		<output>
+			<property>consumers/map-light/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Map light amps</name>
+		<type>gain</type>
+		<input>
+			<expression>
+				<div>
+					<property>consumers/map-light/volts</property>
+					<div>
+						<property>consumers/map-light/rated-volts</property>
+						<property>consumers/map-light/rated-amps</property>
+					</div>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/map-light/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
@@ -1334,6 +1363,7 @@
 					<property>consumers/uv-instrument-light[1]/amps</property>
 					<property>consumers/front-dome-light/amps</property>
 					<property>consumers/rear-dome-light/amps</property>
+					<property>consumers/map-light/amps</property>
 					<property>consumers/clock-backlight/amps</property>
 					<property>consumers/clock/amps</property>
 					<property>consumers/flaps-motor/amps</property>

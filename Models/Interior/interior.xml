@@ -36,4 +36,15 @@
 			<pitch-deg>13.3</pitch-deg>
 		</offsets>
 	</model>
+	
+	<model>
+		<name>MapLight</name>
+		<path>map-light/map-light.xml</path>
+		<offsets>
+			<x-m>0.6</x-m>
+			<y-m>-0.575</y-m>
+			<z-m>-0.03</z-m>
+			<roll-deg>-2</roll-deg>
+		</offsets>
+	</model>
 </PropertyList>

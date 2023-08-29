@@ -182,6 +182,17 @@
 	</model>
 	
 	<model>
+		<name>MapLightRheostat</name>
+		<path>Controls/map-light-rheostat/map-light-rheostat.xml</path>
+		<offsets>
+			<x-m>0.602</x-m>
+			<y-m>-0.085</y-m>
+			<z-m>-0.423</z-m>
+			<heading-deg>-90</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<name>ParkingBrakeHandle</name>
 		<path>Controls/parking-brake/parking-brake.xml</path>
 		<offsets>
