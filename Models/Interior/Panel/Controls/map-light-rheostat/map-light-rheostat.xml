@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>map-light-rheostat.ac</path>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>Knob</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property>controls/lighting/map/intensity-norm</property>
+		<factor>180</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/map/intensity-norm</property>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>map-light-rheostat</tooltip-id>
+				<label>Map light brightness: %3d%%</label>
+				<measure-text>Map light brightness: 100%</measure-text>
+				<property>controls/lighting/map/intensity-norm</property>
+				<mapping>percent</mapping>
+			</binding>
+		</hovered>
+	</animation>
+</PropertyList>
