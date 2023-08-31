@@ -1,7 +1,7 @@
 parts = {};
 parts.node = props.globals.getNode("/parts", 1);
 
-parts.copyOverlay = func(src, dest, attr = 0) {
+parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, attr = 0) {
 	var sp = src.getPath() or "";
 	var dp = dest.getPath() or "";
 
@@ -16,7 +16,7 @@ parts.copyOverlay = func(src, dest, attr = 0) {
     
 	foreach(var c; src.getChildren()) {
 		var name = c.getName();
-		var i = c.getIndex();
+		var i = c.getIndex() + (instance * instanceOffsetFactor);
 		if (i) {
 			name ~= "["~i~"]";
 		}
@@ -48,7 +48,7 @@ parts.copyOverlay = func(src, dest, attr = 0) {
 	}
 }
 
-parts.exec_nasal = func(s, file) {
+parts.exec_nasal = func(s, file, cmdargNode) {
 	var code = call(func {
 		compile(s, file);
 	}, nil, nil, var compilation_errors = []);
@@ -61,7 +61,7 @@ parts.exec_nasal = func(s, file) {
 	if (!code) {
 		return; # got an empty string as code; just do nothing
 	}
-	call(code, [], nil, {}, var runtime_errors = []);
+	call(code, [], nil, {"cmdarg": func() { return cmdargNode; }}, var runtime_errors = []);
 
 	if(size(runtime_errors)){
 		logprint(LOG_ALERT, "Error(s) executing code from: " ~ file);
@@ -72,7 +72,7 @@ parts.exec_nasal = func(s, file) {
 }
 
 parts.Part = {
-	new: func(category, id, name, pns, user_selectable = 0, optional = 0) {
+	new: func(category, id, name, pns, user_selectable = 0, optional = 0, instance = 0, instanceOffsetFactor = 1) {
 		if (typeof(pns) == "scalar") {
 			pns = [pns];
 		}
@@ -84,10 +84,12 @@ parts.Part = {
 			pns: pns,
 			user_selectable: user_selectable,
 			optional: optional,
-			node: parts.node.getNode(id, 1),
-			selectedNode: parts.node.initNode("selected-" ~ id, pns[0], "STRING"),
+			node: parts.node.getNode(id ~ "[" ~ instance ~ "]", 1),
+			selectedNode: parts.node.initNode("selected-" ~ id ~ "[" ~ instance ~ "]", pns[0], "STRING"),
 			_cfg: nil,
 			_pn: "",
+			_last_pn: "",
+			_instance: instance,
 		};
 		aircraft.data.add(obj.selectedNode);
 		obj.selectedListener = setlistener(obj.selectedNode, func(n) {
@@ -116,6 +118,7 @@ parts.Part = {
 		if (!contains(me.pns, pn)) {
 			die("Could not install part: No " ~ me.name ~ " with part number " ~ pn ~ " !");
 		}
+		
 		var part_file = "Parts/" ~ me.id ~ "-" ~ pn ~ ".xml";
 		var cfg = io.read_properties(part_file, me.node.getNode("current", 1));
 		if (!cfg) {
@@ -123,12 +126,32 @@ parts.Part = {
 			return;
 		}
 		me._cfg = cfg;
+		me._cfg.setValue("instance", me._instance);
+		
+		if (me._cfg.getNode("replaces")) {
+			foreach (var partNode; me._cfg.getNode("replaces").getChildren("part")) {
+				var part = parts.manager.getPart(partNode.getValue("id"));
+				var partUninstalled = 0;
+				foreach (var pnPatternNode; partNode.getChildren("part-number")) {
+					partNumbersSpecified = 1;
+					var pnPattern = pnPatternNode.getValue();
+					if (!pnPattern or string.match(part._pn, pnPattern)) {
+						part.uninstall();
+						partUninstalled = 1;
+					}
+				}
+				if (!partUninstalled) {
+					part.uninstall();
+				}
+			}
+		}
+		
 		me.node.setValue("current/file", part_file);
-		props.copy(cfg.getNode("overlay", 1), props.globals);
-		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals);
+		parts.copyOverlay(cfg.getNode("overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1));
+		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1));
 		
 		var load = cfg.getNode("nasal/load", 1).getValue();
-		parts.exec_nasal(load, part_file ~ ":/nasal/load");
+		parts.exec_nasal(load, part_file ~ ":/nasal/load", me._cfg);
 		me.selectedNode.setValue(pn);
 		me._pn = pn;
 	},
@@ -142,10 +165,35 @@ parts.Part = {
 			return;
 		}
 		var unload = me._cfg.getNode("nasal/unload", 1).getValue();
-		parts.exec_nasal(unload, me.node.getValue("current/file") ~ ":/nasal/unload");
+		parts.exec_nasal(unload, me.node.getValue("current/file") ~ ":/nasal/unload", me._cfg);
 		me.selectedNode.setValue("");
+		me._last_pn = me._pn;
 		me._pn = "";
 		me.node.getNode("current", 1).removeChildren();
+		
+		if (me._cfg.getNode("replaces")) {
+			foreach (var partNode; me._cfg.getNode("replaces").getChildren("part")) {
+				var part = parts.manager.getPart(partNode.getValue("id"));
+				var partInstalled = 0;
+				foreach (var pnPatternNode; partNode.getChildren("part-number")) {
+					partNumbersSpecified = 1;
+					var pnPattern = pnPatternNode.getValue();
+					var matchingPns = [];
+					foreach (var pn; part.pns) {
+						if (!pnPattern or string.match(pn, pnPattern)) {
+							append(matchingPns, pn);
+						}
+					}
+					if (contains(matchingPns, part._last_pn)) {
+						part.install(part._last_pn);
+						partInstalled = 1;
+					}
+				}
+				if (!partInstalled) {
+					part.install(part.pns[0]);
+				}
+			}
+		}
 		me._cfg = nil;
 	},
 	
@@ -171,17 +219,27 @@ parts.Manager = {
 		me.categories[id] = name;
 		return me;
 	},
-	createPart: func(id, name, pns, user_selectable = 0, optional = 0) {
+	createPart: func(id, name, pns, user_selectable = 0, optional = 0, instances = 1) {
 		if (typeof(pns) == "scalar") {
 			pns = [pns];
 		}
 		if (!size(pns)) {
 			die("Could not create part: no part numbers given !");
 		}
-		var part = parts.Part.new(me.current_category, id, name, pns, user_selectable, optional);
-		var selected_pn = part.selectedNode.getValue();
-		part.install(contains(part.pns, selected_pn) ? selected_pn : pns[0]);
-		me.parts[id] = part;
+		if (typeof(instances) == "scalar") {
+			var vec = []
+			for (var i = 0; i < instances; i += 1) {
+				append(vec, i);
+			}
+			instances = vec;
+		}
+		
+		foreach (var instance; instances) {
+			var part = parts.Part.new(me.current_category, id, name ~ " #" ~ instance, pns, user_selectable, optional, instance);
+			var selected_pn = part.selectedNode.getValue();
+			part.install(contains(part.pns, selected_pn) ? selected_pn : pns[0]);
+			me.parts[id] = part;
+		}
 		
 		return me;
 	},
@@ -197,6 +255,9 @@ parts.Manager = {
 	install: func(id, pn) {
 		if (!contains(me.parts, id)) {
 			die("Could not install part: No part with ID " ~ id ~ " !");
+		}
+		if (pn and pn == me.parts[id]._pn) {
+			return me;
 		}
 		me.parts[id].uninstall();
 		if (pn) {
