@@ -1,7 +1,7 @@
 parts = {};
 parts.node = props.globals.getNode("/parts", 1);
 
-parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, attr = 0) {
+parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, overwriteValues = 1, attr = 0) {
 	var sp = src.getPath() or "";
 	var dp = dest.getPath() or "";
 
@@ -29,7 +29,7 @@ parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, attr
 	var type = src.getType();
 	var val = src.getValue();
 	# don't overwrite existing values
-	if (src.getAttribute("archive") and dest.getValue() != nil) {
+	if (dest.getValue() != nil and !overwriteValues) {
 		return;
 	}
 	if (type == "ALIAS" or type == "NONE") {
@@ -147,8 +147,8 @@ parts.Part = {
 		}
 		
 		me.node.setValue("current/file", part_file);
-		parts.copyOverlay(cfg.getNode("overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1));
-		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1));
+		parts.copyOverlay(cfg.getNode("overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1), 1);
+		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1), 0);
 		
 		var load = cfg.getNode("nasal/load", 1).getValue();
 		parts.exec_nasal(load, part_file ~ ":/nasal/load", me._cfg);
@@ -226,51 +226,59 @@ parts.Manager = {
 		if (!size(pns)) {
 			die("Could not create part: no part numbers given !");
 		}
-		if (typeof(instances) == "scalar") {
-			var vec = []
-			for (var i = 0; i < instances; i += 1) {
-				append(vec, i);
-			}
-			instances = vec;
+		var vec = []
+		for (var i = 0; i < instances; i += 1) {
+			append(vec, i);
 		}
+		instances = vec;
 		
+		me.parts[id] = [];
 		foreach (var instance; instances) {
 			var part = parts.Part.new(me.current_category, id, name ~ " #" ~ instance, pns, user_selectable, optional, instance);
 			var selected_pn = part.selectedNode.getValue();
 			part.install(contains(part.pns, selected_pn) ? selected_pn : pns[0]);
-			me.parts[id] = part;
+			me.parts[id][instance] = part;
 		}
 		
 		return me;
 	},
-	removePart: func(id) {
+	removePart: func(id, instance = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not remove part: No part with ID " ~ id ~ " !");
 		}
-		me.parts[id].uninstall();
-		me.parts[id].del();
+		if (instance >= size(me.parts[id])) {
+			die("Could not remove part: Instance index " ~ instance ~ " out of range !");
+		}
+		me.parts[id][instance].uninstall();
+		me.parts[id][instance].del();
 		delete(me.parts, id);
 	},
 	
-	install: func(id, pn) {
+	install: func(id, pn, instance = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not install part: No part with ID " ~ id ~ " !");
 		}
-		if (pn and pn == me.parts[id]._pn) {
+		if (instance >= size(me.parts[id])) {
+			die("Could not install part: Instance index " ~ instance ~ " out of range !");
+		}
+		if (pn and pn == me.parts[id][instance]._pn) {
 			return me;
 		}
-		me.parts[id].uninstall();
+		me.parts[id][instance].uninstall();
 		if (pn) {
-			me.parts[id].install(pn);
+			me.parts[id][instance].install(pn);
 		}
 		return me;
 	},
 	
-	getPart: func(id) {
+	getPart: func(id, instance = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not retrieve part: No part with ID " ~ id ~ " !");
 		}
-		return me.parts[id];
+		if (instance >= size(me.parts[id])) {
+			die("Could not retrieve part: Instance index " ~ instance ~ " out of range !");
+		}
+		return me.parts[id][instance];
 	},
 };
 
