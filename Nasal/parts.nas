@@ -21,7 +21,7 @@ parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, over
 			name ~= "["~i~"]";
 		}
 		if (!(!size(sp) and size(dp) and name == dp[0])) {
-			parts.copyOverlay(src.getNode(name), dest.getNode(name, 1), attr);
+			parts.copyOverlay(c, dest.getNode(name, 1), attr);
 		} else {
 			logprint(DEV_WARN, "props.copy() skipping "~name~" (recursion!)");
 		}
@@ -72,7 +72,7 @@ parts.exec_nasal = func(s, file, cmdargNode) {
 }
 
 parts.Part = {
-	new: func(category, id, name, pns, user_selectable = 0, optional = 0, instance = 0, instanceOffsetFactor = 1) {
+	new: func(category, id, name, pns, user_selectable = 0, optional = 0, instance = 0) {
 		if (typeof(pns) == "scalar") {
 			pns = [pns];
 		}
@@ -90,10 +90,14 @@ parts.Part = {
 			_pn: "",
 			_last_pn: "",
 			_instance: instance,
+			_installed: 0,
 		};
 		aircraft.data.add(obj.selectedNode);
 		obj.selectedListener = setlistener(obj.selectedNode, func(n) {
-			obj.install(n.getValue());
+			var pn = n.getValue();
+			if (pn) {
+				obj.install(pn);
+			}
 		}, 0, 0);
 		obj.node.setValue("name", name);
 		for (var i = 0; i < size(pns); i += 1) {
@@ -112,7 +116,7 @@ parts.Part = {
 	},
 	
 	_install: func(pn) {
-		if (!pn) {
+		if (pn == me._pn or me._installed) {
 			return;
 		}
 		if (!contains(me.pns, pn)) {
@@ -125,11 +129,15 @@ parts.Part = {
 			logprint(LOG_ALERT, "Failed loading part file '" ~ part_file ~ "' !");
 			return;
 		}
+		me._pn = pn;
 		me._cfg = cfg;
 		me._cfg.setValue("instance", me._instance);
 		
 		if (me._cfg.getNode("replaces")) {
 			foreach (var partNode; me._cfg.getNode("replaces").getChildren("part")) {
+				if (!parts.manager.hasPart(partNode.getValue("id"))) {
+					continue;
+				}
 				var part = parts.manager.getPart(partNode.getValue("id"));
 				var partUninstalled = 0;
 				foreach (var pnPatternNode; partNode.getChildren("part-number")) {
@@ -147,23 +155,21 @@ parts.Part = {
 		}
 		
 		me.node.setValue("current/file", part_file);
-		parts.copyOverlay(cfg.getNode("overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1), 1);
-		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-scale", 1), 0);
+		parts.copyOverlay(cfg.getNode("overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-factor") or 1, 1);
+		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-factor") or 1, 0);
 		
 		var load = cfg.getNode("nasal/load", 1).getValue();
 		parts.exec_nasal(load, part_file ~ ":/nasal/load", me._cfg);
 		me.selectedNode.setValue(pn);
-		me._pn = pn;
+		me._installed = 1;
 	},
 	
 	uninstall: func {
-		if (!me._pn) {
-			return
-		}
-		if (!me._cfg) {
+		if (!me._cfg or !me._pn or !me._installed) {
 			logprint(DEV_WARN, "Trying to uninstall not currently installed part '" ~ me.name ~ "' !");
 			return;
 		}
+		me._installed = 0;
 		var unload = me._cfg.getNode("nasal/unload", 1).getValue();
 		parts.exec_nasal(unload, me.node.getValue("current/file") ~ ":/nasal/unload", me._cfg);
 		me.selectedNode.setValue("");
@@ -173,6 +179,9 @@ parts.Part = {
 		
 		if (me._cfg.getNode("replaces")) {
 			foreach (var partNode; me._cfg.getNode("replaces").getChildren("part")) {
+				if (!parts.manager.hasPart(partNode.getValue("id"))) {
+					continue;
+				}
 				var part = parts.manager.getPart(partNode.getValue("id"));
 				var partInstalled = 0;
 				foreach (var pnPatternNode; partNode.getChildren("part-number")) {
@@ -226,18 +235,13 @@ parts.Manager = {
 		if (!size(pns)) {
 			die("Could not create part: no part numbers given !");
 		}
-		var vec = []
-		for (var i = 0; i < instances; i += 1) {
-			append(vec, i);
-		}
-		instances = vec;
 		
 		me.parts[id] = [];
-		foreach (var instance; instances) {
+		for (var instance = 0; instance < instances; instance += 1) {
 			var part = parts.Part.new(me.current_category, id, name ~ " #" ~ instance, pns, user_selectable, optional, instance);
 			var selected_pn = part.selectedNode.getValue();
+			append(me.parts[id], part);
 			part.install(contains(part.pns, selected_pn) ? selected_pn : pns[0]);
-			me.parts[id][instance] = part;
 		}
 		
 		return me;
@@ -271,12 +275,16 @@ parts.Manager = {
 		return me;
 	},
 	
+	hasPart: func(id) {
+		return contains(me.parts, id);
+	},
+	
 	getPart: func(id, instance = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not retrieve part: No part with ID " ~ id ~ " !");
 		}
 		if (instance >= size(me.parts[id])) {
-			die("Could not retrieve part: Instance index " ~ instance ~ " out of range !");
+			die("Could not retrieve part: Instance index " ~ instance ~ " out of range for part with ID " ~ id ~ " !");
 		}
 		return me.parts[id][instance];
 	},
