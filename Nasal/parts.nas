@@ -1,7 +1,10 @@
 parts = {};
 parts.node = props.globals.getNode("/parts", 1);
 
-parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, overwriteValues = 1, attr = 0) {
+parts.copyOverlay = func(src, srcPrefix, dest, indexedPropertyRoots = nil, instance = 0, instanceOffsetFactor = 1, overwriteValues = 1, attr = 0) {
+	if (indexedPropertyRoots == nil) {
+		indexedPropertyRoots = [];
+	}
 	var sp = src.getPath() or "";
 	var dp = dest.getPath() or "";
 
@@ -13,15 +16,18 @@ parts.copyOverlay = func(src, dest, instance = 0, instanceOffsetFactor = 1, over
 		sp = subvec(sp, 1);
 		dp = subvec(dp, 1);
 	}
-    
+	
 	foreach(var c; src.getChildren()) {
 		var name = c.getName();
-		var i = c.getIndex() + (instance * instanceOffsetFactor);
+		var i = c.getIndex();
+		if (contains(indexedPropertyRoots, string.replace(c.getPath(), srcPrefix, ""))) {
+			i += (instance * instanceOffsetFactor);
+		}
 		if (i) {
 			name ~= "["~i~"]";
 		}
 		if (!(!size(sp) and size(dp) and name == dp[0])) {
-			parts.copyOverlay(c, dest.getNode(name, 1), attr);
+			parts.copyOverlay(c, srcPrefix, dest.getNode(name, 1), indexedPropertyRoots, instance, instanceOffsetFactor, overwriteValues, attr);
 		} else {
 			logprint(DEV_WARN, "props.copy() skipping "~name~" (recursion!)");
 		}
@@ -61,7 +67,7 @@ parts.exec_nasal = func(s, file, cmdargNode) {
 	if (!code) {
 		return; # got an empty string as code; just do nothing
 	}
-	call(code, [], nil, {"cmdarg": func() { return cmdargNode; }}, var runtime_errors = []);
+	call(code, [], nil, {"getConfigNode": func() { return cmdargNode; }}, var runtime_errors = []);
 
 	if(size(runtime_errors)){
 		logprint(LOG_ALERT, "Error(s) executing code from: " ~ file);
@@ -111,7 +117,9 @@ parts.Part = {
 		if (pn == me._pn) {
 			return;
 		}
-		me.uninstall();
+		if (me._installed) {
+			me.uninstall();
+		}
 		me._install(pn);
 	},
 	
@@ -122,6 +130,7 @@ parts.Part = {
 		if (!contains(me.pns, pn)) {
 			die("Could not install part: No " ~ me.name ~ " with part number " ~ pn ~ " !");
 		}
+		logprint(LOG_ALERT, "parts.nas: installing part " ~ me.id ~ " #" ~ me._instance ~ ", part number " ~ pn);
 		
 		var part_file = "Parts/" ~ me.id ~ "-" ~ pn ~ ".xml";
 		var cfg = io.read_properties(part_file, me.node.getNode("current", 1));
@@ -133,30 +142,32 @@ parts.Part = {
 		me._cfg = cfg;
 		me._cfg.setValue("instance", me._instance);
 		
-		if (me._cfg.getNode("replaces")) {
-			foreach (var partNode; me._cfg.getNode("replaces").getChildren("part")) {
-				if (!parts.manager.hasPart(partNode.getValue("id"))) {
-					continue;
-				}
-				var part = parts.manager.getPart(partNode.getValue("id"));
-				var partUninstalled = 0;
-				foreach (var pnPatternNode; partNode.getChildren("part-number")) {
-					partNumbersSpecified = 1;
-					var pnPattern = pnPatternNode.getValue();
-					if (!pnPattern or string.match(part._pn, pnPattern)) {
-						part.uninstall();
-						partUninstalled = 1;
-					}
-				}
-				if (!partUninstalled) {
-					part.uninstall();
-				}
-			}
-		}
-		
 		me.node.setValue("current/file", part_file);
-		parts.copyOverlay(cfg.getNode("overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-factor") or 1, 1);
-		parts.copyOverlay(cfg.getNode("persistent-overlay", 1), props.globals, me._instance, cfg.getValue("instance-offset-factor") or 1, 0);
+		
+		var indexedPropertyRoots = std.map(
+			func (node) {
+				return props.globals.getNode(node.getValue(), 1).getPath();
+			},
+			me._cfg.getChildren("indexed-property-root")
+		);
+		parts.copyOverlay(
+			cfg.getNode("overlay", 1),
+			cfg.getNode("overlay", 1).getPath(),
+			props.globals,
+			indexedPropertyRoots,
+			me._instance,
+			cfg.getValue("instance-offset-factor") or 1,
+			1
+		);
+		parts.copyOverlay(
+			cfg.getNode("persistent-overlay", 1),
+			cfg.getNode("persistent-overlay", 1).getPath(),
+			props.globals,
+			indexedPropertyRoots,
+			me._instance,
+			cfg.getValue("instance-offset-factor") or 1,
+			0
+		);
 		
 		var load = cfg.getNode("nasal/load", 1).getValue();
 		parts.exec_nasal(load, part_file ~ ":/nasal/load", me._cfg);
@@ -166,43 +177,17 @@ parts.Part = {
 	
 	uninstall: func {
 		if (!me._cfg or !me._pn or !me._installed) {
-			logprint(DEV_WARN, "Trying to uninstall not currently installed part '" ~ me.name ~ "' !");
+			logprint(LOG_WARN, "Trying to uninstall not currently installed part '" ~ me.name ~ "' !");
 			return;
 		}
-		me._installed = 0;
+		logprint(LOG_ALERT, "parts.nas: uninstalling part " ~ me.id ~ " #" ~ me._instance ~ ", part number " ~ me._pn);
 		var unload = me._cfg.getNode("nasal/unload", 1).getValue();
 		parts.exec_nasal(unload, me.node.getValue("current/file") ~ ":/nasal/unload", me._cfg);
 		me.selectedNode.setValue("");
 		me._last_pn = me._pn;
+		me._installed = 0;
 		me._pn = "";
 		me.node.getNode("current", 1).removeChildren();
-		
-		if (me._cfg.getNode("replaces")) {
-			foreach (var partNode; me._cfg.getNode("replaces").getChildren("part")) {
-				if (!parts.manager.hasPart(partNode.getValue("id"))) {
-					continue;
-				}
-				var part = parts.manager.getPart(partNode.getValue("id"));
-				var partInstalled = 0;
-				foreach (var pnPatternNode; partNode.getChildren("part-number")) {
-					partNumbersSpecified = 1;
-					var pnPattern = pnPatternNode.getValue();
-					var matchingPns = [];
-					foreach (var pn; part.pns) {
-						if (!pnPattern or string.match(pn, pnPattern)) {
-							append(matchingPns, pn);
-						}
-					}
-					if (contains(matchingPns, part._last_pn)) {
-						part.install(part._last_pn);
-						partInstalled = 1;
-					}
-				}
-				if (!partInstalled) {
-					part.install(part.pns[0]);
-				}
-			}
-		}
 		me._cfg = nil;
 	},
 	
@@ -246,31 +231,31 @@ parts.Manager = {
 		
 		return me;
 	},
-	removePart: func(id, instance = 0) {
+	removePart: func(id, instanceIndex = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not remove part: No part with ID " ~ id ~ " !");
 		}
-		if (instance >= size(me.parts[id])) {
-			die("Could not remove part: Instance index " ~ instance ~ " out of range !");
+		if (instanceIndex >= size(me.parts[id])) {
+			die("Could not remove part: Instance index " ~ instanceIndex ~ " out of range !");
 		}
-		me.parts[id][instance].uninstall();
-		me.parts[id][instance].del();
+		me.parts[id][instanceIndex].uninstall();
+		me.parts[id][instanceIndex].del();
 		delete(me.parts, id);
 	},
 	
-	install: func(id, pn, instance = 0) {
+	install: func(id, pn, instanceIndex = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not install part: No part with ID " ~ id ~ " !");
 		}
-		if (instance >= size(me.parts[id])) {
-			die("Could not install part: Instance index " ~ instance ~ " out of range !");
+		if (instanceIndex >= size(me.parts[id])) {
+			die("Could not install part: Instance index " ~ instanceIndex ~ " out of range !");
 		}
-		if (pn and pn == me.parts[id][instance]._pn) {
+		if (pn and pn == me.parts[id][instanceIndex]._pn) {
 			return me;
 		}
-		me.parts[id][instance].uninstall();
+		me.parts[id][instanceIndex].uninstall();
 		if (pn) {
-			me.parts[id][instance].install(pn);
+			me.parts[id][instanceIndex].install(pn);
 		}
 		return me;
 	},
@@ -279,14 +264,14 @@ parts.Manager = {
 		return contains(me.parts, id);
 	},
 	
-	getPart: func(id, instance = 0) {
+	getPart: func(id, instanceIndex = 0) {
 		if (!contains(me.parts, id)) {
 			die("Could not retrieve part: No part with ID " ~ id ~ " !");
 		}
-		if (instance >= size(me.parts[id])) {
-			die("Could not retrieve part: Instance index " ~ instance ~ " out of range for part with ID " ~ id ~ " !");
+		if (instanceIndex >= size(me.parts[id])) {
+			die("Could not retrieve part: Instance index " ~ instanceIndex ~ " out of range for part with ID " ~ id ~ " !");
 		}
-		return me.parts[id][instance];
+		return me.parts[id][instanceIndex];
 	},
 };
 
