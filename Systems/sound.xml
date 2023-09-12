@@ -250,15 +250,15 @@
    <volume>
     <property>/position/altitude-ft</property>
     <factor>-0.000015</factor>
-    <offset>1.0</offset>
-    <min>0.1</min>
-    <max>1.0</max>
+    <offset>1</offset>
+    <min>0</min>
+    <max>1</max>
    </volume>
    <volume>
      <property>/velocities/airspeed-kt</property>
-     <factor>0.0015</factor>
-     <min>0.03</min>
-     <max>0.25</max>
+     <factor>0.0005</factor>
+     <min>0</min>
+     <max>0.1</max>
    </volume>
    <pitch>
     <property>/velocities/airspeed-kt</property>
