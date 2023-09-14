@@ -15,7 +15,33 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs10" />
+     id="defs10">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2471"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2207"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1613"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1451"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect973"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
   <sodipodi:namedview
      id="namedview8"
      pagecolor="#ffffff"
@@ -25,9 +51,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="1.4450147"
-     inkscape:cx="69.549465"
-     inkscape:cy="556.39572"
+     inkscape:zoom="0.97908252"
+     inkscape:cx="249.72359"
+     inkscape:cy="181.80286"
      inkscape:window-width="1323"
      inkscape:window-height="701"
      inkscape:window-x="33"
@@ -37,11 +63,12 @@
      inkscape:snap-object-midpoints="true"
      inkscape:snap-text-baseline="true"
      height="1024px"
-     inkscape:snap-bbox="true"
+     inkscape:snap-bbox="false"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-bbox-midpoints="true" />
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true" />
   <desc
      id="desc2">left-switches-panel.blend, (Blender 3.0.1)</desc>
   <polygon
@@ -727,4 +754,40 @@
        x="132.33075"
        y="625.93195"
        id="tspan9448">OFF</tspan></text>
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 0,129.5 H 981.332"
+     id="path971"
+     inkscape:path-effect="#path-effect973"
+     inkscape:original-d="m 0,129.5 c 327.11167,0.001 654.22233,0.001 981.332,0" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 0,264.67275 H 981.332"
+     id="path1447"
+     inkscape:path-effect="#path-effect1451"
+     inkscape:original-d="m 0,264.67275 c 327.11167,10e-4 654.22233,10e-4 981.332,0" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 771,0 V 264.67275"
+     id="path1611"
+     inkscape:path-effect="#path-effect1613"
+     inkscape:original-d="m 771,0 c 10e-4,88.22525 10e-4,176.4495 0,264.67275" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 453.03558,0 V 264.67275"
+     id="path2203"
+     inkscape:path-effect="#path-effect2207"
+     inkscape:original-d="m 453.03558,0 c 0.001,88.22525 0.001,176.4495 0,264.67275"
+     inkscape:export-filename="/media/frederic/WD-5TB/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Controls/left-switches-panel.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     style="fill:#000000;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke markers fill"
+     d="M 264.20888,0 V 264.67275"
+     id="path2467"
+     inkscape:path-effect="#path-effect2471"
+     inkscape:original-d="m 264.20888,0 c 10e-4,88.22525 10e-4,176.4495 0,264.67275"
+     inkscape:export-filename="/media/frederic/WD-5TB/.fg/fgfs-addons/Aircraft/c310-family/Models/Interior/Panel/Controls/left-switches-panel.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
 </svg>
