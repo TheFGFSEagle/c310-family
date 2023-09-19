@@ -311,12 +311,14 @@ parts.Dialog = {
 		foreach (var catid; keys(parts.manager.categories)) {
 			me[catid ~ "Tab"] = canvas.VBoxLayout.new();
 			me.tabs.addTab(catid, parts.manager.categories[catid], me[catid ~ "Tab"]);
-			foreach(var part; values(parts.manager.parts)) {
-				if (!part.user_selectable) {
-					continue;
-				}
-				if (part.category == catid) {
-					me.createPartWidget(me[catid ~ "Tab"], part);
+			foreach(var partList; values(parts.manager.parts)) {
+				foreach(var part; partList) {
+					if (!part.user_selectable) {
+						continue;
+					}
+					if (part.category == catid) {
+						me.createPartWidget(me[catid ~ "Tab"], part);
+					}
 				}
 			}
 			if (me[catid ~ "Tab"].count() == 0) {
