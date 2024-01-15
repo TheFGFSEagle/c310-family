@@ -191,6 +191,15 @@ parts.Part = {
 		me._cfg = nil;
 	},
 	
+	reinstall: func {
+		if (!me._cfg or !me._pn or !me._installed) {
+			logprint(LOG_WARN, "Trying to reinstall not currently installed part '" ~ me.name ~ "' !");
+			return;
+		}
+		me.uninstall();
+		me.install(me._last_pn);
+	},
+	
 	del: func {
 		aircraft.data.remove(me.selectedNode);
 	},
@@ -278,7 +287,7 @@ parts.Manager = {
 parts.Dialog = {
 	norebuild: 0,
 	new: func {
-		var obj = canvas.Window.new(size: [250, 150], type: "dialog", destroy_on_close: 0).setTitle("Parts");
+		var obj = canvas.Window.new(size: [250, 500], type: "dialog", destroy_on_close: 0).setTitle("Parts");
 		obj.parents = [parts.Dialog] ~ obj.parents;
 		
 		obj.canvas = obj.getCanvas(create: 1).set("background", canvas.style.getColor("bg_color"));
@@ -334,8 +343,8 @@ parts.Dialog = {
 						.setText(part.name);
 		partLayout.addItem(partLabel);
 		var partSelector = canvas.gui.widgets.PropertyComboBox.new(me.tabsContent, canvas.style, {"node": part.selectedNode});
-		partSelector.setPropertySynced(0);
 		partLayout.addItem(partSelector);
+		partSelector.setPropertySynced(0);
 		if (part.optional) {
 			partSelector.addMenuItem("", "");
 		}
@@ -344,6 +353,13 @@ parts.Dialog = {
 		}
 		partSelector.setPropertySynced(1);
 		partSelector.setCurrentByValue(part.selectedNode.getValue());
+		
+		var reloadButton = canvas.gui.widgets.Button.new(me.tabsContent, canvas.style, {})
+						.setText("Reload")
+						.listen("clicked", func {
+							part.reinstall();
+						});
+		partLayout.addItem(reloadButton);
 	},
 	
 	show: func {
