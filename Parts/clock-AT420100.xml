@@ -6,7 +6,7 @@
 	<data-source></data-source>
 	<nasal>
 		<load>
-			io.load_nasal("Nasal/Instruments/astrotech-lc2.nas", "astrotech_lc2");
+			io.load_nasal(resolvepath("Aircraft/c310-family/Nasal/Instruments/astrotech-lc2.nas"), "astrotech_lc2");
 			print("AstroTech LC2 loaded !");
 			astrotech_lc2.install();
 		</load>
