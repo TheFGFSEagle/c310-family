@@ -12,22 +12,18 @@
 			aircraft.data.remove("/controls/lighting/uv-instrument-norm");
 		</unload>
 	</nasal>
+	<indexed-property-root>controls/lighting/uv-instrument-starter-button-pressed</indexed-property-root>
+	<indexed-property-root>systems/electrical/consumers/uv-instrument-light</indexed-property-root>
 	<overlay>
 		<controls>
 			<lighting>
-				<uv-instrument-starter-button-pressed type="bool" n="0">false</uv-instrument-starter-button-pressed>
-				<uv-instrument-starter-button-pressed type="bool" n="1">false</uv-instrument-starter-button-pressed>
+				<uv-instrument-starter-button-pressed type="bool">false</uv-instrument-starter-button-pressed>
 			</lighting>
 		</controls>
 		<systems>
 			<electrical>
 				<consumers>
-					<uv-instrument-light n="0">
-						<active type="bool">false</active>
-						<rated-volts>24</rated-volts>
-						<rated-amps>0.166</rated-amps>
-					</uv-instrument-light>
-					<uv-instrument-light n="1">
+					<uv-instrument-light>
 						<active type="bool">false</active>
 						<rated-volts>24</rated-volts>
 						<rated-amps>0.166</rated-amps>
