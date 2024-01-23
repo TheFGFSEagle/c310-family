@@ -67,7 +67,8 @@ parts.exec_nasal = func(s, file, cmdargNode) {
 	if (!code) {
 		return; # got an empty string as code; just do nothing
 	}
-	call(code, [], nil, {"getConfigNode": func() { return cmdargNode; }}, var runtime_errors = []);
+	var locals = {"getConfigNode": func() { return cmdargNode; }};
+	call(code, [], nil, locals, var runtime_errors = []);
 
 	if(size(runtime_errors)){
 		logprint(LOG_ALERT, "Error(s) executing code from: " ~ file);
@@ -128,14 +129,15 @@ parts.Part = {
 			return;
 		}
 		if (!contains(me.pns, pn)) {
-			die("Could not install part: No " ~ me.name ~ " with part number " ~ pn ~ " !");
+			logprint(LOG_ALERT, "Could not install part: No " ~ me.name ~ " with part number " ~ pn ~ " !");
+			return;
 		}
 		logprint(LOG_ALERT, "parts.nas: installing part " ~ me.id ~ " #" ~ me._instance ~ ", part number " ~ pn);
 		
 		var part_file = "Parts/" ~ me.id ~ "-" ~ pn ~ ".xml";
 		var cfg = io.read_properties(part_file, me.node.getNode("current", 1));
 		if (!cfg) {
-			logprint(LOG_ALERT, "Failed loading part file '" ~ part_file ~ "' !");
+			logprint(LOG_ALERT, "Failed loading part file '" ~ part_file ~ "': parsing XML failed !");
 			return;
 		}
 		me._pn = pn;
@@ -143,6 +145,24 @@ parts.Part = {
 		me._cfg.setValue("instance", me._instance);
 		
 		me.node.setValue("current/file", part_file);
+		
+		if (var aliasNode = me._cfg.getNode("alias")) {
+			if (var idNode = me._cfg.getNode("id")) {
+				if (var pnNode = me._cfg.getNode("part-number")) {
+					parts.manager.install(idNode.getValue(), pnNode.getValue(), me._instance);
+				} else {
+					logprint(LOG_ALERT, "Failed loading part file '" ~ part_file ~ "': alias node missing part number node !");
+				}
+			} else {
+				var pn = "";
+				if (var pnNode = me._cfg.getNode("part-number")) {
+					pn = pnNode.getValue();
+				} else {
+					pn = aliasNode.getValue();
+				}
+				parts.manager.install(me.id, pn, me._instance);
+			}
+		}
 		
 		var indexedPropertyRoots = std.map(
 			func (node) {
