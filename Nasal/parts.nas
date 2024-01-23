@@ -147,15 +147,15 @@ parts.Part = {
 		me.node.setValue("current/file", part_file);
 		
 		if (var aliasNode = me._cfg.getNode("alias")) {
-			if (var idNode = me._cfg.getNode("id")) {
-				if (var pnNode = me._cfg.getNode("part-number")) {
+			if (var idNode = aliasNode.getNode("id")) {
+				if (var pnNode = aliasNode.getNode("part-number")) {
 					parts.manager.install(idNode.getValue(), pnNode.getValue(), me._instance);
 				} else {
 					logprint(LOG_ALERT, "Failed loading part file '" ~ part_file ~ "': alias node missing part number node !");
 				}
 			} else {
 				var pn = "";
-				if (var pnNode = me._cfg.getNode("part-number")) {
+				if (var pnNode = aliasNode.getNode("part-number")) {
 					pn = pnNode.getValue();
 				} else {
 					pn = aliasNode.getValue();
