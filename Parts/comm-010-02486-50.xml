@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<part-number>010-02486-50</part-number>
+	<brand>Garmin</brand>
+	<name>GNC 225A</name>
+	<data-source>https://www.garmin.com/en-US/p/102764/pn/010-02486-50</data-source>
+	<manual>https://static.garmin.com/pumac/190-01182-01_e.pdf</manual>
+	<nasal>
+		<load><![CDATA[
+			var instanceIndex = getConfigNode().getValue("instance");
+			if (c310.parts.manager.hasPart("comm")) {
+				c310.parts.manager.install("comm", "010-02486-50", instanceIndex);
+			}
+			if (c310.parts.manager.hasPart("nav")) {
+				c310.parts.manager.install("nav", "010-02486-50", instanceIndex);
+			}
+			if (globals["gnc_255"] == nil) {
+				io.load_nasal(resolvepath("Aircraft/c310-family/Nasal/Avionics/gnc-255.nas"), "gnc_255");
+			}
+			gnc_255.install(instanceIndex);
+		]]></load>
+		<unload><![CDATA[
+			var instanceIndex = getConfigNode().getValue("instance");
+			if (globals["gnc_255"] != nil) {
+				gnc_255.uninstall(instanceIndex);
+				if (std.all(gnc_255._instances, func(instance) { return instance == nil; })) {
+					delete(globals, "gnc_255");
+				}
+			}
+		]]></unload>
+	</nasal>
+	<indexed-property-root>instrumentation/comm</indexed-property-root>
+	<indexed-property-root>instrumentation/nav</indexed-property-root>
+	<indexed-property-root>instrumentation/gnc-255</indexed-property-root>
+	<indexed-property-root>systems/electrical/consumers/comm</indexed-property-root>
+	<indexed-property-root>systems/electrical/consumers/nav</indexed-property-root>
+	<overlay>
+		<systems>
+			<electrical>
+				<consumers>
+					<nav>
+						<rated-volts>24</rated-volts>
+						<rated-amps>0.4</rated-amps>
+					</nav>
+					<comm>
+						<rated-volts>24</rated-volts>
+						<rated-amps>0.4</rated-amps>
+					</comm>
+				</consumers>
+			</electrical>
+		</systems>
+		<instrumentation>
+			<gnc-255>
+				<mode>comm</mode>
+				<display-brightness-norm>0</display-brightness-norm>
+				<outer-tune-knob-deg>0</outer-tune-knob-deg>
+				<inner-tune-knob-deg>0</inner-tune-knob-deg>
+				<flip-flop-button-pressed type="bool">false</flip-flop-button-pressed>
+				<comm-nav-button-pressed type="bool">false</comm-nav-button-pressed>
+			</gnc-255>
+			<comm>
+				<volume-knob-pressed type="bool">false</volume-knob-pressed>
+			</comm>
+			<nav>
+				<volume-knob-pressed type="bool">false</volume-knob-pressed>
+			</nav>
+		</instrumentation>
+	</overlay>
+	<persistent-overlay>
+		<instrumentation>
+			<comm>
+				<volume>0</volume>
+				<squelch type="bool">true</squelch>
+				<frequencies>
+					<selected-mhz>118.3</selected-mhz>
+					<standby-mhz>126.2</standby-mhz>
+				</frequencies>
+			</comm>
+			<nav>
+				<volume>0</volume>
+				<ident type="bool">false</ident>
+				<frequencies>
+					<selected-mhz>111.3</selected-mhz>
+					<standby-mhz>109.5</standby-mhz>
+				</frequencies>
+			</nav>
+		</instrumentation>
+	</persistent-overlay>
+</PropertyList>
+

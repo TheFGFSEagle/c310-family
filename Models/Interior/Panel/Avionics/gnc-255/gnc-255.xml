@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<params>
+		<instance>0</instance>
+		<comm-volume-prop>instrumentation/comm[0]/volume</comm-volume-prop>
+		<comm-volume-knob-pressed-prop>instrumentation/gnc-255[0]/comm-volume-knob-pressed</comm-volume-knob-pressed-prop>
+		<comm-squelch-prop>instrumentation/comm[0]/squelch</comm-squelch-prop>
+		<comm-power-btn-prop>instrumentation/comm[0]/power-btn</comm-power-btn-prop>
+		<nav-volume-prop>instrumentation/nav[0]/volume</nav-volume-prop>
+		<nav-volume-knob-pressed-prop>instrumentation/gnc-255[0]/nav-volume-knob-pressed</nav-volume-knob-pressed-prop>
+		<nav-ident-prop>instrumentation/nav[0]/ident</nav-ident-prop>
+		<nav-power-btn-prop>instrumentation/nav[0]/power-btn</nav-power-btn-prop>
+		<outer-tune-knob-prop>instrumentation/gnc-255[0]/outer-tune-knob-deg</outer-tune-knob-prop>
+		<inner-tune-knob-prop>instrumentation/gnc-255[0]/inner-tune-knob-deg</inner-tune-knob-prop>
+		<inner-tune-knob-pressed-prop>instrumentation/gnc-255[0]/inner-tune-knob-pressed</inner-tune-knob-pressed-prop>
+		<monitor-button-pressed-prop>instrumentation/gnc-255[0]/monitor-button-pressed</monitor-button-pressed-prop>
+		<comm-nav-button-pressed-prop>instrumentation/gnc-255[0]/comm-nav-button-pressed</comm-nav-button-pressed-prop>
+		<obs-button-pressed-prop>instrumentation/gnc-255[0]/obs-button-pressed</obs-button-pressed-prop>
+		<to-from-button-pressed-prop>instrumentation/gnc-255[0]/to-from-button-pressed</to-from-button-pressed-prop>
+		<func-button-pressed-prop>instrumentation/gnc-255[0]/func-button-pressed</func-button-pressed-prop>
+		<clear-button-pressed-prop>instrumentation/gnc-255[0]/clear-button-pressed</clear-button-pressed-prop>
+		<enter-button-pressed-prop>instrumentation/gnc-255[0]/enter-button-pressed</enter-button-pressed-prop>
+		<flip-flop-button-pressed-prop>instrumentation/gnc-255[0]/flip-flop-button-pressed</flip-flop-button-pressed-prop>
+		<display-brightness-prop>instrumentation/gnc-255[0]/display-brightness-norm</display-brightness-prop>
+	</params>
+	
+	<path>gnc-255.ac</path>
+	
+	<animation>
+		<type>select</type>
+		<object-name>GNC255Display1</object-name>
+		<condition>
+			<value alias="/params/instance"/>
+			<value>0</value>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>GNC255Display2</object-name>
+		<condition>
+			<value alias="/params/instance"/>
+			<value>1</value>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>GNC255Display3</object-name>
+		<condition>
+			<value alias="/params/instance"/>
+			<value>2</value>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>GNC255Display1</object-name>
+		<object-name>GNC255Display2</object-name>
+		<object-name>GNC255Display3</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop alias="/params/display-brightness-prop"/>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>CommVolumeKnob</object-name>
+		<axis>
+			<object-name>CommVolumeKnobAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property alias="/params/comm-volume-prop"/>
+		<factor>270</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-volume-prop"/>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<increase>
+			<binding>
+				<condition>
+					<greater-than-equals>
+						<property alias="/params/comm-volume-prop"/>
+						<value>0</value>
+					</greater-than-equals>
+				</condition>
+				<command>property-assign</command>
+				<property alias="/params/comm-power-btn-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</increase>
+		<decrease>
+			<binding>
+				<condition>
+					<less-than-equals>
+						<property alias="/params/comm-volume-prop"/>
+						<value>0.05</value>
+					</less-than-equals>
+				</condition>
+				<command>property-assign</command>
+				<property alias="/params/comm-power-btn-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</decrease>
+		<shift-action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/comm-volume-knob-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</shift-action>
+		<shift-release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/comm-volume-knob-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</shift-release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>gnc-255-comm-volume</tooltip-id>
+				<label>Comm volume: %s</label>
+				<measure-text>comm volume: 100%, squelch: off</measure-text>
+				<property alias="/params/comm-volume-prop"/>
+				<property alias="/params/comm-squelch-prop"/>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					var binding = cmdarg();
+					var squelch = props.globals.getBoolValue(binding.getValue("property[1]"));
+					return sprintf(
+						"%s, squelch: %s",
+						arg[0] > 0.05 ? sprintf("%3.0f%%", arg[0] * 100) : "off",
+						squelch ? "auto" : "off"
+					);
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>CommVolumeKnob</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property alias="/params/comm-volume-knob-pressed-prop"/>
+		<factor>0.003</factor>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>NavVolumeKnob</object-name>
+		<axis>
+			<object-name>NavVolumeKnobAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property alias="/params/nav-volume-prop"/>
+		<factor>270</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/nav-volume-prop"/>
+				<factor>0.05</factor>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/nav-volume-knob-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</shift-action>
+		<shift-release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/nav-volume-knob-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</shift-release>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>gnc-255-nav-volume</tooltip-id>
+				<label>Nav volume: %s</label>
+				<measure-text>Nav volume: 100%, ident: off</measure-text>
+				<property alias="/params/nav-volume-prop"/>
+				<property alias="/params/nav-ident-prop"/>
+				<mapping>nasal</mapping>
+				<script><![CDATA[
+					var binding = cmdarg();
+					var ident = props.globals.getBoolValue(binding.getValue("property[1]"));
+					return sprintf(
+						"%s, ident: %s",
+						sprintf("%3.0f%%", arg[0] * 100),
+						ident ? "on" : "off"
+					);
+				]]></script>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>NavVolumeKnob</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property alias="/params/nav-volume-knob-pressed-prop"/>
+		<factor>0.003</factor>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>OuterTuneKnob</object-name>
+		<axis>
+			<object-name>TuneKnobAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property alias="/params/outer-tune-knob-prop"/>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/outer-tune-knob-prop"/>
+				<factor>10</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap type="bool">true</wrap>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>InnerTuneKnob</object-name>
+		<axis>
+			<object-name>TuneKnobAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property alias="/params/inner-tune-knob-prop"/>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/inner-tune-knob-prop"/>
+				<factor>10</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap type="bool">true</wrap>
+			</binding>
+		</action>
+		<shift-action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/inner-tune-knob-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</shift-action>
+		<shift-release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/inner-tune-knob-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</shift-release>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>InnerTuneKnob</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property alias="/params/inner-tune-knob-pressed-prop"/>
+		<factor>0.003</factor>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>MonitorButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/monitor-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/monitor-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/monitor-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>CommNavButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/comm-nav-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/comm-nav-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/comm-nav-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>OBSButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/obs-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/obs-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/obs-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>ToFromButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/to-from-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/to-from-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/to-from-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>FuncButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/func-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/func-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/func-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>ClearButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/clear-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/clear-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/clear-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>EnterButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/enter-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/enter-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/enter-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+	
+	<animation>
+		<type>slider</type>
+		<object-name>FlipFlopButton</object-name>
+		<axis>
+			<x>1</x>
+		</axis>
+		<property alias="/params/flip-flop-button-pressed-prop"/>
+		<factor>-0.0025</factor>
+		<action>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/flip-flop-button-pressed-prop"/>
+				<value type="bool">true</value>
+			</binding>
+		</action>
+		<release>
+			<binding>
+				<command>property-assign</command>
+				<property alias="/params/flip-flop-button-pressed-prop"/>
+				<value type="bool">false</value>
+			</binding>
+		</release>
+	</animation>
+</PropertyList>

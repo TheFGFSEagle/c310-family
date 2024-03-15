@@ -538,4 +538,14 @@
 			<pitch-deg>-4.0829</pitch-deg>
 		</offsets>
 	</model>
+	
+	<model>
+		<name>GNC2551</name>
+		<path>Avionics/gnc-255/gnc-255.xml</path>
+		<offsets>
+			<x-m>0.525</x-m>
+			<y-m>-0.255</y-m>
+			<z-m>-0.265</z-m>
+		</offsets>
+	</model>
 </PropertyList>
