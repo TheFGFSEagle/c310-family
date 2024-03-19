@@ -1,5 +1,29 @@
 var _instances = [nil, nil, nil];
 
+var _typeMapping = {
+	"localizer": "LOC",
+	"glideslope": "GS",
+	"tower": "TWR",
+	"ground": "GND",
+	"awos": "AWS",
+	"arrival": "ARR",
+	"approach": "APPR",
+	"approach-departure": "APPR",
+	"app": "APPR",
+	"departure": "DEP",
+	"clearance": "CLR",
+	"unicom": "UNI",
+};
+
+var _getType = func(radioStation) {
+	var type = string.lc(radioStation.type);
+	if (contains(_typeMapping, type)) {
+		return _typeMapping[type];
+	} else {
+		return string.uc(type);
+	}
+};
+
 var GNC255 = {
 	new: func(instanceIndex, instrumentationNode) {
 		var obj = {
@@ -22,6 +46,7 @@ var GNC255 = {
 		obj.innerTuneKnobNode = obj.rootNode.getNode("inner-tune-knob-deg", 1);
 		obj.flipFlopButtonNode = obj.rootNode.getNode("flip-flop-button-pressed", 1);
 		obj.commNavButtonNode = obj.rootNode.getNode("comm-nav-button-pressed", 1);
+		obj.gpsPathNode = obj.rootNode.getNode("gps-path", 1);
 		
 		obj.poweredNode = obj.commNode.getNode("powered", 1);
 		obj.powerBtnNode = obj.commNode.getNode("power-btn", 1);
@@ -56,47 +81,61 @@ var GNC255 = {
 			.close();
 		
 		me.selectedFreqText = me.display.createChild("text", "selectedFreq")
-						.setTranslation(296, 64)
-						.setAlignment("right-bottom")
+						.setTranslation(44, 72)
+						.setAlignment("left-bottom")
 						.setFont("garmin-11x17.ttf")
 						.setFontSize(60)
 						.setColor(fgColor)
 						.setText("999.999");
 		me.standbyFreqText = me.display.createChild("text", "standbyFreq")
-						.setTranslation(652, 64)
-						.setAlignment("right-bottom")
+						.setTranslation(412, 72)
+						.setAlignment("left-bottom")
 						.setFont("garmin-11x17.ttf")
 						.setFontSize(60)
 						.setColor(fgColor)
 						.setText("999.999");
 		me.activeFreqAnnun = me.display.createChild("text", "activeFreqAnnun")
-						.setTranslation(8, 56)
+						.setTranslation(4, 60)
 						.setAlignment("left-center")
 						.setFont("garmin-3x5.ttf")
 						.setFontSize(16)
 						.setColor(fgColor)
 						.setText("ACT");
 		me.standbyFreqAnnun = me.display.createChild("text", "standbyFreqAnnun")
-						.setTranslation(364, 56)
+						.setTranslation(368, 60)
 						.setAlignment("left-center")
 						.setFont("garmin-3x5.ttf")
 						.setFontSize(16)
 						.setColor(fgColor)
 						.setText("STB");
 		me.squelchIdentAnnun = me.display.createChild("text", "squelchIdentAnnun")
-						.setTranslation(8, 32)
+						.setTranslation(4, 20)
 						.setAlignment("left-center")
 						.setFont("garmin-5x7.ttf")
-						.setFontSize(20)
+						.setFontSize(24)
 						.setColor(fgColor)
 						.setText("SQ");
 		me.commNavAnnun = me.display.createChild("text", "commNavAnnun")
-						.setTranslation(308, 24)
+						.setTranslation(300, 20)
+						.setAlignment("left-center")
+						.setFont("garmin-5x7.ttf")
+						.setFontSize(24)
+						.setColor(fgColor)
+						.setText("COM");
+		me.selectedFreqIdentText = me.display.createChild("text", "selectedFreqIdent")
+						.setTranslation(64, 100)
 						.setAlignment("left-center")
 						.setFont("garmin-5x7.ttf")
 						.setFontSize(20)
 						.setColor(fgColor)
-						.setText("COM");
+						.setText("");
+		me.standbyFreqIdentText = me.display.createChild("text", "standbyFreqIdent")
+						.setTranslation(428, 100)
+						.setAlignment("left-center")
+						.setFont("garmin-5x7.ttf")
+						.setFontSize(20)
+						.setColor(fgColor)
+						.setText("");
 		
 		me.voltsListener = setlistener(me.voltsNode, func(n) {
 			me.poweredNode.setBoolValue(me.voltsNode.getDoubleValue() > 6);
@@ -182,8 +221,49 @@ var GNC255 = {
 			standbyFreqNode = me.navStandbyFreqNode;
 		}
 		
+		var selectedFreq = num(selectedFreqNode.getDoubleValue());
+		var standbyFreq = num(standbyFreqNode.getDoubleValue());
 		me.selectedFreqText.setText(sprintf("%07.3f", selectedFreqNode.getDoubleValue()));
 		me.standbyFreqText.setText(sprintf("%07.3f", standbyFreqNode.getDoubleValue()));
+		var pos = geo.Coord.new().set_latlon(0, 0, 0);
+		if (me.gpsPathNode.getValue() and (var acPos = geo.aircraft_position()).is_defined()) {
+			pos = geo.aircraft_position();
+		}
+		if (me.modeNode.getValue() == "comm") {
+			debug.dump(pos, selectedFreq);
+			var selectedFreqStations = [findCommByFrequencyMHz(pos, selectedFreq)];
+			var standbyFreqStations = [findCommByFrequencyMHz(pos, standbyFreq)];
+		} else {
+			var selectedFreqStations = findNavaidsByFrequencyMHz(pos, selectedFreq, "vor") ~
+							findNavaidsByFrequencyMHz(pos, selectedFreq, "loc") ~
+							findNavaidsByFrequencyMHz(pos, selectedFreq, "ils");
+			var standbyFreqStations = findNavaidsByFrequencyMHz(pos, standbyFreq, "vor") ~
+							findNavaidsByFrequencyMHz(pos, standbyFreq, "loc") ~
+							findNavaidsByFrequencyMHz(pos, standbyFreq, "ils");
+		}
+		if (me.modeNode.getValue() == "nav") {
+			if ((var selectedFreqNumStations = size(selectedFreqStations)) > 0) {
+				me.selectedFreqIdentText.setText(sprintf("%s %s%s", selectedFreqStations[0].id, _getType(selectedFreqStations[0]), (selectedFreqNumStations > 1 ? "*" : "")));
+			} else {
+				me.selectedFreqIdentText.setText("");
+			}
+			if ((var standbyFreqNumStations = size(standbyFreqStations)) > 0) {
+				me.standbyFreqIdentText.setText(sprintf("%s %s%s", standbyFreqStations[0].id, _getType(standbyFreqStations[0]), (standbyFreqNumStations > 1 ? "*" : "")));
+			} else {
+				me.standbyFreqIdentText.setText("");
+			}
+		} else {
+			if ((var selectedFreqNumStations = size(selectedFreqStations)) > 0) {
+				me.selectedFreqIdentText.setText(sprintf("%s %s%s", selectedFreqStations[0].airport.id, _getType(selectedFreqStations[0]), (selectedFreqNumStations > 1 ? "*" : "")));
+			} else {
+				me.selectedFreqIdentText.setText("");
+			}
+			if ((var standbyFreqNumStations = size(standbyFreqStations)) > 0) {
+				me.standbyFreqIdentText.setText(sprintf("%s %s%s", standbyFreqStations[0].airport.id, _getType(standbyFreqStations[0]), (standbyFreqNumStations > 1 ? "*" : "")));
+			} else {
+				me.standbyFreqIdentText.setText("");
+			}
+		}
 	},
 	
 	tuneKnobMoved: func {
