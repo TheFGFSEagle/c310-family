@@ -71,7 +71,7 @@ var GNC255 = {
 		var bgColor = [0, 0.05, 0.3];
 		
 		me._canvas.addPlacement({"node": "GNC255Display" ~ (me.instanceIndex + 1)});
-		me.display = me._canvas.createGroup();
+		me.display = me._canvas.createGroup().hide();
 		me.background = me.display.createChild("path", "background")
 			.setColorFill(bgColor)
 			.moveTo(0, 0)
@@ -206,9 +206,15 @@ var GNC255 = {
 		
 		# TODO: remove when squelch / NAV ident are implemented
 		me.squelchIdentAnnun.hide();
+		
+		me.frequencyChanged();
 	},
 	
 	frequencyChanged: func {
+		if (!me.poweredNode.getBoolValue()) {
+			return;
+		}
+		
 		var selectedFreqNode = nil;
 		var standbyFreqNode = nil;
 		if (me.modeNode.getValue() == "comm") {
