@@ -140,23 +140,23 @@ var GNC255 = {
 		me.voltsListener = setlistener(me.voltsNode, func(n) {
 			me.poweredNode.setBoolValue(me.voltsNode.getDoubleValue() > 6);
 			me.displayBrightnessNode.setDoubleValue(me.voltsNode.getDoubleValue() / me.ratedVoltsNode.getDoubleValue());
-		}, 0, 1);
+		}, 0);
 		me.commVolumeKnobListener = setlistener(me.commVolumeNode, func(n) {
 			me.powerBtnNode.setBoolValue(n.getValue() > 0 ? 1 : 0);
-		});
-		me.poweredListener = setlistener(me.poweredNode, func me.update());
-		me.outerTuneKnobListener = setlistener(me.outerTuneKnobNode, func me.tuneKnobMoved());
-		me.innerTuneKnobListener = setlistener(me.innerTuneKnobNode, func me.tuneKnobMoved());
+		}, 0);
+		me.poweredListener = setlistener(me.poweredNode, func me.update(), 0);
+		me.outerTuneKnobListener = setlistener(me.outerTuneKnobNode, func me.tuneKnobMoved(), 0);
+		me.innerTuneKnobListener = setlistener(me.innerTuneKnobNode, func me.tuneKnobMoved(), 0);
 		me.flipFlopButtonListener = setlistener(me.flipFlopButtonNode, func(n) {
 			if (n.getBoolValue()) {
 				me.flipFlopButtonPressed();
 			}
-		}, 0, 1);
+		}, 0);
 		me.commNavButtonListener = setlistener(me.commNavButtonNode, func (n) {
 			if (n.getBoolValue()) {
 				me.commNavButtonPressed();
 			}
-		}, 0, 1);
+		}, 0);
 		
 		me.modeListener = setlistener(me.modeNode, func(n) {
 			mode = n.getValue();
@@ -164,19 +164,19 @@ var GNC255 = {
 				me.modeNode.setValue("comm");
 			}
 			me.frequencyChanged();
-		}, 0, 1);
+		}, 0);
 		me.commSelectedFreqListener = setlistener(me.commSelectedFreqNode, func(n) {
 			me.frequencyChanged();
-		}, 0, 1);
+		}, 0);
 		me.commStandbyFreqListener = setlistener(me.commStandbyFreqNode, func(n) {
 			me.frequencyChanged();
-		}, 0, 1);
+		}, 0);
 		me.navSelectedFreqListener = setlistener(me.navSelectedFreqNode, func(n) {
 			me.frequencyChanged();
-		}, 0, 1);
+		}, 0);
 		me.navStandbyFreqListener = setlistener(me.navStandbyFreqNode, func(n) {
 			me.frequencyChanged();
-		}, 0, 1);
+		}, 0);
 	},
 	
 	del: func {
@@ -236,7 +236,6 @@ var GNC255 = {
 			pos = geo.aircraft_position();
 		}
 		if (me.modeNode.getValue() == "comm") {
-			debug.dump(pos, selectedFreq);
 			var selectedFreqStations = [findCommByFrequencyMHz(pos, selectedFreq)];
 			var standbyFreqStations = [findCommByFrequencyMHz(pos, standbyFreq)];
 		} else {
@@ -291,6 +290,11 @@ var GNC255 = {
 		var khz = freq - mhz;
 		mhz += outerDirection;
 		khz += innerDirection * 0.025;
+		if (khz < 0) {
+			khz = 0.975;
+		} elsif (khz >= 1) {
+			khz = 0;
+		}
 		freqNode.setDoubleValue(mhz + khz);
 		me._oldOuterTuneKnobValue = newOuterTuneKnobValue;
 		me._oldInnerTuneKnobValue = newInnerTuneKnobValue;
