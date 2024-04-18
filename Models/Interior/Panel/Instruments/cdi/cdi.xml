@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+	<path>cdi.ac</path>
+	
+	<params>
+		<selected-radial-deg>instrumentation/nav[0]/radials/selected-deg</selected-radial-deg>
+		<to-flag>instrumentation/nav[0]/to-flag</to-flag>
+		<from-flag>instrumentation/nav[0]/from-flag</from-flag>
+		<loc-deflection-norm>instrumentation/nav[0]/heading-needle-deflection-norm</loc-deflection-norm>
+		<gs-deflection-norm>instrumentation/nav[0]/gs-needle-deflection-norm</gs-deflection-norm>
+		<loc-serviceable>instrumentation/nav[0]/cdi/serviceable</loc-serviceable>
+		<gs-serviceable>instrumentation/nav[0]/gs/serviceable</gs-serviceable>
+		<tooltip-id>cdi1-radial-knob</tooltip-id>
+		<tooltip-label>NAV1 radial: %3d°</tooltip-label>
+	</params>
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Glass</object-name>
+	</effect>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Scale</object-name>
+		<object-name>Face</object-name>
+		<object-name>GSNeedle</object-name>
+		<object-name>LOCNeedle</object-name>
+		<object-name>GSOffFlag</object-name>
+		<object-name>LOCOffFlag</object-name>
+		<object-name>RadialKnob</object-name>
+		<object-name>RadialNeedle</object-name>
+		<object-name>ToFromFlag</object-name>
+		<emission>
+			<red>0.95</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor>
+				<expression>
+					<sum>
+						<product>
+							<property>sim/model/lights/uv-instrument[0]/brightness-norm</property>
+							<value>0.7</value>
+						</product>
+						<product>
+							<property>sim/model/lights/uv-instrument[1]/brightness-norm</property>
+							<value>0.3</value>
+						</product>
+					</sum>
+				</expression>
+			</factor>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>RadialKnob</object-name>
+		<axis>
+			<object-name>RadialKnobAxis</object-name>
+		</axis>
+		<property alias="/params/selected-radial-deg"/>
+		<factor>5</factor>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/selected-radial-deg"/>
+				<factor>1</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap type="bool">true</wrap>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id alias="/params/tooltip-id"/>
+				<label alias="/params/tooltip-label"/>
+				<measure-text>NAV1 radial: 360°</measure-text>
+				<property alias="/params/selected-radial-deg"/>
+				<mapping>heading</mapping>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>RadialNeedle</object-name>
+		<axis>
+			<x>-1</x>
+		</axis>
+		<property alias="/params/selected-radial-deg"/>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>ToFromFlag</object-name>
+		<axis>
+			<object-name>ToFromFlagAxis</object-name>
+		</axis>
+		<expression>
+			<product>
+				<difference>
+					<property alias="/params/to-flag"/>
+					<property alias="/params/from-flag"/>
+				</difference>
+				<value>90</value>
+			</product>
+		</expression>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>LOCNeedle</object-name>
+		<axis>
+			<object-name>LOCNeedleAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property alias="/params/loc-deflection-norm"/>
+		<factor>38</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>GSNeedle</object-name>
+		<axis>
+			<object-name>GSNeedleAxis</object-name>
+			<swap-axis-direction/>
+		</axis>
+		<property alias="/params/gs-deflection-norm"/>
+		<factor>38</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>LOCOffFlag</object-name>
+		<axis>
+			<object-name>LOCOffFlagAxis</object-name>
+		</axis>
+		<property alias="/params/loc-serviceable"/>
+		<factor>12</factor>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>GSOffFlag</object-name>
+		<axis>
+			<object-name>GSOffFlagAxis</object-name>
+		</axis>
+		<property alias="/params/gs-serviceable"/>
+		<factor>12</factor>
+	</animation>
+</PropertyList>

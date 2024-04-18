@@ -205,6 +205,52 @@
 	</model>
 	
 	<model>
+		<path>Instruments/cdi/cdi.xml</path>
+		<offsets>
+			<x-m>0.52</x-m>
+			<y-m>-0.40</y-m>
+			<z-m>0.07</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<selected-radial-deg>instrumentation/nav[0]/radials/selected-deg</selected-radial-deg>
+				<tooltip-id>cdi1-radial-knob</tooltip-id>
+				<tooltip-label>NAV1 radial: %3d°</tooltip-label>
+				<to-flag>instrumentation/nav[0]/to-flag</to-flag>
+				<from-flag>instrumentation/nav[0]/from-flag</from-flag>
+				<loc-deflection-norm>instrumentation/nav[0]/heading-needle-deflection-norm</loc-deflection-norm>
+				<gs-deflection-norm>instrumentation/nav[0]/gs-needle-deflection-norm</gs-deflection-norm>
+				<loc-serviceable>instrumentation/nav[0]/cdi/serviceable</loc-serviceable>
+				<gs-serviceable>instrumentation/nav[0]/gs/serviceable</gs-serviceable>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<path>Instruments/cdi/cdi.xml</path>
+		<offsets>
+			<x-m>0.52</x-m>
+			<y-m>-0.40</y-m>
+			<z-m>-0.02</z-m>
+			<pitch-deg>-4.1</pitch-deg>
+		</offsets>
+		<overlay>
+			<params>
+				<selected-radial-deg>instrumentation/nav[1]/radials/selected-deg</selected-radial-deg>
+				<tooltip-id>cdi2-radial-knob</tooltip-id>
+				<tooltip-label>NAV2 radial: %3d°</tooltip-label>
+				<to-flag>instrumentation/nav[1]/to-flag</to-flag>
+				<from-flag>instrumentation/nav[1]/from-flag</from-flag>
+				<loc-deflection-norm>instrumentation/nav[1]/heading-needle-deflection-norm</loc-deflection-norm>
+				<gs-deflection-norm>instrumentation/nav[1]/gs-needle-deflection-norm</gs-deflection-norm>
+				<loc-serviceable>instrumentation/nav[1]/cdi/serviceable</loc-serviceable>
+				<gs-serviceable>instrumentation/nav[1]/gs/serviceable</gs-serviceable>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
 		<path>Instruments/asi/asi.xml</path>
 		<offsets>
 			<x-m>0.52</x-m>
