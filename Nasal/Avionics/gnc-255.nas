@@ -236,7 +236,6 @@ var GNC255 = {
 			pos = geo.aircraft_position();
 		}
 		if (me.modeNode.getValue() == "comm") {
-			debug.dump(pos, selectedFreq);
 			var selectedFreqStations = [findCommByFrequencyMHz(pos, selectedFreq)];
 			var standbyFreqStations = [findCommByFrequencyMHz(pos, standbyFreq)];
 		} else {
