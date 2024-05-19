@@ -228,8 +228,8 @@
 		<tank type="FUEL" number="8">
 			<location unit="IN">
 				<x>20</x>
-				<y>-70</y>
-				<z>-15</z>
+				<y>-65</y>
+				<z>-25</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
@@ -238,8 +238,8 @@
 		<tank type="FUEL" number="9">
 			<location unit="IN">
 				<x>20</x>
-				<y>70</y>
-				<z>-15</z>
+				<y>65</y>
+				<z>-25</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
@@ -250,7 +250,7 @@
 			<location unit="IN">
 				<x>20</x>
 				<y>-70</y>
-				<z>-18</z>
+				<z>-20</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
@@ -260,7 +260,7 @@
 			<location unit="IN">
 				<x>20</x>
 				<y>70</y>
-				<z>-18</z>
+				<z>-20</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
@@ -292,7 +292,7 @@
 			<location unit="IN">
 				<x>20</x>
 				<y>70</y>
-				<z>-20</z>
+				<z>-18</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
@@ -302,7 +302,7 @@
 			<location unit="IN">
 				<x>20</x>
 				<y>70</y>
-				<z>-20</z>
+				<z>-18</z>
 			</location>
 			<capacity unit="LBS">0.1</capacity>
 			<contents unit="LBS">0</contents>
