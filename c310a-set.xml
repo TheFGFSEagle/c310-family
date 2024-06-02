@@ -63,6 +63,11 @@
 				<splash type="bool">true</splash>
 				<path>Previews/climbout-scattered-sunset.png</path>
 			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Previews/final-cloudy-day-photoscenery.png</path>
+			</preview>
 		</previews>
 		
 		<model>
