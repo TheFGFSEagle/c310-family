@@ -545,7 +545,67 @@
 		<offsets>
 			<x-m>0.525</x-m>
 			<y-m>-0.255</y-m>
+			<z-m>-0.22</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<instance>0</instance>
+				<comm-volume-prop>instrumentation/comm[0]/volume</comm-volume-prop>
+				<comm-volume-knob-pressed-prop>instrumentation/gnc-255[0]/comm-volume-knob-pressed</comm-volume-knob-pressed-prop>
+				<comm-squelch-prop>instrumentation/comm[0]/squelch</comm-squelch-prop>
+				<comm-power-btn-prop>instrumentation/comm[0]/power-btn</comm-power-btn-prop>
+				<nav-volume-prop>instrumentation/nav[0]/volume</nav-volume-prop>
+				<nav-volume-knob-pressed-prop>instrumentation/gnc-255[0]/nav-volume-knob-pressed</nav-volume-knob-pressed-prop>
+				<nav-ident-prop>instrumentation/nav[0]/ident</nav-ident-prop>
+				<nav-power-btn-prop>instrumentation/nav[0]/power-btn</nav-power-btn-prop>
+				<outer-tune-knob-prop>instrumentation/gnc-255[0]/outer-tune-knob-deg</outer-tune-knob-prop>
+				<inner-tune-knob-prop>instrumentation/gnc-255[0]/inner-tune-knob-deg</inner-tune-knob-prop>
+				<inner-tune-knob-pressed-prop>instrumentation/gnc-255[0]/inner-tune-knob-pressed</inner-tune-knob-pressed-prop>
+				<monitor-button-pressed-prop>instrumentation/gnc-255[0]/monitor-button-pressed</monitor-button-pressed-prop>
+				<comm-nav-button-pressed-prop>instrumentation/gnc-255[0]/comm-nav-button-pressed</comm-nav-button-pressed-prop>
+				<obs-button-pressed-prop>instrumentation/gnc-255[0]/obs-button-pressed</obs-button-pressed-prop>
+				<to-from-button-pressed-prop>instrumentation/gnc-255[0]/to-from-button-pressed</to-from-button-pressed-prop>
+				<func-button-pressed-prop>instrumentation/gnc-255[0]/func-button-pressed</func-button-pressed-prop>
+				<clear-button-pressed-prop>instrumentation/gnc-255[0]/clear-button-pressed</clear-button-pressed-prop>
+				<enter-button-pressed-prop>instrumentation/gnc-255[0]/enter-button-pressed</enter-button-pressed-prop>
+				<flip-flop-button-pressed-prop>instrumentation/gnc-255[0]/flip-flop-button-pressed</flip-flop-button-pressed-prop>
+				<display-brightness-prop>instrumentation/gnc-255[0]/display-brightness-norm</display-brightness-prop>
+			</params>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>GNC2552</name>
+		<path>Avionics/gnc-255/gnc-255.xml</path>
+		<offsets>
+			<x-m>0.525</x-m>
+			<y-m>-0.255</y-m>
 			<z-m>-0.265</z-m>
 		</offsets>
+		<overlay>
+			<params>
+				<instance>1</instance>
+				<comm-volume-prop>instrumentation/comm[1]/volume</comm-volume-prop>
+				<comm-volume-knob-pressed-prop>instrumentation/gnc-255[1]/comm-volume-knob-pressed</comm-volume-knob-pressed-prop>
+				<comm-squelch-prop>instrumentation/comm[1]/squelch</comm-squelch-prop>
+				<comm-power-btn-prop>instrumentation/comm[1]/power-btn</comm-power-btn-prop>
+				<nav-volume-prop>instrumentation/nav[1]/volume</nav-volume-prop>
+				<nav-volume-knob-pressed-prop>instrumentation/gnc-255[1]/nav-volume-knob-pressed</nav-volume-knob-pressed-prop>
+				<nav-ident-prop>instrumentation/nav[1]/ident</nav-ident-prop>
+				<nav-power-btn-prop>instrumentation/nav[1]/power-btn</nav-power-btn-prop>
+				<outer-tune-knob-prop>instrumentation/gnc-255[1]/outer-tune-knob-deg</outer-tune-knob-prop>
+				<inner-tune-knob-prop>instrumentation/gnc-255[1]/inner-tune-knob-deg</inner-tune-knob-prop>
+				<inner-tune-knob-pressed-prop>instrumentation/gnc-255[1]/inner-tune-knob-pressed</inner-tune-knob-pressed-prop>
+				<monitor-button-pressed-prop>instrumentation/gnc-255[1]/monitor-button-pressed</monitor-button-pressed-prop>
+				<comm-nav-button-pressed-prop>instrumentation/gnc-255[1]/comm-nav-button-pressed</comm-nav-button-pressed-prop>
+				<obs-button-pressed-prop>instrumentation/gnc-255[1]/obs-button-pressed</obs-button-pressed-prop>
+				<to-from-button-pressed-prop>instrumentation/gnc-255[1]/to-from-button-pressed</to-from-button-pressed-prop>
+				<func-button-pressed-prop>instrumentation/gnc-255[1]/func-button-pressed</func-button-pressed-prop>
+				<clear-button-pressed-prop>instrumentation/gnc-255[1]/clear-button-pressed</clear-button-pressed-prop>
+				<enter-button-pressed-prop>instrumentation/gnc-255[1]/enter-button-pressed</enter-button-pressed-prop>
+				<flip-flop-button-pressed-prop>instrumentation/gnc-255[1]/flip-flop-button-pressed</flip-flop-button-pressed-prop>
+				<display-brightness-prop>instrumentation/gnc-255[1]/display-brightness-norm</display-brightness-prop>
+			</params>
+		</overlay>
 	</model>
 </PropertyList>
