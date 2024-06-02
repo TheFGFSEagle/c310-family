@@ -1808,11 +1808,19 @@ f				<sum>
 		
 		<fcs_function name="propulsion/tank[10]/pressure-psig">
 			<function>
-				<product>
-					<p>propulsion/engine[0]/fuel-pump/output-pressure-psig</p>
-					<p>propulsion/tank[10]/pct-full</p>
-					<v>0.01</v>
-				</product>
+				<!-- Smooth pressure with moving average -->
+				<sum>
+					<product>
+						<p>propulsion/engine[0]/fuel-pump/output-pressure-psig</p>
+						<p>propulsion/tank[10]/pct-full</p>
+						<v>0.01</v>
+						<v>0.05</v>
+					</product>
+					<product>
+						<p>propulsion/tank[10]/pressure-psig</p>
+						<v>0.95</v>
+					</product>
+				</sum>
 			</function>
 		</fcs_function>
 		
@@ -1866,14 +1874,12 @@ f				<sum>
 			<function>
 				<product>
 					<p>propulsion/engine[0]/fuel-pump/output-pressure-psig</p>
-					<max>
-						<difference>
-							<p>propulsion/tank[10]/pct-full</p>
-							<v>90</v>
-						</difference>
-						<v>0</v>
-					</max>
-					<v>0.1</v>
+					<interpolate1d>
+						<p>propulsion/tank[10]/pct-full</p>
+						<v>0</v> <v>0</v>
+						<v>50</v> <v>0</v>
+						<v>100</v> <v>0.3</v>
+					</interpolate1d>
 				</product>
 			</function>
 		</fcs_function>
@@ -1933,11 +1939,19 @@ f				<sum>
 		
 		<fcs_function name="propulsion/tank[11]/pressure-psig">
 			<function>
-				<product>
-					<p>propulsion/engine[0]/fuel-pump/output-pressure-psig</p>
-					<p>propulsion/tank[11]/pct-full</p>
-					<v>0.01</v>
-				</product>
+				<!-- Smooth pressure with moving average -->
+				<sum>
+					<product>
+						<p>propulsion/engine[1]/fuel-pump/output-pressure-psig</p>
+						<p>propulsion/tank[11]/pct-full</p>
+						<v>0.01</v>
+						<v>0.05</v>
+					</product>
+					<product>
+						<p>propulsion/tank[11]/pressure-psig</p>
+						<v>0.95</v>
+					</product>
+				</sum>
 			</function>
 		</fcs_function>
 		
@@ -1991,14 +2005,12 @@ f				<sum>
 			<function>
 				<product>
 					<p>propulsion/engine[1]/fuel-pump/output-pressure-psig</p>
-					<max>
-						<difference>
-							<p>propulsion/tank[11]/pct-full</p>
-							<v>90</v>
-						</difference>
-						<v>0</v>
-					</max>
-					<v>0.1</v>
+					<interpolate1d>
+						<p>propulsion/tank[11]/pct-full</p>
+						<v>0</v> <v>0</v>
+						<v>50</v> <v>0</v>
+						<v>100</v> <v>0.3</v>
+					</interpolate1d>
 				</product>
 			</function>
 		</fcs_function>

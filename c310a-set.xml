@@ -139,6 +139,11 @@
 		<systems>
 			<path>Systems/systems.xml</path>
 			
+			<autopilot n="100">
+				<name>Electrical system</name>
+				<path>Systems/electrical.xml</path>
+			</autopilot>
+			
 			<property-rule n="100">
 				<name>Time properties</name>
 				<path>Systems/time.xml</path>
@@ -152,11 +157,6 @@
 			<property-rule n="102">
 				<name>Lights</name>
 				<path>Systems/lights.xml</path>
-			</property-rule>
-			
-			<property-rule n="103">
-				<name>Electrical system</name>
-				<path>Systems/electrical.xml</path>
 			</property-rule>
 			
 			<property-rule n="104">

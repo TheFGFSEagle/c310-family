@@ -1347,6 +1347,146 @@
 	</filter>
 	
 	<filter>
+		<name>Comm radio #0 volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/vhf[0]/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/instrumentation/comm[0]/power-btn</scale>
+		</input>
+		<output>
+			<property>consumers/comm[0]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Comm radio #0 amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<gt>
+					<property>consumers/comm[0]/volts</property>
+					<value>0</value>
+				</gt>
+			</condition>
+			<expression>
+				<div>
+					<product>
+						<property>consumers/comm[0]/rated-volts</property>
+						<property>consumers/comm[0]/rated-amps</property>
+					</product>
+					<property>consumers/comm[0]/volts</property>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/comm[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Comm radio #1 volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/vhf[1]/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/instrumentation/comm[1]/power-btn</scale>
+		</input>
+		<output>
+			<property>consumers/comm[1]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Comm radio #1 amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<gt>
+					<property>consumers/comm[1]/volts</property>
+					<value>0</value>
+				</gt>
+			</condition>
+			<expression>
+				<div>
+					<product>
+						<property>consumers/comm[1]/rated-volts</property>
+						<property>consumers/comm[1]/rated-amps</property>
+					</product>
+					<property>consumers/comm[1]/volts</property>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/comm[1]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Nav radio #0 volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/vhf[0]/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/instrumentation/nav[0]/power-btn</scale>
+		</input>
+		<output>
+			<property>consumers/nav[0]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Nav radio #0 amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<gt>
+					<property>consumers/nav[0]/volts</property>
+					<value>0</value>
+				</gt>
+			</condition>
+			<expression>
+				<div>
+					<product>
+						<property>consumers/nav[0]/rated-volts</property>
+						<property>consumers/nav[0]/rated-amps</property>
+					</product>
+					<property>consumers/nav[0]/volts</property>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/nav[0]/amps</output>
+	</filter>
+	
+	<filter>
+		<name>Nav radio #1 volts</name>
+		<type>gain</type>
+		<gain>/controls/circuit-breakers/vhf[1]/closed</gain>
+		<input>
+			<property>bus/volts</property>
+			<scale>/instrumentation/nav[1]/power-btn</scale>
+		</input>
+		<output>
+			<property>consumers/nav[1]/volts</property>
+		</output>
+	</filter>
+	<filter>
+		<name>Nav radio #1 amps</name>
+		<type>gain</type>
+		<input>
+			<condition>
+				<gt>
+					<property>consumers/nav[1]/volts</property>
+					<value>0</value>
+				</gt>
+			</condition>
+			<expression>
+				<div>
+					<product>
+						<property>consumers/nav[1]/rated-volts</property>
+						<property>consumers/nav[1]/rated-amps</property>
+					</product>
+					<property>consumers/nav[1]/volts</property>
+				</div>
+			</expression>
+		</input>
+		<output>consumers/nav[1]/amps</output>
+	</filter>
+	
+	<filter>
 		<name>Bus amps load</name>
 		<type>gain</type>
 		<input>
