@@ -25,9 +25,6 @@
    <path>Sounds/cranking.wav</path>
    <condition>
     <property>/engines/engine[0]/cranking</property>
-    <not>
-     <property>/engines/engine[0]/running</property>
-    </not>
    </condition>
    <position>
     <x>-2.0</x>
@@ -73,7 +70,7 @@
    <pitch>
     <property>/engines/engine[0]/rpm</property>
     <factor>0.0004</factor>
-    <min>0.1</min>
+    <min>0</min>
     <max>2.0</max>
     <offset>0.3</offset>
    </pitch>
@@ -101,9 +98,6 @@
    <path>Sounds/cranking.wav</path>
    <condition>
     <property>/engines/engine[1]/cranking</property>
-    <not>
-     <property>/engines/engine[1]/running</property>
-    </not>
    </condition>
    <position>
     <x>2.0</x>
@@ -149,7 +143,7 @@
    <pitch>
     <property>/engines/engine[1]/rpm</property>
     <factor>0.0004</factor>
-    <min>0.1</min>
+    <min>0</min>
     <max>2.0</max>
     <offset>0.3</offset>
    </pitch>

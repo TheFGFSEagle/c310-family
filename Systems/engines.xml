@@ -310,4 +310,15 @@
 			<output>/engines/engine[1]/combustion-efficiency-norm</output>
 		</fcs_function>
 	</channel>
+	
+	<channel name="Cranking">
+		<switch name="propulsion/engine[0]/cranking">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/engines/engine[0]/running EQ 0
+				/engines/engine[0]/starter EQ 1
+			</test>
+			<output>/engines/engine[0]/cranking</output>
+		</switch>
+	</channel>
 </system>
