@@ -30,24 +30,30 @@
 		<type>select</type>
 		<object-name>GNC255Display1</object-name>
 		<condition>
-			<value alias="/params/instance"/>
-			<value>0</value>
+			<equals>
+				<value alias="/params/instance"/>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>GNC255Display2</object-name>
 		<condition>
-			<value alias="/params/instance"/>
-			<value>1</value>
+			<equals>
+				<value alias="/params/instance"/>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>GNC255Display3</object-name>
 		<condition>
-			<value alias="/params/instance"/>
-			<value>2</value>
+			<equals>
+				<value alias="/params/instance"/>
+				<value>2</value>
+			</equals>
 		</condition>
 	</animation>
 	
