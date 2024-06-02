@@ -236,8 +236,10 @@ var GNC255 = {
 			pos = geo.aircraft_position();
 		}
 		if (me.modeNode.getValue() == "comm") {
-			var selectedFreqStations = [findCommByFrequencyMHz(pos, selectedFreq)];
-			var standbyFreqStations = [findCommByFrequencyMHz(pos, standbyFreq)];
+			var selectedFreqStations = findCommByFrequencyMHz(pos, selectedFreq);
+			var standbyFreqStations = findCommByFrequencyMHz(pos, standbyFreq);
+			selectedFreqStations = selectedFreqStations ? [selectedFreqStations] : [];
+			standbyFreqStations = standbyFreqStations ? [standbyFreqStations] : [];
 		} else {
 			var selectedFreqStations = findNavaidsByFrequencyMHz(pos, selectedFreq, "vor") ~
 							findNavaidsByFrequencyMHz(pos, selectedFreq, "loc") ~
